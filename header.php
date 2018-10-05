@@ -4004,7 +4004,7 @@ a.page-numbers  .icon-arrow-left:hover {
    }
 
   :not(.has-featured-image .home) .site-content-contain{
-      margin-top:3.75rem; 
+      margin-top:7.5rem; 
    }
 
 
@@ -4017,7 +4017,7 @@ a.page-numbers  .icon-arrow-left:hover {
    }
 
   .home .site-content-contain{
-      margin-top:3.75rem;
+      margin-top:7.5rem;
    }
 
   /* If admin bar is present... */
@@ -4033,10 +4033,10 @@ a.page-numbers  .icon-arrow-left:hover {
    }
 
    .single-featured-image-header,.panel-image{
-      margin-top:3.75rem;
+      margin-top:7.5rem;
    }
   :not(.has-featured-image .home) .site-content-contain{
-      margin-top:3.75rem;
+      margin-top:7.5rem;
    }
 
   :not(.panel-image) .site-content-contain{
