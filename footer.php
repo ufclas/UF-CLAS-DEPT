@@ -1109,7 +1109,7 @@ endif;
 	   <?php wp_nav_menu( array(
 		'theme_location' => 'FooterCol1',
 		'menu_id'        => 'FooterCol1',
-		'before'        => '<span>Footer Column One</span>',
+                'menu_class'        => 'list-unstyled footer-list>',
                 'fallback_cb' => 'custom_primary_menu_fallback',
 	   ) ); ?>
         </div>
@@ -1120,7 +1120,7 @@ endif;
 	   <?php wp_nav_menu( array(
 		'theme_location' => 'FooterCol2',
 		'menu_id'        => 'FooterCol2',
-		'before'        => '<span>Footer Column One</span>',
+                'menu_class'        => 'list-unstyled footer-list>',
                 'fallback_cb' => 'custom_primary_menu_fallback',
 	   ) ); ?>
         </div>
@@ -1131,7 +1131,7 @@ endif;
 	   <?php wp_nav_menu( array(
 		'theme_location' => 'FooterCol3',
 		'menu_id'        => 'FooterCol3',
-		'before'        => '<span>Footer Column One</span>',
+                'menu_class'        => 'list-unstyled footer-list>',
                 'fallback_cb' => 'custom_primary_menu_fallback',
 	   ) ); ?>
         </div>

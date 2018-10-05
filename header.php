@@ -1738,11 +1738,11 @@ figcaption{
       right:0;
    }
   */
-    .X-menu nav > div > ul > li > ul > li, .sub-menu li {
+    .X-menu nav > div > ul > li > ul > li{
       word-break: break-word;
       padding-left:1rem;            
    }
-    .X-menu nav > div > ul > li > ul > li > a, .sub-menu li a {
+    .X-menu nav > div > ul > li > ul > li > a {
       word-break: break-word;
       color: #00529b;
       border-top: 1px solid #eae5d7;
@@ -1754,7 +1754,7 @@ figcaption{
       padding:1rem;
    }
 
-    .X-menu nav > div > ul > li > ul > li > a:hover, .sub-menu li a:hover {
+    .X-menu nav > div > ul > li > ul > li > a:hover {
       color:#c24700;
    }
     .icon-angle-down{
@@ -1874,7 +1874,6 @@ figcaption{
       position: fixed;
       top:0px;
       width: 100%;
-
       height:9.375rem;
       display: block;
       padding:0px;
@@ -1896,8 +1895,8 @@ figcaption{
    }
       /* UF Logo -- floated above two rows  */
       .X-header .uf{
-         width: 6.25rem;
-         height: 6.25rem;
+         width: 8.125rem;
+         height: 8.125rem;
          position:absolute;
          top:0px;
          left:0px;
@@ -1906,8 +1905,8 @@ figcaption{
       }
       /* UF Logo svg */
         .X-header .icon-uflogo{          
-            width: 6.25rem;
-            height: 6.25rem; 
+            width: 8.125rem;
+            height: 8.125rem; 
             z-index: 10;
          }
 
@@ -1917,8 +1916,8 @@ figcaption{
    .X-header .college {    
       width:100%;
       position:relative;
-      height: 3.125rem;/* fallback */ 
-      padding-left: 8.25rem;   
+      height: 5rem;/* fallback */ 
+      padding-left: 10.125rem;   
       display:table; 
       clear:both;
       background-color:rgba(0, 64, 131,1);
@@ -1934,8 +1933,8 @@ figcaption{
    }
       /* UF Logo svg */
         .X-header .icon-college-logo{          
-            width: 27.225rem;
-            height: 1.8rem;
+            width: 33.275rem;
+            height: 2.2rem;
             z-index: 2;
          }
 
@@ -1951,15 +1950,15 @@ figcaption{
 
      .college-logo-desktop{
         display:block; 
-            width: 27.225rem;
-            height: 1.8rem;
+            width: 33.275rem;
+            height: 2.2rem;
         z-index: 2;
      }
      .college-logo-desktop svg{
         display:block; 
         display:block; 
-            width: 27.225rem;
-            height: 1.8rem;
+            width: 33.275rem;
+            height: 2.2rem;
 
      }
 
@@ -2189,7 +2188,7 @@ figcaption{
       border-bottom:1px solid #efede6;   
    }
    .X-header .department  a {
-      padding-left:8.4375rem;   
+      padding-left: 10.125rem;     
    }
 
    /*  Strike Bar   */
@@ -2325,7 +2324,7 @@ figcaption{
       display:block;
       width:100%;
       height:3.125rem;
-       background-color: #F7F4EB; 
+      background-color: #F7F4EB; 
    }
      .X-menu nav > div {
        display:block;   
@@ -2433,7 +2432,7 @@ figcaption{
       opacity: 0;
       visibility: hidden;
       /* POSITION Sub Menu BELOW the header and top-level menu */ 
-      top:9.375rem; 
+      top:11.25rem; 
       max-height: 80%;
       max-height: 70vh;
       padding-bottom: 2rem;
@@ -2468,13 +2467,13 @@ figcaption{
       right:0;
    }
   */
-    .X-menu nav > div > ul > li > ul > li, .sub-menu li {
+    .X-menu nav > div > ul > li > ul > li {
       word-break: break-word;
       padding-left:1rem;  
       padding-right:1rem;   
    }
 
-    .X-menu nav > div > ul > li > ul > li > a, .sub-menu li a {
+    .X-menu nav > div > ul > li > ul > li > a{
       word-break: break-word;
       color: #00529b;
       border-top: 1px solid #eae5d7;
@@ -2486,7 +2485,7 @@ figcaption{
       padding:1rem;
    }
 
-    .X-menu nav > div > ul > li > ul > li > a:hover, .sub-menu li a:hover {
+    .X-menu nav > div > ul > li > ul > li > a:hover {
       color:#c24700;
    }
     .icon-angle-down{
@@ -2945,11 +2944,11 @@ figcaption{
    } 
 
 
-   .X-menu nav > div > ul > li > ul > li, .sub-menu li {
+   .X-menu nav > div > ul > li > ul > li {
       word-break: break-word;
       margin:0px;padding:0px;      
    }
-   .X-menu nav > div > ul > li > ul > li > a, .sub-menu li a { 
+   .X-menu nav > div > ul > li > ul > li > a { 
       color: #00529b;
       border-top: 1px solid #eae5d7;
       display: block;
@@ -3380,11 +3379,11 @@ figcaption{
    } 
 
 
-   .X-menu nav > div > ul > li > ul > li, .sub-menu li {
+   .X-menu nav > div > ul > li > ul > li {
       word-break: break-word;
       margin:0px;padding:0px;      
    }
-   .X-menu nav > div > ul > li > ul > li > a, .sub-menu li a { 
+   .X-menu nav > div > ul > li > ul > li > a { 
       color: #00529b;
       border-top: 1px solid #eae5d7;
       display: block;
