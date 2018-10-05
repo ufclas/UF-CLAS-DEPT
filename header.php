@@ -3883,7 +3883,7 @@ a.page-numbers  .icon-arrow-left:hover {
 
 
   .has-featured-image .site-content-contain{
-      margin-top:0rem;
+      margin-top:0rem !important;
    }
   .home .site-content-contain{
       margin-top:10.15625rem; 
@@ -3967,7 +3967,7 @@ a.page-numbers  .icon-arrow-left:hover {
 
 
   .has-featured-image .site-content-contain{
-      margin-top:0rem;
+      margin-top:0rem !important;
    }
   .home .site-content-contain{
       margin-top:9.375rem; 
@@ -4007,7 +4007,7 @@ a.page-numbers  .icon-arrow-left:hover {
    }
 
   .has-featured-image .site-content-contain{
-      margin-top:0rem;
+      margin-top:0rem !important;
    }
 
   .home .site-content-contain{
@@ -4037,7 +4037,7 @@ a.page-numbers  .icon-arrow-left:hover {
       margin-top:7.5rem; 
    }
   .has-featured-image .site-content-contain{
-      margin-top:0rem;
+      margin-top:0rem !important;
    }
   .home .site-content-contain{
       margin-top:7.5rem;
