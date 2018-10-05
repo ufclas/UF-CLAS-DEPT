@@ -4009,7 +4009,7 @@ a.page-numbers  .icon-arrow-left:hover {
 
 
   :not(.panel-image) .site-content-contain{
-      margin-top:3.75rem; 
+      margin-top:7.5rem; 
    }
 
   .has-featured-image .site-content-contain{
