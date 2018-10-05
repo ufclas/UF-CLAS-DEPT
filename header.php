@@ -1138,12 +1138,6 @@ figcaption{
    }
 
 
-#page {
-   min-height: 80%;
-
-}
-
-
 .sticky {
     top: 0;
     position: fixed;
@@ -1234,8 +1228,8 @@ figcaption{
 
      }
      .college-logo-desktop svg{
-            width: 22.6875rem;
-            height: 1.5rem;
+            width: 37.8125rem;
+            height: 2.5rem;
 
      }
 
@@ -4000,7 +3994,7 @@ a.page-numbers  .icon-arrow-left:hover {
    }
 
    .single-featured-image-header, .panel-image{
-      margin-top:3.75rem;
+      margin-top:7.5rem;
    }
 
   :not(.has-featured-image .home) .site-content-contain{
@@ -4046,7 +4040,7 @@ a.page-numbers  .icon-arrow-left:hover {
       margin-top:0rem;
    }
   .home .site-content-contain{
-      margin-top:3.75rem;
+      margin-top:7.5rem;
    }
 
   /* If admin bar is present... */
