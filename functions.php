@@ -122,7 +122,7 @@ add_theme_support( 'custom-header', $args );
 
 function custom_primary_menu_fallback() {
   ?>
-  <div class="menu-quicklinks-container"><ul class="menu"><li><a href="/wp-admin/customize.php?return=%2Fwp-admin%2Fthemes.php">Set Footer Menu Here</a></li></ul></div>
+  <div class="menu-quicklinks-container"><ul class="menu"><li><a href="/wp-admin/customize.php?return=%2Fwp-admin%2Fthemes.php">Set Menu Here</a></li></ul></div>
   <?php
 }
 
