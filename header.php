@@ -2003,7 +2003,7 @@ figcaption{
       z-index:1000 !important;
       transition: all 0.3s ease;
       display:block;  
-      top:6.25rem; 
+      top: 5rem; 
       left:0px;
       right:0px;
       text-align:center;
@@ -9117,6 +9117,8 @@ h2.right-arrow  strong::before {
 		'theme_location' => 'quicklinks',
 		'menu_id'        => 'quicklinks',
                 'fallback_cb' => 'custom_primary_menu_fallback',
+                'depth' => 1,
+
 	) ); ?>
    </div>
 
@@ -9141,8 +9143,6 @@ h2.right-arrow  strong::before {
 		'theme_location' => 'top',
 		'menu_id'        => 'top-menu',
                 'walker'          => new ALPHA_Menu,
-                'before'     => '<yash>',
-                'after'     => '</yash>',
 	) ); ?>
 
 	<?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>

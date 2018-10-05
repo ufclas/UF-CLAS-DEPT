@@ -1111,6 +1111,7 @@ endif;
 		'menu_id'        => 'FooterCol1',
                 'menu_class'        => 'list-unstyled footer-list>',
                 'fallback_cb' => 'custom_primary_menu_fallback',
+                'depth' => 1,
 	   ) ); ?>
         </div>
       </div>
@@ -1122,6 +1123,7 @@ endif;
 		'menu_id'        => 'FooterCol2',
                 'menu_class'        => 'list-unstyled footer-list>',
                 'fallback_cb' => 'custom_primary_menu_fallback',
+                'depth' => 1,
 	   ) ); ?>
         </div>
       </div>
@@ -1133,6 +1135,7 @@ endif;
 		'menu_id'        => 'FooterCol3',
                 'menu_class'        => 'list-unstyled footer-list>',
                 'fallback_cb' => 'custom_primary_menu_fallback',
+                'depth' => 1,
 	   ) ); ?>
         </div>
       </div>
