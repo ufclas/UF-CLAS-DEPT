@@ -251,7 +251,8 @@
       padding:0;
       margin-top: .5rem;
       margin-bottom: .5rem;
-      font-family: Gentona_Book;      
+      font-family: Gentona_Book;   
+      text-transform: capitalize;   
    }
    .list-unstyled  {
       text-transform: uppercase; 
@@ -418,7 +419,8 @@
       padding:0;
       margin-top: .5rem;
       margin-bottom: .5rem;
-      font-family: Gentona_Book;      
+      font-family: Gentona_Book;   
+      text-transform: capitalize;    
    }
    .list-unstyled  {
       text-transform: uppercase; 
@@ -587,7 +589,8 @@
       padding:0;
       margin-top: .5rem;
       margin-bottom: .5rem;
-      font-family: Gentona_Book;      
+      font-family: Gentona_Book;  
+      text-transform: capitalize;     
    }
    .list-unstyled  {
       text-transform: uppercase; 
@@ -822,7 +825,8 @@
       padding:0;
       margin-top: .5rem;
       margin-bottom: .5rem;
-      font-family: Gentona_Book;      
+      font-family: Gentona_Book; 
+      text-transform: capitalize;      
    }
    .list-unstyled  {
       text-transform: uppercase; 
@@ -1046,7 +1050,8 @@
       padding:0;
       margin-top: .5rem;
       margin-bottom: .5rem;
-      font-family: Gentona_Book;      
+      font-family: Gentona_Book;  
+      text-transform: capitalize;     
    }
    .list-unstyled  {
       text-transform: uppercase; 
@@ -1106,7 +1111,11 @@ endif;
    <div class="footer-main-sub-col">
       <div class="footer-main-sub-col-1 footer-menu"> 
         <div class="footer-main-FooterCol1"> 
-	   <?php wp_nav_menu( array(
+	   <?php 
+             $menu_obj = wpse45700_get_menu_by_location("FooterCol1");
+             if (isset ($menu_obj->name)) 
+             echo "<h2>".esc_html($menu_obj->name)."</h2>";
+                wp_nav_menu( array(
 		'theme_location' => 'FooterCol1',
 		'menu_id'        => 'FooterCol1',
                 'menu_class'        => 'list-unstyled footer-list>',
@@ -1118,7 +1127,11 @@ endif;
 
       <div class="footer-main-sub-col-2 footer-menu"> 
         <div class="footer-main-FooterCol1">  
-	   <?php wp_nav_menu( array(
+	   <?php 
+             $menu_obj = wpse45700_get_menu_by_location("FooterCol2"); 
+             if (isset ($menu_obj->name))
+             echo "<h2>".esc_html($menu_obj->name)."</h2>";
+                wp_nav_menu( array(
 		'theme_location' => 'FooterCol2',
 		'menu_id'        => 'FooterCol2',
                 'menu_class'        => 'list-unstyled footer-list>',
@@ -1130,7 +1143,11 @@ endif;
 
       <div class="footer-main-sub-col-3 footer-menu"> 
         <div class="footer-main-FooterCol1"> 
-	   <?php wp_nav_menu( array(
+	   <?php 
+             $menu_obj = wpse45700_get_menu_by_location("FooterCol3"); 
+             if (isset ($menu_obj->name))
+                echo "<h2>".esc_html($menu_obj->name)."</h2>";
+                wp_nav_menu( array(
 		'theme_location' => 'FooterCol3',
 		'menu_id'        => 'FooterCol3',
                 'menu_class'        => 'list-unstyled footer-list>',
