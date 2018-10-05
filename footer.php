@@ -1118,8 +1118,8 @@ endif;
       <div class="footer-main-sub-col-2 footer-menu"> 
         <div class="footer-main-FooterCol1">  
 	   <?php wp_nav_menu( array(
-		'theme_location' => 'FooterCol1',
-		'menu_id'        => 'FooterCol1',
+		'theme_location' => 'FooterCol2',
+		'menu_id'        => 'FooterCol2',
 		'before'        => '<span>Footer Column One</span>',
                 'fallback_cb' => 'custom_primary_menu_fallback',
 	   ) ); ?>
@@ -1129,8 +1129,8 @@ endif;
       <div class="footer-main-sub-col-3 footer-menu"> 
         <div class="footer-main-FooterCol1"> 
 	   <?php wp_nav_menu( array(
-		'theme_location' => 'FooterCol1',
-		'menu_id'        => 'FooterCol1',
+		'theme_location' => 'FooterCol3',
+		'menu_id'        => 'FooterCol3',
 		'before'        => '<span>Footer Column One</span>',
                 'fallback_cb' => 'custom_primary_menu_fallback',
 	   ) ); ?>
