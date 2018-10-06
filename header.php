@@ -2221,7 +2221,7 @@ figcaption{
       background: rgb(244, 90, 29);
    }
    .strikeheader {
-     font-family: Quadon_Bold;
+     font-family: Quadon_Medium;
      font-weight:500;
      font-size:2rem;
      color:rgba(0, 64, 131, 1) !important;
