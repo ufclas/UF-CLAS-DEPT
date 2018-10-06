@@ -9090,7 +9090,7 @@ h2.right-arrow  strong::before {
           </a>
        </div>
    <div class="college" tabindex="0" aria-label="College of Liberal Arts and Sciences, University of Florida Homepage">
-        <a href="http://www.clas.ufl.edu" alt="College of Liberal Arts and Sciences" title="College of Liberal Arts and Sciences">
+        <a href="http://www.clas.ufl.edu" alt="College of Liberal Arts and Sciences" title="College of Liberal Arts and Sciences" target="_blank">
 
            <span class="college-logo-desktop">
               <svg  aria-role="img" alt="College Logo" ><use xlink:href="#college-logo"></use></svg>
