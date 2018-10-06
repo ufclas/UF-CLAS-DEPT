@@ -2474,7 +2474,7 @@ figcaption{
       padding-right:1rem;   
    }
 
-    .X-menu nav > div > ul > li > ul > li > a, .X-menu .sub-menu li a{
+    .X-menu nav > div > ul > li > ul > li > a{
       word-break: break-word;
       color: #00529b;
       border-top: 1px solid #eae5d7;
@@ -2484,6 +2484,18 @@ figcaption{
       text-align: left;
       text-transform: none;
       padding:1rem;
+   }
+
+   .X-menu .sub-menu li a{
+      word-break: break-word;
+      color: #00529b;
+      border-top: 1px solid #eae5d7;
+      display: block;
+      font-family: Quadon_Medium, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size:1rem;    
+      text-align: left;
+      text-transform: none;
+      padding:.2rem;
    }
 
     .X-menu nav > div > ul > li > ul > li > a:hover, .X-menu .sub-menu li a:hover  {
