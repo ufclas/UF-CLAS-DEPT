@@ -2223,7 +2223,7 @@ figcaption{
    .strikeheader {
      font-family: Quadon_Bold;
      font-weight:500;
-     font-size:1.8rem;
+     font-size:2rem;
      color:rgba(0, 64, 131, 1) !important;
      display: table-cell;
      height:3.125rem;
