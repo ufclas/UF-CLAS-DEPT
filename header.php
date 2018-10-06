@@ -2486,7 +2486,7 @@ figcaption{
       padding:1rem;
    }
 
-   .X-menu nav > div > ul > li .sub-menu li a{
+    .X-menu nav > div > ul > li > ul > li .sub-menu li a{
       word-break: break-word;
       color: #00529b;
       border-top: 1px solid #eae5d7;
