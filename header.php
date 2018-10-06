@@ -1738,11 +1738,11 @@ figcaption{
       right:0;
    }
   */
-    .X-menu nav > div > ul > li > ul > li{
+    .X-menu nav > div > ul > li > ul > li, .X-menu .sub-menu li{
       word-break: break-word;
       padding-left:1rem;            
    }
-    .X-menu nav > div > ul > li > ul > li > a {
+    .X-menu nav > div > ul > li > ul > li > a, .X-menu .sub-menu li a {
       word-break: break-word;
       color: #00529b;
       border-top: 1px solid #eae5d7;
@@ -1754,7 +1754,7 @@ figcaption{
       padding:1rem;
    }
 
-    .X-menu nav > div > ul > li > ul > li > a:hover {
+    .X-menu nav > div > ul > li > ul > li > a:hover, .X-menu .sub-menu li a:hover  {
       color:#c24700;
    }
     .icon-angle-down{
@@ -2468,13 +2468,13 @@ figcaption{
       right:0;
    }
   */
-    .X-menu nav > div > ul > li > ul > li {
+    .X-menu nav > div > ul > li > ul > li, .X-menu .sub-menu li {
       word-break: break-word;
       padding-left:1rem;  
       padding-right:1rem;   
    }
 
-    .X-menu nav > div > ul > li > ul > li > a{
+    .X-menu nav > div > ul > li > ul > li > a, .X-menu .sub-menu li a{
       word-break: break-word;
       color: #00529b;
       border-top: 1px solid #eae5d7;
@@ -2486,7 +2486,7 @@ figcaption{
       padding:1rem;
    }
 
-    .X-menu nav > div > ul > li > ul > li > a:hover {
+    .X-menu nav > div > ul > li > ul > li > a:hover, .X-menu .sub-menu li a:hover  {
       color:#c24700;
    }
     .icon-angle-down{
@@ -2945,11 +2945,11 @@ figcaption{
    } 
 
 
-   .X-menu nav > div > ul > li > ul > li {
+   .X-menu nav > div > ul > li > ul > li, .X-menu .sub-menu li  {
       word-break: break-word;
       margin:0px;padding:0px;      
    }
-   .X-menu nav > div > ul > li > ul > li > a { 
+   .X-menu nav > div > ul > li > ul > li > a, .X-menu .sub-menu li a  { 
       color: #00529b;
       border-top: 1px solid #eae5d7;
       display: block;
@@ -3380,11 +3380,11 @@ figcaption{
    } 
 
 
-   .X-menu nav > div > ul > li > ul > li {
+   .X-menu nav > div > ul > li > ul > li, .X-menu .sub-menu li {
       word-break: break-word;
       margin:0px;padding:0px;      
    }
-   .X-menu nav > div > ul > li > ul > li > a { 
+   .X-menu nav > div > ul > li > ul > li > a, .X-menu .sub-menu li a   { 
       color: #00529b;
       border-top: 1px solid #eae5d7;
       display: block;
