@@ -2495,7 +2495,7 @@ figcaption{
       font-size:1rem;    
       text-align: left;
       text-transform: none;
-      padding:.2rem;
+      padding:.3rem;
    }
 
     .X-menu nav > div > ul > li > ul > li > a:hover, .X-menu .sub-menu li a:hover  {
