@@ -124,7 +124,12 @@ function custom_primary_menu_fallback() {
 
 $blog_title = get_bloginfo();
   ?>
-  <div class="menu-quicklinks-container"><ul class="menu"><li><a href="/wp-admin/customize.php?return=%2F<?php echo $blog_title ?>%2Fthemes.php">Set Menu Here</a></li></ul></div>
+  <div class="menu-quicklinks-container"><ul class="menu"><li><a href="/<?php echo $blog_title ?>/wp-admin/customize.php?return=%2F<?php echo $blog_title ?>%2Fwp-admin%2F">Set Menu Here</a></li></ul></div>
+
+
+
+
+
   <?php
 }
 
