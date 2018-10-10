@@ -700,16 +700,13 @@ add_action( 'template_redirect', 'X_page_layout', 0 );
 
 
 
-
 /* ADD PHOTO CREDITS TO MEDIA LIBRARY */
 add_filter("attachment_fields_to_edit", "add_photo_credit", 10, 2);
 function add_photo_credit($form_fields, $post) {
-            $ID=get_the_ID(); 
-            
 	$form_fields["photo_credit_txt"] = array(
 		"label" => __("Photo Credit"),
 		"input" => "text",
-		"value" => get_post_meta($ID, "photo_credit_txt", true),
+		"value" => get_post_meta($post->ID, "photo_credit_txt", true),
                 "helps" => __("Add photo credits here"),
 	);
  	return $form_fields;
