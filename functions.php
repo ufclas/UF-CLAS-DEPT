@@ -7,18 +7,31 @@
 */
 
 
+ error_log("This is a test message ", 3 , "/var/www/t6.publications.clas.ufl.edu/wp-content/debug.log");
 
 
-
-/* LOAD THEME CAYMAN CSS*/
+/* LOAD THEME CSS AND JAVASCRIPT*/
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
 
+   // CSS
+   wp_register_style('child-style', get_stylesheet_directory_uri() . '/style.css');
+   wp_register_style('hoefler-fonts', 'https://cloud.typography.com/6019574/7283992/css/fonts.css',false,'1.1','all');
+   wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Roboto',false,'1.1','all');
 
-   wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style') );
-   wp_enqueue_style( 'hoefler-fonts', 'https://cloud.typography.com/6019574/7283992/css/fonts.css',false,'1.1','all');
-   wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Roboto',false,'1.1','all');
+   // JAVASCRIPT
+   wp_register_script('scripts', get_template_directory_uri() . '/assets/js/theme.js', array( 'jquery' ));
+
+   // Enqueue CSS
+   wp_enqueue_style('child-style');
+   wp_enqueue_style('hoefler-fonts');
+   wp_enqueue_style('google-fonts');
+
+   // Enqueue JAVASCRIPT
+   wp_enqueue_script('scripts');
+
 }
+
 
 /* SETUP THEME X*/
 add_action( 'after_setup_theme', 'X_theme_setup' );
