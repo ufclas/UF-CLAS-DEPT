@@ -774,7 +774,7 @@ class MySettingsPage
     public function add_plugin_page()
     {
         // This page will be under "Settings"
-        add_options_page(
+        add_theme_page(
             'Settings Admin', 
             'CLAS DEPT Theme Settings', 
             'manage_options', 
