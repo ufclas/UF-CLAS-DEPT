@@ -617,17 +617,6 @@ class ALPHA_Menu extends Walker_Nav_Menu {
 
 
 // REMOVE COMMENTS
-// Disable support for comments and trackbacks in post types
-function df_disable_comments_post_types_support() {
-	$post_types = get_post_types();
-	foreach ($post_types as $post_type) {
-		if(post_type_supports($post_type, 'comments')) {
-			remove_post_type_support($post_type, 'comments');
-			remove_post_type_support($post_type, 'trackbacks');
-		}
-	}
-}
-add_action('admin_init', 'df_disable_comments_post_types_support');
 // Close comments on the front-end
 function df_disable_comments_status() {
 	return false;
@@ -669,7 +658,8 @@ add_action('admin_init', 'df_disable_comments_dashboard');
 add_filter( 'body_class','set_one_column_class' );
 function set_one_column_class( $classes ) {
      global $post;
-   if ( has_post_thumbnail($post->ID) )
+     $ID=get_the_ID(); 
+   if ( has_post_thumbnail($ID) )
       return array_merge( $classes, array( 'has-featured-image' ) ); 
    return $classes;     
 }
@@ -714,10 +704,12 @@ add_action( 'template_redirect', 'X_page_layout', 0 );
 /* ADD PHOTO CREDITS TO MEDIA LIBRARY */
 add_filter("attachment_fields_to_edit", "add_photo_credit", 10, 2);
 function add_photo_credit($form_fields, $post) {
+            $ID=get_the_ID(); 
+            
 	$form_fields["photo_credit_txt"] = array(
 		"label" => __("Photo Credit"),
 		"input" => "text",
-		"value" => get_post_meta($post->ID, "photo_credit_txt", true),
+		"value" => get_post_meta($ID, "photo_credit_txt", true),
                 "helps" => __("Add photo credits here"),
 	);
  	return $form_fields;
