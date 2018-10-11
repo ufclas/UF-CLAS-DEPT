@@ -279,33 +279,6 @@ findModules('slides');
        }
 }
 
-/* Search Form */
-   var searchBox = document.querySelector(".CLAS-searchTrigger");
-   searchBox.onclick = function(e) { 
-      e.preventDefault();
-      e.stopPropagation(); 
-      var searchIcon = document.getElementById('icon-search-thin-trigger'); 
-      if (searchIcon.getElementsByTagName("use")[0].getAttribute('xlink:href') != '#icon-search-close' ) {
-         document.getElementsByTagName("body")[0].classList.add('fixedPosition'); 
-         searchIcon.getElementsByTagName("use")[0].setAttribute("xlink:href", "#icon-search-close");  
-         searchIcon.classList.toggle('icon-search-thin-close');
-         searchIcon.classList.remove('icon-search-thin-open');
-      }
-      else {
-         document.getElementsByTagName("body")[0].classList.remove('fixedPosition'); 
-         searchIcon.getElementsByTagName("use")[0].setAttribute("xlink:href", "#icon-search-thin-open");
-         searchIcon.classList.remove('icon-search-thin-close');
-         searchIcon.classList.toggle('icon-search-thin-open');
-
-
-      }
-
-      var searchContainer = document.querySelector(".CLAS-search-form-container");
-      searchContainer.classList.toggle('show-search-form');
-      var searchField = document.querySelector(".CLAS-search-form-container .search-form .search-field");
-      earchField.focus();
-      searchField.select();   
-   };
 
 
 /* Menu System */
@@ -416,49 +389,33 @@ el.addEventListener('click', clickerFn);
    };
 el.addEventListener('click', clickerFn);  
 
-/* Drop Down Menu System */
-      var g = document.getElementsByClassName("menu-item-has-children");
-      for (var k = 0; k < g.length; k++) {   
-       //ONCLICK
-         g[k].getElementsByTagName("a")[0].onclick = function(e) {
-           // e.preventDefault();
-           // e.stopPropagation();   
-            const mq = window.matchMedia( "(max-width: 1024px)" ); 
-            if (mq.matches) {            
-              this.parentNode.classList.toggle('open');     
-               }
-            }//end mq
-      }
+
+
+
+/* Footer Menu */
       var g = document.getElementsByClassName("footer-menu");
-      for (var k = 0; k < g.length; k++) {   
+      alert(g.length);
+      for (var k = 0; k < g.length; k++) {    
        //ONCLICK
-       g[k].onclick = function(e) {
-          
-
+         g[k].onclick = function(e) { 
             const mq = window.matchMedia( "(max-width: 900px)" ); 
-         if (mq.matches) {
-            
-            this.classList.toggle('open'); 
- 
-            if(this.getElementsByTagName('ul')[0].style.display == 'block'){
-              this.getElementsByTagName("svg")[0].classList.remove('icon-caret-right'); 
-               e.preventDefault();
-              // this.getElementsByTagName('ul')[0].style.display = 'none'; 
-               e.stopPropagation(); 
-
-             }  
-             else{
-            this.getElementsByTagName("svg")[0].classList.add('icon-caret-right'); 
-               //this.getElementsByTagName('ul')[0].style.display = 'block';
-               this.getElementsByTagName('ul')[0].classList.add('animate'); 
-               this.getElementsByTagName('ul')[0].classList.add('open'); 
-             }
-
-    
-       }
-
-   }//end mq
-}
+            if (mq.matches) {            
+               this.classList.toggle('open');  
+               if(this.getElementsByTagName('ul')[0].style.display == 'block'){
+                  this.getElementsByTagName("svg")[0].classList.remove('icon-caret-right'); 
+                  e.preventDefault();
+                  // this.getElementsByTagName('ul')[0].style.display = 'none'; 
+                  e.stopPropagation(); 
+                }  
+               else{
+                  this.getElementsByTagName("svg")[0].classList.add('icon-caret-right'); 
+                  //this.getElementsByTagName('ul')[0].style.display = 'block';
+                  this.getElementsByTagName('ul')[0].classList.add('animate'); 
+                  this.getElementsByTagName('ul')[0].classList.add('open'); 
+               }    
+            } // if (mq.matches) { 
+         }//end mq
+      }
 
 /* Search Form */
    var searchBox = document.querySelector(".X-searchTrigger");
@@ -484,7 +441,7 @@ el.addEventListener('click', clickerFn);
       var searchContainer = document.querySelector(".X-search-form-container");
       searchContainer.classList.toggle('show-search-form');
       var searchField = document.querySelector(".X-search-form-container .search-form .search-field");
-      earchField.focus();
+      searchField.focus();
       searchField.select();   
    };
 

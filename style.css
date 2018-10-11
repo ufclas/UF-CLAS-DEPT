@@ -8614,3 +8614,1151 @@ h2.right-arrow  strong::before {
 }
 
 
+
+
+/*__________________THEME FOOTER__________________*/
+.hashtag {
+   text-align: center;
+   }
+
+.hashtag span {
+   position: relative;
+   display: block;
+   margin: 0 auto;
+   text-transform: capitalize;
+   color: #fff;
+   font-size: 1.5rem;
+   font-family: Gentona_Bold;
+   padding-top:1rem;
+   padding-bottom:1rem;
+}
+
+.footer-main p, .footer-uf p {
+      color: #ffffff !important;
+}
+
+.footer-main a, .footer-uf a {
+      color: #9ad2e1 !important;
+}
+
+/*__________________SOCIAL MEDIA ICONS__________________*/
+
+.social{
+   position: relative;
+   display: block;
+   padding: 0px;
+   margin: 0px;
+   text-align:center;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+.social svg {
+   height: 40px;
+   width: 40px;
+}
+.social-nav {
+   position: relative;
+   display:block;
+   padding: 0px;
+   margin: 0px;
+}
+.social-nav ul{
+   position: relative;
+   display:block;
+   padding: 0px;
+   margin: 0px;
+   list-style: none !important;
+}
+.social-nav li{
+   position: relative;
+   display: inline-block;
+   margin: 0 auto;
+   height: auto;
+   width: auto;
+   list-style: none !important;
+   list-style-type: none !important;
+   padding: .4rem;
+}
+/*__________________END__________________*/
+
+
+
+
+/*-----------------------------------------HD DESKTOP FOOTER----------------------------------------*/
+@media only screen and (min-width:2001px){
+
+/*__________________STRUCTURE__________________*/
+   .footer-main{
+      position: relative;
+      overflow: visible;
+      float: left; 
+      display: block;
+      width: 100%;    
+      clear: both;
+      background-color: #00285E;
+      padding:2rem;
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: Gentona_Book; 
+   }
+   .footer-main-wrap{
+      position: relative;
+      overflow: visible;
+      display: block;
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0px;
+      padding-left: 5.2rem;
+      padding-right: 5.2rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+   }
+   .footer-main-col-1{ 
+      width: 25%;     
+      float: left;
+      display: inline-block; 
+      vertical-align: top;
+      margin: 0px;
+      padding: 0px;
+   }
+   .footer-main-col-2{   
+      width: 50%;  
+      float: left;
+      display: inline-block; 
+      vertical-align: top; 
+      margin: 0px;
+      padding: 0px;
+   }
+   .footer-main-col-3{ 
+      width: 25%;    
+      float: left;
+      display: inline-block; 
+      vertical-align: top;
+      margin: 0px;
+      padding: 0px;
+   }
+
+  /* SUB COLS FOR footer-main-col-2 */
+   .footer-main-sub-col{
+      position: relative;
+      display: block;
+      clear: both;
+      color: #ffffff;
+      font-size: .9rem;      
+   }
+      .footer-main-sub-col-1{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;        
+         padding: 1rem;
+         padding-left: 0px;
+      }
+      .footer-main-sub-col-2{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;
+         padding: 1rem;
+      }
+      .footer-main-sub-col-3{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;
+         padding: 1rem;
+         padding-right: 0px;
+      }
+/*__________________END__________________*/
+
+/*__________________FOOTER SUB-MENU__________________*/
+
+   .footer-menu h2 .icon-caret {
+      display: none; 
+   } 
+    .footer-menu.open ul li a:hover, .footer-menu.open ul li a:active  {
+      color: #9ad2e1;
+   }
+/*__________________END__________________*/
+
+/*__________________ICONS__________________*/
+   .icon-college-logo-stacked{          
+      width: 23rem;
+      height: 5.1875rem;
+      padding: 0px;
+      margin:0px;
+   }
+   .icon-uflogo-go-greater{  
+      display: block;        
+      width: 10.91125rem;
+      height: 10.91125rem;
+      margin: 0 auto;
+   }
+   .icon-journeys-begin{
+      width: 20.833125rem;
+      height: 4.125rem;
+      margin: 0px;
+      padding: 0px;
+      fill: #ffffff;
+   }
+/*__________________END__________________*/
+
+/*__________________TYPOGRAPHY__________________*/
+
+   .footer-main p{
+       font-family: Gentona_Book;    
+      font-size:  1rem; 
+   }
+   .footer-main h2{
+      color: #ffffff;
+      font-size:1rem;
+      padding:0;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      font-family: Gentona_Book;   
+      text-transform: capitalize;   
+   }
+   .list-unstyled  {
+      text-transform: uppercase; 
+      font-family: "Gentona_Light";
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+   }
+   .list-unstyled  li {
+      padding-top:.2rem;
+      padding-bottom:.2rem;
+   }
+
+   .footer-menu.open ul {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+  .footer-menu.open h2 .icon-caret {
+    margin-top: 8px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); 
+    }
+   .footer-main  .icon-uflogo{
+      height:3.835rem;
+      width:3.835rem;
+   }  
+   .footer-clas-address{
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+   }
+/*__________________END__________________*/
+
+}
+
+
+/*-----------------------------------------LAPTOP/DESKTOP FOOTER----------------------------------------*/
+@media only screen and (min-width:1025px) and (max-width :  2000px) {
+
+/*__________________STRUCTURE__________________*/
+   .footer-main{
+      position: relative;
+      overflow: visible;
+      float: left; 
+      display: block;
+      width: 100%;    
+      clear: both;
+      background-color: #00285E;
+      padding:2rem;
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: Gentona_Book; 
+      padding: 2rem; 
+   }
+   .footer-main-wrap{
+      position: relative;
+      overflow: visible;
+      display: block;
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0px;
+   }
+   .footer-main-col-1{ 
+      width: 25%;     
+      float: left;
+      display: inline-block; 
+      vertical-align: top;
+      margin: 0px;
+      padding: 0px;
+   }
+   .footer-main-col-2{   
+      width: 50%;  
+      float: left;
+      display: inline-block; 
+      vertical-align: top; 
+      margin: 0px;
+      padding: 0px;
+      padding-left:2rem;
+   }
+   .footer-main-col-3{ 
+      width: 25%;    
+      float: left;
+      display: inline-block; 
+      vertical-align: top;
+      margin: 0px;
+      padding: 0px;
+   }
+
+  /* SUB COLS FOR footer-main-col-2 */
+   .footer-main-sub-col{
+      position: relative;
+      display: block;
+      clear: both;
+      color: #ffffff;
+      font-size: .9rem;      
+   }
+      .footer-main-sub-col-1{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;        
+         padding: 1rem;
+         padding-left: 0px;
+      }
+      .footer-main-sub-col-2{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;
+         padding: 1rem;
+      }
+      .footer-main-sub-col-3{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;
+         padding: 1rem;
+         padding-right: 0px;
+      }
+/*__________________END__________________*/
+
+/*__________________FOOTER SUB-MENU__________________*/
+
+   .footer-menu h2 .icon-caret {
+      display: none; 
+   } 
+    .footer-menu.open ul li a:hover, .footer-menu.open ul li a:active  {
+      color: #9ad2e1;
+   }
+   .footer-menu.open ul li a {
+      line-height: 1.2 !important; border: 1px solid red;
+   }
+
+/*__________________END__________________*/
+
+/*__________________ICONS__________________*/
+   .icon-college-logo-stacked{          
+      width: 23rem;
+      height: 5.1875rem;
+      padding: 0px;
+      margin:0px;
+   }
+   .icon-uflogo-go-greater{  
+      display: block;        
+      width: 10.91125rem;
+      height: 10.91125rem;
+      margin: 0 auto;
+   }
+   .icon-journeys-begin{
+      width: 20.833125rem;
+      height: 4.125rem;
+      margin: 0px;
+      padding: 0px;
+      fill: #ffffff;
+   }
+/*__________________END__________________*/
+
+/*__________________TYPOGRAPHY__________________*/
+
+   .footer-main p{
+       font-family: Gentona_Book;    
+      font-size:  1rem; 
+   }
+   .footer-main h2{
+      color: #ffffff;
+      font-size:1rem;
+      padding:0;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      font-family: Gentona_Book;   
+      text-transform: capitalize;    
+   }
+   .list-unstyled  {
+      text-transform: uppercase; 
+      font-family: "Gentona_Light";
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+   }
+   .list-unstyled  li {
+      padding-top:.2rem;
+      padding-bottom:.2rem;
+   }
+   .footer-menu.open ul {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+  .footer-menu.open h2 .icon-caret {
+    margin-top: 8px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); 
+    }
+   .footer-main  .icon-uflogo{
+      height:3.835rem;
+      width:3.835rem;
+   }  
+   .footer-main a {
+      line-height: 1.2 !important;
+   }
+
+   .footer-clas-address{
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+   }
+/*__________________END__________________*/
+}
+/*-----------------------------------------TABLET FOOTER----------------------------------------*/
+@media only screen and (min-width:768px) and (max-width :  1024px) {
+ 
+/*__________________STRUCTURE__________________*/
+   .footer-main{
+      position: relative;
+      overflow: visible;
+      float: left; 
+      display: block;
+      width: 100%;    
+      clear: both;
+      background-color: #00285E;
+      padding:2rem;
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: Gentona_Book; 
+      padding: 2rem; 
+   }
+   .footer-main-wrap{
+      position: relative;
+      overflow: visible;
+      display: block;
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0px;
+   }
+   .footer-main-col-1{ 
+      width: 50%;     
+      float: left;
+      display: inline-block; 
+      vertical-align: middle;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+   }
+   .footer-main-col-2{   
+      width: 50%;  
+      float: left;
+      display: inline-block; 
+      vertical-align: top; 
+      margin: 0px;
+      padding: 0px;
+      padding-left:2rem;
+      display: none !important;
+   }
+   .footer-main-col-3{ 
+      width: 50%;    
+      float: left;
+      display: inline-block; 
+      vertical-align: middle;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+
+   }
+
+  /* SUB COLS FOR footer-main-col-2 */
+   .footer-main-sub-col{
+      position: relative;
+      display: block;
+      clear: both;
+      color: #ffffff;
+      font-size: .9rem;      
+   }
+      .footer-main-sub-col-1{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;        
+         padding: 1rem;
+         padding-left: 0px;
+      }
+      .footer-main-sub-col-2{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;
+         padding: 1rem;
+      }
+      .footer-main-sub-col-3{
+         width: 30%; 
+         display: inline-block;
+         vertical-align: top;
+         padding: 1rem;
+         padding-right: 0px;
+      }
+/*__________________END__________________*/
+
+/*__________________FOOTER SUB-MENU__________________*/
+
+   .footer-menu h2 .icon-caret {
+      display: none; 
+   } 
+    .footer-menu.open ul li a:hover, .footer-menu.open ul li a:active  {
+      color: #9ad2e1;
+   }
+/*__________________END__________________*/
+
+/*__________________ICONS__________________*/
+   .icon-college-logo-stacked{ 
+      display: block;         
+      width: 15.25rem;
+      height: 5.1875rem;
+      padding: 0px;
+      margin:0 auto;
+   }
+   .icon-uflogo-go-greater{  
+      display: block;        
+      width: 8.18375rem;
+      height: 8.18375rem;
+      margin: 0 auto;
+   }
+   .icon-journeys-begin{
+      display: block;   
+      width: 15.25rem;
+      height: 4.125rem;
+      margin:0 auto;
+      padding: 0px;
+      fill: #ffffff;
+   }
+/*__________________END__________________*/
+
+/*__________________TYPOGRAPHY__________________*/
+
+   .footer-main p{
+       font-family: Gentona_Book;    
+      font-size:  1rem; 
+   }
+   .footer-main h2{
+      color: #ffffff;
+      font-size:1rem;
+      padding:0;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      font-family: Gentona_Book;  
+      text-transform: capitalize;     
+   }
+   .list-unstyled  {
+      text-transform: uppercase; 
+      font-family: "Gentona_Light";
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+   }
+   .list-unstyled  li {
+      padding-top:.2rem;
+      padding-bottom:.2rem;
+   }
+   .footer-menu.open ul {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+  .footer-menu.open h2 .icon-caret {
+    margin-top: 8px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); 
+    }
+   .footer-main  .icon-uflogo{
+      height:3.835rem;
+      width:3.835rem;
+   }  
+   .footer-clas-address{
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+   }
+/*__________________END__________________*/
+
+}
+
+
+/*-----------------------------------------MOBILE LANDSCAPE FOOTER----------------------------------------*/
+@media only screen and (min-width:481px) and (max-width :  767px) {
+ 
+/*__________________STRUCTURE__________________*/
+   .footer-main{
+      position: relative;
+      overflow: visible;
+      float: left;
+      display: block;
+      width: 100%;   
+      clear: both;
+      background-color: #00285E;
+      padding:2rem;
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: Gentona_Book; 
+      padding: 2rem; 
+   }
+   .footer-main-wrap{
+      position: relative;
+      overflow: visible;
+      display: block;
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0px;
+   }
+   .footer-main-col-1{ 
+      width: 100%;       
+      display: block;
+      clear: both;
+      vertical-align: top;
+      margin: 0px;
+      padding: 0px;
+   }
+   .footer-main-col-2{   
+      width: 100%;       
+      display: block;
+      clear: both;
+      vertical-align: top; 
+      margin: 0px;
+      padding: 0px;
+      padding-bottom:2rem;
+      padding-top:2rem;
+   }
+   .footer-main-col-3{ 
+      width: 100%;       
+      display: block;
+      clear: both;
+      vertical-align: top;
+      margin: 0px;
+      padding: 0px;
+   }
+
+  /* SUB COLS FOR footer-main-col-2 */
+   .footer-main-sub-col{
+      position: relative;
+      display: block;
+      clear: both;
+      color: #ffffff;
+      font-size: .9rem;      
+   }
+      .footer-main-sub-col-1{
+         width: 100%; 
+         display: block;
+         vertical-align: top;        
+         padding: 1rem;
+      }
+      .footer-main-sub-col-2{
+         width: 100%; 
+         display: block;
+         vertical-align: top;
+         padding: 1rem;
+      }
+      .footer-main-sub-col-3{
+         width: 100%; 
+         display: block;
+         vertical-align: top;
+         padding: 1rem;
+ 
+      }
+/*__________________END__________________*/
+
+/*__________________FOOTER DROP DOWN MENU__________________*/
+
+   .ufcol1{
+      position:relative;
+      padding-top:22rem;
+      width:100%;
+      display:block;
+      clear:both;
+      overflow:hidden;
+   }
+   .ufcol2{
+      position:relative;
+      width:100%;
+      display:block;
+      clear:both;
+      overflow:hidden;
+   }
+   .ufcol3{
+      position:relative;
+      width:100%;
+      display:block;
+      clear:both;
+      overflow:hidden;
+   }
+   .ufcol4{
+      position:absolute;
+      top:0px;
+      width:100%;
+      display:block;
+      clear:both;
+      overflow:hidden;
+   }
+  .footer-menu{
+      cursor:pointer;
+      margin:0px;
+    }
+      .footer-menu ul {
+         display: none; 
+      } 
+   .footer-menu ul {
+      display: none;
+      margin: 0;
+   }
+    .footer-menu ul li {
+      margin: 0;
+      text-transform: uppercase;  
+      padding-top: .2rem;
+      padding-bottom: .2rem;
+   }
+   .footer-menu ul li:before {
+      display: none; 
+   }
+   .footer-menu h2 {
+      border-top: 1px solid #d4edec; 
+      letter-spacing: 1px;
+      padding-top: 1rem !important;
+      position: relative;
+      text-transform: uppercase;  
+   }
+   .footer-menu.open ul {
+      display: block;
+      margin-bottom: 20px;
+    }
+   .footer-menu.open ul li a:hover, .footer-menu.open ul li a:active  {
+      color: #9ad2e1;
+   }
+   .footer-menu h2 .icon-caret {  
+      color: #f37021;
+   }
+   .footer-menu h2 svg {
+      height: .8rem;
+      width: .8rem;
+   }
+   /* Javascript first adds the .open class then this CSS rotates the arrow*/
+  .footer-menu.open h2 .icon-caret-right {
+      color: #f37021;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);  
+    }
+
+/*__________________ICONS__________________*/
+   .icon-college-logo-stacked{ 
+      display: block;         
+      width: 15.25rem;
+      height: 5.1875rem;
+      padding: 0px;
+      margin:0 auto;
+   }
+   .icon-uflogo-go-greater{  
+      display: block;        
+      width: 8.18375rem;
+      height: 8.18375rem;
+      margin: 0 auto;
+   }
+   .icon-journeys-begin{
+      display: block;   
+      width: 15.25rem;
+      height: 4.125rem;
+      margin:0 auto;
+      padding: 0px;
+      fill: #ffffff;
+   }
+/*__________________END__________________*/
+
+/*__________________TYPOGRAPHY__________________*/
+
+   .footer-main p{
+       font-family: Gentona_Book;    
+      font-size:  1rem; 
+   }
+   .footer-main h2{
+      color: #ffffff;
+      font-size:1rem;
+      line-height: 1.2;
+      padding:0;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      font-family: Gentona_Book; 
+      text-transform: capitalize;      
+   }
+   .list-unstyled  {
+      text-transform: uppercase; 
+      font-family: "Gentona_Light";
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+   }
+   .list-unstyled  li {
+      padding-top:.2rem;
+      padding-bottom:.2rem;
+   }
+   .footer-clas-address{
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+      text-align: center;
+   }
+   .contact-webmaster{
+      text-align: center;
+   }
+/*__________________END__________________*/
+}
+
+
+/*-----------------------------------------MOBILE PORTRAIT FOOTER----------------------------------------*/
+@media only screen and (min-width:0px) and (max-width :  481px) {
+ 
+/*__________________STRUCTURE__________________*/
+   .footer-main{
+      position: relative;
+      overflow: visible;
+      float: left;
+      display: block;
+      width: 100%;   
+      clear: both;
+      background-color: #00285E;
+      padding:2rem;
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: Gentona_Book; 
+      padding: 2rem; 
+   }
+   .footer-main-wrap{
+      position: relative;
+      overflow: visible;
+      display: block;
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0px;
+   }
+   .footer-main-col-1{ 
+      width: 100%;       
+      display: block;
+      clear: both;
+      vertical-align: top;
+      margin: 0px;
+      padding: 0px;
+   }
+   .footer-main-col-2{   
+      width: 100%;       
+      display: block;
+      clear: both;
+      vertical-align: top; 
+      margin: 0px;
+      padding: 0px;
+      padding-bottom:2rem;
+      padding-top:2rem;
+   }
+   .footer-main-col-3{ 
+      width: 100%;       
+      display: block;
+      clear: both;
+      vertical-align: top;
+      margin: 0px;
+      padding: 0px;
+   }
+
+  /* SUB COLS FOR footer-main-col-2 */
+   .footer-main-sub-col{
+      position: relative;
+      display: block;
+      clear: both;
+      color: #ffffff;
+      font-size: .9rem;      
+   }
+      .footer-main-sub-col-1{
+         width: 100%; 
+         display: block;
+         vertical-align: top;        
+         padding: 1rem;
+      }
+      .footer-main-sub-col-2{
+         width: 100%; 
+         display: block;
+         vertical-align: top;
+         padding: 1rem;
+      }
+      .footer-main-sub-col-3{
+         width: 100%; 
+         display: block;
+         vertical-align: top;
+         padding: 1rem;
+ 
+      }
+/*__________________END__________________*/
+
+/*__________________FOOTER DROP DOWN MENU__________________*/
+
+   .ufcol1{
+      position:relative;
+      padding-top:22rem;
+      width:100%;
+      display:block;
+      clear:both;
+      overflow:hidden;
+   }
+   .ufcol2{
+      position:relative;
+      width:100%;
+      display:block;
+      clear:both;
+      overflow:hidden;
+   }
+   .ufcol3{
+      position:relative;
+      width:100%;
+      display:block;
+      clear:both;
+      overflow:hidden;
+   }
+   .ufcol4{
+      position:absolute;
+      top:0px;
+      width:100%;
+      display:block;
+      clear:both;
+      overflow:hidden;
+   }
+  .footer-menu{
+      cursor:pointer;
+      margin:0px;
+    }
+      .footer-menu ul {
+         display: none; 
+      } 
+   .footer-menu ul {
+      display: none;
+      margin: 0;
+   }
+    .footer-menu ul li {
+      margin: 0;
+      text-transform: uppercase;  
+      padding-top: .2rem;
+      padding-bottom: .2rem;
+   }
+   .footer-menu ul li:before {
+      display: none; 
+   }
+   .footer-menu h2 {
+      border-top: 1px solid #d4edec; 
+      letter-spacing: 1px;
+      padding-top: 1rem !important;
+      position: relative;
+      text-transform: uppercase;  
+   }
+   .footer-menu.open ul {
+      display: block;
+      margin-bottom: 20px;
+    }
+   .footer-menu.open ul li a:hover, .footer-menu.open ul li a:active  {
+      color: #9ad2e1;
+   }
+   .footer-menu h2 .icon-caret {  
+      color: #f37021;
+   }
+   .footer-menu h2 svg {
+      height: .8rem;
+      width: .8rem;
+   }
+   /* Javascript first adds the .open class then this CSS rotates the arrow*/
+  .footer-menu.open h2 .icon-caret-right {
+      color: #f37021;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);  
+    }
+
+/*__________________ICONS__________________*/
+   .icon-college-logo-stacked{ 
+      display: block;         
+      width: 15.25rem;
+      height: 5.1875rem;
+      padding: 0px;
+      margin:0 auto;
+   }
+   .icon-uflogo-go-greater{  
+      display: block;        
+      width: 8.18375rem;
+      height: 8.18375rem;
+      margin: 0 auto;
+   }
+   .icon-journeys-begin{
+      display: block;   
+      width: 15.25rem;
+      height: 4.125rem;
+      margin:0 auto;
+      padding: 0px;
+      fill: #ffffff;
+   }
+/*__________________END__________________*/
+
+/*__________________TYPOGRAPHY__________________*/
+
+   .footer-main p{
+       font-family: Gentona_Book;    
+      font-size:  1rem; 
+   }
+   .footer-main h2{
+      color: #ffffff;
+      font-size:1rem;
+      line-height: 1.2;
+      padding:0;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      font-family: Gentona_Book;  
+      text-transform: capitalize;     
+   }
+   .list-unstyled  {
+      text-transform: uppercase; 
+      font-family: "Gentona_Light";
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+   }
+   .list-unstyled  li {
+      padding-top:.2rem;
+      padding-bottom:.2rem;
+   }
+   .footer-clas-address{
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+      text-align: center;
+   }
+   .contact-webmaster{
+      text-align: center;
+   }
+
+
+/*__________________END__________________*/
+}
+
+/* BOTTOMMOST ROW OF FOOTER */
+   .footer-uf{
+      position: relative;
+      overflow: visible;
+      display: block;
+      width:100%;
+      clear: both;
+      bottom: 0px;
+      padding:2rem;
+      background-color: #004083;
+      font-size:1rem;
+      color: #ffffff;
+
+   }
+
+   .footer-uf-wrap{
+      width: 100%;
+      max-width: 1950px;
+      margin: 0 auto;
+      display: table;
+   }
+
+.footer-uf-col-1{
+   position: relative;
+   float: left;
+   vertical-align: middle;
+   width: 80%;
+}
+   .bottom-links,  .bottom-links p ,  .bottom-links p a {
+      font-family: Gentona_Book;
+      font-size: 0.875rem;
+
+   }
+
+.footer-uf-col-2{
+   position: relative;
+   float: left;
+   width: 20%;
+   vertical-align: middle;
+}
+
+   .footer-icon-uf{  
+      width:auto;
+      height:3rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+/* HD DEVICES*/
+@media (min-width: 2050px)  {
+   .footer-icon-uf{
+      max-width:20.1875rem !important; 
+      max-height:3.6875rem !important; 
+   }
+}
+
+/* DESKTOP DEVICES*/
+@media (min-width: 768px) and (max-width : 2050px)  {
+   .footer-icon-uf{
+      width:20.1875rem !important; 
+      max-height:3.6875rem !important; 
+   }
+}
+
+
+.footer-uf-campaign-logo {
+   float: right;
+   text-align: right;
+   vertical-align: middle;
+}
+
+
+/* Mobile images */
+@media only screen and (min-width:0px) and (max-width :  850px) {
+   .footer-uf{
+      position: relative;
+      overflow: visible;
+      display: block;
+      width:100%;
+      clear: both;
+      bottom: 0px;
+      padding:2rem;
+      background-color: #004083;
+      font-size:.9rem;
+      color: #ffffff;
+   }
+
+   .footer-uf-wrap{
+      max-width: 1950px;
+      margin: 0 auto;
+   }
+   .footer-uf-col-1{
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 0px;
+      vertical-align: middle;
+      text-align: center; 
+   }
+   .footer-uf-col-2{
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 0px;
+      vertical-align: middle;   
+   }
+
+   .footer-uf-campaign-logo {
+      float: none;
+      display: block;
+      text-align: center;
+      vertical-align: middle;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+   }
+
+}
+.contact-webmaster a {
+    color: #f19d64;
+}
+
+
