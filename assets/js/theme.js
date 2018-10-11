@@ -394,7 +394,6 @@ el.addEventListener('click', clickerFn);
 
 /* Footer Menu */
       var g = document.getElementsByClassName("footer-menu");
-      alert(g.length);
       for (var k = 0; k < g.length; k++) {    
        //ONCLICK
          g[k].onclick = function(e) { 
