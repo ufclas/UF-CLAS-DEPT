@@ -1345,7 +1345,7 @@ figcaption{
       display:table-cell;
       vertical-align:middle;
       cursor:pointer;
-      text-align: center;
+      text-align: left;
    } 
    .X-quickLinks div ul {
       visibility:none;
@@ -2074,7 +2074,7 @@ figcaption{
       display:table-cell;
       vertical-align:middle;
       cursor:pointer;
-      text-align: center;
+      text-align: left;
    } 
    .X-quickLinks div ul {
       visibility:none;
