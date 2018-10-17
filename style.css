@@ -1345,7 +1345,7 @@ figcaption{
       display:table-cell;
       vertical-align:middle;
       cursor:pointer;
-      text-align: left;
+      text-align: center;
    } 
    .X-quickLinks div ul {
       visibility:none;
@@ -1378,7 +1378,8 @@ figcaption{
       padding: 1rem 1rem 1rem 1rem;
      font-size:.9rem;
      text-transform:uppercase;
-     font-family:Gentona_Medium;     
+     font-family:Gentona_Medium;  
+     text-align: left;   
    }
    .X-quickLinks div ul li a:hover{
       background-color:#eae5d7;
@@ -2074,7 +2075,7 @@ figcaption{
       display:table-cell;
       vertical-align:middle;
       cursor:pointer;
-      text-align: left;
+      text-align: center;
    } 
    .X-quickLinks div ul {
       visibility:none;
@@ -2107,7 +2108,8 @@ figcaption{
       padding: 1rem 1rem 1rem 1rem;
      font-size:.9rem;
      text-transform:uppercase;
-     font-family:Gentona_Medium;     
+     font-family:Gentona_Medium;   
+     text-align: center;  
    }
    .X-quickLinks div ul li a:hover{
       background-color:#eae5d7;
