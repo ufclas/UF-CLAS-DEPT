@@ -2733,6 +2733,7 @@ figcaption{
       width: 24px;
    }
 
+
    /* Row Two -- DEPARTMENT Name */
    .X-header .department {  
       width:100%;    
@@ -3225,7 +3226,7 @@ figcaption{
       vertical-align:middle;
    }
 
-   /* Row Three -- MENU */
+   /* Row Three --- MENU */
    .X-header .X-menu{    
       display: block; 
       height: 3.75rem;/* fallback */
