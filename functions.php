@@ -7,9 +7,6 @@
 */
 
 
- error_log("This is a test message ", 3 , "/var/www/t6.publications.clas.ufl.edu/wp-content/debug.log");
-
-
 /* LOAD THEME CSS AND JAVASCRIPT*/
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
@@ -27,8 +24,7 @@ function theme_enqueue_styles() {
    wp_enqueue_style('google-fonts');
 
    // Enqueue JAVASCRIPT
-    wp_enqueue_script( 'child-scripts', get_theme_file_uri( '/assets/js/theme.js' ), array(), false, true );
- 
+    wp_enqueue_script( 'child-scripts', get_theme_file_uri( '/assets/js/theme.js' ), array(), false, true ); 
 }
 
 

@@ -9339,8 +9339,8 @@ h2.right-arrow  strong::before {
       color: #f37021;
    }
    .footer-menu h2 svg {
-      height: .8rem;
-      width: .8rem;
+      height: .6rem;
+      width: .6rem;
    }
    /* Javascript first adds the .open class then this CSS rotates the arrow*/
   .footer-menu.open h2 .icon-caret-right {
@@ -9564,8 +9564,8 @@ h2.right-arrow  strong::before {
       color: #f37021;
    }
    .footer-menu h2 svg {
-      height: .8rem;
-      width: .8rem;
+      height: .6rem;
+      width: .6rem;
    }
    /* Javascript first adds the .open class then this CSS rotates the arrow*/
   .footer-menu.open h2 .icon-caret-right {
