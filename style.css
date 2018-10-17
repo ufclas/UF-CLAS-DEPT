@@ -2109,7 +2109,7 @@ figcaption{
      font-size:.9rem;
      text-transform:uppercase;
      font-family:Gentona_Medium;   
-     text-align: center;  
+     text-align: left;  
    }
    .X-quickLinks div ul li a:hover{
       background-color:#eae5d7;
