@@ -1341,7 +1341,7 @@ figcaption{
       overflow:visible;
       z-index:200;   
    }
-   .X-quickLinks span{
+   .X-quickLinks >  span{
       display:table-cell;
       vertical-align:middle;
       cursor:pointer;
@@ -2071,7 +2071,7 @@ figcaption{
       overflow:visible;
       z-index:200;   
    }
-   .X-quickLinks span{
+   .X-quickLinks >  span{
       display:table-cell;
       vertical-align:middle;
       cursor:pointer;
@@ -2788,7 +2788,7 @@ figcaption{
       text-align:center;
       display:none;
    }
-   .X-quickLinks span{
+   .X-quickLinks >  span{
       display:table-cell;
       vertical-align:middle;
    }
@@ -3221,7 +3221,7 @@ figcaption{
       text-align:center;
       display:none;
    }
-   .X-quickLinks span{
+   .X-quickLinks >  span{
       display:table-cell;
       vertical-align:middle;
    }
