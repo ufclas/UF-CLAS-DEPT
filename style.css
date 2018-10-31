@@ -3875,9 +3875,6 @@ a.page-numbers  .icon-arrow-left:hover {
       margin-top:10.15625rem; 
    }
 
-
-
-
   .has-featured-image .site-content-contain{
       margin-top:0rem !important;
    }
@@ -3885,6 +3882,9 @@ a.page-numbers  .icon-arrow-left:hover {
       margin-top:10.15625rem; 
    }
 
+   .search-results  .site-content-contain {
+      margin-top:11.375rem;
+   }
 
    /* If the post is a News Article & it has a Featured Image*/
    .post-template-single-news-article .single-featured-image-header +  .site-content-contain{
@@ -3896,20 +3896,6 @@ a.page-numbers  .icon-arrow-left:hover {
       margin-top:2rem;
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Add margins to compensate for the FIXED branding header (X-header) */
 
@@ -3938,6 +3924,7 @@ a.page-numbers  .icon-arrow-left:hover {
       margin: 0 auto;
       margin-top:9.375rem;
    }
+
   /* .post-template-single-featured-story */
   .post-template-single-featured-story .single-featured-image-header  {
         max-width:2000px;
@@ -3949,8 +3936,6 @@ a.page-numbers  .icon-arrow-left:hover {
 
    }
 
-
-
   :not(.has-featured-image .home) .site-content-contain{
       margin-top:9.375rem; 
    }
@@ -3959,16 +3944,17 @@ a.page-numbers  .icon-arrow-left:hover {
       margin-top:9.375rem; 
    }
 
-
-
-
   .has-featured-image .site-content-contain{
       margin-top:0rem !important;
    }
+
   .home .site-content-contain{
       margin-top:9.375rem; 
    }
 
+   .search-results  .site-content-contain {
+      margin-top:10.375rem;
+   }
 
    /* If the post is a News Article & it has a Featured Image*/
    .post-template-single-news-article .single-featured-image-header +  .site-content-contain{
@@ -4009,6 +3995,9 @@ a.page-numbers  .icon-arrow-left:hover {
   .home .site-content-contain{
       margin-top:7.5rem;
    }
+   .search-results  .site-content-contain {
+      margin-top:8.5rem;
+   }
 
   /* If admin bar is present... */
   .admin-bar .X-header {
@@ -4038,6 +4027,10 @@ a.page-numbers  .icon-arrow-left:hover {
   .home .site-content-contain{
       margin-top:7.5rem;
    }
+   .search-results  .site-content-contain {
+      margin-top:7.5rem;
+   }
+
 
   /* If admin bar is present... */
   .admin-bar .X-header {
@@ -8703,6 +8696,7 @@ h2.right-arrow  strong::before {
       color: #ffffff;
       font-size: 1rem;
       font-family: Gentona_Book; 
+      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -8870,6 +8864,7 @@ h2.right-arrow  strong::before {
       font-size: 1rem;
       font-family: Gentona_Book; 
       padding: 2rem; 
+      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -9038,6 +9033,7 @@ h2.right-arrow  strong::before {
       font-size: 1rem;
       font-family: Gentona_Book; 
       padding: 2rem; 
+      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -9207,6 +9203,7 @@ h2.right-arrow  strong::before {
       font-size: 1rem;
       font-family: Gentona_Book; 
       padding: 2rem; 
+      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -9432,6 +9429,7 @@ h2.right-arrow  strong::before {
       font-size: 1rem;
       font-family: Gentona_Book; 
       padding: 2rem; 
+      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
