@@ -1172,12 +1172,11 @@ figcaption{
       position:relative;
       height: 3.90625rem;/* fallback */ 
       padding-left: 9.4375rem;     
-      display:table; 
-      clear:both;
+      display: table; 
+      clear: both;
       background-color:rgba(0, 64, 131,1);
       text-align:left;
       z-index:2;
-
    }  
    .X-header .college a{
   
@@ -1208,8 +1207,8 @@ figcaption{
 
      }
      .college-logo-desktop svg{
-            width: 37.8125rem;
-            height: 2.5rem;
+            width: 30.25rem;
+            height: 2rem;
 
      }
 
