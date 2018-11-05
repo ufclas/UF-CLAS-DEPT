@@ -1131,7 +1131,6 @@ figcaption{
       position: fixed;
       top:0px;
       width: 100%;
-
       height: 7.8125rem;
       display: block;
       padding:0px;
@@ -1898,7 +1897,7 @@ figcaption{
    .X-header .college {    
       width:100%;
       position:relative;
-      height: 5rem;/* fallback */ 
+      height: 4.0625rem;/* fallback */ 
       padding-left: 10.125rem;   
       display:table; 
       clear:both;
@@ -1953,8 +1952,8 @@ figcaption{
       position:absolute;
       top:0px;
       right:0rem; 
-      width: 3.125rem; 
-      height:3.125rem; 
+      width: 4.0625rem; 
+      height:4.0625rem; 
       display:table;    
       text-align:center;
       padding:0px;
@@ -1985,7 +1984,7 @@ figcaption{
       z-index:1000 !important;
       transition: all 0.3s ease;
       display:block;  
-      top: 5rem; 
+      top: 4.0625rem; 
       left:0px;
       right:0px;
       text-align:center;
@@ -2059,17 +2058,17 @@ figcaption{
       margin:0px;
       bottom:0px;
       top:0px;
-      right:3.125rem;
+      right:4.0625rem;
       background-color: #13599a;
       width:10.9375rem;
-      height:3.125rem;
+      height:4.0625rem;
       z-index:2;
       font-family:Quadon_Medium;
       font-size:1.25rem;
       text-align:left;
       display:table;
       overflow:visible;
-      z-index:200;   
+      z-index: 200;   
    }
    .X-quickLinks >  span{
       display:table-cell;
@@ -2120,7 +2119,7 @@ figcaption{
    .X-quickLinks:hover > div ul{
       display:block;
       right:0px;
-      top:3.125rem;
+      top:4.0625rem;
       visibility:visible;
       opacity:1;
       transition: all 0.3s ease 0s;
@@ -2162,8 +2161,8 @@ figcaption{
    /* Row Two -- DEPARTMENT Name */
    .X-header .department {
       width:100%;    
-      height:3.125rem;
-      top:3.125rem;
+      height:4.0625rem;
+      top:4.0625rem;
       display:block; 
       clear:both;
       background-color:#ffffff;
@@ -2180,7 +2179,7 @@ figcaption{
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
-    height: 3.125rem;
+    height: 4.0625rem;
    }
    .strikeRight {
       margin: 0px;  
@@ -2209,7 +2208,7 @@ figcaption{
      font-size:1.8rem;
      color:rgba(0, 64, 131, 1) !important;
      display: table-cell;
-     height:3.125rem;
+     height: 4.0625rem;
      vertical-align: middle;
      letter-spacing:1px;
      word-wrap: break-word;
@@ -2307,7 +2306,7 @@ figcaption{
       z-index:1;
       display:block;
       width:100%;
-      height:3.125rem;
+      height:4.0625rem;
       background-color: #F7F4EB; 
    }
      .X-menu nav > div {
@@ -2326,7 +2325,7 @@ figcaption{
       text-align:justify;
       padding-left:2rem;
       padding-right:2rem;
-      height:3.125rem;       
+      height:4.0625rem;       
    }
    .X-menu nav > div > ul:after {
       top:-50px;
@@ -2359,7 +2358,7 @@ figcaption{
       text-transform: uppercase; 
       word-wrap: break-word; 
       text-align:center;
-      height:3.125rem;
+      height:4.0625rem;
       line-height:1; 
    }
    .X-menu nav > div > ul > li > a:hover {
