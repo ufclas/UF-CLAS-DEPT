@@ -2884,7 +2884,7 @@ figcaption{
       text-align: left;
    }
    .X-menu nav > div > ul > li > a:hover {
-    color: #00529b !important;
+    color: #00529b;
    }
    /* Dropdown Menu */
    .X-menu nav > div > ul > li > ul { 
