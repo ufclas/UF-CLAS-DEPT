@@ -188,7 +188,7 @@ endif;
 <?php
    if ( !empty($s["email"]) ): 
 ?>
-             <li><a href="<?php  echo $s["email"]   ?>" alt="Contact CLAS" class=" icon-svg icon-social-media icon-email"  target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-footer-email"></use></svg><span class="visuallyhidden">editor@clas.ufl.edu</span></a></li>
+             <li><a href="<?php  echo $s["email"]   ?>" alt="Contact CLAS" class=" icon-svg icon-social-media icon-email"  target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-footer-email"></use></svg><span class="visuallyhidden">webmaster@clas.ufl.edu</span></a></li>
 
 <?php
 endif;
@@ -206,7 +206,7 @@ endif;
             </ul>
          </div>
 
-   <p class="contact-webmaster">If you encounter any issues with this website please contact us at <a href="mailto:editor@clas.ufl.edu" title="Contact the Webmaster">editor@clas.ufl.edu</a></p>
+   <p class="contact-webmaster">If you encounter any issues with this website please contact us at <a href="mailto:webmaster@clas.ufl.edu" title="Contact the Webmaster">webmaster@clas.ufl.edu</a></p>
 
           </div>
       
@@ -220,7 +220,7 @@ endif;
    <div class="footer-uf-wrap">
    <div class="footer-uf-col-1 bottom-links"> 
       <p>
-      &#169; 2018 University of Florida  |  <a href ="//assistive.usablenet.com/tt/referrer"> Text-only </a>  | <a href="mailto:editor@clas.ufl.edu" alt="Email use feedback related to this website"> Website Feedback</a> |  <a href ="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement" alt="Online/Internet Privacy Statement" /> UF Privacy Policy </a> 
+      &#169; 2018 University of Florida  |  <a href ="//assistive.usablenet.com/tt/referrer"> Text-only </a>  | <a href="mailto:webmaster@clas.ufl.edu" alt="Email use feedback related to this website"> Website Feedback</a> |  <a href ="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement" alt="Online/Internet Privacy Statement" /> UF Privacy Policy </a> 
       </p>
 
    </div>
