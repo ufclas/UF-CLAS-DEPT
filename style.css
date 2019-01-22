@@ -1687,6 +1687,7 @@ figcaption{
       max-height: 80%;
       max-height: 70vh;
       padding-bottom: 2rem;
+      overflow-y: scroll  !important;
 
    }
 
@@ -1705,6 +1706,7 @@ figcaption{
       z-index:10;
       background: #faf8f1;
       min-width:16rem;
+
    }
 
     .X-menu-edge{
@@ -2418,6 +2420,9 @@ figcaption{
       max-height: 80%;
       max-height: 70vh;
       padding-bottom: 2rem;
+      overflow-y: scroll  !important;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+
 
    }
 
