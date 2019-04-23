@@ -25,24 +25,26 @@
            <div class="wrap">
 <?php
 
-                   if ( !has_post_thumbnail( get_queried_object_id() ) ) {
-                         $POSTtitle=single_post_title('',FALSE);
-                    
-                         echo '<h1>'.$POSTtitle.'</h1>';
-  
-                         $post_id = $post->ID; // current post ID
-                         $var_sub_head=get_field('sub_head');
-                         if ( !is_null($var_sub_head) )
-                            echo '<h2>'.$var_sub_head.'</h2>';
+			if ( !has_post_thumbnail() ) { 
+				the_title( '<h1 class="entry-title">', '</h1>' );
 
-                    $header_image=get_field('header_image');
-                         if ( !is_null($header_image) )
-                            echo '<img src="'.$header_image.'" />';
+				// Get custom field for subhead
+				$var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
+				$header_image = get_post_meta( get_the_ID(), 'header_image', true);
 
+				// Prevent fatal error if ACF isn't active
+				if ( function_exists('get_field') ){
+					$var_sub_head = get_field('sub_head');
+					$header_image = get_field('header_image');
+				}
 
-
-
-                   }
+				if ( !empty( $var_sub_head ) ){
+					echo '<h2>' . esc_html( $var_sub_head ) . '</h2>';
+				}
+				if ( !empty( $header_image ) ){
+					echo '<img src="' . esc_url( $header_image ) . '" />';
+				}
+			}
 ?>
 
 		<?php

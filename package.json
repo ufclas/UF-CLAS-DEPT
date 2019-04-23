@@ -1,0 +1,26 @@
+{
+  "name": "uf-clas-dept",
+  "version": "1.0.0",
+  "description": "Twenty-seventeen child theme",
+  "main": "index.php",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmdigitalconsulting/UF-CLAS-DEPT.git"
+  },
+  "author": "priscillamc",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/pmdigitalconsulting/UF-CLAS-DEPT/issues"
+  },
+  "homepage": "https://github.com/pmdigitalconsulting/UF-CLAS-DEPT#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.0.2",
+    "load-grunt-tasks": "^4.0.0",
+    "node-sass": "^4.11.0"
+  }
+}

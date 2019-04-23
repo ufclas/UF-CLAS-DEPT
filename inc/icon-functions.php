@@ -12,14 +12,14 @@
  */
 function twentyseventeen_include_svg_icons() {
 	// Define SVG sprite file.
-	$svg_icons = get_parent_theme_file_path( '/assets/images/svg-icons.svg' );
+	$svg_icons = get_theme_file_path( '/assets/images/ufl.svg' );
 
 	// If it exists, include it.
 	if ( file_exists( $svg_icons ) ) {
 		require_once( $svg_icons );
 	}
 }
-add_action( 'wp_footer', 'twentyseventeen_include_svg_icons', 9999 );
+add_action( 'ufclas_emily_footer_bottom', 'twentyseventeen_include_svg_icons', 9999 );
 
 /**
  * Return SVG markup.
@@ -39,17 +39,21 @@ function twentyseventeen_get_svg( $args = array() ) {
 		return __( 'Please define default parameters in the form of an array.', 'twentyseventeen' );
 	}
 
-	// Define an icon.
-	if ( false === array_key_exists( 'icon', $args ) ) {
+	// Require an icon or id
+	if ( (false === array_key_exists( 'icon', $args )) && (false === array_key_exists( 'icon_id', $args )) ) {
 		return __( 'Please define an SVG icon filename.', 'twentyseventeen' );
 	}
 
 	// Set defaults.
 	$defaults = array(
-		'icon'        => '',
-		'title'       => '',
-		'desc'        => '',
-		'fallback'    => false,
+		'icon'     => '', 
+		'title'    => '',
+		'desc'     => '',
+		'fallback' => false,
+		'icon_id'  => '', // Override the icon id
+		'id' 	   => '', // Override the svg id
+		'class'    => '', // Override the svg class
+		'role'     => '', // Support setting a role
 	);
 
 	// Parse args.
@@ -74,7 +78,7 @@ function twentyseventeen_get_svg( $args = array() ) {
 	 */
 	if ( $args['title'] ) {
 		$aria_hidden     = '';
-		$unique_id       = uniqid();
+		$unique_id       = twentyseventeen_unique_id();
 		$aria_labelledby = ' aria-labelledby="title-' . $unique_id . '"';
 
 		if ( $args['desc'] ) {
@@ -82,9 +86,36 @@ function twentyseventeen_get_svg( $args = array() ) {
 		}
 	}
 
+	// Set markup variables
+	$id = '';
+	$class = '';
+	$role = '';
+	
+	// Set the icon ID for <use> tag, etc.
+	$icon_id = ( $args['icon'] )? 'icon-' . $args['icon'] : $args['icon_id'];
+	
+	// Set svg id
+	if ( $args['id'] ){
+		$id = ' id="' . esc_attr( $args['id'] ) . '"';
+	}
+	
+	// Set svg role
+	if ( $args['role'] ){
+		$role = ' role="' . esc_attr( $args['role'] ) . '"';
+	}
+	
+	// Set svg class
+	if ( $args['icon'] ){
+		$class = ' class="icon ' . esc_attr( $icon_id ) . '"';
+	}
+	elseif ( $args['class'] ){
+		$class = ' class="' . esc_attr( $args['class'] ) . '"';
+	}
+	
 	// Begin SVG markup.
-	$svg = '<svg class="icon icon-' . esc_attr( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
+	$svg = '<svg' . $id . $class . $aria_hidden . $aria_labelledby . $role . '>';
 
+	
 	// Display the title.
 	if ( $args['title'] ) {
 		$svg .= '<title id="title-' . $unique_id . '">' . esc_html( $args['title'] ) . '</title>';
@@ -102,11 +133,11 @@ function twentyseventeen_get_svg( $args = array() ) {
 	 *
 	 * See https://core.trac.wordpress.org/ticket/38387.
 	 */
-	$svg .= ' <use href="#icon-' . esc_html( $args['icon'] ) . '" xlink:href="#icon-' . esc_html( $args['icon'] ) . '"></use> ';
+	$svg .= ' <use xlink:href="#' . esc_html( $icon_id ) . '"></use> ';
 
 	// Add some markup to use as a fallback for browsers that do not support SVGs.
 	if ( $args['fallback'] ) {
-		$svg .= '<span class="svg-fallback icon-' . esc_attr( $args['icon'] ) . '"></span>';
+		$svg .= '<span class="svg-fallback ' . esc_attr( $icon_id ) . '"></span>';
 	}
 
 	$svg .= '</svg>';

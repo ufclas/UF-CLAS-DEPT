@@ -1,18 +1,18 @@
-/*
- Theme Name:   EMILY Theme
- Theme URI:    http://t5.publications.clas.ufl.edu
+/*! 
+ Theme Name:   UF CLAS EMILY Theme
+ Theme URI:    http://publications.clas.ufl.edu
  Description:  Theme for the College of Liberal Arts and Sciences homesite
  Author:       Yash Singh
  Author URI:   https://comms.clas.ufl.edu/the-team/
  Template:     twentyseventeen
- Version:      1.0.0
+ Version:      1.9.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
- Text Domain:  twenty-seventeen-child
+ Text Domain:  ufclas-emily
 */
 
-
+ 
 /*
 
    ---!!!--- MINIFY THEME CSS ON PRODUCTION---!!!--- 
@@ -57,15 +57,11 @@ body{
 }
 
    .bg-texture{
-    <?php echo "background: #faf8f1 url('".get_stylesheet_directory_uri()."/assets/images/bg-texture.png');"; ?>
-   }
+    }
 
    .center{
       text-align:center;
    }
-
-   :focus {outline:none;}
-   ::-moz-focus-inner {border:0;}
 
 /* FONTS  */
 @font-face{
@@ -114,6 +110,13 @@ body{
     font-family: 'Gentona_Book';
     src: url('fonts/web-fonts/gentona/Gentona_Book.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
+}
+/* Accessibility: font-weight below allows footer links to appear bold */
+@font-face {
+    font-family: 'Gentona_Book';
+    src: url('fonts/web-fonts/gentona/Gentona_Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
 }
 @font-face {
@@ -704,8 +707,16 @@ span.photo-credit::before {
     box-shadow: none;
 }
 
-a { text-decoration:none;  outline: 0; outline: none;   -webkit-tap-highlight-color: transparent; tap-highlight-color: transparent;}
-
+a { text-decoration:none; tap-highlight-color: transparent;}
+a:focus { outline: 2px solid greenyellow; outline-offset: 4px; }
+.X-header .uf a:focus { display: block; }
+.X-header .uf a:focus svg { border: 2px solid greenyellow; }
+.X-header .college a:focus { outline: none; }
+.X-header .college a:focus svg { border: 2px solid greenyellow; }
+.X-header .department a:focus { outline: none; }
+.X-header .department a:focus .access-focus { border: 2px solid greenyellow; }
+.footer-uf .footer-uf-campaign-logo a:focus { display: block; }
+		
 .entry-content a:link {color: #00529b; }
 .entry-content a:visited {color: #c24700; }
 .entry-content a:hover {color: #c24700; }
@@ -1263,7 +1274,7 @@ figcaption{
       height:100vh;
       width:100%;
       overflow:visible;
-      overflow-y: scroll  !important; 
+      overflow-y: scroll !important; 
       -webkit-overflow-scrolling: touch;
       right:0px !important;
       background-color:rgba(0, 64, 131,.9);
@@ -1438,7 +1449,7 @@ figcaption{
       z-index:1;
       border-bottom:1px solid #efede6;   
    }
-   .X-header .department  a {
+   .X-header .department  a, .X-header .department .strikeheader {
       padding-left:9.4375rem;   
    }
 
@@ -2170,7 +2181,7 @@ figcaption{
       z-index:1;
       border-bottom:1px solid #efede6;   
    }
-   .X-header .department  a {
+   .X-header .department  a, .X-header .department .strikeheader {
       padding-left: 10.125rem;     
    }
 
@@ -2611,7 +2622,7 @@ figcaption{
       z-index:2;
       transition: all .2s ease-in-out;
       overflow: visible;
-      background-color:rgba(255,255,255); 
+      background-color:rgb(255,255,255); 
    }
       /* UF Logo -- floated above two rows  */
       .X-header .uf{
@@ -2684,7 +2695,7 @@ figcaption{
       border-bottom:1px solid #efede6;
       text-align:center;   
    }
-   .X-header .department  a {
+   .X-header .department a, .X-header .department .strikeheader {
       display:table-cell;
       vertical-align:middle;
       padding-left:0rem;  
@@ -3041,7 +3052,7 @@ figcaption{
       z-index:2;
       transition: all .2s ease-in-out;
       overflow: visible;
-      background-color:rgba(255,255,255); 
+      background-color:rgb(255,255,255); 
    }
       /* UF Logo -- floated above two rows  */
       .X-header .uf{
@@ -3113,7 +3124,7 @@ figcaption{
       border-bottom:1px solid #efede6;
       text-align:center;   
    }
-   .X-header .department  a {
+   .X-header .department  a, .X-header .department .strikeheader {
       display:table-cell;
       vertical-align:middle;
       padding-left:0rem;  
@@ -3429,9 +3440,7 @@ figcaption{
       width:3.4375rem;   
       border:0px;    
       cursor: pointer;
-    } 
-   :focus {outline:none;}
-::-moz-focus-inner {border:0;}
+    }
 
    .X-menu nav > div > ul > li > button.dropdown-toggle :active {
    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
@@ -3484,7 +3493,6 @@ figcaption{
       overflow-y: scroll  !important; 
       -webkit-overflow-scrolling: touch;
       right:0px !important;
-      outline: none;
    }
    .top-margin-shim{
       padding-top:7.5rem; 
@@ -3871,7 +3879,7 @@ a.page-numbers  .icon-arrow-left:hover {
 
 
   :not(.has-featured-image .home) .site-content-contain{
-      margin-top:10.15625rem; 
+      margin-top:10.15625rem;
    }
 
   :not(.panel-image) .site-content-contain{
@@ -3916,6 +3924,7 @@ a.page-numbers  .icon-arrow-left:hover {
       max-width:1440px;
       margin: 0 auto;
       margin-top:9.375rem;
+      margin-top:195px;
    }
 
     .panel-image{
@@ -3944,7 +3953,8 @@ a.page-numbers  .icon-arrow-left:hover {
    }
 
   :not(.panel-image) .site-content-contain{
-      margin-top:9.375rem; 
+      margin-top:9.375rem;
+	  margin-top: 195px;
    }
 
   .has-featured-image .site-content-contain{
@@ -4054,7 +4064,7 @@ a.page-numbers  .icon-arrow-left:hover {
 
 
 /* Pages should have a minimum height in case they are blank. This prevents the footer from sticking to the header */
-#primary: not(.home) {
+#primary:not(.home) {
    min-height: 50vh;
 
 }
@@ -6177,7 +6187,7 @@ a.page-numbers  .icon-arrow-left:hover {
 
 
 /** ACCESSIBILITY **/
-.screen-reader-text {
+.screen-reader-text, .SVGaltText {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
@@ -6186,26 +6196,12 @@ a.page-numbers  .icon-arrow-left:hover {
     word-wrap: normal !important;
 }
 
-/* Alt text for SVGs */
-.SVGaltText{
-   display:none;
-
-}
-
-
-
-
-
 /** DISABLE TWENTYSEVENTEEN ELEMENTS **/
 
 .no-comments{
    display:none;
 }
 
-.skip-link, .screen-reader-text{
-
-   display:none;
-}
 .entry-footer .cat-links .icon, .entry-footer .tags-links .icon, .cat-links {
    display:none;
 }
@@ -6291,7 +6287,7 @@ input[type="checkbox"] + label {
 	font-weight: 400;
 }
 
-button  :not('.icon-angle-down'),
+button:not(.icon-angle-down),
 input[type="button"],
 input[type="submit"] {
 	background-color: #222;
@@ -6329,7 +6325,7 @@ input[type="submit"].secondary {
 }
 
 button:hover,
-button:focus :not('.icon-angle-down'),
+button:focus:not(.icon-angle-down),
 input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="submit"]:hover,
@@ -6472,7 +6468,7 @@ button.search-submit :focus, button.search-submit:hover{
 
    
    .slideReadMore{
-      color: rgb(0,82,155); !important;
+      color: rgb(0,82,155) !important;
       text-transform: uppercase;
       font-family: Gentona_Bold;
    }
@@ -6883,7 +6879,7 @@ button.search-submit :focus, button.search-submit:hover{
    }
 
    .slideReadMore{
-      color: rgb(0,82,155); !important;
+      color: rgb(0,82,155) !important;
       text-transform: uppercase;
       font-family: Gentona_Bold;
    }
@@ -8417,7 +8413,7 @@ a.btn-orange:hover, a.btn-orange-large:hover {
 }
 
 a.btn-blue, a.btn-blue-large {
-    color: rgb(0, 64, 131)  !important;
+    color: rgb(0, 64, 131) !important;
     text-decoration: none;
 }
 
@@ -8431,7 +8427,7 @@ a.btn-blue:hover, a.btn-blue-large:hover {
 
 /** BEIGE BUTTON **/
 .btn-beige,.btn-beige-large {
-    border: 3px solid  #c6ba97 !important;
+    border: 3px solid #c6ba97 !important;
     max-width: 100%;
     cursor: pointer;
     display: inline-block;
@@ -8476,14 +8472,14 @@ a.btn-blue:hover, a.btn-blue-large:hover {
 }
 
 a.btn-beige, a.btn-beige-large {
-    color:  #c6ba97;  !important;
+    color:  #c6ba97 !important;
     text-decoration: none;
 }
 
 a.btn-beige:hover, a.btn-beige-large:hover {
     color: #ffffff !important;
     text-decoration: none;
-    background-color:  #c6ba97; !important;
+    background-color:  #c6ba97 !important;
 
 }
 
@@ -8637,7 +8633,8 @@ h2.right-arrow  strong::before {
 }
 
 .footer-main a, .footer-uf a {
-      color: #9ad2e1 !important;
+    color: #9ad2e1 !important;
+	font-weight: 700;
 }
 
 /*__________________SOCIAL MEDIA ICONS__________________*/
@@ -8993,7 +8990,7 @@ h2.right-arrow  strong::before {
    }
    .list-unstyled  li {
       padding-top:.2rem;
-      padding-bottom:.2rem;
+      padding-bottom:.4rem;
    }
    .footer-menu.open ul {
       display: block;
