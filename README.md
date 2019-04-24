@@ -1,8 +1,24 @@
-UFCLAS EMILY Theme
+UF CLAS EMILY Theme
 ==================
 
-Theme Information
------------------
+Theme for the College of Liberal Arts and Sciences homesite
+
+```
+Theme URI:    http://publications.clas.ufl.edu
+Description:  Theme for the College of Liberal Arts and Sciences homesite
+Author:       Yash Singh
+Author URI:   https://comms.clas.ufl.edu/the-team/
+Template:     twentyseventeen
+```
+
+Documentation
+-------------
+
+### Theme Updates
+
+If there are templates and functions in the Twenty Seventeen parent theme that have the same name, the files in this theme override them. 
+
+Some files may need to be updated to support new features or fixes in Twenty Seventeen beyond v2.1. 
 
 ### Page Templates
 
@@ -40,6 +56,8 @@ The menu location areas below require a menu:
 
 Users can tab through the links and see a highlight around the linked element.
 
+Elements that cannot be accessed via keyboard (main menu submenus, search).
+
 ### SVG Icons & Images
 
 This theme uses a customized version of the ``twentyseventeen_get_svg`` function in its inc/icon-functions folder, which overrides the file/function in the parent theme. 
@@ -69,9 +87,5 @@ Featured image custom field (caption is a WP field):
 
 - photo_credit_txt
 
-### Theme Updates
 
-If there are templates and functions in the Twenty Seventeen parent theme that have the same name, the files in this theme override them. 
-
-Some files may need to be updated to support new features or fixes in Twenty Seventeen beyond v2.1. 
 

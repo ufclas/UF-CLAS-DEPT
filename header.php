@@ -65,7 +65,7 @@
 	   </div>  
    </div>
 
-  <nav class="X-quickLinks" aria-label="Quick Links"> <span>Quick Links</span> 
+  <nav class="X-quickLinks" aria-label="Quick Links" tabindex="999"> <span>Quick Links</span> 
 	<?php wp_nav_menu( array(
 		'theme_location' => 'quicklinks',
 		'menu_id'        => 'quicklinks',
@@ -75,16 +75,16 @@
 	) ); ?>
    </nav>
 
-	<div class="X-searchTrigger">
+	<div class="X-searchTrigger" tabindex="1000">
 	   <span>
 		   <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'icon-search-thin-open', 'class' => 'icon-search-thin-open', 'id' => 'icon-search-thin-trigger', 'role' => 'button', 'title' => 'Open/Close Search' ) ); ?>
 	   </span>
 	</div>
    <div class="X-search-form-container"><?php get_search_form(); ?></div>
-   <div class="menuBox" >
+   <div class="menuBox" tabindex="1001">
 	   <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'icon-fivelines', 'class' => 'icon-menu', 'id' => 'icon-menu' ) ); ?>
    </div>
-   <div class="X-menu" aria-label="Mobile Menu">
+   <div class="X-menu">
    <div class="mobileSearch"><?php get_search_form(); ?></div>
          <?php if ( has_nav_menu( 'top' ) ) : ?>
 <nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">

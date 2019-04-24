@@ -34,6 +34,8 @@ module.exports = function(grunt) {
 				src: [
 					'assets/js/global.min.js',
 					'assets/js/navigation.min.js',
+					'assets/js/skip-link-focus-fix.min.js',
+					'assets/js/jquery.scrollTo.min.js',
 					'assets/js/theme.min.js',
 				],
 				dest: 'assets/js/script.min.js'

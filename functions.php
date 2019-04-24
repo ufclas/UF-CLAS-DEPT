@@ -12,12 +12,48 @@
  * @since 1.0
  */
 function ufclas_emily_theme_enqueue_styles() {
-
+	$theme_version = wp_get_theme()->get( 'Version' );
    // Enqueue CSS
-   wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.min.css', array(), null );
+   wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.min.css', array(), $theme_version );
+	
+	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
+	if ( is_customize_preview() ) {
+		wp_enqueue_style( 'twentyseventeen-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'child-style' ) );
+		wp_style_add_data( 'twentyseventeen-ie9', 'conditional', 'IE 9' );
+	}
 
-  // Enqueue JAVASCRIPT
-	wp_enqueue_script( 'child-scripts', get_theme_file_uri( '/assets/js/script.min.js' ), array('jquery', 'twentyseventeen-skip-link-focus-fix'), null, true ); 
+	// Load the Internet Explorer 8 specific stylesheet.
+	wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'child-style' ) );
+	wp_style_add_data( 'twentyseventeen-ie8', 'conditional', 'lt IE 9' );
+
+	// Load the html5 shiv.
+	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array() );
+	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
+
+	
+	// Enqueue JAVASCRIPT
+	wp_enqueue_script( 'child-scripts', get_theme_file_uri( '/assets/js/script.min.js' ), array('jquery'), $theme_version, true );
+	
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+	
+	// Add translated text that can be used in JS
+	$twentyseventeen_l10n = array(
+		'quote' => twentyseventeen_get_svg( array( 'icon' => 'quote-right' ) ),
+	);
+
+	if ( has_nav_menu( 'top' ) ) {
+		$twentyseventeen_l10n['expand']   = __( 'Expand child menu', 'twentyseventeen' );
+		$twentyseventeen_l10n['collapse'] = __( 'Collapse child menu', 'twentyseventeen' );
+		$twentyseventeen_l10n['icon']     = twentyseventeen_get_svg(
+			array(
+				'icon'     => 'angle-down',
+				'fallback' => true,
+			)
+		);
+	}
+	wp_localize_script( 'child-scripts', 'twentyseventeenScreenReaderText', $twentyseventeen_l10n );
 }
 add_action( 'wp_enqueue_scripts', 'ufclas_emily_theme_enqueue_styles' );
 
@@ -1040,18 +1076,10 @@ function ufclas_emily_footer_bottom() {
  * @author priscillamc
  */
 function ufclas_emily_dequeue_styles_scripts(){
-	//wp_dequeue_style( 'twentyseventeen-style' );
-	//wp_deregister_style( 'twentyseventeen-style' );
-	
-	wp_dequeue_style( 'twentyseventeen-fonts' );
-	
-	wp_dequeue_script( 'twentyseventeen-navigation' );
-	wp_dequeue_script( 'twentyseventeen-global' );
-	
-	wp_deregister_script( 'twentyseventeen-navigation' );
-	wp_deregister_script( 'twentyseventeen-global' );
+	remove_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
 }
-add_action( 'wp_enqueue_scripts', 'ufclas_emily_dequeue_styles_scripts', 99 );
+add_action( 'init', 'ufclas_emily_dequeue_styles_scripts' );
+
 
 /**
  * Remove jquery migrate

@@ -5,7 +5,7 @@
  Author:       Yash Singh
  Author URI:   https://comms.clas.ufl.edu/the-team/
  Template:     twentyseventeen
- Version:      1.9.0
+ Version:      1.9.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -708,13 +708,13 @@ span.photo-credit::before {
 }
 
 a { text-decoration:none; tap-highlight-color: transparent;}
-a:focus { outline: 2px solid greenyellow; outline-offset: 4px; }
+a:focus { outline: 2px solid dodgerblue; outline-offset: 0px; }
+#top-menu a:focus { outline-color: #F7F4EB; }
+.X-header form .search-field:focus { outline: none; }
 .X-header .uf a:focus { display: block; }
-.X-header .uf a:focus svg { border: 2px solid greenyellow; }
+.X-header .uf a:focus svg, .X-header .college a:focus svg { border: 2px solid lightblue; }
 .X-header .college a:focus { outline: none; }
-.X-header .college a:focus svg { border: 2px solid greenyellow; }
 .X-header .department a:focus { outline: none; }
-.X-header .department a:focus .access-focus { border: 2px solid greenyellow; }
 .footer-uf .footer-uf-campaign-logo a:focus { display: block; }
 		
 .entry-content a:link {color: #00529b; }
@@ -1702,15 +1702,11 @@ figcaption{
 
    }
 
-   /*
-    .X-menu nav ul li:last-child ul, .X-menu nav ul li:last-child ul {   
-      left:auto;
-      right:0;
-   }
-   */
-
+  
    /* SHOW Sub Menu */ 
-    .X-menu nav ul li:hover ul, .X-menu nav ul li:active ul {  
+    .X-menu nav .menu .menu-item-has-children > a:hover + .sub-menu, 
+	.X-menu nav .menu .menu-item-has-children > a:focus + .sub-menu, 
+	.X-menu nav .menu .menu-item-has-children > a:active + .sub-menu {  
       opacity:1;
       visibility: visible;
       transition: all 0.2s ease 0s;
@@ -1725,12 +1721,7 @@ figcaption{
       right:0 !important;
       margin-right:3rem;
    }
-  /*
-    .X-menu nav ul li:last-child:hover ul, .X-menu nav ul li:last-child:active ul {   
-      left:auto;
-      right:0;
-   }
-  */
+  
     .X-menu nav > div > ul > li > ul > li, .X-menu .sub-menu li{
       word-break: break-word;
       padding-left:1rem;            
@@ -2445,7 +2436,9 @@ figcaption{
    */
 
    /* SHOW Sub Menu */ 
-    .X-menu nav ul li:hover ul, .X-menu nav ul li:active ul {   
+    .X-menu nav .menu .menu-item-has-children > a:hover + .sub-menu, 
+	.X-menu nav .menu .menu-item-has-children > a:focus + .sub-menu, 
+	.X-menu nav .menu .menu-item-has-children > a:active + .sub-menu {    
       opacity:1;
       visibility: visible;
       transition: all 0.2s ease 0s;
@@ -2922,8 +2915,10 @@ figcaption{
    .js .menu-toggle{
     display: none;
    }
-   /* SHOW Sub Menu
-   .X-menu nav ul li:hover ul, .X-menu nav ul li:active ul {   
+   /* SHOW Sub Menu */
+   .X-menu nav .menu .menu-item-has-children > a:hover + .sub-menu, 
+	.X-menu nav .menu .menu-item-has-children > a:focus + .sub-menu, 
+	.X-menu nav .menu .menu-item-has-children > a:active + .sub-menu {   
       display: block;
       position: relative;
       opacity:1;
@@ -2932,7 +2927,6 @@ figcaption{
       z-index:10;
       background: #fffdf5;;
    }
-  */ 
     li.menu-item-has-children > ul {
         display:none;
    }
@@ -3360,8 +3354,10 @@ figcaption{
    .js .menu-toggle {
     display: none;
    }
-   /* SHOW Sub Menu
-   .X-menu nav ul li:hover ul, .X-menu nav ul li:active ul {   
+   /* SHOW Sub Menu */
+   .X-menu nav .menu .menu-item-has-children > a:hover + .sub-menu, 
+	.X-menu nav .menu .menu-item-has-children > a:focus + .sub-menu, 
+	.X-menu nav .menu .menu-item-has-children > a:active + .sub-menu {    
       display: block;
       position: relative;
       opacity:1;
@@ -3370,7 +3366,6 @@ figcaption{
       z-index:10;
       background: #fffdf5;;
    }
-  */ 
 
 
    .X-menu nav > div > ul > li.open > ul {
