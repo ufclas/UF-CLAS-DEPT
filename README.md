@@ -54,9 +54,7 @@ The menu location areas below require a menu:
 
 #### Keyboard Navigation
 
-Users can tab through the links and see a highlight around the linked element.
-
-Elements that cannot be accessed via keyboard (main menu submenus, search).
+Keyboard users can use the tab key to navigate through the menus, links, and buttons on the page. Users will see an outline around the current link/element.
 
 ### SVG Icons & Images
 
@@ -86,6 +84,39 @@ Page Templates with custom fields:
 Featured image custom field (caption is a WP field): 
 
 - photo_credit_txt
+
+### Stylesheets
+
+Parent theme styles are not used. The theme includes these stylesheets:
+
+- style.min.css - minified child theme styles
+- assets/css/inline.min.css - minified inline styles from advancement.clas.ufl.edu (unclear where these styles are used)
+
+The main stylesheet divides the styles into sections with media queries. Since these styles are redefined for each breakpoints instead of overriding previous styles, styles appear multiple times for each breakpoint. This can be solved using cascading, SASS, and using a mobile-first structure. 
+
+**Note: When updating any styles, be sure to search and update each breakpoint.**
+
+
+### JavaScript
+
+The JS files are minified and combined in the main JS file, script.min.js.
+
+Custom JS file:
+
+- theme.js
+
+Modified versions of parent theme files:
+
+- global.js
+- jquery.scrollTo.js
+- navigation.js
+- skip-link-focus-fix.js
+
+Included from the parent theme:
+
+- html5.js
+
+
 
 
 

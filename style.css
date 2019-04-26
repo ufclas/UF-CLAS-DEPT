@@ -5,7 +5,7 @@
  Author:       Yash Singh
  Author URI:   https://comms.clas.ufl.edu/the-team/
  Template:     twentyseventeen
- Version:      1.9.1
+ Version:      1.9.2
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -241,6 +241,13 @@ body{
     font-weight: normal;
     font-style: normal;
 }
+/* Accessibility: font-weight below allows footer links to appear bold */
+@font-face {
+    font-family: 'Quadon_Medium';
+    src: url('fonts/web-fonts/quadon/Quadon_Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Quadon_BoldItalic';
     src: url('fonts/web-fonts/quadon/Quadon_BoldItalic.woff') format('woff');
@@ -454,7 +461,7 @@ h2 a {
    color:#333333;
 }
 h2 a:hover,h2 a:active  {
-   color:#c24700;
+   color:#A24C16;
 }
 h3 {
    font-family: "Surveyor Text A", "Surveyor Text B";
@@ -666,7 +673,7 @@ blockquote, blockquote p {
     padding-top: auto;
     font-size: 1.5rem;
     line-height: 140%;
-    color: #bc581a;
+	color: #A24C16;
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -707,21 +714,24 @@ span.photo-credit::before {
     box-shadow: none;
 }
 
+/* Adds some focus outlines to help keyboard users, 
+	would look better as background-colors, hovers, etc. */
 a { text-decoration:none; tap-highlight-color: transparent;}
-a:focus { outline: 2px solid dodgerblue; outline-offset: 0px; }
-#top-menu a:focus { outline-color: #F7F4EB; }
+a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
+#top-menu a:focus, #quicklinks a:focus { outline-color: #F7F4EB; }
 .X-header form .search-field:focus { outline: none; }
-.X-header .uf a:focus { display: block; }
-.X-header .uf a:focus svg, .X-header .college a:focus svg { border: 2px solid lightblue; }
-.X-header .college a:focus { outline: none; }
-.X-header .department a:focus { outline: none; }
+.X-header .uf a:focus { display: block; outline-color: transparent; }
+.X-header .uf a:focus svg { outline: 2px solid #4c87b5; }
+.X-header .college a:focus { outline-color: #4c87b5; }
+.X-header .college .college-logo-desktop { outline-color: #F7F4EB; }
+.X-header .department a:focus { outline-color: #F7F4EB; }
 .footer-uf .footer-uf-campaign-logo a:focus { display: block; }
 		
 .entry-content a:link {color: #00529b; }
-.entry-content a:visited {color: #c24700; }
-.entry-content a:hover {color: #c24700; }
-.entry-content a:focus {color: #c24700; }
-.entry-content a:active {color: #c24700; }
+.entry-content a:visited {color: #A24C16; }
+.entry-content a:hover {color: #A24C16; }
+.entry-content a:focus {color: #A24C16; }
+.entry-content a:active {color: #A24C16; }
 .entry-content ul{
    list-style-type: square;
    margin:0px;
@@ -1109,6 +1119,7 @@ figcaption{
  #page a, #secondary a {
    color:#337ab7;
    text-decoration:none;
+	font-weight: 700;
 }
 #page a:focus, #page a:hover, #secondary a:focus, #secondary a:hover {
     color: #23527c;
@@ -1128,7 +1139,6 @@ figcaption{
       background-color: #00337A;
       cursor: pointer;
    }
-
 
 .sticky {
     top: 0;
@@ -1242,7 +1252,22 @@ figcaption{
       background-color:#00337A;
       z-index:3;
     }
-   .X-searchTrigger span{
+   .X-searchTrigger button{
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		border: none;
+   }
+	.X-searchTrigger button:focus, 
+	.X-searchTrigger button:hover {
+		background-color: #4c87b5;
+	}
+	.menuBox.show-menuBox button {
+		background-color: #00337A;
+	}
+	
+	
+   .X-searchTrigger button span{
       position:relative;
        max-width: 2.2rem;  
       max-height:2.2rem; 
@@ -1350,17 +1375,16 @@ figcaption{
       overflow:visible;
       z-index:200;   
    }
-   .X-quickLinks >  span{
+   .X-quickLinks > a{
       display:table-cell;
       vertical-align:middle;
       cursor:pointer;
       text-align: center;
+	   color: #ffffff;
    } 
    .X-quickLinks div ul {
-      visibility:none;
-      opacity:0;
       position:absolute;
-      right:-1000px;
+      right:-9999em;
        padding:0px;    
        margin:0px;
        width:130%;
@@ -1390,13 +1414,14 @@ figcaption{
      font-family:Gentona_Medium;  
      text-align: left;   
    }
-   .X-quickLinks div ul li a:hover{
+   .X-quickLinks div ul li a:hover, 
+	.X-quickLinks div ul li a:focus {
       background-color:#eae5d7;
-     color:#c24700;
-
-     
+     color:#A24C16;
    }
-   .X-quickLinks:hover > div ul{
+   
+	.X-quickLinks:hover > div ul,
+   .X-quickLinks > div ul.open {
       display:block;
       right:0px;
       top:3.9375rem;
@@ -1404,16 +1429,6 @@ figcaption{
       opacity:1;
       transition: all 0.3s ease 0s;
    }
-
-
-
-
-  .X-quickLinks:hover > div ul li ul, .X-quickLinks div ul li ul {
-      visibility:none;
-      opacity:0;
-      display:none !important;
-   }
-
 
 
    .icon-search, #icon-search, svg.icon.icon-search {
@@ -1538,6 +1553,7 @@ figcaption{
       display: table-cell;
       vertical-align: middle;
    }
+	
    .hide-menuBox{
       right:-200px;
       transition: all 1s ease 0s;  
@@ -1624,9 +1640,7 @@ figcaption{
       background-color: #F7F4EB; 
       margin:0 auto; 
    }
-    .X-menu nav > div > ul > li:hover, .X-menu nav > div > ul > li:active  {
-  
-   }
+    
     .X-menu nav > div > ul > li > a{  
       display:inline-block;  
       vertical-align:middle;    
@@ -1640,7 +1654,9 @@ figcaption{
       height:3.8rem;
       line-height:1; 
    }
-   .X-menu nav > div > ul > li > a:hover {
+   .X-menu nav > div > ul > li > a:hover, 
+   .X-menu nav > div > ul > li > a:focus, 
+   .X-menu nav > div > ul > li.open > a {
     color: #00529b !important;
    }
 
@@ -1657,7 +1673,8 @@ figcaption{
       transition: width 0.2s ease-out;
       width: 100%;
    }
-    .X-menu nav > div > ul > li:hover span::after, .X-menu nav > div > ul > li:active span::after{
+    .X-menu nav > div > ul > li:hover span::after,
+	.X-menu nav > div > ul > li.open span::after {
       -webkit-transition: width 0.2s ease-out;
       transition: width 0.2s ease-out;
       width: 100%;
@@ -1691,24 +1708,23 @@ figcaption{
       list-style: none;    
       width: auto;
       background: #faf8f1;     
-      opacity: 0;
-      visibility: hidden;
+      left: -9999em;
       /* POSITION Sub Menu BELOW the header and top-level menu */ 
       top:11.5625rem; 
       max-height: 80%;
       max-height: 70vh;
       padding-bottom: 2rem;
       overflow-y: scroll  !important;
+	  -ms-overflow-style: -ms-autohiding-scrollbar;
+
 
    }
 
   
-   /* SHOW Sub Menu */ 
-    .X-menu nav .menu .menu-item-has-children > a:hover + .sub-menu, 
-	.X-menu nav .menu .menu-item-has-children > a:focus + .sub-menu, 
-	.X-menu nav .menu .menu-item-has-children > a:active + .sub-menu {  
-      opacity:1;
-      visibility: visible;
+   /* SHOW Sub Menu - (min-width:2000px) */ 
+    .X-menu nav .menu > .menu-item-has-children:hover > .sub-menu,
+	.X-menu nav .menu .menu-item-has-children.open > .sub-menu {   
+      left: auto;
       transition: all 0.2s ease 0s;
       z-index:10;
       background: #faf8f1;
@@ -1738,8 +1754,10 @@ figcaption{
       padding:1rem;
    }
 
-    .X-menu nav > div > ul > li > ul > li > a:hover, .X-menu .sub-menu li a:hover  {
-      color:#c24700;
+    .X-menu nav > div > ul > li > ul > li > a:hover, 
+	.X-menu .sub-menu li a:hover,
+    .X-menu .sub-menu li a:focus  {      
+		color:#A24C16;
    }
     .icon-angle-down{
       display: inline-block;
@@ -1965,7 +1983,22 @@ figcaption{
       background-color:#00337A;
       z-index:3;
     }
-   .X-searchTrigger span{
+	.X-searchTrigger button{
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		border: none;
+   }
+	.X-searchTrigger button:focus, 
+	.X-searchTrigger button:hover {
+		background-color: #4c87b5;
+	}
+	.menuBox.show-menuBox button {
+		background-color: #00337A;
+	}
+	
+	
+   .X-searchTrigger button span{
       position:relative;
        max-width: 2.2rem;  
       max-height:2.2rem; 
@@ -2073,17 +2106,16 @@ figcaption{
       overflow:visible;
       z-index: 200;   
    }
-   .X-quickLinks >  span{
+   .X-quickLinks > a{
       display:table-cell;
       vertical-align:middle;
       cursor:pointer;
       text-align: center;
+	   color: #ffffff;
    } 
    .X-quickLinks div ul {
-      visibility:none;
-      opacity:0;
       position:absolute;
-      right:-1000px;
+      right:-9999em;
        padding:0px;    
        margin:0px;
        width:130%;
@@ -2113,13 +2145,13 @@ figcaption{
      font-family:Gentona_Medium;   
      text-align: left;  
    }
-   .X-quickLinks div ul li a:hover{
+   	.X-quickLinks div ul li a:hover, 
+	.X-quickLinks div ul li a:focus {
       background-color:#eae5d7;
-     color:#c24700;
-
-     
+     color:#A24C16;
    }
-   .X-quickLinks:hover > div ul{
+   .X-quickLinks:hover > div ul,
+   .X-quickLinks > div ul.open {
       display:block;
       right:0px;
       top:4.0625rem;
@@ -2127,16 +2159,6 @@ figcaption{
       opacity:1;
       transition: all 0.3s ease 0s;
    }
-
-
-
-
-  .X-quickLinks:hover > div ul li ul, .X-quickLinks div ul li ul {
-      visibility:none;
-      opacity:0;
-      display:none !important;
-   }
-
 
 
    .icon-search, #icon-search, svg.icon.icon-search {
@@ -2257,11 +2279,17 @@ figcaption{
       z-index:1000 !important;
       display:none;
    }
-  .menuBox svg{ 
-      position: relative;
-      display: table-cell;
-      vertical-align: middle;
-   }
+  .menuBox button:focus, 
+	.menuBox button:hover {
+		background-color: #4d97d2;
+	}
+	.menuBox.show-menuBox button {
+		background-color: #4c87b5;
+	}
+	.menuBox svg { 
+        vertical-align: middle;
+         margin-bottom:.3rem;
+      }
    .hide-menuBox{
       right:-200px;
       transition: all 1s ease 0s;  
@@ -2287,9 +2315,7 @@ figcaption{
       margin:0 auto;
       position: relative;
    }
-   .icon-menu-fivelines :hover {
-
-   }
+  
    .icon-close {
       display:block;
       max-width:2.5rem;
@@ -2348,9 +2374,7 @@ figcaption{
       background-color: #F7F4EB; 
       margin:0 auto; 
    }
-    .X-menu nav > div > ul > li:hover, .X-menu nav > div > ul > li:active  {
-  
-   }
+    
     .X-menu nav > div > ul > li > a{  
       display:inline-block;  
       vertical-align:middle;    
@@ -2364,7 +2388,9 @@ figcaption{
       height:4.0625rem;
       line-height:1; 
    }
-   .X-menu nav > div > ul > li > a:hover {
+   .X-menu nav > div > ul > li > a:hover, 
+   .X-menu nav > div > ul > li > a:focus, 
+   .X-menu nav > div > ul > li.open > a {
     color: #00529b !important;
    }
 
@@ -2381,7 +2407,8 @@ figcaption{
       transition: width 0.2s ease-out;
       width: 100%;
    }
-    .X-menu nav > div > ul > li:hover span::after, .X-menu nav > div > ul > li:active span::after{
+    .X-menu nav > div > ul > li:hover span::after,
+	.X-menu nav > div > ul > li.open span::after {
       -webkit-transition: width 0.2s ease-out;
       transition: width 0.2s ease-out;
       width: 100%;
@@ -2414,9 +2441,8 @@ figcaption{
       /* Hide Sub Menu */      
       list-style: none;    
       width: auto;
-      background: #faf8f1;     
-      opacity: 0;
-      visibility: hidden;
+      background: #faf8f1;
+	  left: -9999em;
       /* POSITION Sub Menu BELOW the header and top-level menu */ 
       top:12.1875rem; 
       max-height: 80%;
@@ -2425,22 +2451,12 @@ figcaption{
       overflow-y: scroll  !important;
       -ms-overflow-style: -ms-autohiding-scrollbar;
 
-
    }
 
-   /*
-    .X-menu nav ul li:last-child ul, .X-menu nav ul li:last-child ul {   
-      left:auto;
-      right:0;
-   }
-   */
-
-   /* SHOW Sub Menu */ 
-    .X-menu nav .menu .menu-item-has-children > a:hover + .sub-menu, 
-	.X-menu nav .menu .menu-item-has-children > a:focus + .sub-menu, 
-	.X-menu nav .menu .menu-item-has-children > a:active + .sub-menu {    
-      opacity:1;
-      visibility: visible;
+   /* SHOW Sub Menu (min-width:1025px) and (max-width : 2000px) */ 
+    .X-menu nav .menu > .menu-item-has-children:hover > .sub-menu,
+	.X-menu nav .menu .menu-item-has-children.open > .sub-menu {   
+      left: auto;
       transition: all 0.2s ease 0s;
       z-index:10;
       background: #faf8f1;
@@ -2452,12 +2468,7 @@ figcaption{
       right:0 !important;
       margin-right:3rem;
    }
-  /*
-    .X-menu nav ul li:last-child:hover ul, .X-menu nav ul li:last-child:active ul {   
-      left:auto;
-      right:0;
-   }
-  */
+	
     .X-menu nav > div > ul > li > ul > li, .X-menu .sub-menu li {
       word-break: break-word;
       padding-left:1rem;  
@@ -2488,8 +2499,10 @@ figcaption{
       padding:.3rem;
    }
 
-    .X-menu nav > div > ul > li > ul > li > a:hover, .X-menu .sub-menu li a:hover  {
-      color:#c24700;
+    .X-menu nav > div > ul > li > ul > li > a:hover, 
+	.X-menu .sub-menu li a:hover,
+    .X-menu .sub-menu li a:focus  {
+      color:#A24C16;
    }
     .icon-angle-down{
       display: inline-block;
@@ -2693,6 +2706,9 @@ figcaption{
       vertical-align:middle;
       padding-left:0rem;  
       width:100%; 
+	   height: 60px;
+	   padding: 0 .5rem;
+	   font-size: 1.125rem !important;
    }
       /* UF Logo svg */
         .X-header .icon-college-logo{          
@@ -2795,9 +2811,10 @@ figcaption{
       text-align:center;
       display:none;
    }
-   .X-quickLinks >  span{
+   .X-quickLinks > a{
       display:table-cell;
       vertical-align:middle;
+	   color: #ffffff;
    }
 
  /* Row Three -- MENU */
@@ -2844,10 +2861,24 @@ figcaption{
       cursor: pointer;
       z-index:1000 !important;
    }
-     .menuBox svg{ 
+    .menuBox button{
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		border: none;
+   } 	
+	.menuBox button:focus, 
+	.menuBox button:hover {
+		background-color: #4d97d2;
+	}
+	.menuBox.show-menuBox button {
+		background-color: #4c87b5;
+	}
+	.menuBox svg { 
         vertical-align: middle;
          margin-bottom:.3rem;
       }
+	
       .icon-menu{
          width:2rem; 
          height:2rem; 
@@ -2892,12 +2923,13 @@ figcaption{
       padding:1rem 1rem 1rem 1rem;
       text-align: left;
    }
-   .X-menu nav > div > ul > li > a:hover {
-    color: #00529b;
+   .X-menu nav > div > ul > li > a:hover, 
+	.X-menu nav > div > ul > li > a:focus {
+    	color: #A24C16;
    }
    /* Dropdown Menu */
-   .X-menu nav > div > ul > li > ul { 
-      position: relative;
+   	.X-menu nav .menu .menu-item-has-children .sub-menu {
+     position: relative;
       margin: 0;
       padding: 0;
       /* Hide Sub Menu */ 
@@ -2915,22 +2947,20 @@ figcaption{
    .js .menu-toggle{
     display: none;
    }
-   /* SHOW Sub Menu */
-   .X-menu nav .menu .menu-item-has-children > a:hover + .sub-menu, 
-	.X-menu nav .menu .menu-item-has-children > a:focus + .sub-menu, 
-	.X-menu nav .menu .menu-item-has-children > a:active + .sub-menu {   
-      display: block;
+   /* SHOW Sub Menu (min-width:768px) and (max-width : 1024px) */
+   .X-menu nav .menu .menu-item-has-children.open .sub-menu {    
+     display: block;
       position: relative;
-      opacity:1;
-      visibility: visible;
       transition: all 0.8s ease 0s;
       z-index:10;
-      background: #fffdf5;;
+      background: #fffdf5;
+		opacity: 1;
+      visibility: visible; 
    }
     li.menu-item-has-children > ul {
         display:none;
    }
-
+	
 
    .X-menu nav > div > ul > li.open > ul {
       position: relative;
@@ -2951,7 +2981,8 @@ figcaption{
 
    .X-menu nav > div > ul > li > ul > li, .X-menu .sub-menu li  {
       word-break: break-word;
-      margin:0px;padding:0px;      
+      margin:0px;padding:0px;
+	   list-style-type: none;
    }
    .X-menu nav > div > ul > li > ul > li > a, .X-menu .sub-menu li a  { 
       color: #00529b;
@@ -2964,8 +2995,9 @@ figcaption{
       text-align: left;
       text-transform: none; 
    }
-   .X-menu nav > div > ul > li > ul > li > a:hover{
-      color:#c24700;
+   .X-menu nav > div > ul > li > ul > li > a:hover,
+   .X-menu nav > div > ul > li > ul > li > a:focus{
+      color:#A24C16;
    }
 
  .icon-angle-down{
@@ -3119,12 +3151,13 @@ figcaption{
       text-align:center;   
    }
    .X-header .department  a, .X-header .department .strikeheader {
-      display:table-cell;
+	   display:table-cell;
       vertical-align:middle;
       padding-left:0rem;  
-      width:100%; 
-      padding-left: .5rem;
-      padding-right: .5rem;
+      width:100%;
+	   height: 60px;
+	   padding: 0 .5rem;
+	   font-size: 1.125rem !important;
    }
       /* UF Logo svg */
         .X-header .icon-college-logo{          
@@ -3229,7 +3262,7 @@ figcaption{
       text-align:center;
       display:none;
    }
-   .X-quickLinks >  span{
+   .X-quickLinks > a{
       display:table-cell;
       vertical-align:middle;
    }
@@ -3277,7 +3310,21 @@ figcaption{
       text-align: center;
       cursor: pointer;
       z-index:1000 !important;
+	  
    }
+	.menuBox button{
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		border: none;
+   } 	
+	.menuBox button:focus, 
+	.menuBox button:hover {
+		background-color: #4d97d2;
+	}
+	.menuBox.show-menuBox button {
+		background-color: #4c87b5;
+	}
      .menuBox svg{ 
         vertical-align: middle;
          margin-bottom:.3rem;
@@ -3331,11 +3378,12 @@ figcaption{
       padding:1rem 1rem 1rem 1rem !important;
       text-align: left;
    }
-   .X-menu nav > div > ul > li > a:hover {
-    color: #00529b !important;
+   .X-menu nav > div > ul > li > a:hover, 
+	.X-menu nav > div > ul > li > a:focus {
+    	color: #A24C16;
    }
    /* Dropdown Menu */
-   .X-menu nav > div > ul > li > ul { 
+   .X-menu nav .menu .menu-item-has-children > .sub-menu {
       position: relative;
       margin: 0;
       padding: 0;
@@ -3354,10 +3402,8 @@ figcaption{
    .js .menu-toggle {
     display: none;
    }
-   /* SHOW Sub Menu */
-   .X-menu nav .menu .menu-item-has-children > a:hover + .sub-menu, 
-	.X-menu nav .menu .menu-item-has-children > a:focus + .sub-menu, 
-	.X-menu nav .menu .menu-item-has-children > a:active + .sub-menu {    
+   /* SHOW Sub Menu (min-width:0px) and (max-width : 767px) */
+   .X-menu nav .menu .menu-item-has-children.open > .sub-menu {    
       display: block;
       position: relative;
       opacity:1;
@@ -3400,8 +3446,9 @@ figcaption{
       text-align: left;
       text-transform: none; 
    }
-   .X-menu nav > div > ul > li > ul > li > a:hover{
-      color:#c24700;
+   .X-menu nav > div > ul > li > ul > li > a:hover,
+   .X-menu nav > div > ul > li > ul > li > a:focus{
+      color:#A24C16;
    }
 
  .icon-angle-down{
@@ -3414,7 +3461,8 @@ figcaption{
       z-index: 10;
    }
 
-  li.open  .icon-angle-down{ 
+  li.open .icon-angle-down,
+  li.toggeled-on .icon-angle-down{ 
       width:1.5rem;
       height:1.5rem;
       -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
@@ -6282,7 +6330,7 @@ input[type="checkbox"] + label {
 	font-weight: 400;
 }
 
-button:not(.icon-angle-down),
+form button:not(.icon-angle-down),
 input[type="button"],
 input[type="submit"] {
 	background-color: #222;
@@ -6304,7 +6352,7 @@ input[type="submit"] {
 	transition: background 0.2s;
 }
 
-input + button,
+form input + button,
 input + input[type="button"],
 input + input[type="submit"] {
 	padding: 0.75em 2em;
@@ -6319,8 +6367,8 @@ input[type="submit"].secondary {
 	color: #222;
 }
 
-button:hover,
-button:focus:not(.icon-angle-down),
+form button:hover,
+form button:focus:not(.icon-angle-down),
 input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="submit"]:hover,
@@ -6385,10 +6433,11 @@ input[type="submit"].secondary:focus {
 	position: absolute;
 	right: 3px;
 	top: 3px; border:0px;
+	background-color: #00337A;
 }
 
 
-button.search-submit :focus, button.search-submit:hover{
+.search-form button.search-submit:focus, .search-form button.search-submit:hover{
     background-color: #bc581a;
     cursor: pointer;
 }
@@ -8976,6 +9025,9 @@ h2.right-arrow  strong::before {
       font-family: Gentona_Book;   
       text-transform: capitalize;    
    }
+	.footer-main h2 button {
+      display: none;   
+   }
    .list-unstyled  {
       text-transform: uppercase; 
       font-family: "Gentona_Light";
@@ -9559,6 +9611,15 @@ h2.right-arrow  strong::before {
    .footer-menu h2 .icon-caret {  
       color: #f37021;
    }
+	.footer-menu h2 button {
+		background-color: transparent;
+		border: none;
+		display: inline-block;
+	}
+	.footer-menu h2 button:focus, 
+	.footer-menu h2 button:hover {
+		background-color: transparent;
+	}
    .footer-menu h2 svg {
       height: .6rem;
       width: .6rem;
@@ -9758,3 +9819,9 @@ h2.right-arrow  strong::before {
 }
 
 
+p {
+	font-family: quadon_medium !important;
+font-size: 1em;
+color: #333;
+	letter-spacing: .5px;
+}

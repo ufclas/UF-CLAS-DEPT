@@ -18,6 +18,7 @@ module.exports = function(grunt) {
 					outputStyle: 'compressed'
 				},
 				files: {
+					'./assets/css/inline.min.css': './assets/css/inline.css',
 					'./style.min.css': './style.css'
 				}
 			}
@@ -28,13 +29,16 @@ module.exports = function(grunt) {
 		 */
 		concat: {
 			options: {
-				separator: ';\n',
+				separator: '\n',
+				sourceMap: true,
+				sourceMapIncludeSources: true,
+				sourceMapIn: function(path) { return path + ".map"; }
 			},
 			dist: {
 				src: [
-					'assets/js/global.min.js',
-					'assets/js/navigation.min.js',
 					'assets/js/skip-link-focus-fix.min.js',
+					'assets/js/navigation.min.js',
+					'assets/js/global.min.js',
 					'assets/js/jquery.scrollTo.min.js',
 					'assets/js/theme.min.js',
 				],
@@ -73,7 +77,7 @@ module.exports = function(grunt) {
 		 */
 		watch: {
 			css: {
-				files: ['./style.css'],
+				files: ['./style.css', 'assets/css/*.css', '!assets/css/*.min.*'],
 				tasks: ['sass']
 			},
 			js: {

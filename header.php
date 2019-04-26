@@ -65,7 +65,8 @@
 	   </div>  
    </div>
 
-  <nav class="X-quickLinks" aria-label="Quick Links" tabindex="999"> <span>Quick Links</span> 
+  <nav class="X-quickLinks" aria-label="Quick Links"> 
+	  <a href="#" class="menu-title" aria-hidden="true">Quick Links</a> 
 	<?php wp_nav_menu( array(
 		'theme_location' => 'quicklinks',
 		'menu_id'        => 'quicklinks',
@@ -75,14 +76,14 @@
 	) ); ?>
    </nav>
 
-	<div class="X-searchTrigger" tabindex="1000">
-	   <span>
-		   <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'icon-search-thin-open', 'class' => 'icon-search-thin-open', 'id' => 'icon-search-thin-trigger', 'role' => 'button', 'title' => 'Open/Close Search' ) ); ?>
-	   </span>
+	<div class="X-searchTrigger">
+	   <button>
+		   <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'icon-search-thin-open', 'class' => 'icon-search-thin-open', 'id' => 'icon-search-thin-trigger', 'title' => 'Open/Close Search' ) ); ?>
+	   </button>
 	</div>
    <div class="X-search-form-container"><?php get_search_form(); ?></div>
-   <div class="menuBox" tabindex="1001">
-	   <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'icon-fivelines', 'class' => 'icon-menu', 'id' => 'icon-menu' ) ); ?>
+   <div class="menuBox">
+	   <button><?php echo twentyseventeen_get_svg( array( 'icon_id' => 'icon-fivelines', 'class' => 'icon-menu', 'id' => 'icon-menu' ) ); ?></button>
    </div>
    <div class="X-menu">
    <div class="mobileSearch"><?php get_search_form(); ?></div>

@@ -3,16 +3,15 @@
 var e = document.getElementsByClassName("X-tile");
 var sublist;
 var self=this; 
-for (var k = 0; k < e.length; k++) {     
-  var mq = window.matchMedia( "(max-width: 768px)" ); 
- if (mq.matches) {
-   // ONCLICK: Set up click event: toggle sublist 
- e[k].getElementsByClassName("X-tile-img")[0].onclick = function(e) {     
-	//this.parentNode.getElementsByClassName('X-tile-desc')[0].classList.toggle('X-tile-desc-show'); 
+	for (var k = 0; k < e.length; k++) {     
+	var mq = window.matchMedia( "(max-width: 768px)" ); 
+	if (mq.matches) {
+		// ONCLICK: Set up click event: toggle sublist 
+		e[k].getElementsByClassName("X-tile-img")[0].onclick = function(e) {     
+			//this.parentNode.getElementsByClassName('X-tile-desc')[0].classList.toggle('X-tile-desc-show'); 
+		}
 
- }
-
- } 
+	} 
 }
 
 // EDGE DETECTION 
@@ -45,52 +44,6 @@ for (var k = 0; k < g.length; k++) {
 	g[k].addEventListener('focus', menuEdgeDetection);
 }
 
-// Main Menu
-  var el = document.getElementsByClassName('menuBox')[0];
-  clickerFn = function(e) {     
-
-  var nav = document.getElementsByClassName('navigation-top')[0];  
-  var rowThree = document.getElementsByClassName('CLAS-menu')[0];  
-  rowThree.classList.toggle('showMenu');    
-  var menuIcon = document.getElementById('icon-menu');
-  if (menuIcon.getElementsByTagName("use")[0].getAttribute('xlink:href') != '#icon-close' ) {
-	 //Global variable to keep track of how far the document has been scrolled
-	 var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-	 // Figure out how far down the page has been scrolled by the user
-	 var doc = document.documentElement;
-	 //var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
-	 window.toplocation = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-	 menuIcon.classList.toggle('icon-close');
-	 menuIcon.classList.toggle('icon-menu');
-	 var XmenuBox = document.getElementsByClassName("menuBox")[0]; 
-	 XmenuBox.classList.add('show-menuBox'); 
-	 menuIcon.getElementsByTagName("use")[0].setAttribute("xlink:href", "#icon-close");
-	 //document.getElementsByTagName("body")[0].classList.add('fixedPosition'); 
-	// nav.setAttribute("position", "relative");
-  }
-  else {
-	 menuIcon.classList.toggle('icon-menu');
-	 menuIcon.classList.toggle('icon-close');
-
-	  var XmenuBox = document.getElementsByClassName("menuBox")[0]; 
-	   XmenuBox.classList.add('show-menuBox'); 
-	 menuIcon.getElementsByTagName("use")[0].setAttribute("xlink:href", "#icon-fivelines");        
-	 //document.getElementsByTagName("body")[0].classList.remove('fixedPosition');
-	 // Scroll back to where the user was
-	 window.scrollTo(0, window.toplocation);  
-	 // Close any open submenus
-	 var g = document.getElementsByClassName("menu-item-has-children");
-	 for (var k = 0; k < g.length; k++) {  
-		var mq = window.matchMedia( "(max-width: 1024px)" ); 
-		if (mq.matches) {            
-		  g[k].classList.remove('open');   
-		   } 
-	 }
-
-  }
-}; 
-el.addEventListener('click', clickerFn);
-el.addEventListener('focus', clickerFn);
 
 // Drop Down Menu System 
 function toggleDropDown(e) {
@@ -98,7 +51,9 @@ function toggleDropDown(e) {
 	// e.stopPropagation();   
 	var mq = window.matchMedia( "(max-width: 1024px)" ); 
 	if (mq.matches) {            
-		this.parentNode.classList.toggle('open');     
+		this.parentNode.classList.toggle('open');  
+		var isExpanded = (this.parentNode.getAttribute('aria-expanded') == 'true');
+		this.parentNode.setAttribute('aria-expanded', ( isExpanded )? 'false':'true');     
 	}
 }//end mq
 
@@ -106,7 +61,6 @@ var g = document.getElementsByClassName("menu-item-has-children");
 for (var k = 0; k < g.length; k++) {   
 	//ONCLICK
 	g[k].getElementsByTagName("a")[0].addEventListener('click', toggleDropDown);  
-	g[k].getElementsByTagName("a")[0].addEventListener('focus', toggleDropDown);
 }
   
 // Menu System 
@@ -156,7 +110,6 @@ clickerFn = function(e) {
 	} 
 };
 el.addEventListener('click', clickerFn);
-el.addEventListener('focus', clickerFn);
 
 // Footer Menu 
 function toggleFooterMenu(e) { 
@@ -178,8 +131,7 @@ function toggleFooterMenu(e) {
 
 var g = document.getElementsByClassName("footer-menu");
 for (var k = 0; k < g.length; k++) {    
-	g[k].addEventListener('click', toggleFooterMenu);  
-	g[k].addEventListener('focus', toggleFooterMenu);
+	g[k].addEventListener('click', toggleFooterMenu); 
 }
 
 // Search Form 
@@ -208,7 +160,7 @@ function showSearch(e) {
 	searchField.select();   
 }  
 
-var searchBox = document.querySelector(".X-searchTrigger");
+var searchBox = document.querySelector(".X-searchTrigger button");
 if(searchBox){
    	searchBox.addEventListener('click', showSearch);
 }

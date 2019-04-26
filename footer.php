@@ -29,10 +29,10 @@
       </div> 
 
  <?php 
-   $s = get_option('my_option_name');
-   if ( !empty($s["dept_address"]) ): 
+   $s = get_theme_mods();
+   if ( !empty($s['dept_address']) ): 
       echo '<p class="footer-clas-address">';  
-      echo $s["dept_address"];
+      echo esc_html( $s['dept_address'] );
       echo '</p>'; 
    else :
 ?>
@@ -56,8 +56,8 @@ endif;
 			$menu_obj = ufclas_emily_get_menu_by_location("FooterCol1");
 			if (isset ($menu_obj->name)):
 				?>
-				<h2><?php echo esc_html($menu_obj->name); ?> <span class="icon-svg icon-caret">
-				<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span>
+				<h2><?php echo esc_html($menu_obj->name); ?> 
+				<button><span class="icon-svg icon-caret"><?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span></button>
 				</h2>
 				<?php
 			endif;
@@ -79,8 +79,8 @@ endif;
              $menu_obj = ufclas_emily_get_menu_by_location("FooterCol2");
 			if (isset ($menu_obj->name)):
 				?>
-				<h2><?php echo esc_html($menu_obj->name); ?> <span class="icon-svg icon-caret">
-				<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span>
+				<h2><?php echo esc_html($menu_obj->name); ?> <button><span class="icon-svg icon-caret">
+				<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span></button>
 				</h2>
 				<?php
 			endif;               
@@ -101,8 +101,8 @@ endif;
              $menu_obj = ufclas_emily_get_menu_by_location("FooterCol3");
 			if (isset ($menu_obj->name)):
 				?>
-				<h2><?php echo esc_html($menu_obj->name); ?> <span class="icon-svg icon-caret">
-				<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span>
+				<h2><?php echo esc_html($menu_obj->name); ?> <button><span class="icon-svg icon-caret">
+				<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span></button>
 				</h2>
 				<?php
 			endif;			
@@ -133,35 +133,33 @@ endif;
         <div class="social">
             <ul class="social-nav">
  <?php 
-   // Get all the social media links. These are set on the CLAS DEPT Theme Settings page
-   $s = get_option('my_option_name');
-				
-    if ( !empty($s["fb"]) ): 
-		echo '<li><a href="' . $s["fb"] . '" class=" icon-svg icon-social-media icon-facebook" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'facebook' )) . '<span class="SVGaltText">Share this page on Facebook</span></a></li>';
+   // Get all the social media links. These are set on the CLAS DEPT Theme Settings page			
+    if ( !empty($s['fb']) ): 
+		echo '<li><a href="' . esc_url($s['fb']) . '" class=" icon-svg icon-social-media icon-facebook" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'facebook' )) . '<span class="SVGaltText">Share this page on Facebook</span></a></li>';
 	endif;
 	
-	if ( !empty($s["twitter"]) ): 
-		echo '<li><a href="' . $s["twitter"] . '" class=" icon-svg icon-social-media icon-twitter" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'twitter' )) . '<span class="SVGaltText">Share this page on Twitter</span></a></li>';
+	if ( !empty($s['twitter']) ): 
+		echo '<li><a href="' . esc_url( $s['twitter'] ) . '" class=" icon-svg icon-social-media icon-twitter" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'twitter' )) . '<span class="SVGaltText">Share this page on Twitter</span></a></li>';
 	endif;
 	
-	if ( !empty($s["instagram"]) ): 
-		echo '<li><a href="' . $s["instagram"] . '" class=" icon-svg icon-social-media icon-instagram" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'instagram' )) . '<span class="SVGaltText">Share this page on Instagram</span></a></li>';
+	if ( !empty($s['instagram']) ): 
+		echo '<li><a href="' . esc_url( $s['instagram'] ) . '" class=" icon-svg icon-social-media icon-instagram" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'instagram' )) . '<span class="SVGaltText">Share this page on Instagram</span></a></li>';
 	endif;
 	
-	if ( !empty($s["youtube"]) ): 
-		echo '<li><a href="' . $s["youtube"] . '" class=" icon-svg icon-social-media icon-youtube" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'youtube' )) . '<span class="SVGaltText">Share this page on YouTube</span></a></li>';
+	if ( !empty($s['youtube']) ): 
+		echo '<li><a href="' . esc_url( $s['youtube'] ) . '" class=" icon-svg icon-social-media icon-youtube" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'youtube' )) . '<span class="SVGaltText">Share this page on YouTube</span></a></li>';
 	endif;
 	
-	if ( !empty($s["rss"]) ): 
-		echo '<li><a href="' . $s["rss"] . '" class=" icon-svg icon-social-media icon-rss" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'rss' )) . '<span class="SVGaltText">RSS Feed</span></a></li>';
+	if ( !empty($s['rss']) ): 
+		echo '<li><a href="' . esc_url( $s['rss'] ) . '" class=" icon-svg icon-social-media icon-rss" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'rss' )) . '<span class="SVGaltText">RSS Feed</span></a></li>';
 	endif;
 
-	if ( !empty($s["email"]) ): 
-		echo '<li><a href="' . $s["email"] . '" class=" icon-svg icon-social-media icon-email" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-email' )) . '<span class="SVGaltText">Contact <abbr title="College of Liberal Arts and Sciences">CLAS</abbr></span></a></li>';
+	if ( !empty($s['email']) ): 
+		echo '<li><a href="' . esc_url( $s['email'] ) . '" class=" icon-svg icon-social-media icon-email" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-email' )) . '<span class="SVGaltText">Contact <abbr title="College of Liberal Arts and Sciences">CLAS</abbr></span></a></li>';
 	endif;
 	
-	if ( !empty($s["linkedin"]) ): 
-		echo '<li><a href="' . $s["linkedin"] . '" class=" icon-svg icon-social-media icon-linkedin" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-linkedin' )) . '<span class="SVGaltText"><abbr title="College of Liberal Arts and Sciences">CLAS</abbr> LinkedIn Profile</span></a></li>';
+	if ( !empty($s['linkedin']) ): 
+		echo '<li><a href="' . esc_url( $s['linkedin'] ) . '" class=" icon-svg icon-social-media icon-linkedin" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-linkedin' )) . '<span class="SVGaltText"><abbr title="College of Liberal Arts and Sciences">CLAS</abbr> LinkedIn Profile</span></a></li>';
 	endif;
 
 	?>

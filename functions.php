@@ -15,19 +15,20 @@ function ufclas_emily_theme_enqueue_styles() {
 	$theme_version = wp_get_theme()->get( 'Version' );
    // Enqueue CSS
    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.min.css', array(), $theme_version );
+   wp_enqueue_style('child-style-inline', get_stylesheet_directory_uri() . '/assets/css/inline.min.css', array('child-style'), $theme_version );
 	
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
-		wp_enqueue_style( 'twentyseventeen-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'child-style' ) );
+		wp_enqueue_style( 'twentyseventeen-ie9', get_template_directory_uri() . '/assets/css/ie9.css', array( 'child-style' ) );
 		wp_style_add_data( 'twentyseventeen-ie9', 'conditional', 'IE 9' );
 	}
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'child-style' ) );
+	wp_enqueue_style( 'twentyseventeen-ie8', get_template_directory_uri() . '/assets/css/ie8.css', array( 'child-style' ) );
 	wp_style_add_data( 'twentyseventeen-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the html5 shiv.
-	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array() );
+	wp_enqueue_script( 'html5', get_template_directory_uri() . '/assets/js/html5.js', array() );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
 	
@@ -149,6 +150,9 @@ function ufclas_emily_X_theme_setup() {
         if ( has_post_thumbnail() ) { 
            the_post_thumbnail( 'full-screen-crop' ); 
         }
+	
+	// Allow partial refreshes of widgets in sidebars
+	add_theme_support( 'customize-selective-refresh-widgets' );
 
 }
 add_action( 'after_setup_theme', 'ufclas_emily_X_theme_setup' );
@@ -723,277 +727,7 @@ add_shortcode( 'reopen', 'ufclas_emily_reopen_func' );
 
 
 // ADMIN PAGES FOR CONFIGURING THEME OPTIONS
-
-
-
-
-class MySettingsPage
-{
-    /**
-     * Holds the values to be used in the fields callbacks
-     */
-    private $options;
-
-    /**
-     * Start up
-     */
-    public function __construct()
-    {
-        add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
-        add_action( 'admin_init', array( $this, 'page_init' ) );
-    }
-
-    /**
-     * Add options page
-     */
-    public function add_plugin_page()
-    {
-        // This page will be under "Settings"
-        add_theme_page(
-            'Settings Admin', 
-            'CLAS DEPT Theme Settings', 
-            'manage_options', 
-            'my-setting-admin', 
-            array( $this, 'create_admin_page' )
-        );
-    }
-
-    /**
-     * Options page callback
-     */
-    public function create_admin_page()
-    {
-        // Set class property
-        $this->options = get_option( 'my_option_name' );
-        ?>
-        <div class="wrap">
-            <h1>Theme Settings</h1>
-            <form method="post" action="options.php">
-            <?php
-                // This prints out all hidden setting fields
-                settings_fields( 'my_option_group' );
-                do_settings_sections( 'my-setting-admin' );
-                submit_button();
-            ?>
-            </form>
-        </div>
-        <?php
-    }
-
-    /**
-     * Register and add settings
-     */
-    public function page_init()
-    {        
-        register_setting(
-            'my_option_group', // Option group
-            'my_option_name', // Option name
-            array( $this, 'sanitize' ) // Sanitize
-        );
-
-        add_settings_section(
-            'setting_section_id', // ID
-            'CLAS DEPT Theme Settings', // Title
-            array( $this, 'print_section_info' ), // Callback
-            'my-setting-admin' // Page
-        );  
-
-        add_settings_field(
-            'dept_address', // ID
-            'Department Address', // Title 
-            array( $this, 'dept_address_callback' ), // Callback
-            'my-setting-admin', // Page
-            'setting_section_id' // Section           
-        );      
-
-        add_settings_field(
-            'title', 
-            'Footer Title', 
-            array( $this, 'title_callback' ), 
-            'my-setting-admin', 
-            'setting_section_id'
-        ); 
-
-        add_settings_field(
-            'fb', 
-            'Facebook Link', 
-            array( $this, 'fb_callback' ), 
-            'my-setting-admin', 
-            'setting_section_id'
-        );  
-
-        add_settings_field(
-            'twitter', 
-            'Twitter Link', 
-            array( $this, 'twitter_callback' ), 
-            'my-setting-admin', 
-            'setting_section_id'
-        );  
-
-        add_settings_field(
-            'instagram', 
-            'Instagram Link', 
-            array( $this, 'instagram_callback' ), 
-            'my-setting-admin', 
-            'setting_section_id'
-        );  
-
-        add_settings_field(
-            'youtube', 
-            'Youtube Link', 
-            array( $this, 'youtube_callback' ), 
-            'my-setting-admin', 
-            'setting_section_id'
-        );  
-
-        add_settings_field(
-            'rss', 
-            'RSS Link', 
-            array( $this, 'rss_callback' ), 
-            'my-setting-admin', 
-            'setting_section_id'
-        );  
-        add_settings_field(
-            'email', 
-            'Email Link', 
-            array( $this, 'email_callback' ), 
-            'my-setting-admin', 
-            'setting_section_id'
-        );  
-        add_settings_field(
-            'linkedin', 
-            'Linked In Link', 
-            array( $this, 'linkedin_callback' ), 
-            'my-setting-admin', 
-            'setting_section_id'
-        );  
-       
-    }
-
-    /**
-     * Sanitize each setting field as needed
-     *
-     * @param array $input Contains all settings fields as array keys
-     */
-    public function sanitize( $input )
-    {
-        $new_input = array();
-        if( isset( $input['dept_address'] ) )
-            $new_input['dept_address'] =  $input['dept_address'] ;
-
-        if( isset( $input['title'] ) )
-            $new_input['title'] = sanitize_text_field( $input['title'] );
-
-        if( isset( $input['fb'] ) )
-            $new_input['fb'] = sanitize_text_field( $input['fb'] );
-
-        if( isset( $input['twitter'] ) )
-            $new_input['twitter'] = sanitize_text_field( $input['twitter'] );
-
-        if( isset( $input['instagram'] ) )
-            $new_input['instagram'] = sanitize_text_field( $input['instagram'] );
-
-        if( isset( $input['youtube'] ) )
-            $new_input['youtube'] = sanitize_text_field( $input['youtube'] );
-
-        if( isset( $input['rss'] ) )
-            $new_input['rss'] = sanitize_text_field( $input['rss'] );
-
-        if( isset( $input['email'] ) )
-            $new_input['email'] = sanitize_text_field( $input['email'] );
-
-        if( isset( $input['linkedin'] ) )
-            $new_input['linkedin'] = sanitize_text_field( $input['linkedin'] );
-
-        return $new_input;
-    }
-
-    /** 
-     * Print the Section text
-     */
-    public function print_section_info()
-    {
-        print 'Enter your settings below:';
-    }
-
-    /** 
-     * Get the settings option array and print one of its values
-     */
-    public function dept_address_callback()
-    {
-        printf(
-            '<textarea id="dept_address" rows="10" cols="40" name="my_option_name[dept_address]"  placeholder="Enter department address here">%s</textarea>',
-            isset( $this->options['dept_address'] ) ? esc_attr( $this->options['dept_address']) : ''
-        );
-    }
-
-    /** 
-     * Get the settings option array and print one of its values
-     */
-    public function title_callback()
-    {
-        printf(
-            '<input type="text" id="title" name="my_option_name[title]" value="%s" />',
-            isset( $this->options['title'] ) ? esc_attr( $this->options['title']) : ''
-        );
-    }
-
-
-    public function fb_callback()
-    {
-        printf(
-            '<input type="text" id="fb" name="my_option_name[fb]" value="%s" />',
-            isset( $this->options['fb'] ) ? esc_attr( $this->options['fb']) : ''
-        );
-    }
-
-    public function twitter_callback()
-    {
-        printf(
-            '<input type="text" id="twitter" name="my_option_name[twitter]" value="%s" />',
-            isset( $this->options['twitter'] ) ? esc_attr( $this->options['twitter']) : ''
-        );
-    }
-    public function instagram_callback()
-    {
-        printf(
-            '<input type="text" id="instagram" name="my_option_name[instagram]" value="%s" />',
-            isset( $this->options['instagram'] ) ? esc_attr( $this->options['instagram']) : ''
-        );
-    }
-    public function youtube_callback()
-    {
-        printf(
-            '<input type="text" id="youtube" name="my_option_name[youtube]" value="%s" />',
-            isset( $this->options['youtube'] ) ? esc_attr( $this->options['youtube']) : ''
-        );
-    }
-    public function rss_callback()
-    {
-        printf(
-            '<input type="text" id="rss" name="my_option_name[rss]" value="%s" />',
-            isset( $this->options['rss'] ) ? esc_attr( $this->options['rss']) : ''
-        );
-    }
-    public function email_callback()
-    {
-        printf(
-            '<input type="text" id="email" name="my_option_name[email]" value="%s" />',
-            isset( $this->options['email'] ) ? esc_attr( $this->options['email']) : ''
-        );
-    }
-    public function linkedin_callback()
-    {
-        printf(
-            '<input type="text" id="linkedin" name="my_option_name[linkedin]" value="%s" />',
-            isset( $this->options['linkedin'] ) ? esc_attr( $this->options['linkedin']) : ''
-        );
-    }
-
-}
-
-if( is_admin() )
-    $my_settings_page = new MySettingsPage();
+// Moved to the customizer and theme_mods
 
 
 /* ROW COLUMNS */
@@ -1097,3 +831,8 @@ function ufclas_emily_jquery_migrate( $scripts ) {
 	 }
  }
  add_action( 'wp_default_scripts', 'ufclas_emily_jquery_migrate' );
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_theme_file_path( '/inc/customizer-options.php' );
