@@ -29,10 +29,9 @@
       </div> 
 
  <?php 
-   $s = get_theme_mods();
-   if ( !empty($s['dept_address']) ): 
+   if ( !empty(get_theme_mod('dept_address')) ): 
       echo '<p class="footer-clas-address">';  
-      echo esc_html( $s['dept_address'] );
+      echo esc_html( get_theme_mod('dept_address') );
       echo '</p>'; 
    else :
 ?>
@@ -134,32 +133,32 @@ endif;
             <ul class="social-nav">
  <?php 
    // Get all the social media links. These are set on the CLAS DEPT Theme Settings page			
-    if ( !empty($s['fb']) ): 
-		echo '<li><a href="' . esc_url($s['fb']) . '" class=" icon-svg icon-social-media icon-facebook" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'facebook' )) . '<span class="SVGaltText">Share this page on Facebook</span></a></li>';
+    if ( !empty(get_theme_mod('fb')) ): 
+		echo '<li><a href="' . esc_url(get_theme_mod('fb')) . '" class=" icon-svg icon-social-media icon-facebook" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'facebook' )) . '<span class="SVGaltText">Share this page on Facebook</span></a></li>';
 	endif;
 	
-	if ( !empty($s['twitter']) ): 
-		echo '<li><a href="' . esc_url( $s['twitter'] ) . '" class=" icon-svg icon-social-media icon-twitter" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'twitter' )) . '<span class="SVGaltText">Share this page on Twitter</span></a></li>';
+	if ( !empty(get_theme_mod('twitter')) ): 
+		echo '<li><a href="' . esc_url( get_theme_mod('twitter') ) . '" class=" icon-svg icon-social-media icon-twitter" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'twitter' )) . '<span class="SVGaltText">Share this page on Twitter</span></a></li>';
 	endif;
 	
-	if ( !empty($s['instagram']) ): 
-		echo '<li><a href="' . esc_url( $s['instagram'] ) . '" class=" icon-svg icon-social-media icon-instagram" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'instagram' )) . '<span class="SVGaltText">Share this page on Instagram</span></a></li>';
+	if ( !empty(get_theme_mod('instagram')) ): 
+		echo '<li><a href="' . esc_url( get_theme_mod('instagram') ) . '" class=" icon-svg icon-social-media icon-instagram" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'instagram' )) . '<span class="SVGaltText">Share this page on Instagram</span></a></li>';
 	endif;
 	
-	if ( !empty($s['youtube']) ): 
-		echo '<li><a href="' . esc_url( $s['youtube'] ) . '" class=" icon-svg icon-social-media icon-youtube" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'youtube' )) . '<span class="SVGaltText">Share this page on YouTube</span></a></li>';
+	if ( !empty(get_theme_mod('youtube')) ): 
+		echo '<li><a href="' . esc_url( get_theme_mod('youtube') ) . '" class=" icon-svg icon-social-media icon-youtube" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'youtube' )) . '<span class="SVGaltText">Share this page on YouTube</span></a></li>';
 	endif;
 	
-	if ( !empty($s['rss']) ): 
-		echo '<li><a href="' . esc_url( $s['rss'] ) . '" class=" icon-svg icon-social-media icon-rss" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'rss' )) . '<span class="SVGaltText">RSS Feed</span></a></li>';
+	if ( !empty(get_theme_mod('rss')) ): 
+		echo '<li><a href="' . esc_url( get_theme_mod('rss') ) . '" class=" icon-svg icon-social-media icon-rss" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'rss' )) . '<span class="SVGaltText">RSS Feed</span></a></li>';
 	endif;
 
-	if ( !empty($s['email']) ): 
-		echo '<li><a href="' . esc_url( $s['email'] ) . '" class=" icon-svg icon-social-media icon-email" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-email' )) . '<span class="SVGaltText">Contact <abbr title="College of Liberal Arts and Sciences">CLAS</abbr></span></a></li>';
+	if ( !empty(get_theme_mod('email')) ): 
+		echo '<li><a href="mailto:' . esc_attr( get_theme_mod('email') ) . '" class=" icon-svg icon-social-media icon-email" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-email' )) . '<span class="SVGaltText">Contact <abbr title="College of Liberal Arts and Sciences">CLAS</abbr></span></a></li>';
 	endif;
 	
-	if ( !empty($s['linkedin']) ): 
-		echo '<li><a href="' . esc_url( $s['linkedin'] ) . '" class=" icon-svg icon-social-media icon-linkedin" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-linkedin' )) . '<span class="SVGaltText"><abbr title="College of Liberal Arts and Sciences">CLAS</abbr> LinkedIn Profile</span></a></li>';
+	if ( !empty(get_theme_mod('linkedin')) ): 
+		echo '<li><a href="' . esc_url( get_theme_mod('linkedin') ) . '" class=" icon-svg icon-social-media icon-linkedin" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-linkedin' )) . '<span class="SVGaltText"><abbr title="College of Liberal Arts and Sciences">CLAS</abbr> LinkedIn Profile</span></a></li>';
 	endif;
 
 	?>
@@ -181,7 +180,7 @@ endif;
    <div class="footer-uf-wrap">
    <div class="footer-uf-col-1 bottom-links"> 
       <p>
-      &#169; 2018 University of Florida  |  <a href ="//assistive.usablenet.com/tt/referrer"> Text-only </a>  | <a href="mailto:webmaster@clas.ufl.edu"> Website Feedback</a> |  <a href ="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement"> UF Privacy Policy </a> 
+      &#169; <?php echo current_time('Y'); ?> University of Florida  |  <a href ="//assistive.usablenet.com/tt/referrer"> Text-only </a>  | <a href="mailto:webmaster@clas.ufl.edu"> Website Feedback</a> |  <a href ="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement"> UF Privacy Policy </a> 
       </p>
 
    </div>

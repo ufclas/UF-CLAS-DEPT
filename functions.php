@@ -70,7 +70,7 @@ function ufclas_emily_X_theme_setup() {
 		'width'         => 980,
 		'flex-height'    => true,
 		'height'        => 200,
-		'default-image' => get_template_directory_uri() . 'assets/images/header.jpg',
+		'default-image' => get_template_directory_uri() . '/assets/images/header.jpg',
 	);
 	add_theme_support( 'custom-header', $args );
 
@@ -833,6 +833,11 @@ function ufclas_emily_jquery_migrate( $scripts ) {
  add_action( 'wp_default_scripts', 'ufclas_emily_jquery_migrate' );
 
 /**
- * Implement the Custom Header feature.
+ * Moves theme options to Appearance > Customizer
  */
 require get_theme_file_path( '/inc/customizer-options.php' );
+
+/**
+ * Includes theme options for backwards compatibility, can be removed
+ */
+require get_theme_file_path( '/inc/settings-options.php' );

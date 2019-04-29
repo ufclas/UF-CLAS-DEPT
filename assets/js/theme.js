@@ -1,4 +1,4 @@
-
+// Theme Custom JS
 
 var e = document.getElementsByClassName("X-tile");
 var sublist;

@@ -4,28 +4,17 @@
  *
  */
 
-function ufclas_emily_default_option( $key, $defaults = array() ){
-	$default_value = '';
-	if ( !empty($defaults) && isset( $defaults[$key] ) ){
-		$default_value = $defaults[$key];
-	}
-	return $default_value;
-}
-
 /**
  * Add custom theme mods to the Customizer
+ * 
  * @since 1.9.2
  * @author priscillamc
  */
 function ufclas_emily_customize_register( $wp_customize ) {
 	
-	// Use the deprecated settings values as defaults for theme_mods
-	$defaults = get_option('my_option_name');
-	
-	
 	// Add a Theme Option panel for backwards compatibility
 	$wp_customize->add_panel( 'ufclas_emily_theme_options', array(
-		'title' => __('CLAS DEPT Theme Settings', 'ufclas-emily'),
+		'title' => __('CLAS DEPT Theme Options', 'ufclas-emily'),
 		'description' => __('Options for modifying the theme.', 'ufclas-emily'),
 		'priority' => '129',
 	));
@@ -33,12 +22,13 @@ function ufclas_emily_customize_register( $wp_customize ) {
 	// General
 	$wp_customize->add_section( 'theme_options_general', array(
 		'title' => __('General', 'ufclas-emily'),
+		'title' => __('General', 'ufclas-emily'),
 		'description' => __('', 'ufclas-emily'),
 		'panel' => 'ufclas_emily_theme_options',
 	));
 	
-	$wp_customize->add_setting( 'dept_address', array( 'default' => ufclas_emily_default_option( 'dept_address', $defaults ), 'sanitize_callback' => 'sanitize_textarea_field' ));
-	$wp_customize->add_setting( 'title', array( 'default' => ufclas_emily_default_option( 'title', $defaults ), 'sanitize_callback' => 'sanitize_text_field' ));
+	$wp_customize->add_setting( 'dept_address', array( 'default' => '', 'sanitize_callback' => 'sanitize_textarea_field' ));
+	$wp_customize->add_setting( 'title', array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ));
 	
 
 	$wp_customize->add_control( 'dept_address', array(
@@ -55,23 +45,22 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'text',
 	));
 	
-	
 	// Social 
 	$wp_customize->add_section( 'ufclas_emily_theme_options_social', array(
 		'title' => __('Social Media', 'ufclas-emily'),
-		'description' => __("Enter your organization's social media URLs (e.g. https://...). Social media icons are displayed in the footer", 'ufclas-emily'),
+		'description' => __("Enter your organization's social media URLs. Social media icons are displayed in the footer", 'ufclas-emily'),
 		'panel' => 'ufclas_emily_theme_options',
 	));
 	
-	$wp_customize->add_setting( 'fb', array( 'default' => ufclas_emily_default_option( 'fb', $defaults ), 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'twitter', array( 'default' => ufclas_emily_default_option( 'twitter', $defaults ), 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'instagram', array( 'default' => ufclas_emily_default_option( 'instagram', $defaults ), 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'youtube', array( 'default' => ufclas_emily_default_option( 'youtube', $defaults ), 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'rss', array( 'default' => ufclas_emily_default_option( 'rss', $defaults ), 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'email', array( 'default' => ufclas_emily_default_option( 'email', $defaults ), 'sanitize_callback' => 'sanitize_email' ));
-	$wp_customize->add_setting( 'linkedin', array( 'default' => ufclas_emily_default_option( 'linkedin', $defaults ), 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'fb', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'twitter', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'instagram', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'youtube', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'rss', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'email', array( 'default' => '', 'sanitize_callback' => 'sanitize_email' ));
+	$wp_customize->add_setting( 'linkedin', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	
-	$wp_customize->add_control( 'facebook', array(
+	$wp_customize->add_control( 'fb', array(
 		'label' => __('Facebook URL', 'ufclas-emily'),
 		'description' => __("", 'ufclas-emily'),
 		'section' => 'ufclas_emily_theme_options_social',
@@ -102,7 +91,7 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'email', array(
-		'label' => __('Blog or Feed URL', 'ufclas-emily'),
+		'label' => __('Email', 'ufclas-emily'),
 		'description' => __("", 'ufclas-emily'),
 		'section' => 'ufclas_emily_theme_options_social',
 		'type' => 'text',
