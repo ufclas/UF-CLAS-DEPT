@@ -7,9 +7,61 @@
 
 (function( $ ) {
 	var masthead, menuToggle, siteNavContain, siteNavigation;
-
+	
+	function openMainNavigationSubmenu(e) {
+		e.preventDefault();
+		
+		// Don't do anything if this is the mobile menu
+		if ( window.matchMedia('(max-width: 1024px)').matches ) {
+			return;
+		}
+		
+		var listItem = $(this);
+		listItem.addClass( 'open' );
+		listItem.attr( 'aria-expanded', 'true' );
+		
+		listItem.siblings().removeClass('open');
+		listItem.siblings().attr( 'aria-expanded', 'false' );
+		
+		// Remove the classes when tabbing out of the submenu, open when tabbing in
+		$( '.X-header' ).nextUntil('a, input, button').on( 'focusin.mainNavigation', closeMainNavigationSubmenu );
+		$( '.X-menu' ).prevUntil('a, input, button').on( 'focusin.mainNavigation', closeMainNavigationSubmenu );
+	}
+	
+	function closeMainNavigationSubmenu(e) {
+		e.preventDefault();
+		
+		$('.X-menu .menu-item-has-children').removeClass('open');
+		$('.X-menu .menu-item-has-children').attr( 'aria-expanded', 'false' );
+		
+		$(this).off('focusin.mainNavigation');
+	}
+	
+	function openQuickLinks(e) {
+		e.preventDefault();
+		
+		var _this = $(this);
+		var menu = $('#quicklinks');
+		menu.addClass( 'open' );
+		menu.attr( 'aria-expanded', 'true' );
+		
+		// Remove the classes when tabbing out of the submenu, open when tabbing in
+		$('.X-quickLinks').nextUntil('a, input, button').on( 'focusin.quicklinks', closeQuickLinks );
+		$('.X-quickLinks').prevUntil('a, input, button').on( 'focusin.quicklinks', closeQuickLinks );
+	}
+	
+	function closeQuickLinks(e) {
+		e.preventDefault();
+		
+		var menu = $('#quicklinks');
+		menu.removeClass('open');
+		menu.attr( 'aria-expanded', 'false' );
+		
+		$(this).off('focusin.quicklinks');
+	}
+	
 	function initMainNavigation( container ) {
-
+		
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
 			.append( twentyseventeenScreenReaderText.icon )
@@ -19,31 +71,19 @@
 		container.find( '.menu-item-has-children > a > span, .page_item_has_children > a > span' ).append( dropdownToggle );
 
 		// Set the active submenu dropdown toggle button initial state.
-		container.find( '.current-menu-ancestor > button' )
-			.addClass( 'toggled-on' )
-			.attr( 'aria-expanded', 'true' )
-			.find( '.screen-reader-text' )
-			.text( twentyseventeenScreenReaderText.collapse );
-		// Set the active submenu initial state.
-		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
-
-		container.find( '.dropdown-toggle' ).click( function( e ) {
-			var _this = $( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text' );
-
-			e.preventDefault();
-			_this.toggleClass( 'toggled-on' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
-
-			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-
-			screenReaderSpan.text( screenReaderSpan.text() === twentyseventeenScreenReaderText.expand ? twentyseventeenScreenReaderText.collapse : twentyseventeenScreenReaderText.expand );
-		});
+		var topMenuItems = container.find( '.menu > .menu-item-has-children' );
+		topMenuItems.attr( 'aria-expanded', 'false' );
+		
+		container.find( '#top-menu > .menu-item-has-children > a' ).click(openMainNavigationSubmenu);
+		container.find( '#top-menu > .menu-item-has-children' ).focusin(openMainNavigationSubmenu);
 	}
 
 	initMainNavigation( $( '.main-navigation' ) );
+	
+	$( '.X-quickLinks a.menu-title' ).click(openQuickLinks);
+	$( '.X-quickLinks' ).focusin(openQuickLinks);
 
-	masthead       = $( '#masthead' );
+	masthead       = $( '.navigation-top' );
 	menuToggle     = masthead.find( '.menu-toggle' );
 	siteNavContain = masthead.find( '.main-navigation' );
 	siteNavigation = masthead.find( '.main-navigation > div > ul' );
@@ -94,7 +134,7 @@
 					});
 
 			} else {
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.twentyseventeen' );
+				siteNavigation.find( '.menu-item-has-children > a > span, .page_item_has_children > a > span' ).unbind( 'touchstart.twentyseventeen' );
 			}
 		}
 

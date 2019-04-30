@@ -25,24 +25,26 @@
 		<?php
 
                    // If this is a magazine artile
-                   if (  !has_post_thumbnail( get_queried_object_id() ) ) {
+                   if (  !has_post_thumbnail() ) {
+					   echo '<div class="fi">';
+					   the_title( '<h1 class="entry-title">', '</h1>' );
+					   
+					   // Fall back to post meta and prevent fatal error if ACF isn't active
+					   $var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
+					   $var_byline = get_post_meta( get_the_ID(), 'byline', true);
 
-                         $POSTtitle=single_post_title('',FALSE);
-                         echo '<div class="fi">';
-                         echo '<h1>'.$POSTtitle.'</h1>';
+						if ( function_exists('get_field') ){
+							$var_sub_head = get_field('sub_head');
+							$var_byline = get_field('byline');
+						}
 
-                      if( get_field('subhead') ){   
-                         $post_id = $post->ID; // current post ID
-                         $var_sub_head=get_field('subhead');
-                         echo '<h2>'.$var_sub_head.'</h2>';
-                       } 
-
-                      if( get_field('byline') ){   
-                         $post_id = $post->ID; // current post ID
-                         $var_byline=get_field('byline');
-                         echo '<span class="author">By '.$var_byline.'</span>';
-
-                       }          
+						if ( !empty( $var_sub_head ) ){
+							echo '<h2>' . esc_html( $var_sub_head ) . '</h2>';
+						}
+					   if ( !empty( $var_byline ) ){
+							echo '<span class="author">By ' . esc_html( $var_byline ) . '</span>';
+						}
+					             
                        echo '</div>';                  
                    }
 

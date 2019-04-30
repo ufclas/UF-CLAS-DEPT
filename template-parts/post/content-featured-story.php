@@ -25,21 +25,22 @@
            <div class="wrap">
 <?php
 
-                   if ( !has_post_thumbnail( get_queried_object_id() ) ) {
-                         $POSTtitle=single_post_title('',FALSE);
-                    
-                         echo '<h1>'.$POSTtitle.'</h1>';
-  
-                         $post_id = $post->ID; // current post ID
-                         $var_sub_head=get_field('sub_head');
+		if ( !has_post_thumbnail() ) { 
+			the_title( '<h1 class="entry-title">', '</h1>' );
 
-                         if ( !is_null($var_sub_head) )
-                            echo '<h2>'.$var_sub_head.'</h2>';
+			// Get custom field for subhead
+			$var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
 
-                   }
-?>
+			// Prevent fatal error if ACF isn't active
+			if ( function_exists('get_field') ){
+				$var_sub_head = get_field('sub_head');
+			}
 
-		<?php
+			if ( !empty( $var_sub_head ) ){
+				echo '<h2>' . esc_html( $var_sub_head ) . '</h2>';
+			}
+		}
+
 		/* translators: %s: Name of current post */
 		the_content( sprintf(
 			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
