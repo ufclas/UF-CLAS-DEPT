@@ -5,7 +5,7 @@
  Author:       Yash Singh
  Author URI:   https://comms.clas.ufl.edu/the-team/
  Template:     twentyseventeen
- Version:      1.9.3
+ Version:      1.9.4
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -322,7 +322,18 @@ h1 {
    clear: both;
 }
 
+h2.entry-title, h3.entry-title {
+	font-family: "Gentona_ExtraBold", Arial,sans-serif;
+	font-weight: normal;
+	font-size: 2.25rem;
+	line-height: 2.6875rem;
+	letter-spacing: 1px;
+	color: #004083;
+}
 
+.entry-title {
+	word-wrap: break-word;
+}
 
 /* Mobile */
 @media only screen and (min-width:1700px) {
@@ -1000,9 +1011,12 @@ figcaption{
 .wp-caption{
    max-width:100%;
 }
+.entry-title + .entry-meta {
+	margin-top: -1em;
+	margin-bottom: 1em;
+}
 
-
-.wp-caption-text {
+.wp-caption-text, .entry-meta, .entry-footer {
       text-indent: 0;
       padding:0; 
       font-family: 'Gentona_BookItalic', Arial, sans-serif;
@@ -1017,7 +1031,7 @@ figcaption{
 
 /* CAPTIONS: DESKTOP DEVICES*/
 @media (min-width: 1024px)  {
-   .wp-caption-text{ 
+   .wp-caption-text, .entry-meta, .entry-footer { 
       padding-top:.3rem;
       padding-bottom:.3rem;
       padding-left:0rem;
@@ -4000,15 +4014,19 @@ a.page-numbers  .icon-arrow-left:hover {
 	  margin-top: 195px;
    }
 
-  .has-featured-image .site-content-contain{
+  .has-featured-image .site-content-contain {
       margin-top:0rem !important;
    }
+	
+  .archive .site-content-contain{
+      margin-top: 195px !important;
+   }
 
-  .home .site-content-contain{
+  .home .site-content-contain {
       margin-top:9.375rem; 
    }
 
-   .search-results  .site-content-contain {
+   .search-results  .site-content-contain{
       margin-top:11.375rem;
    }
 
@@ -4116,6 +4134,10 @@ a.page-numbers  .icon-arrow-left:hover {
 .entry-header .wrap {
    padding-bottom: 0px !important;
    margin-bottom: 0px !important;
+}
+
+.archive .post-thumbnail + .wrap {
+	padding-top: 0;
 }
 
  *:not(.post-template-single-featured-story) .entry-content > .wrap {

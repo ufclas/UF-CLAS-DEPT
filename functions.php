@@ -780,12 +780,15 @@ add_shortcode( 'ENDCOL', 'ufclas_emily_endcol_func' );
  * @param  string $file
  * @return string Updated path
  * @since 1.9.0
- * @author priscillamc
+ * @author priscillamc <priscilla@priscillachapman.com>
  */
 function ufclas_emily_override_path( $path, $file ) {
 	
 	// Use the child theme icon-functions.php
 	if ( 'inc/icon-functions.php' == $file ){
+		$path = get_stylesheet_directory() . '/' . $file;
+	}
+	if ( 'inc/template-tags.php' == $file ){
 		$path = get_stylesheet_directory() . '/' . $file;
 	}
 	return $path;
@@ -796,7 +799,7 @@ add_filter( 'parent_theme_file_path', 'ufclas_emily_override_path', 10, 2 );
  * Custom template hook inside footer aria landmark
  * 
  * @since 1.9.0
- * @author priscillamc
+ * @author priscillamc <priscilla@priscillachapman.com>
  */
 function ufclas_emily_footer_bottom() {
 	
@@ -807,10 +810,11 @@ function ufclas_emily_footer_bottom() {
  * Remove parent theme files so we can use minified versions
  * 
  * @since 1.9.0
- * @author priscillamc
+ * @author priscillamc <priscilla@priscillachapman.com>
  */
 function ufclas_emily_dequeue_styles_scripts(){
 	remove_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
+	remove_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
 }
 add_action( 'init', 'ufclas_emily_dequeue_styles_scripts' );
 
@@ -819,7 +823,7 @@ add_action( 'init', 'ufclas_emily_dequeue_styles_scripts' );
  * Remove jquery migrate
  * 
  * @since 1.9.0
- * @author priscillamc
+ * @author priscillamc <priscilla@priscillachapman.com>
  */
 function ufclas_emily_jquery_migrate( $scripts ) {
 	 if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
@@ -831,6 +835,59 @@ function ufclas_emily_jquery_migrate( $scripts ) {
 	 }
  }
  add_action( 'wp_default_scripts', 'ufclas_emily_jquery_migrate' );
+
+/**
+ * Remove prefixes from category titles
+ * 
+ * @param string $title
+ * @return string
+ * @since 1.9.4
+ * @author priscillamc <priscilla@priscillachapman.com>
+ */
+function ufclas_emily_archive_title( $title ){
+	if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    }
+	
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'ufclas_emily_archive_title' );
+
+/**
+ * Adds read more link to excerpts
+ * 
+ * @param string $title
+ * @return string
+ * @since 1.9.4
+ * @author priscillamc <priscilla@priscillachapman.com>
+ */
+function ufclas_emily_archive_excerpt( $excerpt ){
+	$link = sprintf(
+		'<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		/* translators: %s: Name of current post */
+		sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'ufclas-emily' ), get_the_title( get_the_ID() ) )
+	);
+	
+	return $excerpt . $link;
+}
+add_filter( 'the_excerpt', 'ufclas_emily_archive_excerpt' );
+
+/**
+ * Allows archives to display sidebar
+ * 
+ * @param array $classes
+ * @return array
+ * @since 1.9.4
+ * @author priscillamc <priscilla@priscillachapman.com>
+ */
+function ufclas_emily_body_class( $classes ){
+	if ( is_archive() && get_theme_mod('archive_widgets') ){
+		$classes[] = 'post-template-single-right-sidebar';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'ufclas_emily_body_class' );
 
 /**
  * Moves theme options to Appearance > Customizer

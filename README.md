@@ -14,12 +14,6 @@ Template:     twentyseventeen
 Documentation
 -------------
 
-### Theme Updates
-
-If there are templates and functions in the Twenty Seventeen parent theme that have the same name, the files in this theme override them. 
-
-Some files may need to be updated to support new features or fixes in Twenty Seventeen beyond v2.1. 
-
 ### Page Templates
 
 The page templates in this theme can be applied to pages and posts.
@@ -34,7 +28,9 @@ The page templates in this theme can be applied to pages and posts.
 
 ### Sidebars and Widgets
 
-By default the sidebars have been removed from this theme's templates. In order to make sidebars visible, you have to select a page template that supports it. 
+By default the sidebars have been removed from this theme's templates. 
+
+In order to make sidebars visible for pages and posts, you have to select a page template that supports it. 
 
 Pages that support sidebars and widgets:
 
@@ -42,7 +38,9 @@ Pages that support sidebars and widgets:
 - Right Sidebar page template
 - Archive pages (index.php)
 
-### Navigation Menus
+To make the sidebar appear for category and tag pages, you have to select the option in the Customizer > Layout > Show widgets in archives.
+
+### Menus
 
 The menu location areas below require a menu:
 
@@ -52,9 +50,60 @@ The menu location areas below require a menu:
 - Footer Column 2
 - Footer Column 3
 
-#### Keyboard Navigation
+#### Accessibility
 
 Keyboard users can use the tab key to navigate through the menus, links, and buttons on the page. Users will see an outline around the current link/element.
+
+### Footer
+
+#### Menus
+Add navigation menus to the Footer Column 1, Footer Column 2, and Footer Column 3 Menu Locations.
+
+#### Department Address
+This can be changed by going to Appearance > Customize > CLAS DEPT Theme Options > General.
+
+#### Social Links
+This can be changed by going to the Appearance > Customize > CLAS DEPT Theme Options > Social.
+
+### Category and Tag Pages
+
+The options to control whether the pages display the full content or excerpt, featured images, and dates, or display sidebars are under Appearance > Customize > CLAS DEPT Theme Options > Layout.
+
+### Theme Options / Customizer
+
+The theme adds a 'CLAS DEPT Theme Options' panel to the Customizer screen.
+
+Users with previous theme versions need to copy their settings to the Customizer. They will see the deprecated settings page under Appearance > Customize > CLAS DEPT Theme Settings, but these settings do not affect anything.
+
+### Custom Fields
+
+This theme can display the built-in WordPress custom fields and ACF Fields if they exist.
+
+Page Templates with custom fields:
+
+- Featured Story Page Template: sub_head
+- Magazine Article Page Template: sub_head, byline
+- Image Header: sub_head, header_image
+
+Featured image custom field (caption is a WP field): 
+
+- photo_credit_txt
+
+Developer Info
+--------------
+
+### Theme Edits
+
+[Grunt](https://gruntjs.com) files are included to compile and minify the CSS and JavaScript. 
+
+Edits can be done directly to the non-minified versions and then minified using any other tool. 
+
+### Theme Updates
+
+If there are templates and functions in the Twenty Seventeen parent theme that have the same name, the files in this theme override them. 
+
+Some files may need to be updated to support new features or fixes in Twenty Seventeen beyond v2.1. 
+
 
 ### SVG Icons & Images
 
@@ -71,20 +120,6 @@ SVG images that are not used as buttons or images are hidden by default. As a fa
 
 See the inline SVG technique mentioned in [Accessible SVGs](https://css-tricks.com/accessible-svgs/). 
 
-### Custom Fields
-
-This theme can display the built-in WordPress custom fields and ACF Fields if they exist.
-
-Page Templates with custom fields:
-
-- Featured Story Page Template: sub_head
-- Magazine Article Page Template: sub_head, byline
-- Image Header: sub_head, header_image
-
-Featured image custom field (caption is a WP field): 
-
-- photo_credit_txt
-
 ### Stylesheets
 
 Parent theme styles are not used. The theme includes these stylesheets:
@@ -92,9 +127,9 @@ Parent theme styles are not used. The theme includes these stylesheets:
 - style.min.css - minified child theme styles
 - assets/css/inline.min.css - minified inline styles from advancement.clas.ufl.edu (unclear where these styles are used)
 
-The main stylesheet divides the styles into sections with media queries. Since these styles are redefined for each breakpoints instead of overriding previous styles, styles appear multiple times for each breakpoint. This can be solved using cascading, SASS, and using a mobile-first structure. 
-
 **Note: When updating any styles, be sure to search and update each breakpoint.**
+
+The main stylesheet divides the styles into sections with media queries. Since these styles are redefined for each breakpoints instead of overriding previous styles, styles appear multiple times for each breakpoint.
 
 
 ### JavaScript
@@ -115,8 +150,6 @@ Modified versions of parent theme files:
 Included from the parent theme:
 
 - html5.js
-
-
 
 
 
