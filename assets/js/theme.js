@@ -16,32 +16,33 @@ var self=this;
 
 // EDGE DETECTION 
 function menuEdgeDetection(e) {
-	var cStyle = document.body.currentStyle||window.getComputedStyle(document.body, "");     
-	
+	var cStyle = document.body.currentStyle||window.getComputedStyle(document.body, "");
+
 	// Check the overflow and overflowY properties for "auto" and "visible" values
-	var elm = this.getElementsByTagName("ul")[0];
+	var elm = y.getElementsByTagName("ul")[0];
 
 	// Check to make sure a value exists
 	if (elm){
-		var l = elm.offsetWidth; 
+		var l = elm.offsetWidth;
 		var w = this.offsetLeft;
 		var docW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 		var isEntirelyVisible = (l + w <= docW);
 
-		if (!isEntirelyVisible) { 
+		if (!isEntirelyVisible) {
 			elm.classList.add('X-menu-edge');
-		} 
+		}
 		else {
 			elm.classList.remove('X-menu-edge');
 		}
 	}
 }
 
-var g = document.getElementsByClassName("menu-item-has-children");
-for (var k = 0; k < g.length; k++) {   
+var x = document.getElementsByClassName("menu-item-has-children");
+for (var k = 0; k < x.length; k++) {
 	//ONCLICK
-	g[k].addEventListener('onmouseover', menuEdgeDetection);  
-	g[k].addEventListener('focus', menuEdgeDetection);
+	var y = x[k];
+	x[k].onmouseover = menuEdgeDetection;
+	x[k].onfocus = menuEdgeDetection;
 }
 
 
