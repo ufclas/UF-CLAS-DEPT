@@ -1720,8 +1720,17 @@ figcaption{
 
    }
 
-  
-   /* SHOW Sub Menu - (min-width:2000px) */ 
+   /* Hides .X-menu-edge when not hovered*/
+    ul.sub-menu.X-menu-edge {
+        display: none !important;
+    }
+
+    /* Shows .X-menu-edge when hovered*/
+    .menu-item-has-children:hover .X-menu-edge {
+        display: block !important;
+    }
+
+   /* SHOW Sub Menu - (min-width:2000px) */
     .X-menu nav .menu > .menu-item-has-children:hover > .sub-menu,
 	.X-menu nav .menu .menu-item-has-children.open > .sub-menu {   
       left: auto;
@@ -2453,7 +2462,17 @@ figcaption{
 
    }
 
-   /* SHOW Sub Menu (min-width:1025px) and (max-width : 2000px) */ 
+   /* Hides .X-menu-edge when not hovered*/
+    ul.sub-menu.X-menu-edge {
+        display: none !important;
+    }
+
+    /* Shows .X-menu-edge when hovered*/
+    .menu-item-has-children:hover .X-menu-edge {
+        display: block !important;
+    }
+
+   /* SHOW Sub Menu (min-width:1025px) and (max-width : 2000px) */
     .X-menu nav .menu > .menu-item-has-children:hover > .sub-menu,
 	.X-menu nav .menu .menu-item-has-children.open > .sub-menu {   
       left: auto;
@@ -2947,6 +2966,17 @@ figcaption{
    .js .menu-toggle{
     display: none;
    }
+
+   /* Hides .X-menu-edge when not hovered*/
+    ul.sub-menu.X-menu-edge {
+        display: none !important;
+    }
+
+    /* Shows .X-menu-edge when hovered*/
+    .menu-item-has-children:hover .X-menu-edge {
+        display: block !important;
+    }
+
    /* SHOW Sub Menu (min-width:768px) and (max-width : 1024px) */
    .X-menu nav .menu .menu-item-has-children.open .sub-menu {    
      display: block;
@@ -3402,6 +3432,17 @@ figcaption{
    .js .menu-toggle {
     display: none;
    }
+
+   /* Hides .X-menu-edge when not hovered*/
+     ul.sub-menu.X-menu-edge {
+         display: none !important;
+     }
+
+     /* Shows .X-menu-edge when hovered*/
+     .menu-item-has-children:hover .X-menu-edge {
+         display: block !important;
+     }
+
    /* SHOW Sub Menu (min-width:0px) and (max-width : 767px) */
    .X-menu nav .menu .menu-item-has-children.open > .sub-menu {    
       display: block;
