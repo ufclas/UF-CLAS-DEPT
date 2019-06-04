@@ -9889,3 +9889,7 @@ font-size: 1em;
 color: #333;
 	letter-spacing: .5px;
 }
+
+ul#top-menu li a[href="#"] {
+    pointer-events: none;
+}
