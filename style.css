@@ -10008,36 +10008,19 @@ aside {
 }
 
 /* Overlay text */
+
 h2.entry-title.home-hero-title {
-    position: absolute;
-    top: 0;
-    bottom: 3rem;
-    left: 2rem;
-    right: 0;
-    display: flex;
-    align-items: flex-end;
-    text-transform: uppercase;
-    color: white;
-    font-family: "Gentona_Bold";
-    font-size: 1.75rem;
-    z-index: 2;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    color: transparent;
+    position: relative;
+    color: #414141;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: #fff;
+    padding-left: 1rem;
     letter-spacing: 3px;
+    z-index: 2;
+    font-family: "Gentona_Bold";
+    text-transform: uppercase;
 }
 
-/* Background gradient on Hero Image */
-.home-hero-container:before {
-    content: " ";
-    background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.63));
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
 
 /* Height of hero image */
 .single-featured-image-header img {
@@ -10344,5 +10327,27 @@ h2.entry-title.home-hero-title {
     left: 5rem;
     max-width: 1450px;
     margin: 0 auto;
+    position: absolute;
+    top: 0;
+    bottom: 3rem;
+    left: 2rem;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
 	}
+
+  /* Background gradient on Hero Image */
+  .home-hero-container:before {
+      content: " ";
+      background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.63));
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+  }
 }
