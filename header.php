@@ -114,7 +114,15 @@
 
 </header><!-- uf-branding -->
 
+<?php
+	$blog_id = get_current_site();
 
+	if( $blog_id == 232 ){
+		get_template_part('template-parts/header/clas');
+	}else {
+		get_template_part('template-parts/header/department');
+	}
+?>
 
 <div id="page" class="site">
 	<?php
