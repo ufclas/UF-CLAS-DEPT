@@ -9893,6 +9893,68 @@ color: #333;
 ul#top-menu li a[href="#"] {
     pointer-events: none;
 }
+
+
+
+
+
+
+
+
+
+/*================================
+*
+*
+* New Universal Styling
+*
+*
+=================================*/
+body {
+  position: relative;
+}
+p {
+    font-family: "Gentona_Book" !important;
+  	color: #414141;
+}
+
+/* Images inside a gallery */
+.gallery img {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+}
+
+.X-menu nav > div > ul > li > a {
+    font-family: "Gentona_SemiBold";
+}
+
+#page {
+    margin-top: 7rem;
+}
+
+#page a,
+#secondary a {
+  color: #F45A1D;
+  font-family: "Gentona_Bold" !important;
+}
+
+#page .site-content-contain {
+    margin-top: 0;
+}
+
+.single-featured-image-header {
+    max-width: 100%;
+  	margin-top: 0;
+}
+
+.fixedPosition {
+    position: absolute;
+}
+
+li.current_page_item a:after {
+    background: url(images/main-menu-hover.png) repeat-x left center;
+}
+
 .X-header .department {
   background-color: #f7f4eb;
 }
