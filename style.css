@@ -9893,3 +9893,388 @@ color: #333;
 ul#top-menu li a[href="#"] {
     pointer-events: none;
 }
+.X-header .department {
+  background-color: #f7f4eb;
+}
+
+.department-header .college h1,
+.department-header .college .access-focus {
+    color: white !important;
+}
+
+.department-header .strikeheader {
+   font-family: Gentona_Bold;
+   text-transform: uppercase;
+   font-size: 1.2rem;
+   padding: 1rem 3.75rem 0;
+   line-height: 1;
+}
+
+input {
+  font-family: "Gentona_Book" !important;
+  font-size: 1.5rem !important;
+}
+
+aside {
+    background: #FFFFF5;
+    padding: 1rem;
+    border: 1px solid #F5F0DC;
+}
+
+.department-header .strikeheader a {
+  border: none;
+}
+
+.X-header.department-header .college a {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+/*================================
+*
+*
+* Home Page Styling
+*
+*
+=================================*/
+
+/* Container for the hero image */
+.home-hero-container {
+    position: relative;
+}
+
+/* Overlay text */
+h2.entry-title.home-hero-title {
+    position: absolute;
+    top: 0;
+    bottom: 3rem;
+    left: 2rem;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Gentona_Bold";
+    font-size: 1.75rem;
+    z-index: 2;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    letter-spacing: 3px;
+}
+
+/* Background gradient on Hero Image */
+.home-hero-container:before {
+    content: " ";
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.63));
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Height of hero image */
+.single-featured-image-header img {
+    max-height: 50.688rem;
+    object-fit: cover;
+}
+
+.single-featured-image-header img {
+    height: 28.625rem;
+    max-height: 28.625rem;
+}
+
+/*================================
+*
+*
+* Media Queries
+*
+*
+=================================*/
+
+@media (min-width: 768px){
+
+  /*====== Home Hero Image =======*/
+  h2.entry-title.home-hero-title {
+  	font-size: 2.375rem;
+  }
+
+  .single-featured-image-header img {
+    max-height: 21.875rem;
+    height: 100%;
+	}
+}
+
+@media (min-width: 1025px){
+ 	/*===== Universal Styling ====*/
+  #page {
+    margin-top: 0;
+	}
+
+  /*===== Home Page Styling ====*/
+  .home #primary #main .wrap {
+    padding: 4rem 2rem !important;
+	}
+
+  /*===== Header Styling ====== */
+  .X-header.department-header {
+    position: static;
+    height: auto;
+    margin-top: 0 !important;
+  }
+
+  #top-menu li a[href="#"] {
+      pointer-events: none;
+  }
+
+  .department-header .X-quickLinks {
+      background-color: transparent;
+      right: 4.6rem;
+      padding: .69rem 0;
+      font-size: 1.125rem;
+  }
+
+  .department-header .X-quickLinks:before {
+      border-left: #4A90E2 2px solid;
+      content: "";
+      padding: 0.625rem 0;
+      top: .5rem;
+      position: relative;
+  }
+
+  .department-header .X-quickLinks.directory {
+     right: 15.5rem;
+  }
+
+  .department-header .X-quickLinks > div ul,
+  .department-header .X-quickLinks > div ul.open {
+    display: none;
+  }
+
+  .department-header .X-quickLinks:hover > div ul,
+  .department-header .X-quickLinks > div ul.open {
+    display: block ;
+  }
+
+  .department-header .container_header_department {
+    display: flex !important;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 1.5rem 1.5rem 1rem;
+  }
+
+  .department-header .container_header_department > span {
+    padding-bottom: .3rem;
+  }
+
+  .department-header .container_header_department h1 {
+    padding-left: 3rem !important;
+  }
+
+  .department-header .strikeheader {
+    font-size: 2.5rem;
+    padding: 0;
+    height: auto;
+  }
+
+  .department-header .X-menu {
+      min-width: 600px;
+      background: #f7f4eb;
+      height: auto !important;
+  }
+
+  .department-header .X-menu nav > div > ul {
+    height: auto;
+  }
+
+  .department-header .X-menu nav,
+  .department-header .X-menu nav > div > ul,
+  .department-header .X-menu nav > div > ul > li {
+    background: transparent;
+  }
+
+  .department-header .X-menu nav > div > ul > li > ul {
+      top: auto;
+      overflow-y: auto !important;
+      background: #F7F4EB !important;
+    	padding-bottom: 0;
+  }
+
+  .department-header .sub-menu a {
+    padding-bottom: 0 !important;
+    font-size: 1rem !important;
+    font-family: "Gentona_Book" !important;
+  }
+
+  .department-header #site-navigation {
+    height: auto !important;
+    flex: 1 0 100% !important;
+  }
+
+  .department-header .college-logo-desktop svg {
+      width: 20rem;
+      position: relative;
+      top: 0.2rem;
+  }
+
+  .X-header.department-header .icon-uflogo {
+      width: 4.063rem;
+      height: 4.063rem;
+  }
+
+  .X-header.department-header .college {
+     height: 4.1rem;
+     padding-left: 4.125rem;
+  }
+
+  .X-header.department-header .college a {
+    padding-left: 1rem;
+    position: relative;
+    top: .7rem;
+    display: table-cell;
+  }
+
+  .X-header.department-header .department {
+    height: auto;
+  }
+
+  .department-header .X-menu nav > div > ul > li > a {
+      height: auto;
+  }
+
+  .X-header.department-header .uf {
+    width: 4.063rem;
+    height: 4.063rem;
+  }
+
+  .X-header.department-header .department .strikeheader,
+  .X-header.department-header .department a {
+    padding-left: 0;
+  }
+
+  .department-header .strikeRight {
+    height: 2.813rem;
+    position: relative;
+    margin: 0;
+    padding-right: 0rem;
+    margin-right: 1rem;
+  }
+
+  .department-header .strikeRight:after {
+    content: '';
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    background-color: #F45A1D;
+  }
+
+  .department-header .X-quickLinks:hover > div ul,
+  .department-header .X-quickLinks > div ul.open {
+      right: 0;
+      top: 2.8rem;
+  }
+
+  .department-header .X-quickLinks div ul li a:focus,
+  .department-header .X-quickLinks div ul li a:hover {
+    background-color: #1570CF;
+    color: white;
+  }
+
+  .department-header .menu-quicklinks-container a {
+    padding-left: 6.125rem !important;
+  }
+
+  .department-header ul#top-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    top: .3rem;
+  }
+
+  .department-header ul#top-menu a {
+    font-size: 1.063rem;
+    font-family: "Quadon_Medium";
+    text-transform: capitalize;
+  }
+
+	.department-header #top-menu > li a {
+    padding-left: 0;
+    letter-spacing: .5px;
+  }
+
+	.department-header #top-menu > li {
+    text-align: left;
+    min-width: 50px;
+    margin: 1rem 1.5rem;
+	}
+
+  .department-header #top-menu .sub-menu > li {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Search Form */
+  .department-header .X-searchTrigger {
+    width: 4.8rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002346;
+  }
+
+  .department-header .X-search-form-container {
+    top: 0;
+    height: 2.8rem;
+    width: 45rem;
+    overflow: hidden !important;
+    display: none;
+	}
+
+  .department-header .X-search-form-container.show-search-form {
+    top: 0;
+    height: 4rem;
+    width: 30rem;
+    overflow: hidden !important;
+    margin: 0;
+    left: auto;
+    right: 5rem !important;
+    background: #1570CF;
+    display: flex;
+	}
+
+  .department-header .X-search-form-container .search-form {
+    margin: 0;
+    width: 100%;
+	}
+
+  .department-header .X-search-form-container .search-form .search-submit {
+    top: .5rem;
+	}
+
+  .department-header .icon-search-thin-open {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+	/*======= Home Hero Image ======= */
+  /* Height of hero image */
+	.single-featured-image-header img {
+    max-height: 50.688rem;
+    object-fit: cover;
+	}
+
+  h2.entry-title.home-hero-title {
+    font-size: 5rem;
+    bottom: 6rem;
+    left: 5rem;
+    max-width: 1450px;
+    margin: 0 auto;
+	}
+}
