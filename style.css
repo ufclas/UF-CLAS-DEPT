@@ -10309,6 +10309,10 @@ h2.entry-title.home-hero-title {
     top: .5rem;
 	}
 
+  .department-header .X-search-form-container.show-search-form input::placeholder {
+    color: white;
+  }
+
   .department-header .icon-search-thin-open {
     width: 1.875rem;
     height: 1.875rem;
