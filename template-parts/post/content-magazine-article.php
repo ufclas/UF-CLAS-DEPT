@@ -27,8 +27,8 @@
                    // If this is a magazine artile
                    if (  !has_post_thumbnail() ) {
 					   echo '<div class="fi">';
-					   the_title( '<h1 class="entry-title">', '</h1>' );
-					   
+					   the_title( '<h2 class="entry-title">', '</h2>' );
+
 					   // Fall back to post meta and prevent fatal error if ACF isn't active
 					   $var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
 					   $var_byline = get_post_meta( get_the_ID(), 'byline', true);
