@@ -4058,14 +4058,14 @@ a.page-numbers  .icon-arrow-left:hover {
   .has-featured-image .site-content-contain {
       margin-top:0rem !important;
    }
-	
+
   .archive .site-content-contain{
       margin-top: 195px !important;
    }
 
 
   .home .site-content-contain {
-      margin-top:9.375rem; 
+      margin-top:9.375rem;
    }
 
    .search-results  .site-content-contain{
@@ -10234,6 +10234,12 @@ h2.entry-title.home-hero-title {
     right: 0;
     top: 8px;
     background-color: #F45A1D;
+  }
+
+  .department-header .X-quickLinks > a:after {
+    content: "↓";
+    display: block;
+    color: #f45a1d;
   }
 
   .department-header .X-quickLinks:hover > div ul,
