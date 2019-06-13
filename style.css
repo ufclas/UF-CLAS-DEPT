@@ -1171,7 +1171,7 @@ figcaption{
       padding:0px;
       margin:0 auto;
       clear: both;
-      z-index:9;
+      z-index:9999;
       transition: all .2s ease-in-out;
       overflow: visible;
 
@@ -1904,7 +1904,7 @@ figcaption{
       padding:0px;
       margin:0 auto;
       clear: both;
-      z-index:9;
+      z-index:9999;
       transition: all .2s ease-in-out;
       overflow: visible;
 
@@ -2658,7 +2658,7 @@ figcaption{
       max-height:3.75rem;
       display: table;
       clear: both;
-      z-index:9;
+      z-index:9999;
       transition: all .2s ease-in-out;
       overflow: visible;
       background-color:rgb(255,255,255);
@@ -3119,7 +3119,7 @@ figcaption{
       max-height:3.75rem;
       display: table;
       clear: both;
-      z-index:9;
+      z-index:9999;
       transition: all .2s ease-in-out;
       overflow: visible;
       background-color:rgb(255,255,255);
@@ -9915,6 +9915,10 @@ body {
 p {
     font-family: "Gentona_Book" !important;
   	color: #414141;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* Images inside a gallery */
