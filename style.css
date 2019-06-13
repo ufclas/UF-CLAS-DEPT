@@ -1171,7 +1171,7 @@ figcaption{
       padding:0px;
       margin:0 auto;
       clear: both;
-      z-index:9;
+      z-index:9999;
       transition: all .2s ease-in-out;
       overflow: visible;
 
@@ -1904,7 +1904,7 @@ figcaption{
       padding:0px;
       margin:0 auto;
       clear: both;
-      z-index:9;
+      z-index:9999;
       transition: all .2s ease-in-out;
       overflow: visible;
 
@@ -2658,7 +2658,7 @@ figcaption{
       max-height:3.75rem;
       display: table;
       clear: both;
-      z-index:9;
+      z-index:9999;
       transition: all .2s ease-in-out;
       overflow: visible;
       background-color:rgb(255,255,255);
@@ -3119,7 +3119,7 @@ figcaption{
       max-height:3.75rem;
       display: table;
       clear: both;
-      z-index:9;
+      z-index:9999;
       transition: all .2s ease-in-out;
       overflow: visible;
       background-color:rgb(255,255,255);
@@ -4058,14 +4058,14 @@ a.page-numbers  .icon-arrow-left:hover {
   .has-featured-image .site-content-contain {
       margin-top:0rem !important;
    }
-	
+
   .archive .site-content-contain{
       margin-top: 195px !important;
    }
 
 
   .home .site-content-contain {
-      margin-top:9.375rem; 
+      margin-top:9.375rem;
    }
 
    .search-results  .site-content-contain{
