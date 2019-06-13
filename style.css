@@ -1728,7 +1728,7 @@ figcaption{
       max-height: 80%;
       max-height: 70vh;
       padding-bottom: 2rem;
-      overflow-y: scroll  !important;
+      overflow-y: auto  !important;
 	  -ms-overflow-style: -ms-autohiding-scrollbar;
 
 
@@ -2471,7 +2471,7 @@ figcaption{
       max-height: 80%;
       max-height: 70vh;
       padding-bottom: 2rem;
-      overflow-y: scroll  !important;
+      overflow-y: auto  !important;
       -ms-overflow-style: -ms-autohiding-scrollbar;
 
    }
