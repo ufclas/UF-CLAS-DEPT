@@ -1700,7 +1700,6 @@ figcaption{
       display: block;
       height: 5px;
       left: 0;
-      position: absolute;
       -webkit-transform-origin: center center;
       transform-origin: center center;
       width: 0;
@@ -2443,7 +2442,6 @@ figcaption{
       display: block;
       height: 5px;
       left: 0;
-      position: absolute;
       -webkit-transform-origin: center center;
       transform-origin: center center;
       width: 0;
@@ -9953,10 +9951,6 @@ p {
 
 .fixedPosition {
     position: absolute;
-}
-
-li.current_page_item a:after {
-    background: url(../../images/main-menu-hover.png) repeat-x left center;
 }
 
 .X-header .department {
