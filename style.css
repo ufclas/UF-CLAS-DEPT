@@ -10050,6 +10050,9 @@ h2.entry-title.home-hero-title {
   /*====== Home Hero Image =======*/
   h2.entry-title.home-hero-title {
   	font-size: 2.375rem;
+    max-width: 864px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
   }
 
   .single-featured-image-header img {
