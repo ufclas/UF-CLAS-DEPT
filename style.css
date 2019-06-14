@@ -1694,7 +1694,7 @@ figcaption{
       width: 100%;
    }
     .X-menu nav > div > ul > li span::after{
-      background: url('images/main-menu-hover.png') repeat-x left center;
+      background: url('../../images/main-menu-hover.png') repeat-x left center;
       content: '';
       bottom: -10px;
       display: block;
@@ -2437,7 +2437,7 @@ figcaption{
       width: 100%;
    }
     .X-menu nav > div > ul > li span::after{
-      background: url('images/main-menu-hover.png') repeat-x left center;
+      background: url('../../images/main-menu-hover.png') repeat-x left center;
       content: '';
       bottom: -10px;
       display: block;
@@ -9956,7 +9956,7 @@ p {
 }
 
 li.current_page_item a:after {
-    background: url(images/main-menu-hover.png) repeat-x left center;
+    background: url(../../images/main-menu-hover.png) repeat-x left center;
 }
 
 .X-header .department {
