@@ -9888,10 +9888,6 @@ color: #333;
 	letter-spacing: .5px;
 }
 
-ul#top-menu li a[href="#"] {
-    pointer-events: none;
-}
-
 
 
 
@@ -9910,9 +9906,14 @@ ul#top-menu li a[href="#"] {
 body {
   position: relative;
 }
-p {
+
+.home p {
     font-family: "Gentona_Book" !important;
   	color: #414141;
+}
+
+#page p {
+    font-family: "Surveyor Text A","Surveyor Text B" !important;
 }
 
 .bold {
@@ -9927,10 +9928,6 @@ p {
     margin-top: 7rem;
 }
 
-#page .entry-content a {
-  color: #F45A1D;
-}
-
 #page a,
 #secondary a {
   font-family: "Gentona_Bold" !important;
@@ -9938,6 +9935,10 @@ p {
 
 #page .site-content-contain {
     margin-top: 0;
+}
+
+a.orange-link {
+  color: #f45a1d !important;
 }
 
 .single-featured-image-header {
@@ -10039,10 +10040,32 @@ h2.entry-title.home-hero-title {
 
   /*====== Home Hero Image =======*/
   h2.entry-title.home-hero-title {
-  	font-size: 2.375rem;
+  	font-size: 3.375rem;
     max-width: 864px;
     margin: 0 auto;
     padding: 1rem 2rem;
+    bottom: 2rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+  }
+
+  /* Background gradient on Hero Image */
+  .home-hero-container:before {
+      content: " ";
+      background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.63));
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
   }
 
   .single-featured-image-header img {
@@ -10057,9 +10080,13 @@ h2.entry-title.home-hero-title {
     margin-top: 0;
 	}
 
+  ul#top-menu li a[href="#"] {
+      pointer-events: none;
+  }
+
   /*===== Home Page Styling ====*/
-  .home #primary #main .wrap {
-    padding: 4rem 2rem !important;
+  .page-template-page-image-header #page article {
+    padding: 4rem 0 !important;
 	}
 
   /*===== Header Styling ====== */
@@ -10259,7 +10286,11 @@ h2.entry-title.home-hero-title {
 	}
 
   .department-header #top-menu .sub-menu > li {
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
+  }
+
+  .department-header #top-menu .sub-menu:last-child {
+    padding-bottom: 1rem;
   }
 
   /* Search Form */
@@ -10323,28 +10354,9 @@ h2.entry-title.home-hero-title {
     bottom: 6rem;
     left: 5rem;
     max-width: 1450px;
-    margin: 0 auto;
-    position: absolute;
     top: 0;
     bottom: 3rem;
     left: 2rem;
     right: 0;
-    display: flex;
-    align-items: flex-end;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    color: transparent;
 	}
-
-  /* Background gradient on Hero Image */
-  .home-hero-container:before {
-      content: " ";
-      background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.63));
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-  }
 }
