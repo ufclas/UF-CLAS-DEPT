@@ -9919,13 +9919,6 @@ p {
     font-weight: bold;
 }
 
-/* Images inside a gallery */
-.gallery img {
-    width: 145px;
-    height: 145px;
-    object-fit: cover;
-}
-
 .X-menu nav > div > ul > li > a {
     font-family: "Gentona_SemiBold";
 }
@@ -10110,11 +10103,7 @@ h2.entry-title.home-hero-title {
     display: flex !important;
     margin: 0 auto;
     flex-wrap: wrap;
-    padding: 1.5rem 1.5rem 1rem;
-  }
-
-  .department-header .container_header_department > span {
-    padding-bottom: .3rem;
+    padding: .75rem 1.5rem;
   }
 
   .department-header .container_header_department h1 {
@@ -10124,7 +10113,6 @@ h2.entry-title.home-hero-title {
   .department-header .strikeheader {
     font-size: 2.5rem;
     padding: 0;
-    height: auto;
   }
 
   .department-header .X-menu {
@@ -10189,7 +10177,7 @@ h2.entry-title.home-hero-title {
   }
 
   .department-header .X-menu nav > div > ul > li > a {
-      height: auto;
+    height: 2rem;
   }
 
   .X-header.department-header .uf {
