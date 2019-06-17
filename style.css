@@ -66,122 +66,122 @@ body{
 /* FONTS  */
 @font-face{
    font-family:'Glyphicons Halflings';
-   src: url('fonts/web-fonts/glyphicons-halflings-regular.woff') format('woff');
+   src: url('../../fonts/web-fonts/glyphicons-halflings-regular.woff') format('woff');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_Thin';
-    src: url('fonts/web-fonts/gentona/Gentona_Thin.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_Thin.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_ThinItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_ThinItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_ThinItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_ExtraLight';
-    src: url('fonts/web-fonts/gentona/Gentona_ExtraLight.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_ExtraLight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_ExtraLightItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_ExtraLightItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_ExtraLightItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_Light';
-    src: url('fonts/web-fonts/gentona/Gentona_Light.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_LightItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_LightItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_LightItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_Book';
-    src: url('fonts/web-fonts/gentona/Gentona_Book.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 /* Accessibility: font-weight below allows footer links to appear bold */
 @font-face {
     font-family: 'Gentona_Book';
-    src: url('fonts/web-fonts/gentona/Gentona_Bold.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_BookItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_BookItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_BookItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_Medium';
-    src: url('fonts/web-fonts/gentona/Gentona_Medium.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_MediumItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_MediumItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_MediumItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_SemiBold';
-    src: url('fonts/web-fonts/gentona/Gentona_SemiBold.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_SemiBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_SemiBoldItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_SemiBoldItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_SemiBoldItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_Bold';
-    src: url('fonts/web-fonts/gentona/Gentona_Bold.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_BoldItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_BoldItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_BoldItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_ExtraBold';
-    src: url('fonts/web-fonts/gentona/Gentona_ExtraBold.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_ExtraBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_ExtraBoldItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_ExtraBoldItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_ExtraBoldItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_Heavy';
-    src: url('fonts/web-fonts/gentona/Gentona_Heavy.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_Heavy.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gentona_HeavyItalic';
-    src: url('fonts/web-fonts/gentona/Gentona_HeavyItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/gentona/Gentona_HeavyItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -189,116 +189,116 @@ body{
 
 @font-face {
     font-family: 'Quadon_Thin';
-    src: url('fonts/web-fonts/quadon/Quadon_Thin.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_Thin.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_ThinItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_ThinItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_ThinItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_Light';
-    src: url('fonts/web-fonts/quadon/Quadon_Light.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_LightItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_LightItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_LightItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_Regular';
-    src: url('fonts/web-fonts/quadon/Quadon_Regular.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_RegularItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_RegularItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_RegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_Medium';
-    src: url('fonts/web-fonts/quadon/Quadon_Medium.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_MediumItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_MediumItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_MediumItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_Bold';
-    src: url('fonts/web-fonts/quadon/Quadon_Bold.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 /* Accessibility: font-weight below allows footer links to appear bold */
 @font-face {
     font-family: 'Quadon_Medium';
-    src: url('fonts/web-fonts/quadon/Quadon_Bold.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_BoldItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_BoldItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_BoldItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_ExtraBold';
-    src: url('fonts/web-fonts/quadon/Quadon_ExtraBold.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_ExtraBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_ExtraBoldItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_ExtraBoldItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_ExtraBoldItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_UltraBold';
-    src: url('fonts/web-fonts/quadon/quadon/Quadon_UltraBold.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/quadon/Quadon_UltraBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_UltraBoldItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_UltraBoldItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_UltraBoldItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_Black';
-    src: url('fonts/web-fonts/quadon/Quadon_Black.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_Black.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_BlackItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_BlackItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_BlackItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_Heavy';
-    src: url('fonts/web-fonts/quadon/Quadon_Heavy.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_Heavy.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Quadon_HeavyItalic';
-    src: url('fonts/web-fonts/quadon/Quadon_HeavyItalic.woff') format('woff');
+    src: url('../../fonts/web-fonts/quadon/Quadon_HeavyItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -1694,13 +1694,12 @@ figcaption{
       width: 100%;
    }
     .X-menu nav > div > ul > li span::after{
-      background: url('images/main-menu-hover.png') repeat-x left center;
+      background: url('../../images/main-menu-hover.png') repeat-x left center;
       content: '';
       bottom: -10px;
       display: block;
       height: 5px;
       left: 0;
-      position: absolute;
       -webkit-transform-origin: center center;
       transform-origin: center center;
       width: 0;
@@ -2437,13 +2436,12 @@ figcaption{
       width: 100%;
    }
     .X-menu nav > div > ul > li span::after{
-      background: url('images/main-menu-hover.png') repeat-x left center;
+      background: url('../../images/main-menu-hover.png') repeat-x left center;
       content: '';
       bottom: -10px;
       display: block;
       height: 5px;
       left: 0;
-      position: absolute;
       -webkit-transform-origin: center center;
       transform-origin: center center;
       width: 0;
@@ -9892,4 +9890,461 @@ color: #333;
 
 ul#top-menu li a[href="#"] {
     pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+/*================================
+*
+*
+* New Universal Styling
+*
+*
+=================================*/
+body {
+  position: relative;
+}
+p {
+    font-family: "Gentona_Book" !important;
+  	color: #414141;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.X-menu nav > div > ul > li > a {
+    font-family: "Gentona_SemiBold";
+}
+
+#page {
+    margin-top: 7rem;
+}
+
+#page .entry-content a {
+  color: #F45A1D;
+}
+
+#page a,
+#secondary a {
+  font-family: "Gentona_Bold" !important;
+}
+
+#page .site-content-contain {
+    margin-top: 0;
+}
+
+.single-featured-image-header {
+    max-width: 100%;
+  	margin-top: 0;
+}
+
+.fixedPosition {
+    position: absolute;
+}
+
+.X-header .department {
+  background-color: #f7f4eb;
+}
+
+.department-header .college h1,
+.department-header .college .access-focus {
+    color: white !important;
+}
+
+.department-header .strikeheader {
+   font-family: Gentona_Bold;
+   text-transform: uppercase;
+   font-size: 1.2rem;
+   padding: 1rem 3.75rem 0;
+   line-height: 1;
+}
+
+input {
+  font-family: "Gentona_Book" !important;
+  font-size: 1.5rem !important;
+}
+
+aside {
+    background: #FFFFF5;
+    padding: 1rem;
+    border: 1px solid #F5F0DC;
+}
+
+.department-header .strikeheader a {
+  border: none;
+}
+
+.X-header.department-header .college a {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+/*================================
+*
+*
+* Home Page Styling
+*
+*
+=================================*/
+
+/* Container for the hero image */
+.home-hero-container {
+    position: relative;
+}
+
+/* Overlay text */
+
+h2.entry-title.home-hero-title {
+    position: relative;
+    color: #414141;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: #fff;
+    padding-left: 1rem;
+    letter-spacing: 3px;
+    z-index: 2;
+    font-family: "Gentona_Bold";
+    text-transform: uppercase;
+}
+
+
+/* Height of hero image */
+.single-featured-image-header img {
+    max-height: 50.688rem;
+    object-fit: cover;
+}
+
+.single-featured-image-header img {
+    height: 28.625rem;
+    max-height: 28.625rem;
+}
+
+/*================================
+*
+*
+* Media Queries
+*
+*
+=================================*/
+
+@media (min-width: 768px){
+
+  /*====== Home Hero Image =======*/
+  h2.entry-title.home-hero-title {
+  	font-size: 2.375rem;
+    max-width: 864px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+
+  .single-featured-image-header img {
+    max-height: 21.875rem;
+    height: 100%;
+	}
+}
+
+@media (min-width: 1025px){
+ 	/*===== Universal Styling ====*/
+  #page {
+    margin-top: 0;
+	}
+
+  /*===== Home Page Styling ====*/
+  .home #primary #main .wrap {
+    padding: 4rem 2rem !important;
+	}
+
+  /*===== Header Styling ====== */
+  .X-header.department-header {
+    position: static;
+    height: auto;
+    margin-top: 0 !important;
+  }
+
+  #top-menu li a[href="#"] {
+      pointer-events: none;
+  }
+
+  .department-header .X-quickLinks {
+      background-color: transparent;
+      right: 4.6rem;
+      padding: .69rem 0;
+      font-size: 1.125rem;
+  }
+
+  .department-header .X-quickLinks:before {
+      border-left: #4A90E2 2px solid;
+      content: "";
+      padding: 0.625rem 0;
+      top: .5rem;
+      position: relative;
+  }
+
+  .department-header .X-quickLinks.directory {
+     right: 15.5rem;
+  }
+
+  .department-header .X-quickLinks > div ul,
+  .department-header .X-quickLinks > div ul.open {
+    display: none;
+  }
+
+  .department-header .X-quickLinks:hover > div ul,
+  .department-header .X-quickLinks > div ul.open {
+    display: block ;
+  }
+
+  .department-header .container_header_department {
+    display: flex !important;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: .75rem 1.5rem;
+  }
+
+  .department-header .container_header_department h1 {
+    padding-left: 3rem !important;
+  }
+
+  .department-header .strikeheader {
+    font-size: 2.5rem;
+    padding: 0;
+  }
+
+  .department-header .X-menu {
+      min-width: 600px;
+      background: #f7f4eb;
+      height: auto !important;
+  }
+
+  .department-header .X-menu nav > div > ul {
+    height: auto;
+  }
+
+  .department-header .X-menu nav,
+  .department-header .X-menu nav > div > ul,
+  .department-header .X-menu nav > div > ul > li {
+    background: transparent;
+  }
+
+  .department-header .X-menu nav > div > ul > li > ul {
+      top: auto;
+      overflow-y: auto !important;
+      background: #F7F4EB !important;
+    	padding-bottom: 0;
+  }
+
+  .department-header .sub-menu a {
+    padding-bottom: 0 !important;
+    font-size: 1rem !important;
+    font-family: "Gentona_Book" !important;
+  }
+
+  .department-header #site-navigation {
+    height: auto !important;
+    flex: 1 0 100% !important;
+  }
+
+  .department-header .college-logo-desktop svg {
+      width: 20rem;
+      position: relative;
+      top: 0.2rem;
+  }
+
+  .X-header.department-header .icon-uflogo {
+      width: 4.063rem;
+      height: 4.063rem;
+  }
+
+  .X-header.department-header .college {
+     height: 4.1rem;
+     padding-left: 4.125rem;
+  }
+
+  .X-header.department-header .college a {
+    padding-left: 1rem;
+    position: relative;
+    top: .7rem;
+    display: table-cell;
+  }
+
+  .X-header.department-header .department {
+    height: auto;
+  }
+
+  .department-header .X-menu nav > div > ul > li > a {
+    height: 2rem;
+  }
+
+  .X-header.department-header .uf {
+    width: 4.063rem;
+    height: 4.063rem;
+  }
+
+  .X-header.department-header .department .strikeheader,
+  .X-header.department-header .department a {
+    padding-left: 0;
+  }
+
+  .department-header .strikeRight {
+    height: 2.813rem;
+    position: relative;
+    margin: 0;
+    padding-right: 0rem;
+    margin-right: 1rem;
+  }
+
+  .department-header .strikeRight:after {
+    content: '';
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    background-color: #F45A1D;
+  }
+
+  .department-header .X-quickLinks > a:after {
+    content: "↓";
+    display: block;
+    color: #f45a1d;
+  }
+
+  .department-header .X-quickLinks:hover > div ul,
+  .department-header .X-quickLinks > div ul.open {
+      right: 0;
+      top: 3.8rem;
+  }
+
+  .department-header .X-quickLinks div ul li a:focus,
+  .department-header .X-quickLinks div ul li a:hover {
+    background-color: #1570CF;
+    color: white;
+  }
+
+  .department-header .menu-quicklinks-container a {
+    padding-left: 6.125rem !important;
+  }
+
+  .department-header ul#top-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    top: .3rem;
+  }
+
+  .department-header ul#top-menu a {
+    font-size: 1.063rem;
+    font-family: "Quadon_Medium";
+    text-transform: capitalize;
+  }
+
+	.department-header #top-menu > li a {
+    padding-left: 0;
+    letter-spacing: .5px;
+  }
+
+	.department-header #top-menu > li {
+    text-align: left;
+    min-width: 50px;
+    margin: 1rem 1.5rem;
+	}
+
+  .department-header #top-menu .sub-menu > li {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Search Form */
+  .department-header .X-searchTrigger {
+    width: 4.8rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002346;
+  }
+
+  .department-header .X-search-form-container {
+    top: 0;
+    height: 2.8rem;
+    width: 45rem;
+    overflow: hidden !important;
+    display: none;
+	}
+
+  .department-header .X-search-form-container.show-search-form {
+    top: 0;
+    height: 4rem;
+    width: 30rem;
+    overflow: hidden !important;
+    margin: 0;
+    left: auto;
+    right: 5rem !important;
+    background: #1570CF;
+    display: flex;
+	}
+
+  .department-header .X-search-form-container .search-form {
+    margin: 0;
+    width: 100%;
+	}
+
+  .department-header .X-search-form-container .search-form .search-submit {
+    top: .5rem;
+	}
+
+  .department-header .X-search-form-container.show-search-form input::placeholder {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .department-header .icon-search-thin-open {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+	/*======= Home Hero Image ======= */
+  /* Height of hero image */
+	.single-featured-image-header img {
+    max-height: 50.688rem;
+    object-fit: cover;
+	}
+
+  h2.entry-title.home-hero-title {
+    font-size: 5rem;
+    bottom: 6rem;
+    left: 5rem;
+    max-width: 1450px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    bottom: 3rem;
+    left: 2rem;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+	}
+
+  /* Background gradient on Hero Image */
+  .home-hero-container:before {
+      content: " ";
+      background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.63));
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+  }
 }

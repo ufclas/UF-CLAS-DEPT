@@ -14,7 +14,7 @@
 function ufclas_emily_theme_enqueue_styles() {
 	$theme_version = wp_get_theme()->get( 'Version' );
    // Enqueue CSS
-   wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.min.css', array(), $theme_version );
+   wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), $theme_version );
    wp_enqueue_style('child-style-inline', get_stylesheet_directory_uri() . '/assets/css/inline.min.css', array('child-style'), $theme_version );
 	
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.

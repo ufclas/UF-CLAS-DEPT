@@ -33,11 +33,11 @@
 		};
 
 		if ( is_single() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 		} elseif ( is_front_page() && is_home() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 		} else {
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 		}
 		?>
            </div><!-- .wrap -->

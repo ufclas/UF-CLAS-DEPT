@@ -3,3 +3,4 @@ Thumbs.db
 *.orig
 node_modules
 .npm-debug.log
+gulpfile.js
