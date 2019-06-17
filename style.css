@@ -9888,10 +9888,6 @@ color: #333;
 	letter-spacing: .5px;
 }
 
-ul#top-menu li a[href="#"] {
-    pointer-events: none;
-}
-
 
 
 
@@ -10056,6 +10052,10 @@ h2.entry-title.home-hero-title {
   #page {
     margin-top: 0;
 	}
+
+  ul#top-menu li a[href="#"] {
+      pointer-events: none;
+  }
 
   /*===== Home Page Styling ====*/
   .home #primary #main .wrap {
