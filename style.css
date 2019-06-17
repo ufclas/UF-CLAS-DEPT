@@ -9927,9 +9927,12 @@ p {
     margin-top: 7rem;
 }
 
+#page .entry-content a {
+  color: #F45A1D;
+}
+
 #page a,
 #secondary a {
-  color: #F45A1D;
   font-family: "Gentona_Bold" !important;
 }
 
