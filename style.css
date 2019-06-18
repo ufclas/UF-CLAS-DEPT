@@ -767,16 +767,14 @@ a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
 
 .entry-content ul li:before {
     position: relative;
-    /* Unicode bullet symbol */
-      content: "\25BA";
-    /* Bullet color */
-    color:#9a9a9a;
+    content: "\02192";
+    color: #f04e23;
     float: left;
-    margin: 0 0 0 -1.5rem;
+    margin: 0 0 0 -1.3rem;
     width: 1em;
-    font-size:.8rem;
-    font-family:Quadon_Bold;
-    font-weight:normal;
+    font-size: 1.1rem;
+    font-family: Quadon_Bold;
+    font-weight: 400;
 }
 /*
 
