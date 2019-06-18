@@ -9989,20 +9989,9 @@ aside {
   align-items: center;
 }
 
-/* Changes college logo to all white*/ 
+/* Changes college logo to all white*/
 #college-logo path {
     fill: white !important;
-}
-
-/* Hamburger menu on mobile/table */
-.menuBox span {
-    background: white;
-    content: "";
-    width: 2.5rem;
-    padding: 2px 0px;
-    margin: .5rem auto !important;
-    display: block;
-    border-radius: 3px;
 }
 
 /*================================
