@@ -24,11 +24,7 @@
 	 				</a>
 	 	   	</div>
 				<div class="menuBox">
-					<button>
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
+					<button><?php echo twentyseventeen_get_svg( array( 'icon_id' => 'icon-fivelines', 'class' => 'icon-menu', 'id' => 'icon-menu' ) ); ?></button>
 				</div>
 		   </div>
 
