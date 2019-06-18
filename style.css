@@ -767,16 +767,14 @@ a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
 
 .entry-content ul li:before {
     position: relative;
-    /* Unicode bullet symbol */
-      content: "\25BA";
-    /* Bullet color */
-    color:#9a9a9a;
+    content: "\02192";
+    color: #f04e23;
     float: left;
-    margin: 0 0 0 -1.5rem;
+    margin: 0 0 0 -1.3rem;
     width: 1em;
-    font-size:.8rem;
-    font-family:Quadon_Bold;
-    font-weight:normal;
+    font-size: 1.1rem;
+    font-family: Quadon_Bold;
+    font-weight: 400;
 }
 /*
 
@@ -3557,12 +3555,12 @@ figcaption{
       transition: all 0.3s ease;
       display:block;
       top:6.25rem;
-      text-align:center;
-      margin:0 auto;
+      text-align:left;
+      margin:0;
       border-top:rgb(0,32,65);
       height:100%;
-      overflow:visible;
-      overflow-y: scroll  !important;
+      overflow:none;
+      overflow-y: none;
       -webkit-overflow-scrolling: touch;
       right:0px !important;
    }
@@ -9994,6 +9992,11 @@ aside {
     fill: white !important;
 }
 
+/*Changes font size of placeholder text on all searchforms*/
+input[type="search"]::placeholder {
+  font-size: 1rem !important;
+}
+
 /*================================
 *
 *
@@ -10019,6 +10022,7 @@ h2.entry-title.home-hero-title {
     z-index: 2;
     font-family: "Gentona_Bold";
     text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -10059,6 +10063,7 @@ h2.entry-title.home-hero-title {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     color: transparent;
+    text-align: left;
   }
 
   /* Background gradient on Hero Image */
@@ -10084,10 +10089,6 @@ h2.entry-title.home-hero-title {
   #page {
     margin-top: 0;
 	}
-
-  ul#top-menu li a[href="#"] {
-      pointer-events: none;
-  }
 
   /*===== Home Page Styling ====*/
   .page-template-page-image-header #page article {
