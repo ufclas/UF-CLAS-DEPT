@@ -10085,10 +10085,6 @@ h2.entry-title.home-hero-title {
     margin-top: 0;
 	}
 
-  ul#top-menu li a[href="#"] {
-      pointer-events: none;
-  }
-
   /*===== Home Page Styling ====*/
   .page-template-page-image-header #page article {
     padding: 4rem 0 !important;
