@@ -9989,6 +9989,11 @@ aside {
   align-items: center;
 }
 
+/* Changes college logo to all white*/
+#college-logo path {
+    fill: white !important;
+}
+
 /*================================
 *
 *

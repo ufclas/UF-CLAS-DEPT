@@ -53,9 +53,9 @@
 	<circle fill="none" stroke="#FFF" stroke-width="2.292" cx="7" cy="7" r="5.8"/>
 	<path fill="none" stroke="#FFF" stroke-width="2.292" d="M10.5 11.4l5.7 5.8"/>
 </symbol>
-	
-<symbol id="icon-fivelines" viewBox="0 0 98 78">
-  	<path class="st0" d="M26 2h70v6H26zM2 2h10v6H2zM26 24h70v6H26zM2 24h10v6H2zM26 48h70v6H26zM2 48h10v6H2zM26 70h70v6H26zM2 70h10v6H2z"/>
+
+<symbol id="icon-fivelines" viewBox="0 0 60 47">
+	<rect x="5" y="19.8" width="48" height="6.4" rx="3" fill="#fff"/><rect x="5" y="38.6" width="48" height="6.4" rx="3" fill="#fff"/><rect x="5" y="1" width="48" height="6.4" rx="3" fill="#fff"/>
 	<image src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icons/icon-fivelines.png'; ?>" xlink:href="">
 </symbol>
          
