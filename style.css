@@ -9992,6 +9992,11 @@ aside {
     fill: white !important;
 }
 
+/*Changes font size of placeholder text on all searchforms*/
+input[type="search"]::placeholder {
+  font-size: 1rem !important;
+}
+
 /*================================
 *
 *
