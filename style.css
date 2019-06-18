@@ -3555,12 +3555,12 @@ figcaption{
       transition: all 0.3s ease;
       display:block;
       top:6.25rem;
-      text-align:center;
-      margin:0 auto;
+      text-align:left;
+      margin:0;
       border-top:rgb(0,32,65);
       height:100%;
-      overflow:visible;
-      overflow-y: scroll  !important;
+      overflow:none;
+      overflow-y: none;
       -webkit-overflow-scrolling: touch;
       right:0px !important;
    }
