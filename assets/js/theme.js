@@ -87,7 +87,7 @@ clickerFn = function(e) {
 		menuIcon.classList.toggle('icon-close');
 
 		var XmenuBox = document.getElementsByClassName("menuBox")[0];
-		XmenuBox.classList.add('show-menuBox');
+		XmenuBox.classList.remove('show-menuBox');
 		menuIcon.getElementsByTagName("use")[0].setAttribute("xlink:href", "#icon-fivelines");
 		document.getElementsByTagName("body")[0].classList.remove('fixedPosition');
 
