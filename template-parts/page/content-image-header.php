@@ -63,7 +63,7 @@
 */
 
 		if (!$exist_image && ($error_noSlide || $error_noShow)) {
-			echo "<h2 class=\"noMedia\">" . get_the_title() . "</h2>";
+			echo "<div class='wrap'><h2>" . get_the_title() . "</h2></div>";
 		} else if ($exist_image && ($error_noSlide || $error_noShow)) {
 			 // HERO IMAGE
 			 echo '<div class="home-hero-container"><div class="single-featured-image-header">';
@@ -88,10 +88,12 @@
 		 echo "</div>";
 		}
 
-
+		if (!$exist_image && ($error_noSlide || $error_noShow)) {
+			$noMedia = "noMedia";
+		}
 ?>
 
-<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="page-<?php the_ID(); ?>" <?php post_class("$noMedia"); ?>>
 	<?php
 	if ( is_sticky() && is_home() ) :
 		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );

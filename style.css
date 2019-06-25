@@ -10095,6 +10095,11 @@ h2.entry-title.home-hero-title {
     padding: 4rem 0 !important;
 	}
 
+/* Removes padding to article if no slider/featured image is available */
+  .page-template-page-image-header #page article.noMedia {
+    padding: 0 !important;
+  }
+
   /*===== Header Styling ====== */
   .X-header.department-header {
     position: static;
