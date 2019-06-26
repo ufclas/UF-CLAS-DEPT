@@ -728,7 +728,7 @@ span.photo-credit::before {
 /* Adds some focus outlines to help keyboard users,
 	would look better as background-colors, hovers, etc. */
 a { text-decoration:none; tap-highlight-color: transparent;}
-a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
+a:focus { outline: 2px solid #4c87b5 !important; outline-offset: 0px; }
 #top-menu a:focus, #quicklinks a:focus { outline-color: #F7F4EB; }
 .X-header form .search-field:focus { outline: none; }
 .X-header .uf a:focus { display: block; outline-color: transparent; }
