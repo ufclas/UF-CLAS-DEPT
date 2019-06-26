@@ -9950,6 +9950,8 @@ a.orange-link {
 
 .X-header .department {
   background-color: #f7f4eb;
+  height: auto !important;
+  max-height: 514px !important;
 }
 
 .department-header .college h1,
@@ -9958,8 +9960,6 @@ a.orange-link {
 }
 
 .department-header .strikeheader {
-   font-family: Gentona_Bold;
-   text-transform: uppercase;
    font-size: 1.2rem;
    padding: 1rem 3.75rem 0;
    line-height: 1;
