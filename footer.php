@@ -166,7 +166,7 @@ endif;
             </ul>
          </div>
 
-   <p class="contact-webmaster">If you encounter any issues with this website please contact us at <a href="mailto:webmaster@clas.ufl.edu" title="Contact the Webmaster">webmaster@clas.ufl.edu</a></p>
+   <p class="contact-webmaster">If you encounter any issues with this website please contact us at <a href="https://mediaservices.clas.ufl.edu/" title="Visit Media Services">Media Services</a></p>
 
           </div>
 
@@ -180,7 +180,7 @@ endif;
    <div class="footer-uf-wrap">
    <div class="footer-uf-col-1 bottom-links">
       <p>
-      &#169; <?php echo current_time('Y'); ?> University of Florida  |  <a href ="//assistive.usablenet.com/tt/referrer"> Text-only </a>  | <a href="mailto:webmaster@clas.ufl.edu"> Website Feedback</a> |  <a href ="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement"> UF Privacy Policy </a>
+      &#169; <?php echo current_time('Y'); ?> University of Florida  |  <a href ="//assistive.usablenet.com/tt/referrer"> Text-only </a>  | <a href="https://mediaservices.clas.ufl.edu/"> Website Feedback</a> |  <a href ="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement"> UF Privacy Policy </a>
       </p>
 
    </div>
