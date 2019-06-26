@@ -10046,11 +10046,11 @@ h2.entry-title.home-hero-title {
 .home-hero-container .slideshow_description_box.slideshow_transparent {
     opacity: 1 !important;
     background: 0 0 !important;
-    top: 0 !important;
-    margin-top: 22%;
+    top: initial !important;
+    margin-top: 0;
     transform: translate(0,50%);
     z-index: 9;
-    bottom: 0;
+    bottom: 46%;
     padding: 0 2rem;
 }
 
@@ -10466,7 +10466,7 @@ h2.entry-title.home-hero-title {
   /* Home Hero Slider */
   .home-hero-container .slideshow_description_box.slideshow_transparent {
     margin-top: 9% !important;
-    transform: translate(0,35%) !important;
+    transform: translate(0,9%) !important;
     padding: 0 6rem;
   }
 
