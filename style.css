@@ -10031,7 +10031,7 @@ h2.entry-title.home-hero-title {
 /* Height of hero image */
 .single-featured-image-header img {
     object-fit: cover;
-    max-height: 50rem !important;
+    max-height: 50rem;
     height: 85vh;
 }
 
