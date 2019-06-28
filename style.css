@@ -10162,7 +10162,8 @@ h2.entry-title.home-hero-title {
   /* Home page slider */
   .home-hero-container .slideshow_container img,
   .home-hero-container .slideshow_container.slideshow_container_style-light,
-  .home-hero-container .slideshow_content, .slideshow_slide.slideshow_slide_image,
+  .home-hero-container .slideshow_content,
+  .home-hero-container .slideshow_slide.slideshow_slide_image,
   .home-hero-container .slideshow_view.slideshow_currentView {
     height: 600px !important;
   }
