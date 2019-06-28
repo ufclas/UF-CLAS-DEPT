@@ -10331,7 +10331,7 @@ h2.entry-title.home-hero-title {
   }
 
   .department-header .X-quickLinks a {
-    padding-left: 1rem;
+    padding-left: 1rem !important;
   }
 
   .department-header .X-quickLinks > a:after {
