@@ -3198,6 +3198,7 @@ figcaption{
 	   height: 60px;
 	   padding: 0 .5rem;
 	   font-size: 1.125rem !important;
+     letter-spacing: .5px;
    }
       /* UF Logo svg */
         .X-header .icon-college-logo{
@@ -10329,6 +10330,10 @@ h2.entry-title.home-hero-title {
     background-color: #F45A1D;
   }
 
+  .department-header .X-quickLinks a {
+    padding-left: 1rem;
+  }
+
   .department-header .X-quickLinks > a:after {
     content: "↓";
     display: block;
@@ -10443,7 +10448,6 @@ h2.entry-title.home-hero-title {
   h2.entry-title.home-hero-title {
     font-size: 5rem;
     bottom: 6rem;
-    left: 5rem;
     max-width: 1450px;
     top: 0;
     bottom: 3rem;
