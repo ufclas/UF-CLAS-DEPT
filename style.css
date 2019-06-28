@@ -10466,7 +10466,7 @@ h2.entry-title.home-hero-title {
     padding: 0 !important;
   }
 
-  .slideshow_button {
+  .home-hero-container .slideshow_button {
     display: none !important;
   }
 
