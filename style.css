@@ -10330,6 +10330,10 @@ h2.entry-title.home-hero-title {
     background-color: #F45A1D;
   }
 
+  .department-header .X-quickLinks a {
+    padding-left: 1rem;
+  }
+
   .department-header .X-quickLinks > a:after {
     content: "↓";
     display: block;
