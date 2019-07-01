@@ -10169,7 +10169,7 @@ h2.entry-title.home-hero-title {
   }
 
   .home-hero-container .slideshow_description_box.slideshow_transparent {
-    margin-top: 15% !important;
+    margin-top: 0 !important;
     transform: translate(0,33%) !important;
   }
 }
@@ -10468,8 +10468,7 @@ h2.entry-title.home-hero-title {
 
   /* Home Hero Slider */
   .home-hero-container .slideshow_description_box.slideshow_transparent {
-    margin-top: 12% !important;
-    transform: translate(0,13%) !important;
+    margin-top: 0 !important;
     padding: 0 6rem;
   }
 
