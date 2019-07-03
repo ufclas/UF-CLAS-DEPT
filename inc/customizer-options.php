@@ -154,7 +154,7 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'text',
 	));
 
-	// General
+	// Adds donation option to the customizer
 	$wp_customize->add_section( 'theme_options_gift', array(
 		'title' => __('Make a Gift', 'ufclas-emily'),
 		'description' => __('', 'ufclas-emily'),
