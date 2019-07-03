@@ -9994,6 +9994,10 @@ input[type="search"]::placeholder {
   font-size: 1rem !important;
 }
 
+.donation {
+  display: none;
+}
+
 /*================================
 *
 *
@@ -10483,4 +10487,42 @@ h2.entry-title.home-hero-title {
   .home-hero-container:hover .slideshow_button {
     display: initial !important;
   }
+
+
+    /*Make a Donation*/
+    .donation {
+      color: #fff;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      bottom: 0;
+      top: .5rem;
+      right: 16.0625rem;
+      width: 10.9375rem;
+      height: 3.0625rem;
+      font-family: Quadon_Medium;
+      font-size: 1.125rem;
+      text-align: left;
+      overflow: visible;
+      z-index: 200;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .donation a {
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .2s;
+    }
+
+    span.gift-icon {
+        flex: 1 100%;
+        max-width: 2.5rem;
+        padding-left: 1rem;
+    }
 }
