@@ -58,6 +58,14 @@
 
 		 </div>
    </div>
+	 	<div class="donation">
+			<?php
+			  if ( !empty(get_theme_mod('make_gift')) ){
+					 $donationURL = wp_kses_post( get_theme_mod('make_gift') );
+			     echo "<a href='$donationURL' target='_blank'>Make a Gift<span class='gift-icon'><img src='". get_stylesheet_directory_uri() ."/assets/images/icons/gift.png' alt='Gift Icon'></a>";
+				 }
+			?>
+		</div>
 
 		<nav class="X-quickLinks" aria-label="Quick Links"><!--Quicklinks menu -->
 		  <a href="#" class="menu-title" aria-hidden="true">Quick Links</a>
