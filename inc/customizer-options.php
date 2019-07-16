@@ -154,5 +154,21 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'text',
 	));
 
+	// Adds donation option to the customizer
+	$wp_customize->add_section( 'theme_options_gift', array(
+		'title' => __('Make a Gift', 'ufclas-emily'),
+		'description' => __('', 'ufclas-emily'),
+		'panel' => 'ufclas_emily_theme_options',
+	));
+
+	$wp_customize->add_setting( 'make_gift', array( 'default' => '' ));
+
+	$wp_customize->add_control( 'make_gift', array(
+		'label' => __('Donation URL', 'ufclas-emily'),
+		'description' => __("Enter your organization's donation URL. Donation icon is displayed in the header", 'ufclas-emily'),
+		'section' => 'theme_options_gift',
+		'type' => 'text',
+	));
+
 }
 add_action('customize_register','ufclas_emily_customize_register');

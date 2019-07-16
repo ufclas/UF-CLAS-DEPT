@@ -166,7 +166,7 @@ endif;
             </ul>
          </div>
 
-   <p class="contact-webmaster">If you encounter any issues with this website please contact us at <a href="https://mediaservices.clas.ufl.edu/" title="Visit Media Services">Media Services</a></p>
+   <p class="contact-webmaster">If you encounter any technical issues with this website please contact us at <a href="https://mediaservices.clas.ufl.edu/" title="Visit Media Services">Media Services</a></p>
 
           </div>
 

@@ -3,12 +3,12 @@
 *      THEME: UF CLAS 2020 Department Theme
 *      AUTHOR: Yash Singh
 *      EMAIL: yash5@ufl.edu
-*      DATE: September 2017 
+*      DATE: September 2017
 */
 
 /**
  * Load theme CSS and JavaScript
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_theme_enqueue_styles() {
@@ -16,7 +16,7 @@ function ufclas_emily_theme_enqueue_styles() {
    // Enqueue CSS
    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), $theme_version );
    wp_enqueue_style('child-style-inline', get_stylesheet_directory_uri() . '/assets/css/inline.min.css', array('child-style'), $theme_version );
-	
+
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
 		wp_enqueue_style( 'twentyseventeen-ie9', get_template_directory_uri() . '/assets/css/ie9.css', array( 'child-style' ) );
@@ -31,14 +31,14 @@ function ufclas_emily_theme_enqueue_styles() {
 	wp_enqueue_script( 'html5', get_template_directory_uri() . '/assets/js/html5.js', array() );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
-	
+
 	// Enqueue JAVASCRIPT
 	wp_enqueue_script( 'child-scripts', get_theme_file_uri( '/assets/js/script.min.js' ), array('jquery'), $theme_version, true );
-	
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+
 	// Add translated text that can be used in JS
 	$twentyseventeen_l10n = array(
 		'quote' => twentyseventeen_get_svg( array( 'icon' => 'quote-right' ) ),
@@ -60,7 +60,7 @@ add_action( 'wp_enqueue_scripts', 'ufclas_emily_theme_enqueue_styles' );
 
 /**
  * Setup theme
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_X_theme_setup() {
@@ -90,12 +90,12 @@ function ufclas_emily_X_theme_setup() {
         // Default Content Width
 	$GLOBALS['content_width'] = 1440;
         $content_width = 1440;
- 
+
         // Custom Image Sizes
         add_image_size( 'portrait', 414, 9999, false );
-        add_image_size( 'portrait-crop', 414, 532, true ); // Crop 
-        add_image_size( 'square-crop', 768, 768, true ); // Crop 
-        add_image_size( 'thumbnail', 736, 9999, true ); 
+        add_image_size( 'portrait-crop', 414, 532, true ); // Crop
+        add_image_size( 'square-crop', 768, 768, true ); // Crop
+        add_image_size( 'thumbnail', 736, 9999, true );
         add_image_size( 'thumbnail-crop', 736, 535, true ); // Crop
         add_image_size( 'page-wide', 768, 9999, false );
         add_image_size( 'page-wide', 768, 9999, false );
@@ -104,14 +104,14 @@ function ufclas_emily_X_theme_setup() {
         add_image_size( 'jumbo-breakout', 1440, 9999, false );
         add_image_size( 'featured-image-crop', 1440, 864, true); // Crop
         add_image_size( 'full-screen', 2000, 9999, true); // Crop
-        add_image_size( 'full-screen-crop', 2000, 800, true); // Crop 
+        add_image_size( 'full-screen-crop', 2000, 800, true); // Crop
         update_option( 'portrait', 414 );
         update_option( 'portrait-crop', 414 );
         update_option( 'square-crop-hd', 960, 750, true  );
         update_option( 'square-crop', 768 );
         update_option( 'thumbnail', 736 );
         update_option( 'thumbnail-crop', 736 );
-		update_option( 'page-wide', 768 );	
+		update_option( 'page-wide', 768 );
 		update_option( 'breakout', 940 );
 		update_option( 'jumbo-breakout', 1440 );
 		update_option( 'featured-image-crop', 1440 );
@@ -124,7 +124,7 @@ function ufclas_emily_X_theme_setup() {
 	register_nav_menus( array(
 		'top'    => __( 'Top Menu', 'ufclas-emily' )
 	) );
-  
+
         // Register Menu
 	register_nav_menus( array(
 		'quicklinks'    => __( 'Quick Links', 'ufclas-emily' )
@@ -144,13 +144,13 @@ function ufclas_emily_X_theme_setup() {
 	register_nav_menus( array(
 		'FooterCol3'    => __( 'Footer Column 3', 'ufclas-emily' )
 	) );
-     
 
-        // Set the Featured Image 
-        if ( has_post_thumbnail() ) { 
-           the_post_thumbnail( 'full-screen-crop' ); 
+
+        // Set the Featured Image
+        if ( has_post_thumbnail() ) {
+           the_post_thumbnail( 'full-screen-crop' );
         }
-	
+
 	// Allow partial refreshes of widgets in sidebars
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -159,7 +159,7 @@ add_action( 'after_setup_theme', 'ufclas_emily_X_theme_setup' );
 
 /**
  * Custom primary menu fallback
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_primary_menu_fallback() {
@@ -172,7 +172,7 @@ function ufclas_emily_primary_menu_fallback() {
 
 /**
  * Get Menu object at a location
- * 
+ *
  * @param string $location
  * @return WP_Term
  * @since 1.0
@@ -190,7 +190,7 @@ function ufclas_emily_get_menu_by_location( $location ) {
 
 /**
  * Get Menu object at a location
- * 
+ *
  * @param string $location
  * @return WP_Term
  * @since 1.0
@@ -203,8 +203,8 @@ function ufclas_emily_custom_sizes( $sizes ) {
    unset( $sizes['medium-Large'] );
    unset( $sizes['Medium-large'] );
    unset( $sizes['large']);
-   unset( $sizes['twentyseventeen-featured-image'] ); 
-   unset( $sizes['twentyseventeen-thumbnail-avatar'] ); 
+   unset( $sizes['twentyseventeen-featured-image'] );
+   unset( $sizes['twentyseventeen-thumbnail-avatar'] );
 
     return array_merge( $sizes, array(
         'portrait' => __( 'Portrait', 'ufclas-emily' ),
@@ -212,8 +212,8 @@ function ufclas_emily_custom_sizes( $sizes ) {
         'square-crop-hd' => __( 'Square Crop HD', 'ufclas-emily' ),
         'square-crop' => __( 'Square Crop', 'ufclas-emily' ),
         'thumbnail' => __( 'Thumbnail', 'ufclas-emily' ),
-        'thumbnail-crop' => __( 'Thumbnail Crop', 'ufclas-emily' ), 
-        'page-wide' => __( 'Page Wide', 'ufclas-emily' ),     
+        'thumbnail-crop' => __( 'Thumbnail Crop', 'ufclas-emily' ),
+        'page-wide' => __( 'Page Wide', 'ufclas-emily' ),
         'breakout' => __( 'Breakout', 'ufclas-emily' ),
         'jumbo-breakout' => __( 'Jumbo Breakout', 'ufclas-emily' ),
         'featured-image-crop' => __( 'Featured Image Crop', 'ufclas-emily' ),
@@ -225,7 +225,7 @@ add_filter( 'image_size_names_choose', 'ufclas_emily_custom_sizes' );
 
 /**
  * Defines custom sizes tag for theme x
- * 
+ *
  * @param array $sizes
  * @param string $size
  * @return array
@@ -267,7 +267,7 @@ add_filter( 'get_header_image_tag', 'ufclas_emily_header_image_tag', 10, 3 );
 
 /**
  * Defines the custom SIZES TAG for the FEATURED IMAGE.
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_post_thumbnail_sizes( $attr, $attachment, $size ) {
@@ -283,7 +283,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'ufclas_emily_post_thumbnail_s
 
 /**
  * Defines the content width
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_content_width( $content_width ) {
@@ -296,7 +296,7 @@ add_filter( 'twentyseventeen_content_width', 'ufclas_emily_content_width' );
 
 /**
  * Defines the content width
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_prefix_setup() {
@@ -312,7 +312,7 @@ add_action( 'after_setup_theme', 'ufclas_emily_prefix_setup', 11 );
  * @since 1.0
  */
 function ufclas_emily_hrt_span_to_nav_menu( $item_output, $item, $depth, $args ) {
-   if ( isset( $item->classes ) && !empty( $item->classes ) ) {		
+   if ( isset( $item->classes ) && !empty( $item->classes ) ) {
       if ($depth == 0) {
          $item_output = '<a href="'. $item->url .'" title="'. apply_filters( 'the_title', $item->title, $item->ID ) .'"> <span>'. apply_filters( 'the_title', $item->title, $item->ID ) .'</span></a>';
       }
@@ -331,22 +331,22 @@ add_filter( 'walker_nav_menu_start_el', 'ufclas_emily_hrt_span_to_nav_menu', 10,
  * @since 1.0
  */
 function ufclas_emily_nav_menu_attr_add( $atts, $item, $args ) {
-    
+
     if ( ! empty( $item->attr_title ) ) {
 		/**
 		 * Add title attribute for a element
 		 */
         $atts['attr_title'] = esc_attr( $item->attr_title );
-	$atts['class'] = 'tooltip';		
+	$atts['class'] = 'tooltip';
        return $atts;
     }
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'ufclas_emily_nav_menu_attr_add', 10, 3 );
 
-/** 
+/**
  * Add post formats to post type page
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_add_page_post_formats(){
@@ -355,9 +355,9 @@ function ufclas_emily_add_page_post_formats(){
 }
 add_action('init', 'ufclas_emily_add_page_post_formats', 11);
 
-/** 
+/**
  * Add theme support for post formats
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_post_formats(){
@@ -616,9 +616,9 @@ class ALPHA_Menu extends Walker_Nav_Menu {
 } // Walker_Nav_Menu
 
 
-/** 
+/**
  * Close comments on the front-end
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_disable_comments_status() {
@@ -627,9 +627,9 @@ function ufclas_emily_disable_comments_status() {
 add_filter('comments_open', 'ufclas_emily_disable_comments_status', 20, 2);
 add_filter('pings_open', 'ufclas_emily_disable_comments_status', 20, 2);
 
-/** 
+/**
  * Hide existing comments
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_disable_comments_hide_existing($comments) {
@@ -638,9 +638,9 @@ function ufclas_emily_disable_comments_hide_existing($comments) {
 }
 add_filter('comments_array', 'ufclas_emily_disable_comments_hide_existing', 10, 2);
 
-/** 
+/**
  * Remove comments page in menu
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_disable_comments_admin_menu() {
@@ -648,9 +648,9 @@ function ufclas_emily_disable_comments_admin_menu() {
 }
 add_action('admin_menu', 'ufclas_emily_disable_comments_admin_menu');
 
-/** 
+/**
  * Redirect any user trying to access comments page
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_disable_comments_admin_menu_redirect() {
@@ -662,9 +662,9 @@ function ufclas_emily_disable_comments_admin_menu_redirect() {
 add_action('admin_init', 'ufclas_emily_disable_comments_admin_menu_redirect');
 
 
-/** 
+/**
  * Remove comments metabox from dashboard
- * 
+ *
  * @since 1.0
  */
 function ufclas_emily_disable_comments_dashboard() {
@@ -673,14 +673,14 @@ function ufclas_emily_disable_comments_dashboard() {
 add_action('admin_init', 'ufclas_emily_disable_comments_dashboard');
 
 
-/* IF the post has a featured image then add this class to the body tag */ 
+/* IF the post has a featured image then add this class to the body tag */
 add_filter( 'body_class','ufclas_emily_set_one_column_class' );
 function ufclas_emily_set_one_column_class( $classes ) {
      global $post;
-     $ID=get_the_ID(); 
+     $ID=get_the_ID();
    if ( has_post_thumbnail($ID) )
-      return array_merge( $classes, array( 'has-featured-image' ) ); 
-   return $classes;     
+      return array_merge( $classes, array( 'has-featured-image' ) );
+   return $classes;
 }
 
 
@@ -737,7 +737,7 @@ function ufclas_emily_startrow_func( $atts ){
    // Check if row name was provided
    if(!empty($atts['class'])){
 
-	return '<div class="X-row '.$atts['class'].'">';   
+	return '<div class="X-row '.$atts['class'].'">';
    }
    else {
 	return '<div class="X-row">';
@@ -759,7 +759,7 @@ function ufclas_emily_startcol_func( $atts ){
 
    // Check if slideshow name was provided in the shortcode
    if(empty($atts['class'])){
-      echo '[ Please provide a width class (p10, p20, p30...p90,p100) ]';     
+      echo '[ Please provide a width class (p10, p20, p30...p90,p100) ]';
    }
 
 	return '<div class="X-col '.$atts['class'].'">';
@@ -775,7 +775,7 @@ add_shortcode( 'ENDCOL', 'ufclas_emily_endcol_func' );
 
 /**
  * Adds accessible SVGs by overriding parent theme files
- * 
+ *
  * @param  string $path
  * @param  string $file
  * @return string Updated path
@@ -783,7 +783,7 @@ add_shortcode( 'ENDCOL', 'ufclas_emily_endcol_func' );
  * @author priscillamc <priscilla@priscillachapman.com>
  */
 function ufclas_emily_override_path( $path, $file ) {
-	
+
 	// Use the child theme icon-functions.php
 	if ( 'inc/icon-functions.php' == $file ){
 		$path = get_stylesheet_directory() . '/' . $file;
@@ -797,18 +797,18 @@ add_filter( 'parent_theme_file_path', 'ufclas_emily_override_path', 10, 2 );
 
 /**
  * Custom template hook inside footer aria landmark
- * 
+ *
  * @since 1.9.0
  * @author priscillamc <priscilla@priscillachapman.com>
  */
 function ufclas_emily_footer_bottom() {
-	
+
 	do_action('ufclas_emily_footer_bottom');
 }
 
 /**
  * Remove parent theme files so we can use minified versions
- * 
+ *
  * @since 1.9.0
  * @author priscillamc <priscilla@priscillachapman.com>
  */
@@ -821,7 +821,7 @@ add_action( 'init', 'ufclas_emily_dequeue_styles_scripts' );
 
 /**
  * Remove jquery migrate
- * 
+ *
  * @since 1.9.0
  * @author priscillamc <priscilla@priscillachapman.com>
  */
@@ -838,7 +838,7 @@ function ufclas_emily_jquery_migrate( $scripts ) {
 
 /**
  * Remove prefixes from category titles
- * 
+ *
  * @param string $title
  * @return string
  * @since 1.9.4
@@ -848,14 +848,14 @@ function ufclas_emily_archive_title( $title ){
 	if ( is_category() ) {
         $title = single_cat_title( '', false );
     }
-	
+
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'ufclas_emily_archive_title' );
 
 /**
  * Adds read more link to excerpts
- * 
+ *
  * @param string $title
  * @return string
  * @since 1.9.4
@@ -868,14 +868,14 @@ function ufclas_emily_archive_excerpt( $excerpt ){
 		/* translators: %s: Name of current post */
 		sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'ufclas-emily' ), get_the_title( get_the_ID() ) )
 	);
-	
+
 	return $excerpt . $link;
 }
 add_filter( 'the_excerpt', 'ufclas_emily_archive_excerpt' );
 
 /**
  * Allows archives to display sidebar
- * 
+ *
  * @param array $classes
  * @return array
  * @since 1.9.4
@@ -898,3 +898,13 @@ require get_theme_file_path( '/inc/customizer-options.php' );
  * Includes theme options for backwards compatibility, can be removed
  */
 require get_theme_file_path( '/inc/settings-options.php' );
+
+/**
+ * Includes Shibboleth functions for members only page
+ */
+require get_theme_file_path( '/inc/shibboleth.php' );
+
+/**
+ * Includes ACF field needed for members only page
+ */
+require get_theme_file_path( '/inc/advanced-custom-fields/metaboxes.php' );
