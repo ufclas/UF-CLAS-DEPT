@@ -475,9 +475,8 @@ h2 a:hover,h2 a:active  {
    color:#A24C16;
 }
 h3 {
-   font-family: "Surveyor Text A", "Surveyor Text B";
+   font-family: Gentona_SemiBold;
    font-weight: 700;
-   font-style: italic;
    font-size: 1.5rem;
    line-height: 1.8125rem;
    color: #00337A;
@@ -9998,6 +9997,13 @@ input[type="search"]::placeholder {
   display: none;
 }
 
+.bold-blue {
+  font-weight: 700;
+  font-family: Gentona_Bold;
+  text-transform: uppercase;
+  color: #00337a;
+}
+
 /*================================
 *
 *
@@ -10099,7 +10105,6 @@ h2.entry-title.home-hero-title {
 
 .home-hero-container h3.slideshow_description {
     padding: 1rem;
-    /* background-color: rgba(0,0,0,.8); */
     font-family: Quadon_Medium;
     font-size: 1.4rem;
     max-width: 35%;

@@ -48,7 +48,7 @@
 	 * If a regular post or page, and not the front page, show the featured image.
 	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
 	 */
-	if ( is_singular() && has_post_thumbnail() && (!is_page_template( 'page-image-header.php' )) ) :
+	if ( is_singular() && has_post_thumbnail() && (!is_page_template( array('page-image-header.php', 'single-no-feature-image.php') )) ) :
 		echo '<div class="single-featured-image-header">';
                    // If this is a magazine article
                    if ( is_page_template( 'single-magazine-article.php' ) ) {
