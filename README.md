@@ -20,10 +20,15 @@ The page templates in this theme can be applied to pages and posts.
 
 - Featured Story
 - Full Width Post
+- Home slider/image template
 - Image Header
 - Left Sidebar
 - Right Sidebar
 - Magazine Article
+- Members Only
+    1. Activate "Advanced Custom Fields" plugin
+    2. In dashboard, on the desired Page, under "Page Attributes" > "Template", select "Members Only" template
+    3. On same Page, Under "Page Visibility Options", from dropdown, select "GatlorLink Users"
 - News Article
 
 ### Sidebars and Widgets
