@@ -1,4 +1,4 @@
-<header class="X-header department-header">
+<header class="X-header header-clas">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to main content', 'twentyseventeen' ); ?></a>
 
        <div class="uf"> <!-- UF Logo -->
