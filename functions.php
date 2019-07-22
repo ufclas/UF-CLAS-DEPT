@@ -908,3 +908,8 @@ require get_theme_file_path( '/inc/shibboleth.php' );
  * Includes ACF field needed for members only page
  */
 require get_theme_file_path( '/inc/advanced-custom-fields/metaboxes.php' );
+
+/**
+* Includes the custom functions for the Emily Theme file
+*/
+require get_theme_file_path('/inc/custom-functions.php');
