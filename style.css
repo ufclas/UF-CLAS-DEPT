@@ -9950,12 +9950,12 @@ body {
   max-height: 514px !important;
 }
 
-.department-header .college h1,
-.department-header .college .access-focus {
+.header-clas .college h1,
+.header-clas .college .access-focus {
     color: white !important;
 }
 
-.department-header .strikeheader {
+.header-clas .strikeheader {
    font-size: 1.2rem;
    padding: 1rem 3.75rem 0;
    line-height: 1;
@@ -9972,11 +9972,11 @@ aside {
     border: 1px solid #F5F0DC;
 }
 
-.department-header .strikeheader a {
+.header-clas .strikeheader a {
   border: none;
 }
 
-.X-header.department-header .college a {
+.X-header.header-clas .college a {
   display: flex;
   position: relative;
   justify-content: center;
@@ -10200,7 +10200,7 @@ h2.entry-title.home-hero-title {
   }
 
   /*===== Header Styling ====== */
-  .X-header.department-header {
+  .X-header.header-clas {
     position: static;
     height: auto;
     margin-top: 0 !important;
@@ -10210,14 +10210,14 @@ h2.entry-title.home-hero-title {
       pointer-events: none;
   }
 
-  .department-header .X-quickLinks {
+  .header-clas .X-quickLinks {
       background-color: transparent;
       right: 4.6rem;
       padding: .69rem 0;
       font-size: 1.125rem;
   }
 
-  .department-header .X-quickLinks:before {
+  .header-clas .X-quickLinks:before {
       border-left: #4A90E2 2px solid;
       content: "";
       padding: 0.625rem 0;
@@ -10225,114 +10225,115 @@ h2.entry-title.home-hero-title {
       position: relative;
   }
 
-  .department-header .X-quickLinks.directory {
+  .header-clas .X-quickLinks.directory {
      right: 15.5rem;
   }
 
-  .department-header .X-quickLinks > div ul,
-  .department-header .X-quickLinks > div ul.open {
+  .header-clas .X-quickLinks > div ul,
+  .header-clas .X-quickLinks > div ul.open {
     display: none;
   }
 
-  .department-header .X-quickLinks:hover > div ul,
-  .department-header .X-quickLinks > div ul.open {
+  .header-clas .X-quickLinks:hover > div ul,
+  .header-clas .X-quickLinks > div ul.open {
     display: block ;
   }
 
-  .department-header .container_header_department {
+  .header-clas .container_header_department {
     display: flex !important;
     margin: 0 auto;
     flex-wrap: wrap;
     padding: .75rem 1.5rem;
   }
 
-  .department-header .container_header_department h1 {
+  .header-clas .container_header_department h1 {
     padding-left: 3rem !important;
   }
 
-  .department-header .strikeheader {
+  .header-clas .strikeheader {
     font-size: 2.5rem;
     padding: 0;
     font-family: Gentona_Bold;
     text-transform: uppercase;
   }
 
-  .department-header .X-menu {
+  .header-clas .X-menu,
+  .header-clas-emily .X-menu {
       min-width: 600px;
       background: #f7f4eb;
       height: auto !important;
   }
 
-  .department-header .X-menu nav > div > ul {
+  .header-clas .X-menu nav > div > ul {
     height: auto;
   }
 
-  .department-header .X-menu nav,
-  .department-header .X-menu nav > div > ul,
-  .department-header .X-menu nav > div > ul > li {
+  .header-clas .X-menu nav,
+  .header-clas .X-menu nav > div > ul,
+  .header-clas .X-menu nav > div > ul > li {
     background: transparent;
   }
 
-  .department-header .X-menu nav > div > ul > li > ul {
+  .header-clas .X-menu nav > div > ul > li > ul {
       top: auto;
       overflow-y: auto !important;
       background: #F7F4EB !important;
     	padding-bottom: 0;
   }
 
-  .department-header .sub-menu a {
+  .header-clas .sub-menu a {
     padding-bottom: 0 !important;
     font-size: 1rem !important;
     font-family: "Gentona_Book" !important;
   }
 
-  .department-header #site-navigation {
+  .header-clas #site-navigation {
     height: auto !important;
     flex: 1 0 100% !important;
   }
 
-  .department-header .college-logo-desktop svg {
+  .header-clas .college-logo-desktop svg {
       width: 20rem;
       position: relative;
       top: 0.2rem;
   }
 
-  .X-header.department-header .icon-uflogo {
+  .X-header.header-clas .icon-uflogo {
       width: 4.063rem;
       height: 4.063rem;
   }
 
-  .X-header.department-header .college {
+  .X-header.header-clas .college {
      height: 4.1rem;
      padding-left: 4.125rem;
   }
 
-  .X-header.department-header .college a {
+  .X-header.header-clas .college a {
     padding-left: 1rem;
     position: relative;
     top: .7rem;
     display: table-cell;
   }
 
-  .X-header.department-header .department {
+  .X-header.header-clas .department {
     height: auto;
   }
 
-  .department-header .X-menu nav > div > ul > li > a {
+  .header-clas .X-menu nav > div > ul > li > a {
     height: 2rem;
   }
 
-  .X-header.department-header .uf {
+  .X-header.header-clas .uf {
     width: 4.063rem;
     height: 4.063rem;
   }
 
-  .X-header.department-header .department .strikeheader,
-  .X-header.department-header .department a {
+  .X-header.header-clas .department .strikeheader,
+  .X-header.header-clas .department a {
     padding-left: 0;
   }
 
-  .department-header .strikeRight {
+  .header-clas .strikeRight {
     height: 2.813rem;
     position: relative;
     margin: 0;
@@ -10340,7 +10341,7 @@ h2.entry-title.home-hero-title {
     margin-right: 1rem;
   }
 
-  .department-header .strikeRight:after {
+  .header-clas .strikeRight:after {
     content: '';
     height: 30px;
     width: 2px;
@@ -10350,33 +10351,33 @@ h2.entry-title.home-hero-title {
     background-color: #F45A1D;
   }
 
-  .department-header .X-quickLinks #quicklinks a {
+  .header-clas .X-quickLinks #quicklinks a {
     padding-left: 1rem !important;
   }
 
-  .department-header .X-quickLinks > a:after {
+  .header-clas .X-quickLinks > a:after {
     content: "↓";
     display: block;
     color: #f45a1d;
   }
 
-  .department-header .X-quickLinks:hover > div ul,
-  .department-header .X-quickLinks > div ul.open {
+  .header-clas .X-quickLinks:hover > div ul,
+  .header-clas .X-quickLinks > div ul.open {
       right: 0;
       top: 3.8rem;
   }
 
-  .department-header .X-quickLinks div ul li a:focus,
-  .department-header .X-quickLinks div ul li a:hover {
+  .header-clas .X-quickLinks div ul li a:focus,
+  .header-clas .X-quickLinks div ul li a:hover {
     background-color: #1570CF;
     color: white;
   }
 
-  .department-header .menu-quicklinks-container a {
+  .header-clas .menu-quicklinks-container a {
     padding-left: 6.125rem !important;
   }
 
-  .department-header ul#top-menu {
+  .header-clas ul#top-menu {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -10384,33 +10385,33 @@ h2.entry-title.home-hero-title {
     top: .3rem;
   }
 
-  .department-header ul#top-menu a {
+  .header-clas ul#top-menu a {
     font-size: 1.063rem;
     font-family: "Quadon_Medium";
     text-transform: capitalize;
   }
 
-	.department-header #top-menu > li a {
+	.header-clas #top-menu > li a {
     padding-left: 0;
     letter-spacing: .5px;
   }
 
-	.department-header #top-menu > li {
+	.header-clas #top-menu > li {
     text-align: left;
     min-width: 50px;
     margin: 1rem 1.5rem;
 	}
 
-  .department-header #top-menu .sub-menu > li {
+  .header-clas #top-menu .sub-menu > li {
     margin-bottom: .5rem;
   }
 
-  .department-header #top-menu .sub-menu:last-child {
+  .header-clas #top-menu .sub-menu:last-child {
     padding-bottom: 1rem;
   }
 
   /* Search Form */
-  .department-header .X-searchTrigger {
+  .header-clas .X-searchTrigger {
     width: 4.8rem;
     height: 4rem;
     display: flex;
@@ -10419,7 +10420,7 @@ h2.entry-title.home-hero-title {
     background-color: #002346;
   }
 
-  .department-header .X-search-form-container {
+  .header-clas .X-search-form-container {
     top: 0;
     height: 2.8rem;
     width: 45rem;
@@ -10427,7 +10428,7 @@ h2.entry-title.home-hero-title {
     display: none;
 	}
 
-  .department-header .X-search-form-container.show-search-form {
+  .header-clas .X-search-form-container.show-search-form {
     top: 0;
     height: 4rem;
     width: 30rem;
@@ -10439,21 +10440,21 @@ h2.entry-title.home-hero-title {
     display: flex;
 	}
 
-  .department-header .X-search-form-container .search-form {
+  .header-clas .X-search-form-container .search-form {
     margin: 0;
     width: 100%;
 	}
 
-  .department-header .X-search-form-container .search-form .search-submit {
+  .header-clas .X-search-form-container .search-form .search-submit {
     top: .5rem;
 	}
 
-  .department-header .X-search-form-container.show-search-form input::placeholder {
+  .header-clas .X-search-form-container.show-search-form input::placeholder {
     color: white;
     font-size: 1.2rem;
   }
 
-  .department-header .icon-search-thin-open {
+  .header-clas .icon-search-thin-open {
     width: 1.875rem;
     height: 1.875rem;
   }
