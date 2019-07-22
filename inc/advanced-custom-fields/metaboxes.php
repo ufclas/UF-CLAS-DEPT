@@ -130,13 +130,13 @@ if(function_exists('acf_add_local_field_group')){
       ),
 
       ));
-}
 
-/* Allows to add a custom body class using Advanced Custom Fields*/
-add_filter( 'body_class','ufclas_emily_custom_body_class' );
+  /* Allows to add a custom body class using Advanced Custom Fields*/
+  add_filter( 'body_class','ufclas_emily_custom_body_class' );
 
-function ufclas_emily_custom_body_class($classes){
-	$bodyClass = get_field('body_class');
-	$classes[] = $bodyClass;
-  return $classes;
+  function ufclas_emily_custom_body_class($classes){
+  	$bodyClass = get_field('body_class');
+  	$classes[] = $bodyClass;
+    return $classes;
+  }
 }
