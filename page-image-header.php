@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Home Page Image Header
+ * Template Name: Media Slideshow
  * Template Post Type: page
  */
 
