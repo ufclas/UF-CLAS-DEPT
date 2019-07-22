@@ -5,13 +5,13 @@
  * @since 0.2.5
  */
 
- function ufclas_ufl_2015_metabox_styles_scripts( $hook ) {
+ function ufclas_emily_metabox_styles_scripts( $hook ) {
 	if ( 'post.php' != $hook ) {
         return;
     }
 	wp_enqueue_style('metaboxes', get_template_directory_uri() . '/inc/advanced-custom-fields/metaboxes.css', array(), null);
 }
-add_action( 'admin_enqueue_scripts', 'ufclas_ufl_2015_metabox_styles_scripts' );
+add_action( 'admin_enqueue_scripts', 'ufclas_emily_metabox_styles_scripts' );
 
 if(function_exists('register_field_group')){
     register_field_group(array (
