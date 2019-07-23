@@ -99,4 +99,25 @@ function homeChooseHeaderMedia(){
       $noMedia = "noMedia";
     }
   }
+
+
+/*===========================
+*
+*
+* Register widget areas
+*
+*
+*=============================*/
+function blank_widgets_init(){
+    register_sidebar( array(
+      'name'          => ('CLAS Featured Stories'),
+      'id'            => 'clas-featured-stories',
+      'description'   => 'Here are the featured stories that show up on the CLAS home page',
+      'before_widget' => '<div class="clas-featured-stories">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>'
+  ));
+}
+add_action('widgets_init', 'blank_widgets_init');
 ?>
