@@ -10,7 +10,7 @@
 
 		   <div class="college"><!-- College of Liberal Arts logo -->
 				 <div class="strikeRight">
-	 				<a href="http://www.clas.ufl.edu" target="_blank">
+					 <h1><a href="http://www.clas.ufl.edu" target="_blank">
 	 						<span class="college-logo-desktop">
 	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'college-logo' ) ); ?>
 	 							<span class="SVGaltText">College of Liberal Arts and Sciences</span>
@@ -21,7 +21,7 @@
 	 					 <span class="college-logo-tablet">
 	 							<span>College of Liberal Arts and Sciences</span>
 	 					 </span>
-	 				</a>
+	 				</a></h1>
 	 	   	</div>
 				<div class="menuBox">
 					<button><?php echo twentyseventeen_get_svg( array( 'icon_id' => 'icon-fivelines', 'class' => 'icon-menu', 'id' => 'icon-menu' ) ); ?></button>
@@ -30,10 +30,6 @@
 
    <div class="department">
 		<div class="container_header_department"><!-- Website title -->
-		 <span>
-					<h1 class="strikeheader"><a class="strikeheader" href="<?php echo get_site_url(); ?>"><span class="access-focus"><?php echo  get_bloginfo( 'name' ) ?></span></a></h1>
-			</span>
-
 		 <div class="X-menu"> <!-- Main Navigation -->
 			 <div class="mobileSearch"><?php get_search_form(); ?></div>
 				 <?php if ( has_nav_menu( 'top' ) ) : ?>
