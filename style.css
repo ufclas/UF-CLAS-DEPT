@@ -10198,6 +10198,47 @@ h2.entry-title.home-hero-title {
     height: 100vh !important;
 }
 
+/*===================================
+*
+*
+* CLAS Home Page Styling
+*
+*
+*=================================*/
+
+#clas-featured-container {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 35px solid #5789B7;
+}
+
+.clas-featured-section {
+    background: #f7f4eb;
+}
+
+.clas-featured-title {
+    padding: 0 1rem;
+}
+
+.clas-featured-title h3 {
+    font-family: Quadon_Medium;
+}
+
+#page .clas-featured-text p {
+  font-family: Gentona_Book !important;
+  margin-bottom: 1rem;
+}
+
+#page a.featured-link {
+  font-family: Gentona_ExtraBold!important;
+  text-transform: uppercase;
+  color: #00337A;
+}
+
+.clas-featured-text {
+    padding: 0 1rem 3rem;
+}
+
 /*================================
 *
 *
@@ -10232,6 +10273,11 @@ h2.entry-title.home-hero-title {
   .home-hero-container .slideshow_description_box.slideshow_transparent {
     margin-top: 0 !important;
     transform: translate(0,33%) !important;
+  }
+
+  /* CLAS Home Page*/
+  .widget_text.clas-featured-stories {
+    flex: 50% 0;
   }
 }
 
@@ -10560,41 +10606,67 @@ h2.entry-title.home-hero-title {
     display: initial !important;
   }
 
+  /* CLAS Home Page */
 
-    /*Make a Donation*/
-    .donation {
-      color: #fff;
+  .widget_text.clas-featured-stories {
+    flex: 1 0;
+  }
+
+  .clas-featured-image {
+    position: relative;
+  }
+
+  .clas-featured-title {
       position: absolute;
-      padding: 0;
-      margin: 0;
-      bottom: 0;
-      top: .5rem;
-      right: 16.0625rem;
-      width: 10.9375rem;
-      height: 3.0625rem;
-      font-family: Quadon_Medium;
-      font-size: 1.125rem;
-      text-align: left;
-      overflow: visible;
-      z-index: 200;
+      bottom: 4px;
+      text-align: center;
+      left: 0;
+      right: 0;
+      background: #00346ca3;
+  }
+
+  .clas-featured-title h3 {
+    font-size: 1.625rem;
+  }
+
+  .clas-featured-title h3 {
+      color: white;
+  }
+
+  /*Make a Donation*/
+  .donation {
+    color: #fff;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    top: .5rem;
+    right: 16.0625rem;
+    width: 10.9375rem;
+    height: 3.0625rem;
+    font-family: Quadon_Medium;
+    font-size: 1.125rem;
+    text-align: left;
+    overflow: visible;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .donation a {
+      color: white;
+      height: 100%;
+      width: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
-    }
+      justify-content: center;
+      transition: .2s;
+  }
 
-    .donation a {
-        color: white;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: .2s;
-    }
-
-    span.gift-icon {
-        flex: 1 100%;
-        max-width: 2.5rem;
-        padding-left: 1rem;
-    }
+  span.gift-icon {
+      flex: 1 100%;
+      max-width: 2.5rem;
+      padding-left: 1rem;
+  }
 }
