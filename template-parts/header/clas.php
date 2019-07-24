@@ -10,7 +10,7 @@
 
 		   <div class="college"><!-- College of Liberal Arts logo -->
 				 <div class="strikeRight">
-					 <h1><a href="http://www.clas.ufl.edu" target="_blank">
+					 <h1><a href="<?php echo get_site_url(); ?>">
 	 						<span class="college-logo-desktop">
 	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'college-logo' ) ); ?>
 	 							<span class="SVGaltText">College of Liberal Arts and Sciences</span>
