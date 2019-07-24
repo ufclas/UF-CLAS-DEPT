@@ -18,8 +18,13 @@
 
 <article id="page-<?php the_ID(); ?>" class="clas-featured-section">
 
-<div id="clas-featured-container">
-	<?php dynamic_sidebar('clas-featured-stories'); ?>
-</div>
+	<div id="clas-featured-container">
+		<?php dynamic_sidebar('clas-featured-stories'); ?>
+	</div>
+
+		<!-- grid-123-b shrinks from a 3 column grid to a 2 column grid (in ipad) and finally to 1 column -->
+		<div class="clas-home-bottom-section">
+			<?php dynamic_sidebar('clas-numbers'); ?>
+		</div>
 
 </article><!-- #post-## -->

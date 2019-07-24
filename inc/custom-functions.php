@@ -118,6 +118,16 @@ function blank_widgets_init(){
       'before_title'  => '<h3>',
       'after_title'   => '</h3>'
   ));
+
+  register_sidebar( array(
+    'name'          => ('CLAS Numbers'),
+    'id'            => 'clas-numbers',
+    'description'   => 'Here are the numbers that show up on the bottom of the CLAS home page',
+    'before_widget' => '<div class="clas-by-numbers">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ));
 }
 add_action('widgets_init', 'blank_widgets_init');
 ?>
