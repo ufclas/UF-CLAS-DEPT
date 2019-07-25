@@ -84,6 +84,6 @@
 	   </button>
 	</div>
    <div class="X-search-form-container"><?php get_search_form(); ?></div>
-
+ </div>
 
 </header><!-- uf-branding -->
