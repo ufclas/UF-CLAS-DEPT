@@ -95,7 +95,7 @@ function homeChooseHeaderMedia(){
     }
 
 
-    if ((!$exist_image && ($error_noSlide || $error_noShow)) || !$exist_key_homeSlider) {
+    if ((!$exist_image && ($error_noSlide || $error_noShow))) {
       $noMedia = "noMedia";
     }
   }
