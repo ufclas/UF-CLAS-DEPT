@@ -47,8 +47,9 @@
 	/*
 	 * If a regular post or page, and not the front page, show the featured image.
 	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
+	 * Checks to see if a specific template is selected since those templates rely on a specific header style
 	 */
-	if ( is_singular() && has_post_thumbnail() && (!is_page_template( array('page-image-header.php', 'single-no-feature-image.php') )) ) :
+	if ( is_singular() && has_post_thumbnail() && (!is_page_template( array('page-image-header.php', 'single-no-feature-image.php', 'page-clas-home.php', 'page-interior-title-image.php') )) ) :
 		echo '<div class="single-featured-image-header">';
                    // If this is a magazine article
                    if ( is_page_template( 'single-magazine-article.php' ) ) {

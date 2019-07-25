@@ -43,21 +43,10 @@ html, body{
    -webkit-text-size-adjust: 100%;
  }
 
-html{
-   margin:0px;
-   padding:0px;
-   }
-body{
-   margin:0px;
-   padding:0px;
-}
 /*  The single most important setting  */
  * {
     box-sizing: border-box;
 }
-
-   .bg-texture{
-    }
 
    .center{
       text-align:center;
@@ -3872,10 +3861,6 @@ a.page-numbers  .icon-arrow-left:hover {
       clear:both;
 
    }
-
-
-
-
     .panel-image  {
       display:block;
       clear: both;
@@ -3920,17 +3905,10 @@ a.page-numbers  .icon-arrow-left:hover {
 
 /* BREAK POINTS FOR POST NAVIGATION */
 @media only screen and (min-width:0px) and (max-width : 736px) {
-
    .nav-links{
       width:100%;
    }
 }
-
-
-
-
-
-
 
 /* Add margins to compensate for the FIXED branding header (X-header) */
 
@@ -4908,7 +4886,7 @@ a.page-numbers  .icon-arrow-left:hover {
 
 
 
-/* GRID: iPad, Desktop*/
+/* GRID: iPad, Desktop
 @media only screen and (min-width:736px)  {
    .X-row {
       width:100%;
@@ -4931,7 +4909,7 @@ a.page-numbers  .icon-arrow-left:hover {
    .p90{width:90%;}
    .p100{width:90%;}
 
-}
+}*/
 
 
    /*--------------------------- PARENT GRID: grid-123 ---------------------------*/
@@ -7692,123 +7670,11 @@ h1.main,p.demos {
       .X-bigNums{
          text-align:center;
       }
-
-
    }
-
-   /* X-X-bigNums: Mobile Landscape*/
-   @media only screen and (min-width:481px) and (max-width : 736px) {
-
-   }
-
-   /* X-X-bigNums: Mobile Portrait*/
-   @media only screen and (min-width:0px) and (max-width : 481px) {
-
-   }
-
-
-
-
-   /*--------------------------- GRID: grid-123-b ---------------------------*/
-   /* One column for mobile portrait
-      Two columns for mobile landscape AND tablets
-      Three columns for desktop
-   */
-
-      /* grid-123 GRID: Desktop*/
-      @media only screen and (min-width:1024px) {
-         .grid-123-b .X-row {
-            width:100%;
-         }
-         .grid-123-b .X-col{
-            float:left;
-            clear:none;
-            display:inline;
-         }
-         .grid-123 .p10{ width:10%; }
-         .grid-123-b .p20{ width:20%; }
-         .grid-123-b .p25{ width:25%; }
-         .grid-123-b .p30{ width:30%; }
-         .grid-123-b .p33{ width:33.333333333%; }
-         .grid-123-b .p40{ width:40%; }
-         .grid-123-b .p50{ width:50%; }
-         .grid-123-b .p60{ width:60%; }
-         .grid-123-b .p70{ width:70%; }
-         .grid-123-b .p80{ width:80%; }
-         .grid-123-b .p90{ width:90%; }
-         .grid-123-b .p100{ width:100%; }
-      }
-
-
-   /* grid-123-b GRID: Mobile Landscape*/
-   @media only screen and (min-width:736px) and (max-width : 1024px) {
-          .grid-123-b .X-row {
-            width:100%;
-         }
-         .grid-123-b .X-col{
-            float:left;
-            clear:none;
-            display:inline;
-         }
-         .grid-123 .p10{ width:10%; }
-         .grid-123-b .p20{ width:20%; }
-         .grid-123-b .p25{ width:25%; }
-         .grid-123-b .p30{ width:30%; }
-         .grid-123-b .p33{ width:33.333333333%; }
-         .grid-123-b .p40{ width:40%; }
-         .grid-123-b .p50{ width:50%; }
-         .grid-123-b .p60{ width:60%; }
-         .grid-123-b .p70{ width:70%; }
-         .grid-123-b .p80{ width:80%; }
-         .grid-123-b .p90{ width:90%; }
-         .grid-123-b .p100{ width:100%; }
-   }
-
-
-
-   /* grid-123-b GRID: Mobile Landscape*/
-   @media only screen and (min-width:481px) and (max-width : 768px) {
-          .grid-123-b .X-row {
-            width:100%;
-         }
-         .grid-123-b .X-col{
-            float:left;
-            clear:none;
-            display:inline;
-         }
-         .grid-123-b .p10{ width:50%; }
-         .grid-123-b .p20{ width:50%; }
-         .grid-123-b .p25{ width:50%; }
-         .grid-123-b .p30{ width:50%; }
-         .grid-123-b .p33{ width:50%; }
-         .grid-123-b .p40{ width:50%; }
-         .grid-123-b .p50{ width:50%; }
-         .grid-123-b .p60{ width:50%; }
-         .grid-123-b .p70{ width:50%; }
-         .grid-123-b .p80{ width:50%; }
-         .grid-123-b .p90{ width:50%; }
-         .grid-123-b .p100{ width:50%; }
-   }
-
-   /* grid-123-b GRID: Mobile Portrait*/
-   @media only screen and (min-width:0px) and (max-width : 481px) {
-      .grid-123-b{
-         background-color:#fffff5;
-      }
-      .grid-123-b .X-row {
-         width:100%;
-      }
-      .grid-123-b .X-col{
-         width:100%;
-         clear:both;
-         display:block;
-      }
-   }
-
 
 
 .table{
-   display:block;;
+   display:block;
    width:100%;
 }
 
@@ -7825,9 +7691,6 @@ h1.main,p.demos {
    height:24rem;
    vertical-align:middle;
    overflow:hidden;
-
-
-
 }
    .color1{ background-color:#F37021; }
    .color2{ background-color:#084B81; }
@@ -8006,145 +7869,7 @@ h1.main,p.demos {
       color:#084B81;
       margin:0px;
       padding:0px;  text-transform:uppercase;
-
    }
-
-
-
-/* Font sizes for HD Desktop */
-@media only screen and (min-width:1920px)  {
-   /* FONT SIZE is in rems for old browsers that don't support vw (view window width) */
-   /* SPAN tags around text are used to move txt up or down, as required */
-   .table-cell{
-      /* EQUATION FOR DETERMINING BOX HEIGHT: .007991660875608 x + 8.65601111883251   where x is the screen width, 1920px in this case*/
-      height:24rem;
-   }
-   .table-cell-1-num { font-size:21rem; line-height:.75; }
-   .table-cell-1-num span{ position:relative;top:20px; }
-   .table-cell-2-num{ font-size:16rem; line-height:.8 }
-   .table-cell-3-num{ width:35% !important;display:table-cell; vertical-align:middle; font-size:29rem;line-height:.7; padding-left:4rem; }
-   .table-cell-3-num span{ position:relative;top:-26px }
-   .table-cell-4-num{ font-size:10.5rem; }
-   .table-cell-5-num{ font-size:16rem; line-height:.9 }
-   .table-cell-5-num span{ position:relative;top:-30px }
-   .table-cell-6-num{ font-size:12.5rem;letter-spacing:-2px; }
-   .table-cell-1-txt{ font-size:4rem; }
-   .table-cell-1-txt span{ position:relative;top:14px;}
-   .table-cell-2-txt{ font-size:3.8rem; }
-   .table-cell-3-txt{ width:65%; display:table-cell; vertical-align:middle; font-size:3.5rem; padding:2rem; padding-right:3rem; line-height:1.2;  }
-   .table-cell-4-txt{ font-size:3.5rem; }
-   .table-cell-5-txt{ font-size:2.65rem; }
-   .table-cell-5-txt span{ position:relative;top:-4px }
-   .table-cell-6-txt{ font-size:3.5rem; }
-}
-
-
-
-/* Font sizes for Desktop */
-/*  Proportionally decrease all fonts and padding by 33.33%. In other words, multiply numbers from the above breakpoint by 0.666666667 */
-@media only screen and (min-width:768px) and (max-width:1920px)  {
-   .table-cell{
-      height:18.9rem;
-   height:20vw;
-   }
-   .table-cell-1-num { font-size:14vw; line-height:.75; }
-   .table-cell-1-num span{ position:relative;top:-.65vw; }
-   .table-cell-2-num{ font-size:13vw; line-height:.8 }
-   .table-cell-3-num{ font-size:24vw;  padding-left:4vw; width:35% !important;display:table-cell; vertical-align:middle; ;line-height:.7; }
-   .table-cell-3-num span{ position:relative;top:-1.3vw }
-   .table-cell-4-num{ font-size:9vw; }
-   .table-cell-4-num span{ position:relative;top:-.5vw }
-   .table-cell-5-num{ font-size:12vw; line-height:.9 }
-   .table-cell-5-num span{ position:relative;top:-2vw }
-   .table-cell-6-num{ font-size:9vw; letter-spacing:-2px; }
-   .table-cell-6-num span{ position:relative;top:-1vw;}
-
-   .table-cell-1-txt{ font-size:3vw; }
-   .table-cell-1-txt span{ position:relative;top:-.5vw}
-   .table-cell-2-txt{ font-size:3vw;  }
-   .table-cell-3-txt{ font-size:2.7vw; padding-right:4vw; width:65%; display:table-cell; vertical-align:middle;line-height:1.2;  }
-   .table-cell-3-txt span{ position:relative;}
-   .table-cell-4-txt{font-size:3vw;  }
-   .table-cell-5-txt{ font-size:2vw;  }
-   .table-cell-5-txt span{ position:relative;top:-.3vw }
-   .table-cell-6-txt{ font-size:3vw;}
-   .table-cell-6-txt span{ position:relative; top:-.65vw;  }
-}
-
-
-   /* grid-123 GRID: Mobile Landscape*/
-@media only screen and (min-width:481px) and (max-width : 768px) {
-   /* FONT SIZE is in rems for old browsers that don't support vw (view window width) */
-   /* SPAN tags around text are used to move txt up or down, as required */
-   .table-cell{
-      height:12.5rem;
-      height:50vw;
-   }
-   .table-cell-1-num { font-size:8.05rem; font-size:20vw; line-height:.75; }
-   .table-cell-1-num span{ position:relative;top:-11.5px; }
-   .table-cell-2-num{ font-size:8rem; font-size:30vw; line-height:.8 }
-   .table-cell-3-num{ font-size:11.116666666rem; font-size:55vw; line-height:.7; display:block; width:100%; }
-   .table-cell-3-num span{ position:relative;top:-4vw; }
-   .table-cell-4-num{ font-size:4.025rem; font-size:14vw;  }
-   .table-cell-4-num span{ position:relative;top:-1vw; }
-   .table-cell-5-num{ font-size:5.2rem; font-size:14vw; line-height:.9 }
-   .table-cell-5-num span{ position:relative;top:-11.5px; top:-3vw}
-   .table-cell-6-num{ font-size:4.791666666rem; font-size:14vw; letter-spacing:-1px; }
-   .table-cell-6-num span{ position:relative;top:-7px }
-
-   .table-cell-1-txt{ font-size:1.533333334rem; font-size:5vw; }
-   .table-cell-1-txt span{ position:relative;top:-5.366666666px; }
-   .table-cell-2-txt{ font-size:2rem; font-size:10vw; }
-   .table-cell-3-txt{  font-size:1.341666666rem; font-size:3.65vw;  line-height:1.2;  display:block; width:90%;margin:0 auto; }
-   .table-cell-3-txt span{ position:relative; }
-
-
-   .table-cell-4-txt{ font-size:1.341666666rem; font-size:5.5vw; }
-
-   .table-cell-5-txt{ font-size:1.015833334rem;font-size:5.5vw;line-height:1.2  }
-   .table-cell-5-txt span{ position:relative;top:-1.5333525px }
-   .table-cell-6-txt{ font-size:1.3416475rem; }
-   .table-cell-6-txt span{ position:relative;top:-1.5333525px }
-
-
-
-
-         }
-
-   /* grid-123 GRID: Mobile Portrait*/
-@media only screen and (min-width:0px) and (max-width:481px)  {
-   /* FONT SIZE is in rems for old browsers that don't support vw (view window width) */
-   /* SPAN tags around text are used to move txt up or down, as required */
-   .table-cell{
-      height:12.5rem;
-      height:50vw;
-   }
-
-   .table-cell-1-num{ font-size:6.6375rem; font-size:40vw; line-height:.7;  }
-   .table-cell-1-num span{ position:relative;top:0px; }
-   .table-cell-2-num{ font-size:6.72875rem; font-size:40vw; line-height:.8;     }
-   .table-cell-3-num{ width:40%; display:table-cell; vertical-align:middle; font-size:13rem;  font-size:55vw; line-height:.7;    }
-   .table-cell-3-num span{ position:relative ;top:-15px; }
-   .table-cell-4-num{ font-size:5.625rem; font-size:22vw;  }
-   .table-cell-4-num span{ position:relative;top:-6px }
-   .table-cell-5-num{ font-size:4.385625rem; font-size:26vw;    }
-   .table-cell-5-num span{ position:relative; top:-11.5px }
-   .table-cell-6-num{ font-size:4rem; font-size:22vw;   }
-   .table-cell-6-num span{ position:relative; top:-7px }
-
-   .table-cell-1-txt{ font-size:1.8rem; font-size:10vw;     }
-   .table-cell-1-txt span{ position:relative; top:4px; }
-   .table-cell-2-txt{ font-size:10vw; }
-   .table-cell-2-txt span{ position:relative; top:-3px; }
-   .table-cell-3-txt{ width:60%; display:table-cell; vertical-align:middle; font-size:1.7rem; text-align:center; line-height:1.1; font-size:8.1vw; margin-right:.5rem; margin-left:.5rem; }
-   .table-cell-3-txt span{ position:relative;top:-2px; }
-   .table-cell-4-txt{ font-size:2rem;font-size:9vw;    }
-   .table-cell-5-txt{ font-size:1.3rem; font-size:7vw;   }
-   .table-cell-5-txt span{ position:relative;top:-1.5333525px }
-   .table-cell-6-txt{ font-size:1.8rem;  font-size:10vw; }
-   .table-cell-6-txt span{ position:relative;top:-1.5333525px }
-}
-
 
 
 /** DEPARTMENT FOOTER **/
@@ -8800,7 +8525,6 @@ h2.right-arrow  strong::before {
       color: #ffffff;
       font-size: 1rem;
       font-family: Gentona_Book;
-      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -8968,7 +8692,6 @@ h2.right-arrow  strong::before {
       font-size: 1rem;
       font-family: Gentona_Book;
       padding: 2rem;
-      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -9140,7 +8863,6 @@ h2.right-arrow  strong::before {
       font-size: 1rem;
       font-family: Gentona_Book;
       padding: 2rem;
-      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -9310,7 +9032,6 @@ h2.right-arrow  strong::before {
       font-size: 1rem;
       font-family: Gentona_Book;
       padding: 2rem;
-      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -9536,7 +9257,6 @@ h2.right-arrow  strong::before {
       font-size: 1rem;
       font-family: Gentona_Book;
       padding: 2rem;
-      margin-top: 1rem;
    }
    .footer-main-wrap{
       position: relative;
@@ -9950,12 +9670,12 @@ body {
   max-height: 514px !important;
 }
 
-.department-header .college h1,
-.department-header .college .access-focus {
+.header-clas .college h1,
+.header-clas .college .access-focus {
     color: white !important;
 }
 
-.department-header .strikeheader {
+.header-clas .strikeheader {
    font-size: 1.2rem;
    padding: 1rem 3.75rem 0;
    line-height: 1;
@@ -9972,11 +9692,11 @@ aside {
     border: 1px solid #F5F0DC;
 }
 
-.department-header .strikeheader a {
+.header-clas .strikeheader a {
   border: none;
 }
 
-.X-header.department-header .college a {
+.X-header.header-clas .college a {
   display: flex;
   position: relative;
   justify-content: center;
@@ -10004,6 +9724,58 @@ input[type="search"]::placeholder {
   color: #00337a;
 }
 
+/*================================
+*
+*
+* Header Styling - CLAS Home Page
+*
+*
+*=================================*/
+
+#header-clas-home h1 {
+  padding: 0;
+}
+
+#header-clas-home .icon-uflogo {
+    width: 5.063rem;
+    height: 5.063rem;
+}
+
+#header-clas-home .uf {
+    width: 5.063rem;
+    height: 5.063rem;
+}
+
+#header-clas-home .college a {
+    top: 0;
+}
+
+#header-clas-home .college-logo-desktop svg {
+    width: 34rem;
+    position: relative;
+    top: .2rem;
+}
+
+#header-clas-home .X-quickLinks {
+    padding: 1rem 0;
+    right: 5.6rem;
+}
+
+#header-clas-home .X-searchTrigger {
+    width: 5.8rem;
+    height: 5rem;
+}
+
+#header-clas-home .X-quickLinks:before {
+    padding: 1rem 0;
+    top: .8rem;
+}
+
+#header-clas-home .X-search-form-container.show-search-form {
+    height: 5.09rem;
+    right: 5.8rem !important;
+    padding: 0 1rem;
+}
 /*================================
 *
 *
@@ -10146,6 +9918,28 @@ h2.entry-title.home-hero-title {
     height: 100vh !important;
 }
 
+/*CLAS interior pages */
+.hero-container {
+  position: relative;
+}
+
+h2.entry-title.interior-page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0,51,122,.8);
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.featured-image-caption .wrap {
+    padding: 0 2rem 2rem;
+}
+
 /*================================
 *
 *
@@ -10181,6 +9975,11 @@ h2.entry-title.home-hero-title {
     margin-top: 0 !important;
     transform: translate(0,33%) !important;
   }
+
+  h2.entry-title.interior-page {
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+  }
 }
 
 @media (min-width: 1025px){
@@ -10200,7 +9999,7 @@ h2.entry-title.home-hero-title {
   }
 
   /*===== Header Styling ====== */
-  .X-header.department-header {
+  .X-header.header-clas {
     position: static;
     height: auto;
     margin-top: 0 !important;
@@ -10210,14 +10009,14 @@ h2.entry-title.home-hero-title {
       pointer-events: none;
   }
 
-  .department-header .X-quickLinks {
+  .header-clas .X-quickLinks {
       background-color: transparent;
       right: 4.6rem;
       padding: .69rem 0;
       font-size: 1.125rem;
   }
 
-  .department-header .X-quickLinks:before {
+  .header-clas .X-quickLinks:before {
       border-left: #4A90E2 2px solid;
       content: "";
       padding: 0.625rem 0;
@@ -10225,114 +10024,115 @@ h2.entry-title.home-hero-title {
       position: relative;
   }
 
-  .department-header .X-quickLinks.directory {
+  .header-clas .X-quickLinks.directory {
      right: 15.5rem;
   }
 
-  .department-header .X-quickLinks > div ul,
-  .department-header .X-quickLinks > div ul.open {
+  .header-clas .X-quickLinks > div ul,
+  .header-clas .X-quickLinks > div ul.open {
     display: none;
   }
 
-  .department-header .X-quickLinks:hover > div ul,
-  .department-header .X-quickLinks > div ul.open {
+  .header-clas .X-quickLinks:hover > div ul,
+  .header-clas .X-quickLinks > div ul.open {
     display: block ;
   }
 
-  .department-header .container_header_department {
+  .header-clas .container_header_department {
     display: flex !important;
     margin: 0 auto;
     flex-wrap: wrap;
     padding: .75rem 1.5rem;
   }
 
-  .department-header .container_header_department h1 {
+  .header-clas .container_header_department h1 {
     padding-left: 3rem !important;
   }
 
-  .department-header .strikeheader {
+  .header-clas .strikeheader {
     font-size: 2.5rem;
     padding: 0;
     font-family: Gentona_Bold;
     text-transform: uppercase;
   }
 
-  .department-header .X-menu {
+  .header-clas .X-menu,
+  .header-clas-emily .X-menu {
       min-width: 600px;
       background: #f7f4eb;
       height: auto !important;
   }
 
-  .department-header .X-menu nav > div > ul {
+  .header-clas .X-menu nav > div > ul {
     height: auto;
   }
 
-  .department-header .X-menu nav,
-  .department-header .X-menu nav > div > ul,
-  .department-header .X-menu nav > div > ul > li {
+  .header-clas .X-menu nav,
+  .header-clas .X-menu nav > div > ul,
+  .header-clas .X-menu nav > div > ul > li {
     background: transparent;
   }
 
-  .department-header .X-menu nav > div > ul > li > ul {
+  .header-clas .X-menu nav > div > ul > li > ul {
       top: auto;
       overflow-y: auto !important;
       background: #F7F4EB !important;
     	padding-bottom: 0;
   }
 
-  .department-header .sub-menu a {
+  .header-clas .sub-menu a {
     padding-bottom: 0 !important;
     font-size: 1rem !important;
     font-family: "Gentona_Book" !important;
   }
 
-  .department-header #site-navigation {
+  .header-clas #site-navigation {
     height: auto !important;
     flex: 1 0 100% !important;
   }
 
-  .department-header .college-logo-desktop svg {
+  .header-clas .college-logo-desktop svg {
       width: 20rem;
       position: relative;
       top: 0.2rem;
   }
 
-  .X-header.department-header .icon-uflogo {
+  .X-header.header-clas .icon-uflogo {
       width: 4.063rem;
       height: 4.063rem;
   }
 
-  .X-header.department-header .college {
+  .X-header.header-clas .college {
      height: 4.1rem;
      padding-left: 4.125rem;
   }
 
-  .X-header.department-header .college a {
+  .X-header.header-clas .college a {
     padding-left: 1rem;
     position: relative;
     top: .7rem;
     display: table-cell;
   }
 
-  .X-header.department-header .department {
+  .X-header.header-clas .department {
     height: auto;
   }
 
-  .department-header .X-menu nav > div > ul > li > a {
+  .header-clas .X-menu nav > div > ul > li > a {
     height: 2rem;
   }
 
-  .X-header.department-header .uf {
+  .X-header.header-clas .uf {
     width: 4.063rem;
     height: 4.063rem;
   }
 
-  .X-header.department-header .department .strikeheader,
-  .X-header.department-header .department a {
+  .X-header.header-clas .department .strikeheader,
+  .X-header.header-clas .department a {
     padding-left: 0;
   }
 
-  .department-header .strikeRight {
+  .header-clas .strikeRight {
     height: 2.813rem;
     position: relative;
     margin: 0;
@@ -10340,7 +10140,7 @@ h2.entry-title.home-hero-title {
     margin-right: 1rem;
   }
 
-  .department-header .strikeRight:after {
+  .header-clas .strikeRight:after {
     content: '';
     height: 30px;
     width: 2px;
@@ -10350,33 +10150,33 @@ h2.entry-title.home-hero-title {
     background-color: #F45A1D;
   }
 
-  .department-header .X-quickLinks #quicklinks a {
+  .header-clas .X-quickLinks #quicklinks a {
     padding-left: 1rem !important;
   }
 
-  .department-header .X-quickLinks > a:after {
+  .header-clas .X-quickLinks > a:after {
     content: "↓";
     display: block;
     color: #f45a1d;
   }
 
-  .department-header .X-quickLinks:hover > div ul,
-  .department-header .X-quickLinks > div ul.open {
+  .header-clas .X-quickLinks:hover > div ul,
+  .header-clas .X-quickLinks > div ul.open {
       right: 0;
       top: 3.8rem;
   }
 
-  .department-header .X-quickLinks div ul li a:focus,
-  .department-header .X-quickLinks div ul li a:hover {
+  .header-clas .X-quickLinks div ul li a:focus,
+  .header-clas .X-quickLinks div ul li a:hover {
     background-color: #1570CF;
     color: white;
   }
 
-  .department-header .menu-quicklinks-container a {
+  .header-clas .menu-quicklinks-container a {
     padding-left: 6.125rem !important;
   }
 
-  .department-header ul#top-menu {
+  .header-clas ul#top-menu {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -10384,33 +10184,33 @@ h2.entry-title.home-hero-title {
     top: .3rem;
   }
 
-  .department-header ul#top-menu a {
+  .header-clas ul#top-menu a {
     font-size: 1.063rem;
     font-family: "Quadon_Medium";
     text-transform: capitalize;
   }
 
-	.department-header #top-menu > li a {
+	.header-clas #top-menu > li a {
     padding-left: 0;
     letter-spacing: .5px;
   }
 
-	.department-header #top-menu > li {
+	.header-clas #top-menu > li {
     text-align: left;
     min-width: 50px;
     margin: 1rem 1.5rem;
 	}
 
-  .department-header #top-menu .sub-menu > li {
+  .header-clas #top-menu .sub-menu > li {
     margin-bottom: .5rem;
   }
 
-  .department-header #top-menu .sub-menu:last-child {
+  .header-clas #top-menu .sub-menu:last-child {
     padding-bottom: 1rem;
   }
 
   /* Search Form */
-  .department-header .X-searchTrigger {
+  .header-clas .X-searchTrigger {
     width: 4.8rem;
     height: 4rem;
     display: flex;
@@ -10419,7 +10219,7 @@ h2.entry-title.home-hero-title {
     background-color: #002346;
   }
 
-  .department-header .X-search-form-container {
+  .header-clas .X-search-form-container {
     top: 0;
     height: 2.8rem;
     width: 45rem;
@@ -10427,7 +10227,7 @@ h2.entry-title.home-hero-title {
     display: none;
 	}
 
-  .department-header .X-search-form-container.show-search-form {
+  .header-clas .X-search-form-container.show-search-form {
     top: 0;
     height: 4rem;
     width: 30rem;
@@ -10439,21 +10239,21 @@ h2.entry-title.home-hero-title {
     display: flex;
 	}
 
-  .department-header .X-search-form-container .search-form {
+  .header-clas .X-search-form-container .search-form {
     margin: 0;
     width: 100%;
 	}
 
-  .department-header .X-search-form-container .search-form .search-submit {
+  .header-clas .X-search-form-container .search-form .search-submit {
     top: .5rem;
 	}
 
-  .department-header .X-search-form-container.show-search-form input::placeholder {
+  .header-clas .X-search-form-container.show-search-form input::placeholder {
     color: white;
     font-size: 1.2rem;
   }
 
-  .department-header .icon-search-thin-open {
+  .header-clas .icon-search-thin-open {
     width: 1.875rem;
     height: 1.875rem;
   }
@@ -10493,41 +10293,40 @@ h2.entry-title.home-hero-title {
     display: initial !important;
   }
 
+  /*Make a Donation*/
+  .donation {
+    color: #fff;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    top: .5rem;
+    right: 16.0625rem;
+    width: 10.9375rem;
+    height: 3.0625rem;
+    font-family: Quadon_Medium;
+    font-size: 1.125rem;
+    text-align: left;
+    overflow: visible;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    /*Make a Donation*/
-    .donation {
-      color: #fff;
-      position: absolute;
-      padding: 0;
-      margin: 0;
-      bottom: 0;
-      top: .5rem;
-      right: 16.0625rem;
-      width: 10.9375rem;
-      height: 3.0625rem;
-      font-family: Quadon_Medium;
-      font-size: 1.125rem;
-      text-align: left;
-      overflow: visible;
-      z-index: 200;
+  .donation a {
+      color: white;
+      height: 100%;
+      width: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
-    }
+      justify-content: center;
+      transition: .2s;
+  }
 
-    .donation a {
-        color: white;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: .2s;
-    }
-
-    span.gift-icon {
-        flex: 1 100%;
-        max-width: 2.5rem;
-        padding-left: 1rem;
-    }
+  span.gift-icon {
+      flex: 1 100%;
+      max-width: 2.5rem;
+      padding-left: 1rem;
+  }
 }
