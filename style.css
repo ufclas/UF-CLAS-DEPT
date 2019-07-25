@@ -3861,10 +3861,6 @@ a.page-numbers  .icon-arrow-left:hover {
       clear:both;
 
    }
-
-
-
-
     .panel-image  {
       display:block;
       clear: both;
@@ -3909,17 +3905,10 @@ a.page-numbers  .icon-arrow-left:hover {
 
 /* BREAK POINTS FOR POST NAVIGATION */
 @media only screen and (min-width:0px) and (max-width : 736px) {
-
    .nav-links{
       width:100%;
    }
 }
-
-
-
-
-
-
 
 /* Add margins to compensate for the FIXED branding header (X-header) */
 
@@ -9929,45 +9918,26 @@ h2.entry-title.home-hero-title {
     height: 100vh !important;
 }
 
-/*===================================
-*
-*
-* CLAS Home Page Styling
-*
-*
-*=================================*/
-
-#clas-featured-container {
-    display: flex;
-    flex-wrap: wrap;
-    border-top: 35px solid #5789B7;
+/*CLAS interior pages */
+.hero-container {
+  position: relative;
 }
 
-.clas-featured-section {
-    background: #f7f4eb;
-}
-
-.clas-featured-title {
-    padding: 0 1rem;
-}
-
-.clas-featured-title h3 {
-    font-family: Quadon_Medium;
-}
-
-#page .clas-featured-text p {
-  font-family: Gentona_Book !important;
-  margin-bottom: 1rem;
-}
-
-#page a.featured-link {
-  font-family: Gentona_ExtraBold!important;
+h2.entry-title.interior-page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0,51,122,.8);
+  color: white;
   text-transform: uppercase;
-  color: #00337A;
+  font-size: 2rem;
+  letter-spacing: 3px;
 }
 
-.clas-featured-text {
-    padding: 0 1rem 3rem;
+.featured-image-caption .wrap {
+    padding: 0 2rem 2rem;
 }
 
 /*================================
@@ -10006,9 +9976,9 @@ h2.entry-title.home-hero-title {
     transform: translate(0,33%) !important;
   }
 
-  /* CLAS Home Page*/
-  .widget_text.clas-featured-stories {
-    flex: 50% 0;
+  h2.entry-title.interior-page {
+    font-size: 3.5rem;
+    letter-spacing: 6px;
   }
 }
 
@@ -10288,20 +10258,6 @@ h2.entry-title.home-hero-title {
     height: 1.875rem;
   }
 
-  #header-clas-home .college {
-      height: auto;
-      padding: 1.125rem 0 1.125rem 5.125rem;
-  }
-
-
-  #header-clas-home #top-menu>li {
-    margin: 0 1.5rem;
-  }
-
-  #header-clas-home .X-menu nav > div > ul {
-    padding-left: 3rem;
-  }
-
 	/*======= Home Hero Image ======= */
   /* Height of hero image */
 	.single-featured-image-header img {
@@ -10335,33 +10291,6 @@ h2.entry-title.home-hero-title {
 
   .home-hero-container:hover .slideshow_button {
     display: initial !important;
-  }
-
-  /* CLAS Home Page */
-
-  .widget_text.clas-featured-stories {
-    flex: 1 0;
-  }
-
-  .clas-featured-image {
-    position: relative;
-  }
-
-  .clas-featured-title {
-      position: absolute;
-      bottom: 4px;
-      text-align: center;
-      left: 0;
-      right: 0;
-      background: #00346ca3;
-  }
-
-  .clas-featured-title h3 {
-    font-size: 1.625rem;
-  }
-
-  .clas-featured-title h3 {
-      color: white;
   }
 
   /*Make a Donation*/
