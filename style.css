@@ -9862,6 +9862,10 @@ h2.entry-title.home-hero-title {
 	  text-align: left !important;
 }
 
+#page .slideshow_description a {
+    font-family: Quadon_Bold !important;
+}
+
 .home-hero-container .slideshow_container a {
     height: 100%;
 }
