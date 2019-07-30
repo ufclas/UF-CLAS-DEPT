@@ -9862,6 +9862,10 @@ h2.entry-title.home-hero-title {
 	  text-align: left !important;
 }
 
+#page .slideshow_description a {
+    font-family: Quadon_Bold !important;
+}
+
 .home-hero-container .slideshow_container a {
     height: 100%;
 }
@@ -10207,6 +10211,23 @@ h2.entry-title.interior-page {
 
   .header-clas #top-menu .sub-menu:last-child {
     padding-bottom: 1rem;
+  }
+
+  /* CSS fix for IE issue where submenu remained open when going back */
+  .open .sub-menu {
+    display: none;
+  }
+
+  .open:hover .sub-menu {
+    display: block;
+  }
+
+  .X-menu nav > div > ul > li.open span::after {
+    visibility: hidden;
+  }
+
+  .X-menu nav > div > ul > li.open:hover span::after {
+    visibility: visible;
   }
 
   /* Search Form */
