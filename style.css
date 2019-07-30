@@ -10213,6 +10213,23 @@ h2.entry-title.interior-page {
     padding-bottom: 1rem;
   }
 
+  /* CSS fix for IE issue where submenu remained open when going back */
+  .open .sub-menu {
+    display: none;
+  }
+
+  .open:hover .sub-menu {
+    display: block;
+  }
+
+  .X-menu nav > div > ul > li.open span::after {
+    visibility: hidden;
+  }
+
+  .X-menu nav > div > ul > li.open:hover span::after {
+    visibility: visible;
+  }
+
   /* Search Form */
   .header-clas .X-searchTrigger {
     width: 4.8rem;
