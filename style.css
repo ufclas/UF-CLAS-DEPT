@@ -9922,6 +9922,11 @@ h2.entry-title.interior-page {
      font-size: 4rem;
    }
 
+   /* IE hack to move slider caption up*/
+    :-ms-lang(x), #page .home-hero-container .slideshow_content .slideshow_description_box.slideshow_transparent {
+      top: -18rem !important;
+    }
+
   .single-featured-image-header img {
     max-height: 21.875rem;
     height: 100%;
