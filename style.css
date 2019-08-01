@@ -9966,6 +9966,13 @@ h2.entry-title.interior-page {
     color: transparent;
   }
 
+  /* IE hack to make text white*/
+   :-ms-lang(x), h2.entry-title.home-hero-title {
+     color: white;
+     padding: 0 0 4rem 5%;
+     font-size: 4rem;
+   }
+
   .single-featured-image-header img {
     max-height: 21.875rem;
     height: 100%;
@@ -10293,7 +10300,6 @@ h2.entry-title.interior-page {
 
   h2.entry-title.home-hero-title {
     font-size: 5rem;
-    bottom: 6rem;
     max-width: 1450px;
     top: 0;
     bottom: 3rem;
