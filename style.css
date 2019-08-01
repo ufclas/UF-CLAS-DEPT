@@ -9732,58 +9732,6 @@ input[type="search"]::placeholder {
 /*================================
 *
 *
-* Header Styling - CLAS Home Page
-*
-*
-*=================================*/
-
-#header-clas-home h1 {
-  padding: 0;
-}
-
-#header-clas-home .icon-uflogo {
-    width: 5.063rem;
-    height: 5.063rem;
-}
-
-#header-clas-home .uf {
-    width: 5.063rem;
-    height: 5.063rem;
-}
-
-#header-clas-home .college a {
-    top: 0;
-}
-
-#header-clas-home .college-logo-desktop svg {
-    width: 34rem;
-    position: relative;
-    top: .2rem;
-}
-
-#header-clas-home .X-quickLinks {
-    padding: 1rem 0;
-    right: 5.6rem;
-}
-
-#header-clas-home .X-searchTrigger {
-    width: 5.8rem;
-    height: 5rem;
-}
-
-#header-clas-home .X-quickLinks:before {
-    padding: 1rem 0;
-    top: .8rem;
-}
-
-#header-clas-home .X-search-form-container.show-search-form {
-    height: 5.09rem;
-    right: 5.8rem !important;
-    padding: 0 1rem;
-}
-/*================================
-*
-*
 * Home Page Styling
 *
 *
@@ -9900,6 +9848,7 @@ h2.entry-title.home-hero-title {
 
 #page .home-hero-container .slideshow_content .slideshow_description_box.slideshow_transparent {
     position: relative !important;
+    top: -15rem !important;
 }
 
 #page .slideshow_container .slideshow_view .slideshow_slide {
@@ -9965,6 +9914,13 @@ h2.entry-title.interior-page {
     -webkit-text-stroke-color: white;
     color: transparent;
   }
+
+  /* IE hack to make text white*/
+   :-ms-lang(x), h2.entry-title.home-hero-title {
+     color: white;
+     padding: 0 0 4rem 5%;
+     font-size: 4rem;
+   }
 
   .single-featured-image-header img {
     max-height: 21.875rem;
@@ -10293,7 +10249,6 @@ h2.entry-title.interior-page {
 
   h2.entry-title.home-hero-title {
     font-size: 5rem;
-    bottom: 6rem;
     max-width: 1450px;
     top: 0;
     bottom: 3rem;
