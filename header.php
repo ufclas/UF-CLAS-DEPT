@@ -35,7 +35,7 @@
 		$blog_id = get_current_blog_id();
 
 		//These are the site IDs for the CLAS website. 222 = Test server, 232 = Production server.
-		$clasID = array(222, 232, 247);
+		$clasID = array(232, 247);
 
 		//232 is the ID for the CLAS Home Page - Efren Vasquez
 		if( in_array($blog_id, $clasID) ){
