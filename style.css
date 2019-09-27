@@ -1321,6 +1321,7 @@ figcaption{
         font-size:2rem;
         background-color:transparent;
         line-height:1;
+        -webkit-appearance: none;
     }
    .X-searchBox .search-form label{
       color:#fcfcfc !important;
@@ -2059,6 +2060,7 @@ figcaption{
         font-size:2rem;
         background-color:transparent;
         line-height:1;
+        -webkit-appearance: none;
     }
    .X-searchBox .search-form label{
       color:#fcfcfc !important;
