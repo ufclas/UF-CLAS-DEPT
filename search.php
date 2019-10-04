@@ -6,21 +6,35 @@
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
     <div class="wrap">
-       <?php get_search_form(); ?>
-
-      <h2>Search results for '<?php echo $searchfor; ?>'</h2>
-      <?php
+       <?php
+        get_search_form();
         $key_searchTerm        = strtolower($searchfor);
         $length_searchTerm     = strlen($key_searchTerm);
         $key_searchTerm_marked = "<span class=\"bold\">".$key_searchTerm."</span>";
         $key_bold_open         = "<span class=\"bold\">";
         $key_bold_close        = "</span>";
         $length_key_bold_open  = strlen($key_bold_open);
-       ?>
 
-       <h2><?php bloginfo(); ?></h2>
+        // Search results for [the searched term] on [this site]
+        // isolate the Site title to avoid using bloginfo();
+        echo "<h2>";
+          foreach (get_sites() as $boo => $baz) {
+             foreach ($baz as $one => $two) {
+               if ($one == "blog_id" && $two == $pageID) {
+                 foreach ($baz as $one => $two) {
+                   if ($one == "path") {
+                     $url       = $two;
+                     $url_array = explode("/", $url);
+                     $link      = array_pop($url_array);
+                     $siteTitle = ucfirst(end($url_array));
+                     echo "Search results for {$searchfor} on {$siteTitle}";
+                   }
+                 }
+               }
+             }
+          }
+         echo "</h2>";
 
-      <?php
         if (have_posts()) {
           while (have_posts()) {  the_post();
           echo "<h3><a href=\"";
@@ -30,13 +44,14 @@
           echo "</a></h3>";
           $value_title          = strtolower(get_the_title());
           $full_content         = get_the_content();
+          $full_content         = wp_strip_all_tags($full_content);
           $value_content        = strtolower($full_content);
           $length_value_content = strlen($value_content);
           $position_title       = strpos($value_title, $key_searchTerm);
           $position_value       = strpos($value_content, $key_searchTerm);
-          $starting_positions = array();
-          $middle_positions   = array();
-          $ending_positions   = array();
+          $starting_positions   = array();
+          $middle_positions     = array();
+          $ending_positions     = array();
 
 
           // if a matching value exists ANYWHERE in the content (it separates by () later)
@@ -166,8 +181,6 @@
           restore_current_blog(); // Reset settings to the current blog
         } // ALEX | Omit current page
       endforeach;
-
-
       ?>
     </div>
   </main>
