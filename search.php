@@ -14,6 +14,7 @@
         $key_bold_open         = "<span class=\"bold\">";
         $key_bold_close        = "</span>";
         $length_key_bold_open  = strlen($key_bold_open);
+        $pageID                = $_GET['pageID'];
 
         // Search results for [the searched term] on [this site]
         // isolate the Site title to avoid using bloginfo();
