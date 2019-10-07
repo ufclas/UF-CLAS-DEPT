@@ -28,7 +28,7 @@
                      $url_array = explode("/", $url);
                      $link      = array_pop($url_array);
                      $siteTitle = ucfirst(end($url_array));
-                     echo "Search results for {$searchfor} on {$siteTitle}";
+                     echo "Search results for \"{$searchfor}\" on {$siteTitle}";
                    }
                  }
                }
@@ -157,11 +157,10 @@
       /* ********* begin OTHER SITES loop ********* */
 
       $query_string = esc_attr($query_string); // Escaping search queries to eliminate potential MySQL-injections
-      $blogs = get_blog_list( 0,'all' ); //https://codex.wordpress.org/WPMU_Functions/get_blog_list
 
-      foreach ( $blogs as $blog ):
-        if ($blog['blog_id'] != $_GET['pageID']) {
-          switch_to_blog($blog['blog_id']); //https://codex.wordpress.org/Function_Reference/switch_to_blog
+      foreach ( get_sites() as $blog ):
+        if ($blog->id != $_GET['pageID']) {
+          switch_to_blog($blog->id); //https://codex.wordpress.org/Function_Reference/switch_to_blog
           $search = new WP_Query($query_string);
           $count_site_name = 0;
           if ($search->found_posts > 0) {
@@ -173,7 +172,7 @@
                 <?php
                 $count_site_name++;
                 if ($count_site_name < 2) { ?>
-                  <h2><a href='<?php echo bloginfo('url') . "/?s=$searchfor"; ?>'><?php echo get_bloginfo('name'); ?> (<?php echo $search->found_posts; ?>)</a></h2>
+                  <h2><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> (<?php echo $search->found_posts; ?>)</a></h2>
                 <?php } ?>
               </div><!-- post something -->
               <?php
@@ -182,6 +181,8 @@
           restore_current_blog(); // Reset settings to the current blog
         } // ALEX | Omit current page
       endforeach;
+
+
       ?>
     </div>
   </main>
