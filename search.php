@@ -168,13 +168,13 @@
               setup_postdata($post);
               $author_data = get_userdata(get_the_author_meta('ID'));
               ?>
-              <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <?php
                 $count_site_name++;
                 if ($count_site_name < 2) { ?>
-                  <h2><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number">(<?php echo $search->found_posts; ?>)</span></a></h2>
+                  <div class="container-other-sites">
+                    <h2><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number">(<?php echo $search->found_posts; ?>)</span></a></h2>
+                  </div>
                 <?php } ?>
-              </div><!-- post something -->
               <?php
             }
           }
