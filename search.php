@@ -172,7 +172,7 @@
                 <?php
                 $count_site_name++;
                 if ($count_site_name < 2) { ?>
-                  <h2><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> (<?php echo $search->found_posts; ?>)</a></h2>
+                  <h2><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number">(<?php echo $search->found_posts; ?>)</span></a></h2>
                 <?php } ?>
               </div><!-- post something -->
               <?php
