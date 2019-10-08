@@ -5,6 +5,7 @@
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
+    <div class="entry-content">
     <div class="wrap search-page">
        <?php
         get_search_form();
@@ -141,24 +142,26 @@
             } // master WHILE loop ********* END, END , END *********
           } else {
            echo "<p>Sorry nothing was found</p>";
-          }
-
-          // control pagination
-          global $wp_query;
-          $big = 999999999; // need an unlikely integer
-          echo paginate_links(
-            array(
-              'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-              'format'  => '?paged=%#%',
-              'current' => max( 1, get_query_var('paged') ),
-              'total'   => $wp_query->max_num_pages
-            )
-          ); ?>
-
+         }?>
+         <div class="search-pagination">
+           <?php
+            // control pagination
+            global $wp_query;
+            $big = 999999999; // need an unlikely integer
+            echo paginate_links(
+              array(
+                'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                'format'  => '?paged=%#%',
+                'current' => max( 1, get_query_var('paged') ),
+                'total'   => $wp_query->max_num_pages
+              )
+            ); ?>
+          </div>
         </div>
 
+
         <div class="container-other-sites">
-          <h2>Your search term was also found on the following CLAS websites</h2>
+          <h2>Your term "<?php echo $searchfor; ?>" was also found on the following CLAS websites</h2>
           <p>Click on a link below to view search results</p>
           <?php
           /* ********* begin OTHER SITES loop ********* */
@@ -179,7 +182,7 @@
                     $count_site_name++;
                     if ($count_site_name < 2) { ?>
                       <div class="container-other-sites-single">
-                        <h3><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number" title="Number of results in other websites">(<?php echo $search->found_posts; ?>)</span></a></h3>
+                        <ul><li><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number" title="Number of results in other websites">(<?php echo $search->found_posts; ?>)</span></a></li></ul>
                       </div>
                     <?php } ?>
                   <?php
