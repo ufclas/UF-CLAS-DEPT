@@ -5,7 +5,7 @@
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
-    <div class="wrap">
+    <div class="wrap search-page">
        <?php
         get_search_form();
         $key_searchTerm        = strtolower($searchfor);
