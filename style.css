@@ -9900,6 +9900,65 @@ h2.entry-title.interior-page {
 /*================================
 *
 *
+* Search Page
+*
+*
+=================================*/
+
+.wrap.search-page h2 {
+    font-family: "Gentona_Book", sans-serif;
+    font-size: 1.6rem;
+}
+
+#page .container-current-site h3 a {
+    font-family: "Quadon_Light" !important;
+    font-size: 1.3rem;
+    color: #1570CF;
+}
+
+#page .container-other-sites-single li a {
+    font-family: "Quadon_Light" !important;
+    font-size: 1.125rem;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #1570CF;
+    text-transform: capitalize;
+}
+
+#page .container-other-sites-single h3 {
+    padding: 0;
+}
+
+#page .search-page {
+    font-family: "Surveyor Text A" !important;
+}
+
+.container-other-sites {
+    background: #FFFFF5;
+    padding: 2rem;
+    margin: 4rem 0 0;
+    border: 1px solid #F7F4EB;
+}
+
+.results-number {
+    color: #666666;
+    font-weight: bold;
+    font-family: "Quadon_Bold" !important;
+}
+
+.search-pagination {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#page .search-pagination .current {
+    background: #00285e;
+    color: #fff;
+}
+
+/*================================
+*
+*
 * Media Queries
 *
 *
