@@ -181,7 +181,8 @@
                   ?>
                     <?php
                     $count_site_name++;
-                    if ($count_site_name < 2) { ?>
+                    if ($count_site_name < 2) {
+                      $print_name = false; ?>
                       <div class="container-other-sites-single">
                         <ul><li><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number" title="Number of results in other websites">(<?php echo $search->found_posts; ?>)</span></a></li></ul>
                       </div>
