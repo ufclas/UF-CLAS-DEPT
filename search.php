@@ -46,6 +46,7 @@
               echo "\">";
               the_title();
               echo "</a></h3>";
+              remove_filter( 'the_content', 'do_shortcode', 11 );
               $value_title          = strtolower(get_the_title());
               $full_content         = get_the_content();
               $full_content         = wp_strip_all_tags($full_content);
