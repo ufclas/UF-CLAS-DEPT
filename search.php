@@ -166,7 +166,6 @@
           <p>Click on a link below to view search results</p>
           <?php
           /* ********* begin OTHER SITES loop ********* */
-          global $table;
 
           $query_string = esc_attr($query_string); // Escaping search queries to eliminate potential MySQL-injections
 
@@ -177,8 +176,6 @@
               $count_site_name = 0;
               if ($search->found_posts > 0) {
                 foreach ( $search->posts as $post ) {
-                  setup_postdata($post);
-                  $author_data = get_userdata(get_the_author_meta('ID'));
                   ?>
                     <?php
                     $count_site_name++;
