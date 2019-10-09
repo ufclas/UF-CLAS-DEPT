@@ -183,7 +183,7 @@
                     $count_site_name++;
                     if ($count_site_name < 2) { ?>
                       <div class="container-other-sites-single">
-                        <ul><li><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number" title="Number of results in other websites">(<?php echo $search->found_posts; ?>)</span></a></li></ul>
+                        <ul><li><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number" title="Number of results in other websites">(<?php echo $search->found_posts; ?> results found)</span></a></li></ul>
                       </div>
                     <?php } ?>
                   <?php

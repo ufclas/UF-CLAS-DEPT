@@ -9941,9 +9941,9 @@ h2.entry-title.interior-page {
 }
 
 .results-number {
-    color: #666666;
-    font-weight: bold;
-    font-family: "Quadon_Bold" !important;
+    color: #666;
+    font-family: Quadon_Light !important;
+    font-style: italic;
 }
 
 .search-pagination {
