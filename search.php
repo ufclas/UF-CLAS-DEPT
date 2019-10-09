@@ -28,7 +28,8 @@
                      $url       = $two;
                      $url_array = explode("/", $url);
                      $link      = array_pop($url_array);
-                     $siteTitle = ucfirst(end($url_array));
+                     $siteTitle = strtolower(get_bloginfo('name'));
+                     $siteTitle = ucwords($siteTitle);
                      echo "Search results for \"{$searchfor}\" on {$siteTitle}";
                    }
                  }
