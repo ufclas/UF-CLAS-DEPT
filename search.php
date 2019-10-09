@@ -166,7 +166,7 @@
           <p>Click on a link below to view search results</p>
           <?php
           /* ********* begin OTHER SITES loop ********* */
-          global $print_name;
+          global $table;
 
           $query_string = esc_attr($query_string); // Escaping search queries to eliminate potential MySQL-injections
 
