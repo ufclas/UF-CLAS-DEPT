@@ -166,6 +166,7 @@
           <p>Click on a link below to view search results</p>
           <?php
           /* ********* begin OTHER SITES loop ********* */
+          $global $print_name;
 
           $query_string = esc_attr($query_string); // Escaping search queries to eliminate potential MySQL-injections
 
@@ -181,8 +182,7 @@
                   ?>
                     <?php
                     $count_site_name++;
-                    if ($count_site_name < 2) {
-                      $print_name = false; ?>
+                    if ($count_site_name < 2) { ?>
                       <div class="container-other-sites-single">
                         <ul><li><a href='<?php echo bloginfo('url') . "/?s={$searchfor}&pageID=" . $blog->id; ?>'><?php echo get_bloginfo('name'); ?> <span class="results-number" title="Number of results in other websites">(<?php echo $search->found_posts; ?>)</span></a></li></ul>
                       </div>
