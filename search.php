@@ -48,9 +48,8 @@
               echo "</a></h3>";
               remove_filter( 'the_content', 'do_shortcode', 11 );
               $value_title          = strtolower(get_the_title());
-              $full_content         = get_the_content();
+              $full_content         = strip_shortcodes(get_the_content());
               $full_content         = wp_strip_all_tags($full_content);
-              $full_content         = strip_shortcodes($full_content);
               $value_content        = strtolower($full_content);
               $length_value_content = strlen($value_content);
               $position_title       = strpos($value_title, $key_searchTerm);
