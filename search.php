@@ -46,9 +46,8 @@
               echo "\">";
               the_title();
               echo "</a></h3>";
-              remove_filter( 'the_content', 'do_shortcode', 11 );
               $value_title          = strtolower(get_the_title());
-              $full_content         = strip_shortcodes(get_the_content());
+              $full_content         = get_the_content();
               $full_content         = wp_strip_all_tags($full_content);
               $value_content        = strtolower($full_content);
               $length_value_content = strlen($value_content);
@@ -177,6 +176,8 @@
               $count_site_name = 0;
               if ($search->found_posts > 0) {
                 foreach ( $search->posts as $post ) {
+                  setup_postdata($post);
+                  $author_data = get_userdata(get_the_author_meta('ID'));
                   ?>
                     <?php
                     $count_site_name++;
