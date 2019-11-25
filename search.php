@@ -332,12 +332,7 @@
             echo "</div><!-- end Other Sites Container -->";
           }
       } else {
-        echo "Did you know your search was empty?<br><br>Want a Sitemap?<br><br>
-        <img src=\"https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-0/p640x640/70883715_10219533857234224_1153181436027600896_o.jpg?_nc_cat=109&_nc_oc=AQnlqX8NG9eOnJErOl1bHHmlklMRiErKdMOWhLekEjFbHXw2FD9EfUfSwXUApaMiJK0&_nc_ht=scontent-mia3-2.xx&oh=8d0a99770929db728723c53f444965a6&oe=5E4813B8\">
-        <br>
-        <figcaption>photo by Efren Vasquez</figcaption>
-        <hr>
-        ";
+        echo "<p>Did you know your search was empty? Please try your search again.</p>";
       }
       ?>
     </div>
