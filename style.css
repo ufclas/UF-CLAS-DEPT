@@ -478,13 +478,11 @@
      /* Row Three --- MENU */
      .X-header .X-menu{
        display: block;
-       height: 3.75rem;/* fallback */
        overflow: visible;
        top:6.875rem;/* fallback */
        width: 100%;
        height: 100vh;
        visibility:none;
-       height: 2.5rem;
        overflow: visible;
        top:3.75rem;
        right:-4000px;
@@ -610,6 +608,8 @@
        padding: 0  0  0 1rem;
        margin:0px;
        padding-bottom: 2rem;
+       max-width: 100%;
+       width: 100%;
      }
 
      .js .menu-toggle {
@@ -629,14 +629,14 @@
      /* SHOW Sub Menu (min-width:0px) and (max-width : 767px) */
      .X-menu nav .menu .menu-item-has-children.open > .sub-menu {
        display: block;
-       position: absolute;
+       position: relative;
        opacity: 1;
        visibility: visible;
        transition: all .8s ease 0s;
        z-index: 10;
        background: #fffdf5;
-       width: max-content;
-       max-width: 300px;
+       width: 100%;
+       max-width: 100%;
      }
 
 
@@ -762,11 +762,9 @@
          }
            .footer-menu ul {
               display: none;
+              margin: 0;
            }
-        .footer-menu ul {
-           display: none;
-           margin: 0;
-        }
+
          .footer-menu ul li {
            margin: 0;
            text-transform: uppercase;
@@ -844,7 +842,7 @@
             display:block;
             clear:both;
             width: 100%;
-            max-width: 832px;
+            max-width: 1023px;
             margin: 0 auto;
           }
 
@@ -879,7 +877,7 @@
             display:block;
             clear:both;
             width: 100%;
-            max-width: 832px;
+            max-width: 1023px;
           }
 
           .post-template-single-right-sidebar #secondary, .page-template-single-right-sidebar #secondary{
@@ -902,7 +900,7 @@
             display:block;
             clear:both;
             width: 100%;
-            max-width: 832px;
+            max-width: 1023px;
           }
 
           .post-template-single-left-sidebar #secondary, .page-template-single-left-sidebar #secondary{
@@ -1153,14 +1151,14 @@
      margin: 0 auto;
      display:block;
      text-align:center;
- clear: both;
- display: block;
- margin-left: auto;
- margin-right: auto;
- padding-top: 1.25rem;
- padding-bottom: 1.25rem;
-    width:100% !important;
+     clear: both;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     padding-top: 1.25rem;
+     padding-bottom: 1.25rem;
   }
+
   .profile-picture{
      width:100%;
      padding-bottom:1rem;
@@ -1288,11 +1286,9 @@
     }
       .footer-menu ul {
          display: none;
+        margin: 0;
       }
-   .footer-menu ul {
-      display: none;
-      margin: 0;
-   }
+
     .footer-menu ul li {
       margin: 0;
       text-transform: uppercase;
@@ -2090,7 +2086,7 @@ svg {
    }
 .alignleft {
 	display: inline;
-	float: left;
+	float: none;
 	margin-right: 1.5em;
 
 	margin-top: 1rem;
@@ -2252,11 +2248,6 @@ figcaption{
       cursor: pointer;
    }
 
-.sticky {
-    top: 0;
-    position: fixed;
-}
-
 
 
 
@@ -2279,13 +2270,13 @@ figcaption{
 /* ALIGENMENTS */
 .alignleft {
 	display: inline;
-	float: left;
+	float: none;
 	margin-right: 1.5em;
 }
 
 .alignright {
 	display: inline;
-	float: right;
+	float: none;
 	margin-left: 1.5em;
 }
 
@@ -4229,9 +4220,6 @@ h2.right-arrow  {
 
 h2 strong {
     font-family: 'Gentona_Bold',Arial,sans-serif;
-    border-width: 4px;
-    border-style: solid;
-    border-color: #d66629;
     padding: 0 .25em;
     color: #d66629;
     font-size: 80%;
@@ -4368,20 +4356,19 @@ h2.right-arrow  strong::before {
       background-color: #004083;
       font-size:1rem;
       color: #ffffff;
+      float: left;
    }
 
    .footer-uf-wrap{
       width: 100%;
       max-width: 1950px;
       margin: 0 auto;
-      display: table;
    }
 
 .footer-uf-col-1{
    position: relative;
-   float: left;
    vertical-align: middle;
-   width: 80%;
+   width: 100%;
 }
    .bottom-links,  .bottom-links p ,  .bottom-links p a {
       font-family: Gentona_Book;
@@ -4391,9 +4378,9 @@ h2.right-arrow  strong::before {
 
 .footer-uf-col-2{
    position: relative;
-   float: left;
-   width: 20%;
+   width: 100%;
    vertical-align: middle;
+   margin-top: 2rem;
 }
 
    .footer-icon-uf{
@@ -4406,7 +4393,6 @@ h2.right-arrow  strong::before {
 
 
 .footer-uf-campaign-logo {
-   float: right;
    text-align: right;
    vertical-align: middle;
 }
@@ -4444,7 +4430,7 @@ body {
 }
 
 .home p {
-    font-family: "Gentona_Book" !important;
+    font-family: "Gentona_Book";
   	color: #414141;
 }
 
@@ -4507,9 +4493,7 @@ input {
 }
 
 aside {
-    background: #FFFFF5;
     padding: 1rem;
-    border: 1px solid #F5F0DC;
 }
 
 .header-clas .strikeheader a {
@@ -4802,20 +4786,20 @@ h2.entry-title.interior-page {
 @media (min-width: 768px){
 
    .footer-uf-col-1{
-      width: 100%;
-      max-width: 100%;
+      width: 70%;
       text-align: center;
+      float: left;
    }
 
    .footer-uf-col-2{
-      width: 100%;
-      max-width: 100%;
+      float: left;
+      width: 30%;
+      margin-top: 0;
    }
 
    .footer-uf-campaign-logo {
       float: none;
       text-align: center;
-      padding: 1rem 0;
    }
 
 
@@ -4973,10 +4957,6 @@ h2.entry-title.interior-page {
            color: #ffffff;
          }
 
-         .fixedPosition {
-           position: fixed;
-         }
-
 /* START HERE */
 
          li.menu-item-has-children > ul {
@@ -4993,51 +4973,19 @@ h2.entry-title.interior-page {
            border: 0;
          }
 
+         img.alignleft,
+         .alignleft {
+           float: left;
+           margin-right: 1.5rem;
+         }
+
+         img.alignright,
+         .alignright {
+           float: right;
+           margin-left: 1.5rem;
+         }
+
          /*__________________STRUCTURE__________________*/
-
-
-            .footer-main-wrap{
-              text-align: center;
-            }
-
-            .footer-main-col-1,
-            .footer-main-col-3 {
-               width: 50%;
-               float: none;
-               display: inline-block;
-               vertical-align: middle;
-               margin: 0;
-               padding: 0;
-               text-align: center;
-            }
-            .footer-main-col-2{
-               width: 50%;
-               float: none;
-               display: inline-block;
-               vertical-align: top;
-               margin: 0;
-               padding: 0 0 0 2rem;
-            }
-
-               .footer-main-sub-col-1{
-                  width: 30%;
-                  display: inline-block;
-                  padding: 1rem 1rem 1rem 0;
-               }
-               .footer-main-sub-col-2{
-                  width: 30%;
-                  display: inline-block;
-               }
-               .footer-main-sub-col-3{
-                  width: 30%;
-                  display: inline-block;
-                  padding: 1rem 0 1rem 1rem;
-               }
-
-               .footer-menu ul {
-                 display: block;
-               }
-
 
 
            .footer-menu.open h2 .icon-caret {
@@ -5159,6 +5107,15 @@ h2.entry-title.interior-page {
     width: 67%;
     display: block;
     clear: none;
+    padding-right: 3rem;
+  }
+
+  .page-template-page-clas-home div#primary {
+    max-width: 100% !important;
+  }
+
+  .page-template-page-clas-home .slideshow_content {
+    width: 100% !important;
   }
 
   .post-template-single-right-sidebar #secondary, .page-template-single-right-sidebar #secondary {
@@ -5180,6 +5137,7 @@ h2.entry-title.interior-page {
     width: 67%;
     display: block;
     clear: none;
+    padding-left: 3rem;
   }
 
   .post-template-single-left-sidebar #secondary, .page-template-single-left-sidebar #secondary{
@@ -5189,6 +5147,15 @@ h2.entry-title.interior-page {
     padding-top: 1rem;
     display: block;
     clear: none;
+  }
+
+
+  .page-template-single-left-sidebar #primary {
+    border-left: 1px dashed #f45a1d;
+  }
+
+  .page-template-single-right-sidebar #primary {
+    border-right: 1px dashed #f45a1d;
   }
 
   #secondary .search-form {
@@ -5337,14 +5304,6 @@ h2.entry-title.interior-page {
        :not(.has-featured-image .home) .site-content-contain {
          margin-top: 9.375rem;
          /* margin-top:10.15625rem; */
-       }
-
-       .archive .site-content-contain{
-         margin-top: 195px !important;
-       }
-
-       .home .site-content-contain {
-         margin-top: 9.375rem;
        }
 
        /* If the post is a News Article & it has a Featured Image*/
@@ -5587,15 +5546,6 @@ h2.entry-title.interior-page {
            color: white;
          }
 
-         .header-clas .X-quickLinks:hover > div ul,
-         .header-clas .X-quickLinks > div ul.open {
-           display:block;
-           right:0px;
-           visibility:visible;
-           opacity:1;
-           transition: all 0.3s ease 0s;
-           top: 3.7rem;
-         }
 
          .icon-search :hover,  #icon-search :hover, svg.icon.icon-search :hover{
            color:#f45a1d;
@@ -5768,6 +5718,12 @@ h2.entry-title.interior-page {
            color: #00529b !important;
          }
 
+         .X-menu nav .menu .menu-item-has-children.open>.sub-menu {
+            position: relative;
+            max-width: 300px;
+            width: max-content;
+          }
+
          /* UNDERLINE FIRST LEVEL MENUS */
 
 
@@ -5927,6 +5883,29 @@ h2.entry-title.interior-page {
                 display: none;
               }
 
+
+             .header-clas .X-quickLinks:hover > div ul,
+             .header-clas .X-quickLinks:hover > div ul.open {
+               display:block;
+               right:0px;
+               visibility:visible;
+               opacity:1;
+               transition: all 0.3s ease 0s;
+               top: 3.7rem;
+             }
+
+             .X-quickLinks div #quicklinks li a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              color: #fff;
+              padding: 1rem 1rem 1rem 1rem;
+              text-transform: uppercase;
+              font-family: Gentona_Medium;
+              text-align: left;
+              font-size: .9rem;
+            }
+
               .header-clas .container_header_department {
                 display: flex !important;
                 margin: 0 auto;
@@ -5961,6 +5940,10 @@ h2.entry-title.interior-page {
                 padding-bottom: 0 !important;
                 font-size: 1rem !important;
                 font-family: "Gentona_Book" !important;
+              }
+
+              .X-menu.showMenu {
+                overflow-y: visible !important;
               }
 
               .header-clas #site-navigation {
@@ -6050,7 +6033,7 @@ h2.entry-title.interior-page {
                 align-items: center;
                 position: relative;
                 height: auto;
-                z-index: 9999999;
+                z-index: 99;
               }
 
               .header-clas ul#top-menu a {
@@ -6246,8 +6229,42 @@ h2.entry-title.interior-page {
               /*__________________STRUCTURE__________________*/
                   .footer-main-wrap{
                      max-width: 2000px;
-                     padding: 2rem 5.2rem;
+                     padding: 2rem;
                      display: flex;
+                     text-align: left;
+                  }
+
+                  .footer-menu h2 {
+                    border-top: none;
+                  }
+
+
+                  .footer-main-col-1,
+                  .footer-main-col-3 {
+                     width: 50%;
+                     float: none;
+                     display: inline-block;
+                     vertical-align: middle;
+                     margin: 0;
+                     padding: 0;
+                     text-align: center;
+                  }
+                  .footer-main-col-2{
+                     width: 50%;
+                     float: none;
+                     display: inline-block;
+                     vertical-align: top;
+                     margin: 0;
+                     padding: 0 0 0 2rem;
+                  }
+
+                  .footer-main-sub-col-1,
+                  .footer-main-sub-col-2,
+                  .footer-main-sub-col-3 {
+                    padding-top: 0;
+                    width: 30%;
+                    display: inline-block;
+                    padding: 1rem 1rem 1rem 0;
                   }
 
                  .footer-main-col-1{
@@ -6317,17 +6334,20 @@ h2.entry-title.interior-page {
                  }
 
                  .footer-main h2{
-                    color: #ffffff;
-                    font-size:1rem;
-                    padding:0;
-                    margin-top: .5rem;
-                    margin-bottom: .5rem;
-                    font-family: Gentona_Book;
-                    text-transform: capitalize;
+                   color: #fff;
+                   font-size: 1rem;
+                   padding: 0;
+                   margin-top: 0;
+                   margin-bottom: .5rem;
+                   font-family: Gentona_Book;
+                   text-transform: capitalize;
+                   cursor: default;
+                   padding-top: 0 !important;
                  }
 
                  .footer-uf-campaign-logo {
                    padding: 0;
+                   float: right;
                  }
 
                  .footer-icon-uf {
