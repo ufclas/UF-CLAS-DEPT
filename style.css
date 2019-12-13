@@ -6458,9 +6458,7 @@ h2.entry-title.interior-page {
                             line-height: 1.2;
                             color: #414141;
                             margin: 0px;
-                            padding: 0px;
-                            padding-top: 1rem;
-                            padding-bottom: 1rem;
+                            padding: 1rem 0;
                             display: block;
                             clear: both;
                          }
