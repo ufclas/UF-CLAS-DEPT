@@ -846,6 +846,10 @@
             margin: 0 auto;
           }
 
+          .page-template-page-image-header #content #primary {
+              max-width: 100%;
+          }
+
           .home #secondary, .post-template-default #secondary, .page-template-default  #secondary, .post-template-single-magazine-article   #secondary, .post-template-single-news-article #secondary , .post-template-single-featured-story  #secondary{
             display:none;
           }
