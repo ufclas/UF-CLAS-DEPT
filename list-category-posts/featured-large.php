@@ -17,10 +17,6 @@
       display: none;
   }
 
-  .featured-individual-news {
-    display: flex;
-  }
-
   .featured-individual-news > div {
     flex: 1 50%;
   }
@@ -40,7 +36,21 @@
   .featured-news-excerpt {
     margin-top: 1rem;
     line-height: 1.7rem;
-}
+  }
+
+  .featured-individual-news a img {
+    width: 100%;
+  }
+
+  @media (min-width: 768px){
+    .featured-individual-news {
+      display: flex;
+    }
+
+    .featured-individual-news > div:not(.featured-news-right) {
+      padding: 0 1rem;
+    }
+  }
 </style>
 
 
