@@ -131,7 +131,6 @@ function blank_widgets_init(){
 }
 add_action('widgets_init', 'blank_widgets_init');
 
-
 /*===========================
 *
 *
@@ -410,4 +409,79 @@ function ufl_display_attached_items_list($atts, $content = null) {
 	return $out;
 }
 add_shortcode('attachment-list', 'ufl_display_attached_items_list');
+
+/**
+* Add Landing Page Hero Full Shortcode
+*
+* Example [ufl-landing-page-hero][/ufl-landing-page-hero]
+* @param  array $atts Shortcode attributes
+* @param  string [$content = ''] Content between shortcode tags
+* @return string Shortcode output
+*/
+function ufclas_emily_landing_hero($atts, $content = NULL ) {
+
+ extract( shortcode_atts(
+   array(
+     'headline' => '',
+     'subtitle' => '',
+     'hide_button' => 1,
+     'button_text' => '',
+     'button_link' => '#',
+     'image' => ''
+   ), $atts )
+ );
+
+ // Support either image ID or image url
+ $image = ( is_numeric( $image ) )? wp_get_attachment_image_src( $image, 'large' ) : array($image);
+ $image_style = '';
+ $subtitle = (!empty( $subtitle ))? $subtitle : '';
+
+
+
+ // Add background and gradient class if image exists
+ if ( !empty($image[0]) ){
+   $image_class ='';
+   $image_class .= ' gradient-bg';
+   $image_style =  'style="background-image:url(\'' . esc_url( $image[0] ) . '\');"';
+ }
+
+ // Shortcode callbacks must return content, so use output buffering
+ ob_start();
+ ?>
+   <div class="landing-page-hero-full">
+       <div class="hero-img<?php echo $image_class; ?>" <?php echo $image_style; ?>>
+           <div class="hero-heading">
+     <?php
+       echo '<h2>' . esc_html( $headline ) . '</h2>';
+
+       if ( !empty($subtitle) ){
+         echo '<h3>' . esc_html( $subtitle ) . '</h3>';
+       }
+     ?>
+           </div>
+       </div>
+
+       <?php if ( !empty( $content ) ): ?>
+       <div class="hero-text">
+           <div class="container">
+               <div class="col-sm-10 col-sm-offset-1">
+                   <?php echo wpautop( wp_kses_post( $content ) ); ?>
+
+                   <?php if ( !empty($button_text) ){ ?>
+                   <a href="<?php echo esc_url( $button_link ); ?>" class="btn"><?php echo esc_html( $button_text ); ?> <span class="arw-right icon-svg"><svg><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/spritemap.svg#arw-right"></use></svg></span></a>
+                   <?php } ?>
+               </div>
+           </div>
+       </div>
+       <?php endif; ?>
+   </div>
+   <?php
+ return ob_get_clean();
+}
+add_shortcode('ufl-landing-page-hero', 'ufclas_emily_landing_hero');
+
+// IssueM newsletter
+if ( class_exists( 'IssueM' ) ) {
+	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
+}
 ?>
