@@ -5115,6 +5115,7 @@ h2.entry-title.interior-page {
     display: block;
     clear: none;
     padding-right: 3rem;
+    box-sizing: content-box;
   }
 
   .page-template-page-clas-home div#primary {
@@ -5128,7 +5129,7 @@ h2.entry-title.interior-page {
   .post-template-single-right-sidebar #secondary, .page-template-single-right-sidebar #secondary {
     position:relative;
     float: right;
-    width: 30%;
+    width: 28%;
     padding-top: 1rem;
     display: block;
     clear: none;
