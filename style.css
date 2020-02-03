@@ -4970,6 +4970,10 @@ h2.entry-title.interior-page {
            display:none;
          }
 
+         #secondary li.menu-item-has-children>ul {
+              display: block;
+          }
+
          .X-menu nav > div > ul > li .icon-caret {
            margin-top: 8px;
            -webkit-transform: rotate(-90deg);
