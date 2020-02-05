@@ -241,6 +241,14 @@ ul.tribe-events-sub-nav li {
     font-size: 1rem;
 }
 
+/*====================================
+
+Shortcode CSS
+
+=====================================*/
+
+
+
 @media (min-width: 768px){
   #page .date-location-container {
       display: flex;

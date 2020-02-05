@@ -14,4 +14,4 @@
  */
 ?>
 
-<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' );
+<?php the_title( '<h2 class="tribe-events-single-event-title">', '</h2>' );

@@ -484,4 +484,65 @@ add_shortcode('ufl-landing-page-hero', 'ufclas_emily_landing_hero');
 if ( class_exists( 'IssueM' ) ) {
 	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
 }
+
+
+/*========================================
+*
+* The Events Calendar Plugin
+*
+*==========================================*/
+function eventsCalendarShortcode(){
+
+    $args = array(
+      'post_status'=>'publish',
+      'post_type'=>array(TribeEvents::POSTTYPE),
+      'posts_per_page'=>10,
+      //order by startdate from newest to oldest
+      'meta_key'=>'_EventStartDate',
+      'orderby'=>'_EventStartDate',
+      'order'=>'DESC',
+      //required in 3.x
+      'eventDisplay'=>'custom',
+      );
+    $get_posts = null;
+    $get_posts = new WP_Query();
+
+    $get_posts->query($args);
+    if($get_posts->have_posts()) {
+      while($get_posts->have_posts()) {
+        $get_posts->the_post(); ?>
+          <div class="the-events-calendar-shortcode-container">
+          <?php foreach( $event_cats as $cat ) {
+                  echo esc_html( $cat->name );
+              } ?>
+
+            <div class="home-page-event-image">
+              <?php $featuredImage = tribe_event_featured_image( null, 'square-crop' );
+              if (empty($featuredImage)){?>
+                  <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='https://sites.clas.ufl.edu/las-main/files/2019/12/screenshot-768x768.png' alt='UF CLAS Logo'/></a>
+                  <?php
+              }else {
+                echo get_the_post_thumbnail( null, 'square-crop' );
+              } ?>
+            </div>
+
+            <div class="home-page-event-information">
+              <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><br />
+              <?php if (tribe_get_start_date() !== tribe_get_end_date() ) { ?>
+                <?php echo tribe_get_start_date(null, false, 'M j, Y - g:i a'); ?> - <?php echo tribe_get_end_date(); ?>
+              <?php } else { ?>
+                <?php echo tribe_get_start_date(); ?>
+              <?php } ?>
+
+              <p><?php echo get_the_excerpt(); ?></p>
+            </div>
+
+          </div>
+          <?php
+        }
+      }
+    wp_reset_query();
+}
+
+add_shortcode('events-calendar-home','eventsCalendarShortcode');
 ?>
