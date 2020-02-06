@@ -493,15 +493,16 @@ if ( class_exists( 'IssueM' ) ) {
 *==========================================*/
 function eventsCalendarShortcode($atts){
      // Enqueue CSS
-     wp_enqueue_style('child-a', get_stylesheet_directory_uri() . '/tribe-events/shortcode.css', array() );
+     wp_enqueue_style('events-calendar-shortcode', get_stylesheet_directory_uri() . '/tribe-events/shortcode.css', array() );
 
      extract( shortcode_atts( array(
-        'category' => "featured",
+        'category' => "featured", //default class will be featured
+        'image'    => "no" //No featured image will show up on default
       ), $atts ) );
 
     $args = array(
       'post_status'=>'publish',
-      'post_type'=>array(TribeEvents::POSTTYPE),
+      'post_type'=>array('tribe_events'),
       'posts_per_page'=>10,
       //order by startdate from newest to oldest
       'meta_key'=>'_EventStartDate',
@@ -527,19 +528,19 @@ function eventsCalendarShortcode($atts){
       while($get_posts->have_posts()) {
         $get_posts->the_post(); ?>
           <div class="the-events-calendar-shortcode-container">
-          <?php foreach( $event_cats as $cat ) {
-                  echo esc_html( $cat->name );
-              } ?>
-
-            <div class="home-page-event-image">
-              <?php $featuredImage = tribe_event_featured_image( null, 'square-crop' );
-              if (empty($featuredImage)){?>
-                  <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='https://sites.clas.ufl.edu/las-main/files/2019/12/screenshot-414x414.png' width='414' alt='UF CLAS Logo'/></a>
-                  <?php
-              }else {
-                echo get_the_post_thumbnail( null, 'square-crop' );
-              } ?>
+            <?php
+            //If user wants featured image displayed
+            if($image == 'yes'){?>
+              <div class="home-page-event-image">
+                <?php $featuredImage = tribe_event_featured_image( null, 'square-crop' );
+                if (empty($featuredImage)){?>
+                    <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='https://sites.clas.ufl.edu/las-main/files/2019/12/screenshot-414x414.png' width='414' alt='UF CLAS Logo'/></a>
+                    <?php
+                }else {
+                  echo get_the_post_thumbnail( null, 'square-crop' );
+                } ?>
             </div>
+          <?php } ?>
 
             <div class="home-page-event-information">
               <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><br />
