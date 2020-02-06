@@ -491,9 +491,13 @@ if ( class_exists( 'IssueM' ) ) {
 * The Events Calendar Plugin
 *
 *==========================================*/
-function eventsCalendarShortcode(){
+function eventsCalendarShortcode($atts){
      // Enqueue CSS
      wp_enqueue_style('child-a', get_stylesheet_directory_uri() . '/tribe-events/shortcode.css', array() );
+
+     extract( shortcode_atts( array(
+        'category' => "featured",
+      ), $atts ) );
 
     $args = array(
       'post_status'=>'publish',
@@ -505,6 +509,15 @@ function eventsCalendarShortcode(){
       'order'=>'DESC',
       //required in 3.x
       'eventDisplay'=>'custom',
+      //query events by category
+      'tax_query' => array(
+          array(
+              'taxonomy' => 'tribe_events_cat',
+              'field' => 'slug',
+              'terms' => "$category",
+              'operator' => 'IN'
+          ),
+        )
       );
     $get_posts = null;
     $get_posts = new WP_Query();
@@ -546,5 +559,5 @@ function eventsCalendarShortcode(){
     wp_reset_query();
 }
 
-add_shortcode('events-calendar-home','eventsCalendarShortcode');
+add_shortcode('events-calendar','eventsCalendarShortcode');
 ?>
