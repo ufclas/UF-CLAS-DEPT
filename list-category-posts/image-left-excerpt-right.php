@@ -3,7 +3,7 @@
       max-width: 1023px !important;
   }
 
-  .image-news-layout {
+  .image-excerpt-layout {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -21,10 +21,6 @@
   .individual-news h3 {
       padding: .5rem 0;
   }
-
-  .individual-news-text {
-    padding: 0 1rem;
-}
 
   .news-excerpt {
       margin-top: 1rem;
@@ -62,23 +58,44 @@
       display: none;
   }
 
-  .individual-news img {
-    max-height: 230px;
+  .image-excerpt-layout .individual-news img {
+    width: 100%;
     object-fit: cover;
+    max-height: 275px;
   }
 
-  .individual-news {
-    margin: 1rem;
-    border: 1px solid #a9dcda;
-    padding-bottom: 2rem;
-    flex: 1 45%;
-    max-width: 345px;
+  .image-excerpt-layout .individual-news {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #a9dcda;
+    padding-bottom: 1rem;
+  }
+
+  .individual-news > div > a {
+      width: 100%;
+      height: 100%;
+      display: flex;
   }
 
   @media (min-width: 768px){
-    .individual-news {
-      flex: 1 25%;
-      margin: 5px;
+    .image-excerpt-layout .individual-news {
+        flex: 1 50%;
+        margin: 5px;
+        display: flex;
+        border-bottom: 1px solid #a9dcda;
+        padding-bottom: 0;
+        max-width: 100%;
+    }
+
+    .image-excerpt-layout .individual-news > div {
+      flex: 1 50%;
+    }
+
+    .image-excerpt-layout .individual-news > div:nth-child(1) {
+      max-width: 420px;
+    }
+
+    .individual-news-text {
+      padding: 0 1rem;
     }
   }
 </style>
@@ -94,7 +111,7 @@ $lcp_display_output = '';
 $lcp_display_output .= $this->get_conditional_title();
 
 //Add 'starting' tag. Here, I'm using an unordered list (ul) as an example:
-$lcp_display_output .= '<div class="image-news-layout">';
+$lcp_display_output .= '<div class="image-excerpt-layout">';
 
 /* Posts Loop
  *

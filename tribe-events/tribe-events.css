@@ -1,0 +1,319 @@
+.archive .site-content-contain {
+    margin-top: 0 !important;
+}
+
+.tribe-events-loop .tribe-events-event-meta {
+  background: transparent;
+  border: none;
+}
+
+.tribe-event-schedule-details {
+    margin-right: 2rem;
+    color: #004083;
+}
+
+.tribe-event-date-start span,
+.tribe-event-date-end span {
+    font-family: "Gentona_ExtraBold" !important;
+    font-size: 1.7rem;
+    color: #f45a1d;
+    padding: .5rem 0;
+}
+
+.tribe-events-list .tribe-events-list-event-title {
+    margin-bottom: 1rem;
+}
+
+.tribe-event-date-start,
+.tribe-event-date-end {
+  margin: 1rem .4rem;
+  display: inline;
+}
+
+a.tribe-events-gmap {
+    display: block;
+}
+
+.tribe-events-venue-details {
+    margin-left: 1rem !important;
+}
+
+.time-venue-info-container {
+    font-family: "Gentona_light" !important;
+    font-weight: 100;
+}
+
+.time-venue-info-container > span {
+    font-size: 1.3rem;
+}
+
+.tribe-events-list .tribe-events-venue-details {
+  margin: 0;
+}
+
+.tribe-events-list-separator-month {
+    background: transparent;
+    font-size: 2rem;
+    font-family: "Gentona";
+    padding: 0;
+    color: #00337A;
+    margin-top: 3rem;
+}
+
+#page h3.tribe-events-list-event-title a {
+    font-family: "Quadon" !important;
+    color: #004083;
+    border-bottom: 1px dashed #f45a1d;
+    font-size: 1.4rem;
+}
+
+.tribe-events-list .tribe-events-loop .tribe-events-event-image {
+  width: 100%;
+}
+
+.tribe-events-list .tribe-events-venue-details {
+  padding: 8px 0 0;
+}
+
+.tribe-events-sub-nav li a {
+  background: transparent;
+}
+
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-previous {
+  width: 100%;
+}
+
+.archive.post-type-archive-tribe_events.events-list.page-template-single-right-sidebar-php #page aside#secondary {
+  display: block !important;
+}
+
+.archive.post-type-archive-tribe_events .wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tribe-bar-form {
+    background: transparent;
+}
+
+#tribe-bar-form.tribe-bar-mini .tribe-bar-views-inner {
+    padding: 12px 0;
+    background: transparent;
+}
+
+h2.tribe-events-schedule__datetime p {
+    display: inline-block;
+}
+
+h2.tribe-events-schedule__datetime br {
+    display: none;
+}
+
+h2.tribe-events-schedule__datetime span {
+    font-family: "Gentona" !important;
+    font-weight: 400;
+}
+
+.tribe-events-schedule {
+    margin: 0;
+}
+
+.tribe-events-meta-group {
+    font-size: 1.125rem;
+}
+
+.tribe-events-single-section dt {
+    font-family: "Gentona_SemiBold";
+}
+
+.tribe-block__btn--link a br {
+    display: none;
+}
+
+.tribe-events-schedule__all-day,
+.tribe-events-schedule__separator,
+.tribe-events-schedule__timezone {
+  color: initial;
+}
+
+address.tribe-block__venue__address span p {
+    padding: 0;
+}
+
+.tribe-block.tribe-block__venue.tribe-block__venue--has-map {
+    border-top: 1px solid #004083;
+    padding-top: 1rem;
+}
+
+.tribe-block.tribe-block__venue.tribe-block__venue--has-map {
+    border-top: 1px dashed #f45a1d;
+    padding-top: 1rem;
+}
+
+address.tribe-block__venue__address span p:nth-child(3),
+address.tribe-block__venue__address span p:nth-child(4) {
+    display: inline-block;
+}
+
+span.tribe-block__venue__phone:before {
+    content: "Telephone: ";
+    font-family: "Gentona_SemiBold";
+}
+
+span.tribe-block__venue__website:before  {
+    content: "Website: ";
+    font-family: "Gentona_SemiBold";
+}
+
+span.tribe-block__venue__phone {
+    margin-bottom: 0 !important;
+}
+
+#page .tribe-events-othermonth > div:first-of-type > a {
+    font-family: "Quadon" !important;
+    font-size: 1rem;
+}
+
+#page .tribe-events-viewmore a {
+    font-size: .9rem !important;
+    font-family: "Gentona_Light" !important;
+}
+
+ul.tribe-events-sub-nav li {
+    display: inline;
+    width: 35% !important;
+}
+
+#tribe-events-content > nav {
+    display: none;
+}
+
+.tribe-events-calendar td .tribe-events-viewmore a {
+    white-space: normal;
+}
+
+.featured-event {
+    max-width: 220px;
+}
+
+.featured-events-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featured-events-container .featured-event {
+    flex: 1 25%;
+    margin-right: 3rem;
+    padding-top: 0;
+}
+
+.featured-event .tribe-event-schedule-details {
+    text-align: left;
+}
+
+.featured-event .tribe-event-schedule-details span {
+    margin: 0 !important;
+    color: black !important;
+    font-family: "Gentona_Book";
+}
+
+.featured-event .tribe-events-venue-details {
+  margin-left: 0 !important;
+  font-family: "Gentona_Light";
+}
+
+.featured-event span.tribe-address {
+    display: none;
+}
+
+.featured-event .tribe-events-list .tribe-events-list-event-title {
+    margin-bottom: 1rem;
+}
+
+.featured-event  .tribe-events-day .tribe-events-event-image,
+.tribe-events-day .featured-events-container .tribe-events-event-image {
+    width: 100% !important;
+}
+
+#page a.tribe-events-ical.tribe-events-button {
+    background: #002346 !important;
+    color: white;
+    font-size: 1rem;
+}
+
+/*====================================
+
+Shortcode CSS
+
+=====================================*/
+
+
+
+@media (min-width: 768px){
+  #page .date-location-container {
+      display: flex;
+  }
+
+  .tribe-event-date-start span:first-child,
+  .tribe-event-date-end span:first-child {
+      font-family: "Gentona_ExtraBold" !important;
+      font-size: 2.8rem;
+      padding: .5rem 0;
+  }
+
+  .tribe-event-date-start span,
+  .tribe-event-date-end span {
+      display: block;
+      font-family: "Gentona_Light" !important;
+  }
+
+
+  .tribe-event-date-start span:nth-child(2),
+  .tribe-event-date-end span:nth-child(2) {
+      font-size: 2rem;
+      padding-top: 0.5rem;
+      color: #f45a1d;
+  }
+
+  .tribe-events-list .tribe-events-loop .tribe-events-event-image {
+    width: 30%;
+  }
+
+  .tribe-event-schedule-details {
+    text-align: center;
+  }
+
+  .archive .wrap {
+    display: flex;
+    max-width: 1200px;
+  }
+
+
+  .tribe-events-venue-details a img {
+    max-width: 200px;
+    float: left;
+    padding-right: 1rem;
+  }
+
+  .datepicker-days table {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1025px){
+  .archive.page-template-single-right-sidebar-php #primary {
+    width: 70%;
+  }
+
+  .archive.page-template-single-right-sidebar-php #secondary {
+    width: 30%;
+    display: block;
+  }
+
+  .tribe-events-event-meta .author .tribe-event-schedule-details {
+    font-size: 1.5rem;
+    color: #f45a1d;
+  }
+
+}
