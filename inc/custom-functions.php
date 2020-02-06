@@ -492,6 +492,8 @@ if ( class_exists( 'IssueM' ) ) {
 *
 *==========================================*/
 function eventsCalendarShortcode(){
+     // Enqueue CSS
+     wp_enqueue_style('child-a', get_stylesheet_directory_uri() . '/tribe-events/shortcode.css', array() );
 
     $args = array(
       'post_status'=>'publish',
@@ -519,7 +521,7 @@ function eventsCalendarShortcode(){
             <div class="home-page-event-image">
               <?php $featuredImage = tribe_event_featured_image( null, 'square-crop' );
               if (empty($featuredImage)){?>
-                  <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='https://sites.clas.ufl.edu/las-main/files/2019/12/screenshot-768x768.png' alt='UF CLAS Logo'/></a>
+                  <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='https://sites.clas.ufl.edu/las-main/files/2019/12/screenshot-414x414.png' width='414' alt='UF CLAS Logo'/></a>
                   <?php
               }else {
                 echo get_the_post_thumbnail( null, 'square-crop' );
@@ -529,9 +531,9 @@ function eventsCalendarShortcode(){
             <div class="home-page-event-information">
               <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><br />
               <?php if (tribe_get_start_date() !== tribe_get_end_date() ) { ?>
-                <?php echo tribe_get_start_date(null, false, 'M j, Y - g:i a'); ?> - <?php echo tribe_get_end_date(); ?>
+                <?php echo "<p class='event-date'>" . tribe_get_start_date(null, false, 'M j, Y - g:i a'); ?> - <?php echo tribe_get_end_date() . "</p>"; ?>
               <?php } else { ?>
-                <?php echo tribe_get_start_date(); ?>
+                <?php echo "<p>" . tribe_get_start_date() . "</p>"; ?>
               <?php } ?>
 
               <p><?php echo get_the_excerpt(); ?></p>
