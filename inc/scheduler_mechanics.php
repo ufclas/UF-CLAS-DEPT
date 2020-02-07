@@ -1,9 +1,14 @@
 <?php
+// $host = "ls-web-data01.clas.ufl.edu";
+// $user = "clasdev";
+// $pass = "QsQWoGbqymP=bZQ";
+// $data = "clas_test";
 
-$host = "ls-web-data01.clas.ufl.edu";
-$user = "clasdev";
-$pass = "QsQWoGbqymP=bZQ";
-$data = "clas_test";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$data = "alex";
+
 $link = mysqli_connect($host, $user, $pass, $data);
 if (!$link) {
   echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -12,11 +17,13 @@ if (!$link) {
   exit;
 }
 
-$current_blog_id = get_current_blog_id();
-
+  $current_blog_id = get_current_blog_id();
+  // echo "current blog id: " . $current_blog_id;
+  $current_blog_id = "";
 
   $terms = array();
-  $count_terms = "SELECT * FROM wp_".$current_blog_id."_terms";
+  $count_terms = "SELECT * FROM wp_".$current_blog_id."terms";
+  // $count_terms = "SELECT * FROM wp_".$current_blog_id."_terms";
   $query_terms = mysqli_query($link, $count_terms);
 
   while ($row = mysqli_fetch_assoc($query_terms)) {
@@ -46,65 +53,144 @@ if ( $the_query->have_posts() ) {
 /* Restore original Post Data */
 wp_reset_postdata();
 
-  $count = "SELECT * FROM wp_".$current_blog_id."_postmeta";
+  // echo "<pre>";
+  //   print_r($list_teamMembers);
+  // echo "</pre>";
+
+  // select
+  $count  = "SELECT ";
+  $count .= "object_id, term_taxonomy_id, ";
+  $count .= "term_id, name, slug ";
+  // from
+  $count .= "FROM ";
+  $count .= "wp_term_relationships, ";
+  $count .= "wp_terms ";
+  // where
+  $count .= "WHERE "; // table.column
+  $count .= ""
+
+
+
   $query = mysqli_query($link, $count);
 
-  $list_teamMembers; // [0000] = User Name
-  $list_master_schedule = array();
+  while ($row = mysqli_fetch_assoc($query)) {
+
+      echo "<pre>";
+      print_r($row);
+      echo "</pre>";
+
+    }
+
+    http://localhost/phpmyadmin/sql.php?db=alex&table=wp_term_relationships
+
+
+
+
+
+  // $count = "SELECT * FROM wp_".$current_blog_id."_postmeta";
+  // $count = "SELECT * FROM wp_postmeta";
+  // $query = mysqli_query($link, $count);
+  // $list_teamMembers; // [0000] = User Name
+  // $list_master_schedule = array();
 
   // merge (id/name, schedule, position)
-  while ($row = mysqli_fetch_assoc($query)) {
-    // pre $row here
-    foreach ($list_teamMembers as $key_user_id => $value_user_name) {
-      if ($row['post_id'] == $key_user_id) {
+  // while ($row = mysqli_fetch_assoc($query)) {
+  //   // pre $row here
+  //
+  //   // if ($row['post_id'] == 58) {
+  //   //
+      // echo "<pre>";
+      // print_r($row);
+      // echo "</pre>";
 
-        // get position from _category_permalink
-        if ($row['meta_key'] == "_category_permalink") {
+  //   // }
+  //
+  //
+  //
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //
+  //
+  //   // _category_permalink is lost
+  //   // thanks, alex
+  //
+  //
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //   // _category_permalink
+  //
+  //
+  //
+  //   foreach ($list_teamMembers as $key_user_id => $value_user_name) {
+  //     if ($row['post_id'] == $key_user_id) {
+  //
+  //       // echo "post id " . $row['post_id'] . "<br>";
+  //
+  //       // get position from _category_permalink
+  //       if ($row['meta_key'] == "_category_permalink") {
+  //
+  //         $positionString = $row['meta_value'];
+  //         // echo $positionString;
+  //         $list_master_schedule[$key_user_id]['position'] = $positionString;
+  //
+  //       //   // two explode versions try to ensure both values are the same before setting
+  //       //   // semi method
+  //       //   $explode_semi = explode(";", $positionString);
+  //       //   $semi_string = $explode_semi[1];
+  //       //   $explode_semi_string = explode(":", $semi_string);
+  //       //   $semi = str_replace("\"","", $explode_semi_string[2]);
+  //       //   $semi;
+  //       //   // quote method
+  //       //   $explode_quot = explode("\"", $positionString);
+  //       //   $quot = $explode_quot[3];
+  //       //   $quot;
+  //       //
+  //       //   if ($quot == $semi) {
+  //       //     $list_master_schedule[$key_user_id]['position'] = $semi;
+  //       //     // switch: numeric to verbal term for user position
+  //       //     foreach ($terms as $key_code => $value_code) {
+  //       //       if ($key_code == $semi) {
+  //       //         $list_master_schedule[$key_user_id]['position'] = $value_code;
+  //       //       }
+  //       //     }
+  //       //   } else {
+  //       //     $list_master_schedule[$key_user_id]['position'] = "There's an error in the scheduler mechanics document mishandling the user position processing.";
+  //       //   }
+  //       } // get position from _category_permalink
+  //
+  //       // "period" | teaching schedule
+  //       if (strpos($row['meta_key'], "period") !== false) {
+  //         $list_master_schedule[$key_user_id]['period'][] = $row['meta_value'];
+  //       }
+  //
+  //       // "appt" office hours
+  //       if (strpos($row['meta_key'], "appt_") !== false) {
+  //          $list_master_schedule[$key_user_id]['appt'][$row['meta_key']] = $row['meta_value'];
+  //       }
+  //
+  //       // name = value_name from $list_teamMembers | it's probably doing this 30 times a person -- but i think it's worth not writing the delimitating statement
+  //       $list_master_schedule[$key_user_id]['name'] = $value_user_name;
+  //     }
+  //   }
+  // }
 
-          $positionString = $row['meta_value'];
 
-          // two explode versions try to ensure both values are the same before setting
-          // semi method
-          $explode_semi = explode(";", $positionString);
-          $semi_string = $explode_semi[1];
-          $explode_semi_string = explode(":", $semi_string);
-          $semi = str_replace("\"","", $explode_semi_string[2]);
-          $semi;
-          // quote method
-          $explode_quot = explode("\"", $positionString);
-          $quot = $explode_quot[3];
-          $quot;
-
-          if ($quot == $semi) {
-            $list_master_schedule[$key_user_id]['position'] = $semi;
-            // switch: numeric to verbal term for user position
-            foreach ($terms as $key_code => $value_code) {
-              if ($key_code == $semi) {
-                $list_master_schedule[$key_user_id]['position'] = $value_code;
-              }
-            }
-          } else {
-            $list_master_schedule[$key_user_id]['position'] = "There's an error in the scheduler mechanics document mishandling the user position processing.";
-          }
-        } // get position from _category_permalink
-
-        // "period" | teaching schedule
-        if (strpos($row['meta_key'], "period") !== false) {
-          $list_master_schedule[$key_user_id]['period'][] = $row['meta_value'];
-        }
-
-        // "appt" office hours
-        if (strpos($row['meta_key'], "appt_") !== false) {
-           $list_master_schedule[$key_user_id]['appt'][$row['meta_key']] = $row['meta_value'];
-        }
-
-        // name = value_name from $list_teamMembers | it's probably doing this 30 times a person -- but i think it's worth not writing the delimitating statement
-        $list_master_schedule[$key_user_id]['name'] = $value_user_name;
-      }
-    }
-  }
+  // echo "<pre>";
+  //   print_r($list_master_schedule);
+  // echo "</pre>";
+  echo "end master schedule";
 
   $list_master_positions = array();
+
   foreach ($list_master_schedule as $key_user_id => $value_user_information) {
     if (!in_array($value_user_information['position'], $list_master_positions)) {
       $list_master_positions[] = $value_user_information['position'];
