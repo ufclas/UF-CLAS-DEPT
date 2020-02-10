@@ -1,4 +1,8 @@
 <?php
+
+// office hours isn't saving
+// NEED TO CONVERT TO WORK ON LOCALHOST AND SERVER AND SERVER
+
 // $host = "ls-web-data01.clas.ufl.edu";
 // $user = "clasdev";
 // $pass = "QsQWoGbqymP=bZQ";
@@ -45,6 +49,9 @@ $list_teamMembers = array();
 if ( $the_query->have_posts() ) {
     while ( $the_query->have_posts() ) {
         $the_query->the_post();
+        // echo "<pre>";
+        //   print_r($the_query);
+        // echo "</pre>";
         $list_teamMembers[get_the_id()] = get_the_title();
     }
 } else {
@@ -53,37 +60,35 @@ if ( $the_query->have_posts() ) {
 /* Restore original Post Data */
 wp_reset_postdata();
 
-  // echo "<pre>";
-  //   print_r($list_teamMembers);
-  // echo "</pre>";
+  echo "<pre>";
+    print_r($list_teamMembers);
+  echo "</pre>";
 
   // select
   $count  = "SELECT ";
   $count .= "object_id, term_taxonomy_id, ";
   $count .= "term_id, name, slug ";
+  $count .= "post_id, meta_key, meta_value ";
   // from
   $count .= "FROM ";
   $count .= "wp_term_relationships, ";
-  $count .= "wp_terms ";
+  $count .= "wp_terms, ";
+  $count .= "wp_postmeta ";
   // where
   $count .= "WHERE "; // table.column
-  $count .= ""
-
-
+  $count .= "wp_term_relationships.term_taxonomy_id = wp_terms.term_id ";
+  $count .= "AND ";
+  $count .= "wp_postmeta.post_id = wp_term_relationships.object_id";
 
   $query = mysqli_query($link, $count);
 
   while ($row = mysqli_fetch_assoc($query)) {
 
       echo "<pre>";
-      print_r($row);
+        print_r($row);
       echo "</pre>";
 
     }
-
-    http://localhost/phpmyadmin/sql.php?db=alex&table=wp_term_relationships
-
-
 
 
 
