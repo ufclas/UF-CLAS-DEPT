@@ -318,8 +318,8 @@ add_action('pre_get_posts', 'tags_support_query');
 *=============================*/
 
 function uf_clas_featured_events(){
-  echo "<h2 class='entry-title'>Featured Events</h2>";
-  echo "<div class='featured-events-container'>";
+
+
 
   $events = array(
           'posts_per_page' => 3,
@@ -330,19 +330,22 @@ function uf_clas_featured_events(){
   );
 
   $featuredEvents = new WP_Query($events);
+  if($featuredEvents->have_posts()){
+      echo "<h2 class='entry-title'>Featured Events</h2>";
+      echo "<div class='featured-events-container'>";
+      while ($featuredEvents->have_posts()){
+        $featuredEvents->the_post();?>
 
-  while ($featuredEvents->have_posts()){
-    $featuredEvents->the_post();?>
+    		<div class="<?php tribe_events_event_classes() ?> featured-event post-<?php the_ID() ?>">
+    			<?php
 
-		<div class="<?php tribe_events_event_classes() ?> featured-event post-<?php the_ID() ?>">
-			<?php
-
-			tribe_get_template_part( 'list/single', 'featured' );
-			?>
-		</div>
-<?php }
-  echo "</div>";
-}
+    			tribe_get_template_part( 'list/single', 'featured' );
+    			?>
+    		</div>
+    <?php }
+    echo "</div>";
+    }
+  }
 
 /*====================================================================
  *
