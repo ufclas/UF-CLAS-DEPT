@@ -499,7 +499,8 @@ function eventsCalendarShortcode($atts){
         'category'   => "featured", //default class will be featured
         'image'      => "no", //No featured image will show up on default
         'eventtotal' => "10", //Total of events to show per page
-        'excerpt'    => "no" //displays the excerpt
+        'excerpt'    => "no", //displays the excerpt
+        'order'      => "ASC"
       ), $atts ) );
 
     $args = array(
@@ -509,7 +510,7 @@ function eventsCalendarShortcode($atts){
       //order by startdate from newest to oldest
       'meta_key'          =>    '_EventStartDate',
       'orderby'           =>    '_EventStartDate',
-      'order'             =>    'DESC',
+      'order'             =>    $order,
       //required in 3.x
       'eventDisplay'      =>     'custom',
       //query events by category
