@@ -1,6 +1,6 @@
 <?php
 
-// office hours isn't saving
+// js office hours finesse
 // NEED TO CONVERT TO WORK ON LOCALHOST AND SERVER AND SERVER
 
 // $host = "ls-web-data01.clas.ufl.edu";
@@ -42,9 +42,10 @@ $args = array(
   'post_type' => 'clas_team_members',
   'order'     => 'ASC'
 );
+
+$list_teamMembers = array();
 // The Query
 $the_query = new WP_Query( $args );
-$list_teamMembers = array();
 // The Loop
 if ( $the_query->have_posts() ) {
     while ( $the_query->have_posts() ) {
@@ -63,6 +64,8 @@ wp_reset_postdata();
   echo "<pre>";
     print_r($list_teamMembers);
   echo "</pre>";
+
+  // echo $list_teamMembers['58'];
 
   // select
   $count  = "SELECT ";
@@ -88,9 +91,8 @@ wp_reset_postdata();
         print_r($row);
       echo "</pre>";
 
+
     }
-
-
 
   // $count = "SELECT * FROM wp_".$current_blog_id."_postmeta";
   // $count = "SELECT * FROM wp_postmeta";
