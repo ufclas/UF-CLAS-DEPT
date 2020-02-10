@@ -241,6 +241,10 @@ ul.tribe-events-sub-nav li {
     font-size: 1rem;
 }
 
+#tribe-events {
+  width: 100%;
+}
+
 /*====================================
 
 Shortcode CSS
