@@ -496,39 +496,38 @@ function eventsCalendarShortcode($atts){
      wp_enqueue_style('events-calendar-shortcode', get_stylesheet_directory_uri() . '/tribe-events/shortcode.css', array() );
 
      extract( shortcode_atts( array(
-        'category' => "featured", //default class will be featured
-        'image'    => "no" //No featured image will show up on default
+        'category'   => "featured", //default class will be featured
+        'image'      => "no", //No featured image will show up on default
+        'eventtotal' => "10", //Total of events to show per page
+        'excerpt'    => "no" //displays the excerpt
       ), $atts ) );
 
     $args = array(
-      'post_status'=>'publish',
-      'post_type'=>array('tribe_events'),
-      'posts_per_page'=>10,
+      'post_status'       =>   'publish',
+      'post_type'         =>    array('tribe_events'),
+      'posts_per_page'    =>    $eventtotal,
       //order by startdate from newest to oldest
-      'meta_key'=>'_EventStartDate',
-      'orderby'=>'_EventStartDate',
-      'order'=>'DESC',
+      'meta_key'          =>    '_EventStartDate',
+      'orderby'           =>    '_EventStartDate',
+      'order'             =>    'DESC',
       //required in 3.x
-      'eventDisplay'=>'custom',
+      'eventDisplay'      =>     'custom',
       //query events by category
       'tax_query' => array(
           array(
               'taxonomy' => 'tribe_events_cat',
-              'field' => 'slug',
-              'terms' => "$category",
+              'field'    => 'slug',
+              'terms'    => "$category",
               'operator' => 'IN'
           ),
         )
       );
-    $get_posts = null;
-    $get_posts = new WP_Query();
 
-    $get_posts->query($args);
+    $get_posts = new WP_Query($args);
+
     if($get_posts->have_posts()) {
       while($get_posts->have_posts()) {
-        $get_posts->the_post(); ?>
-          <div class="the-events-calendar-shortcode-container">
-            <?php
+        $get_posts->the_post();
             //If user wants featured image displayed
             if($image == 'yes'){?>
               <div class="home-page-event-image">
