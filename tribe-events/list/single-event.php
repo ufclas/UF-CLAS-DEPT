@@ -52,32 +52,48 @@ $event = $post;
 		<?php if ( $venue_details ) : ?>
 			<!-- Venue Display Info -->
 			<div class="tribe-events-venue-details">
-        <!-- Event Image -->
-				<a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><?php echo get_the_post_thumbnail( null, 'square-crop' ); ?></a>
+				<?php
+					//Displays featured image if it has one
+					if(has_post_thumbnail()){?>
+						<div class="tribe-events-image">
+			        <!-- Event Image -->
+							<a class="tribe-event-url" href="<?php echo esc_url(tribe_get_event_link()); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><?php echo get_the_post_thumbnail( null, 'square-crop' ); ?></a>
 
-        <h3 class="tribe-events-list-event-title">
-        	<a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark">
-        		<?php the_title() ?>
-        	</a>
-        </h3>
+							<p><a class="desktop-more" href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark" aria-label="<?php echo 'View ' . get_the_title(); ?> event"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a></p>
+						</div>
+				<?php }else{?>
+					<div class="tribe-events-image">
+						<a class="tribe-event-url" href="<?php echo esc_url(tribe_get_event_link()); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='https://sites.clas.ufl.edu/las-main/files/2019/12/screenshot-768x768.png' alt='UF CLAS Logo'/></a>
 
-        <div class="time-venue-info-container">
-          <span class="tribe-events-time">
-            <?php echo tribe_get_start_date($event, true, 'g:i A');  ?>
-          </span>
+						<p><a class="desktop-more" href="<?php echo esc_url(tribe_get_event_link()); ?>" class="tribe-events-read-more" rel="bookmark" aria-label="<?php echo 'View ' . get_the_title(); ?> event"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a></p>
+					</div>
+				<?php } ?>
 
-          <span class="tribe-events-venue">
-            <?php echo tribe_get_venue() ?>
-          </span>
+				<div class="tribe-events-info">
+	        <h3 class="tribe-events-list-event-title">
+	        	<a class="tribe-event-url" href="<?php echo esc_url(tribe_get_event_link()); ?>" title="<?php the_title_attribute() ?>" rel="bookmark">
+	        		<?php the_title() ?>
+	        	</a>
+	        </h3>
 
-          <!-- Event Content -->
-          <?php do_action( 'tribe_events_before_the_content' ); ?>
-          <div class="tribe-events-list-event-description tribe-events-content description entry-summary">
-          	<?php echo tribe_events_get_the_excerpt( null, wp_kses_allowed_html( 'post' ) ); ?>
-          	<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark" aria-label="<?php echo 'View ' . get_the_title(); ?> event"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a>
-          </div><!-- .tribe-events-list-event-description -->
-        </div>
+        	<div class="time-venue-info-container">
+	          <span class="tribe-events-time">
+	            <?php echo tribe_get_start_date($event, true, 'g:i A');  ?>
+	          </span>
 
+						<?php if (!empty(tribe_get_venue())){ ?>
+		          <span class="tribe-events-venue">
+		            <?php echo ' - ' . tribe_get_venue() ?>
+		          </span>
+						<?php } ?>
+	          <!-- Event Content -->
+	          <?php do_action( 'tribe_events_before_the_content' ); ?>
+	          <div class="tribe-events-list-event-description tribe-events-content description entry-summary">
+	          	<?php echo tribe_events_get_the_excerpt( null, wp_kses_allowed_html( 'post' ) ); ?>
+								<a class="more-mobile" href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark" aria-label="<?php echo 'View ' . get_the_title(); ?> event"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a>
+	          </div><!-- .tribe-events-list-event-description -->
+        	</div>
+				</div>
 			</div> <!-- .tribe-events-venue-details -->
 		<?php endif; ?>
 

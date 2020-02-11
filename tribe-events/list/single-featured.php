@@ -53,7 +53,7 @@ if (empty($featuredImage)){?>
 		<?php if ( $venue_details ) : ?>
 			<!-- Venue Display Info -->
 			<div class="tribe-events-venue-details">
-				<?php echo implode( ', ', $venue_details ); ?>
+				<?php echo implode( ' ', $venue_details ); ?>
 			</div> <!-- .tribe-events-venue-details -->
 		<?php endif; ?>
 
