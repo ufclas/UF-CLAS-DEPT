@@ -81,9 +81,8 @@ if (!$link) {
     "6" => "saturday"
   );
 
-  // 1.2 Roles
 
-
+// 1.2 Roles
         // role create
       foreach ($list_master_roles as $null_index => $role) {
         foreach ($list_master as $null_key => $list_row) {
