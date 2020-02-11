@@ -201,7 +201,7 @@ function ufclas_tribe_events_event_schedule_details( $event = null, $before = ''
 
     if ( tribe_event_is_all_day( $event ) ) {
       $inner .= tribe_get_start_date( $event, true, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' );
-      $inner .= ( $html ? '</div>' : '' ) . 'to';
+      $inner .= ( $html ? '</div>' : '' );
       $inner .= $html ? '<div class="tribe-event-date-end">' : '';
 
       $end_date_full = tribe_get_end_date( $event, true, Tribe__Date_Utils::DBDATETIMEFORMAT );
