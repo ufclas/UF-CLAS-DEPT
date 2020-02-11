@@ -92,14 +92,26 @@
             // foreach ($list_row as $one => $two) {
             //   echo $one . " " . $two . "<br>";
             // }
-            echo "<pre>";
-              print_r($list_row);
-            echo "</pre>";
+            // echo "<pre>";
+            //   print_r($list_row);
+            // echo "</pre>";
           }
         }
       }
   ?>
   </ul>
+
+  <hr>
+
+  <h2>Schedule Builder</h2>
+  <form class="" action="index.html" method="post">  
+    <?php $i = 0; foreach ($list_team_members as $person) { ?>
+      <input id="person_<?php echo $i; ?>" type="checkbox" name="" value="">
+      <label for="person_<?php echo $i; ?>"><?php echo $person; ?></label>
+      <br>
+    <?php $i++; } ?>
+    <input type="submit" name="submit" value="create schedule list">
+  </form>
 
   <script type="text/javascript">
 
