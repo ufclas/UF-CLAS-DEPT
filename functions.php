@@ -5,6 +5,7 @@
 *      EMAIL: yash5@ufl.edu
 *      DATE: September 2017
 */
+require get_stylesheet_directory() . '/inc/shortcodes.php';
 
 /**
  * Load theme CSS and JavaScript
