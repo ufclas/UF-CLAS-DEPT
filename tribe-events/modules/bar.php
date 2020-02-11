@@ -80,7 +80,7 @@ if ( count( $views ) > 1 ) {
 
 		<?php endif; ?>
 
-		<?php if ( count( $views ) > 1 ) : ?>
+		<!-- <?php if ( count( $views ) > 1 ) : ?>
 			<div id="tribe-bar-views" class="tribe-bar-views">
 				<div class="tribe-bar-views-inner tribe-clearfix">
 					<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Views Navigation', 'the-events-calendar' ), tribe_get_event_label_singular() ); ?></h3>
@@ -106,7 +106,7 @@ if ( count( $views ) > 1 ) {
 					</select>
 				</div>
 			</div>
-		<?php endif; ?>
+		<?php endif; ?> -->
 
 	</form>
 

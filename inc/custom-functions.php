@@ -201,7 +201,7 @@ function ufclas_tribe_events_event_schedule_details( $event = null, $before = ''
 
     if ( tribe_event_is_all_day( $event ) ) {
       $inner .= tribe_get_start_date( $event, true, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' );
-      $inner .= ( $html ? '</div>' : '' ) . 'to';
+      $inner .= ( $html ? '</div>' : '' );
       $inner .= $html ? '<div class="tribe-event-date-end">' : '';
 
       $end_date_full = tribe_get_end_date( $event, true, Tribe__Date_Utils::DBDATETIMEFORMAT );
@@ -318,8 +318,8 @@ add_action('pre_get_posts', 'tags_support_query');
 *=============================*/
 
 function uf_clas_featured_events(){
-  echo "<h2 class='entry-title'>Featured Events</h2>";
-  echo "<div class='featured-events-container'>";
+
+
 
   $events = array(
           'posts_per_page' => 3,
@@ -330,19 +330,22 @@ function uf_clas_featured_events(){
   );
 
   $featuredEvents = new WP_Query($events);
+  if($featuredEvents->have_posts()){
+      echo "<h2 class='entry-title'>Featured Events</h2>";
+      echo "<div class='featured-events-container'>";
+      while ($featuredEvents->have_posts()){
+        $featuredEvents->the_post();?>
 
-  while ($featuredEvents->have_posts()){
-    $featuredEvents->the_post();?>
+    		<div class="<?php tribe_events_event_classes() ?> featured-event post-<?php the_ID() ?>">
+    			<?php
 
-		<div class="<?php tribe_events_event_classes() ?> featured-event post-<?php the_ID() ?>">
-			<?php
-
-			tribe_get_template_part( 'list/single', 'featured' );
-			?>
-		</div>
-<?php }
-  echo "</div>";
-}
+    			tribe_get_template_part( 'list/single', 'featured' );
+    			?>
+    		</div>
+    <?php }
+    echo "</div>";
+    }
+  }
 
 /*====================================================================
  *
@@ -491,60 +494,79 @@ if ( class_exists( 'IssueM' ) ) {
 * The Events Calendar Plugin
 *
 *==========================================*/
-function eventsCalendarShortcode(){
+function eventsCalendarShortcode($atts){
      // Enqueue CSS
-     wp_enqueue_style('child-a', get_stylesheet_directory_uri() . '/tribe-events/shortcode.css', array() );
+     wp_enqueue_style('events-calendar-shortcode', get_stylesheet_directory_uri() . '/tribe-events/shortcode.css', array() );
+
+     extract( shortcode_atts( array(
+        'category'   => "featured", //default class will be featured
+        'image'      => "no", //No featured image will show up on default
+        'eventtotal' => "10", //Total of events to show per page
+        'excerpt'    => "no", //displays the excerpt
+        'order'      => "ASC"
+      ), $atts ) );
 
     $args = array(
-      'post_status'=>'publish',
-      'post_type'=>array(TribeEvents::POSTTYPE),
-      'posts_per_page'=>10,
+      'post_status'       =>   'publish',
+      'post_type'         =>    array('tribe_events'),
+      'posts_per_page'    =>    $eventtotal,
       //order by startdate from newest to oldest
-      'meta_key'=>'_EventStartDate',
-      'orderby'=>'_EventStartDate',
-      'order'=>'DESC',
+      'meta_key'          =>    '_EventStartDate',
+      'orderby'           =>    '_EventStartDate',
+      'order'             =>    $order,
       //required in 3.x
-      'eventDisplay'=>'custom',
+      'eventDisplay'      =>     'custom',
+      //query events by category
+      'tax_query' => array(
+          array(
+              'taxonomy' => 'tribe_events_cat',
+              'field'    => 'slug',
+              'terms'    => "$category",
+              'operator' => 'IN'
+          ),
+        )
       );
-    $get_posts = null;
-    $get_posts = new WP_Query();
 
-    $get_posts->query($args);
+    $get_posts = new WP_Query($args);
+
     if($get_posts->have_posts()) {
       while($get_posts->have_posts()) {
-        $get_posts->the_post(); ?>
-          <div class="the-events-calendar-shortcode-container">
-          <?php foreach( $event_cats as $cat ) {
-                  echo esc_html( $cat->name );
-              } ?>
+        $get_posts->the_post();
 
-            <div class="home-page-event-image">
-              <?php $featuredImage = tribe_event_featured_image( null, 'square-crop' );
-              if (empty($featuredImage)){?>
-                  <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='https://sites.clas.ufl.edu/las-main/files/2019/12/screenshot-414x414.png' width='414' alt='UF CLAS Logo'/></a>
-                  <?php
-              }else {
-                echo get_the_post_thumbnail( null, 'square-crop' );
-              } ?>
-            </div>
+          $output .= '<div class="the-events-calendar-shortcode-container">';
 
-            <div class="home-page-event-information">
-              <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><br />
-              <?php if (tribe_get_start_date() !== tribe_get_end_date() ) { ?>
-                <?php echo "<p class='event-date'>" . tribe_get_start_date(null, false, 'M j, Y - g:i a'); ?> - <?php echo tribe_get_end_date() . "</p>"; ?>
-              <?php } else { ?>
-                <?php echo "<p>" . tribe_get_start_date() . "</p>"; ?>
-              <?php } ?>
+            //If user wants featured image displayed
+            if($image == 'yes'){
+              $output .= '<div class="home-page-event-image">';
 
-              <p><?php echo get_the_excerpt(); ?></p>
-            </div>
+              $featuredImage = tribe_event_featured_image( null, 'square-crop' );
+                if (empty($featuredImage)){
+                      $output .= '<a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src="https://sites.clas.ufl.edu/las-main/files/2019/12/screenshot-414x414.png" width="414" alt="UF CLAS Logo"/></a>';
+                }else {
+                  $output .= get_the_post_thumbnail( null, 'square-crop' );
+                }
+                $output .= '</div>'; //closes featured image div
+              }
 
-          </div>
-          <?php
+            $output .=  '<div class="home-page-event-information">';
+            $output .=  '<h4><a href="' . get_the_permalink(). '">' . get_the_title() .'</a></h4><br />';
+               if (tribe_get_start_date() !== tribe_get_end_date() ) {
+                $output .= "<p class='event-date'>" . tribe_get_start_date(null, false, 'M j, Y - g:i a'). "-" . tribe_get_end_date() . "</p>"; ?>
+              <?php } else {
+                $output .= "<p>" . tribe_get_start_date() . "</p>"; ?>
+              <?php }
+              if($excerpt == 'yes'){
+                $output .= '<p>'. get_the_excerpt() .'</p>';
+              }
+            $output .= '</div>'; // closes event information div
+
+          $output .= '</div>'; //closes event div
+
         }
+        wp_reset_postdata();
+        return $output;
       }
-    wp_reset_query();
 }
 
-add_shortcode('events-calendar-home','eventsCalendarShortcode');
+add_shortcode('events-calendar','eventsCalendarShortcode');
 ?>
