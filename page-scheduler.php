@@ -9,7 +9,7 @@
     // print_r($days);
     // print_r($terms);
     // print_r($list_teamMembers);
-    // print_r($list_master_schedule);
+    // print_r($list_master);
     // print_r($list_master_positions);
   // echo "</pre>";
 ?>
@@ -87,6 +87,20 @@
       // scheduler_mechanics | 119
       foreach ($list_team_members as $person) {
         echo "<li>{$person}</li>";
+        foreach ($list_master as $null_key => $list_row) {
+          if ($list_row['post_title'] == $person) {
+            // foreach ($list_row as $one => $two) {
+            //   echo $one . " " . $two . "<br>";
+            // }
+            echo "<pre>";
+              print_r($list_row);
+            echo "</pre>";
+          }
+        }
       }
   ?>
   </ul>
+
+  <script type="text/javascript">
+
+  </script>

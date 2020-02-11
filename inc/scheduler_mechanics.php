@@ -46,15 +46,15 @@ if (!$link) {
 
   $query = mysqli_query($link, $count);
 
-  $list_master_schedule = array();
+  $list_master = array();
   while ($row = mysqli_fetch_assoc($query)) {
-    $list_master_schedule[] = $row;
+    $list_master[] = $row;
   }
 
   $list_master_roles = array();
   $list_team_members = array();
 
-  foreach ($list_master_schedule as $null_key => $list_row) {
+  foreach ($list_master as $null_key => $list_row) {
 
     // echo "<pre>";
     //   print_r($list_row);
