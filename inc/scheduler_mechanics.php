@@ -53,6 +53,8 @@ if ( $the_query->have_posts() ) {
         // echo "<pre>";
         //   print_r($the_query);
         // echo "</pre>";
+        // echo get_the_id();
+        // echo get_the_title();
         $list_teamMembers[get_the_id()] = get_the_title();
     }
 } else {
@@ -61,27 +63,42 @@ if ( $the_query->have_posts() ) {
 /* Restore original Post Data */
 wp_reset_postdata();
 
-  echo "<pre>";
-    print_r($list_teamMembers);
-  echo "</pre>";
+  // echo "<pre>";
+  //   print_r($list_teamMembers);
+  // echo "</pre>";
 
   // echo $list_teamMembers['58'];
+  // echo $wpdb->posts;
+  // global $wpdb;
+  // echo "<pre>";
+  //   print_r($wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_type = 'clas_team_members'"));
+  // echo "</pre>";
 
-  // select
-  $count  = "SELECT ";
-  $count .= "object_id, term_taxonomy_id, ";
-  $count .= "term_id, name, slug ";
-  $count .= "post_id, meta_key, meta_value ";
-  // from
-  $count .= "FROM ";
-  $count .= "wp_term_relationships, ";
-  $count .= "wp_terms, ";
-  $count .= "wp_postmeta ";
-  // where
-  $count .= "WHERE "; // table.column
-  $count .= "wp_term_relationships.term_taxonomy_id = wp_terms.term_id ";
-  $count .= "AND ";
-  $count .= "wp_postmeta.post_id = wp_term_relationships.object_id";
+  // echo "<pre>";
+  // print_r($wpdb->posts);
+  // echo "</pre>";
+
+
+  $count    = "SELECT ";
+    $count .= "ID, post_title, ";
+    $count .= "object_id, term_taxonomy_id, ";
+    $count .= "term_id, name, slug, ";
+    $count .= "post_id, meta_key, meta_value ";
+
+  $count   .= "FROM ";
+    $count .= "wp_posts, ";
+    $count .= "wp_term_relationships, ";
+    $count .= "wp_terms, ";
+    $count .= "wp_postmeta ";
+
+  $count   .= "WHERE ";
+    $count .= "post_type = 'clas_team_members' AND post_status = 'publish' ";
+    $count .= "AND ";
+    $count .= "wp_posts.ID = wp_term_relationships.object_id ";
+    $count .= "AND ";
+    $count .= "wp_term_relationships.term_taxonomy_id = wp_terms.term_id ";
+    $count   .= "AND ";
+    $count .= "wp_postmeta.post_id = wp_term_relationships.object_id";
 
   $query = mysqli_query($link, $count);
 
