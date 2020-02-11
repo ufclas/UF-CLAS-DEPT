@@ -2,16 +2,7 @@
 /* Template Name: Scheduler */
   // set timezone to local time (a little unsure about relying on this method)
   date_default_timezone_set("America/New_York");
-  // pair: person => schedule
   include("inc/scheduler_mechanics.php");
-
-  // echo "<pre>";
-    // print_r($days);
-    // print_r($terms);
-    // print_r($list_teamMembers);
-    // print_r($list_master);
-    // print_r($list_master_positions);
-  // echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -35,10 +26,10 @@
   </head>
   <body>
 
-    <p><a href="#">Available now</a> <?php if (false) {echo "next available"; } ?></p>
+    <p><a href="<?php echo the_permalink(); ?>">Available now</a> <?php if (false) {echo "next available"; } ?></p>
 
     <hr>
-    <form class="" action="<?php echo the_permalink(); ?>" method="post">
+    <form action="<?php echo the_permalink(); ?>" method="post">
       <input type="text" name="search_schedules" value="" placeholder="search">
       <input type="submit" name="search_schedule_submit" value="search">
     </form>
@@ -53,66 +44,52 @@
 
     <hr>
 
-    <!--
-
-      Sort No. 1: Days of the Week | Days of the Week | Days
-
-    -->
-
     <h2>Days</h2>
     <ul>
       <?php
       foreach ($days as $key_day_numeric => $value_day_verbal) { ?>
-        <li><a href="#"><?php echo $value_day_verbal; ?></a></li>
+        <li><a href="<?php echo the_permalink(); ?>"><?php echo $value_day_verbal; ?></a></li>
       <?php } // End DAYS loop ?>
     </ul>
 
-  <hr>
+    <hr>
 
-  <h2>Roles</h2>
-  <ul>
-  <?php
-      // scheduler_mechanics | 119
-      foreach ($list_master_roles as $position) {
-        echo "<li>{$position}</li>";
+    <h2>Roles</h2>
+
+    <?php
+      foreach ($list_role_master as $role => $people) {
+        echo "<h3>{$role}</h3>";
+        echo "<ul>";
+        foreach ($people as $null_list => $person) {
+          echo "<li>{$person}</li>";
+        }
+        echo "</ul>";
       }
-  ?>
-  </ul>
+    ?>
 
-<hr>
+    <hr>
 
-  <h2>People</h2>
-  <ul>
-  <?php
-      // scheduler_mechanics | 119
+    <h2>People</h2>
+    <ul>
+    <?php
       foreach ($list_team_members as $person) {
         echo "<li>{$person}</li>";
-        foreach ($list_master as $null_key => $list_row) {
-          if ($list_row['post_title'] == $person) {
-            // foreach ($list_row as $one => $two) {
-            //   echo $one . " " . $two . "<br>";
-            // }
-            // echo "<pre>";
-            //   print_r($list_row);
-            // echo "</pre>";
-          }
-        }
       }
-  ?>
-  </ul>
+    ?>
+    </ul>
 
-  <hr>
+    <hr>
 
-  <h2>Schedule Builder</h2>
-  <form class="" action="index.html" method="post">  
-    <?php $i = 0; foreach ($list_team_members as $person) { ?>
-      <input id="person_<?php echo $i; ?>" type="checkbox" name="" value="">
-      <label for="person_<?php echo $i; ?>"><?php echo $person; ?></label>
-      <br>
-    <?php $i++; } ?>
-    <input type="submit" name="submit" value="create schedule list">
-  </form>
+    <h2>Schedule Builder</h2>
+    <form action="<?php echo the_permalink(); ?>" method="get">
+      <?php $i = 0; foreach ($list_team_members as $person) { ?>
+        <input id="person_<?php echo $i; ?>" type="checkbox" name="person_<?php echo $i; ?>" value="<?php echo $person; ?>">
+        <label for="person_<?php echo $i; ?>"><?php echo $person; ?></label>
+        <br>
+      <?php $i++; } ?>
+      <input type="submit" name="submit" value="create schedule list">
+    </form>
 
-  <script type="text/javascript">
+    <script type="text/javascript">
 
-  </script>
+    </script>

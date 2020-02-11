@@ -60,19 +60,17 @@ if (!$link) {
     //   print_r($list_row);
     // echo "</pre>";
 
-    // 1. Roles
+    // 1.1 Roles
     if (!in_array($list_row['name'], $list_master_roles)) {
       $list_master_roles[] = $list_row['name'];
     }
 
-    // 2. People
+    // 2.1 People
     if (!in_array($list_row['post_title'], $list_team_members)) {
       $list_team_members[] = $list_row['post_title'];
     }
 
-
-
-  }
+  } // don't touch this, alex. It's instantiation for base arrays
 
   $days = array(
     "1" => "monday",
@@ -81,7 +79,29 @@ if (!$link) {
     "4" => "thursday",
     "5" => "friday",
     "6" => "saturday"
-  )
+  );
+
+  // 1.2 Roles
+
+
+        // role create
+      foreach ($list_master_roles as $null_index => $role) {
+        foreach ($list_master as $null_key => $list_row) {
+          $list_role_master[$role] = array();
+        }
+      }
+      // role populate
+      foreach ($list_master_roles as $null_index => $role) {
+        foreach ($list_master as $null_key => $list_row) {
+          if ($list_row['name'] == $role) {
+            $role_title  = $list_row['name'];
+            $role_member = $list_row['post_title'];
+            if (!in_array($role_member, $list_role_master[$role_title])) {
+              $list_role_master[$role_title][] = $role_member;
+            }
+          }
+        }
+      }
 
 
 
