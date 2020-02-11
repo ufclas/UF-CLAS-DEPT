@@ -97,7 +97,7 @@ wp_reset_postdata();
     $count .= "wp_posts.ID = wp_term_relationships.object_id ";
     $count .= "AND ";
     $count .= "wp_term_relationships.term_taxonomy_id = wp_terms.term_id ";
-    $count   .= "AND ";
+    $count .= "AND ";
     $count .= "wp_postmeta.post_id = wp_term_relationships.object_id";
 
   $query = mysqli_query($link, $count);
