@@ -21,9 +21,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style media="screen">
+
+      body {
+        width: 400px;
+        margin: auto;
+      }
+
       a, .user_information_toggle {
         color: #2A5DB0;
       }
+
     </style>
   </head>
   <body>
@@ -52,45 +59,34 @@
 
     -->
 
+    <h2>Days</h2>
     <ul>
       <?php
       foreach ($days as $key_day_numeric => $value_day_verbal) { ?>
-        <li><a href=\"#\"><?php echo $value_day_verbal; ?></a></li>
-
-        <?php
-          foreach ($list_master_schedule as $id => $vars) {
-
-          }
-
-      } // End DAYS loop
-
-       ?>
+        <li><a href="#"><?php echo $value_day_verbal; ?></a></li>
+      <?php } // End DAYS loop ?>
     </ul>
-
-
 
   <hr>
 
-
-
-
-
-<?php
-  echo "<ul>";
-    // scheduler_mechanics | 119
-    foreach ($list_master_positions as $position) {
-      echo "<li>{$position}</li>";
-      echo "<i>javascript</i>";
-    }
-  echo "</ul>";
-?>
+  <h2>Roles</h2>
+  <ul>
+  <?php
+      // scheduler_mechanics | 119
+      foreach ($list_master_roles as $position) {
+        echo "<li>{$position}</li>";
+      }
+  ?>
+  </ul>
 
 <hr>
 
-<?php
-    echo "<ul>";
-    foreach ($list_teamMembers as $key_user_id => $value_user_name) {
-      echo "<li class=\"user_information_toggle\">{$value_user_name}</li>";
-    }
-    echo "</ul>";
-?>
+  <h2>People</h2>
+  <ul>
+  <?php
+      // scheduler_mechanics | 119
+      foreach ($list_team_members as $person) {
+        echo "<li>{$person}</li>";
+      }
+  ?>
+  </ul>
