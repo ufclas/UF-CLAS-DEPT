@@ -5,7 +5,7 @@
 *      EMAIL: yash5@ufl.edu
 *      DATE: September 2017
 */
-require get_stylesheet_directory() . '/inc/shortcodes.php';
+
 
 /**
  * Load theme CSS and JavaScript
@@ -910,7 +910,10 @@ require get_theme_file_path( '/inc/shibboleth.php' );
  */
 require get_theme_file_path( '/inc/advanced-custom-fields/metaboxes.php' );
 
-/**
-* Includes the custom functions for the Emily Theme file
-*/
+
 require get_theme_file_path('/inc/custom-functions.php');
+
+/**
+* Includes the shortcodes file 
+*/
+require get_stylesheet_directory() . '/inc/shortcodes.php';
