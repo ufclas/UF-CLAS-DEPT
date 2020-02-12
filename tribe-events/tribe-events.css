@@ -716,8 +716,10 @@ Media Queries
     margin: 0 0 12px !important;
   }
 
-  #page h3.tribe-events-list-event-title a {
+  #page h3.tribe-events-list-event-title a,
+  #page h3.tribe-events-list-event-title {
       font-size: 1.125rem;
+      line-height: 28px;
   }
 
   .tribe-events-list .tribe-events-venue-details {
