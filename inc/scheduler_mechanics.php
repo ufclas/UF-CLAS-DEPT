@@ -105,126 +105,23 @@ if (!$link) {
             $role_title  = $list_row['slug'];
             // if alex is not in the [role] --
             if (!in_array($role_member, $list_role_master[$role_title])) {
-              // add alex to the role as an array
+              // there's a better way to do this
+              // it's right so don't touch it, for now
+              // but it's a little sketchy
               $list_role_master[$role_title][$role_member] = array(
                 'office_hours' => array(
-                  "monday" => array(
-                    "1" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "2" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "3" => array(
-                      "start" => "",
-                      "end"   => ""
-                    )
-                  ),
-
-                  "tuesday" => array(
-                    "1" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "2" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "3" => array(
-                      "start" => "",
-                      "end"   => ""
-                    )
-                  ),
-
-                  "wednesday" => array(
-                    "1" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "2" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "3" => array(
-                      "start" => "",
-                      "end"   => ""
-                    )
-                  ),
-
-                  "thursday" => array(
-                    "1" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "2" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "3" => array(
-                      "start" => "",
-                      "end"   => ""
-                    )
-                  ),
-
-                  "friday" => array(
-                    "1" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "2" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "3" => array(
-                      "start" => "",
-                      "end"   => ""
-                    )
-                  ),
-
-                  "saturday"    => array(
-                    "1" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "2" => array(
-                      "start" => "",
-                      "end"   => ""
-                    ),
-
-                    "3" => array(
-                      "start" => "",
-                      "end"   => ""
-                    )
-                  )
+                  "monday"    => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
+                  "tuesday"   => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
+                  "wednesday" => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
+                  "thursday"  => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
+                  "friday"    => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
+                  "saturday"  => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => ""))
                 ),
                  'teaching_schedule' => array());
             } // in_array (member)
           } // if slug == role
         } // list_row
       } // master
-
-
-      // echo "<pre>";
-      // print_r($list_role_master);
-      // echo "</pre>";
-      // echo "<pre>";
-      // print_r($list_role_master['fellow']['Alex Catalano']);
-      // echo "</pre>";
-
-
 
       foreach ($list_master_roles as $null_index => $role) {
         foreach ($list_master as $null_key => $list_row) {
@@ -233,12 +130,7 @@ if (!$link) {
           $role_title  = $list_row['slug'];
           $role_period = $list_row['meta_value'];
 
-          if (strpos($list_row['meta_key'], "period") !== false) {
-            if (!in_array($role_period, $list_role_master[$role_title][$role_member]['teaching_schedule'])) {
-              $list_role_master[$role_title][$role_member]['teaching_schedule'][] = $role_period;
-            }
-          } // teaching schedule
-
+          // office hours
           if (strpos($list_row['meta_key'], "appt") !== false) {
             $role_appt = $list_row['meta_key'];   // appt_day_slot_port
             $role_time = $list_row['meta_value']; // 16:00
@@ -258,6 +150,12 @@ if (!$link) {
               }
             }
           } // office Hours
+
+          if (strpos($list_row['meta_key'], "period") !== false) {
+            if (!in_array($role_period, $list_role_master[$role_title][$role_member]['teaching_schedule'])) {
+              $list_role_master[$role_title][$role_member]['teaching_schedule'][] = $role_period;
+            }
+          } // teaching schedule
         }
       }
 
@@ -265,8 +163,6 @@ if (!$link) {
       // echo "<pre>";
       // print_r($list_role_master);
       // echo "</pre>";
-
-
 
 
 // OOP

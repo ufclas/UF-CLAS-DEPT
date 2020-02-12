@@ -47,9 +47,9 @@
     <h2>Days</h2>
     <ul>
       <?php
-      foreach ($days as $key_day_numeric => $value_day_verbal) { ?>
-        <li><a href="<?php echo the_permalink(); ?>"><?php echo $value_day_verbal; ?></a></li>
-      <?php } // End DAYS loop ?>
+      //foreach ($days as $key_day_numeric => $value_day_verbal) { ?>
+        <!-- <li><a href="<?php echo the_permalink(); ?>"><?php// echo $value_day_verbal; ?></a></li> -->
+      <?php// } // End DAYS loop ?>
     </ul>
 
     <hr>
