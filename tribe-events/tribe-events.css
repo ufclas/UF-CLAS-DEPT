@@ -590,6 +590,19 @@ span.tribe-block__venue__phone {
     border: 1px solid #eee;
     margin: 30px 0;
 }
+
+.events-gridview .tribe-events-abbr.tribe-event-date-start,
+.events-gridview .tribe-event-description p {
+    font-size: 1rem;
+}
+
+.tribe-events-tooltip h3 {
+    line-height: 30px !important;
+}
+
+.events-gridview  .tribe-event-date-start  {
+  margin-left: 0;
+}
 /*====================================
 
 Media Queries
