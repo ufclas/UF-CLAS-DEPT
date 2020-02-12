@@ -58,14 +58,14 @@
 
     <ul>
       <?php
-        foreach ($list_role_master as $role => $people) {
-          echo "<li>".ucfirst($role)."</li>";
-          echo "<ul>";
-          foreach ($people as $null_list => $person) {
-            echo "<li>{$person}</li>";
-          }
-          echo "</ul>";
-        }
+        // foreach ($list_role_master as $role => $people) {
+        //   echo "<li>".ucfirst($role)."</li>";
+        //   echo "<ul>";
+        //   foreach ($people as $null_list => $person) {
+        //     echo "<li>{$person}</li>";
+        //   }
+        //   echo "</ul>";
+        // }
       ?>
     </ul>
 
@@ -73,14 +73,16 @@
 
     <h2>People</h2>
     <ul>
-    <?php
+    <!-- <?php
       foreach ($list_team_members as $person) {
         echo "<li>{$person}</li>";
       }
-    ?>
+    ?> -->
     </ul>
 
+    <hr>
 
+<!--
     <hr>   <hr>    <hr>
 
 
@@ -127,3 +129,5 @@
     <script type="text/javascript">
 
     </script>
+
+  -->
