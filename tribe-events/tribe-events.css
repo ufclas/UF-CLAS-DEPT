@@ -229,13 +229,14 @@ ul.tribe-events-sub-nav li {
     width: 100% !important;
 }
 
-#page a.tribe-events-ical.tribe-events-button {
+#page a.tribe-events-ical.tribe-events-button,
+#page a.tribe-events-gcal.tribe-events-button {
     background: #002346 !important;
     color: white;
     font-size: 1rem;
     max-width: 300px;
     width: 100%;
-    margin-right: 1rem;
+    margin-right: 0 auto;
 }
 
 #tribe-events {
@@ -455,12 +456,6 @@ a.desktop-more {
 	transition: .3s;
 }
 
-#page a.tribe-events-ical.tribe-events-button,
-#page a.tribe-events-gcal.tribe-events-button {
-    background: #00285e !important;
-	font-size: 1rem;
-	color: white;
-}
 
 #page a.tribe-events-ical.tribe-events-button:hover {
     color: white !important;
@@ -474,7 +469,6 @@ a.desktop-more {
 #page ul.tribe-events-sub-nav a {
     font-size: 1.125rem;
     font-family: "Quadon_Regular" !important;
-    border-bottom: 1px dashed #f45a1d;
 }
 
 .tribe-events-page-title {
@@ -578,7 +572,23 @@ span.tribe-block__venue__phone {
   font-family: "Gentona_Book" !important;
   font-weight: 400;
   display: block;
-  margin-top: 1rem;
+}
+
+.single-tribe_events .tribe-events-schedule{
+  background: transparent;
+  border: none;
+}
+
+#page ul.tribe-events-sub-nav li {
+    width: 100% !important;
+    float: none !important;
+    text-align: left !important;
+}
+
+.single-tribe_events .tribe-events-event-meta {
+    background: #fafafa;
+    border: 1px solid #eee;
+    margin: 30px 0;
 }
 /*====================================
 
@@ -708,6 +718,16 @@ Media Queries
   .tribe-events-loop .tribe-event-schedule-details {
     justify-content: left;
   }
+
+  #page ul.tribe-events-sub-nav li {
+    width: 45% !important;
+    float: left !important;
+  }
+
+  #page #main li.tribe-events-nav-next {
+    text-align: right !important;
+    float: right !important;
+  }
 }
 
 @media (min-width: 1025px){
@@ -792,5 +812,14 @@ Media Queries
   #page .tribe-event-description p {
       font-family: "Gentona_Light" !important;
       line-height: 22px;
+  }
+
+  #page a.tribe-events-ical.tribe-events-button,
+  #page a.tribe-events-gcal.tribe-events-button {
+    margin-right: 1rem;
+  }
+
+  #page ul.tribe-events-sub-nav a {
+    border-bottom: 1px dashed #f45a1d;
   }
 }
