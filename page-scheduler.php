@@ -56,16 +56,18 @@
 
     <h2>Roles</h2>
 
-    <?php
-      foreach ($list_role_master as $role => $people) {
-        echo "<h3>{$role}</h3>";
-        echo "<ul>";
-        foreach ($people as $null_list => $person) {
-          echo "<li>{$person}</li>";
+    <ul>
+      <?php
+        foreach ($list_role_master as $role => $people) {
+          echo "<li>".ucfirst($role)."</li>";
+          echo "<ul>";
+          foreach ($people as $null_list => $person) {
+            echo "<li>{$person}</li>";
+          }
+          echo "</ul>";
         }
-        echo "</ul>";
-      }
-    ?>
+      ?>
+    </ul>
 
     <hr>
 
@@ -78,9 +80,41 @@
     ?>
     </ul>
 
+
+    <hr>   <hr>    <hr>
+
+
+    <h2>Days []</h2>
+
+    <?php $i = 0; foreach ($days as $key_day_numeric => $value_day_verbal) { ?>
+
+    <form action="<?php echo the_permalink(); ?>" method="get">
+      <input id="day_<?php echo $i; ?>" type="checkbox" name="day_<?php echo $i; ?>" value="<?php echo $value_day_verbal; ?>">
+      <label for="day_<?php echo $i; ?>"><?php echo $value_day_verbal; ?></label>
+      <br>
+      <?php $i++; } ?>
+      <input type="submit" name="submit" value="create day list">
+    </form>
+
     <hr>
 
-    <h2>Schedule Builder</h2>
+    <h2>Roles []</h2>
+
+    <?php $i = 0; foreach ($list_role_master as $role => $people) { ?>
+
+    <form action="<?php echo the_permalink(); ?>" method="get">
+      <input id="role_<?php echo $i; ?>" type="checkbox" name="role_<?php echo $i; ?>" value="<?php echo $role; ?>">
+      <label for="role_<?php echo $i; ?>"><?php echo $role; ?></label>
+      <br>
+      <?php $i++; } ?>
+      <input type="submit" name="submit" value="create schedule list">
+    </form>
+
+
+    <hr>
+
+    <h2>People []</h2>
+
     <form action="<?php echo the_permalink(); ?>" method="get">
       <?php $i = 0; foreach ($list_team_members as $person) { ?>
         <input id="person_<?php echo $i; ?>" type="checkbox" name="person_<?php echo $i; ?>" value="<?php echo $person; ?>">

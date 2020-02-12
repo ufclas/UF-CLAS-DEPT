@@ -60,18 +60,20 @@ if (!$link) {
     //   print_r($list_row);
     // echo "</pre>";
 
-    // 1.1 Roles
-    if (!in_array($list_row['name'], $list_master_roles)) {
-      $list_master_roles[] = $list_row['name'];
-    }
-
-    // 2.1 People
+    // 1.1 People
     if (!in_array($list_row['post_title'], $list_team_members)) {
       $list_team_members[] = $list_row['post_title'];
     }
 
+    // 2.1 Roles
+    if (!in_array($list_row['slug'], $list_master_roles)) {
+      $list_master_roles[] = $list_row['slug'];
+    }
+
   } // don't touch this, alex. It's instantiation for base arrays
 
+
+// 0.1 days
   $days = array(
     "1" => "monday",
     "2" => "tuesday",
@@ -82,27 +84,199 @@ if (!$link) {
   );
 
 
-// 1.2 Roles
-        // role create
+// 2.2 Roles
+        // role create | to avoid errors
       foreach ($list_master_roles as $null_index => $role) {
+        // echo $role;
         foreach ($list_master as $null_key => $list_row) {
+          // CAREFUL HERE . THIS IS THE BASE OF THE PROGRAM,
+          // rewriting to empty role as string and create array
           $list_role_master[$role] = array();
         }
       }
-      // role populate
+
+      // build $list_role_master" // insert PEOPLE
+      // $role = either fellow, faculty, faculty adjunct -- small list of roles
       foreach ($list_master_roles as $null_index => $role) {
         foreach ($list_master as $null_key => $list_row) {
-          if ($list_row['name'] == $role) {
-            $role_title  = $list_row['name'];
+          // if master lists print row == little lists role
+          if ($list_row['slug'] == $role) {
             $role_member = $list_row['post_title'];
+            $role_title  = $list_row['slug'];
+            // if alex is not in the [role] --
             if (!in_array($role_member, $list_role_master[$role_title])) {
-              $list_role_master[$role_title][] = $role_member;
+              // add alex to the role as an array
+              $list_role_master[$role_title][$role_member] = array(
+                'office_hours' => array(
+                  "monday" => array(
+                    "1" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "2" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "3" => array(
+                      "start" => "",
+                      "end"   => ""
+                    )
+                  ),
+
+                  "tuesday" => array(
+                    "1" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "2" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "3" => array(
+                      "start" => "",
+                      "end"   => ""
+                    )
+                  ),
+
+                  "wednesday" => array(
+                    "1" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "2" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "3" => array(
+                      "start" => "",
+                      "end"   => ""
+                    )
+                  ),
+
+                  "thursday" => array(
+                    "1" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "2" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "3" => array(
+                      "start" => "",
+                      "end"   => ""
+                    )
+                  ),
+
+                  "friday" => array(
+                    "1" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "2" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "3" => array(
+                      "start" => "",
+                      "end"   => ""
+                    )
+                  ),
+
+                  "saturday"    => array(
+                    "1" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "2" => array(
+                      "start" => "",
+                      "end"   => ""
+                    ),
+
+                    "3" => array(
+                      "start" => "",
+                      "end"   => ""
+                    )
+                  )
+                ),
+                 'teaching_schedule' => array());
+            } // in_array (member)
+          } // if slug == role
+        } // list_row
+      } // master
+
+
+      // echo "<pre>";
+      // print_r($list_role_master);
+      // echo "</pre>";
+      // echo "<pre>";
+      // print_r($list_role_master['fellow']['Alex Catalano']);
+      // echo "</pre>";
+
+
+
+      foreach ($list_master_roles as $null_index => $role) {
+        foreach ($list_master as $null_key => $list_row) {
+
+          $role_member = $list_row['post_title'];
+          $role_title  = $list_row['slug'];
+          $role_period = $list_row['meta_value'];
+
+          if (strpos($list_row['meta_key'], "period") !== false) {
+            if (!in_array($role_period, $list_role_master[$role_title][$role_member]['teaching_schedule'])) {
+              $list_role_master[$role_title][$role_member]['teaching_schedule'][] = $role_period;
             }
-          }
+          } // teaching schedule
+
+          if (strpos($list_row['meta_key'], "appt") !== false) {
+            $role_appt = $list_row['meta_key'];   // appt_day_slot_port
+            $role_time = $list_row['meta_value']; // 16:00
+            $role_appt = str_replace("appt_","", $role_appt); // saturday_3_1 | monday_1_0
+            $explode_appt = explode("_", $role_appt);
+            $role_appt_day  = $explode_appt['0']; // saturday
+            $role_appt_slot = $explode_appt['1']; // 3
+            $role_appt_port = $explode_appt['2']; // 1
+            foreach ($days as $numeric => $day) {
+              if ($day === $role_appt_day) {
+                if ($role_appt_port == "0") {
+                  $list_role_master[$role_title][$role_member]['office_hours'][$day][$role_appt_slot]['start'] = $role_time;
+                }
+                if ($role_appt_port == "1") {
+                  $list_role_master[$role_title][$role_member]['office_hours'][$day][$role_appt_slot]['end'] = $role_time;
+                }
+              }
+            }
+          } // office Hours
         }
       }
 
 
+      // echo "<pre>";
+      // print_r($list_role_master);
+      // echo "</pre>";
 
+
+
+
+// OOP
+      class Person {
+        var $name;
+        var $role;
+        function office_hours() {}
+        function teaching_schedule() {}
+          // var $email;
+          // var $phone;
+      }
 
 ?>
