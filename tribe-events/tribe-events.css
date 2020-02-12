@@ -112,7 +112,8 @@ h2.tribe-events-schedule__datetime br {
     display: none;
 }
 
-h2.tribe-events-schedule__datetime span {
+h2.tribe-events-schedule__datetime span,
+.tribe-events-schedule .tribe-clearfix h2 {
     font-family: "Gentona" !important;
     font-weight: 400;
 }
@@ -494,7 +495,9 @@ ul.tribe-events-sub-nav a {
 }
 
 .tribe-events-meta-group.tribe-events-meta-group-details dl *,
-.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix * {
+.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix *,
+.tribe-events-meta-group.tribe-events-meta-group-venue .tribe-venue,
+.tribe-events-meta-group.tribe-events-meta-group-organizer dd {
     font-family: "Gentona_Book";
     font-weight: 100 !important;
     text-decoration: none;
@@ -527,6 +530,10 @@ h3.tribe-mobile-day-heading {
 .tribe-events-event-schedule-details {
     font-family: "Gentona_Book";
     color: #666666;
+}
+
+.tribe-events-event-schedule-details {
+  font-family: "Gentona_Book";
 }
 
 .tribe-events-event-image {
@@ -564,6 +571,14 @@ span.tribe-block__venue__phone {
 .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a {
     background: #004083;
     color: white !important;
+}
+
+#page .single-event-dates {
+  font-size: 21px;
+  font-family: "Gentona_Book" !important;
+  font-weight: 400;
+  display: block;
+  margin-top: 1rem;
 }
 /*====================================
 
@@ -770,7 +785,7 @@ Media Queries
     display: none !important;
   }
 
-  #tribe-events {
+  .archive #tribe-events {
     border-right: 1px dashed #f45a1d;
   }
 
