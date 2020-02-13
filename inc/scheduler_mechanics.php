@@ -83,13 +83,20 @@ if (!$link) {
     "6" => "saturday"
   );
 
+  // create days list for the master time loop
+  foreach ($days as $day) {
+    $create_days_office_hours[$day] = array(
+      "1" => array("start" => "", "end" => ""),
+      "2" => array("start" => "", "end" => ""),
+      "3" => array("start" => "", "end" => "")
+    );
+  } // create days
 
 // 2.2 Roles
         // role create | to avoid errors
       foreach ($list_master_roles as $null_index => $role) {
         // echo $role;
         foreach ($list_master as $null_key => $list_row) {
-          // CAREFUL HERE . THIS IS THE BASE OF THE PROGRAM,
           // rewriting to empty role as string and create array
           $list_role_master[$role] = array();
         }
@@ -105,19 +112,10 @@ if (!$link) {
             $role_title  = $list_row['slug'];
             // if alex is not in the [role] --
             if (!in_array($role_member, $list_role_master[$role_title])) {
-              // there's a better way to do this
-              // it's right so don't touch it, for now
-              // but it's a little sketchy
               $list_role_master[$role_title][$role_member] = array(
-                'office_hours' => array(
-                  "monday"    => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
-                  "tuesday"   => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
-                  "wednesday" => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
-                  "thursday"  => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
-                  "friday"    => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => "")),
-                  "saturday"  => array("1" => array("start" => "", "end" => ""), "2" => array("start" => "", "end" => ""), "3" => array("start" => "", "end" => ""))
-                ),
-                 'teaching_schedule' => array());
+                'office_hours'      => $create_days_office_hours,
+                'teaching_schedule' => array()
+               );
             } // in_array (member)
           } // if slug == role
         } // list_row
@@ -125,12 +123,11 @@ if (!$link) {
 
       foreach ($list_master_roles as $null_index => $role) {
         foreach ($list_master as $null_key => $list_row) {
-
           $role_member = $list_row['post_title'];
           $role_title  = $list_row['slug'];
           $role_period = $list_row['meta_value'];
 
-          // office hours
+          // 2.2.1 office hours
           if (strpos($list_row['meta_key'], "appt") !== false) {
             $role_appt = $list_row['meta_key'];   // appt_day_slot_port
             $role_time = $list_row['meta_value']; // 16:00
@@ -151,10 +148,27 @@ if (!$link) {
             }
           } // office Hours
 
+
+          // 2.2.2 teaching schedule
           if (strpos($list_row['meta_key'], "period") !== false) {
-            if (!in_array($role_period, $list_role_master[$role_title][$role_member]['teaching_schedule'])) {
-              $list_role_master[$role_title][$role_member]['teaching_schedule'][] = $role_period;
-            }
+
+            $role_member = $list_row['post_title'];
+            $role_title  = $list_row['slug'];
+            $role_period = $list_row['meta_value'];
+            $role_period    = str_replace("period_","",$role_period);
+            $explode_period = explode("_", $role_period);
+
+            echo "<pre>";
+              print_r($explode_period);
+            echo "</pre>";
+
+
+            // if (!in_array($role_period, $list_role_master[$role_title][$role_member]['teaching_schedule'])) {
+            //   $list_role_master[$role_title][$role_member]['teaching_schedule'][] = $role_period;
+            // }
+
+
+
           } // teaching schedule
         }
       }

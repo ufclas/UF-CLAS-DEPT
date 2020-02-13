@@ -46,6 +46,8 @@
 
     <h2>Days</h2>
     <ul>
+      <br><br>
+      <br><br>
       <?php
       //foreach ($days as $key_day_numeric => $value_day_verbal) { ?>
         <!-- <li><a href="<?php echo the_permalink(); ?>"><?php// echo $value_day_verbal; ?></a></li> -->
@@ -57,6 +59,8 @@
     <h2>Roles</h2>
 
     <ul>
+      <br><br>
+      <br><br>
       <?php
         // foreach ($list_role_master as $role => $people) {
         //   echo "<li>".ucfirst($role)."</li>";
@@ -73,6 +77,8 @@
 
     <h2>People</h2>
     <ul>
+      <br><br>
+      <br><br>
     <!-- <?php
       foreach ($list_team_members as $person) {
         echo "<li>{$person}</li>";
