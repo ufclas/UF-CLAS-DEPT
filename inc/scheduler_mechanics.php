@@ -46,15 +46,15 @@ if (!$link) {
 
   $query = mysqli_query($link, $count);
 
-  $list_master = array();
+  $list_tempGen = array();
   while ($row = mysqli_fetch_assoc($query)) {
-    $list_master[] = $row;
+    $list_tempGen[] = $row;
   }
 
   $list_master_roles = array();
   $list_team_members = array();
 
-  foreach ($list_master as $null_key => $list_row) {
+  foreach ($list_tempGen as $null_key => $list_row) {
 
     // echo "<pre>";
     //   print_r($list_row);
@@ -105,23 +105,23 @@ if (!$link) {
         // role create | to avoid errors
       foreach ($list_master_roles as $null_index => $role) {
         // echo $role;
-        foreach ($list_master as $null_key => $list_row) {
+        foreach ($list_tempGen as $null_key => $list_row) {
           // rewriting to empty role as string and create array
-          $list_role_master[$role] = array();
+          $list_master[$role] = array();
         }
       }
 
-      // build $list_role_master" // insert PEOPLE
+      // build $list_master" // insert PEOPLE
       // $role = either fellow, faculty, faculty adjunct -- small list of roles
       foreach ($list_master_roles as $null_index => $role) {
-        foreach ($list_master as $null_key => $list_row) {
+        foreach ($list_tempGen as $null_key => $list_row) {
           // if master lists print row == little lists role
           if ($list_row['slug'] == $role) {
             $role_member = $list_row['post_title'];
             $role_title  = $list_row['slug'];
             // if alex is not in the [role] --
-            if (!in_array($role_member, $list_role_master[$role_title])) {
-              $list_role_master[$role_title][$role_member] = array(
+            if (!in_array($role_member, $list_master[$role_title])) {
+              $list_master[$role_title][$role_member] = array(
                 'office_hours'      => $create_days_office_hours,
                 'teaching_schedule' => $create_days_teaching_schedule
                );
@@ -131,7 +131,7 @@ if (!$link) {
       } // master
 
       foreach ($list_master_roles as $null_index => $role) {
-        foreach ($list_master as $null_key => $list_row) {
+        foreach ($list_tempGen as $null_key => $list_row) {
           $role_member = $list_row['post_title'];
           $role_title  = $list_row['slug'];
           $role_period = $list_row['meta_value'];
@@ -148,10 +148,10 @@ if (!$link) {
             foreach ($days as $numeric => $day) {
               if ($day === $role_appt_day) {
                 if ($role_appt_port == "0") {
-                  $list_role_master[$role_title][$role_member]['office_hours'][$day][$role_appt_slot]['start'] = $role_time;
+                  $list_master[$role_title][$role_member]['office_hours'][$day][$role_appt_slot]['start'] = $role_time;
                 }
                 if ($role_appt_port == "1") {
-                  $list_role_master[$role_title][$role_member]['office_hours'][$day][$role_appt_slot]['end'] = $role_time;
+                  $list_master[$role_title][$role_member]['office_hours'][$day][$role_appt_slot]['end'] = $role_time;
                 }
               }
             }
@@ -171,9 +171,9 @@ if (!$link) {
             $period_day  = $explode_period['0'];
             $period_slot = $explode_period['1'];
 
-            foreach ($list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day] as $key_period => $empty_value) {
+            foreach ($list_master[$role_title][$role_member]['teaching_schedule'][$period_day] as $key_period => $empty_value) {
               if ($key_period == $period_slot) {
-                $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day][$key_period] = $period_slot;
+                $list_master[$role_title][$role_member]['teaching_schedule'][$period_day][$key_period] = $period_slot;
               }
             }
           } // teaching schedule
@@ -182,7 +182,7 @@ if (!$link) {
 
 
       // echo "<pre>";
-      //   print_r($list_role_master);
+      //   print_r($list_master);
       // echo "</pre>";
 
 

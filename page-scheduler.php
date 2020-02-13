@@ -36,7 +36,7 @@
     <p><a href="<?php echo the_permalink(); ?>">Available now</a> <?php if (false) {echo "next available"; } ?></p>
 
     <hr>
-    
+
     <form action="<?php echo the_permalink(); ?>" method="post">
       <input type="text" name="search_schedules" value="" placeholder="search">
       <input type="submit" name="search_schedule_submit" value="search">
@@ -46,7 +46,9 @@
 
     <h2>Days</h2>
     <ul>
+      <?php
 
+      ?>
     </ul>
 
     <hr>
@@ -85,7 +87,7 @@
 
     <h2>Roles []</h2>
 
-    <?php $i = 0; foreach ($list_role_master as $role => $people) { ?>
+    <?php $i = 0; foreach ($list_master as $role => $people) { ?>
 
     <form action="<?php echo the_permalink(); ?>" method="get">
       <input id="role_<?php echo $i; ?>" type="checkbox" name="role_<?php echo $i; ?>" value="<?php echo $role; ?>">
