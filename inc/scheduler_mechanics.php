@@ -90,7 +90,25 @@ if (!$link) {
       "2" => array("start" => "", "end" => ""),
       "3" => array("start" => "", "end" => "")
     );
-  } // create days
+  } // create office hours list
+
+  // create days list for the master time loop
+  foreach ($days as $day) {
+    $create_days_teaching_schedule[$day] = array(
+      "1"  => "",
+      "2"  => "",
+      "3"  => "",
+      "4"  => "",
+      "5"  => "",
+      "6"  => "",
+      "7"  => "",
+      "8"  => "",
+      "9"  => "",
+      "10" => ""
+    );
+  } // create office hours list
+
+
 
 // 2.2 Roles
         // role create | to avoid errors
@@ -114,7 +132,7 @@ if (!$link) {
             if (!in_array($role_member, $list_role_master[$role_title])) {
               $list_role_master[$role_title][$role_member] = array(
                 'office_hours'      => $create_days_office_hours,
-                'teaching_schedule' => array()
+                'teaching_schedule' => $create_days_teaching_schedule
                );
             } // in_array (member)
           } // if slug == role
@@ -155,28 +173,35 @@ if (!$link) {
             $role_member = $list_row['post_title'];
             $role_title  = $list_row['slug'];
             $role_period = $list_row['meta_value'];
+
             $role_period    = str_replace("period_","",$role_period);
             $explode_period = explode("_", $role_period);
 
-            echo "<pre>";
-              print_r($explode_period);
-            echo "</pre>";
+            // echo "<pre>";
+            //   print_r($explode_period);
+            // echo "</pre>";
+
+            $period_day  = $explode_period['0'];
+            $period_slot = $explode_period['1'];
+
+            if (!in_array($period_day, $list_role_master[$role_title][$role_member]['teaching_schedule'])) {
+              // $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day][] = $period_slot;
+               // $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day] = array();
 
 
-            // if (!in_array($role_period, $list_role_master[$role_title][$role_member]['teaching_schedule'])) {
-            //   $list_role_master[$role_title][$role_member]['teaching_schedule'][] = $role_period;
-            // }
 
-
-
+              // if (!in_array($period_slot, $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day])) {
+              //   $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day][] = $period_slot;
+              // }
+            }
           } // teaching schedule
         }
       }
 
 
-      // echo "<pre>";
-      // print_r($list_role_master);
-      // echo "</pre>";
+      echo "<pre>";
+      print_r($list_role_master);
+      echo "</pre>";
 
 
 // OOP
