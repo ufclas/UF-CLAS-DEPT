@@ -15,31 +15,24 @@
  }
 
  #page .subnav-dark a {
-     color: white;
-     font-size: 1.4rem;
-     letter-spacing: 1px;
+   color: white;
+   font-size: 1.2rem;
+   letter-spacing: 1px;
+   font-family: "Gentona_Book" !important;
+   font-weight: 100;
+   text-transform: uppercase;
  }
 
  #page .subnav-dark .sub-menu a {
      font-size: 1.125rem;
+     display: block;
+     padding: .4rem 0;
  }
 
  .subnav-dark {
      background: #004083;
      padding: 1px;
  }
-
- div#newsletter-menu-navbar:before {
-     content: "Menu";
-     color: white;
-     font-family: "Gentona_Bold";
-     font-size: 1.6rem;
-     display: flex;
-     justify-content: center;
- }
-
-
-
 
  .single-article .container {
     max-width: 850px;
@@ -120,10 +113,6 @@
     padding: 0 1rem;
 }
 
-
-
-
-
 .tax-issuem_issue_categories .landing-page-hero-full,
 .tax-issuem_issue .landing-page-hero-full,
 .newsletter-page .landing-page-hero-full {
@@ -166,9 +155,68 @@
     text-transform: uppercase;
 }
 
+#menu-newsletter-menu .sub-menu {
+    display: none;
+}
 
+#menu-newsletter-menu .open .sub-menu {
+    display: block;
+}
+
+#menu-newsletter-menu ul.sub-menu {
+  list-style: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+span.glyphicon.glyphicon-menu-hamburger {
+    font-size: 1.125rem;
+    color: white;
+}
+
+button.navbar-toggle {
+    width: 100%;
+    background: #004083;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-family: "Gentona_Book";
+}
+
+#newsletter-menu-navbar {
+    display: none;
+}
+
+#newsletter-menu-navbar.show {
+    display: block;
+}
+
+ul#menu-newsletter-menu > li {
+    padding: 5px 0;
+}
 
 @media (min-width: 1025px){
+  #newsletter-menu-navbar {
+      display: block;
+  }
+
+  .issuem-mobile-menu {
+    display: none;
+  }
+
+  .show #menu-newsletter-menu .sub-menu {
+    display: none;
+  }
+
 	.issuem-archive-text {
     display: flex;
 	}
@@ -206,31 +254,31 @@
       display: flex;
       width: 100%;
       justify-content: center;
+      flex-wrap: wrap;
   }
 
   ul#menu-newsletter-menu > li {
-  	flex: 1 auto;
+    flex: 1 33%;
+    text-align: center;
+    position: relative;
   }
 
   #menu-newsletter-menu li.menu-item-has-children:hover > ul {
-      display: block;
-      position: absolute;
-      background: #004083;
-      overflow: visible;
-      z-index: 99;
-      padding: 1rem 2rem;
+    display: block;
+    position: absolute;
+    background: #004083;
+    overflow: visible;
+    z-index: 99;
+    padding: 1rem 0;
+    width: 100%;
   }
 
-  ul.sub-menu {
-    list-style: none;
+  #menu-newsletter-menu .sub-menu li:hover {
+    background: #1570CF;
   }
 
   .subnav-dark .container {
     overflow: visible;
-  }
-
-  .subnav-dark ul.sub-menu li {
-    margin: .5rem 0;
   }
 
   .issuem_archives_shortcode > div {

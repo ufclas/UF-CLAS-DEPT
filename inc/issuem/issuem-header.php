@@ -21,6 +21,12 @@
 
 	// Newsletter menu
 	if ( has_nav_menu( 'newsletter-menu' ) ): ?>
+
+			<button type="button" class="navbar-toggle issuem-mobile-menu" data-toggle="collapse" data-target="#newsletter-menu-navbar" onclick="document.getElementById('newsletter-menu-navbar').classList.toggle('show');">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Menu
+			</button>
+
   		<nav id="site-navigation" class="navbar navbar-inverse subnav subnav-dark" role="navigation">
     		<div class="container">
       		<?php
