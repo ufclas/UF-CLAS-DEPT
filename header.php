@@ -56,8 +56,6 @@
 
 	 if ( is_singular() && has_post_thumbnail() && (!is_page_template( array('page-image-header.php', 'single-no-feature-image.php', 'page-clas-home.php', 'page-interior-title-image.php'))) && (!is_singular('clas_team_members')) && (!is_page('CLAS IT Connections')) ) :
  		echo '<div class="single-featured-image-header">';
-
-		echo '<div class="single-featured-image-header">';
                    // If this is a magazine article
                    if ( is_page_template( 'single-magazine-article.php' ) ) {
 					   echo '<div class="wrap fi">';
