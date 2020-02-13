@@ -5072,6 +5072,24 @@ h2.entry-title.interior-page {
 .glyphicon-menu-up:before { content: "\e260";}
 
 
+ul.breadcrumb-wrap.kb-breadcrumbs {
+    margin-top: 4rem;
+}
+
+#page ul.breadcrumb-wrap.kb-breadcrumbs li {
+    display: inline;
+}
+
+#page ul.breadcrumb-wrap.kb-breadcrumbs li:after {
+  content: " >> ";
+  letter-spacing: -2px;
+  padding: 0 .5rem;
+}
+
+#page ul.breadcrumb-wrap.kb-breadcrumbs li:last-child:after {
+  display: none;
+}
+
 @media (min-width: 768px){
 
    .footer-uf-col-1{
