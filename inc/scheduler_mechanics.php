@@ -90,23 +90,14 @@ if (!$link) {
       "2" => array("start" => "", "end" => ""),
       "3" => array("start" => "", "end" => "")
     );
-  } // create office hours list
+  } // create pre-populating office hours list
 
   // create days list for the master time loop
   foreach ($days as $day) {
     $create_days_teaching_schedule[$day] = array(
-      "1"  => "",
-      "2"  => "",
-      "3"  => "",
-      "4"  => "",
-      "5"  => "",
-      "6"  => "",
-      "7"  => "",
-      "8"  => "",
-      "9"  => "",
-      "10" => ""
+      "1"  => "", "2"  => "", "3"  => "", "4"  => "", "5"  => "", "6"  => "", "7"  => "", "8"  => "", "9"  => "", "10" => ""
     );
-  } // create office hours list
+  } // create pre-populating teaching schedule list
 
 
 
@@ -177,41 +168,22 @@ if (!$link) {
             $role_period    = str_replace("period_","",$role_period);
             $explode_period = explode("_", $role_period);
 
-            // echo "<pre>";
-            //   print_r($explode_period);
-            // echo "</pre>";
-
             $period_day  = $explode_period['0'];
             $period_slot = $explode_period['1'];
 
-            if (!in_array($period_day, $list_role_master[$role_title][$role_member]['teaching_schedule'])) {
-              // $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day][] = $period_slot;
-               // $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day] = array();
-
-
-
-              // if (!in_array($period_slot, $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day])) {
-              //   $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day][] = $period_slot;
-              // }
+            foreach ($list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day] as $key_period => $empty_value) {
+              if ($key_period == $period_slot) {
+                $list_role_master[$role_title][$role_member]['teaching_schedule'][$period_day][$key_period] = $period_slot;
+              }
             }
           } // teaching schedule
         }
       }
 
 
-      echo "<pre>";
-      print_r($list_role_master);
-      echo "</pre>";
+      // echo "<pre>";
+      //   print_r($list_role_master);
+      // echo "</pre>";
 
-
-// OOP
-      class Person {
-        var $name;
-        var $role;
-        function office_hours() {}
-        function teaching_schedule() {}
-          // var $email;
-          // var $phone;
-      }
 
 ?>

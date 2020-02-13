@@ -3,6 +3,13 @@
   // set timezone to local time (a little unsure about relying on this method)
   date_default_timezone_set("America/New_York");
   include("inc/scheduler_mechanics.php");
+
+  // if (isset($_POST['search_schedule_submit'])) {
+  //   echo "<p><i>&quot;";
+  //   echo $_POST['search_schedules'];
+  //   echo "&quot;</i></p>";
+  // }
+
 ?>
 
 <!DOCTYPE html>
@@ -29,61 +36,31 @@
     <p><a href="<?php echo the_permalink(); ?>">Available now</a> <?php if (false) {echo "next available"; } ?></p>
 
     <hr>
+    
     <form action="<?php echo the_permalink(); ?>" method="post">
       <input type="text" name="search_schedules" value="" placeholder="search">
       <input type="submit" name="search_schedule_submit" value="search">
     </form>
 
-    <?php
-      if (isset($_POST['search_schedule_submit'])) {
-        echo "<p><i>&quot;";
-        echo $_POST['search_schedules'];
-        echo "&quot;</i></p>";
-      }
-    ?>
-
     <hr>
 
     <h2>Days</h2>
     <ul>
-      <br><br>
-      <br><br>
-      <?php
-      //foreach ($days as $key_day_numeric => $value_day_verbal) { ?>
-        <!-- <li><a href="<?php echo the_permalink(); ?>"><?php// echo $value_day_verbal; ?></a></li> -->
-      <?php// } // End DAYS loop ?>
+
     </ul>
 
     <hr>
 
     <h2>Roles</h2>
-
     <ul>
-      <br><br>
-      <br><br>
-      <?php
-        // foreach ($list_role_master as $role => $people) {
-        //   echo "<li>".ucfirst($role)."</li>";
-        //   echo "<ul>";
-        //   foreach ($people as $null_list => $person) {
-        //     echo "<li>{$person}</li>";
-        //   }
-        //   echo "</ul>";
-        // }
-      ?>
+
     </ul>
 
     <hr>
 
     <h2>People</h2>
     <ul>
-      <br><br>
-      <br><br>
-    <!-- <?php
-      foreach ($list_team_members as $person) {
-        echo "<li>{$person}</li>";
-      }
-    ?> -->
+
     </ul>
 
     <hr>
