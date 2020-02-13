@@ -60,12 +60,12 @@ if (!$link) {
     //   print_r($list_row);
     // echo "</pre>";
 
-    // 1.1 People
+// People
     if (!in_array($list_row['post_title'], $list_team_members)) {
       $list_team_members[] = $list_row['post_title'];
     }
 
-    // 2.1 Roles
+// Roles
     if (!in_array($list_row['slug'], $list_master_roles)) {
       $list_master_roles[] = $list_row['slug'];
     }
@@ -73,7 +73,7 @@ if (!$link) {
   } // don't touch this, alex. It's instantiation for base arrays
 
 
-// 0.1 days
+// days
   $days = array(
     "1" => "monday",
     "2" => "tuesday",
@@ -101,7 +101,7 @@ if (!$link) {
 
 
 
-// 2.2 Roles
+// Roles
         // role create | to avoid errors
       foreach ($list_master_roles as $null_index => $role) {
         // echo $role;
@@ -136,7 +136,7 @@ if (!$link) {
           $role_title  = $list_row['slug'];
           $role_period = $list_row['meta_value'];
 
-          // 2.2.1 office hours
+          // office hours
           if (strpos($list_row['meta_key'], "appt") !== false) {
             $role_appt = $list_row['meta_key'];   // appt_day_slot_port
             $role_time = $list_row['meta_value']; // 16:00
@@ -158,7 +158,7 @@ if (!$link) {
           } // office Hours
 
 
-          // 2.2.2 teaching schedule
+          // teaching schedule
           if (strpos($list_row['meta_key'], "period") !== false) {
 
             $role_member = $list_row['post_title'];
@@ -184,6 +184,72 @@ if (!$link) {
       // echo "<pre>";
       //   print_r($list_master);
       // echo "</pre>";
+
+
+      function p($list) {
+        echo "<pre>";
+          print_r($list);
+        echo "</pre>";
+      }
+
+
+      // make days that have scheduled events
+      $list_days = array();
+          foreach ($list_master as $role => $people) {
+            foreach ($people as $person => $schedule) {
+              foreach ($schedule as $type => $times) {
+                // "office_hours" => "oh"
+                if ($type == "office_hours") {
+                  foreach ($times as $day_oh => $list_oh) {
+                    foreach ($list_oh as $key_oh_slot => $list_oh_ports) {
+                      foreach ($list_oh_ports as $port => $oh_time) {
+                        if (!empty($oh_time)) {
+                          if (!in_array($day_oh, $list_days)) {
+                            $list_days[] = $day_oh;
+                          }
+                        }
+                      }
+                    }
+                  }
+                } // /if office_hours
+
+                // "teaching_schedule" => "ts"
+                if ($type == "teaching_schedule") {
+                  foreach ($times as $day_ts => $list_ts) {
+                    foreach ($list_ts as $key_ts_slot => $value_ts_slot) {
+                      if (!empty($value_ts_slot)) {
+                        if (!in_array($day_ts, $list_days)) {
+                          $list_days[] = $day_ts;
+                        }
+                      }
+                    }
+                  }
+                } // /if teaching_schedule
+              }
+            }
+          }
+          // need to sort
+
+
+          // roles
+          $list_roles = array();
+          foreach ($list_master as $role => $people) {
+            if (!in_array($role, $list_roles)) {
+              $list_roles[] = $role;
+            }
+          }
+          sort($list_roles);
+
+          // people
+          $list_people = array();
+          foreach ($list_master as $role => $people) {
+            foreach ($people as $person => $null_list) {
+              if (!in_array($person, $list_people)) {
+                $list_people[] = $person;
+              }
+            }
+          }
+          sort($list_people);
 
 
 ?>

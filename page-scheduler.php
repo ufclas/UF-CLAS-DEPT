@@ -47,7 +47,9 @@
     <h2>Days</h2>
     <ul>
       <?php
-
+        foreach ($list_days as $scheduledDay) {
+          echo "<li>{$scheduledDay}</li>";
+        }
       ?>
     </ul>
 
@@ -55,14 +57,22 @@
 
     <h2>Roles</h2>
     <ul>
-
+      <?php
+        foreach ($list_roles as $role) {
+          echo "<li>{$role}</li>";
+        }
+      ?>
     </ul>
 
     <hr>
 
     <h2>People</h2>
     <ul>
-
+      <?php
+        foreach ($list_people as $person) {
+          echo "<li>{$person}</li>";
+        }
+      ?>
     </ul>
 
     <hr>
