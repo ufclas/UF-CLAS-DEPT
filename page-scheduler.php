@@ -4,6 +4,15 @@
   date_default_timezone_set("America/New_York");
   include("inc/scheduler_mechanics.php");
 
+  $unlock = false;
+  // steady processing
+  if (isset($_GET['menu'])) {
+    $unlock = true;
+    $menu = $_GET['menu'];
+    $show = $_GET['show'];
+  }
+
+
   // if (isset($_POST['search_schedule_submit'])) {
   //   echo "<p><i>&quot;";
   //   echo $_POST['search_schedules'];
@@ -11,7 +20,6 @@
   // }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -29,100 +37,74 @@
         color: #2A5DB0;
       }
 
+      .menu_nav li a {
+        text-decoration: none;
+      }
+
+      a#highlight_list_item {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
     </style>
   </head>
   <body>
 
-    <p><a href="<?php echo the_permalink(); ?>">Available now</a> <?php if (false) {echo "next available"; } ?></p>
+    <?php if (!$unlock) { ?>
 
-    <hr>
+      <p><a href="<?php echo the_permalink(); ?>">Available now</a> <?php if (false) {echo "next available"; } ?></p>
 
-    <form action="<?php echo the_permalink(); ?>" method="post">
-      <input type="text" name="search_schedules" value="" placeholder="search">
-      <input type="submit" name="search_schedule_submit" value="search">
-    </form>
+      <hr>
+      <form action="<?php echo the_permalink(); ?>" method="post">
+        <input type="text" name="search_schedules" value="" placeholder="search">
+        <input type="submit" name="search_schedule_submit" value="search">
+      </form>
+      <hr>
+      <h2>Days</h2>
+      <ul>
+        <?php
+          foreach ($list_days as $scheduledDay) {
+            echo "<li>{$scheduledDay}</li>";
+          }
+        ?>
+      </ul>
+      <hr>
+      <h2>Roles</h2>
+      <ul class="menu_nav">
+        <?php
+          foreach ($list_roles as $role) { ?>
 
-    <hr>
+            <li><a href="<?php the_permalink(); ?>?menu=roles&show=<?php echo $role; ?>"><?php echo $role; ?></a></li>
 
-    <h2>Days</h2>
-    <ul>
+        <?php } ?>
+      </ul>
+      <hr>
+      <h2>People</h2>
+      <ul>
+        <?php
+          foreach ($list_people as $person) {
+            echo "<li>{$person}</li>";
+          }
+        ?>
+      </ul>
+      <hr>
+
+  <?php } else { ?>
+    <p><a href="<?php the_permalink(); ?>">back</a></p>
+    <h2><?php echo ucfirst($menu); ?></h2>
+    <?php $show; ?>
+    <ul class="menu_nav">
       <?php
-        foreach ($list_days as $scheduledDay) {
-          echo "<li>{$scheduledDay}</li>";
-        }
-      ?>
+        foreach ($list_roles as $role) { ?>
+
+          <li><a <?php if ($role == $show) {echo "id=\"highlight_list_item\"";} ?> href="<?php the_permalink(); ?>?menu=roles&show=<?php echo $role; ?>"><?php echo $role; ?></a></li>
+
+      <?php } ?>
     </ul>
 
-    <hr>
 
-    <h2>Roles</h2>
-    <ul>
-      <?php
-        foreach ($list_roles as $role) {
-          echo "<li>{$role}</li>";
-        }
-      ?>
-    </ul>
-
-    <hr>
-
-    <h2>People</h2>
-    <ul>
-      <?php
-        foreach ($list_people as $person) {
-          echo "<li>{$person}</li>";
-        }
-      ?>
-    </ul>
-
-    <hr>
-
-<!--
-    <hr>   <hr>    <hr>
+    <?php show($show); ?>
 
 
-    <h2>Days []</h2>
 
-    <?php $i = 0; foreach ($days as $key_day_numeric => $value_day_verbal) { ?>
-
-    <form action="<?php echo the_permalink(); ?>" method="get">
-      <input id="day_<?php echo $i; ?>" type="checkbox" name="day_<?php echo $i; ?>" value="<?php echo $value_day_verbal; ?>">
-      <label for="day_<?php echo $i; ?>"><?php echo $value_day_verbal; ?></label>
-      <br>
-      <?php $i++; } ?>
-      <input type="submit" name="submit" value="create day list">
-    </form>
-
-    <hr>
-
-    <h2>Roles []</h2>
-
-    <?php $i = 0; foreach ($list_master as $role => $people) { ?>
-
-    <form action="<?php echo the_permalink(); ?>" method="get">
-      <input id="role_<?php echo $i; ?>" type="checkbox" name="role_<?php echo $i; ?>" value="<?php echo $role; ?>">
-      <label for="role_<?php echo $i; ?>"><?php echo $role; ?></label>
-      <br>
-      <?php $i++; } ?>
-      <input type="submit" name="submit" value="create schedule list">
-    </form>
-
-
-    <hr>
-
-    <h2>People []</h2>
-
-    <form action="<?php echo the_permalink(); ?>" method="get">
-      <?php $i = 0; foreach ($list_team_members as $person) { ?>
-        <input id="person_<?php echo $i; ?>" type="checkbox" name="person_<?php echo $i; ?>" value="<?php echo $person; ?>">
-        <label for="person_<?php echo $i; ?>"><?php echo $person; ?></label>
-        <br>
-      <?php $i++; } ?>
-      <input type="submit" name="submit" value="create schedule list">
-    </form>
-
-    <script type="text/javascript">
-
-    </script>
-
-  -->
+  <?php } // END ?>

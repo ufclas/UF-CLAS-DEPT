@@ -181,9 +181,9 @@ if (!$link) {
       }
 
 
-      // echo "<pre>";
-      //   print_r($list_master);
-      // echo "</pre>";
+      echo "<pre>";
+        print_r($list_master);
+      echo "</pre>";
 
 
       function p($list) {
@@ -250,6 +250,22 @@ if (!$link) {
             }
           }
           sort($list_people);
+
+
+          //master show
+
+          function show($arg) {
+            global $list_master;
+            foreach ($list_master as $role => $people) {
+              foreach ($people as $person => $null_list) {
+                if ($arg == $role) {
+                  echo "<h3>{$person}</h3>";
+
+                }
+              }
+            }
+          }
+
 
 
 ?>
