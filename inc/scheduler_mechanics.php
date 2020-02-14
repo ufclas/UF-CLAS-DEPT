@@ -48,6 +48,7 @@ if (!$link) {
 
   $list_tempGen = array();
   while ($row = mysqli_fetch_assoc($query)) {
+    // create SEED list
     $list_tempGen[] = $row;
   }
 
@@ -60,20 +61,20 @@ if (!$link) {
     //   print_r($list_row);
     // echo "</pre>";
 
-// People
-    if (!in_array($list_row['post_title'], $list_team_members)) {
-      $list_team_members[] = $list_row['post_title'];
-    }
-
-// Roles
+    // grab the base variables, roles and people
+    // Roles
     if (!in_array($list_row['slug'], $list_master_roles)) {
       $list_master_roles[] = $list_row['slug'];
     }
 
-  } // don't touch this, alex. It's instantiation for base arrays
+    // People
+    if (!in_array($list_row['post_title'], $list_team_members)) {
+      $list_team_members[] = $list_row['post_title'];
+    }
+
+  } // instantiation for base arrays
 
 
-// days
   $days = array(
     "1" => "monday",
     "2" => "tuesday",
@@ -89,6 +90,7 @@ if (!$link) {
       "1" => array("start" => "", "end" => ""),
       "2" => array("start" => "", "end" => ""),
       "3" => array("start" => "", "end" => "")
+      // add additional meeting time slots here
     );
   } // create pre-populating office hours list
 
@@ -100,18 +102,16 @@ if (!$link) {
   } // create pre-populating teaching schedule list
 
 
+  // role create | to avoid errors
+  foreach ($list_master_roles as $null_index => $role) {
+    // echo $role;
+    foreach ($list_tempGen as $null_key => $list_row) {
+      // rewriting to empty role as string and create array
+      $list_master[$role] = array();
+    }
+  }
 
-// Roles
-        // role create | to avoid errors
-      foreach ($list_master_roles as $null_index => $role) {
-        // echo $role;
-        foreach ($list_tempGen as $null_key => $list_row) {
-          // rewriting to empty role as string and create array
-          $list_master[$role] = array();
-        }
-      }
-
-      // build $list_master" // insert PEOPLE
+// List Master | General Structure | inserting people and creating lower-level strucutre
       // $role = either fellow, faculty, faculty adjunct -- small list of roles
       foreach ($list_master_roles as $null_index => $role) {
         foreach ($list_tempGen as $null_key => $list_row) {
@@ -122,19 +122,51 @@ if (!$link) {
             // if alex is not in the [role] --
             if (!in_array($role_member, $list_master[$role_title])) {
               $list_master[$role_title][$role_member] = array(
-                'office_hours'      => $create_days_office_hours,
-                'teaching_schedule' => $create_days_teaching_schedule
+                'email'             => "",
+                'phone'             => "",
+                'teaching_schedule' => $create_days_teaching_schedule,
+                'office_hours'      => $create_days_office_hours
                );
             } // in_array (member)
           } // if slug == role
         } // list_row
       } // master
 
+// DETAILS -- setting lower-level information: email, phone, officeHours, teachingSchedule
       foreach ($list_master_roles as $null_index => $role) {
         foreach ($list_tempGen as $null_key => $list_row) {
           $role_member = $list_row['post_title'];
           $role_title  = $list_row['slug'];
           $role_period = $list_row['meta_value'];
+
+          // email
+          if ($list_row['meta_key'] == "member-email") {
+            $list_master[$role_title][$role_member]['email'] = $list_row['meta_value'];
+          }
+          // phone
+          if ($list_row['meta_key'] == "member-phone") {
+            $list_master[$role_title][$role_member]['phone'] = $list_row['meta_value'];
+          }
+
+          // teaching schedule
+          if (strpos($list_row['meta_key'], "period") !== false) {
+
+            $role_member = $list_row['post_title'];
+            $role_title  = $list_row['slug'];
+            $role_period = $list_row['meta_value'];
+
+            $role_period    = str_replace("period_","",$role_period);
+            $explode_period = explode("_", $role_period);
+
+            $period_day  = $explode_period['0'];
+            $period_slot = $explode_period['1'];
+
+            foreach ($list_master[$role_title][$role_member]['teaching_schedule'][$period_day] as $key_period => $empty_value) {
+              if ($key_period == $period_slot) {
+                $list_master[$role_title][$role_member]['teaching_schedule'][$period_day][$key_period] = $period_slot;
+              }
+            }
+          } // teaching schedule
 
           // office hours
           if (strpos($list_row['meta_key'], "appt") !== false) {
@@ -156,35 +188,21 @@ if (!$link) {
               }
             }
           } // office Hours
-
-
-          // teaching schedule
-          if (strpos($list_row['meta_key'], "period") !== false) {
-
-            $role_member = $list_row['post_title'];
-            $role_title  = $list_row['slug'];
-            $role_period = $list_row['meta_value'];
-
-            $role_period    = str_replace("period_","",$role_period);
-            $explode_period = explode("_", $role_period);
-
-            $period_day  = $explode_period['0'];
-            $period_slot = $explode_period['1'];
-
-            foreach ($list_master[$role_title][$role_member]['teaching_schedule'][$period_day] as $key_period => $empty_value) {
-              if ($key_period == $period_slot) {
-                $list_master[$role_title][$role_member]['teaching_schedule'][$period_day][$key_period] = $period_slot;
-              }
-            }
-          } // teaching schedule
         }
       }
 
 
-      echo "<pre>";
-        print_r($list_master);
-      echo "</pre>";
+      // echo "<pre>";
+      //   print_r($list_master);
+      // echo "</pre>";
 
+
+      // $master_core_four = array(
+      //   "email",
+      //   "phone",
+      //   "office_hours",
+      //   "teaching_schedule"
+      // );
 
       function p($list) {
         echo "<pre>";
@@ -198,6 +216,20 @@ if (!$link) {
           foreach ($list_master as $role => $people) {
             foreach ($people as $person => $schedule) {
               foreach ($schedule as $type => $times) {
+
+                // "teaching_schedule" => "ts"
+                if ($type == "teaching_schedule") {
+                  foreach ($times as $day_ts => $list_ts) {
+                    foreach ($list_ts as $key_ts_slot => $value_ts_slot) {
+                      if (!empty($value_ts_slot)) {
+                        if (!in_array($day_ts, $list_days)) {
+                          $list_days[] = $day_ts;
+                        }
+                      }
+                    }
+                  }
+                } // /if teaching_schedule
+
                 // "office_hours" => "oh"
                 if ($type == "office_hours") {
                   foreach ($times as $day_oh => $list_oh) {
@@ -213,18 +245,7 @@ if (!$link) {
                   }
                 } // /if office_hours
 
-                // "teaching_schedule" => "ts"
-                if ($type == "teaching_schedule") {
-                  foreach ($times as $day_ts => $list_ts) {
-                    foreach ($list_ts as $key_ts_slot => $value_ts_slot) {
-                      if (!empty($value_ts_slot)) {
-                        if (!in_array($day_ts, $list_days)) {
-                          $list_days[] = $day_ts;
-                        }
-                      }
-                    }
-                  }
-                } // /if teaching_schedule
+
               }
             }
           }
@@ -252,15 +273,35 @@ if (!$link) {
           sort($list_people);
 
 
-          //master show
-
-          function show($arg) {
+          // Master Show
+          function show($selected_parameter) {
             global $list_master;
             foreach ($list_master as $role => $people) {
-              foreach ($people as $person => $null_list) {
-                if ($arg == $role) {
-                  echo "<h3>{$person}</h3>";
+              foreach ($people as $person => $list_core) {
 
+                // selected parameter
+                if ($selected_parameter == $role) {
+                  // a person kind of has to exist since scheduler's base array (after seed) is created by roles
+                  echo "<h3>{$person}</h3>";
+                  // if phone exists
+                  if (!empty($list_core['phone'])) { ?>
+                    <p><?php echo $list_core['phone']; ?></p>
+                  <?php }
+                  // if email exists
+                  if (!empty($list_core['email'])) { ?>
+                    <p><?php echo $list_core['email']; ?></p>
+                  <?php }
+
+                  // schedule factoring
+                  foreach ($list_core as $core_four => $semiNull_variable_core_values) {
+                    // if teaching periods exist
+                    // if ($core_four == )
+                    echo "<pre>";
+                      print_r($core_four);
+                    echo "</pre>";
+                    // if office hours exist
+
+                  }
                 }
               }
             }
