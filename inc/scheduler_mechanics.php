@@ -282,8 +282,8 @@ if (!$link) {
           sort($list_people);
 
 
-          // Master Show
-          function show($selected_parameter) {
+// Schedule Details Function
+          function schedule_details($selected_parameter) {
             global $list_master;
             $list_person = array();
             foreach ($list_master as $role => $people) {
@@ -385,7 +385,6 @@ if (!$link) {
                       }
                     }
                   } // print office hours
-
                 } // if argument == argument
               } // loop role people
             } // loop list_master
