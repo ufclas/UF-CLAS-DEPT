@@ -5090,6 +5090,70 @@ ul.breadcrumb-wrap.kb-breadcrumbs li:last-child:after {
   display: none;
 }
 
+
+/*==============================
+
+Image block cards
+
+================================*/
+.card-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.card-container .text-content {
+    padding: 3rem 2rem;
+    z-index: 2;
+}
+
+.card-container .text-content:before {
+    background-image: linear-gradient(to top,#00285e, transparent);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.card-container .text-content h3,
+.card-container .text-content p {
+    color: white;
+    flex: 1 100%;
+}
+
+.card-container .text-content h3 {
+    font-family: "Quadon_Regular" !important;
+    font-weight: 100;
+}
+
+#page .card-container .text-content p {
+    font-family: "Gentona_Light" !important;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.card-container .learn-more {
+    border: 3px white solid;
+    padding: .5rem 1rem;
+    color: white;
+    font-weight: 100;
+    font-family: "Gentona_Light";
+}
+
+.card-container .learn-more:hover {
+    background: #835300;
+    transition: .3s;
+}
+
 @media (min-width: 768px){
 
    .footer-uf-col-1{
@@ -5354,6 +5418,16 @@ ul.breadcrumb-wrap.kb-breadcrumbs li:last-child:after {
   h2.entry-title.interior-page {
     font-size: 3.5rem;
     letter-spacing: 6px;
+  }
+
+  .card-container {
+    width: 50%;
+    height: 40vh;
+    float: left;
+  }
+
+  .card-container .text-content:before {
+      background-image: linear-gradient(to top,#00285e,transparent);
   }
 }
 

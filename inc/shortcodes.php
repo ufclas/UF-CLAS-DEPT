@@ -490,3 +490,30 @@ function eventsCalendarShortcode($atts){
 }
 
 add_shortcode('events-calendar','eventsCalendarShortcode');
+
+/*========================================
+*
+* Image tile with description/link
+*
+*==========================================*/
+function imageBlock($atts){
+	extract( shortcode_atts( array(
+		 'headline'   => "", //Main headline for block
+		 'image'      => "", //Background image
+		 'content'    => "", //Extra content
+		 'link'       => "", //link to page
+		 'cta'				=> "" //text inside button
+	 ), $atts ) );
+
+	 $output  = '<div class="card-main-container">';
+	 $output .= '<a href="'. $link .'" target="_blank"><div class="card-container" style="background-image:url('. $image .')">';
+	 $output .= "<div class='text-content'>";
+	 $output .= "<h3>$headline</h3>";
+	 $output .= "<p>$content</p>";
+	 $output .= "<span class='learn-more'>$cta</span>";
+	 $output .= "</div></div></a></div>";
+
+	 return $output;
+}
+
+add_shortcode('imageBlock','imageBlock');
