@@ -1,7 +1,14 @@
 <?php
 
 // js office hours finesse
-// NEED TO CONVERT TO WORK ON LOCALHOST AND SERVER AND SERVER
+/*
+  fixlist:
+    - NEED TO CONVERT TO WORK ON LOCALHOST AND SERVER AND SERVER
+    - timeslots print in the order they're inserted -- this could be rearranged programatically
+    - office hour times can also conflict with teaching periods without warning
+
+
+*/
 
 // $host = "ls-web-data01.clas.ufl.edu";
 // $user = "clasdev";
@@ -147,6 +154,10 @@ if (!$link) {
           if ($list_row['meta_key'] == "member-phone") {
             $list_master[$role_title][$role_member]['phone'] = $list_row['meta_value'];
           }
+          // website
+          if ($list_row['meta_key'] == "member-website") {
+            $list_master[$role_title][$role_member]['website'] = $list_row['meta_value'];
+          }
 
           // teaching schedule
           if (strpos($list_row['meta_key'], "period") !== false) {
@@ -244,8 +255,6 @@ if (!$link) {
                     }
                   }
                 } // /if office_hours
-
-
               }
             }
           }
@@ -276,57 +285,111 @@ if (!$link) {
           // Master Show
           function show($selected_parameter) {
             global $list_master;
+            $list_person = array();
             foreach ($list_master as $role => $people) {
               foreach ($people as $person => $list_core) {
-
                 // selected parameter
                 if ($selected_parameter == $role) {
                   // a person kind of has to exist since scheduler's base array (after seed) is created by roles
                   echo "<h3>{$person}</h3>";
                   // if phone exists
-                  if (!empty($list_core['phone'])) { ?>
-                    <p><?php echo $list_core['phone']; ?></p>
-                  <?php }
+                  if (!empty($list_core['phone'])) {
+                    echo "<p>".$list_core['phone']."</p>";
+                  }
                   // if email exists
-                  if (!empty($list_core['email'])) { ?>
-                    <p><?php echo $list_core['email']; ?></p>
-                  <?php }
+                  if (!empty($list_core['email'])) {
+                    echo "<p>".$list_core['email']."</p>";
+                  }
+                  // if email exists
+                  if (!empty($list_core['website'])) {
+                    echo "<p><a href=\"".$list_core['website']."\" target=\"_blank\">".$list_core['website']."</a></p>";
+                  }
 
+                  $list_master_teaching_schedule = array();
+                  $list_master_office_hours = array();
                   // schedule factoring "schedule times" should be cool because its only being practically called here and for the two schedules
-                  foreach ($list_core as $core_four => $schedule_times) {
+                  foreach ($list_core as $core_one => $schedule_times) {
                     // try to find teaching times
-                    if ($core_four == "teaching_schedule") {
+                    if ($core_one == "teaching_schedule") {
                       foreach ($schedule_times as $day => $list_period_structure) {
                         foreach ($list_period_structure as $nullCheck_key_period => $scheduled_period) {
                           if (!empty($scheduled_period)) {
-                            echo "<h4>teaching schedule</h4>";
-                            echo $day;
-                            echo $scheduled_period;
-                            echo "<br>";
+                            $list_master_teaching_schedule['teaching_schedule'][$day][] = $scheduled_period;
                           }
                         }
                       }
                     } // /teaching schedule
 
                     // if office hours exist
-                    if ($core_four == "office_hours") {
+                    if ($core_one == "office_hours") {
                       foreach ($schedule_times as $day => $list_period_structure) {
                         foreach ($list_period_structure as $slot => $list_ports) {
                           foreach ($list_ports as $port => $time) {
                             if (!empty($time)) {
-                              echo "<h4>office hours</h4>";
-                              echo "<br>";
-                              echo $day." ".$time;
+                              $list_master_office_hours[$day][$slot][$port] = $time;
                             }
                           }
                         }
                       }
                     } // /office hours
+                  }// schedule factoring
+
+                  // echo "<pre>";
+                  //   // print_r($list_master_office_hours);
+                  //   print_r($list_master_teaching_schedule);
+                  // echo "</pre>";
+
+                if (!empty($list_master_teaching_schedule)) {
+                  echo "<h4>Teaching Schedule</h4>";
+                  echo "<table>";
+                  foreach ($list_master_teaching_schedule as $null_name => $list_dayTime) {
+                    foreach ($list_dayTime as $day => $list_period) {
+                      echo "<tr>";
+                      echo     "<td>{$day}</td>";
+                      echo     "<td>";
+                      foreach ($list_period as $period_slot => $value_period) {
+                        if (!empty($value_period)) {
+                          echo $value_period;
+                          if ($value_period !== end($list_period)) {
+                            echo ", ";
+                          }
+                        }
+                      }
+                      echo     "<td>";
+                      echo "</tr>";
+                    }
                   }
+                  echo "</table>";
                 }
-              }
-            }
-          }
+
+
+
+
+
+                  // print office hours
+                  if (!empty($list_master_office_hours)) {
+                    echo "<h4>Office Hours</h4>";
+                    foreach ($list_master_office_hours as $day => $list_slot) {
+                      echo "<h5>{$day}</h5>";
+                      foreach ($list_slot as $slot => $list_port) {
+                        foreach ($list_port as $port => $time) {
+                          $time = date('g:i a', strtotime($time));
+                          echo $time;
+                          if ($port == "start") {
+                            echo " to ";
+                          }
+                          if ($port == "end") {
+                            echo "<br>";
+                          }
+                        }
+                      }
+                    }
+                  } // print office hours
+
+                } // if argument == argument
+              } // loop role people
+            } // loop list_master
+          } // /end show(function)
 
 
 

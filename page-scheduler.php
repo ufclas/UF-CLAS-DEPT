@@ -103,7 +103,12 @@
     </ul>
 
 
-    <?php show($show); ?>
+    <?php //echo show($show);
+    echo "<pre>";
+      print_r(show($show));
+    echo "</pre>";
+
+     ?>
 
 
 
