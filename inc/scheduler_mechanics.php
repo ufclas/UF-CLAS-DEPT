@@ -292,15 +292,36 @@ if (!$link) {
                     <p><?php echo $list_core['email']; ?></p>
                   <?php }
 
-                  // schedule factoring
-                  foreach ($list_core as $core_four => $semiNull_variable_core_values) {
-                    // if teaching periods exist
-                    // if ($core_four == )
-                    echo "<pre>";
-                      print_r($core_four);
-                    echo "</pre>";
-                    // if office hours exist
+                  // schedule factoring "schedule times" should be cool because its only being practically called here and for the two schedules
+                  foreach ($list_core as $core_four => $schedule_times) {
+                    // try to find teaching times
+                    if ($core_four == "teaching_schedule") {
+                      foreach ($schedule_times as $day => $list_period_structure) {
+                        foreach ($list_period_structure as $nullCheck_key_period => $scheduled_period) {
+                          if (!empty($scheduled_period)) {
+                            echo "<h4>teaching schedule</h4>";
+                            echo $day;
+                            echo $scheduled_period;
+                            echo "<br>";
+                          }
+                        }
+                      }
+                    } // /teaching schedule
 
+                    // if office hours exist
+                    if ($core_four == "office_hours") {
+                      foreach ($schedule_times as $day => $list_period_structure) {
+                        foreach ($list_period_structure as $slot => $list_ports) {
+                          foreach ($list_ports as $port => $time) {
+                            if (!empty($time)) {
+                              echo "<h4>office hours</h4>";
+                              echo "<br>";
+                              echo $day." ".$time;
+                            }
+                          }
+                        }
+                      }
+                    } // /office hours
                   }
                 }
               }
