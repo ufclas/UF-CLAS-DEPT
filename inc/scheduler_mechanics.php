@@ -6,11 +6,6 @@
     - office hour times can also conflict with teaching periods without warning
 */
 
-// $host = "ls-web-data01.clas.ufl.edu";
-// $user = "clasdev";
-// $pass = "QsQWoGbqymP=bZQ";
-// $data = "clas_test";
-
 $host = "localhost";
 $user = "root";
 $pass = "";
