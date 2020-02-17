@@ -17,6 +17,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image" content="<?php echo get_the_post_thumbnail('square-crop'); ?>" />
+	<meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
