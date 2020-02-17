@@ -1,13 +1,9 @@
 <?php
-
-// js office hours finesse
 /*
   fixlist:
     - NEED TO CONVERT TO WORK ON LOCALHOST AND SERVER AND SERVER
     - timeslots print in the order they're inserted -- this could be rearranged programatically
     - office hour times can also conflict with teaching periods without warning
-
-
 */
 
 // $host = "ls-web-data01.clas.ufl.edu";
@@ -202,25 +198,15 @@ if (!$link) {
         }
       }
 
-
       // echo "<pre>";
       //   print_r($list_master);
       // echo "</pre>";
-
-
-      // $master_core_four = array(
-      //   "email",
-      //   "phone",
-      //   "office_hours",
-      //   "teaching_schedule"
-      // );
 
       function p($list) {
         echo "<pre>";
           print_r($list);
         echo "</pre>";
       }
-
 
       // make days that have scheduled events
       $list_days = array();
@@ -281,12 +267,66 @@ if (!$link) {
           }
           sort($list_people);
 
-// Function: "days" for displaying page ii
 
+// Function: "People" for displaying page i, drop down through JavaScript
+// Function: "People" for displaying page i, drop down through JavaScript
+          function list_master_person($selected_parameter) {
+            global $list_master;
+            $list_master_teaching_schedule = array();
+            foreach ($list_master as $role => $people) {
+                foreach ($people as $person => $list_core) {
+                  // selected parameter
+                  if ($person == $selected_parameter) {
+                    $email   = $list_core['email'];
+                    $phone   = $list_core['phone'];
+                    $website = $list_core['website'];
+
+                    foreach ($list_core as $core => $variable_values) {
+                      if ($core == "teaching_schedule") {
+                        foreach ($variable_values as $day => $list_slots_check) {
+                          foreach ($list_slots_check as $slot => $check) {
+                            if (!empty($check)) {
+                              $list_master_teaching_schedule['teaching_schedule'][$day][] = $check;
+                            }
+                          }
+                        }
+                      }
+                      if ($core == "office_hours") {
+                        foreach ($variable_values as $day => $list_slots_check) {
+                          foreach ($list_slots_check as $slot => $list_port_time) {
+                            foreach ($list_port_time as $port => $time) {
+                              if (!empty($time)) {
+                                $list_master_teaching_schedule['office_hours'][$day][$slot][$port] = $time;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+             $super_list = array($email, $phone, $website, $list_master_teaching_schedule);
+
+             foreach ($super_list as $value) {
+               if (!empty($value)) {
+                 $list_person[] = $value;
+               }
+             }
+
+             return $list_person;
+
+
+            } // / list master person function ()
+
+
+// Function: "days" for displaying page ii
+// Function: "days" for displaying page ii
+// Function: "days" for displaying page ii
           function days_details($selected_parameter) {
             global $list_master;
-            $list_day_officeHours      = array();
-            $list_day_teachingSchedule = array();
+            $list_master_days = array();
             foreach ($list_master as $role => $people) {
               foreach ($people as $person => $list_core) {
                 foreach ($list_core as $core => $variable_values) {
@@ -305,7 +345,7 @@ if (!$link) {
                       foreach ($list_slot_port as $slot => $list_port) {
                         foreach ($list_port as $port => $time) {
                           if (!empty($time) && $day == $selected_parameter) {
-                            $list_master_days[$person]['office_hours'][$port][] = $time;
+                            $list_master_days[$person]['office_hours'][$slot][$port] = $time;
                           }
                         }
                       }
@@ -322,7 +362,6 @@ if (!$link) {
 // Function: "Roles" for displaying page ii
           function schedule_details($selected_parameter) {
             global $list_master;
-            $list_person = array();
             foreach ($list_master as $role => $people) {
               foreach ($people as $person => $list_core) {
                 // selected parameter
