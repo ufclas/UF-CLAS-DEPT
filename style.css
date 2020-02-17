@@ -4784,7 +4784,7 @@ h2.entry-title.interior-page {
 }
 
 .img-icon-wrap {
-    background: #A9DCDA;
+    background: #f45a1d;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -4793,6 +4793,7 @@ h2.entry-title.interior-page {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    box-shadow: 0px 0px 6px 0px black;
 }
 
 .glyphicon {
@@ -4804,7 +4805,7 @@ h2.entry-title.interior-page {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #5789B7;
+    color: white;
     font-size: 4rem;
 }
 
