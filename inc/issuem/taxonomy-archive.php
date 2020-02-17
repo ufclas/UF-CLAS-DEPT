@@ -21,7 +21,7 @@ get_header(); ?>
     <?php
 		while ( have_posts() ) : the_post(); ?>
       <div class="issuem-archive-container">
-			  <h3><a href="<?php the_permalink();?>"><? the_title(); ?></a></h3>
+			  <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
         <div class="issuem-archive-text">
           <?php the_post_thumbnail('medium'); ?>
           <?php the_excerpt(); ?>
