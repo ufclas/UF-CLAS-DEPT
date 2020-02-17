@@ -12,23 +12,6 @@ get_header(); ?>
 <div id="main" class="container main-content">
 <div class="row">
   <div class="col-sm-12">
-    <header class="entry-header">
-	<?php
-		$newsletter_data = ufclas_emily_newsletter_data();
-
-		// Display Issue Description, if exists
-		$issue_description = term_description( get_term_by( 'slug', get_active_issuem_issue(), 'issuem_issue' ) );
-
-		if ( !empty($issue_description) ){
-			printf( '<div class="taxonomy-description issuem-description">%s</div>', $issue_description );
-		}
-	?>
-    </header>
-    <!-- .entry-header -->
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
     <?php
 		// Change the query if this is an issue page
 		if ( issuem_is_articles_page() ){
@@ -64,7 +47,7 @@ get_header(); ?>
 		}
 	?>
 
-    <article id="issuem-article-<?php the_ID(); ?>" class="issuem-article col-lg-4 col-md-6">
+    <article id="issuem-article-<?php the_ID(); ?>" class="issuem-article col-lg-4 col-md-6" aria-label="<?php echo get_the_title(); ?>">
     <div class="big-stat-wrap big-stat-img four gradient-bg"<?php echo $article_background; ?>>
     <div class="big-stat-copy">
         <h2><?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>

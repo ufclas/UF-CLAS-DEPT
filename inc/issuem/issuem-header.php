@@ -21,26 +21,27 @@
 
 	// Newsletter menu
 	if ( has_nav_menu( 'newsletter-menu' ) ): ?>
+			<header id="issuem-header" aria-label="issuem-header">
+				<button type="button" class="navbar-toggle issuem-mobile-menu" data-toggle="collapse" data-target="#newsletter-menu-navbar" onclick="document.getElementById('newsletter-menu-navbar').classList.toggle('show');" >
+					<span class="sr-only">Toggle navigation</span>
+					<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Menu
+				</button>
 
-			<button type="button" class="navbar-toggle issuem-mobile-menu" data-toggle="collapse" data-target="#newsletter-menu-navbar" onclick="document.getElementById('newsletter-menu-navbar').classList.toggle('show');">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Menu
-			</button>
-
-  		<nav id="site-navigation" class="navbar navbar-inverse subnav subnav-dark" role="navigation">
-    		<div class="container">
-      		<?php
-      		wp_nav_menu( array(
-      			'theme_location' => 'newsletter-menu',
-      			'depth' => 2,
-      			'container' => 'div',
-      			'container_class' => 'collapse navbar-collapse',
-      			'container_id' => 'newsletter-menu-navbar',
-      			'menu_class' => 'nav navbar-nav',
-      		));
-      		?>
-    		</div>
-    	</nav>
+	  		<nav class="navbar navbar-inverse subnav subnav-dark" aria-label="issuem-navigation">
+	    		<div class="container">
+	      		<?php
+	      		wp_nav_menu( array(
+	      			'theme_location' => 'newsletter-menu',
+	      			'depth' => 2,
+	      			'container' => 'div',
+	      			'container_class' => 'collapse navbar-collapse',
+	      			'container_id' => 'newsletter-menu-navbar',
+	      			'menu_class' => 'nav navbar-nav',
+	      		));
+	      		?>
+	    		</div>
+	    	</nav>
+			</header>
 <?php
 endif;
 ?>

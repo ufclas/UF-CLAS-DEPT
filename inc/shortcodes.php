@@ -98,7 +98,7 @@ add_shortcode('ufl-landing-page-double-image', 'ufclas_emily_landing_double_imag
   // Shortcode callbacks must return content, so use output buffering
   ob_start();
   ?>
-    <div class="landing-page-hero-full">
+    <section class="landing-page-hero-full" id="hero-image" aria-label="top">
         <div class="hero-img<?php echo $image_class; ?>" <?php echo $image_style; ?>>
             <div class="hero-heading">
       <?php
@@ -124,7 +124,7 @@ add_shortcode('ufl-landing-page-double-image', 'ufclas_emily_landing_double_imag
             </div>
         </div>
         <?php endif; ?>
-    </div>
+    </section>
     <?php
   return ob_get_clean();
  }
