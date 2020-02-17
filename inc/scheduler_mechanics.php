@@ -281,8 +281,45 @@ if (!$link) {
           }
           sort($list_people);
 
+// Function: "days" for displaying page ii
 
-// Schedule Details Function
+          function days_details($selected_parameter) {
+            global $list_master;
+            $list_day_officeHours      = array();
+            $list_day_teachingSchedule = array();
+            foreach ($list_master as $role => $people) {
+              foreach ($people as $person => $list_core) {
+                foreach ($list_core as $core => $variable_values) {
+                  if ($core == "teaching_schedule") {
+                    foreach ($variable_values as $day => $list_slot_check) {
+                      foreach ($list_slot_check as $slot => $check) {
+                        if (!empty($check) && $day == $selected_parameter) {
+                          $list_master_days[$person]['teaching_schedule'][] = $check;
+                        }
+                      }
+                    }
+                  }
+
+                  if ($core == "office_hours") {
+                    foreach ($variable_values as $day => $list_slot_port) {
+                      foreach ($list_slot_port as $slot => $list_port) {
+                        foreach ($list_port as $port => $time) {
+                          if (!empty($time) && $day == $selected_parameter) {
+                            $list_master_days[$person]['office_hours'][$port][] = $time;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            return $list_master_days;
+          } // / Function by Days
+
+
+
+// Function: "Roles" for displaying page ii
           function schedule_details($selected_parameter) {
             global $list_master;
             $list_person = array();
@@ -361,10 +398,6 @@ if (!$link) {
                   }
                   echo "</table>";
                 }
-
-
-
-
 
                   // print office hours
                   if (!empty($list_master_office_hours)) {

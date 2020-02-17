@@ -41,7 +41,7 @@
         text-decoration: none;
       }
 
-      a#highlight_list_item {
+      a.highlight_list_item {
         font-weight: bold;
         text-decoration: underline;
       }
@@ -61,21 +61,18 @@
       </form>
       <hr>
       <h2>Days</h2>
-      <ul>
+      <ul class="menu_nav">
         <?php
-          foreach ($list_days as $scheduledDay) {
-            echo "<li>{$scheduledDay}</li>";
-          }
-        ?>
+          foreach ($list_days as $day) { ?>
+            <li><a href="<?php the_permalink(); ?>?menu=days&show=<?php echo $day; ?>"><?php echo $day; ?></a></li>
+          <?php } ?>
       </ul>
       <hr>
       <h2>Roles</h2>
       <ul class="menu_nav">
         <?php
           foreach ($list_roles as $role) { ?>
-
             <li><a href="<?php the_permalink(); ?>?menu=roles&show=<?php echo $role; ?>"><?php echo $role; ?></a></li>
-
         <?php } ?>
       </ul>
       <hr>
@@ -89,18 +86,47 @@
       </ul>
       <hr>
 
-  <?php } else { ?>
+<!-- page 2 -->
+<!-- page 2 -->
+<!-- page 2 -->
+
+  <?php } else {
+    $menu;
+    $show;
+  ?>
     <p><a href="<?php the_permalink(); ?>">back</a></p>
     <h2><?php echo ucfirst($menu); ?></h2>
-    <?php $show; ?>
-    <ul class="menu_nav">
-      <?php
-        foreach ($list_roles as $role) { ?>
-          <li><a <?php if ($role == $show) {echo "id=\"highlight_list_item\"";} ?> href="<?php the_permalink(); ?>?menu=roles&show=<?php echo $role; ?>"><?php echo $role; ?></a></li>
-      <?php } ?>
-    </ul>
 
-    <?php schedule_details($show); ?>
+    <?php if ($menu == "days") { ?>
+
+      <ul class="menu_nav">
+        <?php
+          foreach ($list_days as $day) { ?>
+            <li><a <?php if ($day == $show) {echo "class=\"highlight_list_item\" "; } ?>href="<?php the_permalink(); ?>?menu=days&show=<?php echo $day; ?>"><?php echo $day; ?></a></li>
+          <?php } ?>
+      </ul>
+      <!-- menu nav -->
+
+      <?php
+        foreach (days_details($show) as $person => $list_schedule) {
+          echo "<h3>{$person}</h3>";
+          p($list_schedule);
+        }
+      ?>
+
+    <?php } ?>
+
+
+    <!-- // ROLES ROLES ROLES  -->
+    <?php if ($menu == "roles") { ?>
+      <ul class="menu_nav">
+        <?php
+          foreach ($list_roles as $role) { ?>
+            <li><a <?php if ($role == $show) {echo "class=\"highlight_list_item\"";} ?> href="<?php the_permalink(); ?>?menu=roles&show=<?php echo $role; ?>"><?php echo $role; ?></a></li>
+        <?php } ?>
+      </ul>
+      <?php schedule_details($show); ?>
+    <?php } // end days ?>
 
 
   <?php } // END ?>
