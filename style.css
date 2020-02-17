@@ -4793,7 +4793,7 @@ h2.entry-title.interior-page {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    box-shadow: 0px 0px 6px 0px black;
+    box-shadow: 0px 0px 4px 0px black;
 }
 
 .glyphicon {
