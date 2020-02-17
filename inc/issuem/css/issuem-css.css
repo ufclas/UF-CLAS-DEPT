@@ -140,7 +140,7 @@
 
 .issuem_archives_shortcode .issuem_archive img {
     height: 300px;
-    width: 225px;
+    width: 300px;
     object-fit: cover;
     border: 1px solid #A9DCDA;
 }
@@ -153,7 +153,9 @@
     font-family: "Quadon_Bold" !important;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-size: 1rem;
 }
+
 
 #menu-newsletter-menu .sub-menu {
     display: none;
@@ -202,6 +204,26 @@ button.navbar-toggle {
 
 ul#menu-newsletter-menu > li {
     padding: 5px 0;
+}
+
+footer.entry-footer a {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#page p.posted-on {
+    font-size: 1rem;
+    font-family: "Gentona_Book" !important;
+}
+
+.entry-footer .glyphicon {
+    color: #ff5a0e;
+    font-size: 2rem;
+}
+
+.entry-footer a:hover {
+  box-shadow: none;
 }
 
 @media (min-width: 1025px){
@@ -282,7 +304,7 @@ ul#menu-newsletter-menu > li {
   }
 
   .issuem_archives_shortcode > div {
-      flex: 1 25%;
+      flex: 1 20%;
       padding: 0 1rem;
   }
 }

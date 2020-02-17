@@ -5072,21 +5072,21 @@ h2.entry-title.interior-page {
 .glyphicon-menu-up:before { content: "\e260";}
 
 
-ul.breadcrumb-wrap.kb-breadcrumbs {
+.breadcrumb-wrap {
     margin-top: 4rem;
 }
 
-ul.breadcrumb-wrap.kb-breadcrumbs li {
+.breadcrumb-wrap li {
     display: inline;
 }
 
-ul.breadcrumb-wrap.kb-breadcrumbs li:after {
+.breadcrumb-wrap li:after {
   content: " >> ";
   letter-spacing: -2px;
   padding: 0 .5rem;
 }
 
-ul.breadcrumb-wrap.kb-breadcrumbs li:last-child:after {
+.breadcrumb-wrap li:last-child:after {
   display: none;
 }
 
