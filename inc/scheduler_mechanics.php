@@ -302,11 +302,12 @@ if (!$link) {
                 }
               }
 
-             $super_list = array($email, $phone, $website, $list_master_teaching_schedule);
+             $super_list = array(
+               "email"=>$email, "phone"=>$phone, "website"=>$website, "schedule" => $list_master_teaching_schedule);
 
-             foreach ($super_list as $value) {
+             foreach ($super_list as $key => $value) {
                if (!empty($value)) {
-                 $list_person[] = $value;
+                 $list_person[$key] = $value;
                }
              }
 

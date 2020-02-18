@@ -90,8 +90,8 @@
       <h2>People</h2>
       <ul class="menu_nav">
          <?php foreach ($list_people as $person) { ?>
-           <!-- <li><a href="<?php echo the_permalink(); ?>?showPerson=<?php echo urlencode($person); ?>"><?php echo $person; ?></a></li> -->
-            <li><?php echo $person; ?></li>
+           <li><a href="<?php echo the_permalink(); ?>?showPerson=<?php echo urlencode($person); ?>"><?php echo $person; ?></a></li>
+            <!-- <li><?php echo $person; ?></li> -->
             <?php
               p(list_master_person($person));
             ?>
