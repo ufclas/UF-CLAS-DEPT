@@ -52,6 +52,10 @@
         text-decoration: underline;
       }
 
+      .container_personsDetails {
+        display: none;
+      }
+
     </style>
   </head>
   <body>
@@ -92,9 +96,11 @@
          <?php foreach ($list_people as $person) { ?>
            <li><a href="<?php echo the_permalink(); ?>?showPerson=<?php echo urlencode($person); ?>"><?php echo $person; ?></a></li>
             <!-- <li><?php echo $person; ?></li> -->
-            <?php
-              p(list_master_person($person));
-            ?>
+
+            <div class="container_personsDetails">
+              <?php p(list_master_person($person)); ?>
+            </div>
+            <!-- container persons details -->
          <?php } ?>
       </ul>
       <hr>
@@ -175,10 +181,19 @@
         <?php
           foreach ($list_roles as $role) { ?>
             <li><a <?php if ($role == $show) {echo "class=\"highlight_list_item\"";} ?> href="<?php the_permalink(); ?>?menu=roles&show=<?php echo $role; ?>"><?php echo $role; ?></a></li>
+            <?php schedule_details($show); ?>
         <?php } ?>
       </ul>
-      <?php schedule_details($show); ?>
     <?php } // end days ?>
 
 
   <?php } // END ?>
+
+
+  <script>
+
+
+    document.
+
+
+  </script>
