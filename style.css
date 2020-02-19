@@ -5509,6 +5509,16 @@ Image block cards
   font-size: 3rem !important;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
 
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
