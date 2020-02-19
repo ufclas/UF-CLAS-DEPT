@@ -30,8 +30,8 @@ if ( $slider_query->have_posts() ):
 <main class="carousel-row">
 	<div class="carousel-wrap">
 		<div id="featured-carousel" class="carousel slide" data-ride="carousel" data-interval="<?php echo $slider_speed; ?>" aria-labelledby="carousel-heading" aria-describedby="carousel-desc">
-			<h2 id="carousel-heading" class="sr-only"><?php _e('Featured Posts', 'ufclas-ufl-2015'); ?></h2>
-			<p id="carousel-desc" class="sr-only"><?php _e('Use the previous and next buttons to change the displayed slide.', 'ufclas-ufl-2015'); ?></p>
+			<h2 id="carousel-heading" class="sr-only"><?php _e('Featured Posts', 'ufclas-emily'); ?></h2>
+			<p id="carousel-desc" class="sr-only"><?php _e('Use the previous and next buttons to change the displayed slide.', 'ufclas-emily'); ?></p>
 
 			<!-- Indicators -->
 			<?php if ( $slider_query->post_count > 1 ): ?>
@@ -114,11 +114,11 @@ if ( $slider_query->have_posts() ):
 		<?php if ( $slider_query->post_count > 1 ): ?>
 			<a class="left carousel-control" href="#featured-carousel" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only"><?php _e( 'Previous', 'ufclas-ufl-2015' ); ?></span>
+			<span class="sr-only"><?php _e( 'Previous', 'ufclas-emily' ); ?></span>
 			</a>
 			<a class="right carousel-control" href="#featured-carousel" role="button" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only"><?php _e( 'Next', 'ufclas-ufl-2015' ); ?></span>
+			<span class="sr-only"><?php _e( 'Next', 'ufclas-emily' ); ?></span>
 			</a>
 		<?php endif; ?>
 
