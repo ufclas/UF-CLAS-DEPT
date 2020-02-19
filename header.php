@@ -17,8 +17,11 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="<?php echo get_the_post_thumbnail('square-crop'); ?>" />
-	<meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
+	<meta property="og:title" content="<?php echo get_the_title();?>" />
+	<meta property="og:image" content="<?php echo get_the_post_thumbnail_url(get_the_ID(),'square-crop'); ?>" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="500" />
+	<meta property="og:image:height" content="400" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
@@ -56,7 +59,7 @@
 	 */
 	 $classes = get_body_class();
 
-	 if ( is_singular() && has_post_thumbnail() && (!is_page_template( array('page-image-header.php', 'single-no-feature-image.php', 'page-clas-home.php', 'page-interior-title-image.php'))) && (!is_singular('clas_team_members')) && (!is_page('CLAS IT Connections')) ) :
+	 if ( is_singular() && has_post_thumbnail() && (!is_page_template( array('page-image-header.php', 'single-no-feature-image.php', 'page-clas-home.php', 'page-interior-title-image.php'))) && (!is_singular('clas_team_members')) && (!is_page('CLAS IT Connections')) && (!is_singular('article')) ) :
  		echo '<div class="single-featured-image-header">';
                    // If this is a magazine article
                    if ( is_page_template( 'single-magazine-article.php' ) ) {
