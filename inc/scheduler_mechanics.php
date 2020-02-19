@@ -263,6 +263,12 @@ if (!$link) {
           sort($list_people);
 
 
+          echo "<pre>";
+            print_r($list_master);
+          echo "</pre>";
+
+
+
 // Function: "People" for displaying page i, drop down through JavaScript
 // Function: "People" for displaying page i, drop down through JavaScript
           function list_master_person($selected_parameter) {
@@ -271,10 +277,16 @@ if (!$link) {
             foreach ($list_master as $role => $people) {
                 foreach ($people as $person => $list_core) {
                   // selected parameter
+
+
+
                   if ($person == $selected_parameter) {
-                    $email   = $list_core['email'];
-                    $phone   = $list_core['phone'];
-                    $website = $list_core['website'];
+                    $role    = !empty($list_core['role']) ? $list_core['role'] : "";
+                    $email   = !empty($list_core['email'])   ? $list_core['email']   : "";
+                    $phone   = !empty($list_core['phone'])   ? $list_core['phone']   : "";
+                    $website = !empty($list_core['website']) ? $list_core['website'] : "";
+
+
 
                     foreach ($list_core as $core => $variable_values) {
                       if ($core == "teaching_schedule") {
@@ -303,12 +315,17 @@ if (!$link) {
               }
 
              $super_list = array(
-               "email"=>$email, "phone"=>$phone, "website"=>$website, "schedule" => $list_master_teaching_schedule);
+               "role"     => $role,
+               "email"    => $email,
+               "phone"    => $phone,
+               "website"  => $website,
+               "schedule" => $list_master_teaching_schedule
+             );
 
              foreach ($super_list as $key => $value) {
-               if (!empty($value)) {
+               // if (!empty($value)) {
                  $list_person[$key] = $value;
-               }
+               // }
              }
 
              return $list_person;
