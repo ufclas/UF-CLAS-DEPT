@@ -864,6 +864,7 @@ Media Queries
 
   .archive #tribe-events {
     border-right: 1px dashed #f45a1d;
+    margin-top: 2rem;
   }
 
   #page .tribe-event-description p {
