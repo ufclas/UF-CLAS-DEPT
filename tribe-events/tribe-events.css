@@ -376,6 +376,8 @@ a.desktop-more {
 
 #tribe-bar-form {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #tribe-bar-filters-wrap {
@@ -483,7 +485,7 @@ a.desktop-more {
 }
 
 .tribe-bar-views-inner {
-    background: #f5f5f5;
+    background: transparent;
 }
 
 ul.tribe-events-sub-nav a {
@@ -614,6 +616,32 @@ span.tribe-block__venue__phone {
 #tribe-bar-views .tribe-bar-views-list {
     background: #f7f4eb;
 }
+
+#page .tribe-bar-views-list li {
+    font-family: "Gentona_book";
+    font-size: 16px;
+}
+
+#tribe-bar-views{
+    width: 80%;
+}
+
+#tribe-bar-views .tribe-bar-views-list {
+  position: relative;
+}
+
+#tribe-bar-collapse-toggle {
+  background: transparent;
+}
+
+#tribe-bar-form.tribe-bar-collapse .tribe-bar-filters {
+  background: #f7f4eb;
+}
+
+#tribe-bar-collapse-toggle:focus,
+#tribe-bar-collapse-toggle:hover {
+  background: #004083;
+}
 /*====================================
 
 Media Queries
@@ -693,7 +721,6 @@ Media Queries
   }
 
   #tribe-bar-form {
-      display: flex;
       align-items: center;
   }
 
@@ -753,6 +780,10 @@ Media Queries
   #page #main li.tribe-events-nav-next {
     text-align: right !important;
     float: right !important;
+  }
+
+  #tribe-bar-views .tribe-bar-views-list {
+    position: absolute;
   }
 }
 
@@ -833,6 +864,7 @@ Media Queries
 
   .archive #tribe-events {
     border-right: 1px dashed #f45a1d;
+    margin-top: 2rem;
   }
 
   #page .tribe-event-description p {
