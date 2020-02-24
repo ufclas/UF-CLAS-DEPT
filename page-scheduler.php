@@ -1,5 +1,8 @@
 <?php
 /* Template Name: Scheduler */
+
+get_header();
+
   // set timezone to local time (a little unsure about relying on this method)
   date_default_timezone_set("America/New_York");
   include("inc/scheduler_mechanics.php");
@@ -13,10 +16,26 @@
   }
 
   $search_term = "";
-
   if (isset($_GET['exception'])) {
     $search_term = $_GET['search'];
   }
+
+  if (isset($_POST['submit_search'])) {
+    $unlock = true;
+    $menu = "search";
+    $search_term = $_POST['search_term'];
+
+    // clean
+    $search_term        = trim($search_term);
+    $search_term        = strip_tags($search_term);
+    $search_term        = preg_replace("/[^A-Za-z0-9 ]/", '', $search_term);
+    $search_term        = strtolower($search_term);
+    $search_term_length = strlen($search_term);
+
+  }
+
+
+
 
 
   // if (isset($_POST['search_schedule_submit'])) {
@@ -33,11 +52,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style media="screen">
-
-      body {
-        width: 400px;
-        margin: auto;
-      }
 
       a, .user_information_toggle {
         color: #2A5DB0;
@@ -79,8 +93,8 @@
 
       <hr>
       <form action="<?php echo the_permalink(); ?>" method="post">
-        <input type="text" name="search_schedules" value="<?php echo $search_term; ?>" placeholder="search">
-        <input type="submit" name="search_schedule_submit" value="search">
+        <input type="text" name="search_term" value="<?php echo $search_term; ?>" placeholder="search">
+        <input type="submit" name="submit_search" value="search">
       </form>
       <hr>
       <h2>Days</h2>
@@ -168,9 +182,10 @@
   ?>
     <p><a href="<?php the_permalink(); ?>">back</a></p>
     <h2><?php echo ucfirst($menu); ?></h2>
-
+<!-- days  -->
+<!-- days  -->
+<!-- days  -->
     <?php if ($menu == "days") { ?>
-
       <ul class="menu_nav">
         <?php
         foreach ($days as $numeric_day => $verbal_day) {
@@ -228,7 +243,11 @@
     <?php } ?>
 
 
-    <!-- // ROLES ROLES ROLES  -->
+<!-- ROLES ROLES ROLES  -->
+<!-- ROLES ROLES ROLES  -->
+<!-- ROLES ROLES ROLES  -->
+
+
     <?php if ($menu == "roles") { ?>
       <ul class="menu_nav">
         <?php
@@ -240,7 +259,113 @@
     <?php } // end days ?>
 
 
-  <?php } // END ?>
+<!-- search search search -->
+<!-- search search search -->
+<!-- search search search -->
+
+  <?php if ($menu == "search") { ?>
+    <form action="<?php echo the_permalink(); ?>" method="post">
+      <input type="text" name="search_term" value="<?php echo $search_term; ?>" placeholder="search" required>
+      <input type="submit" name="submit_search" value="search">
+    </form>
+    <hr>
+    <?php
+// EXPLICIT SEARCH TERMS
+// EXPLICIT SEARCH TERMS
+    // check if search term was explicitly a day of the week
+    foreach ($days as $day) {
+      if ($search_term == $day) {
+        echo "<p><a href=\"";
+        the_permalink();
+        echo "?menu=days&show={$day}\"><b>View " . $day . " schedules</b></a></p>";
+      }
+    }
+    // check if search term was explicitly a Role
+    foreach ($list_master_roles as $role) {
+      if ($search_term == $role) {
+        echo "<p><a href=\"";
+        the_permalink();
+        echo "?menu=roles&show={$role}\"><b>View schedules by role: ".$role."</b></a></p>";
+      }
+    }
+// /EXPLICIT /SEARCH /TERMS
+// /EXPLICIT /SEARCH /TERMS
+
+// p($list_master);
+
+  //
+  // if ("0" === null) {
+  //   echo "null is zero";
+  // } else if (empty(0)) {
+  //   echo "it is empty";
+  // }
+
+
+  if ($search_term != null && $search_term_length > 0) {
+
+    $list_search_name = array();
+    // master search loop
+    foreach ($list_master as $null_role => $list_people) {
+
+      // back-end search through [names] -- hold that thought
+      foreach ($list_people as $person => $list_person_details) {
+        // go after email and phone
+        foreach ($list_person_details as $key_parameters => $value_parameter) {
+          if ($key_parameters == "email" || $key_parameters == "phone") {
+            if ($key_parameters == "phone") {
+              $value_parameter = str_replace("-","",$value_parameter);
+            }
+            if (strpos($value_parameter, $search_term) !== false) {
+              echo $person . " " . $value_parameter;
+              echo "<br>";
+            }
+          }
+        }
+
+        $clean_person = strtolower($person);
+        if (strpos($clean_person, $search_term) !== false) {
+          $list_search_name[] = $person;
+        }
+
+      } // people as person => details
+
+
+    } // master search loop /searchLoop /searchLoop /searchLoop
+
+
+
+    // organize the list
+    sort($list_search_name);
+    foreach ($list_search_name as $peep) {
+      echo $peep . "<br>";
+    }
+    if (empty($list_search_name)) {
+      echo "<p>Your search for \"<b>". $search_term ."</b>\" returned zero results!</p><p>Please try searching again or <a href=\"";
+      the_permalink();
+      echo "\">check the index page</a> to find what you're looking for!</p>";
+    }
+
+
+  } else {
+    echo "<p>Your search was empty!</p><p>Please try searching again or <a href=\"";
+    the_permalink();
+    echo "\">check the index page</a> to find what you're looking for!</p>";
+  }
+
+    /*
+      search name:
+      search email:
+      search phone:
+      going to have to return full record
+    */
+
+    } // /SEARCH /SEARCH /SEARCH
+  ?>
+
+
+
+
+  <?php } // END /2 /2 /2 /2 /2 /2 /2 /2 ?>
 
 
 
@@ -251,3 +376,5 @@
         }
       <?php } ?>
     </script>
+
+<?php get_footer(); ?>

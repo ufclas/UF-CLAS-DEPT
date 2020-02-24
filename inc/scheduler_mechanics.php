@@ -197,6 +197,7 @@ if (!$link) {
       //   print_r($list_master);
       // echo "</pre>";
 
+      // ease-of-use back-end function
       function p($list) {
         echo "<pre>";
           print_r($list);
