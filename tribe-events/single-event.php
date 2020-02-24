@@ -48,7 +48,7 @@ $event_id = get_the_ID();
 			<!-- Event content -->
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 			<div class="tribe-events-single-event-description tribe-events-content">
-				<p><?php echo get_the_content(); ?></p>
+				<?php echo apply_filters('the_content', get_post_field('post_content', $event_id)); ?>
 			</div>
 			<!-- .tribe-events-single-event-description -->
 			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>

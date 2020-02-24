@@ -243,7 +243,9 @@ ul.tribe-events-sub-nav li {
   width: 100%;
 }
 
-#page label.label-tribe-bar-search, #page .tribe-bar-date-filter label {
+#page label.label-tribe-bar-search,
+#page .tribe-bar-date-filter label,
+#page .tribe-bar-views label {
     font-family: "Quadon_Medium" !important;
     font-size: 1rem;
     font-weight: 100;
@@ -374,7 +376,6 @@ a.desktop-more {
 
 #tribe-bar-form {
     display: flex;
-    justify-content: center;
 }
 
 #tribe-bar-filters-wrap {
@@ -390,6 +391,7 @@ a.desktop-more {
 
 #tribe-events-content .tribe-events-notices li {
     font-family: "Gentona_Book";
+    color: #333;
 }
 
 .tribe-events-notices ul li:before {
@@ -603,6 +605,15 @@ span.tribe-block__venue__phone {
 .events-gridview  .tribe-event-date-start  {
   margin-left: 0;
 }
+
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+  width: auto;
+}
+
+#tribe-bar-views-toggle:focus, #tribe-bar-views-toggle:hover,
+#tribe-bar-views .tribe-bar-views-list {
+    background: #f7f4eb;
+}
 /*====================================
 
 Media Queries
@@ -682,8 +693,8 @@ Media Queries
   }
 
   #tribe-bar-form {
-      display: block;
-      justify-content: center;
+      display: flex;
+      align-items: center;
   }
 
   .featured-events-container img {
@@ -836,5 +847,15 @@ Media Queries
 
   #page ul.tribe-events-sub-nav a {
     border-bottom: 1px dashed #f45a1d;
+  }
+
+  #tribe-bar-form.tribe-bar-full.tribe-events-bar--has-filters #tribe-bar-views,
+  #tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-filters #tribe-bar-views {
+    width: 25%;
+  }
+
+  #tribe-bar-form.tribe-bar-full.tribe-events-bar--has-views #tribe-bar-filters-wrap,
+  #tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-views #tribe-bar-filters-wrap {
+    width: 72%;
   }
 }
