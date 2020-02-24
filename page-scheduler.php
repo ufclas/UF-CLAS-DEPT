@@ -123,7 +123,21 @@
                 ?>
               <?php foreach (list_master_person($person) as $core => $list_values_variable) { ?>
                 <?php if (!empty($list_values_variable)) { ?>
-                   <li><?php  echo $list_values_variable; ?></li>
+                <?php if (is_string($list_values_variable)) { ?>
+                  <li><?php  echo $list_values_variable; ?></li>
+                <?php } else if (is_array($list_values_variable)) {
+                  foreach ($list_values_variable as $key_scheduleType => $value_list_schedule) {
+                    if ($key_scheduleType == "teaching_schedule") {
+                      echo "<h4>Teaching Schedule</h4>";
+                      // p($value_list_schedule);
+                      aggitate_teaching_schedule($value_list_schedule);
+                    }
+                    if ($key_scheduleType == "office_hours") {
+                      echo "<h4>Office Hours</h4>";
+                      aggitate_office_hours($value_list_schedule);
+                    }
+                  }
+                } ?>
 
                 <?php
               } else {
@@ -220,8 +234,8 @@
         <?php
           foreach ($list_roles as $role) { ?>
             <li><a <?php if ($role == $show) {echo "class=\"highlight_list_item\"";} ?> href="<?php the_permalink(); ?>?menu=roles&show=<?php echo $role; ?>"><?php echo $role; ?></a></li>
-            <?php schedule_details($show); ?>
         <?php } ?>
+        <?php schedule_details($show); ?>
       </ul>
     <?php } // end days ?>
 

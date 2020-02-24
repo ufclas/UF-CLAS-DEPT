@@ -462,7 +462,7 @@ if (!$link) {
                           }
                         }
                       }
-                      echo     "<td>";
+                      echo    "<td>";
                       echo "</tr>";
                     }
                   }
@@ -492,6 +492,40 @@ if (!$link) {
               } // loop role people
             } // loop list_master
           } // /end show(function)
+
+
+          function aggitate_teaching_schedule($masterList) {
+            foreach ($masterList as $day => $list_periods) {
+                  echo "<h5>{$day}</h5>";
+                  echo "<p>";
+                  foreach ($list_periods as $null_index => $period) {
+                    echo $period;
+                    if ($period !== end($list_periods)) {
+                      echo ", ";
+                    }
+                  }
+                  echo "</p>";
+                }
+          }
+
+
+          function aggitate_office_hours ($masterList) {
+            foreach ($masterList as $day => $list_slot) {
+              echo "<h5>{$day}</h5>";
+              foreach ($list_slot as $slot => $list_port) {
+                foreach ($list_port as $port => $time) {
+                  $time = date('g:i a', strtotime($time));
+                  echo $time;
+                  if ($port == "start") {
+                    echo " to ";
+                  }
+                  if ($port == "end") {
+                    echo "<br>";
+                  }
+                }
+              }
+            }
+          }
 
 
 
