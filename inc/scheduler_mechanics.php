@@ -263,28 +263,46 @@ if (!$link) {
           sort($list_people);
 
 
-          echo "<pre>";
-            print_r($list_master);
-          echo "</pre>";
-
+          // echo "<pre>";
+          //   print_r($list_master);
+          // echo "</pre>";
+          // echo "<pre>";
+          // print_r($list_master['faculty']);
+          // echo "</pre>";
 
 
 // Function: "People" for displaying page i, drop down through JavaScript
 // Function: "People" for displaying page i, drop down through JavaScript
+
+
+
           function list_master_person($selected_parameter) {
             global $list_master;
             $list_master_teaching_schedule = array();
             foreach ($list_master as $role => $people) {
+
+              // echo "<pre>";
+              // print_r($people);
+              // echo "</pre>";
                 foreach ($people as $person => $list_core) {
                   // selected parameter
 
 
-
+                  // $role = "foo";
                   if ($person == $selected_parameter) {
-                    $role    = !empty($list_core['role']) ? $list_core['role'] : "";
-                    $email   = !empty($list_core['email'])   ? $list_core['email']   : "";
-                    $phone   = !empty($list_core['phone'])   ? $list_core['phone']   : "";
-                    $website = !empty($list_core['website']) ? $list_core['website'] : "";
+
+                    foreach ($list_master as $role_role => $role_people) {
+                      foreach ($role_people as $role_person => $role_list_core) {
+                        if ($role_person == $selected_parameter) {
+                          // it's struggling with this (role setting) because the person is the subset of the role -- so role > person > person deets, so it's defaulting from the loop
+                          // to the point that this is kind of redundant because the person wont exist in the system if they dont have a role because roles are the master keys
+                          $role_baz = !empty($role_role) ? $role_role : "";
+                        }
+                      }
+                    }
+                    $email    = !empty($list_core['email'])   ? $list_core['email']   : "";
+                    $phone    = !empty($list_core['phone'])   ? $list_core['phone']   : "";
+                    $website  = !empty($list_core['website']) ? $list_core['website'] : "";
 
 
 
@@ -310,12 +328,12 @@ if (!$link) {
                         }
                       }
                     }
-                  }
-                }
-              }
+                  } // if person == parameter
+                } // loop details
+              } // master loop
 
              $super_list = array(
-               "role"     => $role,
+               "role"     => $role_baz,
                "email"    => $email,
                "phone"    => $phone,
                "website"  => $website,

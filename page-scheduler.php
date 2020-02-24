@@ -110,7 +110,7 @@
          <?php foreach ($list_people as $person) { ?>
            <li class="cursorPointer" id="remote<?php echo $i; ?>"><?php echo $person; ?></li>
            <!-- <li class="cursorPointer" id="remote<?php echo $i; ?>"><a href="<?php echo the_permalink(); ?>?showPerson=<?php echo urlencode($person); ?>"><?php echo $person; ?></a></li> -->
-           <?php p(list_master_person($person)); ?>
+           <?php// p(list_master_person($person)); ?>
             <div class="container_personsDetails toggs" id="toggle_<?php echo $i; ?>">
               <ul>
                 <?php $n = 0;
@@ -121,21 +121,21 @@
                   // it's not writing the default faculty for amber?
 
                 ?>
-              <?php //foreach (list_master_person($person) as $core => $list_values_variable) { ?>
-                <?php //if (!empty($list_values_variable)) { ?>
-                  <!-- <li><?php // echo $list_values_variable; ?></li> -->
+              <?php foreach (list_master_person($person) as $core => $list_values_variable) { ?>
+                <?php if (!empty($list_values_variable)) { ?>
+                   <li><?php  echo $list_values_variable; ?></li>
 
                 <?php
-              // } else {
-              //     $n++;
-              //     if ($n > 5) {
-              //       echo $person . " doesn't have any details";
-              //     }
-              //   }
+              } else {
+                  $n++;
+                  if ($n > 5) {
+                    echo $person . " doesn't have any details";
+                  }
+                }
                 ?>
 
 
-              <?php //} ?>
+              <?php } ?>
               </ul>
             </div>
             <!-- Toggs toggle | container persons details -->
