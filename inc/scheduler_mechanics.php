@@ -529,11 +529,31 @@ if (!$link) {
           } // function aggitate office hours
 
 
-          // function search_find ($) {
-          //   if (strpos($value_personalDetails, $search_term) !== false) {
-          //     $list_searchReturn[] = $value_personalDetails;
-          //   }
-          // }
+
+// function search, search, search
+          function search ($list_of_keys) {
+            global $list_master;
+
+            // echo "<pre>";
+            //   print_r($list_master);
+            // echo "</pre>";
+
+            foreach ($list_of_keys as $search_key) {
+              foreach ($list_master as $role => $people) {
+                foreach ($people as $person => $details) {
+                  if ($search_key == $person) {
+                    $list[$person] = array();
+                  }
+                  foreach ($details as $core => $var_values) {
+                    if (is_string("a")) {};
+                    if (is_array ("a")) {};
+                  }
+                }
+              }
+            }
+            return $list;
+          } // end function (search)
+// function /search, /search, /search
 
 
 

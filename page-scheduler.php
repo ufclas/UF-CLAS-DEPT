@@ -177,6 +177,12 @@
 <!-- page 2 -->
 <!-- page 2 -->
 <!-- page 2 -->
+<!-- page 2 -->
+<!-- page 2 -->
+<!-- page 2 -->
+<!-- page 2 -->
+<!-- page 2 -->
+<!-- page 2 -->
 
   <?php } else {
     $menu;
@@ -292,80 +298,54 @@
     }
 // /EXPLICIT-SEARCH-TERMS
 // /EXPLICIT-SEARCH-TERMS
-
-// p($list_master);
+// /EXPLICIT-SEARCH-TERMS
 
   // begin natural search Clear through Empty Gate
   if ($search_term != null && $search_term_length > 0) {
-    $list_searchReturn = array();
+    $list_of_keys = array();
     // master search loop || loop through everything: role > person > details
     foreach ($list_master as $null_role => $list_people) {
       // loop through person > their details
       foreach ($list_people as $person => $list_person_details) {
         // backend lowercase name as new variable for preserved call
         $clean_person = strtolower($person);
-// IF NAME
-// IF NAME
-// IF NAME
+        // IF NAME
         if (strpos($clean_person, $search_term) !== false) {
-          $list_searchReturn[] = $person;
+          $list_of_keys[] = $person;
         }
-// IF NAME
-// IF NAME
-// IF NAME
+        // IF NAME
         // -- loop through their details: email, phone, teaching_schedule[], office_hours[] => string / array
         foreach ($list_person_details as $key_personal_details => $value_personalDetails) {
           // deal with the strings
           if ($key_personal_details == "email") {
             if (strpos($value_personalDetails, $search_term) !== false) {
-              $list_searchReturn[] = $value_personalDetails;
+              $list_of_keys[] = $value_personalDetails;
             }
           } // (if email) via is_string
           if ($key_personal_details == "phone") {
             // strip phone
-            if ($key_personal_details == "phone") {
-              // 352-000-0000 => 3520000000
-              $value_personalDetails = str_replace("-","",$value_personalDetails);
-            } // (if) clean phone number
+            // 352-000-0000 => 3520000000 to enable less choosy find
+            $value_personalDetails = str_replace("-","",$value_personalDetails);
+            // if number exists in master
             if (strpos($value_personalDetails, $search_term) !== false) {
-              $list_searchReturn[] = $value_personalDetails;
-            }
+              // reformat the stripped phone number
+              if (preg_match('/^(\d{3})(\d{3})(\d{4})$/', $value_personalDetails,  $pattern_match)) {
+                $newnum = $pattern_match[1] . '-' .$pattern_match[2] . '-' . $pattern_match[3];
+              }
+              $list_of_keys[] = $newnum;
+            } // (if number exists in master)
           } // (if phone) via is_string
         } // overall details loop: email, phone
       } // people as person => details
     } // master search loop /searchLoop /searchLoop /searchLoop
 
-
-    // if (strpos($value_personalDetails, $search_term) !== false) {
-    //   // echo $person . " " . $value_personalDetails;
-    //   // echo "<br>";
-    //   // this is the problem
-    // }
-
-    // organize the list
-    sort($list_searchReturn);
-    p($list_searchReturn);
-
-    // echo $list_searchReturn[3]['name'];
-    // foreach ($list_searchReturn as $key_index => $peep) {
-      // echo $peep . "<br>";
-    // }
     // $count_returned_results = $key_index + 1;
-    // is this going to split or merge on multiple results: name + email ---
 
+    // sort list
+    sort($list_of_keys);
+    p($list_of_keys);
 
-    // if (empty($list_searchReturn)) {
-    //   echo "<p>Your search for \"<b>". $search_term ."</b>\" returned zero results!</p><p>Please try searching again or <a href=\"";
-    //   the_permalink();
-    //   echo "\">check the index page</a> to find what you're looking for!</p>";
-    // }
-
-    // reformat the stripped phone number
-
-    // if (preg_match('/^\d(\d{3})(\d{3})(\d{4})$/', $stripped_phone_number,  $pattern_match)) {
-    //   $formatted_phone = $pattern_match[1] . '-' .$pattern_match[2] . '-' . $pattern_match[3];
-    // }
-
+    p(search($list_of_keys));
 
 
   } else {
