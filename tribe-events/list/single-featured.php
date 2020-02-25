@@ -25,8 +25,8 @@ $featuredImage = tribe_event_featured_image( null, 'square-crop' );
 if (empty($featuredImage)){?>
 		<a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='<?php echo get_stylesheet_directory_uri()."/assets/images/uf-clas.png"?>' alt='UF CLAS Logo'/></a>
 		<?php
-}else {
-	echo get_the_post_thumbnail( null, 'square-crop' );
+}else {?>
+			<a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><?php echo get_the_post_thumbnail(null,'square-crop')?></a><?php
 }
 
 ?>
