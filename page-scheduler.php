@@ -1,8 +1,5 @@
 <?php
 /* Template Name: Scheduler */
-
-get_header();
-
   // set timezone to local time (a little unsure about relying on this method)
   date_default_timezone_set("America/New_York");
   include("inc/scheduler_mechanics.php");
@@ -52,6 +49,11 @@ get_header();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style media="screen">
+
+      body {
+        width: 400px;
+        margin: auto;
+      }
 
       a, .user_information_toggle {
         color: #2A5DB0;
@@ -288,62 +290,82 @@ get_header();
         echo "?menu=roles&show={$role}\"><b>View schedules by role: ".$role."</b></a></p>";
       }
     }
-// /EXPLICIT /SEARCH /TERMS
-// /EXPLICIT /SEARCH /TERMS
+// /EXPLICIT-SEARCH-TERMS
+// /EXPLICIT-SEARCH-TERMS
 
 // p($list_master);
 
-  //
-  // if ("0" === null) {
-  //   echo "null is zero";
-  // } else if (empty(0)) {
-  //   echo "it is empty";
-  // }
-
-
+  // begin natural search Clear through Empty Gate
   if ($search_term != null && $search_term_length > 0) {
-
-    $list_search_name = array();
-    // master search loop
+    $list_searchReturn = array();
+    // master search loop || loop through everything: role > person > details
     foreach ($list_master as $null_role => $list_people) {
-
-      // back-end search through [names] -- hold that thought
+      // loop through person > their details
       foreach ($list_people as $person => $list_person_details) {
-        // go after email and phone
-        foreach ($list_person_details as $key_parameters => $value_parameter) {
-          if ($key_parameters == "email" || $key_parameters == "phone") {
-            if ($key_parameters == "phone") {
-              $value_parameter = str_replace("-","",$value_parameter);
-            }
-            if (strpos($value_parameter, $search_term) !== false) {
-              echo $person . " " . $value_parameter;
-              echo "<br>";
-            }
-          }
-        }
-
+        // backend lowercase name as new variable for preserved call
         $clean_person = strtolower($person);
+// IF NAME
+// IF NAME
+// IF NAME
         if (strpos($clean_person, $search_term) !== false) {
-          $list_search_name[] = $person;
+          $list_searchReturn[] = $person;
         }
-
+// IF NAME
+// IF NAME
+// IF NAME
+        // -- loop through their details: email, phone, teaching_schedule[], office_hours[] => string / array
+        foreach ($list_person_details as $key_personal_details => $value_personalDetails) {
+          // deal with the strings
+          if ($key_personal_details == "email") {
+            if (strpos($value_personalDetails, $search_term) !== false) {
+              $list_searchReturn[] = $value_personalDetails;
+            }
+          } // (if email) via is_string
+          if ($key_personal_details == "phone") {
+            // strip phone
+            if ($key_personal_details == "phone") {
+              // 352-000-0000 => 3520000000
+              $value_personalDetails = str_replace("-","",$value_personalDetails);
+            } // (if) clean phone number
+            if (strpos($value_personalDetails, $search_term) !== false) {
+              $list_searchReturn[] = $value_personalDetails;
+            }
+          } // (if phone) via is_string
+        } // overall details loop: email, phone
       } // people as person => details
-
-
     } // master search loop /searchLoop /searchLoop /searchLoop
 
 
+    // if (strpos($value_personalDetails, $search_term) !== false) {
+    //   // echo $person . " " . $value_personalDetails;
+    //   // echo "<br>";
+    //   // this is the problem
+    // }
 
     // organize the list
-    sort($list_search_name);
-    foreach ($list_search_name as $peep) {
-      echo $peep . "<br>";
-    }
-    if (empty($list_search_name)) {
-      echo "<p>Your search for \"<b>". $search_term ."</b>\" returned zero results!</p><p>Please try searching again or <a href=\"";
-      the_permalink();
-      echo "\">check the index page</a> to find what you're looking for!</p>";
-    }
+    sort($list_searchReturn);
+    p($list_searchReturn);
+
+    // echo $list_searchReturn[3]['name'];
+    // foreach ($list_searchReturn as $key_index => $peep) {
+      // echo $peep . "<br>";
+    // }
+    // $count_returned_results = $key_index + 1;
+    // is this going to split or merge on multiple results: name + email ---
+
+
+    // if (empty($list_searchReturn)) {
+    //   echo "<p>Your search for \"<b>". $search_term ."</b>\" returned zero results!</p><p>Please try searching again or <a href=\"";
+    //   the_permalink();
+    //   echo "\">check the index page</a> to find what you're looking for!</p>";
+    // }
+
+    // reformat the stripped phone number
+
+    // if (preg_match('/^\d(\d{3})(\d{3})(\d{4})$/', $stripped_phone_number,  $pattern_match)) {
+    //   $formatted_phone = $pattern_match[1] . '-' .$pattern_match[2] . '-' . $pattern_match[3];
+    // }
+
 
 
   } else {
@@ -352,18 +374,24 @@ get_header();
     echo "\">check the index page</a> to find what you're looking for!</p>";
   }
 
-    /*
-      search name:
-      search email:
-      search phone:
-      going to have to return full record
-    */
+
+
+
+  // echo "<pre>";
+  //   echo "
+  //   search is - <br><br>
+  //       name =><br>
+  //           email =><br>
+  //           phone =><br>
+  //   ";
+  //   echo "</pre>";
+  //
+
+
+
 
     } // /SEARCH /SEARCH /SEARCH
   ?>
-
-
-
 
   <?php } // END /2 /2 /2 /2 /2 /2 /2 /2 ?>
 
@@ -376,5 +404,3 @@ get_header();
         }
       <?php } ?>
     </script>
-
-<?php get_footer(); ?>

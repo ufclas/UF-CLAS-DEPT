@@ -526,7 +526,14 @@ if (!$link) {
                 }
               }
             }
-          }
+          } // function aggitate office hours
+
+
+          // function search_find ($) {
+          //   if (strpos($value_personalDetails, $search_term) !== false) {
+          //     $list_searchReturn[] = $value_personalDetails;
+          //   }
+          // }
 
 
 
