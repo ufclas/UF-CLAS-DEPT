@@ -147,7 +147,7 @@ $website = tribe_get_event_website_link();
 		if ( ! empty( $website ) ) : ?>
 
 			<dt class="tribe-events-event-url-label"> <?php esc_html_e( 'Website:', 'the-events-calendar' ) ?> </dt>
-			<dd class="tribe-events-event-url"> <?php echo $website; ?> </dd>
+			<dd class="tribe-events-event-url"> <?php echo "<a href='" . strip_tags($website) . "' target='_blank'>Link (Opens in New Tab)</a>"; ?> </dd>
 		<?php endif ?>
 
 		<?php do_action( 'tribe_events_single_meta_details_section_end' ) ?>

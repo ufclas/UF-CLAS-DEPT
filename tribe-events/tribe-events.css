@@ -19,6 +19,7 @@
     font-size: 1.7rem;
     color: #f45a1d;
     padding: .5rem 0;
+    text-transform: uppercase;
 }
 
 .tribe-event-date-start,
@@ -39,12 +40,13 @@ a.tribe-events-gmap {
 }
 
 .time-venue-info-container {
-    font-family: "Gentona_light" !important;
+    font-family: "Gentona_Book" !important;
     font-weight: 100;
+    color: #666666 !important;
 }
 
 .time-venue-info-container > span {
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 .tribe-events-list-separator-month {
@@ -63,7 +65,7 @@ a.tribe-events-gmap {
 }
 
 h3.tribe-events-list-event-title {
-    border-bottom: 2px dashed #f45a1d !important;
+    border-bottom: 1px dashed #f45a1d !important;
     width: 80%;
     margin: 0 2rem 15px !important;
     padding-bottom: 8px !important;
@@ -168,9 +170,18 @@ span.tribe-block__venue__phone {
     margin-bottom: 0 !important;
 }
 
-#page .tribe-events-othermonth > div:first-of-type > a {
+#page .tribe-events-othermonth > div:first-of-type > a,
+#page .tribe-events-thismonth > div:first-of-type > a,
+.tribe-events-calendar td div[id*=tribe-events-daynum-] {
     font-family: "Quadon" !important;
     font-size: 1rem;
+    color: #002346 !important;
+    background: #f7f4eb !important;
+}
+
+.tribe-events-calendar th {
+  background: #004083 !important;
+  color: #ffffff;
 }
 
 #page .tribe-events-viewmore a {
@@ -205,7 +216,7 @@ ul.tribe-events-sub-nav li {
     margin: 0 !important;
     color: #666666 !important;
     font-family: "Gentona_Book";
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .featured-event .tribe-events-venue-details {
@@ -214,6 +225,7 @@ ul.tribe-events-sub-nav li {
     text-transform: uppercase;
     color: #004083;
     border-top: transparent;
+    font-size: 1rem;
 }
 
 .featured-event span.tribe-address {
@@ -253,7 +265,8 @@ ul.tribe-events-sub-nav li {
     line-height: 20px;
 }
 
-#tribe-events input {
+.tribe-bar-date-filter input,
+.tribe-bar-search-filter input {
     font-style: normal !important;
     font-family: "Gentona_Book" !important;
     color: #414141;
@@ -263,10 +276,14 @@ ul.tribe-events-sub-nav li {
 }
 
 #tribe-events input.tribe-events-button {
-    background: #f45a1d !important;
+    background: #1570CF !important;
     border-radius: 4px !important;
     font-family: "Gentona_Bold" !important;
     font-size: 1rem !important;
+}
+
+#tribe-events input.tribe-events-button:hover {
+    background: #00337A!important;
 }
 
 .tribe-bar-submit {
@@ -309,6 +326,7 @@ ul.tribe-events-sub-nav li {
   font-size: 26px;
   line-height: 48px;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .tribe-events-loop .tribe-event-schedule-details {
@@ -465,8 +483,9 @@ a.desktop-more {
     color: white !important;
 }
 
-.tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-daynum-] a {
-	background: #A9DCDA;
+.tribe-events-calendar div[id*=tribe-events-daynum-],
+.tribe-events-calendar div[id*=tribe-events-daynum-] a {
+	background: #5789B7;
 	color: #333;
 }
 
@@ -475,9 +494,10 @@ a.desktop-more {
     font-family: "Quadon_Regular" !important;
 }
 
-.tribe-events-page-title {
-    font-family: "Gentona_Light";
-    font-weight: 100;
+div#tribe-events-footer .tribe-events-nav-pagination a {
+    font-family: "Gentona_Bold" !important;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
 #tribe-bar-views-toggle {
@@ -499,6 +519,11 @@ ul.tribe-events-sub-nav a {
     font-family: "Gentona_Book";
     font-weight: 100 !important;
     text-decoration: none;
+}
+
+.tribe-events-meta-group .tribe-events-single-section-title {
+    font-family: "Quadon_Bold" !important;
+    font-size: 20px;
 }
 
 address.tribe-events-address {
@@ -552,11 +577,11 @@ h3.tribe-mobile-day-heading {
 }
 
 .single-tribe_events #tribe-events-content h2.tribe-events-single-event-title {
-    color: #004083;
-    text-align: left;
-    font-family: "Gentona_ExtraBold",Arial,sans-serif !important;
-    text-transform: capitalize;
-    font-size: 1.7rem;
+  color: #004083;
+  text-align: left;
+  font-family: "Gentona_Medium",Arial,sans-serif !important;
+  text-transform: capitalize;
+  font-size: 2rem;
 }
 
 #page address.tribe-block__venue__address p,
@@ -567,8 +592,13 @@ span.tribe-block__venue__phone {
 
 .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-],
 .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a {
-    background: #004083;
+    background: #004083 !important;
     color: white !important;
+}
+
+#page h3 a.url {
+    font-family: "Gentona_Medium" !important;
+    font-weight: 100;
 }
 
 #page .single-event-dates {
@@ -642,6 +672,53 @@ span.tribe-block__venue__phone {
 #tribe-bar-collapse-toggle:hover {
   background: #004083;
 }
+
+#page h2.tribe-events-page-title a {
+    font-family: "Gentona_Light" !important;
+    font-weight: 100;
+}
+
+.post-type-archive-tribe_events #secondary a {
+    text-transform: uppercase;
+}
+
+.post-type-archive-tribe_events #secondary h3 {
+    font-family: "Quadon_Bold";
+    font-size: 20px;
+}
+
+#tribe-events .tribe-events-content p,
+.tribe-events-after-html p,
+.tribe-events-before-html p {
+    line-height: 21px;
+    font-size: 1.125rem;
+}
+
+#tribe-events-footer hr {
+    max-width: 96%;
+    margin: 1rem 0;
+    color: yellow;
+}
+
+.single-tribe_events #tribe-events-content .tribe-events-event-meta dd {
+    color: #666666;
+}
+
+dd.tribe-venue {
+    line-height: 0 !important;
+}
+
+#tribe-events-footer hr {
+    height: 1px;
+    color: #C6C3C3;
+    background-color: #C6C3C3;
+    border: none;
+}
+
+.tribe-bar-search-filter input::placeholder {
+    font-style: normal !important;
+    font-family: "Gentona_Book" !important;
+}
 /*====================================
 
 Media Queries
@@ -673,13 +750,13 @@ Media Queries
 
   #page .date-location-container {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
   }
 
   .tribe-event-date-start span,
   .tribe-event-date-end span {
       font-family: "Gentona_ExtraBold" !important;
-      font-size: 38px;
+      font-size: 30px;
       padding: 0 3px;
   }
 
@@ -697,8 +774,8 @@ Media Queries
   }
 
   #page .tribe-events-venue-details a img {
-      width: 210px;
-      height: 210px;
+      width: 165px;
+      height: 165px;
       object-fit: cover;
   }
 
@@ -747,7 +824,6 @@ Media Queries
   .tribe-events-list .type-tribe_events {
       width: 45%;
       display: inline-block;
-      margin: 0 1rem;
   }
 
   h3.tribe-events-list-event-title {
@@ -785,11 +861,46 @@ Media Queries
   #tribe-bar-views .tribe-bar-views-list {
     position: absolute;
   }
+
+  #tribe-events-content h2 {
+    text-align: left;
+  }
+
+  #tribe-bar-views{
+      width: 100%;
+  }
+
+  #tribe-bar-filters-wrap {
+    width: 100%;
+  }
+
+  #tribe-bar-filters-wrap {
+    background: #EBEBEB;
+  }
+
+  #tribe-bar-filters-wrap button {
+    color: #002346;
+  }
+
+  #tribe-bar-views-toggle {
+    background: #CCCCCC;
+    color: #002346;
+  }
+
+  #tribe-bar-form .tribe-bar-views-inner label {
+    padding-left: 0;
+  }
+
+  .time-venue-info-container span {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1025px){
   a.desktop-more {
     display: block;
+    text-transform: uppercase;
+    letter-spacing: 0;
   }
 
   a.more-mobile {
@@ -809,10 +920,17 @@ Media Queries
     display: block;
   }
 
+  .tribe-event-date-start,
+  .tribe-event-date-end {
+    margin: 1rem 0;
+  }
+
   .tribe-events-event-meta .author .tribe-event-schedule-details {
-      font-size: 1.5rem;
-      color: #f45a1d;
-      flex: 1 25%;
+    font-size: 1.5rem;
+    color: #f45a1d;
+    flex: 1 25%;
+    margin: 0 1rem 3rem 0;
+    min-width: 140px;
   }
 
   .tribe-events-page-title {
@@ -863,7 +981,7 @@ Media Queries
   }
 
   .archive #tribe-events {
-    border-right: 1px dashed #f45a1d;
+    border-right: 1px solid #C6C3C3;
     margin-top: 2rem;
   }
 
@@ -872,13 +990,10 @@ Media Queries
       line-height: 22px;
   }
 
-  #page a.tribe-events-ical.tribe-events-button,
-  #page a.tribe-events-gcal.tribe-events-button {
-    margin-right: 1rem;
-  }
-
-  #page ul.tribe-events-sub-nav a {
-    border-bottom: 1px dashed #f45a1d;
+  #page a.tribe-events-ical.tribe-events-button, #page a.tribe-events-gcal.tribe-events-button {
+      margin-right: 1rem;
+      width: 205px;
+      padding: .5rem 1rem;
   }
 
   #tribe-bar-form.tribe-bar-full.tribe-events-bar--has-filters #tribe-bar-views,
@@ -889,5 +1004,49 @@ Media Queries
   #tribe-bar-form.tribe-bar-full.tribe-events-bar--has-views #tribe-bar-filters-wrap,
   #tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-views #tribe-bar-filters-wrap {
     width: 72%;
+  }
+
+  #page h3.tribe-events-list-event-title a,
+  #page h3.tribe-events-list-event-title {
+    font-size: 20px;
+  }
+
+  #tribe-bar-form.tribe-bar-mini .tribe-bar-submit input[type=submit] {
+    line-height: 1;
+    height: 40px;
+    margin-top: 6px;
+    padding: 0 1rem;
+  }
+
+  .entry-title.summary {
+    font-family: "Gentona_SemiBold" !important;
+  }
+
+  #page .tribe-events-venue-details a img {
+      width: 210px;
+      height: 210px;
+      object-fit: cover;
+  }
+
+  .tribe-event-date-start span,
+  .tribe-event-date-end span {
+      font-size: 38px;
+  }
+
+  #page .date-location-container {
+      align-items: center;
+  }
+
+  #tribe-bar-filters-wrap {
+    background: transparent;
+  }
+
+  #tribe-bar-views-toggle {
+    background: transparent;
+    color: #002346;
+  }
+
+  .time-venue-info-container span {
+    font-size: 20px;
   }
 }
