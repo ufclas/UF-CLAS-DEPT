@@ -44,7 +44,7 @@ $website = tribe_get_venue_website_link();
 
 		<?php if ( ! empty( $website ) ): ?>
 			<dt class="tribe-venue-url-label"> <?php esc_html_e( 'Website:', 'the-events-calendar' ) ?> </dt>
-			<dd class="tribe-venue-url"> <?php echo $website ?> </dd>
+			<dd class="tribe-venue-url"> <?php echo "<a href='" . strip_tags($website) . "' target='_blank'>Link (Opens in New Tab)</a>"; ?> </dd>
 		<?php endif ?>
 
 		<?php do_action( 'tribe_events_single_meta_venue_section_end' ) ?>

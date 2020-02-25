@@ -65,7 +65,7 @@ $website = tribe_get_organizer_website_link();
 					<?php esc_html_e( 'Website:', 'the-events-calendar' ) ?>
 				</dt>
 				<dd class="tribe-organizer-url">
-					<?php echo $website; ?>
+					<?php echo "<a href='" . strip_tags($website) . "' target='_blank'>Link (Opens in New Tab)</a>"; ?>
 				</dd>
 				<?php
 			}//end if
