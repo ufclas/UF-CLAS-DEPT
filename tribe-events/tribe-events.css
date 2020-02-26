@@ -61,7 +61,7 @@ a.tribe-events-gmap {
 #page h3.tribe-events-list-event-title a {
     font-family: "Quadon_Bold" !important;
     color: #004083;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 h3.tribe-events-list-event-title {
@@ -69,6 +69,7 @@ h3.tribe-events-list-event-title {
     width: 80%;
     margin: 0 2rem 15px !important;
     padding-bottom: 8px !important;
+    line-height: 28px;
 }
 
 .tribe-events-list .tribe-events-loop .tribe-events-event-image {
@@ -295,6 +296,7 @@ ul.tribe-events-sub-nav li {
     text-transform: uppercase;
     font-size: 26px;
     text-align: center;
+    font-family: "Gentona_ExtraBold";
 }
 
 .tribe-events-list .type-tribe_events {
@@ -376,6 +378,7 @@ ul.tribe-events-sub-nav li {
 
 .tribe-events-loop h3.tribe-events-list-event-title {
   margin: 0 0 12px !important;
+  line-height: 1.9rem;
 }
 
 .events-archive .entry-content,
@@ -385,6 +388,11 @@ ul.tribe-events-sub-nav li {
 
 a.desktop-more {
     display: none;
+}
+
+a.more-mobile{
+  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .tribe-bar-filters-inner.tribe-clearfix {
@@ -719,6 +727,38 @@ dd.tribe-venue {
     font-style: normal !important;
     font-family: "Gentona_Book" !important;
 }
+
+#tribe-bar-filters-wrap {
+  background: #EBEBEB;
+}
+
+#tribe-bar-filters-wrap button {
+  color: #002346;
+}
+
+#tribe-bar-views-toggle {
+  background: #CCCCCC;
+  color: #002346;
+}
+
+
+#tribe-bar-form .tribe-bar-views-inner label {
+  padding-left: 0;
+}
+
+.tribe-events-list .tribe-events-venue-details {
+  border-top: none;
+}
+
+#page ul.tribe-events-sub-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tribe-events-calendar .tribe-events-present, .tribe-events-calendar .tribe-events-present.mobile-active div[id*=tribe-events-daynum-], .tribe-events-calendar .tribe-events-present.mobile-active div[id*=tribe-events-daynum-] a, .tribe-events-calendar td.tribe-events-present.mobile-active {
+  background: transparent;
+}
+
 /*====================================
 
 Media Queries
@@ -872,23 +912,6 @@ Media Queries
 
   #tribe-bar-filters-wrap {
     width: 100%;
-  }
-
-  #tribe-bar-filters-wrap {
-    background: #EBEBEB;
-  }
-
-  #tribe-bar-filters-wrap button {
-    color: #002346;
-  }
-
-  #tribe-bar-views-toggle {
-    background: #CCCCCC;
-    color: #002346;
-  }
-
-  #tribe-bar-form .tribe-bar-views-inner label {
-    padding-left: 0;
   }
 
   .time-venue-info-container span {
