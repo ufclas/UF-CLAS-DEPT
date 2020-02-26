@@ -442,10 +442,6 @@ if (!$link) {
                     } // /office hours
                   }// schedule factoring
 
-                  // echo "<pre>";
-                  //   // print_r($list_master_office_hours);
-                  //   print_r($list_master_teaching_schedule);
-                  // echo "</pre>";
 
                 if (!empty($list_master_teaching_schedule)) {
                   echo "<h4>Teaching Schedule</h4>";
@@ -538,21 +534,100 @@ if (!$link) {
             //   print_r($list_master);
             // echo "</pre>";
 
+            // cycle keys with search_key
             foreach ($list_of_keys as $search_key) {
+              // list_master
               foreach ($list_master as $role => $people) {
                 foreach ($people as $person => $details) {
                   if ($search_key == $person) {
+                    // they have to be exact because originations
                     $list[$person] = array();
                   }
-                  foreach ($details as $core => $var_values) {
-                    if (is_string("a")) {};
-                    if (is_array ("a")) {};
+                  foreach ($details as $core => $variable_values) {
+                    // clear gate [string]
+                    if (is_string($variable_values)) {
+                      if (strpos($variable_values, $search_key) !== false) {
+                        //calling search_term to replace / highlight
+                        // dont do this
+                        // $variable_values = str_replace("{$search_term}","<span class=\"strong\">{$search_term}</span>",$variable_values);
+                        // you dont really need to add the complexity to the list since the name[key] will become the trigger
+                        $list[$person][$core] = $variable_values;
+                      }
+                    }
                   }
                 }
               }
             }
+            if (!empty($list)) {
+              ksort($list);
+            } else {
+              $list = array();
+            }
             return $list;
           } // end function (search)
+
+// final function parse search results and prepare for javascript
+// this is fragile because it's specific to be called within the overall search function looping through the keysList
+          function parse_search($name, $list_master_person) {
+            echo "<h4>{$name}</h4>";
+
+            foreach ($list_master_person as $core => $variable_values) {
+
+              if (!empty($variable_values)) {
+                if (is_string($variable_values)) {
+                  echo "<li>{$variable_values}</li>";
+                }
+                if (is_array($variable_values)) {
+
+                  foreach ($variable_values as $schedule_type => $list_variables) {
+
+                    if ($schedule_type == "teaching_schedule") {
+
+                      echo "<li>Teaching Schedule</li>";
+                      echo "<table>";
+                      foreach ($list_variables as $day => $list_periods) {
+                        echo "<tr><td>{$day}</td>";
+                        foreach ($list_periods as $slot => $period) {
+                          echo "<td>{$period}";
+                          if ($period !== end($list_periods)) {
+                            echo ", ";
+                          }
+                          echo "</td>";
+                        }
+                        echo "</tr>";
+                      }
+                      echo "</table>";
+                    }
+                    if ($schedule_type == "office_hours") {
+                      echo "<li>Office Hours</li>";
+                      foreach ($list_variables as $day => $list_slot) {
+                        echo "<p>{$day}</p>";
+                        foreach ($list_slot as $slot => $list_port) {
+                          foreach ($list_port as $port => $time) {
+                            $time = date('g:i a', strtotime($time));
+                            echo $time;
+                            if ($port == "start") {
+                              echo " to ";
+                            }
+                            if ($port == "end") {
+                              echo "<br>";
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+
+
+                }
+              } // if !empty values
+            }
+
+          }
+
+
+
 // function /search, /search, /search
 
 

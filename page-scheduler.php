@@ -72,6 +72,11 @@
         display: none;
       } */
 
+      span.strong {
+        font-weight: bold;
+      }
+
+
       /* javascript javascript javascript */
 
       .toggs {display: none;}
@@ -129,14 +134,7 @@
            <?php// p(list_master_person($person)); ?>
             <div class="container_personsDetails toggs" id="toggle_<?php echo $i; ?>">
               <ul>
-                <?php $n = 0;
-
-                  // it's not writing the default faculty for amber?
-                  // it's not writing the default faculty for amber?
-                  // it's not writing the default faculty for amber?
-                  // it's not writing the default faculty for amber?
-
-                ?>
+              <?php $n = 0;  ?>
               <?php foreach (list_master_person($person) as $core => $list_values_variable) { ?>
                 <?php if (!empty($list_values_variable)) { ?>
                 <?php if (is_string($list_values_variable)) { ?>
@@ -342,10 +340,16 @@
     // $count_returned_results = $key_index + 1;
 
     // sort list
-    sort($list_of_keys);
-    p($list_of_keys);
+    // sort($list_of_keys);
+    // p($list_of_keys);
+    // p($list_master);
 
-    p(search($list_of_keys));
+    // p(search($list_of_keys));
+
+
+    foreach(search($list_of_keys) as $name => $null_details) {
+      parse_search($name, list_master_person($name));
+    }
 
 
   } else {
