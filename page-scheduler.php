@@ -28,18 +28,7 @@
     $search_term        = preg_replace("/[^A-Za-z0-9 ]/", '', $search_term);
     $search_term        = strtolower($search_term);
     $search_term_length = strlen($search_term);
-
   }
-
-
-
-
-
-  // if (isset($_POST['search_schedule_submit'])) {
-  //   echo "<p><i>&quot;";
-  //   echo $_POST['search_schedules'];
-  //   echo "&quot;</i></p>";
-  // }
 
 ?>
 <!DOCTYPE html>
@@ -78,6 +67,7 @@
 
 
       /* javascript javascript javascript */
+      /* these need to stay for the javascript to work */
 
       .toggs {display: none;}
 
@@ -205,9 +195,14 @@
       <!-- menu nav -->
 
       <?php
+      // days_details @ scheduler_mechanics: line 350
       if (!empty(days_details($show))) {
         foreach (days_details($show) as $person => $list_schedule) {
           echo "<h3>{$person}</h3>";
+
+          // parse core pulls/pushes the main four: role, email, number, website
+          parse_core(list_master_person($person));
+
           foreach ($list_schedule as $schedule_type => $list_details) {
             if ($schedule_type == "teaching_schedule") {
               echo "<h4>Teaching Periods</h4>";
@@ -252,8 +247,6 @@
 <!-- ROLES ROLES ROLES  -->
 <!-- ROLES ROLES ROLES  -->
 <!-- ROLES ROLES ROLES  -->
-
-
     <?php if ($menu == "roles") { ?>
       <ul class="menu_nav">
         <?php
@@ -268,7 +261,6 @@
 <!-- search search search -->
 <!-- search search search -->
 <!-- search search search -->
-
   <?php if ($menu == "search") { ?>
     <form action="<?php echo the_permalink(); ?>" method="post">
       <input type="text" name="search_term" value="<?php echo $search_term; ?>" placeholder="search" required>
@@ -337,40 +329,21 @@
       } // people as person => details
     } // master search loop /searchLoop /searchLoop /searchLoop
 
-    // $count_returned_results = $key_index + 1;
-
-    // sort list
-    // sort($list_of_keys);
-    // p($list_of_keys);
-    // p($list_master);
-
-    // p(search($list_of_keys));
-
-
     foreach(search($list_of_keys) as $name => $null_details) {
       parse_search($name, list_master_person($name));
     }
 
+    if (empty($list_of_keys)) {
+      echo "<p>Your search for \"<span class=\"strong\">{$search_term}</span>\" returned zero results!</p><p>Please try searching again or <a href=\"";
+      the_permalink();
+      echo "\">check the index page</a> to find what you're looking for!</p>";
+    }
 
   } else {
     echo "<p>Your search was empty!</p><p>Please try searching again or <a href=\"";
     the_permalink();
     echo "\">check the index page</a> to find what you're looking for!</p>";
   }
-
-
-
-
-  // echo "<pre>";
-  //   echo "
-  //   search is - <br><br>
-  //       name =><br>
-  //           email =><br>
-  //           phone =><br>
-  //   ";
-  //   echo "</pre>";
-  //
-
 
 
 

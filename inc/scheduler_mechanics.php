@@ -1,10 +1,4 @@
 <?php
-/*
-  fixlist:
-    - NEED TO CONVERT TO WORK ON LOCALHOST AND SERVER AND SERVER
-    - timeslots print in the order they're inserted -- this could be rearranged programatically
-    - office hour times can also conflict with teaching periods without warning
-*/
 
 $host = "localhost";
 $user = "root";
@@ -54,24 +48,16 @@ if (!$link) {
   $list_team_members = array();
 
   foreach ($list_tempGen as $null_key => $list_row) {
-
-    // echo "<pre>";
-    //   print_r($list_row);
-    // echo "</pre>";
-
     // grab the base variables, roles and people
     // Roles
     if (!in_array($list_row['slug'], $list_master_roles)) {
       $list_master_roles[] = $list_row['slug'];
     }
-
     // People
     if (!in_array($list_row['post_title'], $list_team_members)) {
       $list_team_members[] = $list_row['post_title'];
     }
-
   } // instantiation for base arrays
-
 
   $days = array(
     "1" => "monday",
@@ -193,10 +179,6 @@ if (!$link) {
         }
       }
 
-      // echo "<pre>";
-      //   print_r($list_master);
-      // echo "</pre>";
-
       // ease-of-use back-end function
       function p($list) {
         echo "<pre>";
@@ -240,8 +222,6 @@ if (!$link) {
               }
             }
           }
-          // need to sort
-
 
           // roles
           $list_roles = array();
@@ -263,39 +243,21 @@ if (!$link) {
           }
           sort($list_people);
 
-
-          // echo "<pre>";
-          //   print_r($list_master);
-          // echo "</pre>";
-          // echo "<pre>";
-          // print_r($list_master['faculty']);
-          // echo "</pre>";
-
-
 // Function: "People" for displaying page i, drop down through JavaScript
 // Function: "People" for displaying page i, drop down through JavaScript
-
-
 
           function list_master_person($selected_parameter) {
             global $list_master;
             $list_master_teaching_schedule = array();
             foreach ($list_master as $role => $people) {
-
-              // echo "<pre>";
-              // print_r($people);
-              // echo "</pre>";
                 foreach ($people as $person => $list_core) {
                   // selected parameter
-
-
                   // $role = "foo";
                   if ($person == $selected_parameter) {
-
                     foreach ($list_master as $role_role => $role_people) {
                       foreach ($role_people as $role_person => $role_list_core) {
                         if ($role_person == $selected_parameter) {
-                          // it's struggling with this (role setting) because the person is the subset of the role -- so role > person > person deets, so it's defaulting from the loop
+                          // it struggles with role setting because person is a subset of role -- so role > person > person details
                           // to the point that this is kind of redundant because the person wont exist in the system if they dont have a role because roles are the master keys
                           $role_baz = !empty($role_role) ? $role_role : "";
                         }
@@ -304,8 +266,6 @@ if (!$link) {
                     $email    = !empty($list_core['email'])   ? $list_core['email']   : "";
                     $phone    = !empty($list_core['phone'])   ? $list_core['phone']   : "";
                     $website  = !empty($list_core['website']) ? $list_core['website'] : "";
-
-
 
                     foreach ($list_core as $core => $variable_values) {
                       if ($core == "teaching_schedule") {
@@ -348,8 +308,6 @@ if (!$link) {
              }
 
              return $list_person;
-
-
             } // / list master person function ()
 
 
@@ -398,23 +356,18 @@ if (!$link) {
               foreach ($people as $person => $list_core) {
                 // selected parameter
                 if ($selected_parameter == $role) {
-                  // a person kind of has to exist since scheduler's base array (after seed) is created by roles
                   echo "<h3>{$person}</h3>";
-                  // if phone exists
                   if (!empty($list_core['phone'])) {
-                    echo "<p>".$list_core['phone']."</p>";
+                    echo "<li>".$list_core['phone']."</li>";
                   }
-                  // if email exists
                   if (!empty($list_core['email'])) {
-                    echo "<p>".$list_core['email']."</p>";
+                    echo "<li>".$list_core['email']."</li>";
                   }
-                  // if email exists
                   if (!empty($list_core['website'])) {
-                    echo "<p><a href=\"".$list_core['website']."\" target=\"_blank\">".$list_core['website']."</a></p>";
+                    echo "<li><a href=\"".$list_core['website']."\" target=\"_blank\">".$list_core['website']."</a></li>";
                   }
-
                   $list_master_teaching_schedule = array();
-                  $list_master_office_hours = array();
+                  $list_master_office_hours      = array();
                   // schedule factoring "schedule times" should be cool because its only being practically called here and for the two schedules
                   foreach ($list_core as $core_one => $schedule_times) {
                     // try to find teaching times
@@ -524,16 +477,19 @@ if (!$link) {
             }
           } // function aggitate office hours
 
-
+          function parse_core($list_master_person) {
+            foreach ($list_master_person as $core => $variable_values) {
+              if (!empty($variable_values)) {
+                if (is_string($variable_values)) {
+                  echo "<li>{$variable_values}</li>";
+                }
+              }
+            }
+          }
 
 // function search, search, search
           function search ($list_of_keys) {
             global $list_master;
-
-            // echo "<pre>";
-            //   print_r($list_master);
-            // echo "</pre>";
-
             // cycle keys with search_key
             foreach ($list_of_keys as $search_key) {
               // list_master
@@ -570,19 +526,14 @@ if (!$link) {
 // this is fragile because it's specific to be called within the overall search function looping through the keysList
           function parse_search($name, $list_master_person) {
             echo "<h4>{$name}</h4>";
-
             foreach ($list_master_person as $core => $variable_values) {
-
               if (!empty($variable_values)) {
                 if (is_string($variable_values)) {
                   echo "<li>{$variable_values}</li>";
                 }
                 if (is_array($variable_values)) {
-
                   foreach ($variable_values as $schedule_type => $list_variables) {
-
                     if ($schedule_type == "teaching_schedule") {
-
                       echo "<li>Teaching Schedule</li>";
                       echo "<table>";
                       foreach ($list_variables as $day => $list_periods) {
@@ -617,16 +568,10 @@ if (!$link) {
                       }
                     }
                   }
-
-
-
                 }
               } // if !empty values
             }
-
           }
-
-
 
 // function /search, /search, /search
 
