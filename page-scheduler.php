@@ -347,7 +347,7 @@
 // avaiable now
   // p($_GET);
 
-    if ($_GET['menu'] == "available") {
+    if ($menu == "available") {
       if (is_array(clock_available_now())) {
         foreach (clock_available_now() as $person => $schedule) {
           echo "<h4>{$person}</h4>";
@@ -365,8 +365,6 @@
               echo "from " . $port_time['start'];
               echo " - " . $port_time['end'];
             }
-
-
           }
         }
       } else { // if it's a string -- meaning there were no results
@@ -377,10 +375,6 @@
   ?>
 
   <?php } // END /2 /2 /2 /2 /2 /2 /2 /2 ?>
-
-
-
-
 
 
     <script type="text/javascript">
