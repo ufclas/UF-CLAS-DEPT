@@ -59,13 +59,39 @@ if (!$link) {
     }
   } // instantiation for base arrays
 
+
+  $list_master_periods_uf = array(
+    "1"  => array("7:25 am",  "8:15 am"),
+    "2"  => array("8:30 am",  "9:20 am"),
+    "3"  => array("9:35 am",  "10:25 am"),
+    "4"  => array("10:40 am", "11:30 am"),
+    "5"  => array("11:45 am", "12:35 pm"),
+    "6"  => array("12:50 pm", "1:40 pm"),
+    "7"  => array("1:55 pm",  "2:45 pm"),
+    "8"  => array("3:00 pm",  "3:50 pm"),
+    "9"  => array("4:05 pm",  "4:55 pm"),
+    "10" => array("5:10 pm",  "6:00 pm")
+    // ends before Es
+  );
+
+  // convert 12 hour clock to 24 hour clock
+  foreach ($list_master_periods_uf as $period => $list_times) {
+    foreach ($list_times as $index => $time) {
+      $time =  date("Gi", strtotime($time));
+      $list_master_periods[$period][$index] = $time;
+    }
+  }
+
+  // p($list_master_periods);
+
   $days = array(
     "1" => "monday",
     "2" => "tuesday",
     "3" => "wednesday",
     "4" => "thursday",
     "5" => "friday",
-    "6" => "saturday"
+    "6" => "saturday",
+    "7" => "sunday"
   );
 
   // create days list for the master time loop
@@ -446,16 +472,16 @@ if (!$link) {
 
           function aggitate_teaching_schedule($masterList) {
             foreach ($masterList as $day => $list_periods) {
-                  echo "<h5>{$day}</h5>";
-                  echo "<p>";
-                  foreach ($list_periods as $null_index => $period) {
-                    echo $period;
-                    if ($period !== end($list_periods)) {
-                      echo ", ";
-                    }
-                  }
-                  echo "</p>";
+              echo "<h5>{$day}</h5>";
+              echo "<p>";
+              foreach ($list_periods as $null_index => $period) {
+                echo $period;
+                if ($period !== end($list_periods)) {
+                  echo ", ";
                 }
+              }
+              echo "</p>";
+            }
           }
 
 
@@ -572,9 +598,102 @@ if (!$link) {
               } // if !empty values
             }
           }
-
 // function /search, /search, /search
 
+/// function Avaiable Now | Avaiable Now | Avaiable Now
+  function clock_available_now() {
+    global $list_master;
+    global $list_master_periods;
+    $list_clock_officeHours = array();
+    $list_clock_teaching_schedule = array();
+    // instantiate as day.militaryHour.minute
+    $todays_day = strtolower(date("l"));
+    // manipulate day here  manipulate day here 
+    // $todays_day = "wednesday";
+    $key_now    = strtolower(date("Gi"));
+    foreach ($list_master as $role => $details) {
+      foreach ($details as $person => $list_person_details) {
+        foreach ($list_person_details as $core => $variable_values) {
+          if ($core == "office_hours") {
+            foreach ($variable_values as $day => $list_slot_port) {
+              foreach ($list_slot_port as $slot => $list_port) {
+                foreach ($list_port as $port => $time) {
+                  if (!empty($time)) {
+                    // isolate the time to if its today
+                    if ($todays_day == $day) {
+                      $time = str_replace(":","",$time);
+                      if ($port == "start") {
+                        $lock_start = $time;
+                        $list_clock_officeHours[$person][$slot][$port] = $lock_start;
+                      }
+                      if ($port == "end") {
+                        $lock_end   = $time;
+                        $list_clock_officeHours[$person][$slot][$port] = $lock_end;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          } // if (office_hours)
+          if ($core == "teaching_schedule") {
+            foreach($variable_values as $ts_day => $list_slot_period) {
+              // go through everyone
+              foreach ($list_slot_period as $ts_slot => $ts_period) {
+                // if there's a value, echo the key
+                if (!empty($ts_period)) {
+                  if ($ts_day == $todays_day) {
+                    $list_clock_teaching_schedule[$person][] = $ts_period;
+                  }
+                }
+              }
+            }
+          } // if (teaching_schedule) || INTRODUCES list_master_periods_uf convert(period => times)
+        }
+      }
+    }
+    // return $list_clock_officeHours;
+    foreach ($list_clock_officeHours as $person => $list_slot_port) {
+      // foreach (clock_available_now() as $person => $list_slot_port) {
+      foreach ($list_slot_port as $slot => $list_ports) {
+        $port_start = $list_ports['start'];
+        $port_end   = $list_ports['end'];
+        // if now is between the scheduled office hour slot
+        if ($key_now >= $port_start && $key_now <= $port_end) {
+          $port_start = date('g:i a', strtotime($port_start));
+          $list_clock[$person]['office_hours']['start'] = $port_start;
+          $port_end   = date('g:i a', strtotime($port_end));
+          $list_clock[$person]['office_hours']['end']   = $port_end;
+        }
+      }
+    } // $list_clock_officeHours
 
+    foreach ($list_clock_teaching_schedule as $person => $list_index_periods) {
+      foreach ($list_index_periods as $index => $teaching_period) {
+        foreach ($list_master_periods as $uf_period => $list_index_uf_periodTimes) {
+          if ($uf_period == $teaching_period) {
+            $uf_open  = $list_index_uf_periodTimes[0];
+            $uf_close = $list_index_uf_periodTimes[1];
+            if ($key_now >= $uf_open && $key_now <= $uf_close) {
+              $uf_open  = date('g:i a', strtotime($uf_open));
+              $uf_close = date('g:i a', strtotime($uf_close));
+              $list_clock[$person]['teaching_schedule']['open']  = $uf_open;
+              $list_clock[$person]['teaching_schedule']['close'] = $uf_close;
+            }
+          }
+        }
+      }
+    }
+
+    if (!empty($list_clock)) {
+      ksort($list_clock);
+    } else {
+      $list_clock = "There's nothing scheduled right now! Check the Days section for the next available person!";
+    }
+
+    return $list_clock;
+
+  }
+/// function avaiable now | available now | available now
 
 ?>
