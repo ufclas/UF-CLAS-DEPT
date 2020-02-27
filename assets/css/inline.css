@@ -28,7 +28,7 @@
     margin-right: 12px;
     color: #f45a1d;
     transform: scale(1.3);
-} 
+}
 /*buttons*/
 /** ORANGE BUTTONS **/
 
@@ -158,7 +158,7 @@ a.btn-blue:hover, a.btn-blue-large:hover {
     user-select: none;
     background-image: none;
     border: 1px solid transparent;
-    color: #806103 !important;    
+    color: #806103 !important;
     margin:.2rem;
 
 }
@@ -235,7 +235,7 @@ ul.orange, ul.orange li {
     font-family: 'Gentona_Light';
     color: #000000;
     line-height: 150%;
-	
+
 }
 ul.orange li:before {
     padding-right: 8px;
@@ -252,7 +252,7 @@ ul.orange-big, ul.orange-big li {
 	text-transform:uppercase;
     color: #00529b;
     line-height: 200%;
-	
+
 }
 ul.orange-big li:before {
     padding-right: 8px;
@@ -350,9 +350,9 @@ p.date {
       /* grid-123 GRID: Desktop*/
       @media only screen and (min-width:1024px) {
          .grid-123-b .X-row {
-            width:100%; 
+            width:100%;
          }
-         .grid-123-b .X-col{           
+         .grid-123-b .X-col{
             float:left;
             clear:none;
             display:inline;
@@ -375,9 +375,9 @@ p.date {
    /* grid-123-b GRID: Mobile Landscape*/
    @media only screen and (min-width:736px) and (max-width : 1024px) {
           .grid-123-b .X-row {
-            width:100%; 
+            width:100%;
          }
-         .grid-123-b .X-col{           
+         .grid-123-b .X-col{
             float:left;
             clear:none;
             display:inline;
@@ -401,9 +401,9 @@ p.date {
    /* grid-123-b GRID: Mobile Landscape*/
    @media only screen and (min-width:481px) and (max-width : 768px) {
           .grid-123-b .X-row {
-            width:100%; 
+            width:100%;
          }
-         .grid-123-b .X-col{           
+         .grid-123-b .X-col{
             float:left;
             clear:none;
             display:inline;
@@ -428,7 +428,7 @@ p.date {
          background-color:#fffff5;
       }
       .grid-123-b .X-row {
-         width:100%; 
+         width:100%;
       }
       .grid-123-b .X-col{
          width:100%;
@@ -441,13 +441,13 @@ p.date {
 
 .table{
    display:block;;
-   width:100%; 
+   width:100%;
 }
 
 .table-row{
    display:block;
    clear:both;
-   width:100%; 
+   width:100%;
 }
 
 .table-cell{
@@ -457,7 +457,7 @@ p.date {
    height:24rem;
    vertical-align:middle;
    overflow:hidden;
-   
+
 
 
 }
@@ -470,95 +470,95 @@ p.date {
 
 
 
- 
-   .table-cell-1{        
+
+   .table-cell-1{
       width:100%;
       background-color:#F37021;
       color:#ffffff;
-      text-align:center; 
-      /* Vertically Center */         
+      text-align:center;
+      /* Vertically Center */
          position: relative;
          top: 50%;
-         transform: translateY(-50%);   
-        
+         transform: translateY(-50%);
+
    }
    .table-cell-2{
       width:100%;
       background-color:#084B81;
       color:#ffffff;
-      text-align:center; 
-      /* Vertically Center */         
+      text-align:center;
+      /* Vertically Center */
          position: relative;
          top: 50%;
-         transform: translateY(-50%);  
+         transform: translateY(-50%);
    }
    .table-cell-3{
       width:100%;
       background-color:#4F8FE1;
       color:#ffffff;
-      text-align:center; 
-      /* Vertically Center */         
+      text-align:center;
+      /* Vertically Center */
          position: relative;
          top: 50%;
-         transform: translateY(-50%);  
+         transform: translateY(-50%);
    }
    .table-cell-4{
       width:100%;
       background-color:#4C87B5;
       color:#ffffff;
-      text-align:center; 
-      /* Vertically Center */         
+      text-align:center;
+      /* Vertically Center */
          position: relative;
          top: 50%;
-         transform: translateY(-50%);  
+         transform: translateY(-50%);
    }
    .table-cell-5{
       width:100%;
       background-color:#00529B;
       color:#ffffff;
-      text-align:center; 
-      /* Vertically Center */         
+      text-align:center;
+      /* Vertically Center */
          position: relative;
          top: 50%;
-         transform: translateY(-50%);  
+         transform: translateY(-50%);
    }
    .table-cell-6{
 
       width:100%;
       background-color:#DD661E;
       color:#ffffff;
-      text-align:center; 
-      /* Vertically Center */         
+      text-align:center;
+      /* Vertically Center */
          position: relative;
          top: 50%;
-         transform: translateY(-50%);  
+         transform: translateY(-50%);
    }
 
 
 /* Typography */
 
-   .table-cell-1-num{     
+   .table-cell-1-num{
       line-height:1;
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-style: oblique;
       font-weight: 800;
-      color:#084B81; 
+      color:#084B81;
       margin:0px;
-      padding:0px; 
+      padding:0px;
    }
    .table-cell-2-num{
-     line-height:1; 
+     line-height:1;
       font-family:Quadon_Bold,Georgia,serif;
 		 font-weight: bold;
       line-height:1;
       color:#ffffff;
       margin:0px;
-      padding:0px; 
+      padding:0px;
    }
    .table-cell-3-num{
-      line-height:1;  
+      line-height:1;
       font-family:Gentona_Bold, Helvetica, sans-serif;
-		 font-weight: lighter; 
+		 font-weight: lighter;
       line-height:1;
       color:#ffffff;
       margin:0px;
@@ -572,24 +572,24 @@ p.date {
       line-height:1;
       color:#ffffff;
       margin:0px;
-      padding:0px;  
+      padding:0px;
    }
-   .table-cell-5-num{  
-      line-height:1;   
+   .table-cell-5-num{
+      line-height:1;
       font-family: "Surveyor Display A", "Surveyor Display B";
 		 font-weight:bold;
       color:#ffffff;
       margin:0px;
-      padding:0px;  
+      padding:0px;
    }
-   .table-cell-6-num{   
+   .table-cell-6-num{
       line-height:1;
       font-family:"Surveyor Display A", "Surveyor Display B",serif;
       font-style: italic;
       font-weight: 500;
       color:#084B81;
       margin:0px;
-      padding:0px;  
+      padding:0px;
    }
 
    .table-cell-1-txt{
@@ -598,14 +598,14 @@ p.date {
       line-height:1;
       color:#084B81;
       margin:0px;
-      padding:0px;  text-transform:uppercase; 
+      padding:0px;  text-transform:uppercase;
    }
    .table-cell-2-txt{
-      line-height:1;  
+      line-height:1;
       font-family:Gentona_ExtraBold, Helvetica, sans-serif;
 		 font-weight: lighter;
       line-height:1;
-      color:#ffffff; 
+      color:#ffffff;
       text-transform:uppercase;
       margin:0px;
       padding:0px;  text-transform:uppercase;
@@ -616,7 +616,7 @@ p.date {
       line-height:1;
       color:#ffffff;
       margin:0px;
-      padding:0px; text-transform:uppercase; 
+      padding:0px; text-transform:uppercase;
    }
    .table-cell-4-txt{
       line-height:1;
@@ -633,8 +633,8 @@ p.date {
       line-height:1;
       color:#ffffff;
       margin:0px;
-      padding:0px;  text-transform:uppercase; 
- 
+      padding:0px;  text-transform:uppercase;
+
    }
    .table-cell-6-txt{
       line-height:1;
@@ -642,7 +642,7 @@ p.date {
       line-height:1;
       color:#084B81;
       margin:0px;
-      padding:0px;  text-transform:uppercase; 
+      padding:0px;  text-transform:uppercase;
 
    }
 
@@ -657,21 +657,21 @@ p.date {
       height:24rem;
    }
    .table-cell-1-num { font-size:21rem; line-height:.75; }
-   .table-cell-1-num span{ position:relative;top:-30px; } 
+   .table-cell-1-num span{ position:relative;top:-30px; }
    .table-cell-2-num { font-size:12rem; line-height:.8 }
    .table-cell-3-num{ width:35% !important;display:table-cell; vertical-align:middle; font-size:29rem;line-height:.7; padding-left:4rem; }
-   .table-cell-3-num span{ position:relative;top:-26px } 
+   .table-cell-3-num span{ position:relative;top:-26px }
    .table-cell-4-num{ font-size:10.5rem; }
    .table-cell-5-num{ font-size:16rem; line-height:.9 }
-   .table-cell-5-num span{ position:relative;top:-30px }  
+   .table-cell-5-num span{ position:relative;top:-30px }
    .table-cell-6-num{ font-size:12.5rem;letter-spacing:-2px; }
    .table-cell-1-txt{ font-size:4rem; }
-   .table-cell-1-txt span{ position:relative;top:-14px;}  
+   .table-cell-1-txt span{ position:relative;top:-14px;}
    .table-cell-2-txt{ font-size:3.8rem; }
    .table-cell-3-txt{ width:65%; display:table-cell; vertical-align:middle; font-size:3.5rem; padding:2rem; padding-right:3rem; line-height:1.2;  }
    .table-cell-4-txt{ font-size:3.5rem; }
    .table-cell-5-txt{ font-size:2.65rem; }
-   .table-cell-5-txt span{ position:relative;top:-4px }  
+   .table-cell-5-txt span{ position:relative;top:-4px }
    .table-cell-6-txt{ font-size:3.5rem; }
 }
 
@@ -681,31 +681,31 @@ p.date {
 /*  Proportionally decrease all fonts and padding by 33.33%. In other words, multiply numbers from the above breakpoint by 0.666666667 */
 @media only screen and (min-width:768px) and (max-width:1920px)  {
    .table-cell{
-      height:18.9rem; 
+      height:18.9rem;
    height:20vw;
    }
    .table-cell-1-num { font-size:9vw; line-height:.65; }
-   .table-cell-1-num span{ position:relative;top:-2vw; } 
+   .table-cell-1-num span{ position:relative;top:-2vw; }
    .table-cell-2-num{ font-size:4.5vw; line-height:1.2; }
    .table-cell-3-num{ font-size:6vw;  padding-left:1vw; width:35% !important;display:table-cell; vertical-align:middle; ;line-height:.5; }
-   .table-cell-3-num span{ position:relative;top:-1vw } 
+   .table-cell-3-num span{ position:relative;top:-1vw }
    .table-cell-4-num{ font-size:6.5vw; }
-   .table-cell-4-num span{ position:relative;top:-.5vw } 
+   .table-cell-4-num span{ position:relative;top:-.5vw }
    .table-cell-5-num{ font-size:10vw; line-height:.9 }
-   .table-cell-5-num span{ position:relative;top:-2vw }  
+   .table-cell-5-num span{ position:relative;top:-2vw }
    .table-cell-6-num{ font-size:11vw; letter-spacing:-2px; }
-   .table-cell-6-num span{ position:relative;top:-1vw;}  
+   .table-cell-6-num span{ position:relative;top:-1vw;}
 
    .table-cell-1-txt{ font-size:3vw; }
-   .table-cell-1-txt span{ position:relative;top:-.5vw}  
+   .table-cell-1-txt span{ position:relative;top:-.5vw}
    .table-cell-2-txt{ font-size:1.7vw;  }
    .table-cell-3-txt{ font-size:2.7vw; padding:0 4vw; width:auto; display:inline-block; vertical-align:middle;line-height:1.2;  }
-   .table-cell-3-txt span{ position:relative;bottom:-1vw;}  
+   .table-cell-3-txt span{ position:relative;bottom:-1vw;}
    .table-cell-4-txt{font-size:1.5vw;font-family:Gentona_Light,sans-serif;  }
    .table-cell-5-txt{ font-size:1.1vw; line-height: 1.2rem; }
-   .table-cell-5-txt span{ position:relative;top:-1vw }  
+   .table-cell-5-txt span{ position:relative;top:-1vw }
    .table-cell-6-txt{ font-size:1.6vw;}
-   .table-cell-6-txt span{ position:relative; top:-.65vw;  }  
+   .table-cell-6-txt span{ position:relative; top:-.65vw;  }
 }
 
 
@@ -718,32 +718,32 @@ p.date {
       height:50vw;
    }
    .table-cell-1-num { font-size:8.05rem; font-size:15vw; line-height:1; }
-   .table-cell-1-num span{ position:relative;top:-11.5px; } 
+   .table-cell-1-num span{ position:relative;top:-11.5px; }
    .table-cell-2-num{ font-size:8rem; font-size:14vw; line-height:1.2; }
    .table-cell-3-num{ font-size:11.116666666rem; font-size:15vw; line-height:.7; display:block; width:100%; }
-   .table-cell-3-num span{ position:relative;top:-4vw; } 
+   .table-cell-3-num span{ position:relative;top:-4vw; }
    .table-cell-4-num{ font-size:4.025rem; font-size:14vw;  }
-   .table-cell-4-num span{ position:relative;top:-1vw; } 
+   .table-cell-4-num span{ position:relative;top:-1vw; }
    .table-cell-5-num{ font-size:5.2rem; font-size:14vw; line-height:.9 }
-   .table-cell-5-num span{ position:relative;top:-11.5px; top:-3vw}  
+   .table-cell-5-num span{ position:relative;top:-11.5px; top:-3vw}
    .table-cell-6-num{ font-size:4.791666666rem; font-size:14vw; letter-spacing:-1px; }
-   .table-cell-6-num span{ position:relative;top:-7px }  
+   .table-cell-6-num span{ position:relative;top:-7px }
 
    .table-cell-1-txt{ font-size:1.533333334rem; font-size:5vw; }
-   .table-cell-1-txt span{ position:relative;top:-5.366666666px; }  
+   .table-cell-1-txt span{ position:relative;top:-5.366666666px; }
    .table-cell-2-txt{ font-size:2rem; font-size:3vw; }
    .table-cell-3-txt{  font-size:1.341666666rem; font-size:3.65vw;  line-height:1.2;  display:block; width:90%;margin:0 auto; }
-   .table-cell-3-txt span{ position:relative; } 
+   .table-cell-3-txt span{ position:relative; }
 
 
    .table-cell-4-txt{ font-size:1.341666666rem; font-size:3.5vw; line-height:1.4rem; }
 
    .table-cell-5-txt{ font-size:1.015833334rem;font-size:2vw;line-height:1.2  }
-   .table-cell-5-txt span{ position:relative;top:-1.5333525px }  
+   .table-cell-5-txt span{ position:relative;top:-1.5333525px }
    .table-cell-6-txt{ font-size:1.3416475rem; }
-   .table-cell-6-txt span{ position:relative;top:-1.5333525px }  
+   .table-cell-6-txt span{ position:relative;top:-1.5333525px }
 
-         
+
 
 
          }
@@ -759,35 +759,35 @@ p.date {
    }
    .table-cell-1-num{ font-size:4rem;     font-size: 12vw;
     line-height: .9;  }
-   .table-cell-1-num span{ position:relative;top:-10px; } 
+   .table-cell-1-num span{ position:relative;top:-10px; }
    .table-cell-2-num{ font-size:1.2rem; font-size:14vw; line-height:.8;bottom:1vw;     }
    .table-cell-3-num{ width:40%; display:table-cell; vertical-align:middle; font-size:7rem;  font-size:12vw; line-height:.7;    }
-   .table-cell-3-num span{ position:relative ;top:-15px; }  
+   .table-cell-3-num span{ position:relative ;top:-15px; }
    .table-cell-4-num{ font-size:5.625rem; font-size:10vw;  }
-   .table-cell-4-num span{ position:relative;top:-6px } 
+   .table-cell-4-num span{ position:relative;top:-6px }
    .table-cell-5-num{ font-size:4.385625rem; font-size:14vw;    }
-   .table-cell-5-num span{ position:relative; top:6px }  
+   .table-cell-5-num span{ position:relative; top:6px }
    .table-cell-6-num{ font-size:4rem; font-size:22vw;   }
-   .table-cell-6-num span{ position:relative; top:-7px }  
+   .table-cell-6-num span{ position:relative; top:-7px }
 
    .table-cell-1-txt{ font-size:1.8rem; font-size:10vw; margin: 0 2rem;     }
-   .table-cell-1-txt span{ position:relative; top:-2px; } 
+   .table-cell-1-txt span{ position:relative; top:-2px; }
    .table-cell-2-txt{ font-size:1.5rem; line-height:1.9rem; }
-   .table-cell-2-txt span{ position:relative; top:-3px; } 
+   .table-cell-2-txt span{ position:relative; top:-3px; }
    .table-cell-3-txt{  vertical-align:middle; font-size:1.7rem; text-align:center; line-height:1.1; font-size:5.1vw; margin-right:.5rem; margin-left:.5rem; }
-   .table-cell-3-txt span{ position:relative;top:-2px; } 
+   .table-cell-3-txt span{ position:relative;top:-2px; }
    .table-cell-4-txt{ font-size:2rem;font-size:5vw; padding:1rem;   }
    .table-cell-5-txt{ font-size:2rem; font-size:4vw; padding:1rem;  }
-   .table-cell-5-txt span{ position:relative;top:-1.5333525px }  
+   .table-cell-5-txt span{ position:relative;top:-1.5333525px }
    .table-cell-6-txt{ font-size:1.8rem;  font-size:6vw; }
-   .table-cell-6-txt span{ position:relative;top:-1.5333525px }  
+   .table-cell-6-txt span{ position:relative;top:-1.5333525px }
 }
 
 
 p {
 	font-family: quadon_medium !important;
-font-size: 1em;
-color: #333;
+	font-size: 1em;
+	color: #000;
 	letter-spacing: .5px;
 }
 
@@ -795,9 +795,8 @@ p.endnote {
 	font-family:Gentona_BookItalic!important;
 	font-size:.95rem;
 }
-	
+
 .col-md-6 h3, .col-md-6 h4 {
 	margin-left:0.5rem;
 	margin-top:-1rem;
-}		
-	
+}
