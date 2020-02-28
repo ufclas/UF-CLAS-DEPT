@@ -608,8 +608,8 @@ if (!$link) {
     $list_clock_teaching_schedule = array();
     // instantiate as day.militaryHour.minute
     $todays_day = strtolower(date("l"));
-    // manipulate day here  manipulate day here 
-    // $todays_day = "wednesday";
+    // manipulate day here  manipulate day here
+    $todays_day = "friday";
     $key_now    = strtolower(date("Gi"));
     foreach ($list_master as $role => $details) {
       foreach ($details as $person => $list_person_details) {
@@ -675,7 +675,9 @@ if (!$link) {
             $uf_open  = $list_index_uf_periodTimes[0];
             $uf_close = $list_index_uf_periodTimes[1];
             if ($key_now >= $uf_open && $key_now <= $uf_close) {
+              $uf_open  = substr_replace($uf_open,  ":", -2, 0);
               $uf_open  = date('g:i a', strtotime($uf_open));
+              $uf_close = substr_replace($uf_close, ":", -2, 0);
               $uf_close = date('g:i a', strtotime($uf_close));
               $list_clock[$person]['teaching_schedule']['open']  = $uf_open;
               $list_clock[$person]['teaching_schedule']['close'] = $uf_close;

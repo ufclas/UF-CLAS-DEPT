@@ -346,6 +346,7 @@
 
 // avaiable now
   // p($_GET);
+  // p($list_master);
 
     if ($menu == "available") {
       if (is_array(clock_available_now())) {
@@ -355,15 +356,15 @@
           foreach ($schedule as $schedule_type => $port_time) {
 
             if ($schedule_type == "teaching_schedule") {
-              echo "<h5>Teaching Schedule</h5>";
-              echo "from " . $port_time['open'];
-              echo "to " . $port_time['close'];
+              echo "<h5>Teaching Now</h5>";
+              echo "From " . $port_time['open'];
+              echo " to "  . $port_time['close'];
             }
 
             if ($schedule_type == "office_hours") {
-              echo "<h5>Office Hours</h5>";
-              echo "from " . $port_time['start'];
-              echo " - " . $port_time['end'];
+              echo "<h5>Office Hours Now</h5>";
+              echo "From " . $port_time['start'];
+              echo " to "  . $port_time['end'];
             }
           }
         }
