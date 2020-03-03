@@ -1,5 +1,5 @@
 <?php  // 191121_28, thursday
-  get_header();
+  get_header(); //brings in header
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
   $empty_search = false;
