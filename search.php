@@ -1,14 +1,39 @@
-<?php  // 191121_28, thursday
+<?php  // 200310_1 search to start exceptions
   get_header(); //brings in header
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
   $empty_search = false;
-
   if ($searchfor === "" || empty($searchfor) || $searchfor == false) {
     $empty_search = true;
   }
-?>
+  include("inc/list_departments.php");
+  $studies = array();
+  echo "<ul>";
+  foreach ($majors as $major) {
+    $major = strtolower($major);
+    if (strpos($major, "minor") < 1) {
+      if (strpos($major, "uf online") < 1) {
+        if (strpos($major, "certificate") < 1) {
+          if (strpos($major, "studies") < 1) {
+            if (strpos($major, "clas") < 1) {
+              // $studies[] = $major;
+              echo "<li>{$major}</li>";
+            }
+          }
+        }
+      }
+    }
+  }
 
+
+  echo "<ul>";
+  foreach ($studies as $study) {
+    echo "<li>{$study}</li>";
+  }
+  echo "</ul>";
+
+
+?>
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
     <div class="entry-content">
@@ -27,6 +52,7 @@
       $args_test = array(
         'number' => 400
       );
+
 
       // Search results for [the searched term] on [this site]
       // bloginfo() depreciated, using foreach to isolate the Site title to avoid using;
@@ -333,7 +359,7 @@
           }
       } else {
         echo "Did you know your search was empty?<br><br>Want a Sitemap?<br><br>
-        <img src=\"https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-0/p640x640/70883715_10219533857234224_1153181436027600896_o.jpg?_nc_cat=109&_nc_oc=AQnlqX8NG9eOnJErOl1bHHmlklMRiErKdMOWhLekEjFbHXw2FD9EfUfSwXUApaMiJK0&_nc_ht=scontent-mia3-2.xx&oh=8d0a99770929db728723c53f444965a6&oe=5E4813B8\">
+        <img src=\"https://image.shutterstock.com/image-photo/south-florida-sunset-260nw-240719674.jpg\">
         <br>
         <figcaption>photo by Efren Vasquez</figcaption>
         <hr>
