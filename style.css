@@ -5156,7 +5156,7 @@ Image block cards
 }
 
 #page .carousel-caption p {
-    font-size: 1.25rem !important;
+    font-size: 1rem !important;
     font-family: "Gentona_Light" !important;
 }
 
@@ -7361,9 +7361,10 @@ Image block cards
                            }
 
                            #featured-carousel .item.half-image-feature img {
-                             width: auto;
-                             height: 400px;
-                             float: right;
+                               width: 570px;
+                               height: 400px;
+                               float: right;
+                               object-fit: cover;
                            }
 
                            #featured-carousel .full-image-feature .carousel-caption {
