@@ -1,9 +1,9 @@
 <?php
-
-$host = "localhost";
-$user = "root";
+///// container container hold vars for ENV ENV
+$host = "";
+$user = "";
 $pass = "";
-$data = "alex";
+$data = "";
 
 $link = mysqli_connect($host, $user, $pass, $data);
 if (!$link) {
@@ -22,19 +22,22 @@ if (!$link) {
     $count .= "post_id, meta_key, meta_value ";
 
   $count   .= "FROM ";
-    $count .= "wp_posts, ";
-    $count .= "wp_term_relationships, ";
-    $count .= "wp_terms, ";
-    $count .= "wp_postmeta ";
+    $count .= "wp_{$current_blog_id}_posts, ";
+    $count .= "wp_{$current_blog_id}_term_relationships, ";
+    $count .= "wp_{$current_blog_id}_terms, ";
+    $count .= "wp_{$current_blog_id}_postmeta ";
 
   $count   .= "WHERE ";
     $count .= "post_type = 'clas_team_members' AND post_status = 'publish' ";
     $count .= "AND ";
-    $count .= "wp_posts.ID = wp_term_relationships.object_id ";
+    $count .= "wp_{$current_blog_id}_posts.ID = wp_{$current_blog_id}_term_relationships.object_id ";
     $count .= "AND ";
-    $count .= "wp_term_relationships.term_taxonomy_id = wp_terms.term_id ";
+    $count .= "wp_{$current_blog_id}_term_relationships.term_taxonomy_id = wp_{$current_blog_id}_terms.term_id ";
     $count .= "AND ";
-    $count .= "wp_postmeta.post_id = wp_term_relationships.object_id";
+    $count .= "wp_{$current_blog_id}_postmeta.post_id = wp_{$current_blog_id}_term_relationships.object_id";
+
+///// container container hold vars for /ENV /ENV
+///// container container hold vars for /ENV /ENV
 
   $query = mysqli_query($link, $count);
 
