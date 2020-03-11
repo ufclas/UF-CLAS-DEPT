@@ -7,7 +7,6 @@
   $unlock = false;
   // Unlock is dictated by GET['menu'];
   // menu: filer => show: this
-  // test change
   if (isset($_GET['menu'])) {
     $unlock = true;
     $menu = $_GET['menu'];
