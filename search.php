@@ -1,40 +1,109 @@
 <?php  // 200310_1 search to start exceptions
   get_header(); //brings in header
+
+  $host = "localhost";
+  $user = "root";
+  $pass = "";
+  $data = "emily";
+
+  $connection = mysqli_connect($host,$user,$pass,$data);
+
+  if (!$connection) {
+    die("connection to db failed");
+  }
+
+
+
+
+
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
   $empty_search = false;
   if ($searchfor === "" || empty($searchfor) || $searchfor == false) {
     $empty_search = true;
   }
+
+  function p($list) {
+    echo "<pre>";
+      print_r($list);
+    echo "</pre>";
+  }
+
+  p($_SERVER);
+
+  $user_computerType = $_SERVER['HTTP_USER_AGENT'];
+
+
+  $value_location = "";
+  $exception_injected = false; $exceptionInjection = "\$exceptionInjection";
   include("inc/list_departments.php");
-  $studies = array();
-  echo "<ul>";
-  foreach ($majors as $major) {
-    $major = strtolower($major);
-    if (strpos($major, "minor") < 1) {
-      if (strpos($major, "uf online") < 1) {
-        if (strpos($major, "certificate") < 1) {
-          if (strpos($major, "studies") < 1) {
-            if (strpos($major, "clas") < 1) {
-              // $studies[] = $major;
-              echo "<li>{$major}</li>";
-            }
-          }
-        }
-      }
+
+  // DEPARTMENTS Needle Filter
+  foreach ($departments as $key_department => $value_department) {
+    // keyDepartment = "biology" ||| starting out by checking each name before diving into the department details
+    if (strpos($key_department, $searchfor) !== false) {
+      $exception = "exception_department";
+      $value_location = $value_department['location'];
+      break;
+    } else if (strpos(strtolower($value_department['location']), $searchfor) !== false) {
+      $exception = "exception_building";
+      $value_location = $value_department['location'];
+      break;
+    } else {
+      $exception = false;
+    }
+  } // Needle Filter
+
+  // BUILDINGS
+  foreach ($list_locations as $key_location => $value_building) {
+    if ($value_location == $key_location) {
+      $bldg = $value_building['bldg'];
     }
   }
 
-
-  echo "<ul>";
-  foreach ($studies as $study) {
-    echo "<li>{$study}</li>";
+  // building address
+  foreach ($list_locations as $key_location => $value_building) {
+    if ($key_location == $value_department['location']) {
+      $exception_building_address = ucwords(strtolower($value_building['address']));
+    }
   }
-  echo "</ul>";
-
 
 ?>
+
+<style media="screen">
+
+  #container_master_searchResults {
+    display: flex;
+    background: gold;
+  }
+
+  #container_listResults {
+    background: gold;
+  }
+
+  #container_injectedException {
+    background: red;
+  }
+
+  #container_exception {
+    background: green;
+  }
+
+  #container_exception img, #container_exception iframe {
+    max-width: 300px;
+  }
+
+  #graph_alertMediaServicesOfChange {
+    font-style: italic;
+    font-size: .8rem;
+  }
+
+</style>
+
+
 <div id="primary" class="content-area">
+
+
   <main id="main" class="site-main">
     <div class="entry-content">
       <div class="wrap search-page">
@@ -53,7 +122,6 @@
         'number' => 400
       );
 
-
       // Search results for [the searched term] on [this site]
       // bloginfo() depreciated, using foreach to isolate the Site title to avoid using;
       foreach (get_sites($args_test) as $indexNumber => $wp_site_obj) {
@@ -66,7 +134,7 @@
                 $link      = array_pop($url_array);
                 $siteTitle = strtolower(get_bloginfo('name'));
                 $siteTitle = ucwords($siteTitle);
-                echo "<h2>Search results for \"{$searchfor}\" on {$siteTitle}</h2>";
+              //  echo "<h2>Search results for \"{$searchfor}\" on {$siteTitle}</h2>";
               }
             }
           }
@@ -75,7 +143,21 @@
 
       if (!$empty_search) {
         ?>
-        <div class="container-current-site">
+
+        <!-- page break  --> <!-- page break  -->    <!-- page break  -->
+        <!-- page break  --> <!-- page break  -->    <!-- page break  -->
+
+        <div id="container_master_searchResults">
+          <div id="container_listResults">
+
+            <?php if ($exception_injected) { ?>
+              <div id="container_injectedException">
+                <p><?php echo $exceptionInjection; ?></p>
+              </div>
+              <!-- injected exception container -->
+            <?php } ?>
+
+            <div class="container-current-site">
           <?php
           $store_titles = array("title_foo");
           if (have_posts()) {
@@ -359,13 +441,50 @@
           }
       } else {
         echo "Did you know your search was empty?<br><br>Want a Sitemap?<br><br>
-        <img src=\"https://image.shutterstock.com/image-photo/south-florida-sunset-260nw-240719674.jpg\">
-        <br>
-        <figcaption>photo by Efren Vasquez</figcaption>
+        <img src=\"https://campusmap.ufl.edu/library/photos/stars/B0267.jpg\">
         <hr>
         ";
       }
       ?>
+
+      </div>
+      <!-- container Results List -->
+      <!-- container Results List --><!-- container Results List -->
+      <!-- container Results List -->
+      <?php if ($exception) { ?>
+        <div id="container_exception">
+          <?php
+          // STARS has inconsistent naming conventions for its images and hasn't provided an API key to query these, so exceptions have to be written
+          $imageExceptions = array("0092", "0747", "0497");
+          foreach ($imageExceptions as $value_imageException) {
+              if ($bldg == $value_imageException) {
+                $graph_imageExtension = "JPG";
+                break;
+              } else {
+                $graph_imageExtension = "jpg";
+              }
+          } ?>
+          <img src="https://campusmap.ufl.edu/library/photos/stars/B<?php echo $bldg.".".$graph_imageExtension; ?>" alt="<?php echo $value_building['fullName']; ?>">
+          <iframe src="http://campusmap.ufl.edu/#/index/<?php echo $bldg; ?>/17" width="100%" height="200"></iframe>
+
+            <?php
+              if ($exception == "exception_department") {
+                echo "<h3>".ucwords($key_department)."</h3>";
+                echo "<p>{$exception_building_address}</p>";
+
+
+              } else if ($exception == "exception_building") {
+                echo "<h3>".$value_department['location']."</h3>";
+              }
+            ?>
+            <p id="graph_alertMediaServicesOfChange">Need to change this information?</p>
+        </div>
+        <!-- contianer exception -->
+        <!-- contianer exception -->
+        <!-- contianer exception -->
+      <?php } ?>
+      </div>
+      <!-- master search results container -->
     </div>
   </main>
 </div>

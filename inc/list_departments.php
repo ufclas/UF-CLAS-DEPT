@@ -1,7 +1,78 @@
 <?php
+/*
 
+Key Exception Types
+  exception_department
+  exception_building
+
+Anti-Keys
+  -"science !== bryant space science center" => "clas_science = array("bio", "chem")"
+  -"hall"
+
+
+Core Lists
+  $departments & $list_locations
+
+// $departments
+    $key_department => $value_department
+      "bio" => array(
+      "location"   => "",
+      "affiliates" => array(),
+      "prefix"     => array()
+    ),
+
+// $list_locations
+$key_location   => $value_building
+    "bryant" => array(
+      "bldg"         => "",
+      "fullName"     => "",
+      "abbreviation" => "",
+      "address"      => ""
+    ),
+
+
+  campusMap:
+  Dauer Hall (DAU)
+  228 BUCKMAN DR
+  GAINESVILLE, FL 32611
+  Building
+  0111
+
+
+*/
   // reverse search - building affiliations -- turlington: antrhopology,
   // structure: ANT 3364
+
+  /*
+  exceptions for exceptions:
+    - clas => clas !== classics
+
+  */
+
+$list_departments = array(
+  "portuguese",
+  "spanish",
+  "anthropology",
+  "astronomy",
+  "astrophysics",
+  "chemistry",
+  "biochemistry",
+  "criminology",
+  "economics",
+  "geography",
+  "geology",
+  "history",
+  "linguistics",
+  "mathematics",
+  "philosophy",
+  "physics",
+  "political science",
+  "psychology",
+  "religion",
+  "sociology",
+  "statistics",
+  "zoology"
+);
 
 $departments = array(
 
@@ -15,11 +86,12 @@ $departments = array(
     )
   ),
 
-
   "astronomy" => array(
     "location"   => "Bryant Space Science Center",
     "affiliates" => array(
       "astro",
+      "astronomy",
+      "astrophysics"
     ),
     "prefix" => array(
       "ast"
@@ -39,7 +111,7 @@ $departments = array(
     )
   ),
 
-  "classics"                             => array(
+  "classics" => array(
     "location"   => "Dauer Hall",
     "affiliates" => array(
       "cla",
@@ -47,15 +119,16 @@ $departments = array(
     )
   ),
 
-  "chemistry"                            => array(
+  "chemistry" => array(
     "location"   => "Sisler Hall",
     "affiliates" => array(
       "chem",
-      "chm"
+      "chm",
+      "biochemistry"
     )
   ),
 
-  "economics"                            => array(
+  "economics" => array(
     "location"   => "Matherly Hall",
     "affiliates" => array(
       "econ",
@@ -63,7 +136,7 @@ $departments = array(
     )
   ),
 
-  "english"                              => array(
+  "english" => array(
     "location"   => "Turlington Hall",
     "affiliates" => array(
       "eng",
@@ -71,7 +144,7 @@ $departments = array(
     )
   ),
 
-  "geological Sciences"                  => array(
+  "geological Sciences" => array(
     "location"   => "Williamson Hall",
     "affiliates" => array(
       "geology",
@@ -82,7 +155,7 @@ $departments = array(
     )
   ),
 
-  "geography"                            => array(
+  "geography" => array(
     "location"   => "Turlington Hall",
     "affiliates" => array(
       "geog",
@@ -93,8 +166,9 @@ $departments = array(
     )
   ),
 
-  "history"                              => array(
-    "location"   => "Flint Hall",
+
+  "history" => array(
+    "location"   => "Keene-Flint Hall",
     "affiliates" => array(
       "hist",
       "his",
@@ -189,7 +263,7 @@ $departments = array(
     )
   ),
 
-  "linguistics"                          => array(
+  "linguistics" => array(
     "location"   => "Turlington Hall",
     "affiliates" => array(
       "ling",
@@ -197,7 +271,7 @@ $departments = array(
     )
   ),
 
-  "mathematics"                          => array(
+  "mathematics" => array(
     "location"   => "Little Hall",
     "affiliates" => array(
       "math",
@@ -212,7 +286,7 @@ $departments = array(
     )
   ),
 
-  "philosophy"                           => array(
+  "philosophy" => array(
     "location"   => "Griffin-Floyd Hall",
     "affiliates" => array(
       "phil",
@@ -222,7 +296,7 @@ $departments = array(
     )
   ),
 
-  "physics"                              => array(
+  "physics" => array(
     "location"   => "Physics Building",
     "affiliates" => array(
       "phys",
@@ -232,7 +306,7 @@ $departments = array(
     )
   ),
 
-  "political science"                    => array(
+  "political science" => array(
     "location"   => "Anderson Hall",
     "affiliates" => array(
       "political",
@@ -244,7 +318,7 @@ $departments = array(
     )
   ),
 
-  "psychology"                           => array(
+  "psychology" => array(
     "location"   => "McCarty Hall C",
     "affiliates" => array(
       "psych",
@@ -252,7 +326,7 @@ $departments = array(
     )
   ),
 
-  "religion"                             => array(
+  "religion" => array(
     "location"   => "Anderson Hall",
     "affiliates" => array(
       "rel",
@@ -274,7 +348,7 @@ $departments = array(
     )
   ),
 
-  "spanish and portuguese"               => array(
+  "spanish and portuguese" => array(
     "location"   => "Dauer Hall",
     "affiliates" => array(
       "spanish &amp; portuguese",
@@ -289,142 +363,124 @@ $departments = array(
     )
   ),
 
-  "statistics"                           => array(
+  "statistics" => array(
     "location"   => "Griffin-Floyd Hall",
     "affiliates" => array(
       "stats",
       "stat",
-      "sta",
-
+      "sta"
     )
+  ),
+
+  "ids" => array(
+    "location" => "",
+    "affiliates" => array(
+      "interdisciplinary"
+    ),
+    "site" => "https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/IDS_BA_BS/"
   )
 
 ); // departments
 
-$majors = array(
-  "Actuarial Science Minor",
-  "African Languages",
-  "African Studies Minor",
-  "African-​American Studies",
-  "African-​American Studies Minor",
-  "American Indian and Indigenous Studies Minor",
-  "Anthropology",
-  "Anthropology Minor",
-  "Anthropology Minor UF Online",
-  "Anthropology UF Online",
-  "Arabic",
-  "Arabic Language and Literature Minor",
-  "Asian Studies Minor",
-  "Asian-​American Studies Minor",
-  "Astronomy and Astrophysics",
-  "Astronomy Minor",
-  "Biology UF Online",
-  "Biology CLAS",
-  "Botany Minor",
-  "Botany CLAS",
-  "Chemistry Minor",
-  "Chemistry Biochemistry",
-  "Chinese",
-  "Classical Studies",
-  "Classical Studies Minor",
-  "Communication Studies Minor",
-  "Computer Science UF Online",
-  "Computer Science CLAS",
-  "Criminology",
-  "Criminology UF Online",
-  "East Asian Languages and Literatures Minor",
-  "East-​Central European Studies Certificate",
-  "East-​Central European Studies Minor",
-  "Economics",
-  "Economics Minor",
-  "English",
-  "English Minor",
-  "European Jewish Studies Certificate",
-  "European Union Studies Certificate",
-  "European Union Studies Minor",
-  "Foreign Languages and Literatures",
-  "French and Francophone Studies",
-  "French and Francophone Studies Minor",
-  "Geography",
-  "Geography Minor",
-  "Geography Minor UF Online",
-  "Geography UF Online",
-  "Geography, Environmental Geosciences, UF Online",
-  "Geological Sciences Certificate",
-  "Geology",
-  "Geology Minor",
-  "Geology UF Online",
-  "Geospatial Information Analysis Certificate",
-  "German",
-  "German Minor",
-  "Greek Studies Minor",
-  "Health Disparities in Society Minor",
-  "Hebrew",
-  "Hebrew Minor",
-  "Hispanic and Latin American Languages, Literatures and Linguistics",
-  "History",
-  "History Minor",
-  "Holocaust Studies Certificate",
-  "Innovation Minor",
-  "Interdisciplinary Studies CLAS",
-  "International Relations Certificate",
-  "International Studies",
-  "Italian",
-  "Italian Studies Minor",
-  "Japanese",
-  "Jewish Studies",
-  "Jewish Studies Minor",
-  "Latin American Studies Certificate",
-  "Latin American Studies Minor",
-  "Legal History Certificate",
-  "Linguistics",
-  "Linguistics Minor",
-  "Marine Sciences CLAS",
-  "Mathematics",
-  "Mathematics Minor",
-  "Medical Anthropology Certificate",
-  "Medical Geography Certificate",
-  "Medical Geography in Global Health Minor",
-  "Medieval and Early Modern Studies Minor",
-  "Meteorology and Climatology Certificate",
-  "Microbiology and Cell Sciences CLAS",
-  "Philosophy",
-  "Philosophy Minor",
-  "Physics",
-  "Physics Minor",
-  "Political Campaigning Certificate",
-  "Political Science",
-  "Portuguese",
-  "Portuguese Minor",
-  "Psychology",
-  "Psychology UF Online",
-  "Public Affairs Certificate",
-  "Public Leadership Minor",
-  "Religion",
-  "Religion Minor",
-  "Religious Ethics Minor",
-  "Russian",
-  "Russian and East-​European Area Studies Certificate",
-  "Russian Minor",
-  "Sociology",
-  "Sociology Minor",
-  "Sociology Minor UF Online",
-  "Sociology UF Online",
-  "Spanish",
-  "Spanish for the Professions Certificate",
-  "Spanish Minor",
-  "Statistics",
-  "Statistics Minor",
-  "Sustainability Studies",
-  "Sustainability Studies Minor",
-  "Teaching English as a Second Language Certificate",
-  "Teaching English as a Second Language Minor",
-  "Theories and Politics of Sexuality Minor",
-  "Women's Studies",
-  "Women's Studies Minor",
-  "Zoology",
-  "Zoology Minor",
-);
+  $list_locations = array(
+    "Anderson Hall" => array(
+    "bldg"         => "0007",
+    "fullName"     => "James N. Anderson Hall",
+    "abbreviation" => "AND",
+    "address"      => "1507 W UNIVERSITY AVE GAINESVILLE	FL 32611"
+  ),
+
+  "Bartram Hall" => array(
+    "bldg"         => "0747",
+    "fullName"     => "William Bartram Hall",
+    "abbreviation" => "BAR",
+    "address"      => "876 NEWELL DR GAINESVILLE FL 32611"
+  ),
+
+  "Bryant Space Science Center" => array(
+    "bldg"         => "0038",
+    "fullName"     => "T.W. Bryant Space Science Ctr",
+    "abbreviation" => "BRT",
+    "address"      => "1772 STADIUM RD GAINESVILLE FL	32611"
+  ),
+
+  "Dauer Hall" => array(
+    "bldg"         => "0111",
+    "fullName"     => "Manning J. Dauer Hall",
+    "abbreviation" => "DAU",
+    "address"      => "228 BUCKMAN DR GAINESVILLE	FL 32611"
+  ),
+
+  "Keene-Flint Hall" => array(
+    "bldg"         => "0008",
+    "fullName"     => "Keene-Flint Hall",
+    "abbreviation" => "FLI",
+    "address"      => "80 NEWELL DR GAINESVILLE	FL 32611"
+  ),
+
+    "Griffin-Floyd Hall" => array(
+    "bldg"         => "0010",
+    "fullName"     => "B.H. Griffin - W.L. Floyd Hall",
+    "abbreviation" => "FLO",
+    "address"      => "230 NEWELL DR GAINESVILLE FL 32611"
+  ),
+
+  "Little Hall" => array(
+    "bldg"         => "0655",
+    "fullName"     => "Winston W. Little Hall",
+    "abbreviation" => "LIT",
+    "address"      => "1400 STADIUM RD GAINESVILLE FL 32611"
+  ),
+
+  "Matherly Hall" => array(
+    "bldg"         => "0406",
+    "fullName"     => "Walter J. Matherly Hall",
+    "abbreviation" => "MAT",
+    "address"      => "1405 W UNIVERSITY AVE GAINESVILLE FL 32611"
+  ),
+
+  "McCarty Hall C" => array(
+    "bldg"         => "0497",
+    "fullName"     => "Dan McCarty Hall C",
+    "abbreviation" => "MCCC",
+    "address"      => "1688 MCCARTY DR GAINESVILLE	FL 32611"
+  ),
+
+  "Physics Building" => array(
+    "bldg"         => "0092",
+    "fullName"     => "Physics Building",
+    "abbreviation" => "NPB",
+    "address"      => "2001 MUSEUM RD GAINESVILLE FL 32611"
+  ),
+
+  "Pugh Hall" => array(
+    "bldg"         => "0072",
+    "fullName"     => "Jim and Alexis Pugh Hall",
+    "abbreviation" => "PUGH",
+    "address"      => "296 BUCKMAN DR GAINESVILLE FL 32611"
+  ),
+
+  "Sisler Hall" => array(
+    "bldg"         => "0688",
+    "fullName"     => "Harry H. Sisler Hall",
+    "abbreviation" => "SIS",
+    "address"      => "1680 UNION RD GAINESVILLE FL 32611"
+  ),
+
+  "Turlington Hall" => array(
+    "bldg"         => "0267",
+    "fullName"     => "Ralph D. Turlington Hall",
+    "abbreviation" => "TUR",
+    "address"      => "330 NEWELL DR GAINESVILLE FL 32611"
+  ),
+
+  "Williamson Hall" => array(
+    "bldg"         => "0100",
+    "fullName"     => "Robert C. Williamson Hall",
+    "abbreviation" => "WM",
+    "address"      => "1843 STADIUM RD GAINESVILLE FL 32611"
+  )
+  );
 
 
 $list_minors = array(
@@ -557,6 +613,7 @@ $list_cetificates = array(
     "hispanic and latin american languages, literatures and linguistics",
     "history",
     "italian",
+    "interdisciplinary studies",
     "japanese",
     "linguistics",
     "mathematics",
@@ -573,47 +630,164 @@ $list_cetificates = array(
     "zoology"
   );
 
-//   african languages
-// african-​american studies
-// anthropology
-// arabic
-// astronomy and astrophysics
-// biology clas
-// botany clas
-// chemistry biochemistry
-// chinese
-// classical studies
-// computer science clas
-// criminology
-// economics
-// english
-// foreign languages and literatures
-// french and francophone studies
-// geography
-// geology
-// german
-// hebrew
-// hispanic and latin american languages, literatures and linguistics
-// history
-// interdisciplinary studies clas
-// international studies
-// italian
-// japanese
-// jewish studies
-// linguistics
-// marine sciences clas
-// mathematics
-// microbiology and cell sciences clas
-// philosophy
-// physics
-// political science
-// portuguese
-// psychology
-// religion
-// russian
-// sociology
-// spanish
-// statistics
-// sustainability studies
-// women's studies
-// zoology
+  $list_languages = array(
+    "african languages",
+    "foreign languages and literatures",
+    "hispanic and latin american languages"
+  );
+  //
+  // "anthropology",
+  // "arabic",
+  // "astronomy and astrophysics",
+  // "chemistry",
+  // "biochemistry",
+  // "chinese",
+  // "criminology",
+  // "economics",
+  // "english",
+  // "geography",
+  // "geology",
+  // "german",
+  // "hebrew",
+  // "history",
+  // "italian",
+  // "japanese",
+  // "linguistics",
+  // "mathematics",
+  // "philosophy",
+  // "physics",
+  // "political science",
+  // "portuguese",
+  // "psychology",
+  // "religion",
+  // "russian",
+  // "sociology",
+  // "spanish",
+  // "statistics",
+  // "zoology",
+
+
+  // $list_dump = array(
+  //   "Actuarial Science Minor",
+  //   "African Languages",
+  //   "African Studies Minor",
+  //   "African-​American Studies",
+  //   "African-​American Studies Minor",
+  //   "American Indian and Indigenous Studies Minor",
+  //   "Anthropology",
+  //   "Anthropology Minor",
+  //   "Anthropology Minor UF Online",
+  //   "Anthropology UF Online",
+  //   "Arabic",
+  //   "Arabic Language and Literature Minor",
+  //   "Asian Studies Minor",
+  //   "Asian-​American Studies Minor",
+  //   "Astronomy and Astrophysics",
+  //   "Astronomy Minor",
+  //   "Biology UF Online",
+  //   "Biology CLAS",
+  //   "Botany Minor",
+  //   "Botany CLAS",
+  //   "Chemistry Minor",
+  //   "Chemistry Biochemistry",
+  //   "Chinese",
+  //   "Classical Studies",
+  //   "Classical Studies Minor",
+  //   "Communication Studies Minor",
+  //   "Computer Science UF Online",
+  //   "Computer Science CLAS",
+  //   "Criminology",
+  //   "Criminology UF Online",
+  //   "East Asian Languages and Literatures Minor",
+  //   "East-​Central European Studies Certificate",
+  //   "East-​Central European Studies Minor",
+  //   "Economics",
+  //   "Economics Minor",
+  //   "English",
+  //   "English Minor",
+  //   "European Jewish Studies Certificate",
+  //   "European Union Studies Certificate",
+  //   "European Union Studies Minor",
+  //   "Foreign Languages and Literatures",
+  //   "French and Francophone Studies",
+  //   "French and Francophone Studies Minor",
+  //   "Geography",
+  //   "Geography Minor",
+  //   "Geography Minor UF Online",
+  //   "Geography UF Online",
+  //   "Geography, Environmental Geosciences, UF Online",
+  //   "Geological Sciences Certificate",
+  //   "Geology",
+  //   "Geology Minor",
+  //   "Geology UF Online",
+  //   "Geospatial Information Analysis Certificate",
+  //   "German",
+  //   "German Minor",
+  //   "Greek Studies Minor",
+  //   "Health Disparities in Society Minor",
+  //   "Hebrew",
+  //   "Hebrew Minor",
+  //   "Hispanic and Latin American Languages, Literatures and Linguistics",
+  //   "History",
+  //   "History Minor",
+  //   "Holocaust Studies Certificate",
+  //   "Innovation Minor",
+  //   "Interdisciplinary Studies CLAS",
+  //   "International Relations Certificate",
+  //   "International Studies",
+  //   "Italian",
+  //   "Italian Studies Minor",
+  //   "Japanese",
+  //   "Jewish Studies",
+  //   "Jewish Studies Minor",
+  //   "Latin American Studies Certificate",
+  //   "Latin American Studies Minor",
+  //   "Legal History Certificate",
+  //   "Linguistics",
+  //   "Linguistics Minor",
+  //   "Marine Sciences CLAS",
+  //   "Mathematics",
+  //   "Mathematics Minor",
+  //   "Medical Anthropology Certificate",
+  //   "Medical Geography Certificate",
+  //   "Medical Geography in Global Health Minor",
+  //   "Medieval and Early Modern Studies Minor",
+  //   "Meteorology and Climatology Certificate",
+  //   "Microbiology and Cell Sciences CLAS",
+  //   "Philosophy",
+  //   "Philosophy Minor",
+  //   "Physics",
+  //   "Physics Minor",
+  //   "Political Campaigning Certificate",
+  //   "Political Science",
+  //   "Portuguese",
+  //   "Portuguese Minor",
+  //   "Psychology",
+  //   "Psychology UF Online",
+  //   "Public Affairs Certificate",
+  //   "Public Leadership Minor",
+  //   "Religion",
+  //   "Religion Minor",
+  //   "Religious Ethics Minor",
+  //   "Russian",
+  //   "Russian and East-​European Area Studies Certificate",
+  //   "Russian Minor",
+  //   "Sociology",
+  //   "Sociology Minor",
+  //   "Sociology Minor UF Online",
+  //   "Sociology UF Online",
+  //   "Spanish",
+  //   "Spanish for the Professions Certificate",
+  //   "Spanish Minor",
+  //   "Statistics",
+  //   "Statistics Minor",
+  //   "Sustainability Studies",
+  //   "Sustainability Studies Minor",
+  //   "Teaching English as a Second Language Certificate",
+  //   "Teaching English as a Second Language Minor",
+  //   "Theories and Politics of Sexuality Minor",
+  //   "Women's Studies",
+  //   "Women's Studies Minor",
+  //   "Zoology",
+  //   "Zoology Minor",
+  // );
