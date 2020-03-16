@@ -1,21 +1,10 @@
-<?php  // 200310_1 search to start exceptions
+<?php  // 200316_2 adding in common server variables for adding to captureQuery
   get_header(); //brings in header
-
-  $host = "localhost";
-  $user = "root";
-  $pass = "";
-  $data = "emily";
-
-  $connection = mysqli_connect($host,$user,$pass,$data);
-
-  if (!$connection) {
-    die("connection to db failed");
+  function p($list) {
+    echo "<pre>";
+    print_r($list);
+    echo "</pre>";
   }
-
-
-
-
-
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
   $empty_search = false;
@@ -23,21 +12,44 @@
     $empty_search = true;
   }
 
-  function p($list) {
-    echo "<pre>";
-      print_r($list);
-    echo "</pre>";
+  $host = "localhost";
+  $user = "root";
+  $pass = "";
+  $data = "emily";
+  $connection = mysqli_connect($host,$user,$pass,$data);
+  if (!$connection) {
+    die("connection to db failed");
   }
 
-  p($_SERVER);
 
-  $user_computerType = $_SERVER['HTTP_USER_AGENT'];
-
+  // what the user searched for
+  $searchterm = $searchfor;
+  // user's IP address
+  $user_ip    = $_SERVER['REMOTE_ADDR'];
+  $user_ip    = mysqli_real_escape_string($connection, $user_ip);
+  // user's Browser Environment
+  $user_agent = $_SERVER['HTTP_USER_AGENT'];
+  $user_agent = mysqli_real_escape_string($connection, $user_agent);
+  // our site's URI to prompt comparison to the query string
+  $site_uri   = $_SERVER['REQUEST_URI'];
+  $site_uri = mysqli_real_escape_string($connection, $site_uri);
+  // the GET string to copare to the request URI above
+  $query_str  = $_SERVER['QUERY_STRING'];
+  $query_str = mysqli_real_escape_string($connection, $query_str);
+  // just to double check the server
+  $our_server = $_SERVER['SERVER_ADDR'];
+  $our_server = mysqli_real_escape_string($connection, $our_server);
+  // time updated through timestamp in column
+  $count = "INSERT INTO search_capturequeries (searchterm, user_ip, user_agent, site_uri, query_str, our_server) VALUES ('$searchterm', '$user_ip', '$user_agent', '$site_uri', '$query_str', '$our_server')";
+  $query = mysqli_query($connection, $count);
+  if (!$query) {
+    die("Failed to update search capture queries table");
+    // die(mysqli_error($connection));
+  }
 
   $value_location = "";
   $exception_injected = false; $exceptionInjection = "\$exceptionInjection";
   include("inc/list_departments.php");
-
   // DEPARTMENTS Needle Filter
   foreach ($departments as $key_department => $value_department) {
     // keyDepartment = "biology" ||| starting out by checking each name before diving into the department details
