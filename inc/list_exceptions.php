@@ -372,13 +372,13 @@ $departments = array(
     )
   ),
 
-  "ids" => array(
-    "location" => "",
-    "affiliates" => array(
-      "interdisciplinary"
-    ),
-    "site" => "https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/IDS_BA_BS/"
-  )
+  // "ids" => array(
+  //   "location" => "na",
+  //   "affiliates" => array(
+  //     "interdisciplinary"
+  //   ),
+  //   "site" => "https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/IDS_BA_BS/"
+  // )
 
 ); // departments
 

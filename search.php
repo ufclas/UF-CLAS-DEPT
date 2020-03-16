@@ -48,9 +48,16 @@
   }
 
   $value_location = "";
-  $exception_injected = false; $exceptionInjection = "\$exceptionInjection";
-  include("inc/list_departments.php");
+  $exception_injected = false;
+  $exceptionInjection = "\$exceptionInjection";
+
+  include("inc/list_exceptions.php");
   // DEPARTMENTS Needle Filter
+  /*
+
+    only searching through departments right now, so something like "ids" won't have an exception (until it's wrtten in version 1.3.0)
+
+  */
   foreach ($departments as $key_department => $value_department) {
     // keyDepartment = "biology" ||| starting out by checking each name before diving into the department details
     if (strpos($key_department, $searchfor) !== false) {
