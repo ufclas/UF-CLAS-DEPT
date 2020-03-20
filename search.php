@@ -1,128 +1,54 @@
-<?php  // 200316_2 adding in common server variables for adding to captureQuery
-  get_header(); //brings in header
-  function p($list) {
-    echo "<pre>";
-    print_r($list);
-    echo "</pre>";
-  }
+<?php  // 200320_3 capture queries version 1.2.0
+  get_header();
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
   $empty_search = false;
+
   if ($searchfor === "" || empty($searchfor) || $searchfor == false) {
     $empty_search = true;
   }
 
-  $host = "localhost";
-  $user = "root";
-  $pass = "";
-  $data = "emily";
-  $connection = mysqli_connect($host,$user,$pass,$data);
-  if (!$connection) {
-    die("connection to db failed");
-  }
+    
 
+    $connection = mysqli_connect($host, $user, $pass, $data);
 
-  // what the user searched for
-  $searchterm = $searchfor;
-  // user's IP address
-  $user_ip    = $_SERVER['REMOTE_ADDR'];
-  $user_ip    = mysqli_real_escape_string($connection, $user_ip);
-  // user's Browser Environment
-  $user_agent = $_SERVER['HTTP_USER_AGENT'];
-  $user_agent = mysqli_real_escape_string($connection, $user_agent);
-  // our site's URI to prompt comparison to the query string
-  $site_uri   = $_SERVER['REQUEST_URI'];
-  $site_uri = mysqli_real_escape_string($connection, $site_uri);
-  // the GET string to copare to the request URI above
-  $query_str  = $_SERVER['QUERY_STRING'];
-  $query_str = mysqli_real_escape_string($connection, $query_str);
-  // just to double check the server
-  $our_server = $_SERVER['SERVER_ADDR'];
-  $our_server = mysqli_real_escape_string($connection, $our_server);
-  // time updated through timestamp in column
-  $count = "INSERT INTO search_capturequeries (searchterm, user_ip, user_agent, site_uri, query_str, our_server) VALUES ('$searchterm', '$user_ip', '$user_agent', '$site_uri', '$query_str', '$our_server')";
-  $query = mysqli_query($connection, $count);
-  if (!$query) {
-    die("Failed to update search capture queries table");
-    // die(mysqli_error($connection));
-  }
-
-  $value_location = "";
-  $exception_injected = false;
-  $exceptionInjection = "\$exceptionInjection";
-
-  include("inc/list_exceptions.php");
-  // DEPARTMENTS Needle Filter
-  /*
-
-    only searching through departments right now, so something like "ids" won't have an exception (until it's wrtten in version 1.3.0)
-
-  */
-  foreach ($departments as $key_department => $value_department) {
-    // keyDepartment = "biology" ||| starting out by checking each name before diving into the department details
-    if (strpos($key_department, $searchfor) !== false) {
-      $exception = "exception_department";
-      $value_location = $value_department['location'];
-      break;
-    } else if (strpos(strtolower($value_department['location']), $searchfor) !== false) {
-      $exception = "exception_building";
-      $value_location = $value_department['location'];
-      break;
-    } else {
-      $exception = false;
+    if (!$connection) {
+      echo "Error: Unable to connect to MySQL." . PHP_EOL;
+      echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+      echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+      exit;
     }
-  } // Needle Filter
 
-  // BUILDINGS
-  foreach ($list_locations as $key_location => $value_building) {
-    if ($value_location == $key_location) {
-      $bldg = $value_building['bldg'];
-    }
-  }
 
-  // building address
-  foreach ($list_locations as $key_location => $value_building) {
-    if ($key_location == $value_department['location']) {
-      $exception_building_address = ucwords(strtolower($value_building['address']));
+    // what the user searched for
+    $searchterm = $searchfor;
+    // user's IP address
+    $user_ip    = $_SERVER['REMOTE_ADDR'];
+    $user_ip    = mysqli_real_escape_string($connection, $user_ip);
+    // user's Browser Environment
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    $user_agent = mysqli_real_escape_string($connection, $user_agent);
+    // our site's URI to prompt comparison to the query string
+    $site_uri   = $_SERVER['REQUEST_URI'];
+    $site_uri = mysqli_real_escape_string($connection, $site_uri);
+    // the GET string to copare to the request URI above
+    $query_str  = $_SERVER['QUERY_STRING'];
+    $query_str = mysqli_real_escape_string($connection, $query_str);
+    // just to double check the server
+    $our_server = $_SERVER['SERVER_ADDR'];
+    $our_server = mysqli_real_escape_string($connection, $our_server);
+    // time updated through timestamp in column
+    $count = "INSERT INTO search_capturequeries (searchterm, user_ip, user_agent, site_uri, query_str, our_server) VALUES ('$searchterm', '$user_ip', '$user_agent', '$site_uri', '$query_str', '$our_server')";
+    $query = mysqli_query($connection, $count);
+    if (!$query) {
+      die("Failed to update search capture queries table");
+      // die(mysqli_error($connection));
     }
-  }
+
 
 ?>
 
-<style media="screen">
-
-  #container_master_searchResults {
-    display: flex;
-    background: gold;
-  }
-
-  #container_listResults {
-    background: gold;
-  }
-
-  #container_injectedException {
-    background: red;
-  }
-
-  #container_exception {
-    background: green;
-  }
-
-  #container_exception img, #container_exception iframe {
-    max-width: 300px;
-  }
-
-  #graph_alertMediaServicesOfChange {
-    font-style: italic;
-    font-size: .8rem;
-  }
-
-</style>
-
-
 <div id="primary" class="content-area">
-
-
   <main id="main" class="site-main">
     <div class="entry-content">
       <div class="wrap search-page">
@@ -153,7 +79,7 @@
                 $link      = array_pop($url_array);
                 $siteTitle = strtolower(get_bloginfo('name'));
                 $siteTitle = ucwords($siteTitle);
-              //  echo "<h2>Search results for \"{$searchfor}\" on {$siteTitle}</h2>";
+                echo "<h2>Search results for \"{$searchfor}\" on {$siteTitle}</h2>";
               }
             }
           }
@@ -162,21 +88,7 @@
 
       if (!$empty_search) {
         ?>
-
-        <!-- page break  --> <!-- page break  -->    <!-- page break  -->
-        <!-- page break  --> <!-- page break  -->    <!-- page break  -->
-
-        <div id="container_master_searchResults">
-          <div id="container_listResults">
-
-            <?php if ($exception_injected) { ?>
-              <div id="container_injectedException">
-                <p><?php echo $exceptionInjection; ?></p>
-              </div>
-              <!-- injected exception container -->
-            <?php } ?>
-
-            <div class="container-current-site">
+        <div class="container-current-site">
           <?php
           $store_titles = array("title_foo");
           if (have_posts()) {
@@ -459,51 +371,9 @@
             echo "</div><!-- end Other Sites Container -->";
           }
       } else {
-        echo "Did you know your search was empty?<br><br>Want a Sitemap?<br><br>
-        <img src=\"https://campusmap.ufl.edu/library/photos/stars/B0267.jpg\">
-        <hr>
-        ";
+        echo "<p>Did you know your search was empty? Please try your search again.</p>";
       }
       ?>
-
-      </div>
-      <!-- container Results List -->
-      <!-- container Results List --><!-- container Results List -->
-      <!-- container Results List -->
-      <?php if ($exception) { ?>
-        <div id="container_exception">
-          <?php
-          // STARS has inconsistent naming conventions for its images and hasn't provided an API key to query these, so exceptions have to be written
-          $imageExceptions = array("0092", "0747", "0497");
-          foreach ($imageExceptions as $value_imageException) {
-              if ($bldg == $value_imageException) {
-                $graph_imageExtension = "JPG";
-                break;
-              } else {
-                $graph_imageExtension = "jpg";
-              }
-          } ?>
-          <img src="https://campusmap.ufl.edu/library/photos/stars/B<?php echo $bldg.".".$graph_imageExtension; ?>" alt="<?php echo $value_building['fullName']; ?>">
-          <iframe src="http://campusmap.ufl.edu/#/index/<?php echo $bldg; ?>/17" width="100%" height="200"></iframe>
-
-            <?php
-              if ($exception == "exception_department") {
-                echo "<h3>".ucwords($key_department)."</h3>";
-                echo "<p>{$exception_building_address}</p>";
-
-
-              } else if ($exception == "exception_building") {
-                echo "<h3>".$value_department['location']."</h3>";
-              }
-            ?>
-            <p id="graph_alertMediaServicesOfChange">Need to change this information?</p>
-        </div>
-        <!-- contianer exception -->
-        <!-- contianer exception -->
-        <!-- contianer exception -->
-      <?php } ?>
-      </div>
-      <!-- master search results container -->
     </div>
   </main>
 </div>
