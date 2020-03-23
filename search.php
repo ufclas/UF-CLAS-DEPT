@@ -40,17 +40,14 @@
     // just to double check the server
     $our_server = $_SERVER['SERVER_ADDR'];
     $our_server = mysqli_real_escape_string($connection, $our_server);
-    $searched_sitename = get_bloginfo();
-
+    $searched_sitename = get_current_blog_id();
     // time updated through timestamp in column
-    $count = "INSERT INTO search_capturequeries (searchterm, searched_sitename, user_ip, user_agent, site_uri, query_str, our_server) VALUES ('$searchterm', '$searched_sitename', '$user_ip', '$user_agent', '$site_uri', '$query_str', '$our_server')";
+    $count = "INSERT INTO search_capturequeries (searchterm, user_ip, user_agent, searched_sitename, site_uri, query_str, our_server) VALUES ('$searchterm', '$user_ip', '$user_agent', '$searched_sitename', '$site_uri', '$query_str', '$our_server')";
     $query = mysqli_query($connection, $count);
     if (!$query) {
       die("Failed to update search capture queries table");
       // die(mysqli_error($connection));
     }
-
-
 ?>
 
 <div id="primary" class="content-area">
