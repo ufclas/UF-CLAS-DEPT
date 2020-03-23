@@ -1,4 +1,4 @@
-<?php  // 200320_3 capture queries version 1.2.0
+<?php  // 200323_4 use wp connectors -- capture queries version 1.2.0
   get_header();
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
@@ -8,7 +8,11 @@
     $empty_search = true;
   }
 
-    
+    global $wpdb;
+    $host = $wpdb->dbhost;
+    $user = $wpdb->dbuser;
+    $pass = $wpdb->dbpassword;
+    $data = $wpdb->dbname;
 
     $connection = mysqli_connect($host, $user, $pass, $data);
 
@@ -18,7 +22,6 @@
       echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
       exit;
     }
-
 
     // what the user searched for
     $searchterm = $searchfor;
