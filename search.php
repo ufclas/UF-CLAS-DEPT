@@ -1,4 +1,4 @@
-<?php  // 200323_4 use wp connectors -- capture queries version 1.2.0
+<?php  // 200323_5  add site id column (1.2.0 ~ capture queries)
   get_header();
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
@@ -40,17 +40,15 @@
     // just to double check the server
     $our_server = $_SERVER['SERVER_ADDR'];
     $our_server = mysqli_real_escape_string($connection, $our_server);
-    $searched_sitename = get_bloginfo();
-
+    // get the current site id instead of the site name
+    $searched_sitename = get_current_blog_id();
     // time updated through timestamp in column
-    $count = "INSERT INTO search_capturequeries (searchterm, searched_sitename, user_ip, user_agent, site_uri, query_str, our_server) VALUES ('$searchterm', '$searched_sitename', '$user_ip', '$user_agent', '$site_uri', '$query_str', '$our_server')";
+    $count = "INSERT INTO search_capturequeries (searchterm, user_ip, user_agent, searched_sitename, site_uri, query_str, our_server) VALUES ('$searchterm', '$user_ip', '$user_agent', '$searched_sitename', '$site_uri', '$query_str', '$our_server')";
     $query = mysqli_query($connection, $count);
     if (!$query) {
       die("Failed to update search capture queries table");
       // die(mysqli_error($connection));
     }
-
-
 ?>
 
 <div id="primary" class="content-area">
