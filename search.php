@@ -23,8 +23,6 @@
       exit;
     }
 
-
-
     // what the user searched for
     $searchterm = $searchfor;
     // user's IP address
@@ -42,13 +40,10 @@
     // just to double check the server
     $our_server = $_SERVER['SERVER_ADDR'];
     $our_server = mysqli_real_escape_string($connection, $our_server);
+    $searched_sitename = get_bloginfo();
+
     // time updated through timestamp in column
-
-    $sitename = get_bloginfo();
-    $sitename = mysqli_real_escape_string($connection, $sitename);
-
-
-    $count = "INSERT INTO search_capturequeries (searchterm, sitename, user_ip, user_agent, site_uri, query_str, our_server) VALUES ('$searchterm', '$sitename', '$user_ip', '$user_agent', '$site_uri', '$query_str', '$our_server')";
+    $count = "INSERT INTO search_capturequeries (searchterm, searched_sitename, user_ip, user_agent, site_uri, query_str, our_server) VALUES ('$searchterm', '$searched_sitename', '$user_ip', '$user_agent', '$site_uri', '$query_str', '$our_server')";
     $query = mysqli_query($connection, $count);
     if (!$query) {
       die("Failed to update search capture queries table");
