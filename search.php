@@ -1,4 +1,4 @@
-<?php  // 191121_28, thursday
+<?php  // 200323_4 use wp connectors -- capture queries version 1.2.0
   get_header();
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
@@ -7,6 +7,48 @@
   if ($searchfor === "" || empty($searchfor) || $searchfor == false) {
     $empty_search = true;
   }
+
+    global $wpdb;
+    $host = $wpdb->dbhost;
+    $user = $wpdb->dbuser;
+    $pass = $wpdb->dbpassword;
+    $data = $wpdb->dbname;
+
+    $connection = mysqli_connect($host, $user, $pass, $data);
+
+    if (!$connection) {
+      echo "Error: Unable to connect to MySQL." . PHP_EOL;
+      echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+      echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+      exit;
+    }
+
+    // what the user searched for
+    $searchterm = $searchfor;
+    // user's IP address
+    $user_ip    = $_SERVER['REMOTE_ADDR'];
+    $user_ip    = mysqli_real_escape_string($connection, $user_ip);
+    // user's Browser Environment
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    $user_agent = mysqli_real_escape_string($connection, $user_agent);
+    // our site's URI to prompt comparison to the query string
+    $site_uri   = $_SERVER['REQUEST_URI'];
+    $site_uri = mysqli_real_escape_string($connection, $site_uri);
+    // the GET string to copare to the request URI above
+    $query_str  = $_SERVER['QUERY_STRING'];
+    $query_str = mysqli_real_escape_string($connection, $query_str);
+    // just to double check the server
+    $our_server = $_SERVER['SERVER_ADDR'];
+    $our_server = mysqli_real_escape_string($connection, $our_server);
+    // time updated through timestamp in column
+    $count = "INSERT INTO search_capturequeries (searchterm, user_ip, user_agent, site_uri, query_str, our_server) VALUES ('$searchterm', '$user_ip', '$user_agent', '$site_uri', '$query_str', '$our_server')";
+    $query = mysqli_query($connection, $count);
+    if (!$query) {
+      die("Failed to update search capture queries table");
+      // die(mysqli_error($connection));
+    }
+
+
 ?>
 
 <div id="primary" class="content-area">
