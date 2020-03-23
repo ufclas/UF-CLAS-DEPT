@@ -1,0 +1,45 @@
+.home-page-event-information h4 {
+    padding: 0;
+}
+
+.home-page-event-information br {
+    display: none;
+}
+
+.the-events-calendar-shortcode-container {
+    margin-bottom: 2rem;
+}
+
+#page .home-page-event-information .event-date {
+    font-family: "Gentona_Book" !important;
+    border-bottom: 1px solid #A9DCDA;
+}
+
+.home-page-event-image img {
+    max-width: 415px;
+}
+
+@media (min-width: 768px){
+  .the-events-calendar-shortcode-container {
+      display: flex;
+  }
+
+  .home-page-event-image {
+      flex: 1 20%;
+      padding-right: 3rem;
+  }
+
+  .home-page-event-information {
+      flex: 1 80%;
+  }
+
+  .home-page-event-image img {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 1025px){
+  .the-events-calendar-shortcode-container {
+    margin-bottom: 4rem;
+  }
+}

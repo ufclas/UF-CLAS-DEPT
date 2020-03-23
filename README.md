@@ -4,7 +4,7 @@ UF CLAS EMILY Theme
 Theme for the College of Liberal Arts and Sciences homesite
 
 ```
-Theme URI:    http://publications.clas.ufl.edu
+Theme URI:    http://mediaservices.clas.ufl.edu
 Description:  Theme for the College of Liberal Arts and Sciences homesite
 Author:       Yash Singh
 Author URI:   https://comms.clas.ufl.edu/the-team/
@@ -33,9 +33,9 @@ The page templates in this theme can be applied to pages and posts.
 
 ### Sidebars and Widgets
 
-By default the sidebars have been removed from this theme's templates. 
+By default the sidebars have been removed from this theme's templates.
 
-In order to make sidebars visible for pages and posts, you have to select a page template that supports it. 
+In order to make sidebars visible for pages and posts, you have to select a page template that supports it.
 
 Pages that support sidebars and widgets:
 
@@ -90,7 +90,7 @@ Page Templates with custom fields:
 - Magazine Article Page Template: sub_head, byline
 - Image Header: sub_head, header_image
 
-Featured image custom field (caption is a WP field): 
+Featured image custom field (caption is a WP field):
 
 - photo_credit_txt
 
@@ -99,20 +99,20 @@ Developer Info
 
 ### Theme Edits
 
-[Grunt](https://gruntjs.com) files are included to compile and minify the CSS and JavaScript. 
+[Grunt](https://gruntjs.com) files are included to compile and minify the CSS and JavaScript.
 
-Edits can be done directly to the non-minified versions and then minified using any other tool. 
+Edits can be done directly to the non-minified versions and then minified using any other tool.
 
 ### Theme Updates
 
-If there are templates and functions in the Twenty Seventeen parent theme that have the same name, the files in this theme override them. 
+If there are templates and functions in the Twenty Seventeen parent theme that have the same name, the files in this theme override them.
 
-Some files may need to be updated to support new features or fixes in Twenty Seventeen beyond v2.1. 
+Some files may need to be updated to support new features or fixes in Twenty Seventeen beyond v2.1.
 
 
 ### SVG Icons & Images
 
-This theme uses a customized version of the ``twentyseventeen_get_svg`` function in its inc/icon-functions folder, which overrides the file/function in the parent theme. 
+This theme uses a customized version of the ``twentyseventeen_get_svg`` function in its inc/icon-functions folder, which overrides the file/function in the parent theme.
 
 SVGs are all separate symbols in assets/images/ufl.svg. All new SVG icons should be displayed in pages using the twentyseventeen_get_svg() function for consistency.
 
@@ -123,7 +123,7 @@ If a fallback png is needed for older browsers, it should be defined in the symb
 
 SVG images that are not used as buttons or images are hidden by default. As a fallback for screenreaders, the theme uses hidden ``<span class="SVGaltText">`` after the SVG element.
 
-See the inline SVG technique mentioned in [Accessible SVGs](https://css-tricks.com/accessible-svgs/). 
+See the inline SVG technique mentioned in [Accessible SVGs](https://css-tricks.com/accessible-svgs/).
 
 ### Stylesheets
 
@@ -156,5 +156,24 @@ Included from the parent theme:
 
 - html5.js
 
+### Shortcodes
+- Glyphicon shortcode
+  - Example - `[ufl-icon name="asterisk" xclass="img-icon img-icon-alt"]`
 
+### The Events Calendar
+- Custom templates created in folders tribe-events and tribe.
+- Shortcode created to display upcoming events
+  - `[events-calendar category="featured" image="yes" eventtotal="10" excerpt="yes"]`
+  - category will pull in that event category
+  - image="yes" will display featured image
+  - eventotal will set the amount of events to show
+  - excerpt will display the excerpt
 
+### IssueM
+- This theme includes custom templates for IssueM. They are located in inc/issuem.
+
+### List Category Plugin
+- This theme includes custom templates for the List Category plugin. Template files are located in folder list-category-posts
+  - featured-large.php will pull in random post from assigned category.
+  - image-left-excerpt-right.php will display the featured image on the left hand side and the excerpt and date on the right.
+  - image-title-date.php will show the image on the top and exceprt on the bottom.

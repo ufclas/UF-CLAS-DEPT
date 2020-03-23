@@ -1,0 +1,310 @@
+/*=====================
+ *
+ *
+ * IssueM
+ *
+ * ===================*/
+
+ /*
+
+  Navigation
+
+ */
+ ul#menu-newsletter-menu {
+    list-style: none;
+ }
+
+ #page .subnav-dark a {
+   color: white;
+   font-size: 1.2rem;
+   letter-spacing: 1px;
+   font-family: "Gentona_Book" !important;
+   font-weight: 100;
+   text-transform: uppercase;
+ }
+
+ #page .subnav-dark .sub-menu a {
+     font-size: 1.125rem;
+     display: block;
+     padding: .4rem 0;
+ }
+
+ .subnav-dark {
+     background: #004083;
+     padding: 1px;
+ }
+
+ .single-article .container {
+    max-width: 850px;
+}
+
+.big-stat-wrap.big-stat-img.four.gradient-bg {
+    height: 250px;
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    position: relative;
+}
+
+.big-stat-wrap.big-stat-img.four.gradient-bg > a {
+    position: absolute;
+    background: #1570CF;
+    padding: .3rem;
+    border: 3px solid #F5821E;
+    color: white !important;
+    letter-spacing: 1px;
+    right: 5px;
+    top: 1rem;
+    z-index: 2;
+}
+
+.issuem-article .big-stat-wrap:before {
+    content: "";
+    background-image: linear-gradient(to top, #002346, transparent);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.big-stat-copy a {
+    color: white !important;
+}
+
+.big-stat-copy {
+    position: relative;
+    z-index: 2;
+	   width: 100%;
+    padding: 0 1rem 2rem;
+}
+
+#page .big-stat-copy h2 a {
+    font-family: "Quadon_Regular" !important;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.issuem-archive-text img {
+    max-width: 300px;
+    width: 100%;
+}
+
+.issuem-archive-text .link-more,
+.issuem-archive-text .read-more{
+    display: none;
+}
+
+.issuem-archive-container {
+    border-bottom: 1px solid #A9DCDA;
+}
+
+.issuem_archives_shortcode {
+    display: flex;
+    flex-wrap: wrap;
+	  margin-top: 2rem;
+}
+
+.issuem_archives_shortcode > div {
+    flex: 1 200px;
+    padding: 0 1rem;
+}
+
+.tax-issuem_issue_categories .landing-page-hero-full,
+.tax-issuem_issue .landing-page-hero-full,
+.newsletter-page .landing-page-hero-full {
+    top: 30%;
+    left: 0;
+    right: 0;
+		margin-bottom: 0;
+}
+
+.tax-issuem_issue_categories .landing-page-hero-full .hero-img,
+.tax-issuem_issue .landing-page-hero-full .hero-img, .newsletter-page .landing-page-hero-full .hero-img {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tax-issuem_issue_categories .hero-heading h2, .tax-issuem_issue_categories .hero-heading h3,
+.tax-issuem_issue .hero-heading h2, .tax-issuem_issue .hero-heading h3,
+.newsletter-page .hero-heading h2, .newsletter-page .hero-heading h3 {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.issuem_archives_shortcode .issuem_archive img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 1px solid #A9DCDA;
+}
+
+.issuem_archive p {
+    text-align: center;
+}
+
+#page .issuem_archive a {
+    font-family: "Quadon_Bold" !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+
+#menu-newsletter-menu .sub-menu {
+    display: none;
+}
+
+#menu-newsletter-menu .open .sub-menu {
+    display: block;
+}
+
+#menu-newsletter-menu ul.sub-menu {
+  list-style: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+span.glyphicon.glyphicon-menu-hamburger {
+    font-size: 1.125rem;
+    color: white;
+}
+
+button.navbar-toggle {
+    width: 100%;
+    background: #004083;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-family: "Gentona_Book";
+}
+
+#newsletter-menu-navbar {
+    display: none;
+}
+
+#newsletter-menu-navbar.show {
+    display: block;
+}
+
+ul#menu-newsletter-menu > li {
+    padding: 5px 0;
+}
+
+footer.entry-footer a {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#page p.posted-on {
+    font-size: 1rem;
+    font-family: "Gentona_Book" !important;
+}
+
+.entry-footer .glyphicon {
+    color: #ff5a0e;
+    font-size: 2rem;
+}
+
+.entry-footer a:hover {
+  box-shadow: none;
+}
+
+@media (min-width: 1025px){
+  #newsletter-menu-navbar {
+      display: block;
+  }
+
+  .issuem-mobile-menu {
+    display: none;
+  }
+
+  .show #menu-newsletter-menu .sub-menu {
+    display: none;
+  }
+
+	.issuem-archive-text {
+    display: flex;
+	}
+
+	.issuem-archive-container {
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+		border-bottom: none;
+	}
+
+	.issuem-archive-text img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 2rem 0 0;
+    border: 1px solid #A9DCDA;
+	}
+
+	.hero-heading h2 {
+    font-size: 2.5rem;
+		padding-bottom: 0;
+	}
+
+  .big-stat-wrap.big-stat-img.four.gradient-bg {
+    height: 400px;
+    margin: 1rem;
+  }
+
+  .big-stat-wrap.big-stat-img.four.gradient-bg > a {
+      right: -18px;
+      top: 2rem;
+  }
+
+  ul#menu-newsletter-menu {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  ul#menu-newsletter-menu > li {
+    flex: 1 33%;
+    text-align: center;
+    position: relative;
+  }
+
+  #menu-newsletter-menu li.menu-item-has-children:hover > ul {
+    display: block;
+    position: absolute;
+    background: #004083;
+    overflow: visible;
+    z-index: 99;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  #menu-newsletter-menu .sub-menu li:hover {
+    background: #1570CF;
+  }
+
+  .subnav-dark .container {
+    overflow: visible;
+  }
+
+  .issuem_archives_shortcode > div {
+      flex: 1 20%;
+      padding: 0 1rem;
+  }
+}

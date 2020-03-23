@@ -6,6 +6,7 @@
 *      DATE: September 2017
 */
 
+
 /**
  * Load theme CSS and JavaScript
  *
@@ -34,6 +35,7 @@ function ufclas_emily_theme_enqueue_styles() {
 
 	// Enqueue JAVASCRIPT
 	wp_enqueue_script( 'child-scripts', get_theme_file_uri( '/assets/js/script.min.js' ), array('jquery'), $theme_version, true );
+	wp_enqueue_script( 'bootstrap-js', get_theme_file_uri( '/assets/bootstrap/js/bootstrap.min.js' ), array('jquery'), $theme_version, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -909,7 +911,10 @@ require get_theme_file_path( '/inc/shibboleth.php' );
  */
 require get_theme_file_path( '/inc/advanced-custom-fields/metaboxes.php' );
 
-/**
-* Includes the custom functions for the Emily Theme file
-*/
+
 require get_theme_file_path('/inc/custom-functions.php');
+
+/**
+* Includes the shortcodes file
+*/
+require get_stylesheet_directory() . '/inc/shortcodes.php';
