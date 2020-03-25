@@ -1,4 +1,4 @@
-<?php  // 200323_5  add site id column (1.2.0 ~ capture queries)
+<?php  // 200325_5  test update on alberta -- capture queries version 1.2.0
   get_header();
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
@@ -40,7 +40,6 @@
     // just to double check the server
     $our_server = $_SERVER['SERVER_ADDR'];
     $our_server = mysqli_real_escape_string($connection, $our_server);
-    // get the current site id instead of the site name
     $searched_sitename = get_current_blog_id();
     // time updated through timestamp in column
     $count = "INSERT INTO search_capturequeries (searchterm, user_ip, user_agent, searched_sitename, site_uri, query_str, our_server) VALUES ('$searchterm', '$user_ip', '$user_agent', '$searched_sitename', '$site_uri', '$query_str', '$our_server')";
