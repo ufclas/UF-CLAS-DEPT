@@ -1,4 +1,4 @@
-<?php  // 200325_5  test update on alberta -- capture queries version 1.2.0
+<?php  // 200326_5  test update on alberta -- capture queries version 1.2.0
   get_header();
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
