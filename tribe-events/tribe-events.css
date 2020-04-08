@@ -15,7 +15,7 @@
 
 .tribe-event-date-start span,
 .tribe-event-date-end span {
-    font-family: "Gentona_Heavy" !important;
+    font-family: "Gentona_ExtraBold" !important;
     font-size: 1.7rem;
     color: #f45a1d;
     padding: .5rem 0;
@@ -62,6 +62,7 @@ a.tribe-events-gmap {
     font-family: "Quadon_Bold" !important;
     color: #004083;
     font-size: 18px;
+    line-height: 26px;
 }
 
 h3.tribe-events-list-event-title {
@@ -221,7 +222,7 @@ ul.tribe-events-sub-nav li {
 
 .featured-event .tribe-events-venue-details {
     margin-left: 0 !important;
-    font-family: "Gentona_Book";
+    font-family: "Gentona_Medium";
     text-transform: uppercase;
     color: #004083;
     border-top: transparent;
@@ -232,8 +233,9 @@ ul.tribe-events-sub-nav li {
     display: none;
 }
 
-.featured-event .tribe-events-list .tribe-events-list-event-title {
+#page .featured-event .tribe-events-list .tribe-events-list-event-title {
     margin-bottom: 0;
+    line-height: 30px !important;
 }
 
 .featured-event  .tribe-events-day .tribe-events-event-image,
@@ -378,6 +380,7 @@ ul.tribe-events-sub-nav li {
 .tribe-events-loop h3.tribe-events-list-event-title {
   margin: 0 0 12px !important;
   line-height: 1.9rem;
+  width: 100%;
 }
 
 .events-archive .entry-content,
@@ -645,7 +648,8 @@ span.tribe-block__venue__phone {
 }
 
 #tribe-bar-form .tribe-bar-submit input[type=submit] {
-  width: auto;
+    width: 80%;
+    padding: 7px !important;
 }
 
 #tribe-bar-views-toggle:focus, #tribe-bar-views-toggle:hover,
@@ -696,8 +700,8 @@ span.tribe-block__venue__phone {
 #tribe-events .tribe-events-content p,
 .tribe-events-after-html p,
 .tribe-events-before-html p {
-    line-height: 21px;
-    font-size: 1.125rem;
+    line-height: 22px;
+    font-size: 1rem;
 }
 
 .single-tribe_events #tribe-events-content .tribe-events-event-meta dd {
@@ -756,10 +760,42 @@ hr.featured {
 
 .tribe-is-responsive.tribe-mobile .tribe-events-page-title {
   line-height: 35px;
+  letter-spacing: 1px;
 }
 
 #page #tribe-bar-form label {
   text-transform: capitalize;
+}
+
+.tribe-bar-toggle-text {
+    box-sizing: border-box;
+    font-family: "Gentona_Book";
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+#tribe-bar-collapse-toggle {
+    padding: 4px 15px;
+}
+
+#tribe-bar-form > div {
+    border-radius: 3px;
+}
+
+#tribe-events-footer nav {
+    margin: 0 1.2rem !important;
+}
+
+.tribe-events-list .featured-event .tribe-events-list-event-title {
+    line-height: 26px !important;
+}
+
+.tribe-events-image p {
+    padding: 0;
+}
+
+.tribe-bar-filters-inner.tribe-clearfix {
+    background: white;
 }
 
 /*====================================
@@ -852,7 +888,6 @@ Media Queries
 
   .featured-events-container .featured-event {
       flex: 1 25%;
-      margin-right: 3rem;
       padding-top: 0;
   }
 
@@ -929,6 +964,24 @@ Media Queries
   hr.featured {
     margin: 1rem 0;
   }
+
+  .tribe-events-event-meta .author .tribe-event-schedule-details {
+    flex: 1 10%;
+  }
+
+  .tribe-events-list .tribe-events-venue-details {
+    flex: 1 70%;
+  }
+
+  .tribe-events-list .type-tribe_events img {
+      max-width: 210px;
+  }
+  #tribe-events .tribe-events-content p,
+  .tribe-events-after-html p,
+  .tribe-events-before-html p {
+    line-height: 23px;
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 1025px){
@@ -962,7 +1015,7 @@ Media Queries
 
   .tribe-events-event-meta .author .tribe-event-schedule-details {
     font-size: 1.5rem;
-    color: #f45a1d;
+    color: #666;
     flex: 1 10%;
     margin: 0 1rem 3rem 0;
     min-width: 140px;
@@ -1052,6 +1105,7 @@ Media Queries
     height: 40px;
     margin-top: 6px;
     padding: 0 1rem;
+    width: 135px;
   }
 
   .entry-title.summary {
@@ -1075,6 +1129,7 @@ Media Queries
 
   #tribe-bar-filters-wrap {
     background: transparent;
+    flex: 1 80%;
   }
 
   #tribe-bar-views-toggle {
@@ -1093,4 +1148,16 @@ Media Queries
   .tribe-events-title-bar .tribe-events-page-title {
     text-align: left;
   }
+
+
+    #tribe-events .tribe-events-content p,
+    .tribe-events-after-html p,
+    .tribe-events-before-html p {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    #tribe-bar-views {
+      flex: 1 20%;
+    }
 }
