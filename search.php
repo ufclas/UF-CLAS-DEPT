@@ -1,4 +1,4 @@
-<?php  // 200409_6 throw exceptions version 1.3.0
+<?php  // 200409_7 throw exceptions version 1.3.0
   get_header();
   function p($list) {
     echo "<pre>";
@@ -85,8 +85,6 @@
     if ($value_location == $key_location) {
       $bldg = $value_building['bldg'];
     }
-<<<<<<< HEAD
-=======
   }
 
   // building address
@@ -95,8 +93,6 @@
       $exception_building_address = ucwords(strtolower($value_building['address']));
     }
   }
->>>>>>> 8473d54199127f34453550b17519119ab631ac83
-
 ?>
 
 <style media="screen">
@@ -150,11 +146,6 @@
       $args_test = array(
         'number' => 400
       );
-
-
-      echo "hello";
-
-
 
       // Search results for [the searched term] on [this site]
       // bloginfo() depreciated, using foreach to isolate the Site title to avoid using;
