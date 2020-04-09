@@ -1,4 +1,4 @@
-<?php  // 200326_5  test update on alberta -- capture queries version 1.2.0
+<?php  // 200409_6 throw exceptions version 1.3.0
   get_header();
   $searchfor    = get_search_query(); // Get the search query for display in a headline
   $searchfor    = trim($searchfor);
@@ -48,6 +48,7 @@
       die("Failed to update search capture queries table");
       // die(mysqli_error($connection));
     }
+
 ?>
 
 <div id="primary" class="content-area">
@@ -68,6 +69,11 @@
       $args_test = array(
         'number' => 400
       );
+
+
+      echo "hello";
+
+
 
       // Search results for [the searched term] on [this site]
       // bloginfo() depreciated, using foreach to isolate the Site title to avoid using;
