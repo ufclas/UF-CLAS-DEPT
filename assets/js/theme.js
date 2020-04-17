@@ -159,3 +159,11 @@ var searchBox = document.querySelector(".X-searchTrigger button");
 if(searchBox){
    	searchBox.addEventListener('click', showSearch);
 }
+
+
+// Fixes issue where IE was not displaying the search bar
+if (!Object.getOwnPropertyDescriptor(Element.prototype,'classList')){
+    if (HTMLElement&&Object.getOwnPropertyDescriptor(HTMLElement.prototype,'classList')){
+        Object.defineProperty(Element.prototype,'classList',Object.getOwnPropertyDescriptor(HTMLElement.prototype,'classList'));
+    }
+}
