@@ -123,6 +123,7 @@
 
       <ul>
         <?php modals_listMajors($majors); ?>
+        Getting this error message on test after updating the theme:
       </ul>
       <?php
         /*

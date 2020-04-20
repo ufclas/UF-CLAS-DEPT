@@ -922,6 +922,7 @@ require get_theme_file_path('/inc/custom-functions.php');
 
 
 function modals_listMajors($majors) {
+	// dye modal
 	echo "<ul>";
 	foreach ($majors as $major) {
 		$clean_major = str_replace(" ", "",     $major);
