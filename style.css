@@ -6051,7 +6051,7 @@ Events Slider shortcode
   .events-carousel .col-sm-3.col-xs-6 {
       border-bottom: none;
       margin: 0;
-      padding: 0;
+      padding: 0 1rem;
   }
 }
 
