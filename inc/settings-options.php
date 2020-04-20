@@ -24,10 +24,10 @@ class MySettingsPage
     {
         // This page will be under "Settings"
         add_theme_page(
-            'Settings Admin', 
-            'CLAS DEPT Theme Settings', 
-            'manage_options', 
-            'my-setting-admin', 
+            'Settings Admin',
+            'CLAS DEPT Theme Settings',
+            'manage_options',
+            'my-setting-admin',
             array( $this, 'create_admin_page' )
         );
     }
@@ -58,7 +58,7 @@ class MySettingsPage
      * Register and add settings
      */
     public function page_init()
-    {        
+    {
         register_setting(
             'my_option_group', // Option group
             'my_option_name', // Option name
@@ -70,78 +70,78 @@ class MySettingsPage
             'CLAS DEPT Theme Settings', // Title
             array( $this, 'print_section_info' ), // Callback
             'my-setting-admin' // Page
-        );  
+        );
 
         add_settings_field(
             'dept_address', // ID
-            'Department Address', // Title 
+            'Department Address', // Title
             array( $this, 'dept_address_callback' ), // Callback
             'my-setting-admin', // Page
-            'setting_section_id' // Section           
-        );      
+            'setting_section_id' // Section
+        );
 
         add_settings_field(
-            'title', 
-            'Footer Title', 
-            array( $this, 'title_callback' ), 
-            'my-setting-admin', 
+            'title',
+            'Footer Title',
+            array( $this, 'title_callback' ),
+            'my-setting-admin',
             'setting_section_id'
-        ); 
+        );
 
         add_settings_field(
-            'fb', 
-            'Facebook Link', 
-            array( $this, 'fb_callback' ), 
-            'my-setting-admin', 
+            'fb',
+            'Facebook Link',
+            array( $this, 'fb_callback' ),
+            'my-setting-admin',
             'setting_section_id'
-        );  
+        );
 
         add_settings_field(
-            'twitter', 
-            'Twitter Link', 
-            array( $this, 'twitter_callback' ), 
-            'my-setting-admin', 
+            'twitter',
+            'Twitter Link',
+            array( $this, 'twitter_callback' ),
+            'my-setting-admin',
             'setting_section_id'
-        );  
+        );
 
         add_settings_field(
-            'instagram', 
-            'Instagram Link', 
-            array( $this, 'instagram_callback' ), 
-            'my-setting-admin', 
+            'instagram',
+            'Instagram Link',
+            array( $this, 'instagram_callback' ),
+            'my-setting-admin',
             'setting_section_id'
-        );  
+        );
 
         add_settings_field(
-            'youtube', 
-            'Youtube Link', 
-            array( $this, 'youtube_callback' ), 
-            'my-setting-admin', 
+            'youtube',
+            'Youtube Link',
+            array( $this, 'youtube_callback' ),
+            'my-setting-admin',
             'setting_section_id'
-        );  
+        );
 
         add_settings_field(
-            'rss', 
-            'RSS Link', 
-            array( $this, 'rss_callback' ), 
-            'my-setting-admin', 
+            'rss',
+            'RSS Link',
+            array( $this, 'rss_callback' ),
+            'my-setting-admin',
             'setting_section_id'
-        );  
+        );
         add_settings_field(
-            'email', 
-            'Email Link', 
-            array( $this, 'email_callback' ), 
-            'my-setting-admin', 
+            'email',
+            'Email Link',
+            array( $this, 'email_callback' ),
+            'my-setting-admin',
             'setting_section_id'
-        );  
+        );
         add_settings_field(
-            'linkedin', 
-            'Linked In Link', 
-            array( $this, 'linkedin_callback' ), 
-            'my-setting-admin', 
+            'linkedin',
+            'Linked In Link',
+            array( $this, 'linkedin_callback' ),
+            'my-setting-admin',
             'setting_section_id'
-        );  
-       
+        );
+
     }
 
     /**
@@ -182,7 +182,7 @@ class MySettingsPage
         return $new_input;
     }
 
-    /** 
+    /**
      * Print the Section text
      */
     public function print_section_info()
@@ -190,7 +190,7 @@ class MySettingsPage
         print 'Enter your settings below:';
     }
 
-    /** 
+    /**
      * Get the settings option array and print one of its values
      */
     public function dept_address_callback()
@@ -201,7 +201,7 @@ class MySettingsPage
         );
     }
 
-    /** 
+    /**
      * Get the settings option array and print one of its values
      */
     public function title_callback()
@@ -268,13 +268,13 @@ class MySettingsPage
 
 
 // Only display for sites where the option exists
-if( is_admin() && !empty( get_option('my_option_name') ) ){
+if( is_admin() && (!get_option('my_option_name')) ){
 	$my_settings_page = new MySettingsPage();
 }
 
 /**
  * Adds a warning and a link to customizer
- * 
+ *
  * @since 1.9.3
  * @author priscillamc
  */
@@ -284,12 +284,12 @@ function ufclas_emily_admin_notice_error() {
 		$class = 'notice notice-error';
 		$message = __( 'These theme options below are not longer used. The options have been moved to the Customizer.', 'ufclas-emily' );
 
-		printf( '<div class="%s"><p>%s <a href="%s">%s</a></p></div>', 
-			   esc_attr( $class ), 
+		printf( '<div class="%s"><p>%s <a href="%s">%s</a></p></div>',
+			   esc_attr( $class ),
 			   esc_html( $message ),
 			   admin_url( '/customize.php?autofocus[panel]=ufclas_emily_theme_options' ),
 			   __( 'View the Customizer.', 'ufclas-emily' )
-		); 
+		);
 	}
 }
 add_action( 'admin_notices', 'ufclas_emily_admin_notice_error' );

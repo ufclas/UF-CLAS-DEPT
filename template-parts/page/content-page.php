@@ -29,6 +29,7 @@
 				'after'  => '</div>',
 			) );
 		?>
+		<?php the_tags('',','); ?>
            </div><!-- .wrap -->
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
