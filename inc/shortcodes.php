@@ -572,9 +572,6 @@ function eventsCalendarCarouselShortcode($atts){
 					 <?php } else {
 						 $output .= "<p>" . tribe_get_start_date() . "</p>"; ?>
 					 <?php }
-					 if($excerpt == 'yes'){
-						 $output .= '<p>'. get_the_excerpt() .'</p>';
-					 }
 
 		        $output .=   '</div></div></div></div>';
         endforeach;
