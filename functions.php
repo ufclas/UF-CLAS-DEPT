@@ -932,7 +932,7 @@ function modals_listMajors($majors) {
 	echo "<ul>";
 	foreach ($majors as $major) {
 		$clean_major = str_replace(" ", "",     $major);
-		$clean_major = str_replace("'", "",    $clean_major);
+		$clean_major = str_replace("'", "",     $clean_major);
 		$clean_major = str_replace("/", "",     $clean_major);
 		$clean_major = str_replace("&amp;", "", $clean_major);
 		$clean_major = strtolower($clean_major);
@@ -970,4 +970,3 @@ function modals_listMajors($majors) {
 } // modals_listMajors function
 
 require get_stylesheet_directory() . '/inc/shortcodes.php';
-
