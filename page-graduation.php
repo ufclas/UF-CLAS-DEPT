@@ -1,6 +1,9 @@
 <?php
   /* Template Name: 2020 Recognition */
-  $date_theDay = false;
+
+  // h3s are the first headings (no h2s (and no h4s...))
+
+  $date_theDay = false; // this is not being used, but it can be used as a gate to open on May 2
   $majors = array(
     "Doctoral Degrees",
     "Master's Degrees",
@@ -57,96 +60,110 @@
 	<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri().'/assets/images/favicon/favicon-144.png' ?>">
 
 </head>
-​
 <body <?php body_class(); ?>>
-
 
   <header>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Dean's Message</a></li>
-        <li><a href="#">Associate Dean's Message</a></li>
-        <li><a href="#">Student Message</a></li>
-        <li><a href="#">Majors</a></li>
-        <li><a href="#">Social Media</a></li>
+        <li id="clicker_home">Home</li>
+        <li id="clicker_deansMessage">Dean's Message</li>
+        <li id="clicker_associateDeansMessage">Associate Dean's Message</li>
+        <li id="clicker_studentHighlight">Student Message</li>
+        <li id="clicker_majors">Majors</li>
+        <li id="clicker_socialMedia">Social Media</li>
       </ul>
     </nav>
   </header>
 ​
+  <script type="text/javascript">
+
+    let jumper_home = document.querySelector("li#clicker_home").onclick = function jumpTo_home () {
+      window.location = '#section_home';
+    }
+    let jumper_deansMessage = document.querySelector("li#clicker_deansMessage").onclick = function jumpTo_deansMessage () {
+      window.location = '#section_deansMessage';
+    }
+    let jumper_associateDeans = document.querySelector("li#clicker_associateDeansMessage").onclick = function jumpTo_associateDeansMessage () {
+      window.location = '#section_associateDeansMessage';
+    }
+    let jumper_studentHighlight = document.querySelector("li#clicker_studentHighlight").onclick = function jumpTo_studentHighlight () {
+      window.location = '#section_studentHighlight';
+    }
+    let jumper_majors = document.querySelector("li#clicker_majors").onclick = function jumpTo_majors () {
+      window.location = '#section_majors';
+    }
+    let jumper_socialMedia = document.querySelector("li#clicker_socialMedia").onclick = function jumpTo_socialMedia () {
+      window.location = '#section_socialMedia';
+    }
+
+  </script>
+
   <main>
-    <section id="container_graph_headers">
-      <p class="graph_header">University of Florida</p>
-      <p id="graph_header_titleSlug">College of Liberal Arts and Sciences</p>
-      <p class="graph_header">Virtual Graduation Celebration</p>
-      <!-- replace image -->
+    <section id="section_home">
+      <p>University of Florida</p>
+      <h3>College of Liberal Arts and Sciences</h3>
+      <p>Virtual Graduation Celebration</p>
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/graphic_flair.png" alt="">
       <p>-- MAY 2, 2020 --</p>
-      <!--  replace image -->
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wings.png" alt="">
     </section>
 ​
-
     <!-- 1. Dean's Message -->
-    <section>
+    <section id="section_deansMessage">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/graphic_flair.png" alt="">
-      <!-- <h3>Dean's Message</h3> -->
-      <p>CONGRATULATIONS</p>
+      <h3>CONGRATULATIONS</h3>
       <p>from Dean David Richardson</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
     <!-- 2. Associate Dean's Message -->
-    <section>
+    <section id="section_associateDeansMessage">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/graphic_flair.png" alt="">
-      <!-- <h3>Associate Dean's Message</h3> -->
-      <p>CONGRATULATIONS</p>
+      <h3>CONGRATULATIONS</h3>
       <p>from Associate Dean Joe Spillane</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/mhDJNfV7hjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
     <!-- 3. Student Highlights -->
-    <section>
+    <section id="section_studentHighlights">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/graphic_flair.png" alt="">
-      <!-- <h3>Associate Dean's Message</h3> -->
-      <p>CONGRATULATIONS</p>
+      <h3>CONGRATULATIONS</h3>
       <p>from Student Highlights</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
     <!-- 4. College Majors -->
-    <section>
+    <section id="section_majors">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/graphic_flair.png" alt="">
-      <!-- <h3>Associate Dean's Message</h3> -->
-      <p>CONGRATULATIONS</p>
+      <h3>CONGRATULATIONS</h3>
       <p>from College Majors</p>
-
       <ul>
         <?php modals_listMajors($majors); ?>
-        Getting this error message on test after updating the theme:
       </ul>
       <?php
         /*
-          MODALS! -- 2 options
-          There's a hard-coded version of the modals in the "/inc/" folder if that's easier ("linked" through 'include' below)
-          Another other option is to add them to the list above the header in this document
-          And they can always be straight up hard-coded in the document if that's preferable
+          MODALS
+            - have three options:
+
+          1. a hard-coded version of the modals is in the "/inc/" folder. See commented 'include' line below)
+          2. Another other option is to add them to the list above the header in this document
+          3. And they can always be straight up hard-coded in the document here
         */
+
+        /* include the hard-coded modals list */
         // include 'inc/modal_majors_hardCoded.php';
       ?>
     </section>
-    <!-- 4. College Majors -->
+    <!-- 4. /College Majors -->
 
-    <!-- 5. Instagram -->
-    <section>
+    <!-- 5. Social Media / "instagram" -->
+    <section id="section_socialMedia">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/graphic_flair.png" alt="">
       <h3>Instagram</h3>
-      <?php // instagram(); ?>
     </section>
-    <!-- 5. Instagram -->
+
 
   </main>​
   <script src="http://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-​
 <?php wp_footer(); ?>
 </body>
