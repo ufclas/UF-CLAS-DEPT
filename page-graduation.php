@@ -65,38 +65,15 @@
   <header>
     <nav>
       <ul>
-        <li id="clicker_home">Home</li>
-        <li id="clicker_deansMessage">Dean's Message</li>
-        <li id="clicker_associateDeansMessage">Associate Dean's Message</li>
-        <li id="clicker_studentHighlight">Student Message</li>
-        <li id="clicker_majors">Majors</li>
-        <li id="clicker_socialMedia">Social Media</li>
+        <li><a href="#section_home">Home</a></li>
+        <li><a href="#section_deansMessage">Dean's Message</a></li>
+        <li><a href="#section_associateDeansMessage">Associate Dean's Message</a></li>
+        <li><a href="#section_studentHighlights">Student Message</a></li>
+        <li><a href="#section_majors">Majors</a></li>
+        <li><a href="#section_socialMedia">Social Media</a></li>
       </ul>
     </nav>
   </header>
-​
-  <script type="text/javascript">
-
-    let jumper_home = document.querySelector("li#clicker_home").onclick = function jumpTo_home () {
-      window.location = '#section_home';
-    }
-    let jumper_deansMessage = document.querySelector("li#clicker_deansMessage").onclick = function jumpTo_deansMessage () {
-      window.location = '#section_deansMessage';
-    }
-    let jumper_associateDeans = document.querySelector("li#clicker_associateDeansMessage").onclick = function jumpTo_associateDeansMessage () {
-      window.location = '#section_associateDeansMessage';
-    }
-    let jumper_studentHighlight = document.querySelector("li#clicker_studentHighlight").onclick = function jumpTo_studentHighlight () {
-      window.location = '#section_studentHighlight';
-    }
-    let jumper_majors = document.querySelector("li#clicker_majors").onclick = function jumpTo_majors () {
-      window.location = '#section_majors';
-    }
-    let jumper_socialMedia = document.querySelector("li#clicker_socialMedia").onclick = function jumpTo_socialMedia () {
-      window.location = '#section_socialMedia';
-    }
-
-  </script>
 
   <main>
     <section id="section_home">
