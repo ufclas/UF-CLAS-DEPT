@@ -254,6 +254,7 @@ p#graph_header_titleSlug span {
 
 p#graph_header_titleSlug span {
   text-transform: lowercase;
+  margin-right: 5px !important;
 }
 
 #graph_header_titleSlug,
@@ -265,6 +266,7 @@ p#graph_header_titleSlug span {
     line-height: 28px;
     letter-spacing: 0;
     text-transform: uppercase;
+    position: relative;
 }
 
 .flower-icon {
@@ -345,7 +347,7 @@ p.from-message {
 ul.majors {
     background: white;
     margin-top: 2rem !important;
-    padding: 1rem !important;
+    padding: 2.375rem 1rem !important;
 }
 
 ul.majors li {
@@ -469,6 +471,7 @@ Modals - Bootstrap and Custom Code
 
 p.graduating-list {
   margin-top: 2rem !important;
+  text-align: center;
 }
 
 p.graduating-list a {
@@ -814,6 +817,8 @@ Media Queries
     Top Section
   =============================================*/
   p.graph_header,
+  #graph_header_titleSlug span,
+  p.ceremony-date,
   p#graph_header_titleSlug span {
     font-size: 2.25rem;
     line-height: 43px;
@@ -823,11 +828,15 @@ Media Queries
   p#graph_header_titleSlug {
     font-size: 2.25rem;
     line-height: 43px;
-    margin-bottom: 10px !important;
+    margin-bottom: 10px auto !important;
   }
 
   #container_graph_headers p {
     max-width: 505px;
+  }
+
+  p.ceremony-date:before, p.ceremony-date:after {
+    width: 165px;
   }
 
   /*===========================================
