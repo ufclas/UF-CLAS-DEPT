@@ -312,7 +312,7 @@ p#graph_header_titleSlug span {
 .clas-graduation-crest svg {
     width: 14rem;
     height: 7rem;
-    margin: 1rem 0 !important;
+    margin: 1rem auto !important;
 }
 
 /*===========================================
