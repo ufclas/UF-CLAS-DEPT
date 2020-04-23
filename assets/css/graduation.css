@@ -1,0 +1,1044 @@
+/*This is the CSS for the Spring 2020 Recognition Page. It should only load on this page */
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-image: url(../../images/recognition-ceremony/century-tower-background.jpg);
+    background-position: -120px;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../../images/recognition-ceremony/century-tower-background.jpg', sizingMethod='scale');
+}
+
+.btn::after {
+  display: none;
+}
+
+/*===========================================
+
+Header
+
+=============================================*/
+header {
+  display: flex;
+  background: #002346;
+  width: 100%;
+  align-items: center;
+}
+
+h1 {
+    font-family: "Surveyor Text A", "Surveyor Text B";
+    font-style: italic;
+    font-weight: 400;
+    color: white;
+    font-size: 1.1875rem;
+    line-height: 26px;
+    letter-spacing: 0;
+    padding: 0px 20px !important;
+}
+
+.uf-wordmark {
+    background: #F45A1D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.uf-wordmark svg {
+    max-width: 100%;
+    width: 2rem;
+    height: 1.375rem;
+}
+
+.uf-wordmark path {
+    fill: white !important;
+}
+
+.uf-wordmark polygon {
+    fill: white;
+}
+
+iframe {
+  width: 100%;
+}
+
+.divider {
+    text-align: center;
+}
+
+h1.tablet {
+    display: none;
+}
+
+.desktop-menu {
+  display: none !important;
+}
+
+.top-hamburger-menu {
+    display: flex;
+    align-items: center;
+    background: #002346;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+
+nav li {
+    list-style: none;
+}
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    font-family: "Surveyor Text A", "Surveyor Text B";
+    font-style: italic;
+    font-weight: 500;
+    color: #002346;
+    line-height: 21px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-right: 3rem !important;
+}
+
+#menuToggle input:checked ~ span {
+    right: -15px !important;
+}
+
+#menuToggle li:after {
+    position: relative;
+    content: "\02192";
+    color: #00337A;
+    float: right;
+    margin: 0 0 0 -1.3rem;
+    width: 1em;
+    font-size: 1.1rem;
+    font-family: "Quadon_Bold";
+    font-weight: 400;
+    font-style: initial;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 54px;
+  height: 50px;
+  position: absolute;
+  top: -17px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+ #menuToggle span {
+     display: block;
+     width: 33px;
+     height: 4px;
+     margin-bottom: 5px !important;
+     position: relative;
+     background: #F45A1D;
+     border-radius: 3px;
+     z-index: 1;
+     transform-origin: 4px 0px;
+     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+ }
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #fff;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+   position: absolute;
+   width: 100vw;
+   margin: 0 !important;
+   padding-top: 65px !important;
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   height: 100vh;
+   top: -16px;
+   right: -16px;
+}
+
+#menu ul {
+    max-width: 80%;
+    margin: 0 auto !important;
+}
+
+#menu li {
+    padding: 7.25px 0 !important;
+    font-size: 22px;
+    border-bottom: 1px solid #F45A1D !important;
+}
+
+#menuToggle input:checked ~ div
+{
+  transform: none;
+}
+
+/*===========================================
+
+Top Section
+
+=============================================*/
+#container_graph_headers {
+    text-align: center;
+    margin-top: 4rem !important;
+    height: 95vh;
+}
+
+#container_graph_headers p {
+    color: white;
+    max-width: 275px;
+    margin: 0 auto !important;
+}
+
+p.graph_header,
+p#graph_header_titleSlug span {
+    font-family: "Surveyor Text A", "Surveyor Text B" !important;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+p#graph_header_titleSlug span {
+  text-transform: lowercase;
+}
+
+#graph_header_titleSlug,
+.ceremony-date {
+    font-family: "Surveyor Display A", "Surveyor Display B" !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.flower-icon {
+    margin: 1rem 0 !important;
+    text-align: center;
+}
+
+.flower-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.flower-icon path {
+    fill: white;
+}
+
+.flower-icon span {
+  display: inline-block;
+  position: relative;
+}
+
+.flower-icon span:before,
+.flower-icon span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid #F45A1D;
+    border-top: 1px solid #F45A1D;
+    top: 8px;
+    width: 120px;
+}
+
+.flower-icon span:before {
+    right: 100%;
+    margin-right: 10px;
+}
+
+.flower-icon span:after {
+  left: 100%;
+  margin-left: 10px;
+}
+
+.clas-graduation-crest svg {
+    width: 14rem;
+    height: 7rem;
+    margin: 1rem 0 !important;
+}
+
+/*===========================================
+
+Sections
+
+=============================================*/
+
+h3.congratulations {
+    font-family: "Surveyor Display A", "Surveyor Display B" !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    color: white;
+    text-align: center;
+    font-size: 1.375rem !important;
+    line-height: 30px;
+}
+
+p.from-message {
+    font-family: "Surveyor Text A", "Surveyor Text B" !important;
+    font-style: italic;
+    font-weight: 400 !important;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+}
+
+.section-container > iframe {
+    margin: 2rem 0 !important;
+}
+
+ul.majors {
+    background: white;
+    margin-top: 2rem !important;
+    padding: 1rem !important;
+}
+
+ul.majors li {
+    font-family: "Surveyor Text A", "Surveyor Text B" !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 1.125rem;
+    line-height: 24px;
+    padding: 5px 0 !important;
+    max-width: 250px;
+    margin: 0 auto !important;
+    list-style: none;
+    text-align: left;
+}
+
+ul.majors li:hover {
+    color: #C2510A;
+    cursor: pointer;
+}
+
+.majors-container {
+    background: white;
+}
+
+/*===========================================
+
+Footer
+
+=============================================*/
+footer {
+    background: #002346;
+    height: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.journeys-wordmarks svg {
+    width: 10.5rem;
+    height: 1.25rem;
+}
+
+.clas-wordmark svg {
+    width: 23.75rem;
+    height: 2.8rem;
+}
+
+.clas-wordmark path.cls-1 {
+    fill: white;
+}
+
+.clas-wordmark .cls-2 {
+    fill: #f45a1d;
+}
+
+.clas-wordmark polygon.cls-1 {
+    fill: white;
+}
+
+.clas-wordmark {
+    display: none;
+}
+
+.journeys-wordmark svg {
+    width: 10rem;
+    height: 1.25rem;
+}
+
+/*===========================================
+
+Modals - Bootstrap and Custom Code
+
+=============================================*/
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.67);
+    z-index: 9999;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0.5rem !important;
+  pointer-events: none;
+}
+
+.modal.fade .modal-dialog {
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -50px);
+  transform: translate(0, -50px);
+}
+
+.modal-footer button {
+    background: none;
+    color: white;
+    font-family: "Surveyor Text A", "Surveyor Text B";
+    font-style: italic;
+    font-weight: 400;
+    padding: 1rem !important;
+    font-size: 1.25rem;
+}
+
+p.graduating-list {
+  margin-top: 2rem !important;
+}
+
+p.graduating-list a {
+    font-family: "Surveyor Text A", "Surveyor Text B" !important;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    border: 1px solid white !important;
+    padding: 1rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+p.graduating-list a:hover {
+  transition: .3s;
+  background: white;
+  color: #002346;
+}
+
+.modal-header {
+  padding: 1rem !important;
+}
+
+.modal-footer button:hover {
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog {
+    transition: none;
+  }
+}
+
+.modal.show .modal-dialog {
+  -webkit-transform: none;
+  transform: none;
+}
+
+.modal-dialog-scrollable {
+  display: -ms-flexbox;
+  display: flex;
+  max-height: calc(100% - 1rem);
+}
+
+.modal-dialog-scrollable .modal-content {
+  max-height: calc(100vh - 1rem);
+  overflow: hidden;
+}
+
+.modal-dialog-scrollable .modal-header,
+.modal-dialog-scrollable .modal-footer {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto;
+}
+
+.modal-dialog-centered {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+
+.modal-dialog-centered::before {
+  display: block;
+  height: calc(100vh - 1rem);
+  content: "";
+}
+
+.modal-dialog-centered.modal-dialog-scrollable {
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+  max-height: none;
+}
+
+.modal-dialog-centered.modal-dialog-scrollable::before {
+  content: none;
+}
+
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #002346;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+    margin: 0 1rem !important;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+.modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.modal-header .close {
+  padding: 1rem 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-header {
+    justify-content: center;
+}
+
+.modal-title {
+    font-family: "Surveyor Display A", "Surveyor Display B";
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    font-size: 1.375rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-align: center;
+}
+
+.modal-body {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0 1rem !important;
+}
+
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.modal-footer > :not(:first-child) {
+  margin-left: .25rem;
+}
+
+.modal-footer > :not(:last-child) {
+  margin-right: .25rem;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 1080px;
+    margin: 1.75rem auto !important;
+  }
+  .modal-dialog-scrollable {
+    max-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 3.5rem);
+  }
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-centered::before {
+    height: calc(100vh - 3.5rem);
+  }
+  .modal-sm {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-xl {
+    max-width: 1140px;
+  }
+}
+
+/*===========================================
+
+Social Media
+
+=============================================*/
+
+.instagram-intro {
+    margin-bottom: 1rem !important;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin: 1rem auto !important;
+    justify-content: center;
+}
+
+.instagram-intro svg {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.instagram-intro p {
+    font-family: "Surveyor Text A", "Surveyor Text B" !important;
+    font-style: italic;
+    font-weight: 400;
+    color: white;
+    margin:0 .5rem !important;
+}
+
+.instagram-intro:after {
+    content: "";
+    height: 1px;
+    border-top: 1px solid white;
+    width: 45%;
+    max-width: 150px;
+}
+
+.sbi_info,
+.sb_instagram_header.sbi_feed_type_user.sbi_no_avatar,
+.sbi_username,
+.sbi_instagram_link,
+.sbi_date,
+.sbi_lb-dataContainer {
+    display: none !important;
+}
+
+.sbi_item .sbi_photo_wrap {
+    margin: .5rem !important;
+}
+
+#sb_instagram {
+    margin: 0 auto !important;
+}
+
+#sb_instagram.sbi_width_resp {
+    max-width: 390px !important;
+    width: 100% !important;
+}
+
+#sbi_load {
+    margin-bottom: 4rem !important;
+}
+
+.sbi_lb-outerContainer {
+    margin: 0 auto !important;
+}
+
+.sbi_load_btn,
+.sbi_follow_btn a {
+    background: #002346 !important;
+    padding: .5rem 1rem !important;
+    font-size: 1rem !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 10px 20px rgba(0,0,0,.3);
+    margin: .5rem !important;
+}
+
+.sbi_follow_btn svg {
+    margin-right: .5rem !important;
+}
+
+/*===========================================
+
+Media Queries
+
+=============================================*/
+
+@media (min-width: 768px){
+  body {
+    background-position: initial;
+  }
+
+  /*===========================================
+    Header
+  =============================================*/
+  h1.mobile {
+    display: none;
+  }
+
+  h1.tablet {
+      display: block !important;
+      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 29px;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+  }
+
+  /*===========================================
+    Top Section
+  =============================================*/
+  p.graph_header,
+  p#graph_header_titleSlug span {
+    font-size: 2.25rem;
+    line-height: 43px;
+    margin-bottom: 10px !important;
+  }
+
+  p#graph_header_titleSlug {
+    font-size: 2.25rem;
+    line-height: 43px;
+    margin-bottom: 10px !important;
+  }
+
+  #container_graph_headers p {
+    max-width: 505px;
+  }
+
+  /*===========================================
+    Sections
+  =============================================*/
+
+  .flower-icon svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .flower-icon span:before,
+  .flower-icon span:after {
+    width: 275px;
+    border-bottom: 1.5px solid #F45A1D;
+    border-top: 1.5px solid #F45A1D;
+  }
+
+  .clas-graduation-crest svg {
+    width: 24rem;
+    height: 12.125rem;
+  }
+
+  h3.congratulations {
+    font-size: 2.25rem !important;
+    line-height: 48px;
+    margin-bottom: 10px !important;
+  }
+
+  p.from-message {
+    font-size: 2rem;
+    line-height: 46px;
+  }
+
+  ul.majors {
+    column-count: 2;
+  }
+
+/*===========================================
+  Social Media
+=============================================*/
+  .instagram-intro p {
+      font-size: 1.625rem;
+      margin: 0 1rem !important;
+  }
+
+  #sb_instagram.sbi_width_resp {
+    max-width: 590px !important;
+  }
+
+  .instagram-intro:after {
+    max-width: 400px;
+  }
+
+  .instagram-intro svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  /*===========================================
+    Footer
+  =============================================*/
+
+  footer {
+    height: 4.65rem;
+    clear: both;
+  }
+
+  .journeys-wordmark svg {
+    width: 15rem;
+    height: 1.875rem;
+  }
+
+}
+
+@media (min-width: 1025px){
+  .mobile-menu {
+    display: none !important;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .desktop-menu {
+    height: 5.6rem;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto !important;
+  }
+
+  .desktop-menu ul {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  .desktop-menu li {
+    display: inline;
+    margin: 0 1rem !important;
+  }
+
+  .desktop-menu li a {
+    color: white;
+    font-family: "Surveyor Text A", "Surveyor Text B";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+
+  p.graph_header,
+  #graph_header_titleSlug {
+      font-size: 2.625rem;
+      line-height: 56px;
+  }
+
+  .flower-icon svg {
+    width: 2.875rem;
+    height: 2.875rem;
+  }
+
+  .flower-icon span:before, .flower-icon span:after {
+    width: 380px;
+    height: 12px;
+    top: 15px;
+  }
+
+  section {
+    height: 100vh;
+  }
+
+  #top {
+      padding: .1rem !important;
+  }
+
+  .link-landing {
+    padding-top: 7rem !important;
+  }
+
+  #container_graph_headers {
+    margin-top: 9rem !important;
+  }
+
+  #container_graph_headers p {
+    max-width: 835px;
+    font-size: 2.625rem !important;
+  }
+
+  .clas-graduation-crest svg {
+    width: 31.25rem;
+    height: 15.625rem;
+    margin-top: 5rem !important;
+  }
+
+  #container_graph_headers .flower-icon {
+      margin: 4rem 0 !important;
+  }
+
+  .deans-message,
+  .associate-deans-message,
+  .student-message,
+  .alumna-message {
+    text-align: center;
+  }
+
+  .deans-message iframe,
+  .associate-deans-message iframe,
+  .student-message iframe,
+  .alumna-message iframe {
+    max-width: 1025px;
+    height: 575px;
+  }
+
+  ul.majors {
+    max-width: 1025px;
+    margin: 0 auto !important;
+  }
+
+  .majors-container {
+    margin-top: 2rem !important;
+  }
+
+  .instagram-intro p {
+    font-size: 2rem;
+  }
+
+  .instagram-intro svg {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+  .instagram-intro:after {
+      max-width: 600px;
+      width: 100%;
+  }
+
+  #sb_instagram.sbi_width_resp {
+    max-width: 790px !important;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem !important;
+  }
+
+  .clas-wordmark {
+    display: block;
+  }
+
+}
