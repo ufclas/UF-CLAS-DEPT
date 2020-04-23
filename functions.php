@@ -33,12 +33,6 @@ function ufclas_emily_theme_enqueue_styles() {
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
 
-	// load bootstrap
-	wp_enqueue_script('my-custom-script', get_template_directory_uri() .'/js/my-custom-script.js', array('jquery'), null, true);
-	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.min.css');
-	wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/bootstrap/js/bootstrap.js');
-
-
 	// Enqueue JAVASCRIPT
 	wp_enqueue_script( 'child-scripts', get_theme_file_uri( '/assets/js/script.min.js' ), array('jquery'), $theme_version, true );
 	wp_enqueue_script( 'bootstrap-js', get_theme_file_uri( '/assets/bootstrap/js/bootstrap.min.js' ), array('jquery'), $theme_version, true );

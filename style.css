@@ -5156,7 +5156,7 @@ Image block cards
 }
 
 #page .carousel-caption p {
-    font-size: 1.25rem !important;
+    font-size: 1rem !important;
     font-family: "Gentona_Light" !important;
 }
 
@@ -5519,6 +5519,103 @@ Image block cards
     clip: rect(0,0,0,0);
     border: 0;
 }
+
+/*=============================================
+Post slider shortcode
+===============================================*/
+.individual-featured-post-slider-container {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.individual-featured-post-slider-container .post-title {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    background-image: linear-gradient(to top, #004083, transparent);
+}
+
+.individual-featured-post-slider-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.individual-featured-post-slider-container .post-title a {
+    white-space: normal;
+    margin-bottom: 35px;
+    padding: 0 1rem;
+    color: white !important;
+}
+
+#page .individual-featured-post-slider-container .post-title a {
+    white-space: normal;
+    margin-bottom: 35px;
+    padding: 0 1rem;
+    color: #fff!important;
+    line-height: 28px;
+    font-family: "Quadon_light" !important;
+}
+
+.featured-post-slider-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.featured-post-slider-container::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+.featured-post-slider-container::-webkit-scrollbar-thumb {
+    background: #004083;
+    border-radius: 7px;
+    padding: 0;
+}
+
+
+/*=============================================
+Events Slider shortcode
+==============================================*/
+.events-carousel a {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+.events-carousel h3 {
+    padding: 0;
+    line-height: 21px;
+    font-size: 1.325rem;
+}
+
+.events-carousel .item > div {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.events-carousel .col-sm-3.col-xs-6 {
+    border-bottom: 1px solid #F5821E;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+#page .events-carousel p.event-date {
+    font-family: "Gentona_Book" !important;
+    line-height: 21px;
+    font-size: 1rem;
+}
+
+.event-navigation a {
+    font-size: 2rem;
+    margin: 0 .5rem;
+}
+
+.event-navigation {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
 
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
@@ -5900,7 +5997,7 @@ Image block cards
   }
 
   #featured-carousel .slider-dark.half-image-feature .carousel-caption {
-    background-color: #00529b;
+    background-color: #002346;
     background-repeat: repeat-x;
     background-position: center center;
   }
@@ -5911,6 +6008,50 @@ Image block cards
 
   .carousel-control.right {
     right: 2rem;
+  }
+
+  /*=============================================
+  Post slider shortcode
+  ===============================================*/
+
+  .featured-post-slider-container {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      padding: 1rem 0;
+  }
+
+  .individual-featured-post-slider-container {
+      margin: 0 1rem;
+      width: 25%;
+      display: inline-block;
+  }
+
+  .individual-featured-post-slider-container img {
+      width: 100%;
+      object-fit: cover;
+      min-height: 300px;
+      height: 300px;
+  }
+
+  /*=============================================
+  Events slider shortcode
+  ===============================================*/
+
+  .events-carousel .item>div {
+      width: 20%;
+      min-height: auto;
+  }
+
+  #page .events-carousel p.event-date {
+      font-size: 1.125rem;
+      display: block;
+  }
+
+  .events-carousel .col-sm-3.col-xs-6 {
+      border-bottom: none;
+      margin: 0;
+      padding: 0 1rem;
   }
 }
 
@@ -7361,9 +7502,10 @@ Image block cards
                            }
 
                            #featured-carousel .item.half-image-feature img {
-                             width: auto;
-                             height: 400px;
-                             float: right;
+                               width: 570px;
+                               height: 400px;
+                               float: right;
+                               object-fit: cover;
                            }
 
                            #featured-carousel .full-image-feature .carousel-caption {

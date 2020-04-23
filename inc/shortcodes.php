@@ -517,3 +517,130 @@ function imageBlock($atts){
 }
 
 add_shortcode('imageBlock','imageBlock');
+
+/*========================================
+*
+* The Events Calendar Plugin
+*
+*==========================================*/
+function eventsCalendarCarouselShortcode($atts){
+
+			//Opens carousel container
+  		$output = '<div id="events" class="carousel slide wow fadeIn events-carousel" data-ride="carousel" data-interval="false">';
+
+         //Wrapper for slides
+        $output .= '<div class="carousel-inner">';
+
+				//Number of events to show per "slide"
+        $i = 5;
+        global $post;
+
+				//Query only tribe events. Only query 10
+        $args = array(
+					'post_type'   => array('tribe_events'),
+					'numberposts' => 10,
+					'orderby' =>'meta_value',
+					'meta_key' => '_EventStartDate',
+					'order' => 'ASC',
+					'start_date'   => 'now'
+
+				);
+
+        $myEvents = tribe_get_events($args);
+
+        if($myEvents) :
+					//Split an array into chunks
+					$chunks = array_chunk($myEvents, $i);
+
+	        foreach($chunks as $chunk):
+		        // Sets as 'active' the first item
+		        ($chunk === reset($chunks)) ? $active = "active" : $active = "";
+		        $output .= '<div class="item '.$active.'">';
+
+        	foreach($chunk as $post):setup_postdata($post);
+
+		        $output .=   '<div class="col-sm-3 col-xs-6"> <div class="event-single-wrapper"> <div class="event-single">';
+
+						//Opens event information div
+		        $output .=  '<div class="event-info"><h3>';
+		        $output .=  '<a href="' . get_the_permalink(). '">' . get_the_title($post->ID) .'</a>';
+		        $output .=  '</h3>';
+
+						//Displays event time and date
+						if (tribe_get_start_date() !== tribe_get_end_date() ) {
+						 $output .= "<p class='event-date'>" . tribe_get_start_date(null, false, 'M j, Y <\b\\r> g:i a') . "</p>"; ?>
+					 <?php } else {
+						 $output .= "<p>" . tribe_get_start_date() . "</p>"; ?>
+					 <?php }
+
+		        $output .=   '</div></div></div></div>';
+        endforeach;
+
+        $output .= '</div>';
+
+      endforeach;
+
+					$output .= "</div></div>";
+					$output .= "<div class='event-navigation'>";
+					$output .= '<a class="left team-carousel-control hidden-xs" href="#events" data-slide="prev"><</a>';
+					$output .= '<a class="right team-carousel-control hidden-xs" href="#events" data-slide="next">></a>';
+					$output .= "</div>";
+					// Prints the HTML
+					return $output;
+
+    endif;
+
+	   ?>
+
+
+
+	</div>
+
+	<?php
+}
+
+add_shortcode('events-calendar-slider','eventsCalendarCarouselShortcode');
+
+/*========================================
+*
+* The Events Calendar Plugin
+*
+*==========================================*/
+function ufclasPostSlider($atts){
+	global $post;
+
+	extract( shortcode_atts( array(
+		 'category'   => "", //Main headline for block
+	 ), $atts ) );
+
+	//Query only tribe events. Only query 10
+	$args = array(
+		'numberposts' => 10,
+		'orderby' 		=> 'title',
+		'taxonomy'  	=> $category
+	);
+
+	$ufclasPosts = new WP_Query($args);
+
+		$output = "<div class='featured-post-slider-container'>";
+
+			if($ufclasPosts->have_posts()){
+				while($ufclasPosts->have_posts()){
+					$ufclasPosts->the_post();
+					//Opens carousel container
+					$output .= '<div class="individual-featured-post-slider-container">';
+					//Wrapper for slides
+				 $output .= get_the_post_thumbnail();
+				 $output .= '<div class="post-title">';
+				 $output .=  '<a href="' . get_the_permalink(). '">' . get_the_title() .'</a>';
+				 $output .= '</div></div>';
+				}
+
+				$output .= '</div></div>';
+				return $output;
+			}
+
+
+}
+
+add_shortcode('ufclas-post-slider','ufclasPostSlider');
