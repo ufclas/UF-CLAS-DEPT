@@ -77,7 +77,7 @@ $majors = array(
 			 			 <?php get_template_part('images/recognition-ceremony/uf', 'wordmark.svg'); ?>
 			 		 	</div>
 			 		 <h1 class="mobile">Liberal Arts & Sciences</h1>
-           <h1 class="tablet">College Liberal Arts & Sciences</h1>
+           <h1 class="tablet">College Liberal Arts and Sciences</h1>
 				 	</div>
 					<nav role="mobile-navigation">
 							<ul>
@@ -117,7 +117,7 @@ $majors = array(
 				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
 			</div>
 
-      <p class="ceremony-date">-- MAY 2, 2020 --</p>
+      <p class="ceremony-date">— MAY 2, 2020 —</p>
 
 			<!-- replace image -->
 			<div class="clas-graduation-crest">
@@ -211,10 +211,6 @@ $majors = array(
 		<!-- 3. Student Highlights -->
     <div class="link-landing" id="social-media"></div>
 		<section class="student-message section-container">
-			<!--  Flower Icon -->
-			<div class="flower-icon">
-				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
-			</div>
 
       <div class="instagram-intro">
         <?php get_template_part('images/recognition-ceremony/uf', 'instagram-logo.svg'); ?>
