@@ -128,6 +128,16 @@ function blank_widgets_init(){
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ));
+
+  register_sidebar( array(
+    'name'          => ('Image Tiles'),
+    'id'            => 'image-tiles',
+    'description'   => 'Here are the image tiles that show up below the title when the page template "Image Tiles" is selected',
+    'before_widget' => '<div class="image-tiles-container">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ));
 }
 add_action('widgets_init', 'blank_widgets_init');
 
