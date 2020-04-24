@@ -28,7 +28,6 @@ $majors = array(
 	"Mathematics",
 	"Microbiology &amp; Cell Science",
 	"Philosophy",
-	"Religion",
 	"Physics",
 	"Political Science",
 	"Psychology",
@@ -65,7 +64,7 @@ $majors = array(
 	<header>
 		  <div class="mobile-menu" id="menuToggle">
 
-		    <input type="checkbox" />
+		    <input type="checkbox" aria-label="hamburger-menu-toggle" />
 
 		    <span></span>
 		    <span></span>
@@ -79,7 +78,7 @@ $majors = array(
 			 		 <h1 class="mobile">Liberal Arts & Sciences</h1>
            <h1 class="tablet">College Liberal Arts and Sciences</h1>
 				 	</div>
-					<nav role="mobile-navigation">
+					<nav role="navigation">
 							<ul>
 								<li><a href="#top">Home</a></li>
                 <li><a href="#spillane">Welcome & Associate Dean’s Message</a></li>
@@ -93,7 +92,7 @@ $majors = array(
 		    </div>
 		  </div>
 
-      <nav class="desktop-menu" role="desktop-navigation">
+      <nav class="desktop-menu" role="navigation">
         <ul>
           <li><a href="#top">Home</a></li>
           <li><a href="#spillane">Welcome & Associate Dean’s Message</a></li>
@@ -127,7 +126,7 @@ $majors = array(
 
     <!-- 1. Associate Dean's Message -->
     <div class="link-landing" id="spillane"></div>
-		<section class="associate-deans-message section-container" id="spillane">
+		<section class="associate-deans-message section-container">
 			<!--  Flower Icon -->
 			<div class="flower-icon">
 				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
@@ -136,7 +135,7 @@ $majors = array(
 			<!-- <h3>Dean's Message</h3> -->
 			<h3 class="congratulations">CONGRATULATIONS</h3>
 			<p class="from-message">from Associate Dean Joe Spillane</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
 		</section>
 
     <!-- 2. Student Highlights -->
@@ -150,7 +149,7 @@ $majors = array(
       <!-- <h3>Associate Dean's Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
       <p class="from-message">from Student Highlights</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
     </section>
 
     <!-- 3. Alumna Message -->
@@ -164,7 +163,7 @@ $majors = array(
       <!-- <h3>Associate Dean's Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
       <p class="from-message">from Alumna</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
     </section>
 
 		<!-- 4. Dean's Message -->
@@ -178,7 +177,7 @@ $majors = array(
 			<!-- <h3>Dean's Message</h3> -->
 			<h3 class="congratulations">CONGRATULATIONS</h3>
 			<p class="from-message">from Dean David Richardson</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Dean's Message Video" allowfullscreen></iframe>
 		</section>
 
 		<!-- 5. College Majors -->
