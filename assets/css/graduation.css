@@ -106,7 +106,7 @@ nav li {
     position: fixed;
     top: 1rem;
     right: 1rem;
-    z-index: 1;
+    z-index: 2;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -370,6 +370,15 @@ ul.majors li:hover {
 
 .majors-container {
     background: white;
+}
+
+.deans-message iframe,
+.associate-deans-message iframe,
+.student-message iframe,
+.alumna-message iframe {
+    position: relative !important;
+    z-index: 1 !important;
+    height: 45vh;
 }
 
 /*===========================================
@@ -874,6 +883,15 @@ Media Queries
   ul.majors {
     column-count: 2;
   }
+
+  .deans-message iframe,
+  .associate-deans-message iframe,
+  .student-message iframe,
+  .alumna-message iframe {
+    position: relative !important;
+    z-index: 1 !important;
+    height: 70vh;
+}
 
 /*===========================================
   Social Media
