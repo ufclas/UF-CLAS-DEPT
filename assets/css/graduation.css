@@ -1069,6 +1069,7 @@ Media Queries
     display: flex;
     justify-content: space-between;
     padding: 0 2.5rem !important;
+    height: 5.6rem;
   }
 
   .clas-wordmark {
