@@ -476,6 +476,7 @@ Modals - Bootstrap and Custom Code
     font-weight: 400;
     padding: 1rem !important;
     font-size: 1.25rem;
+    cursor: pointer;
 }
 
 p.graduating-list {
