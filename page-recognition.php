@@ -7,7 +7,7 @@
  $date_theDay = false;
 $majors = array(
 	"Doctoral Degrees",
-	"Master's Degrees",
+	"Master’s Degrees",
 	"African American Studies",
 	"Anthropology",
 	"Astronomy / Astrophysics",
@@ -36,7 +36,7 @@ $majors = array(
 	"Spanish and Portuguese",
 	"Statistics",
 	"Sustainability Studies",
-	"Women's Studies",
+	"Women’s Studies",
 );
 ?>
 <html <?php language_attributes(); ?> class="no-js no-svg">
