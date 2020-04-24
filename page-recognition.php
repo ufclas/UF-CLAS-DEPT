@@ -82,10 +82,10 @@ $majors = array(
 					<nav role="mobile-navigation">
 							<ul>
 								<li><a href="#top">Home</a></li>
-                <li><a href="#spillane">Welcome & Associate Dean's Message</a></li>
+                <li><a href="#spillane">Welcome & Associate Dean’s Message</a></li>
                 <li><a href="#student">Student Messages</a></li>
                 <li><a href="#alumna">Alumna Message</a></li>
-                <li><a href="#dean">Dean's Message</a></li>
+                <li><a href="#dean">Dean’s Message</a></li>
                 <li><a href="#majors">Major Recognition</a></li>
 								<li><a href="#social-media">Social Media</a></li>
 							</ul>
@@ -96,10 +96,10 @@ $majors = array(
       <nav class="desktop-menu" role="desktop-navigation">
         <ul>
           <li><a href="#top">Home</a></li>
-          <li><a href="#spillane">Welcome & Associate Dean's Message</a></li>
+          <li><a href="#spillane">Welcome & Associate Dean’s Message</a></li>
           <li><a href="#student">Student Messages</a></li>
           <li><a href="#alumna">Alumna Message</a></li>
-          <li><a href="#dean">Dean's Message</a></li>
+          <li><a href="#dean">Dean’s Message</a></li>
           <li><a href="#majors">Major Recognition</a></li>
           <li><a href="#social-media">Social Media</a></li>
         </ul>
