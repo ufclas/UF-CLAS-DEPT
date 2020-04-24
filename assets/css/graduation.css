@@ -966,6 +966,12 @@ Media Queries
     font-style: italic;
     font-weight: 400;
     font-size: 1.25rem;
+    transition: .3s;
+  }
+
+  .desktop-menu li a:hover {
+    color: #F45A1D;
+    transition: .3s;
   }
 
   p.graph_header,
