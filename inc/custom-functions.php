@@ -427,7 +427,9 @@ if ( class_exists( 'IssueM' ) ) {
 	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
 }
 
-
+/**
+* Modals for Spring 2020 Ceremony
+*/
 function modals_listMajors($majors) {
 	// dye modal
 	echo "<ul class='majors'>";
@@ -437,7 +439,7 @@ function modals_listMajors($majors) {
 		$clean_major = str_replace("/", "",     $clean_major);
 		$clean_major = str_replace("&amp;", "", $clean_major);
 		$clean_major = strtolower($clean_major);
-		echo "<li data-toggle=\"modal\" data-target=\"#exampleModalCenter_{$clean_major}\">{$major}</li>";
+		echo "<li id=\"{$clean_major}-modal\" data-toggle=\"modal\" data-target=\"#modal_{$clean_major}\" aria-labelledby=\"modal_{$clean_major}\">{$major}</li>";
 	}
 	echo "</ul>";
 
@@ -450,15 +452,15 @@ function modals_listMajors($majors) {
 		$clean_major = strtolower($clean_major);
 
 		?>
-		<div class="modal fade" id="exampleModalCenter_<?php echo $clean_major; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal fade" id="modal_<?php echo $clean_major; ?>" tabindex="-1" role="dialog" aria-labelledby="modal_<?php echo $clean_major; ?>" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle"><?php echo $major; ?></h5>
+            <h5 class="modal-title" id="modal_<?php echo $clean_major; ?>_title"><?php echo $major; ?></h5>
           </div>
           <div class="modal-body">
-						<iframe style="width: 100%;" height="315" src="https://www.youtube.com/embed/LVMcHL-9NTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="graduating-list"><a href="#"><?php echo "View $major Graduates" ?></a></p>
+						<iframe width="100%" height="315" src="https://www.youtube.com/embed/LVMcHL-9NTY" title='<?php echo "video-$clean_major"; ?>' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="graduating-list"><a href="https://recognition-ceremony.clas.ufl.edu/files/2020/graduating-students/<?php echo $clean_major ?>.pdf" target="_blank"><?php echo "View $major Graduates" ?></a></p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
