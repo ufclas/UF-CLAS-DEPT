@@ -195,7 +195,7 @@ nav li {
 }
 
 #menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(4px, -4px);
+  transform: rotate(-45deg) translate(5px, -4px);
 }
 
 #menu {
