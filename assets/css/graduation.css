@@ -182,7 +182,7 @@ nav li {
    opacity: 1;
    transform: rotate(45deg) translate(-2px, -1px);
    background: #fff;
-   height: 2px;
+   height: 4px;
    margin-bottom: 8px !important;
 }
 
@@ -192,7 +192,7 @@ nav li {
 }
 
 #menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(4px, -4px);
 }
 
 #menu {
@@ -208,7 +208,6 @@ nav li {
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
    top: -16px;
    right: -16px;
-   padding-bottom: 5rem !important;
 }
 
 #menu ul {
@@ -227,6 +226,22 @@ nav li {
   transform: none;
 }
 
+.tablet-banner {
+    background: #002346;
+    text-align: center;
+    margin-top: 2.5rem !important;
+}
+
+.tablet-banner p {
+    font-family: "Surveyor Display A", "Surveyor Display B" !important;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding: .938rem 0 !important;
+}
+
 /*===========================================
 
 Top Section
@@ -234,8 +249,8 @@ Top Section
 =============================================*/
 #container_graph_headers {
     text-align: center;
-    margin-top: 4rem !important;
-    height: 95vh;
+    margin-top: 8rem !important;
+    height: 100vh;
 }
 
 #container_graph_headers p {
@@ -324,6 +339,11 @@ Sections
 =============================================*/
 .section-container {
     padding-top: 2rem !important;
+    height: 100vh;
+}
+
+.major-recognition.section-container {
+    height: auto;
 }
 
 h3.congratulations {
@@ -377,13 +397,24 @@ ul.majors li:hover {
     background: white;
 }
 
+.deans-message,
+.associate-deans-message,
+.student-message,
+.alumna-message,
+.major-recognition,
+.social-media {
+  text-align: center;
+}
+
 .deans-message iframe,
 .associate-deans-message iframe,
 .student-message iframe,
-.alumna-message iframe {
+.alumna-message iframe,
+.modal-body iframe {
     position: relative !important;
     z-index: 1 !important;
-    height: 45vh;
+    height: 180px;
+    max-width: 320px;
 }
 
 /*===========================================
@@ -493,11 +524,11 @@ p.graduating-list a {
     font-style: normal;
     font-weight: 400;
     color: white;
-    border: 1px solid white !important;
     padding: 1rem !important;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: .3s;
+    font-size: 1rem;
 }
 
 p.graduating-list a:hover {
@@ -878,10 +909,6 @@ Media Queries
     Sections
   =============================================*/
 
-  .section-container {
-    height: 100vh;
-  }
-
   .flower-icon svg {
     width: 2rem;
     height: 2rem;
@@ -919,10 +946,17 @@ Media Queries
   .deans-message iframe,
   .associate-deans-message iframe,
   .student-message iframe,
-  .alumna-message iframe {
+  .alumna-message iframe,
+  .modal-body iframe {
     position: relative !important;
     z-index: 1 !important;
-    height: 48vh;
+    height: 480px;
+    max-width: 768px;
+}
+
+p.graduating-list a {
+  border: 1px solid white !important;
+  font-size: 1.25rem;
 }
 
 /*===========================================
@@ -1047,6 +1081,7 @@ Media Queries
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 4vh !important;
   }
 
   #container_graph_headers p {
@@ -1064,19 +1099,11 @@ Media Queries
       margin: 4rem 0 !important;
   }
 
-  .deans-message,
-  .associate-deans-message,
-  .student-message,
-  .alumna-message,
-  .major-recognition,
-  .social-media {
-    text-align: center;
-  }
-
   .deans-message iframe,
   .associate-deans-message iframe,
   .student-message iframe,
-  .alumna-message iframe {
+  .alumna-message iframe,
+  .modal-body iframe {
     max-width: 1025px;
     height: 575px;
   }
