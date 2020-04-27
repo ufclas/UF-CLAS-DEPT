@@ -537,12 +537,6 @@ p.graduating-list a {
     font-size: 1rem;
 }
 
-p.graduating-list a:hover {
-  transition: .3s;
-  background: white;
-  color: #002346;
-}
-
 .modal-header {
   padding: 1rem !important;
 }
@@ -1117,6 +1111,13 @@ p.graduating-list a {
   ul.majors {
     max-width: 1025px;
     margin: 0 auto !important;
+  }
+
+
+  p.graduating-list a:hover {
+    transition: .3s;
+    background: white;
+    color: #002346;
   }
 
   .majors-container {
