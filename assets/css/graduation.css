@@ -206,9 +206,9 @@ nav li {
    transform-origin: 0% 0%;
    transform: translate(-100%, 0);
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-   height: 100vh;
    top: -16px;
    right: -16px;
+   padding-bottom: 5rem !important;
 }
 
 #menu ul {
@@ -881,7 +881,7 @@ Media Queries
   .section-container {
     height: 100vh;
   }
-  
+
   .flower-icon svg {
     width: 2rem;
     height: 2rem;
