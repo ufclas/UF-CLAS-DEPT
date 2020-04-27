@@ -324,7 +324,6 @@ Sections
 =============================================*/
 .section-container {
     padding-top: 2rem !important;
-    height: 100vh;
 }
 
 h3.congratulations {
@@ -879,6 +878,10 @@ Media Queries
     Sections
   =============================================*/
 
+  .section-container {
+    height: 100vh;
+  }
+  
   .flower-icon svg {
     width: 2rem;
     height: 2rem;
@@ -1064,7 +1067,9 @@ Media Queries
   .deans-message,
   .associate-deans-message,
   .student-message,
-  .alumna-message {
+  .alumna-message,
+  .major-recognition,
+  .social-media {
     text-align: center;
   }
 
