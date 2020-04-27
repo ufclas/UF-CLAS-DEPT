@@ -81,7 +81,7 @@ $majors = array(
 					<nav role="navigation">
 							<ul>
 								<li><a href="#top">Home</a></li>
-                <li><a href="#spillane">Welcome & Associate Dean’s Message</a></li>
+                <li><a href="#spillane">Welcome Message</a></li>
                 <li><a href="#student">Student Messages</a></li>
                 <li><a href="#alumna">Alumna Message</a></li>
                 <li><a href="#dean">Dean’s Message</a></li>
@@ -99,7 +99,7 @@ $majors = array(
       <nav class="desktop-menu" role="navigation">
         <ul>
           <li><a href="#top">Home</a></li>
-          <li><a href="#spillane">Welcome & Associate Dean’s Message</a></li>
+          <li><a href="#spillane">Welcome Message</a></li>
           <li><a href="#student">Student Messages</a></li>
           <li><a href="#alumna">Alumna Message</a></li>
           <li><a href="#dean">Dean’s Message</a></li>
@@ -139,7 +139,7 @@ $majors = array(
 			</div>
 
 			<!-- <h3>Dean's Message</h3> -->
-			<h3 class="congratulations">CONGRATULATIONS</h3>
+			<h3 class="congratulations">WELCOME MESSSAGE</h3>
 			<p class="from-message">from Associate Dean Joe Spillane</p>
 			<iframe src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
 		</section>
@@ -152,9 +152,17 @@ $majors = array(
         <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
       </div>
 
-      <!-- <h3>Associate Dean's Message</h3> -->
+      <!-- <h3>Student Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
-      <p class="from-message">from Student Highlights</p>
+      <p class="from-message">from Student #1</p>
+      <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
+
+      <div class="flower-icon">
+        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+      </div>
+      <!-- <h3>Student Message</h3> -->
+      <h3 class="congratulations">CONGRATULATIONS</h3>
+      <p class="from-message">from Student #2</p>
       <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
     </section>
 
@@ -168,7 +176,7 @@ $majors = array(
 
       <!-- <h3>Associate Dean's Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
-      <p class="from-message">from Alumna</p>
+      <p class="from-message">from Domonique Worship</p>
       <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
     </section>
 
