@@ -417,6 +417,10 @@ ul.majors li:hover {
     max-width: 320px;
 }
 
+.student-message.section-container {
+    height: auto;
+}
+
 /*===========================================
 
 Footer
@@ -1145,4 +1149,15 @@ p.graduating-list a {
     display: block;
   }
 
+}
+
+@media (orientation: landscape) {
+  .section-container {
+      height: 100vw;
+  }
+
+  #container_graph_headers {
+    height: 100vw;
+    margin-top: 4rem !important;
+  }
 }
