@@ -75,8 +75,8 @@ $majors = array(
 						<div class="uf-wordmark">
 			 			 <?php get_template_part('images/recognition-ceremony/uf', 'wordmark.svg'); ?>
 			 		 	</div>
-			 		 <h1 class="mobile">Liberal Arts & Sciences</h1>
-           <h1 class="tablet">College Liberal Arts and Sciences</h1>
+			 		 <h1 class="mobile">Liberal Arts and Sciences</h1>
+           <h1 class="tablet">College of Liberal Arts and Sciences</h1>
 				 	</div>
 					<nav role="navigation">
 							<ul>
