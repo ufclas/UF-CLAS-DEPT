@@ -22,6 +22,7 @@ body {
          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../../images/recognition-ceremony/century-tower-background.jpg', sizingMethod='scale');
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .btn::after {
@@ -194,7 +195,7 @@ nav li {
 }
 
 #menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(4px, -4px);
+  transform: rotate(-45deg) translate(5px, -4px);
 }
 
 #menu {
