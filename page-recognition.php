@@ -89,6 +89,10 @@ $majors = array(
 								<li><a href="#social-media">Social Media</a></li>
 							</ul>
 						</nav>
+
+          <div class="tablet-banner">
+            <p>Graduation — Spring 2020</p>
+          </div>
 		    </div>
 		  </div>
 
@@ -184,7 +188,7 @@ $majors = array(
 
 		<!-- 5. College Majors -->
     <div class="link-landing" id="majors"></div>
-		<section class="deans-message section-container">
+		<section class="major-recognition section-container">
 			<!--  Flower Icon -->
 			<div class="flower-icon">
 				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
@@ -211,7 +215,7 @@ $majors = array(
 
 		<!-- 3. Student Highlights -->
     <div class="link-landing" id="social-media"></div>
-		<section class="student-message section-container">
+		<section class="social-media section-container">
 
       <div class="instagram-intro">
         <?php get_template_part('images/recognition-ceremony/uf', 'instagram-logo.svg'); ?>
