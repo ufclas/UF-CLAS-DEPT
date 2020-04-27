@@ -107,21 +107,23 @@ $majors = array(
 
   <main>
     <section id="container_graph_headers">
-      <p class="graph_header">University of Florida</p>
-      <p id="graph_header_titleSlug">College <span>of</span> Liberal Arts <span>and</span> Sciences</p>
-      <p class="graph_header">Virtual Graduation Celebration</p>
+      <div class="inner-container">
+        <p class="graph_header">University of Florida</p>
+        <p id="graph_header_titleSlug">College <span>of</span> Liberal Arts <span>and</span> Sciences</p>
+        <p class="graph_header">Virtual Graduation Celebration</p>
 
-			<!--  Flower Icon -->
-      <div class="flower-icon">
-				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
-			</div>
+  			<!--  Flower Icon -->
+        <div class="flower-icon">
+  				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+  			</div>
 
-      <p class="ceremony-date">— MAY 2, 2020 —</p>
+        <p class="ceremony-date">— MAY 2, 2020 —</p>
 
-			<!-- replace image -->
-			<div class="clas-graduation-crest">
-				<?php get_template_part('images/recognition-ceremony/uf', 'clas-graduation-crest.svg'); ?>
-			</div>
+  			<!-- replace image -->
+  			<div class="clas-graduation-crest">
+  				<?php get_template_part('images/recognition-ceremony/uf', 'clas-graduation-crest.svg'); ?>
+  			</div>
+      </div>
     </section>
 
     <!-- 1. Associate Dean's Message -->
