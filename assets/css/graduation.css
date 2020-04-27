@@ -20,6 +20,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../../images/recognition-ceremony/century-tower-background.jpg', sizingMethod='scale');
+    height: 100%;
+    width: 100%;
 }
 
 .btn::after {
