@@ -1154,7 +1154,7 @@ p.graduating-list a {
 
 }
 
-@media (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
   .section-container {
       height: 100vw;
   }
