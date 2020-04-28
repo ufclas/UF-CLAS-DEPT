@@ -191,8 +191,6 @@ $majors = array(
     "video"        => "https://www.youtube.com/embed/MXQQgKkZFhE",
     "modal_string" => "modal_womensstudies",
   ),
-
-
 );
 ?>
 <html <?php language_attributes(); ?> class="no-js no-svg">
@@ -237,7 +235,7 @@ $majors = array(
 					<nav role="navigation">
 							<ul>
 								<li><a href="#top">Home</a></li>
-                <li><a href="#spillane">Welcome & Associate Dean’s Message</a></li>
+                <li><a href="#spillane">Welcome Message</a></li>
                 <li><a href="#student">Student Messages</a></li>
                 <li><a href="#alumna">Alumna Message</a></li>
                 <li><a href="#dean">Dean’s Message</a></li>
@@ -245,13 +243,16 @@ $majors = array(
 								<li><a href="#social-media">Social Media</a></li>
 							</ul>
 						</nav>
+          <div class="tablet-banner">
+            <p>Graduation — Spring 2020</p>
+          </div>
 		    </div>
 		  </div>
 
       <nav class="desktop-menu" role="navigation">
         <ul>
           <li><a href="#top">Home</a></li>
-          <li><a href="#spillane">Welcome & Associate Dean’s Message</a></li>
+          <li><a href="#spillane">Welcome Message</a></li>
           <li><a href="#student">Student Messages</a></li>
           <li><a href="#alumna">Alumna Message</a></li>
           <li><a href="#dean">Dean’s Message</a></li>
@@ -291,7 +292,7 @@ $majors = array(
 			</div>
 
 			<!-- <h3>Dean's Message</h3> -->
-			<h3 class="congratulations">CONGRATULATIONS</h3>
+			<h3 class="congratulations">WELCOME MESSSAGE</h3>
 			<p class="from-message">from Associate Dean Joe Spillane</p>
 			<iframe src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
 		</section>
@@ -304,9 +305,17 @@ $majors = array(
         <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
       </div>
 
-      <!-- <h3>Associate Dean's Message</h3> -->
+      <!-- <h3>Student Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
-      <p class="from-message">from Student Highlights</p>
+      <p class="from-message">from Student #1</p>
+      <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
+
+      <div class="flower-icon">
+        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+      </div>
+      <!-- <h3>Student Message</h3> -->
+      <h3 class="congratulations">CONGRATULATIONS</h3>
+      <p class="from-message">from Student #2</p>
       <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
     </section>
 
@@ -320,7 +329,7 @@ $majors = array(
 
       <!-- <h3>Associate Dean's Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
-      <p class="from-message">from Alumna</p>
+      <p class="from-message">from Domonique Worship</p>
       <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
     </section>
 
@@ -340,7 +349,7 @@ $majors = array(
 
 		<!-- 5. College Majors -->
     <div class="link-landing" id="majors"></div>
-		<section class="deans-message section-container">
+		<section class="major-recognition section-container">
 			<!--  Flower Icon -->
 			<div class="flower-icon">
 				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
@@ -352,7 +361,6 @@ $majors = array(
 
 			<div class="majors-container">
 				<?php modals_listMajors($majors); ?>
-
 			</div>
 
 			<?php
@@ -368,8 +376,7 @@ $majors = array(
 
 		<!-- 3. Student Highlights -->
     <div class="link-landing" id="social-media"></div>
-		<section class="student-message section-container">
-
+		<section class="social-media section-container">
       <div class="instagram-intro">
         <?php get_template_part('images/recognition-ceremony/uf', 'instagram-logo.svg'); ?>
         <p>Instagram</p>
@@ -378,9 +385,6 @@ $majors = array(
 			<!-- <h3>Associate Dean's Message</h3> -->
 			<?php echo do_shortcode('[instagram-feed]'); ?>
 		</section>
-
-    <!-- test hello world -->
-
 	</main>
 
 	<footer>

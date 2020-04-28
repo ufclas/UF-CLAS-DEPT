@@ -433,6 +433,7 @@ if ( class_exists( 'IssueM' ) ) {
 function modals_listMajors($majors) {
 	// dye modal
 	echo "<ul class='majors'>";
+
 	foreach ($majors as $major => $list_value_media) {
 		$clean_major = str_replace(" ", "",     $major);
 		$clean_major = str_replace("'", "",     $clean_major);
@@ -443,9 +444,7 @@ function modals_listMajors($majors) {
 	}
 	echo "</ul>";
 
-
 echo "<ul>";
-
 
 	$i = 0;
 	foreach ($majors as $major => $list_value_media) {
