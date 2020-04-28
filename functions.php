@@ -18,6 +18,10 @@ function ufclas_emily_theme_enqueue_styles() {
    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), $theme_version );
    wp_enqueue_style('child-style-inline', get_stylesheet_directory_uri() . '/assets/css/inline.min.css', array('child-style'), $theme_version );
 
+	 //Only load CSS for graduation page
+	 if ( is_page_template( 'page-recognition.php' ) ) {
+		 wp_enqueue_style('graduation-ceremony', get_stylesheet_directory_uri() . '/assets/css/graduation.css', array('child-style'), $theme_version );
+		}
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
 		wp_enqueue_style( 'twentyseventeen-ie9', get_template_directory_uri() . '/assets/css/ie9.css', array( 'child-style' ) );
@@ -917,50 +921,4 @@ require get_theme_file_path('/inc/custom-functions.php');
 /**
 * Includes the shortcodes file
 */
-
-require get_theme_file_path('/inc/custom-functions.php');
-
-
-function modals_listMajors($majors) {
-	// dye modal
-	echo "<ul>";
-	foreach ($majors as $major) {
-		$clean_major = str_replace(" ", "",     $major);
-		$clean_major = str_replace("'", "",     $clean_major);
-		$clean_major = str_replace("/", "",     $clean_major);
-		$clean_major = str_replace("&amp;", "", $clean_major);
-		$clean_major = strtolower($clean_major);
-		echo "<li class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModalCenter_{$clean_major}\">{$major}</li>";
-	}
-	echo "</ul>";
-
-	$i = 0;
-	foreach ($majors as $major) {
-		$clean_major = str_replace(" ", "",     $major);
-		$clean_major = str_replace("'", "",    $clean_major);
-		$clean_major = str_replace("/", "",     $clean_major);
-		$clean_major = str_replace("&amp;", "", $clean_major);
-		$clean_major = strtolower($clean_major);
-
-		?>
-		<div class="modal fade" id="exampleModalCenter_<?php echo $clean_major; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle"><?php echo $major; ?></h5>
-          </div>
-          <div class="modal-body">
-            Are Waffles Real? No. <?php echo $i++; ?>
-						<iframe style="width: 100%;" height="315" src="https://www.youtube.com/embed/LVMcHL-9NTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-		<?php
-	}
-} // modals_listMajors function
-
 require get_stylesheet_directory() . '/inc/shortcodes.php';
