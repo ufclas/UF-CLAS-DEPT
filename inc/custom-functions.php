@@ -434,10 +434,11 @@ function modals_listMajors($majors) {
 	// dye modal
 	echo "<ul class='majors'>";
 	foreach ($majors as $major => $list_value_media) {
-		$clean_major = str_replace(" ", "",     $major);
-		$clean_major = str_replace("'", "",     $clean_major);
-		$clean_major = str_replace("/", "",     $clean_major);
-		$clean_major = str_replace("&amp;", "", $clean_major);
+		$clean_major = str_replace(" ", "",       $major);
+		$clean_major = str_replace("'", "",       $clean_major);
+		$clean_major = str_replace("/", "",       $clean_major);
+		$clean_major = str_replace("&amp;",   "", $clean_major);
+    $clean_major = str_replace("&#8217;", "", $clean_major);
 		$clean_major = strtolower($clean_major);
 		echo "<li id=\"{$clean_major}-modal\" data-toggle=\"modal\" data-target=\"#modal_{$clean_major}\" aria-labelledby=\"modal_{$clean_major}\">{$major}</li>";
 	}
