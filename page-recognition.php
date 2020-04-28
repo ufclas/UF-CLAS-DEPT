@@ -6,37 +6,191 @@
 
  $date_theDay = false;
 $majors = array(
-	"Doctoral Degrees",
-	"Master’s Degrees",
-	"African American Studies",
-	"Anthropology",
-	"Astronomy / Astrophysics",
-	"Biology / Botany / Zoology",
-	"Chemistry / Biochemistry",
-	"Classical Studies",
-	"Computer Science",
-	"Criminology",
-	"Economics",
-	"English",
-	"Foreign Languages and Literatures",
-	"Geography",
-	"Geology",
-	"History",
-	"Interdisciplinary Studies",
-	"International Studies",
-	"Linguistics",
-	"Mathematics",
-	"Microbiology &amp; Cell Science",
-	"Philosophy",
-	"Physics",
-	"Political Science",
-	"Psychology",
-	"Religion",
-	"Sociology",
-	"Spanish and Portuguese",
-	"Statistics",
-	"Sustainability Studies",
-	"Women’s Studies",
+	"Doctoral Degrees" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/qYfoARhooHE",
+    "modal_string" => "modal_doctoraldegrees",
+  ),
+
+	"Master&#8217;s Degrees" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/EGbNI26PPYg",
+    "modal_string" => "modal_mastersdegrees",
+  ),
+
+	"African American Studies" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/dsJtgmAhFF4",
+    "modal_string" => "modal_africanamericanstudies",
+  ),
+
+	"Anthropology" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/-gF8d-fitkU",
+    "modal_string" => "modal_anthropology",
+  ),
+
+	"Astronomy / Astrophysics" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/lz-IV2Z16j0",
+    "modal_string" => "modal_astronomyastrophysics",
+  ),
+
+	"Biology / Botany / Zoology" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/cmbMIIgpFwY",
+    "modal_string" => "modal_biologybotanyzoology",
+  ),
+
+	"Chemistry / Biochemistry" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/_wx__fEyDj0",
+    "modal_string" => "modal_chemistrybiochemistry",
+  ),
+
+	"Classical Studies" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/dn_aaxZIA2o",
+    "modal_string" => "modal_classicalstudies",
+  ),
+
+	"Computer Science" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/PGklx6OD_MM",
+    "modal_string" => "modal_computerscience",
+  ),
+
+	"Criminology" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/Soqqq8XIT0U",
+    "modal_string" => "modal_criminology",
+  ),
+
+	"Economics" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/nAtCqHJofJk",
+    "modal_string" => "modal_economics",
+  ),
+
+	"English" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/KqR11aJeFIk",
+    "modal_string" => "modal_english",
+  ),
+
+	"Foreign Languages and Literatures" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/LgYghvu6Vj4",
+    "modal_string" => "modal_foreignlanguagesandliteratures",
+  ),
+
+	"Geography" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/cxoSvIwzPBo",
+    "modal_string" => "modal_geography",
+  ),
+
+	"Geology" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/l2ToW0IDG1U",
+    "modal_string" => "modal_geology",
+  ),
+
+	"History" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/GymQgf7BQN4",
+    "modal_string" => "modal_history",
+  ),
+
+	"Interdisciplinary Studies" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/kExls0IgAJI",
+    "modal_string" => "modal_interdisciplinarystudies",
+  ),
+
+	"International Studies" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/7UEIBdMyj9g",
+    "modal_string" => "modal_internationalstudies",
+  ),
+
+	"Linguistics" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/d348FGXomg0",
+    "modal_string" => "modal_linguistics",
+  ),
+
+	"Mathematics" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/6jfUrYYzCuI",
+    "modal_string" => "modal_mathematics",
+  ),
+
+	"Microbiology &amp; Cell Science" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/NpZMIU96vbE",
+    "modal_string" => "modal_microbiologycellscience",
+  ),
+
+	"Philosophy" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/cjlDBPlTqS0",
+    "modal_string" => "modal_philosophy",
+  ),
+
+	"Physics" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/_SObOsXrDRc",
+    "modal_string" => "modal_physics",
+  ),
+
+	"Political Science" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/f5RRn-khVKs",
+    "modal_string" => "modal_politicalscience",
+  ),
+
+	"Psychology" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/vGE-RfP6KRE",
+    "modal_string" => "modal_psychology",
+  ),
+
+	"Religion" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/CsyqfmzeHxg",
+    "modal_string" => "modal_religion",
+  ),
+
+	"Sociology" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/BSWqUcLdeOo",
+    "modal_string" => "modal_sociology",
+  ),
+
+	"Spanish and Portuguese" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/Kbac8E8TZvs",
+    "modal_string" => "modal_spanishandportuguese",
+  ),
+
+	"Statistics" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/11iBKrEeWT8",
+    "modal_string" => "modal_statistics",
+  ),
+
+	"Sustainability Studies" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/T06oh88VhiE",
+    "modal_string" => "modal_sustainabilitystudies",
+  ),
+
+	"Women&#8217;s Studies" => array(
+    "image"        => "",
+    "video"        => "https://www.youtube.com/embed/MXQQgKkZFhE",
+    "modal_string" => "modal_womensstudies",
+  ),
 );
 ?>
 <html <?php language_attributes(); ?> class="no-js no-svg">
@@ -89,7 +243,6 @@ $majors = array(
 								<li><a href="#social-media">Social Media</a></li>
 							</ul>
 						</nav>
-
           <div class="tablet-banner">
             <p>Graduation — Spring 2020</p>
           </div>
@@ -224,7 +377,6 @@ $majors = array(
 		<!-- 3. Student Highlights -->
     <div class="link-landing" id="social-media"></div>
 		<section class="social-media section-container">
-
       <div class="instagram-intro">
         <?php get_template_part('images/recognition-ceremony/uf', 'instagram-logo.svg'); ?>
         <p>Instagram</p>
@@ -233,7 +385,6 @@ $majors = array(
 			<!-- <h3>Associate Dean's Message</h3> -->
 			<?php echo do_shortcode('[instagram-feed]'); ?>
 		</section>
-
 	</main>
 
 	<footer>
@@ -249,5 +400,13 @@ $majors = array(
 
 	<script src="http://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>
+<script type="text/javascript">
+// this stops the video from playing in the iframe after the modal is closed
+<?php foreach ($majors as $key => $list_value) { ?>
+  $("#<?php echo $list_value['modal_string']; ?>").on('hidden.bs.modal', function (e) {
+      $("#<?php echo $list_value['modal_string']; ?> iframe").attr("src", $("#<?php echo $list_value['modal_string']; ?> iframe").attr("src"));
+  });
+<?php } ?>
+</script>
 </body>
 </html>

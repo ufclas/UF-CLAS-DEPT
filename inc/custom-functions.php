@@ -433,9 +433,10 @@ if ( class_exists( 'IssueM' ) ) {
 function modals_listMajors($majors) {
 	// dye modal
 	echo "<ul class='majors'>";
-	foreach ($majors as $major) {
+
+	foreach ($majors as $major => $list_value_media) {
 		$clean_major = str_replace(" ", "",     $major);
-		$clean_major = str_replace("'", "",    $clean_major);
+		$clean_major = str_replace("'", "",     $clean_major);
 		$clean_major = str_replace("/", "",     $clean_major);
 		$clean_major = str_replace("&amp;", "", $clean_major);
 		$clean_major = strtolower($clean_major);
@@ -443,14 +444,16 @@ function modals_listMajors($majors) {
 	}
 	echo "</ul>";
 
-	$i = 0;
-	foreach ($majors as $major) {
-		$clean_major = str_replace(" ", "",     $major);
-		$clean_major = str_replace("'", "",    $clean_major);
-		$clean_major = str_replace("/", "",     $clean_major);
-		$clean_major = str_replace("&amp;", "", $clean_major);
-		$clean_major = strtolower($clean_major);
+echo "<ul>";
 
+	$i = 0;
+	foreach ($majors as $major => $list_value_media) {
+		$clean_major = str_replace(" ", "",       $major);
+		$clean_major = str_replace("'", "",       $clean_major);
+		$clean_major = str_replace("/", "",       $clean_major);
+    $clean_major = str_replace("&amp;",   "", $clean_major);
+		$clean_major = str_replace("&#8217;", "", $clean_major);
+		$clean_major = strtolower($clean_major);
 		?>
 		<div class="modal fade" id="modal_<?php echo $clean_major; ?>" tabindex="-1" role="dialog" aria-labelledby="modal_<?php echo $clean_major; ?>" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -459,7 +462,7 @@ function modals_listMajors($majors) {
             <h5 class="modal-title" id="modal_<?php echo $clean_major; ?>_title"><?php echo $major; ?></h5>
           </div>
           <div class="modal-body">
-						<iframe width="100%" height="315" src="https://www.youtube.com/embed/LVMcHL-9NTY" title='<?php echo "video-$clean_major"; ?>' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="100%" height="315" src="<?php echo $list_value_media['video']; ?>" title='<?php echo "video-$clean_major"; ?>' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p class="graduating-list"><a href="https://recognition-ceremony.clas.ufl.edu/files/2020/graduating-students/<?php echo $clean_major ?>.pdf" target="_blank"><?php echo "View $major Graduates" ?></a></p>
           </div>
           <div class="modal-footer">

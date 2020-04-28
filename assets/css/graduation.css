@@ -535,7 +535,6 @@ p.graduating-list a {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: .3s;
-    font-size: 1rem;
 }
 
 .modal-header {
@@ -910,6 +909,10 @@ Media Queries
     Sections
   =============================================*/
 
+  .section-container {
+    height: 100vh;
+  }
+
   .flower-icon svg {
     width: 2rem;
     height: 2rem;
@@ -1113,7 +1116,6 @@ p.graduating-list a {
     max-width: 1025px;
     margin: 0 auto !important;
   }
-
 
   p.graduating-list a:hover {
     transition: .3s;
