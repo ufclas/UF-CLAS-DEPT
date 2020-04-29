@@ -81,6 +81,7 @@ h1.mobile {
 
 .top-mobile-header h1.mobile {
     width: calc(100% - 100px);
+    margin-left: 0 !important;
 }
 
 h1.mobile svg {
