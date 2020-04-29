@@ -452,7 +452,7 @@ function modals_listMajors($majors) {
 		$clean_major = str_replace("&amp;",   "", $clean_major);
     $clean_major = str_replace("&#8217;", "", $clean_major);
 		$clean_major = strtolower($clean_major);
-		echo "<li><a id=\"{$clean_major}-modal\" data-toggle=\"modal\" data-target=\"#modal_{$clean_major}\" aria-labelledby=\"modal_{$clean_major}\">{$major}</a></li>";
+		echo "<li id=\"{$clean_major}-modal\" data-toggle=\"modal\" data-target=\"#modal_{$clean_major}\" aria-labelledby=\"modal_{$clean_major}\">{$major}</li>";
 	}
 	echo "</ul>";
 
