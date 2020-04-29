@@ -124,6 +124,7 @@ h1.tablet {
     top: 0;
     position: absolute;
     width: 100%;
+    width: calc(100% - 50px);
 }
 
 nav li {
@@ -433,6 +434,7 @@ ul.majors li {
     margin: 0 auto !important;
     list-style: none;
     text-align: left;
+    cursor: pointer;
 }
 
 ul.majors li:hover {
@@ -904,6 +906,7 @@ Media Queries
 
   .top-hamburger-menu {
     height: 3.75rem;
+    width: calc(100% - 60px);
   }
 
   .hamburger-menu-icon {
