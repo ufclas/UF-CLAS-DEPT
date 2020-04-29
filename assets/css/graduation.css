@@ -74,6 +74,11 @@ h1 {
     margin-left: 10px !important;
 }
 
+h1.mobile {
+    width: calc(100% - 50px);
+    text-align: center;
+}
+
 h1.mobile svg {
     width: 12.5rem;
 }
@@ -306,6 +311,10 @@ Top Section
     color: white;
     max-width: 275px;
     margin: 0 auto !important;
+}
+
+#container_graph_headers .flower-icon {
+    margin: 2rem 0 !important;
 }
 
 p.graph_header,
