@@ -981,10 +981,6 @@ Media Queries
     Sections
   =============================================*/
 
-  .section-container {
-    height: 100vh;
-  }
-
   .flower-icon svg {
     width: 2rem;
     height: 2rem;
