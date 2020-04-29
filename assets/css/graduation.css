@@ -336,7 +336,7 @@ p#graph_header_titleSlug span {
 }
 
 .flower-icon {
-    margin: 4rem 0 2rem !important;
+    margin: 7rem 0 2rem !important;
     text-align: center;
 }
 
@@ -464,6 +464,7 @@ ul.majors li:hover {
     z-index: 1 !important;
     height: 180px;
     max-width: 320px;
+    margin: 1rem 0 !important;
 }
 
 .student-message.section-container {
@@ -1087,6 +1088,10 @@ p.graduating-list a {
     position: fixed;
     top: 0;
     z-index: 9999;
+  }
+
+  .inner-container {
+    height: 100vh;
   }
 
   .desktop-menu {

@@ -299,91 +299,98 @@ $majors = array(
     <!-- 1. Associate Dean's Message -->
     <div class="link-landing" id="spillane"></div>
 		<section class="associate-deans-message section-container">
+      <div class="inner-container">
+  			<!-- <h3>Dean's Message</h3> -->
+  			<h3 class="congratulations">WELCOME MESSSAGE</h3>
+  			<p class="from-message">from Associate Dean Joe Spillane</p>
+  			<iframe src="https://www.youtube.com/embed/cNr3r3nT8KE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
 
-			<!-- <h3>Dean's Message</h3> -->
-			<h3 class="congratulations">WELCOME MESSSAGE</h3>
-			<p class="from-message">from Associate Dean Joe Spillane</p>
-			<iframe src="https://www.youtube.com/embed/cNr3r3nT8KE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
-
-      <!--  Flower Icon -->
-      <div class="flower-icon">
-        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+        <!--  Flower Icon -->
+        <div class="flower-icon">
+          <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+        </div>
       </div>
     </section>
 
     <!-- 2. Student Highlights -->
     <div class="link-landing" id="student"></div>
     <section class="student-message section-container">
+      <div class="inner-container">
+        <!-- <h3>Student Message</h3> -->
+        <h3 class="congratulations">CONGRATULATIONS</h3>
+        <p class="from-message">from Student #1</p>
+        <iframe src="https://www.youtube.com/embed/HY-wq_KCYm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
 
-      <!-- <h3>Student Message</h3> -->
-      <h3 class="congratulations">CONGRATULATIONS</h3>
-      <p class="from-message">from Student #1</p>
-      <iframe src="https://www.youtube.com/embed/HY-wq_KCYm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
-
-      <!-- <h3>Student Message</h3> -->
-      <h3 class="congratulations">CONGRATULATIONS</h3>
-      <p class="from-message">from Student #2</p>
-      <iframe src="https://www.youtube.com/embed/Wv4xATJv7pM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
-      <!--  Flower Icon -->
-      <div class="flower-icon">
-        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+        <!-- <h3>Student Message</h3> -->
+        <h3 class="congratulations">CONGRATULATIONS</h3>
+        <p class="from-message">from Student #2</p>
+        <iframe src="https://www.youtube.com/embed/Wv4xATJv7pM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
+        <!--  Flower Icon -->
+        <div class="flower-icon">
+          <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+        </div>
       </div>
     </section>
 
     <!-- 3. Alumna Message -->
     <div class="link-landing" id="alumna"></div>
     <section class="alumna-message section-container">
+      <div class="inner-container">
+        <!-- <h3>Associate Dean's Message</h3> -->
+        <h3 class="congratulations">CONGRATULATIONS</h3>
+        <p class="from-message">from Domonique Worship</p>
+        <iframe src="https://www.youtube.com/embed/PTASGJMJKmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
 
-      <!-- <h3>Associate Dean's Message</h3> -->
-      <h3 class="congratulations">CONGRATULATIONS</h3>
-      <p class="from-message">from Domonique Worship</p>
-      <iframe src="https://www.youtube.com/embed/PTASGJMJKmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
-
-      <!--  Flower Icon -->
-      <div class="flower-icon">
-        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+        <!--  Flower Icon -->
+        <div class="flower-icon">
+          <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+        </div>
       </div>
     </section>
 
 		<!-- 4. Dean's Message -->
     <div class="link-landing" id="dean"></div>
 		<section class="deans-message section-container">
-			<!-- <h3>Dean's Message</h3> -->
-			<h3 class="congratulations">CONGRATULATIONS</h3>
-			<p class="from-message">from Dean David Richardson</p>
-			<iframe src="https://www.youtube.com/embed/lUhC-kvWN1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Dean's Message Video" allowfullscreen></iframe>
+      <div class="inner-container">
+  			<!-- <h3>Dean's Message</h3> -->
+  			<h3 class="congratulations">CONGRATULATIONS</h3>
+  			<p class="from-message">from Dean David Richardson</p>
+  			<iframe src="https://www.youtube.com/embed/lUhC-kvWN1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Dean's Message Video" allowfullscreen></iframe>
 
-      <!--  Flower Icon -->
-      <div class="flower-icon">
-        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+        <!--  Flower Icon -->
+        <div class="flower-icon">
+          <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+        </div>
       </div>
     </section>
 
 		<!-- 5. College Majors -->
     <div class="link-landing" id="majors"></div>
 		<section class="major-recognition section-container">
+      <div class="inner-container">
+  			<!-- <h3>Associate Dean's Message</h3> -->
+  			<h3 class="congratulations">CONGRATULATIONS</h3>
+  			<p class="from-message">from College Majors</p>
 
-			<!-- <h3>Associate Dean's Message</h3> -->
-			<h3 class="congratulations">CONGRATULATIONS</h3>
-			<p class="from-message">from College Majors</p>
-
-			<div class="majors-container">
-				<?php modals_listMajors($majors); ?>
-			</div>
-
+  			<div class="majors-container">
+  				<?php modals_listMajors($majors); ?>
+  			</div>
+      </div>
 		</section>
 
 		<!-- 3. Student Highlights -->
     <div class="link-landing" id="social-media"></div>
-		<section class="social-media section-container">
-      <div class="instagram-intro">
-        <?php get_template_part('images/recognition-ceremony/uf', 'instagram-logo.svg'); ?>
-        <p>Instagram</p>
-      </div>
+  		<section class="social-media section-container">
+        <div class="inner-container">
+          <div class="instagram-intro">
+            <?php get_template_part('images/recognition-ceremony/uf', 'instagram-logo.svg'); ?>
+            <p>Instagram</p>
+          </div>
 
-			<!-- <h3>Associate Dean's Message</h3> -->
-			<?php echo do_shortcode('[instagram-feed]'); ?>
-		</section>
+    			<!-- <h3>Associate Dean's Message</h3> -->
+    			<?php echo do_shortcode('[instagram-feed]'); ?>
+        </div>
+  		</section>
 	</main>
 
 	<footer>
