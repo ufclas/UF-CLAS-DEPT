@@ -8,187 +8,187 @@
 $majors = array(
 	"Doctoral Degrees" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/qYfoARhooHE",
+    "video"        => "https://www.youtube.com/embed/zd1uO7yXres",
     "modal_string" => "modal_doctoraldegrees",
   ),
 
 	"Master&#8217;s Degrees" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/EGbNI26PPYg",
+    "video"        => "https://www.youtube.com/embed/cthwl1hgoeQ",
     "modal_string" => "modal_mastersdegrees",
   ),
 
 	"African American Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/dsJtgmAhFF4",
+    "video"        => "https://www.youtube.com/embed/7F2j0tJzctE",
     "modal_string" => "modal_africanamericanstudies",
   ),
 
 	"Anthropology" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/-gF8d-fitkU",
+    "video"        => "https://www.youtube.com/embed/cEhe3RkohFw",
     "modal_string" => "modal_anthropology",
   ),
 
 	"Astronomy / Astrophysics" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/lz-IV2Z16j0",
+    "video"        => "https://www.youtube.com/embed/MOyuSagUHOk",
     "modal_string" => "modal_astronomyastrophysics",
   ),
 
 	"Biology / Botany / Zoology" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/cmbMIIgpFwY",
+    "video"        => "https://www.youtube.com/embed/T0V9EuPYP_0",
     "modal_string" => "modal_biologybotanyzoology",
   ),
 
 	"Chemistry / Biochemistry" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/_wx__fEyDj0",
+    "video"        => "https://www.youtube.com/embed/cKBQTKAuyMc",
     "modal_string" => "modal_chemistrybiochemistry",
   ),
 
 	"Classical Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/dn_aaxZIA2o",
+    "video"        => "https://www.youtube.com/embed/6IFLVE5su5c",
     "modal_string" => "modal_classicalstudies",
   ),
 
 	"Computer Science" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/PGklx6OD_MM",
+    "video"        => "https://www.youtube.com/embed/hpvlGxuDVVA",
     "modal_string" => "modal_computerscience",
   ),
 
 	"Criminology" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/Soqqq8XIT0U",
+    "video"        => "",
     "modal_string" => "modal_criminology",
   ),
 
 	"Economics" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/nAtCqHJofJk",
+    "video"        => "https://www.youtube.com/embed/hVJaTb0C16c",
     "modal_string" => "modal_economics",
   ),
 
 	"English" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/KqR11aJeFIk",
+    "video"        => "https://www.youtube.com/embed/kW7vtWB_0eE",
     "modal_string" => "modal_english",
   ),
 
 	"Foreign Languages and Literatures" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/LgYghvu6Vj4",
+    "video"        => "https://www.youtube.com/embed/5gG5ZFbQWjY",
     "modal_string" => "modal_foreignlanguagesandliteratures",
   ),
 
 	"Geography" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/cxoSvIwzPBo",
+    "video"        => "https://www.youtube.com/embed/QM30A9UZ2PY",
     "modal_string" => "modal_geography",
   ),
 
 	"Geology" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/l2ToW0IDG1U",
+    "video"        => "https://www.youtube.com/embed/M6Mx2Pl-Png",
     "modal_string" => "modal_geology",
   ),
 
 	"History" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/GymQgf7BQN4",
+    "video"        => "https://www.youtube.com/embed/7JWJ0Gzeq7k",
     "modal_string" => "modal_history",
   ),
 
 	"Interdisciplinary Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/kExls0IgAJI",
+    "video"        => "https://www.youtube.com/embed/TV2RPxj91Zo",
     "modal_string" => "modal_interdisciplinarystudies",
   ),
 
 	"International Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/7UEIBdMyj9g",
+    "video"        => "https://www.youtube.com/embed/1cdJv7nkyQA",
     "modal_string" => "modal_internationalstudies",
   ),
 
 	"Linguistics" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/d348FGXomg0",
+    "video"        => "https://www.youtube.com/embed/2_VZF3mN84s",
     "modal_string" => "modal_linguistics",
   ),
 
 	"Mathematics" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/6jfUrYYzCuI",
+    "video"        => "https://www.youtube.com/embed/gI2ak8PiFDE",
     "modal_string" => "modal_mathematics",
   ),
 
 	"Microbiology &amp; Cell Science" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/NpZMIU96vbE",
+    "video"        => "",
     "modal_string" => "modal_microbiologycellscience",
   ),
 
 	"Philosophy" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/cjlDBPlTqS0",
+    "video"        => "https://www.youtube.com/embed/TuwvAalUnjk",
     "modal_string" => "modal_philosophy",
   ),
 
 	"Physics" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/_SObOsXrDRc",
+    "video"        => "https://www.youtube.com/embed/weRfjPrWh7U",
     "modal_string" => "modal_physics",
   ),
 
 	"Political Science" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/f5RRn-khVKs",
+    "video"        => "https://www.youtube.com/embed/LMsU5F0FiiI",
     "modal_string" => "modal_politicalscience",
   ),
 
 	"Psychology" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/vGE-RfP6KRE",
+    "video"        => "https://www.youtube.com/embed/ZbD7bhMB7cw",
     "modal_string" => "modal_psychology",
   ),
 
 	"Religion" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/CsyqfmzeHxg",
+    "video"        => "https://www.youtube.com/embed/aLOmm5Hrlsw",
     "modal_string" => "modal_religion",
   ),
 
 	"Sociology" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/BSWqUcLdeOo",
+    "video"        => "https://www.youtube.com/embed/oEy6_asBhcw",
     "modal_string" => "modal_sociology",
   ),
 
 	"Spanish and Portuguese" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/Kbac8E8TZvs",
+    "video"        => "https://www.youtube.com/embed/0OiLXDpFAWA",
     "modal_string" => "modal_spanishandportuguese",
   ),
 
 	"Statistics" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/11iBKrEeWT8",
+    "video"        => "https://www.youtube.com/embed/2iuHv0udCfU",
     "modal_string" => "modal_statistics",
   ),
 
 	"Sustainability Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/T06oh88VhiE",
+    "video"        => "",
     "modal_string" => "modal_sustainabilitystudies",
   ),
 
 	"Women&#8217;s Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/MXQQgKkZFhE",
+    "video"        => "https://www.youtube.com/embed/MQfRb9JY_6A",
     "modal_string" => "modal_womensstudies",
   ),
 );
@@ -214,24 +214,37 @@ $majors = array(
 </head>
 
 <body <?php body_class(); ?>>
+  <img class="background" src="<?php echo get_stylesheet_directory_uri().'/images/recognition-ceremony/century-tower-background.jpg'?>" />
   <div class="link-landing" id="top"></div>
 	<header>
+    <div class="fixed-header">
+      <div class="top-mobile-header">
+        <div class="uf-wordmark">
+         <?php get_template_part('images/recognition-ceremony/uf', 'wordmark.svg'); ?>
+        </div>
+       <h1 class="mobile"><?php get_template_part('images/recognition-ceremony/uf', 'clas-wordmark-mobile.svg'); ?></</h1>
+       <h1 class="tablet">College of Liberal Arts and Sciences</h1>
+      </div>
+    </div>
+
 		  <div class="mobile-menu" id="menuToggle">
 
 		    <input type="checkbox" aria-label="hamburger-menu-toggle" />
 
-		    <span></span>
-		    <span></span>
-		    <span></span>
+        <div class="hamburger-menu-icon">
+  		    <span></span>
+  		    <span></span>
+  		    <span></span>
+        </div>
 
 		    <div id="menu">
-					<div class="top-hamburger-menu">
-						<div class="uf-wordmark">
-			 			 <?php get_template_part('images/recognition-ceremony/uf', 'wordmark.svg'); ?>
-			 		 	</div>
-			 		 <h1 class="mobile">Liberal Arts and Sciences</h1>
-           <h1 class="tablet">College of Liberal Arts and Sciences</h1>
-				 	</div>
+          <div class="top-hamburger-menu">
+  <div class="uf-wordmark">
+   <?php get_template_part('images/recognition-ceremony/uf', 'wordmark.svg'); ?>
+  </div>
+ <h1 class="mobile"><?php get_template_part('images/recognition-ceremony/uf', 'clas-wordmark-mobile.svg'); ?></h1>
+ <h1 class="tablet">College of Liberal Arts and Sciences</h1>
+</div>
 					<nav role="navigation">
 							<ul>
 								<li><a href="#top">Home</a></li>
@@ -261,7 +274,7 @@ $majors = array(
         </ul>
       </nav>
   </header>
-
+  <div class="header-divider"></div>
   <main>
     <section id="container_graph_headers">
       <div class="inner-container">
@@ -286,74 +299,69 @@ $majors = array(
     <!-- 1. Associate Dean's Message -->
     <div class="link-landing" id="spillane"></div>
 		<section class="associate-deans-message section-container">
-			<!--  Flower Icon -->
-			<div class="flower-icon">
-				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
-			</div>
 
 			<!-- <h3>Dean's Message</h3> -->
 			<h3 class="congratulations">WELCOME MESSSAGE</h3>
 			<p class="from-message">from Associate Dean Joe Spillane</p>
-			<iframe src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
-		</section>
+			<iframe src="https://www.youtube.com/embed/cNr3r3nT8KE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
 
-    <!-- 2. Student Highlights -->
-    <div class="link-landing" id="student"></div>
-    <section class="student-message section-container">
       <!--  Flower Icon -->
       <div class="flower-icon">
         <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
       </div>
+    </section>
+
+    <!-- 2. Student Highlights -->
+    <div class="link-landing" id="student"></div>
+    <section class="student-message section-container">
 
       <!-- <h3>Student Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
       <p class="from-message">from Student #1</p>
-      <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/HY-wq_KCYm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
 
-      <div class="flower-icon">
-        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
-      </div>
       <!-- <h3>Student Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
       <p class="from-message">from Student #2</p>
-      <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Wv4xATJv7pM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
+      <!--  Flower Icon -->
+      <div class="flower-icon">
+        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+      </div>
     </section>
 
     <!-- 3. Alumna Message -->
     <div class="link-landing" id="alumna"></div>
     <section class="alumna-message section-container">
-      <!--  Flower Icon -->
-      <div class="flower-icon">
-        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
-      </div>
 
       <!-- <h3>Associate Dean's Message</h3> -->
       <h3 class="congratulations">CONGRATULATIONS</h3>
       <p class="from-message">from Domonique Worship</p>
-      <iframe src="https://www.youtube.com/embed/PUP7U5vTMM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/PTASGJMJKmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
+
+      <!--  Flower Icon -->
+      <div class="flower-icon">
+        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+      </div>
     </section>
 
 		<!-- 4. Dean's Message -->
     <div class="link-landing" id="dean"></div>
 		<section class="deans-message section-container">
-			<!--  Flower Icon -->
-			<div class="flower-icon">
-				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
-			</div>
-
 			<!-- <h3>Dean's Message</h3> -->
 			<h3 class="congratulations">CONGRATULATIONS</h3>
 			<p class="from-message">from Dean David Richardson</p>
-			<iframe src="https://www.youtube.com/embed/jD9VJ92xyzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Dean's Message Video" allowfullscreen></iframe>
-		</section>
+			<iframe src="https://www.youtube.com/embed/lUhC-kvWN1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Dean's Message Video" allowfullscreen></iframe>
+
+      <!--  Flower Icon -->
+      <div class="flower-icon">
+        <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
+      </div>
+    </section>
 
 		<!-- 5. College Majors -->
     <div class="link-landing" id="majors"></div>
 		<section class="major-recognition section-container">
-			<!--  Flower Icon -->
-			<div class="flower-icon">
-				<span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
-			</div>
 
 			<!-- <h3>Associate Dean's Message</h3> -->
 			<h3 class="congratulations">CONGRATULATIONS</h3>
@@ -363,15 +371,6 @@ $majors = array(
 				<?php modals_listMajors($majors); ?>
 			</div>
 
-			<?php
-				/*
-					MODALS! -- 2 options
-					There's a hard-coded version of the modals in the "/inc/" folder if that's easier ("linked" through 'include' below)
-					Another other option is to add them to the list above the header in this document
-					And they can always be straight up hard-coded in the document if that's preferable
-				*/
-				// include 'inc/modal_majors_hardCoded.php';
-			?>
 		</section>
 
 		<!-- 3. Student Highlights -->
