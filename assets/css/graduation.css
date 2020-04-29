@@ -79,6 +79,10 @@ h1.mobile {
     text-align: center;
 }
 
+.top-mobile-header h1.mobile {
+    width: calc(100% - 100px);
+}
+
 h1.mobile svg {
     width: 12.5rem;
 }
