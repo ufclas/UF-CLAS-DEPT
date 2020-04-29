@@ -74,6 +74,11 @@ h1 {
     margin-left: 10px !important;
 }
 
+h1.mobile {
+    width: calc(100% - 50px);
+    text-align: center;
+}
+
 h1.mobile svg {
     width: 12.5rem;
 }
@@ -308,6 +313,10 @@ Top Section
     margin: 0 auto !important;
 }
 
+#container_graph_headers .flower-icon {
+    margin: 2rem 0 !important;
+}
+
 p.graph_header,
 p#graph_header_titleSlug span {
     font-family: "Surveyor Text A", "Surveyor Text B" !important;
@@ -467,7 +476,7 @@ ul.majors li:hover {
     margin: 1rem 0 !important;
 }
 
-.student-message.section-container {
+.student-message.section-container .inner-container {
     height: auto;
 }
 
