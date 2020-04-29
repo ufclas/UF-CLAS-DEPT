@@ -433,6 +433,7 @@ ul.majors li {
     margin: 0 auto !important;
     list-style: none;
     text-align: left;
+    cursor: pointer;
 }
 
 ul.majors li:hover {
