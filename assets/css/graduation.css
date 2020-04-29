@@ -467,7 +467,7 @@ ul.majors li:hover {
     margin: 1rem 0 !important;
 }
 
-.student-message.section-container {
+.student-message.section-container .inner-container {
     height: auto;
 }
 
