@@ -1089,6 +1089,10 @@ p.graduating-list a {
     z-index: 9999;
   }
 
+  .inner-container {
+    height: 100vh;
+  }
+
   .desktop-menu {
     height: 5.6rem;
     display: flex !important;
