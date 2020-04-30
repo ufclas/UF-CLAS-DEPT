@@ -190,7 +190,7 @@ $majors = array(
     "modal_string" => "modal_sociology",
   ),
 
-	"Spanish and Portuguese" => array(
+	"Spanish / Portuguese" => array(
     "image"        => "",
     "video"        => "https://www.youtube.com/embed/0OiLXDpFAWA",
     "modal_string" => "modal_spanishandportuguese",
