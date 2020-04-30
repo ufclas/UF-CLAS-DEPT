@@ -84,7 +84,7 @@ $majors = array(
 
 	"Criminology" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/oEfTuY0-YCk",
+    "video"        => "https://www.youtube.com/embed/oEy6_asBhcw",
     "modal_string" => "modal_criminology",
   ),
 
@@ -186,7 +186,7 @@ $majors = array(
 
 	"Sociology" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/oEy6_asBhcw",
+    "video"        => "https://www.youtube.com/embed/oEfTuY0-YCk",
     "modal_string" => "modal_sociology",
   ),
 
