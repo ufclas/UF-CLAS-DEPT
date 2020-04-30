@@ -62,7 +62,7 @@ $majors = array(
 
 	"Criminology" => array(
     "image"        => "",
-    "video"        => "",
+    "video"        => "https://www.youtube.com/embed/oEfTuY0-YCk",
     "modal_string" => "modal_criminology",
   ),
 
@@ -128,7 +128,7 @@ $majors = array(
 
 	"Microbiology &amp; Cell Science" => array(
     "image"        => "",
-    "video"        => "",
+    "video"        => "https://www.youtube.com/embed/u02AHOztKbs",
     "modal_string" => "modal_microbiologycellscience",
   ),
 
@@ -182,7 +182,7 @@ $majors = array(
 
 	"Sustainability Studies" => array(
     "image"        => "",
-    "video"        => "",
+    "video"        => "https://www.youtube.com/embed/H2IyG5aOV6s",
     "modal_string" => "modal_sustainabilitystudies",
   ),
 
