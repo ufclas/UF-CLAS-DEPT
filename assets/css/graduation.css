@@ -1105,7 +1105,7 @@ p.graduating-list a {
   }
 
   .inner-container {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .desktop-menu {
