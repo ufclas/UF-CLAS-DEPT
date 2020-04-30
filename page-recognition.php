@@ -126,7 +126,7 @@ $majors = array(
 
 	"Interdisciplinary Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/TV2RPxj91Zo",
+    "video"        => "https://www.youtube.com/embed/B63CAcoLMts",
     "modal_string" => "modal_interdisciplinarystudies",
   ),
 
@@ -190,7 +190,7 @@ $majors = array(
     "modal_string" => "modal_sociology",
   ),
 
-	"Spanish and Portuguese" => array(
+	"Spanish / Portuguese" => array(
     "image"        => "",
     "video"        => "https://www.youtube.com/embed/0OiLXDpFAWA",
     "modal_string" => "modal_spanishandportuguese",
@@ -210,7 +210,7 @@ $majors = array(
 
 	"Women&#8217;s Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/MQfRb9JY_6A",
+    "video"        => "https://www.youtube.com/embed/euIZa05Ov-4",
     "modal_string" => "modal_womensstudies",
   ),
 );
