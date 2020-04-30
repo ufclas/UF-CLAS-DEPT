@@ -72,10 +72,17 @@ h1 {
     line-height: 26px;
     letter-spacing: 0;
     margin-left: 10px !important;
+    width: calc(100% - 110px);
+    text-align: center;
 }
 
-h1.mobile {
-    width: calc(100% - 50px);
+header .mobile {
+    width: calc(100% - 50px) !important;
+    text-align: center;
+}
+
+header .tablet {
+    width: calc(100% - 60px) !important;
     text-align: center;
 }
 
@@ -84,8 +91,9 @@ h1.mobile {
     margin-left: 0 !important;
 }
 
-.mobile svg {
+header .mobile svg {
     width: 12.5rem;
+    height: auto;
 }
 
 .uf-wordmark {
@@ -408,7 +416,7 @@ Sections
     height: auto;
 }
 
-h3.congratulations {
+h2.congratulations {
     font-family: "Surveyor Display A", "Surveyor Display B" !important;
     font-style: normal !important;
     font-weight: 500 !important;
@@ -915,7 +923,7 @@ Media Queries
       font-size: 1.5rem;
       line-height: 29px;
       text-transform: uppercase;
-      width: 100%;
+      width: 100% !important;
       text-align: center;
       color: white;
   }
@@ -1019,7 +1027,7 @@ Media Queries
     height: 12.125rem;
   }
 
-  h3.congratulations {
+  h2.congratulations {
     font-size: 2.25rem !important;
     line-height: 48px;
     margin-bottom: 10px !important;
@@ -1142,7 +1150,7 @@ p.graduating-list a {
     transition: .3s;
   }
 
-  h3.congratulations {
+  h2.congratulations {
     font-size: 2.75rem !important;
   }
 
