@@ -82,7 +82,7 @@ header .mobile {
 }
 
 header .tablet {
-    width: calc(100% - 60px) !important;
+    width: calc(100% - 20px) !important;
     text-align: center;
 }
 
