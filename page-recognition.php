@@ -222,7 +222,7 @@ $majors = array(
         <div class="uf-wordmark">
          <?php get_template_part('images/recognition-ceremony/uf', 'wordmark.svg'); ?>
         </div>
-       <h1 class="mobile"><?php get_template_part('images/recognition-ceremony/uf', 'clas-wordmark-mobile.svg'); ?></</h1>
+       <h1 class="mobile"><?php get_template_part('images/recognition-ceremony/uf', 'clas-wordmark-mobile.svg'); ?></h1>
        <h1 class="tablet">College of Liberal Arts and Sciences</h1>
       </div>
     </div>
