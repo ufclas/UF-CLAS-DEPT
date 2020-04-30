@@ -410,7 +410,7 @@ $majors = array(
 // this stops the video from playing in the iframe after the modal is closed
 <?php foreach ($majors as $key => $list_value) { ?>
   jQuery("#<?php echo $list_value['modal_string']; ?>").on('hidden.bs.modal', function (e) {
-      jQuery("#<?php echo $list_value['modal_string']; ?> iframe").attr("src", $("#<?php echo $list_value['modal_string']; ?> iframe").attr("src"));
+      jQuery("#<?php echo $list_value['modal_string']; ?> iframe").attr("src", jQuery("#<?php echo $list_value['modal_string']; ?> iframe").attr("src"));
   });
 <?php } ?>
 </script>
