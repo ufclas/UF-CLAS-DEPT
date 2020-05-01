@@ -397,7 +397,7 @@ $majors = array(
           </div>
 
     			<!-- <h3>Associate Dean's Message</h3> -->
-    			<?php echo do_shortcode('[instagram-feed]'); ?>
+    			<?php echo do_shortcode('[instagram-feed whitelist="1"]'); ?>
         </div>
   		</section>
 	</main>
