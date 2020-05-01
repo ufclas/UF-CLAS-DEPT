@@ -1301,6 +1301,10 @@ p.graduating-list a {
     display: block;
   }
 
+  footer .clas-wordmark a {
+    display: flex;
+  }
+
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
