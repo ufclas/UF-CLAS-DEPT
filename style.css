@@ -5616,47 +5616,18 @@ Events Slider shortcode
     margin-bottom: 2rem;
 }
 
-/*=============================================
-Image Tiles Page Template
-==============================================*/
-.image-tiles-container {
-  flex: 1 auto;
-  position: relative;
-}
-
-.image-tiles-container:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.32);
-    max-height: 300px;
-}
-
-.image-tiles-container h3 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: white;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-tiles-container img {
-    max-height: 300px;
-    object-fit: cover;
-}
-
 .image-tiles-container a p {
     display: none;
 }
 
+.image-tile-widget img {
+    display: none;
+}
+
+.image-tile-widget h3 {
+    padding: .5rem 0 0 1rem;
+    color: #4c87b5;
+}
 
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
@@ -6098,17 +6069,54 @@ Image Tiles Page Template
   /*=============================================
   Image Tiles Page Template
   ==============================================*/
-  .image-tile-widget {
-      display: flex;
-      margin: 1rem 0 3rem;
-  }
-
   .image-tiles-container {
+    flex: 1 auto;
+    position: relative;
     margin: 0 .5rem;
   }
 
   .image-tiles-container:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.32);
+      max-height: 300px;
       max-height: 100vh;
+  }
+
+  .image-tile-widget img {
+    display: block;
+  }
+
+  .image-tiles-container h3 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: white;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .image-tiles-container img {
+      max-height: 300px;
+      object-fit: cover;
+      height: 145px !important;
+  }
+
+  .image-tile-widget {
+      display: flex;
+      margin: 1rem 0 1rem;
+  }
+
+  .image-tiles-container > div a {
+    display: flex;
   }
 }
 
@@ -7584,8 +7592,14 @@ Image Tiles Page Template
                             /*=============================================
                             Image Tiles Page Template
                             ==============================================*/
+                            .image-tile-widget {
+                                display: flex;
+                                margin: 1rem 0 1rem;
+                            }
+
                             .image-tiles-container img {
-                                max-height: 185px;
+                              height: 185px !important;
+                              width: 185px !important;
                             }
 
 
