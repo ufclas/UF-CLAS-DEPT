@@ -193,7 +193,7 @@ $majors = array(
 	"Spanish / Portuguese" => array(
     "image"        => "",
     "video"        => "https://www.youtube.com/embed/0OiLXDpFAWA",
-    "modal_string" => "modal_spanishandportuguese",
+    "modal_string" => "modal_spanishportuguese",
   ),
 
 	"Statistics" => array(
