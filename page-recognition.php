@@ -311,7 +311,7 @@ $majors = array(
   			<!-- <h3>Dean's Message</h3> -->
   			<h2 class="congratulations">WELCOME MESSSAGE</h2>
   			<p class="from-message">from Associate Dean Joe Spillane</p>
-  			<iframe src="https://www.youtube.com/embed/cNr3r3nT8KE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
+  			<iframe src="https://www.youtube.com/embed/25tG9Hu5EVQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Joe Spillane Video" allowfullscreen></iframe>
 
         <!--  Flower Icon -->
         <div class="flower-icon">
@@ -326,13 +326,13 @@ $majors = array(
       <div class="inner-container">
         <!-- <h3>Student Message</h3> -->
         <h2 class="congratulations">CONGRATULATIONS</h2>
-        <p class="from-message">from Student #1</p>
-        <iframe src="https://www.youtube.com/embed/HY-wq_KCYm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
+        <p class="from-message">from Carlotta Ricolfi</p>
+        <iframe src="https://www.youtube.com/embed/IYc4lb7XEpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
 
         <!-- <h3>Student Message</h3> -->
         <h2 class="congratulations">CONGRATULATIONS</h2>
-        <p class="from-message">from Student #2</p>
-        <iframe src="https://www.youtube.com/embed/Wv4xATJv7pM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
+        <p class="from-message">from Annika Ramnath</p>
+        <iframe src="https://www.youtube.com/embed/Dd5TMnOmyR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Student Messages Video" allowfullscreen></iframe>
         <!--  Flower Icon -->
         <div class="flower-icon">
           <span class="border-before-after"><?php get_template_part('images/recognition-ceremony/uf', 'flower-icon.svg'); ?></span>
@@ -347,7 +347,7 @@ $majors = array(
         <!-- <h3>Associate Dean's Message</h3> -->
         <h2 class="congratulations">CONGRATULATIONS</h2>
         <p class="from-message">from Domonique Worship</p>
-        <iframe src="https://www.youtube.com/embed/PTASGJMJKmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/sLdf59N4Jzg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Alumna Message Video" allowfullscreen></iframe>
 
         <!--  Flower Icon -->
         <div class="flower-icon">
@@ -363,7 +363,7 @@ $majors = array(
   			<!-- <h3>Dean's Message</h3> -->
   			<h2 class="congratulations">CONGRATULATIONS</h2>
   			<p class="from-message">from Dean David Richardson</p>
-  			<iframe src="https://www.youtube.com/embed/lUhC-kvWN1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Dean's Message Video" allowfullscreen></iframe>
+  			<iframe src="https://www.youtube.com/embed/89AY-kZovXM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Dean's Message Video" allowfullscreen></iframe>
 
         <!--  Flower Icon -->
         <div class="flower-icon">
@@ -404,7 +404,7 @@ $majors = array(
 
 	<footer>
 		<div class="clas-wordmark">
-			<a href="https://clas.ufl.edu" target="_blank"><?php get_template_part('images/recognition-ceremony/uf', 'clas-wordmark.svg'); ?></a>
+			<a href="https://clas.ufl.edu" target="_blank"><?php get_template_part('images/recognition-ceremony/uf', 'clas-wordmark-footer.svg'); ?></a>
 		</div>
 
 		<div class="journeys-wordmark">

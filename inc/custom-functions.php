@@ -466,6 +466,15 @@ echo "<ul>";
     $clean_major = str_replace("&amp;",   "", $clean_major);
 		$clean_major = str_replace("&#8217;", "", $clean_major);
 		$clean_major = strtolower($clean_major);
+
+    //Removes the s from the following degrees
+    if($major == "Doctoral Degrees"){
+      $major = "Doctoral Degree";
+    }
+
+    if($major == "Master&#8217;s Degrees"){
+      $major = "Master&#8217;s Degree";
+    }
 		?>
 		<div class="modal fade" id="modal_<?php echo $clean_major; ?>" tabindex="-1" role="dialog" aria-labelledby="modal_<?php echo $clean_major; ?>" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
