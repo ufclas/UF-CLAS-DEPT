@@ -25,7 +25,7 @@
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
     exit;
-  } 
+  }
 
   // what the user searched for
   $searchterm = $searchfor;
@@ -489,7 +489,7 @@
               }
           } ?>
           <img src="https://campusmap.ufl.edu/library/photos/stars/B<?php echo $bldg.".".$graph_imageExtension; ?>" alt="<?php echo $value_building['fullName']; ?>">
-          <iframe src="http://campusmap.ufl.edu/#/index/<?php echo $bldg; ?>/17" width="100%" height="200"></iframe>
+          <iframe src="https://campusmap.ufl.edu/#/index/<?php echo $bldg; ?>/17" width="100%" height="200"></iframe>
 
             <?php
               if ($exception == "exception_department") {
