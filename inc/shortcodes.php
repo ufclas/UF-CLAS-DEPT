@@ -616,7 +616,7 @@ function ufclasPostSlider($atts){
 	//Query only tribe events. Only query 10
 	$args = array(
 		'numberposts' => 10,
-		'orderby' 		=> 'title',
+		'orderby' 		=> 'date',
 		'taxonomy'  	=> $category
 	);
 
