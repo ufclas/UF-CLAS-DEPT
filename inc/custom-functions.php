@@ -128,6 +128,17 @@ function blank_widgets_init(){
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ));
+
+
+  register_sidebar( array(
+    'name'          => ('Image Tiles'),
+    'id'            => 'image-tiles',
+    'description'   => 'Here are the image tiles that show up below the title when the page template "Image Tiles" is selected',
+    'before_widget' => '<div class="image-tiles-container">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ));
 }
 add_action('widgets_init', 'blank_widgets_init');
 
@@ -455,6 +466,15 @@ echo "<ul>";
     $clean_major = str_replace("&amp;",   "", $clean_major);
 		$clean_major = str_replace("&#8217;", "", $clean_major);
 		$clean_major = strtolower($clean_major);
+
+    //Removes the s from the following degrees
+    if($major == "Doctoral Degrees"){
+      $major = "Doctoral Degree";
+    }
+
+    if($major == "Master&#8217;s Degrees"){
+      $major = "Master&#8217;s Degree";
+    }
 		?>
 		<div class="modal fade" id="modal_<?php echo $clean_major; ?>" tabindex="-1" role="dialog" aria-labelledby="modal_<?php echo $clean_major; ?>" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">

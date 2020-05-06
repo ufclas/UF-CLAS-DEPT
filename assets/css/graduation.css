@@ -10,23 +10,21 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-    position: relative;
-    background-image: url(../../images/recognition-ceremony/century-tower-background.jpg);
-    background-position: -120px;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../../images/recognition-ceremony/century-tower-background.jpg', sizingMethod='scale');
+img.background {
+    position: fixed;
+    z-index: -1;
+    object-fit: cover;
+    object-position: -90px;
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
 }
 
 .btn::after {
   display: none;
+}
+
+body {
+    background: #002346;
 }
 
 /*===========================================
@@ -41,6 +39,30 @@ header {
   align-items: center;
 }
 
+.header-divider {
+  height: 5.6rem;
+}
+
+.top-mobile-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #002346;
+    z-index: 2;
+}
+
+.top-mobile-header:after {
+  background: #337AB7;
+  content: "";
+  position: absolute;
+  z-index: 99999;
+  width: 50px;
+  height: 50px;
+  right: 0;
+}
+
 h1 {
     font-family: "Surveyor Text A", "Surveyor Text B";
     font-style: italic;
@@ -49,7 +71,28 @@ h1 {
     font-size: 1.1875rem;
     line-height: 26px;
     letter-spacing: 0;
-    padding: 0px 20px !important;
+    width: calc(100% - 100px);
+    text-align: center;
+}
+
+header .mobile {
+    width: calc(100% - 50px) !important;
+    text-align: center;
+}
+
+header .tablet {
+    width: calc(100% - 20px) !important;
+    text-align: center;
+}
+
+.top-mobile-header h1.mobile {
+    width: calc(100% - 100px);
+    margin-left: 0 !important;
+}
+
+header .mobile svg {
+    width: 12.5rem;
+    height: auto;
 }
 
 .uf-wordmark {
@@ -83,7 +126,7 @@ iframe {
     text-align: center;
 }
 
-h1.tablet {
+.tablet {
     display: none;
 }
 
@@ -98,11 +141,26 @@ h1.tablet {
     top: 0;
     position: absolute;
     width: 100%;
+    width: calc(100% - 50px);
 }
 
 nav li {
     list-style: none;
 }
+
+.hamburger-menu-icon {
+    position: absolute;
+    top: -16px;
+    left: -34px;
+    z-index: 99;
+    height: 50px;
+    width: 50px;
+}
+
+input:checked ~ .hamburger-menu-icon {
+  background: #337AB7;
+}
+
 
 #menuToggle {
     display: block;
@@ -127,10 +185,11 @@ nav li {
 }
 
 #menuToggle input:checked ~ span {
-    right: -15px !important;
+    right: -10px !important;
+    top: -1px;
 }
 
-#menuToggle li:after {
+#menuToggle li a:after {
     position: relative;
     content: "\02192";
     color: #00337A;
@@ -149,52 +208,56 @@ nav li {
 
 #menuToggle input {
   display: block;
-  width: 54px;
+  width: 50px;
   height: 50px;
   position: absolute;
   top: -17px;
-  left: -5px;
+  left: -34px;
   cursor: pointer;
   opacity: 0;
-  z-index: 2;
-  -webkit-touch-callout: none;
+  z-index: 9999999;
 }
 
-#menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 9px !important;
-    position: relative;
-    background: #F45A1D;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+#menuToggle .hamburger-menu-icon span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 7px !important;
+  position: relative;
+  background: #fff;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+  top: 16px;
+  right: -14px;
 }
 
-#menuToggle span:first-child
+#menuToggle .hamburger-menu-icon span:first-child
 {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+#menuToggle .hamburger-menu-icon span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span {
-   opacity: 1;
-   transform: rotate(45deg) translate(-2px, -1px);
-   background: #fff;
-   height: 4px;
-   margin-bottom: 8px !important;
+#menuToggle input:checked ~ .hamburger-menu-icon span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-22px, -22px);
+  background: #fff;
+  height: 2px;
+  margin-bottom: 8px !important;
+  left: 17px;
+  top: 28px;
+  width: 25px;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked ~ .hamburger-menu-icon span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#menuToggle input:checked ~ .hamburger-menu-icon span:nth-last-child(2) {
   transform: rotate(-45deg) translate(5px, -4px);
 }
 
@@ -252,7 +315,7 @@ Top Section
 =============================================*/
 #container_graph_headers {
     text-align: center;
-    margin-top: 8rem !important;
+    margin-top: 4rem !important;
     height: 100vh;
 }
 
@@ -260,6 +323,10 @@ Top Section
     color: white;
     max-width: 275px;
     margin: 0 auto !important;
+}
+
+#container_graph_headers .flower-icon {
+    margin: 2rem 0 !important;
 }
 
 p.graph_header,
@@ -290,7 +357,7 @@ p#graph_header_titleSlug span {
 }
 
 .flower-icon {
-    margin: 1rem 0 !important;
+    margin: 7rem 0 2rem !important;
     text-align: center;
 }
 
@@ -340,16 +407,15 @@ p#graph_header_titleSlug span {
 Sections
 
 =============================================*/
-.section-container {
-    padding-top: 2rem !important;
-    height: 100vh;
+.link-landing {
+    height: 70px !important;
 }
 
 .major-recognition.section-container {
     height: auto;
 }
 
-h3.congratulations {
+h2.congratulations {
     font-family: "Surveyor Display A", "Surveyor Display B" !important;
     font-style: normal !important;
     font-weight: 500 !important;
@@ -389,6 +455,7 @@ ul.majors li {
     margin: 0 auto !important;
     list-style: none;
     text-align: left;
+    cursor: pointer;
 }
 
 ul.majors li:hover {
@@ -418,9 +485,17 @@ ul.majors li:hover {
     z-index: 1 !important;
     height: 180px;
     max-width: 320px;
+    margin: 1rem 0 !important;
 }
 
-.student-message.section-container {
+.deans-message iframe,
+.associate-deans-message iframe,
+.student-message iframe,
+.alumna-message iframe {
+    border: 1px solid #A9DCDA !important;
+}
+
+.student-message.section-container .inner-container {
     height: auto;
 }
 
@@ -522,8 +597,8 @@ Modals - Bootstrap and Custom Code
 }
 
 p.graduating-list {
-  margin-top: 2rem !important;
   text-align: center;
+  line-height: 22px;
 }
 
 p.graduating-list a {
@@ -531,10 +606,10 @@ p.graduating-list a {
     font-style: normal;
     font-weight: 400;
     color: white;
-    padding: 1rem !important;
-    text-transform: uppercase;
+    text-transform: inherit;
     letter-spacing: 1px;
     transition: .3s;
+    font-size: 1.125rem;
 }
 
 .modal-header {
@@ -835,18 +910,23 @@ Media Queries
 =============================================*/
 
 @media (min-width: 768px){
-  body {
-    background-position: initial;
+  img.background {
+      object-position: 0;
   }
 
   /*===========================================
     Header
   =============================================*/
-  h1.mobile {
+  .mobile {
     display: none;
   }
 
-  h1.tablet {
+  .uf-wordmark svg {
+    width: 2.5rem;
+    height: 1.625rem;
+  }
+
+  .tablet {
       display: block !important;
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-style: normal;
@@ -854,12 +934,27 @@ Media Queries
       font-size: 1.5rem;
       line-height: 29px;
       text-transform: uppercase;
-      width: 100%;
+      width: 100% !important;
       text-align: center;
+      color: white;
   }
 
   .top-hamburger-menu {
     height: 3.75rem;
+    width: calc(100% - 60px);
+  }
+
+  .hamburger-menu-icon {
+    top: -12px;
+    left: -38px;
+    height: 60px;
+    width: 60px;
+  }
+
+  input:checked ~ .hamburger-menu-icon {
+    background: #337AB7;
+    top: -16px;
+    left: -44px;
   }
 
   #menu li {
@@ -870,9 +965,24 @@ Media Queries
     font-size: 1.25rem;
   }
 
-  #menuToggle input:checked ~ span {
+  #menuToggle input:checked .hamburger-menu-icon span {
     right: -5px !important;
     top: 5px;
+  }
+
+  #menuToggle span {
+      top: 15px;
+      right: -13px;
+  }
+
+  #menuToggle input:checked ~ .hamburger-menu-icon span {
+    left: 21px;
+    top: 34px;
+  }
+
+  .top-mobile-header:after {
+    width: 60px;
+    height: 60px;
   }
   /*===========================================
     Top Section
@@ -909,10 +1019,6 @@ Media Queries
     Sections
   =============================================*/
 
-  .section-container {
-    height: 100vh;
-  }
-
   .flower-icon svg {
     width: 2rem;
     height: 2rem;
@@ -932,7 +1038,7 @@ Media Queries
     height: 12.125rem;
   }
 
-  h3.congratulations {
+  h2.congratulations {
     font-size: 2.25rem !important;
     line-height: 48px;
     margin-bottom: 10px !important;
@@ -958,9 +1064,14 @@ Media Queries
     max-width: 768px;
 }
 
+p.graduating-list {
+    margin-top: 2rem !important;
+}
+
 p.graduating-list a {
   border: 1px solid white !important;
   font-size: 1.25rem;
+  padding: 1rem !important;
 }
 
 /*===========================================
@@ -989,7 +1100,7 @@ p.graduating-list a {
   =============================================*/
 
   footer {
-    height: 4.65rem;
+    height: 3.75rem;
     clear: both;
   }
 
@@ -1001,6 +1112,13 @@ p.graduating-list a {
 }
 
 @media (min-width: 1025px){
+  .fixed-header,
+  .top-mobile-header,
+  .header-divider
+   {
+    display: none;
+  }
+
   .mobile-menu {
     display: none !important;
   }
@@ -1009,6 +1127,10 @@ p.graduating-list a {
     position: fixed;
     top: 0;
     z-index: 9999;
+  }
+
+  .inner-container {
+    min-height: 100vh;
   }
 
   .desktop-menu {
@@ -1044,7 +1166,7 @@ p.graduating-list a {
     transition: .3s;
   }
 
-  h3.congratulations {
+  h2.congratulations {
     font-size: 2.75rem !important;
   }
 
@@ -1055,7 +1177,15 @@ p.graduating-list a {
   p.graph_header,
   #graph_header_titleSlug {
       font-size: 2.625rem;
-      line-height: 56px;
+      line-height: 58px !important;
+  }
+
+  #graph_header_titleSlug span {
+    font-size: 2.625rem !important;
+  }
+
+  .flower-icon {
+    margin: 0 !important
   }
 
   .flower-icon svg {
@@ -1073,16 +1203,23 @@ p.graduating-list a {
     height: 100vh;
   }
 
+  .link-landing {
+    height: 90px !important;
+    margin: 1rem !important;
+  }
+
+  .section-container {
+      padding-top: 0 !important;
+      height: 100vh;
+      display: initial;
+  }
+
   #top {
       padding: .1rem !important;
   }
 
-  .link-landing {
-    padding-top: 7rem !important;
-  }
-
   #container_graph_headers {
-      display: flex;
+      display: initial;
       justify-content: center;
       align-items: center;
       margin-top: 4vh !important;
@@ -1108,8 +1245,23 @@ p.graduating-list a {
   .student-message iframe,
   .alumna-message iframe,
   .modal-body iframe {
-    max-width: 1025px;
-    height: 575px;
+      max-width: 1025px;
+      height: 575px;
+      width: 100%;
+      display: block;
+      margin: 3rem auto !important;
+  }
+
+  .modal-body > iframe {
+    margin: 0 !important;
+  }
+
+  .modal-title {
+      font-size: 1.625rem;
+  }
+
+  p.graduating-list {
+    margin-top: 3rem !important;
   }
 
   ul.majors {
@@ -1149,21 +1301,27 @@ p.graduating-list a {
     display: flex;
     justify-content: space-between;
     padding: 0 2.5rem !important;
+    height: 5.6rem;
   }
 
   .clas-wordmark {
     display: block;
   }
 
+  footer .clas-wordmark a {
+    display: flex;
+  }
+
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
-  .section-container {
-      height: 100vw;
-  }
 
   #container_graph_headers {
     height: 100vw;
     margin-top: 4rem !important;
+  }
+
+  img.background {
+    object-position: 0;
   }
 }
