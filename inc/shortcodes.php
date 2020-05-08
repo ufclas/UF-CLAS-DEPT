@@ -506,7 +506,7 @@ function imageBlock($atts){
 	 ), $atts ) );
 
 	 $output  = '<div class="card-main-container">';
-	 $output .= '<a href="'. $link .'" target="_blank"><div class="card-container" style="background-image:url('. $image .')">';
+	 $output .= '<a href="'. $link .'"><div class="card-container" style="background-image:url('. $image .')">';
 	 $output .= "<div class='text-content'>";
 	 $output .= "<h3>$headline</h3>";
 	 $output .= "<p>$content</p>";
@@ -616,7 +616,7 @@ function ufclasPostSlider($atts){
 	//Query only tribe events. Only query 10
 	$args = array(
 		'numberposts' => 10,
-		'orderby' 		=> 'title',
+		'orderby' 		=> 'date',
 		'taxonomy'  	=> $category
 	);
 

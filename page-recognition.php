@@ -210,7 +210,7 @@ $majors = array(
 
 	"Women&#8217;s Studies" => array(
     "image"        => "",
-    "video"        => "https://www.youtube.com/embed/euIZa05Ov-4",
+    "video"        => "https://www.youtube.com/embed/L_2BlaVnNB0",
     "modal_string" => "modal_womensstudies",
   ),
 );
@@ -397,7 +397,7 @@ $majors = array(
           </div>
 
     			<!-- <h3>Associate Dean's Message</h3> -->
-    			<?php echo do_shortcode('[instagram-feed]'); ?>
+    			<?php echo do_shortcode('[instagram-feed whitelist="1"]'); ?>
         </div>
   		</section>
 	</main>
