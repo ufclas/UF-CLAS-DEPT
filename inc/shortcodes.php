@@ -617,7 +617,7 @@ function ufclasPostSlider($atts){
 	$args = array(
 		'numberposts' => 10,
 		'orderby' 		=> 'date',
-		'taxonomy'  	=> $category
+		'category_name'  	=> $category
 	);
 
 	$ufclasPosts = new WP_Query($args);
