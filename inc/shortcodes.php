@@ -424,8 +424,11 @@ function eventsCalendarShortcode($atts){
         'image'      => "no", //No featured image will show up on default
         'eventtotal' => "10", //Total of events to show per page
         'excerpt'    => "no", //displays the excerpt
-        'order'      => "ASC"
+        'order'      => "ASC",
+				'pagination' => 'no' //Shows pagination
       ), $atts ) );
+
+		$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
     $args = array(
       'post_status'       =>   'publish',
@@ -435,6 +438,7 @@ function eventsCalendarShortcode($atts){
       'meta_key'          =>    '_EventStartDate',
       'orderby'           =>    '_EventStartDate',
       'order'             =>    $order,
+			'paged'	=> $paged,
       //required in 3.x
       'eventDisplay'      =>     'custom',
       //query events by category
@@ -450,7 +454,9 @@ function eventsCalendarShortcode($atts){
 
     $get_posts = new WP_Query($args);
 
-    if($get_posts->have_posts()) {
+		$output = "";
+
+		if($get_posts->have_posts()) {
       while($get_posts->have_posts()) {
         $get_posts->the_post();
 
@@ -484,6 +490,18 @@ function eventsCalendarShortcode($atts){
           $output .= '</div>'; //closes event div
 
         }
+
+				if($pagination == "yes"){
+					$big = 999999999; // need an unlikely integer
+
+					$output .= paginate_links( array(
+					    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					    'format' => '?paged=%#%',
+					    'current' => max( 1, get_query_var('paged') ),
+					    'total' => $get_posts->max_num_pages
+					) );
+				}
+
         wp_reset_postdata();
         return $output;
       }
