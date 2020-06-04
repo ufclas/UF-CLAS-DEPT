@@ -632,17 +632,18 @@ function ufclasPostSlider($atts){
 		 'category'   => "", //Main headline for block
 	 ), $atts ) );
 
+	 $args_sticky = array(
+ 		'posts_per_page' => 10,
+		'post__in' => $sticky,
+		'category_name'  	=> $category,
+ 	);
+
 	//Query only tribe events. Only query 10
 	$args = array(
 		'numberposts' => 10,
 		'orderby' 		=> 'date',
+		'post__not_in' => $sticky,
 		'category_name'  	=> $category,
-		'post__not_in' => $sticky
-	);
-
-
-	$args_sticky = array(
-		'posts_per_page' => -1
 	);
 
 	$the_query_sticky = new WP_Query($args_sticky);
