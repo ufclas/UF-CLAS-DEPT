@@ -621,11 +621,12 @@ add_shortcode('events-calendar-slider','eventsCalendarCarouselShortcode');
 
 /*========================================
 *
-* The Events Calendar Plugin
+* Post Slider Shortcode
 *
 *==========================================*/
 function ufclasPostSlider($atts){
 	global $post;
+	$sticky = get_option( 'sticky_posts' );
 
 	extract( shortcode_atts( array(
 		 'category'   => "", //Main headline for block
@@ -635,12 +636,35 @@ function ufclasPostSlider($atts){
 	$args = array(
 		'numberposts' => 10,
 		'orderby' 		=> 'date',
-		'category_name'  	=> $category
+		'category_name'  	=> $category,
+		'post__not_in' => $sticky
 	);
+
+
+	$args_sticky = array(
+		'posts_per_page' => -1
+	);
+
+	$the_query_sticky = new WP_Query($args_sticky);
 
 	$ufclasPosts = new WP_Query($args);
 
 		$output = "<div class='featured-post-slider-container'>";
+
+			if($sticky[0]){
+				while($the_query_sticky->have_posts()){
+					$the_query_sticky->the_post();
+
+				//Opens carousel container
+				 $output .= '<div class="individual-featured-post-slider-container">';
+				//Wrapper for slides
+				 $output .= get_the_post_thumbnail();
+				 $output .= '<div class="post-title">';
+				 $output .=  '<a href="' . get_the_permalink(). '">' . get_the_title() .'</a>';
+				 $output .= '</div></div>';
+
+				}
+			}
 
 			if($ufclasPosts->have_posts()){
 				while($ufclasPosts->have_posts()){
