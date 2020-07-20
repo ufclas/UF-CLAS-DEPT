@@ -438,4 +438,76 @@ if ( class_exists( 'IssueM' ) ) {
 	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
 }
 
+
+/*======================================================
+*
+*
+* CLAS Hero Image after header
+*
+*
+*========================================================*/
+
+function clasHeroImage(){
+
+$classes = get_body_class();
+
+ echo '<div class="single-featured-image-header">';
+                // If this is a magazine article
+                if ( is_page_template( 'single-magazine-article.php' ) ) {
+          echo '<div class="wrap">';
+          the_title( '<h2 class="entry-title">', '</h2>' );
+
+          // Fall back to post meta and prevent fatal error if ACF isn't active
+          $var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
+          $var_byline = get_post_meta( get_the_ID(), 'byline', true);
+
+         if ( function_exists('get_field') ){
+           $var_sub_head = get_field('sub_head');
+           $var_byline = get_field('byline');
+         }
+
+         if ( !empty( $var_sub_head ) ){
+           echo '<h2 class="eee">' . esc_html( $var_sub_head ) . '</h2>';
+         }
+          if ( !empty( $var_byline ) ){
+           echo '<span class="author">By ' . esc_html( $var_byline ) . '</span>';
+         }
+
+                    echo '</div><!-- .wrap -->';
+                }
+
+       the_post_thumbnail( 'twentyseventeen-featured-image' );
+       $caption = get_the_post_thumbnail_caption();
+       $photo_credit = get_post_meta( get_post_thumbnail_id(), 'photo_credit_txt', true );
+
+       if ( !empty($caption) ){
+         if ( !empty($photo) ){
+           echo '<div class="featured-image-caption"><div class="wrap"><figcaption class="wp-caption-text">'. $caption.' <span class="photo-credit"> '. $photo_credit .'</span>'.'</figcaption></div></div>';
+         }
+         else {
+           echo '<div class="featured-image-caption"><div class="wrap"><figcaption class="wp-caption-text">'. $caption .'</figcaption></div></div>';
+         }
+       }
+
+
+                if ( is_page_template( 'single-featured-story.php' )  ) {
+                    echo '<div class="textOverImage">';
+          echo '<div class="wrap">';
+          the_title( '<h1 class="featured-story-header">', '</h1>' );
+
+          // Fall back to post meta and prevent fatal error if ACF isn't active
+          $var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
+
+         if ( function_exists('get_field') ){
+           $var_sub_head = get_field('sub_head');
+         }
+
+         if ( !empty( $var_sub_head ) ){
+           echo '<h2 class="dddd">' . esc_html( $var_sub_head ) . '</h2>';
+         }
+           echo '</div><!-- .wrap -->';
+           echo '</div><!-- .textOverImage -->';
+                }
+ echo '</div><!-- .single-featured-image-header -->';
+}
 ?>

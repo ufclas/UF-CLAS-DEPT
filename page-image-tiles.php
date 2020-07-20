@@ -6,6 +6,13 @@
 
 get_header(); ?>
 
+	<?php
+		/*
+		 * Uses the Featured Image as a hero image
+		 */
+		clasHeroImage();
+	?>
+
 	<div class="wrap">
 		<?php the_title('<h2 class="entry-title">','</h2>'); ?>
 

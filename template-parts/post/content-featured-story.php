@@ -25,8 +25,8 @@
            <div class="wrap">
 <?php
 
-		if ( !has_post_thumbnail() ) { 
-			the_title( '<h1 class="entry-title">', '</h1>' );
+		if ( !has_post_thumbnail() ) {
+			the_title( '<h2 class="entry-title">', '</h2>' );
 
 			// Get custom field for subhead
 			$var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
