@@ -510,4 +510,21 @@ $classes = get_body_class();
                 }
  echo '</div><!-- .single-featured-image-header -->';
 }
+
+/*====================================
+
+  Allows website administrators to use iframes, inputs and scripts.
+
+========================================*/
+function clasUnfilteredHtmlCapabilityToAdmins( $caps, $cap, $user_id ) {
+
+ if ( 'unfiltered_html' === $cap && user_can( $user_id, 'administrator' ) ) {
+
+ $caps = array( 'unfiltered_html' );
+
+ }
+
+ return $caps;
+}
+add_filter( 'map_meta_cap', 'clasUnfilteredHtmlCapabilityToAdmins', 1, 3 );
 ?>
