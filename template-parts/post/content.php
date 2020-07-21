@@ -13,13 +13,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<header class="entry-header">
-		
+
 		<div class="wrap">
 		<?php
-		the_title( '<h1 class="entry-title">', '</h1>' );
-		
+		the_title( '<h2 class="entry-title">', '</h2>' );
+
 		// Show date or edit link
 		if ( 'post' === get_post_type()  ) {
 			echo '<div class="entry-meta"><p>';
@@ -29,7 +29,7 @@
 		?>
            </div><!-- .wrap -->
 	</header><!-- .entry-header -->
-	
+
 	<div class="entry-content">
            <div class="wrap">
 		<?php

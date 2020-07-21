@@ -438,61 +438,93 @@ if ( class_exists( 'IssueM' ) ) {
 	require get_stylesheet_directory() . '/inc/issuem/issuem.php';
 }
 
-/**
-* Modals for Spring 2020 Ceremony
-*/
-function modals_listMajors($majors) {
-	// dye modal
-	echo "<ul class='majors'>";
 
-	foreach ($majors as $major => $list_value_media) {
-		$clean_major = str_replace(" ", "",       $major);
-		$clean_major = str_replace("'", "",       $clean_major);
-		$clean_major = str_replace("/", "",       $clean_major);
-		$clean_major = str_replace("&amp;",   "", $clean_major);
-    $clean_major = str_replace("&#8217;", "", $clean_major);
-		$clean_major = strtolower($clean_major);
-		echo "<li id=\"{$clean_major}-modal\" data-toggle=\"modal\" data-target=\"#modal_{$clean_major}\" aria-labelledby=\"modal_{$clean_major}\">{$major}</li>";
-	}
-	echo "</ul>";
+/*======================================================
+*
+*
+* CLAS Hero Image after header
+*
+*
+*========================================================*/
 
-echo "<ul>";
+function clasHeroImage(){
 
-	$i = 0;
-	foreach ($majors as $major => $list_value_media) {
-		$clean_major = str_replace(" ", "",       $major);
-		$clean_major = str_replace("'", "",       $clean_major);
-		$clean_major = str_replace("/", "",       $clean_major);
-    $clean_major = str_replace("&amp;",   "", $clean_major);
-		$clean_major = str_replace("&#8217;", "", $clean_major);
-		$clean_major = strtolower($clean_major);
+$classes = get_body_class();
 
-    //Removes the s from the following degrees
-    if($major == "Doctoral Degrees"){
-      $major = "Doctoral Degree";
-    }
+ echo '<div class="single-featured-image-header">';
+                // If this is a magazine article
+                if ( is_page_template( 'single-magazine-article.php' ) ) {
+          echo '<div class="wrap">';
+          the_title( '<h2 class="entry-title">', '</h2>' );
 
-    if($major == "Master&#8217;s Degrees"){
-      $major = "Master&#8217;s Degree";
-    }
-		?>
-		<div class="modal fade" id="modal_<?php echo $clean_major; ?>" tabindex="-1" role="dialog" aria-labelledby="modal_<?php echo $clean_major; ?>" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modal_<?php echo $clean_major; ?>_title"><?php echo $major; ?></h5>
-          </div>
-          <div class="modal-body">
-						<iframe width="100%" height="315" src="<?php echo $list_value_media['video']; ?>" title='<?php echo "video-$clean_major"; ?>' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="graduating-list"><a href="https://recognition-ceremony.clas.ufl.edu/files/2020/graduating-students/<?php echo $clean_major ?>.pdf" target="_blank"><?php echo "View $major Graduates" ?></a></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-		<?php
-	}
-} // modals_listMajors function
+          // Fall back to post meta and prevent fatal error if ACF isn't active
+          $var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
+          $var_byline = get_post_meta( get_the_ID(), 'byline', true);
+
+         if ( function_exists('get_field') ){
+           $var_sub_head = get_field('sub_head');
+           $var_byline = get_field('byline');
+         }
+
+         if ( !empty( $var_sub_head ) ){
+           echo '<h2 class="eee">' . esc_html( $var_sub_head ) . '</h2>';
+         }
+          if ( !empty( $var_byline ) ){
+           echo '<span class="author">By ' . esc_html( $var_byline ) . '</span>';
+         }
+
+                    echo '</div><!-- .wrap -->';
+                }
+
+       the_post_thumbnail( 'twentyseventeen-featured-image' );
+       $caption = get_the_post_thumbnail_caption();
+       $photo_credit = get_post_meta( get_post_thumbnail_id(), 'photo_credit_txt', true );
+
+       if ( !empty($caption) ){
+         if ( !empty($photo) ){
+           echo '<div class="featured-image-caption"><div class="wrap"><figcaption class="wp-caption-text">'. $caption.' <span class="photo-credit"> '. $photo_credit .'</span>'.'</figcaption></div></div>';
+         }
+         else {
+           echo '<div class="featured-image-caption"><div class="wrap"><figcaption class="wp-caption-text">'. $caption .'</figcaption></div></div>';
+         }
+       }
+
+
+                if ( is_page_template( 'single-featured-story.php' )  ) {
+                    echo '<div class="textOverImage">';
+          echo '<div class="wrap">';
+          the_title( '<h1 class="featured-story-header">', '</h1>' );
+
+          // Fall back to post meta and prevent fatal error if ACF isn't active
+          $var_sub_head = get_post_meta( get_the_ID(), 'sub_head', true);
+
+         if ( function_exists('get_field') ){
+           $var_sub_head = get_field('sub_head');
+         }
+
+         if ( !empty( $var_sub_head ) ){
+           echo '<h2 class="dddd">' . esc_html( $var_sub_head ) . '</h2>';
+         }
+           echo '</div><!-- .wrap -->';
+           echo '</div><!-- .textOverImage -->';
+                }
+ echo '</div><!-- .single-featured-image-header -->';
+}
+
+/*====================================
+
+  Allows website administrators to use iframes, inputs and scripts.
+
+========================================*/
+function clasUnfilteredHtmlCapabilityToAdmins( $caps, $cap, $user_id ) {
+
+ if ( 'unfiltered_html' === $cap && user_can( $user_id, 'administrator' ) ) {
+
+ $caps = array( 'unfiltered_html' );
+
+ }
+
+ return $caps;
+}
+add_filter( 'map_meta_cap', 'clasUnfilteredHtmlCapabilityToAdmins', 1, 3 );
 ?>

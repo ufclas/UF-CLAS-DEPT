@@ -424,8 +424,11 @@ function eventsCalendarShortcode($atts){
         'image'      => "no", //No featured image will show up on default
         'eventtotal' => "10", //Total of events to show per page
         'excerpt'    => "no", //displays the excerpt
-        'order'      => "ASC"
+        'order'      => "ASC",
+				'pagination' => 'no' //Shows pagination
       ), $atts ) );
+
+		$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
     $args = array(
       'post_status'       =>   'publish',
@@ -435,6 +438,7 @@ function eventsCalendarShortcode($atts){
       'meta_key'          =>    '_EventStartDate',
       'orderby'           =>    '_EventStartDate',
       'order'             =>    $order,
+			'paged'	=> $paged,
       //required in 3.x
       'eventDisplay'      =>     'custom',
       //query events by category
@@ -450,7 +454,9 @@ function eventsCalendarShortcode($atts){
 
     $get_posts = new WP_Query($args);
 
-    if($get_posts->have_posts()) {
+		$output = "";
+
+		if($get_posts->have_posts()) {
       while($get_posts->have_posts()) {
         $get_posts->the_post();
 
@@ -484,6 +490,18 @@ function eventsCalendarShortcode($atts){
           $output .= '</div>'; //closes event div
 
         }
+
+				if($pagination == "yes"){
+					$big = 999999999; // need an unlikely integer
+
+					$output .= paginate_links( array(
+					    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					    'format' => '?paged=%#%',
+					    'current' => max( 1, get_query_var('paged') ),
+					    'total' => $get_posts->max_num_pages
+					) );
+				}
+
         wp_reset_postdata();
         return $output;
       }
@@ -603,26 +621,51 @@ add_shortcode('events-calendar-slider','eventsCalendarCarouselShortcode');
 
 /*========================================
 *
-* The Events Calendar Plugin
+* Post Slider Shortcode
 *
 *==========================================*/
 function ufclasPostSlider($atts){
 	global $post;
+	$sticky = get_option( 'sticky_posts' );
 
 	extract( shortcode_atts( array(
 		 'category'   => "", //Main headline for block
 	 ), $atts ) );
 
+	 $args_sticky = array(
+ 		'posts_per_page' => 10,
+		'post__in' => $sticky,
+		'category_name'  	=> $category,
+ 	);
+
 	//Query only tribe events. Only query 10
 	$args = array(
 		'numberposts' => 10,
 		'orderby' 		=> 'date',
-		'taxonomy'  	=> $category
+		'post__not_in' => $sticky,
+		'category_name'  	=> $category,
 	);
+
+	$the_query_sticky = new WP_Query($args_sticky);
 
 	$ufclasPosts = new WP_Query($args);
 
 		$output = "<div class='featured-post-slider-container'>";
+
+			if($sticky[0]){
+				while($the_query_sticky->have_posts()){
+					$the_query_sticky->the_post();
+
+				//Opens carousel container
+				 $output .= '<div class="individual-featured-post-slider-container">';
+				//Wrapper for slides
+				 $output .= get_the_post_thumbnail();
+				 $output .= '<div class="post-title">';
+				 $output .=  '<a href="' . get_the_permalink(). '">' . get_the_title() .'</a>';
+				 $output .= '</div></div>';
+
+				}
+			}
 
 			if($ufclasPosts->have_posts()){
 				while($ufclasPosts->have_posts()){

@@ -18,11 +18,6 @@ function ufclas_emily_theme_enqueue_styles() {
    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), $theme_version );
    wp_enqueue_style('child-style-inline', get_stylesheet_directory_uri() . '/assets/css/inline.min.css', array('child-style'), $theme_version );
 
-	 //Only load CSS for graduation page
-	 if ( is_page_template( 'page-recognition.php' ) ) {
-		 wp_enqueue_style('graduation-ceremony', get_stylesheet_directory_uri() . '/assets/css/graduation.css', array('child-style'), $theme_version );
-		}
-
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
 		wp_enqueue_style( 'twentyseventeen-ie9', get_template_directory_uri() . '/assets/css/ie9.css', array( 'child-style' ) );

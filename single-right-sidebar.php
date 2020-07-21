@@ -6,6 +6,14 @@
 
 get_header(); ?>
 
+
+	<?php
+		/*
+		 * Uses the Featured Image as a hero image
+		 */
+		clasHeroImage();
+	?>
+
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
