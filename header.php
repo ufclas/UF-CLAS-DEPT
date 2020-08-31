@@ -52,6 +52,13 @@
 		}else {
 			get_template_part('template-parts/header/department');
 		}
+
+		//Displays the alert message if it's filled out in the backend
+		if ( !empty(get_theme_mod('header_alert')) ){
+			 echo '<div class="header-alert"><p>';
+			 echo wp_kses_post( get_theme_mod('header_alert') );
+			 echo '</p></div>';
+		 }
 	?>
 
 <div id="page" class="site">
