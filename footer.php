@@ -23,7 +23,7 @@
    <div class="footer-main-col-1">
       <div class="uf">
          <a href="http://www.ufl.edu" target="_blank">
-            <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'college-logo-stacked', 'class' => 'icon-college-logo-stacked' ) ); ?>
+            <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'clas-connected-footer', 'class' => 'icon-college-logo-stacked' ) ); ?>
 			<span class="SVGaltText">College of Liberal Arts and Sciences Homepage</span>
          </a>
       </div>
