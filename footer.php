@@ -22,7 +22,7 @@
    <div class="footer-main-wrap">
    <div class="footer-main-col-1">
       <div class="uf">
-         <a href="http://www.ufl.edu" target="_blank">
+         <a href="https://clas.ufl.edu" target="_blank">
             <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'clas-connected-footer', 'class' => 'icon-college-logo-stacked' ) ); ?>
 			<span class="SVGaltText">College of Liberal Arts and Sciences Homepage</span>
          </a>
@@ -166,7 +166,7 @@ endif;
             </ul>
          </div>
 
-   <p class="contact-webmaster">If you encounter any technical issues with this website please contact us at <a href="https://mediaservices.clas.ufl.edu/" title="Visit Media Services">Media Services</a></p>
+   <p class="contact-webmaster">If you have any website questions please contact <a href="https://mediaservices.clas.ufl.edu/" title="Visit Media Services">CLAS Communications Support</a></p>
 
           </div>
 
