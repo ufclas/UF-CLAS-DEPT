@@ -12,7 +12,7 @@
 				 <div class="strikeRight">
 	 				<a href="http://www.clas.ufl.edu" target="_blank">
 	 						<span class="college-logo-desktop">
-	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'college-logo' ) ); ?>
+	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'clas-connected' ) ); ?>
 	 							<span class="SVGaltText">College of Liberal Arts and Sciences</span>
 	 						</span>
 	 						<span class="college-logo-mobile">

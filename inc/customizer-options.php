@@ -253,5 +253,21 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'text',
 	));
 
+	// Add alert under header
+	$wp_customize->add_section( 'theme_options_alert', array(
+		'title' => __('Header Alert', 'ufclas-emily'),
+		'description' => __('', 'ufclas-emily'),
+		'panel' => 'ufclas_emily_theme_options',
+	));
+
+	$wp_customize->add_setting( 'header_alert', array( 'default' => '' ));
+
+	$wp_customize->add_control( 'header_alert', array(
+		'label' => __('Header Alert', 'ufclas-emily'),
+		'description' => __("Enter the message that you want to show up below the header on all of the pages", 'ufclas-emily'),
+		'section' => 'theme_options_alert',
+		'type' => 'textarea',
+	));
+
 }
 add_action('customize_register','ufclas_emily_customize_register');

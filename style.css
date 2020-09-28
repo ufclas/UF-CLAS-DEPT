@@ -715,7 +715,26 @@
        transform: rotate(0deg);
        transition: all 0.33s ease 0s;
      }
-     /*__________________END__________________*/
+
+
+     .header-alert p {
+     	 font-family: Gentona_Book ,sans-serif!important;
+       color: #fff !important;
+       text-transform: uppercase;
+       font-size: 1.25rem;
+       padding: 0;
+      }
+
+     .header-alert {
+       background: #c2510a;
+       padding: 1.125rem;
+       margin-top: 125px;
+      }
+
+       .header-alert p {
+         max-width: 900px;
+         margin: 0 auto;
+       }
 
      /*__________________FOOTER DROP DOWN MENU__________________*/
 
@@ -6117,6 +6136,15 @@ Events Slider shortcode
 
   .image-tiles-container > div a {
     display: flex;
+  }
+
+  .header-alert {
+    margin-top: 0;
+  }
+
+  .header-alert p {
+    text-transform: none;
+    line-height: 132%;
   }
 }
 

@@ -34,6 +34,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6019574/7283992/css/fonts.css" />
 	<meta name="msapplication-TileColor" content="#00529b">
 	<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri().'/assets/images/favicon/favicon-144.png' ?>">
+	<script src="https://kit.fontawesome.com/79e986c029.js" crossorigin="anonymous"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -51,6 +52,13 @@
 		}else {
 			get_template_part('template-parts/header/department');
 		}
+
+		//Displays the alert message if it's filled out in the backend
+		if ( !empty(get_theme_mod('header_alert')) ){
+			 echo '<div class="header-alert"><p>';
+			 echo wp_kses_post( get_theme_mod('header_alert') );
+			 echo '</p></div>';
+		 }
 	?>
 
 <div id="page" class="site">

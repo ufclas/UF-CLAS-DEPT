@@ -12,7 +12,7 @@
 				 <div class="strikeRight">
 					 <h1><a href="<?php echo get_site_url(); ?>">
 	 						<span class="college-logo-desktop">
-	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'college-logo' ) ); ?>
+	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'clas-connected' ) ); ?>
 	 							<span class="SVGaltText">College of Liberal Arts and Sciences</span>
 	 						</span>
 	 						<span class="college-logo-mobile">
