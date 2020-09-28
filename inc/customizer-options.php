@@ -147,7 +147,7 @@ function ufclas_emily_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'archive_content', array( 'default' => 'full', 'sanitize_callback' => 'ufclas_emily_sanitize_choices' ));
 	$wp_customize->add_setting( 'archive_date', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
-	$wp_customize->add_setting( 'archive_featured', array( 'default' => 1, 'sanitize_callback' => 'absint' ));
+	$wp_customize->add_setting( 'archive_featured', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
 	$wp_customize->add_setting( 'archive_widgets', array( 'default' => 0, 'sanitize_callback' => 'absint' ));
 
 	$wp_customize->add_control( 'archive_content', array(
