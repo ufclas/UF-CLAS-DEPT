@@ -1696,11 +1696,21 @@ h1 {
    clear: both;
 }
 
-h2.entry-title, h3.entry-title {
+h2.entry-title {
 	font-family: "Gentona_ExtraBold", Arial,sans-serif;
 	font-weight: normal;
 	font-size: 2.25rem;
 	line-height: 2.6875rem;
+	letter-spacing: 1px;
+	color: #004083;
+}
+
+h3.entry-title,
+h3.entry-title a {
+	font-family: "Gentona_ExtraBold", Arial,sans-serif;
+	font-weight: normal;
+  font-size: 1.625rem;
+	line-height: 120%;
 	letter-spacing: 1px;
 	color: #004083;
 }
@@ -1726,8 +1736,6 @@ h2 {
 
 /* Magazine Article Sub-heading and byline */
 .fi h2, .post-template-single-featured-story h2 {
-
-
     font-weight: normal;
     padding: 0px;
     padding-top: 0px;
@@ -1765,6 +1773,12 @@ h2 {
     padding-bottom: 1rem;
     font-style: italic;
 }
+
+time.entry-date.published {
+    font-size: 1rem;
+    font-family: "Gentona_Book";
+}
+
 /* OVERRIDE WRAP MARGINS */
 .noTopBottomMargin{
    padding-top:0px !important;
@@ -2558,6 +2572,19 @@ a.page-numbers  .icon-arrow-left:hover {
 
 .archive .post-thumbnail + .wrap {
 	padding-top: 0;
+}
+
+.archive .entry-mneta,
+.archive .entry-meta p {
+  padding: 0;
+}
+
+.archive .read-more {
+  display: none;
+}
+
+.archive article {
+    margin: 1rem 0;
 }
 
  *:not(.post-template-single-featured-story) .entry-content > .wrap {
