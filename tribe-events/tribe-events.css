@@ -13,11 +13,10 @@
     color: #004083;
 }
 
-.tribe-event-date-start span,
-.tribe-event-date-end span {
+#page .tribe-events-event-meta .author .tribe-event-schedule-details {
     font-family: "Gentona_ExtraBold" !important;
     font-size: 1.7rem;
-    color: #f45a1d;
+    color: #f45a1d !important;
     padding: .5rem 0;
     text-transform: uppercase;
 }
