@@ -27,7 +27,13 @@ $more = false;
 		<?php do_action( 'tribe_events_inside_before_loop' ); ?>
 
 		<!-- Month / Year Headers -->
-		<?php tribe_events_list_the_date_headers(); ?>
+		<?php
+		$event_type = tribe( 'tec.featured_events' )->is_featured( $post->ID ) ? 'featured' : 'event';
+
+		//Hides the month if it's a featured event
+		if($event_type != "featured"){
+			tribe_events_list_the_date_headers();
+		} ?>
 
 		<!-- Event  -->
 		<?php
@@ -36,9 +42,13 @@ $more = false;
 			$post_parent = ' data-parent-post-id="' . absint( $post->post_parent ) . '"';
 		}
 		?>
+		<?php
+			//Featured events do not show up on the list since they show up on the top.
+			if($event_type != "featured"){
+		?>
+
 		<div id="post-<?php the_ID() ?>" class="<?php tribe_events_event_classes() ?>" <?php echo $post_parent; ?>>
 			<?php
-			$event_type = tribe( 'tec.featured_events' )->is_featured( $post->ID ) ? 'featured' : 'event';
 
 			/**
 			 * Filters the event type used when selecting a template to render
@@ -51,8 +61,9 @@ $more = false;
 			?>
 		</div>
 
+	<?php } //Closes if statement to hide remove featured events
 
-		<?php do_action( 'tribe_events_inside_after_loop' ); ?>
+	 do_action( 'tribe_events_inside_after_loop' ); ?>
 	<?php endwhile; ?>
 
 </div><!-- .tribe-events-loop -->
