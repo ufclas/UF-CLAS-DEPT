@@ -13,7 +13,7 @@
     color: #004083;
 }
 
-#page .tribe-events-event-meta .author .tribe-event-schedule-details {
+.tribe-events-event-meta .author .tribe-event-schedule-details {
     font-family: "Gentona_ExtraBold" !important;
     font-size: 1.7rem;
     color: #f45a1d !important;
@@ -797,6 +797,14 @@ hr.featured {
     background: white;
 }
 
+.tribe-events-list .type-tribe_events:first-of-type {
+  margin-top: 0 !important;
+}
+
+.tribe-events-loop .tribe-event-featured {
+    display: none !important;
+}
+
 /*====================================
 
 Media Queries
@@ -903,7 +911,6 @@ Media Queries
   }
 
   .tribe-events-list .type-tribe_events {
-      width: 45%;
       display: inline-block;
   }
 
@@ -974,7 +981,9 @@ Media Queries
 
   .tribe-events-list .type-tribe_events img {
       max-width: 210px;
+      height: 210px !important;
   }
+
   #tribe-events .tribe-events-content p,
   .tribe-events-after-html p,
   .tribe-events-before-html p {

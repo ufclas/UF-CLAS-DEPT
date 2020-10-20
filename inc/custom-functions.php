@@ -329,34 +329,48 @@ add_action('pre_get_posts', 'tags_support_query');
 *=============================*/
 
 function uf_clas_featured_events(){
+  global $post;
 
+  // Grab the 5 next "party" events (by tag)
+  $eventss = tribe_get_events( [
+     'eventDisplay'   => 'custom',
+     'start_date'     => 'now',
+     'posts_per_page' => 3,
+     'featured'       => true,
+  ] );
+  ?>
 
+  <h2 class='entry-title'>Featured Events</h2>
+  <div class='featured-events-container'>
 
-  $events = array(
-          'posts_per_page' => 3,
-          'tax_query' => array(array(
-                  'taxonomy' => 'tribe_events_cat',
-                  'field' => 'slug',
-                  'terms' => 'featured'))
-  );
+<?php
+  // Loop through the events, displaying the title and content for each
+  foreach ( $eventss as $event ) {
+    echo '<div class="featured-event post-'. get_the_ID() .'">';
+      echo "<div class='type-tribe_events'>";
 
-  $featuredEvents = new WP_Query($events);
-  if($featuredEvents->have_posts()){
-      echo "<h2 class='entry-title'>Featured Events</h2>";
-      echo "<div class='featured-events-container'>";
-      while ($featuredEvents->have_posts()){
-        $featuredEvents->the_post();?>
+      //Grab the featured image square-crop size
+      $featuredImage = tribe_event_featured_image($event, 'square-crop');
 
-    		<div class="<?php tribe_events_event_classes() ?> featured-event post-<?php the_ID() ?>">
-    			<?php
+      //If event doesn't have image, display the UF CLAS image
+      if(!empty($featuredImage)){
+        echo tribe_event_featured_image( $event, 'square-crop' );
+      }else{ ?>
+        <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='<?php echo get_stylesheet_directory_uri()."/assets/images/uf-clas.png"?>' alt='UF CLAS Logo'/></a>
+        <?php
+      }
 
-    			tribe_get_template_part( 'list/single', 'featured' );
-    			?>
-    		</div>
-    <?php }
-    echo "</div>";
-    }
-  }
+      //Link to single event
+       echo '<h3 class="tribe-events-list-event-title"><a href="'. tribe_get_event_link($event). '">' . $event->post_title . '</a></h3>';?>
+       <div class="tribe-updated published time-details tribe-event-schedule-details">
+         <?php echo tribe_events_event_schedule_details(); ?>
+       </div><?php
+       echo "</div></div>";
+  } ?>
+  </div>
+
+<?php
+}
 
 /*====================================================================
  *
