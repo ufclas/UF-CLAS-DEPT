@@ -42,7 +42,7 @@
 			 $show_featured = get_theme_mod('archive_featured');
 
 			 //Adds correct class depending if a featured image has been selected
-			 if(has_post_thumbnail()){
+			 if(has_post_thumbnail() && $show_featured){
 				 $thumbColumn = 'col-sm-4';
 				 $excerptColumn = 'col-sm-8';
 			 }else {
