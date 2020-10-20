@@ -332,7 +332,7 @@ function uf_clas_featured_events(){
   global $post;
 
   // Grab the 5 next "party" events (by tag)
-  $eventss = tribe_get_events( [
+  $events = tribe_get_events( [
      'eventDisplay'   => 'custom',
      'start_date'     => 'now',
      'posts_per_page' => 3,
@@ -340,12 +340,16 @@ function uf_clas_featured_events(){
   ] );
   ?>
 
+  <?php
+    if(!empty($events)){
+  ?>
+
   <h2 class='entry-title'>Featured Events</h2>
   <div class='featured-events-container'>
 
 <?php
   // Loop through the events, displaying the title and content for each
-  foreach ( $eventss as $event ) {
+  foreach ( $events as $event ) {
     echo '<div class="featured-event post-'. get_the_ID() .'">';
       echo "<div class='type-tribe_events'>";
 
@@ -356,20 +360,21 @@ function uf_clas_featured_events(){
       if(!empty($featuredImage)){
         echo tribe_event_featured_image( $event, 'square-crop' );
       }else{ ?>
-        <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='<?php echo get_stylesheet_directory_uri()."/assets/images/uf-clas.png"?>' alt='UF CLAS Logo'/></a>
+        <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link($event)); ?>" title="<?php the_title_attribute($event) ?>" rel="bookmark"><img src='<?php echo get_stylesheet_directory_uri()."/assets/images/uf-clas.png"?>' alt='UF CLAS Logo'/></a>
         <?php
       }
 
       //Link to single event
        echo '<h3 class="tribe-events-list-event-title"><a href="'. tribe_get_event_link($event). '">' . $event->post_title . '</a></h3>';?>
        <div class="tribe-updated published time-details tribe-event-schedule-details">
-         <?php echo tribe_events_event_schedule_details(); ?>
+         <?php echo tribe_events_event_schedule_details($event); ?>
        </div><?php
        echo "</div></div>";
   } ?>
   </div>
 
 <?php
+}
 }
 
 /*====================================================================
