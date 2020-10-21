@@ -105,7 +105,6 @@
   font-size:2.5vw;
   font-family: "Surveyor Display A", "Surveyor Display B";
   font-style: normal;
-  font-weight: 600;
   line-height: 1.1;
   padding-left: .5rem;
   padding-right: .5rem;
@@ -1423,7 +1422,6 @@ html, body{
    height: 100%;
    font-family: "Surveyor Text A", "Surveyor Text B";
    font-style: normal;
-   font-weight: 400;
    -webkit-font-smoothing: antialiased;
    -webkit-text-size-adjust: 100%;
  }
@@ -1817,7 +1815,6 @@ h2 a:hover,h2 a:active  {
 }
 h3 {
    font-family: Gentona_SemiBold;
-   font-weight: 700;
    font-size: 1.5rem;
    line-height: 1.8125rem;
    color: #00337A;
@@ -1858,7 +1855,6 @@ h3.quote2 {
 }
 h4 {
    font-family: "Gentona_Book", Arial, sans-serif;
-   font-weight: 500;
    font-size: 1.25rem;
    font-style: normal;
    line-height: 1.5rem;
@@ -1872,7 +1868,6 @@ h4 {
 }
 h5 {
    font-family: "Quadon_Book", Arial, sans-serif;
-   font-weight: 500;
    font-size: 1rem;
    font-style: normal;
    line-height: 1.25rem;
@@ -1906,7 +1901,6 @@ p {
    font-family: "Surveyor Text A", "Surveyor Text B";
    font-size: 1.125rem;
    font-style: normal;
-   font-weight: 400;
    line-height: 1.5;
    display:block;
    margin:0;
@@ -2031,7 +2025,6 @@ a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
    font-size: 1.125rem;
    line-height: 1.5rem;
    font-style: normal;
-   font-weight: 400;
    color: #000000;
    margin: 0;
    padding-top: .3rem;
@@ -2051,8 +2044,7 @@ a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
     margin: 0 0 0 -1.3rem;
     width: 1em;
     font-size: 1.1rem;
-    font-family: Quadon_Bold;
-    font-weight: 400;
+    font-family: "Quadon_Bold";
 }
 /*
 
@@ -2223,7 +2215,6 @@ figcaption{
 #secondary li, #secondary ol {
    font-family: "Gentona_Medium";
    font-style: normal;
-   font-weight: 500;
    font-size: 1.125rem;
    line-height: 1.3125rem;
    color: #00529B;
@@ -2260,7 +2251,6 @@ figcaption{
  #page a, #secondary a {
    color:#337ab7;
    text-decoration:none;
-	font-weight: 700;
 }
 #page a:focus, #page a:hover, #secondary a:focus, #secondary a:hover {
     color: #23527c;
@@ -2818,7 +2808,6 @@ a.page-numbers  .icon-arrow-left:hover {
 label {
 	color: #333;
 	display: block;
-	font-weight: 800;
 	margin-bottom: 0.5em;
 }
 
@@ -2886,11 +2875,6 @@ input[type="checkbox"] {
 	margin-right: 0.5em;
 }
 
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-	font-weight: 400;
-}
-
 form button:not(.icon-angle-down),
 input[type="button"],
 input[type="submit"] {
@@ -2905,7 +2889,6 @@ input[type="submit"] {
 	display: inline-block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 800;
 	line-height: 1;
 	padding: 1em 2em;
 	text-shadow: none;
@@ -3741,7 +3724,6 @@ h1.main,p.demos {
       line-height:1;
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-style: normal;
-      font-weight: 800;
       color:#084B81;
       margin:0px;
       padding:0px;
@@ -3781,7 +3763,6 @@ h1.main,p.demos {
       line-height:1;
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-style: italic;
-      font-weight: 400;
       color:#084B81;
       margin:0px;
       padding:0px;
@@ -4031,7 +4012,6 @@ h1.main,p.demos {
 	clip: auto;
 	font-size: 16px;
 	font-size: 1rem;
-	font-weight: 400;
 	height: auto;
 	position: relative !important; /* overrides previous !important styles */
 	width: auto;
@@ -4091,7 +4071,6 @@ h1.main,p.demos {
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
-    font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
     vertical-align: middle;
@@ -4139,7 +4118,6 @@ a.btn-orange:hover, a.btn-orange-large:hover {
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
-    font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
     vertical-align: middle;
@@ -4189,7 +4167,6 @@ a.btn-blue:hover, a.btn-blue-large:hover {
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
-    font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
     vertical-align: middle;
@@ -4568,8 +4545,7 @@ input[type="search"]::placeholder {
 }
 
 .bold-blue {
-  font-weight: 700;
-  font-family: Gentona_Bold;
+  font-family: "Gentona_Bold";
   text-transform: uppercase;
   color: #00337a;
 }
@@ -4847,7 +4823,6 @@ h2.entry-title.interior-page {
     display: inline-block;
     font-family: 'Glyphicons Halflings';
     font-style: normal;
-    font-weight: 400;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -5283,7 +5258,6 @@ Image block cards
 #featured-carousel .slider-light p,
 #featured-carousel .slider-light li {
   color: #084b81 !important;
-  font-weight: 400;
 }
 
 #featured-carousel .half-image-feature .carousel-caption {
@@ -5308,7 +5282,6 @@ Image block cards
 #featured-carousel .half-image-feature .carousel-caption .single-article .widget-area h2,
 .single-article .widget-area #featured-carousel .half-image-feature .carousel-caption h2 {
   font-family: "gentona", "Georgia", serif;
-  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
@@ -5345,7 +5318,6 @@ Image block cards
   color: #fff;
   text-transform: uppercase;
   font-family: "gentona", "Georgia", serif;
-  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
@@ -6395,7 +6367,6 @@ Events Slider shortcode
          font-family: "Surveyor Text A", "Surveyor Text B";
          font-size: 1.125rem;
          font-style: normal;
-         font-weight: 400;
          line-height: 1.5;
          display:block;
          margin:0;
