@@ -1431,6 +1431,10 @@ html, body{
     box-sizing: border-box;
 }
 
+*:not(strong) {
+    font-weight: normal;
+}
+
    .center{
       text-align:center;
    }
