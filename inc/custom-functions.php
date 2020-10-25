@@ -14,7 +14,12 @@ function homeChooseHeaderMedia(){
    * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
    */
 
-   // $key_sliderHome = false;
+
+   // alex! This was commented out!!!!!
+   $key_sliderHome = false;
+   // alex! This was commented out!!!!!
+
+
 
    // this part isn't necessary. It checks to see if the site is the root or subsite -- the UF installation uses all sub-sites
    if (get_current_blog_id() == 1) {

@@ -1,4 +1,9 @@
 <?php
+
+  // check the bottom / ~ 800
+
+
+
 /*
 
 Key Exception Types
@@ -791,3 +796,42 @@ $list_cetificates = array(
   //   "Zoology",
   //   "Zoology Minor",
   // );
+
+
+  $value_location     = "";
+  $exception_injected = false;
+  $exceptionInjection = "\$exceptionInjection";
+
+  /* // DEPARTMENTS Needle Filter - only searching through departments right now, so something like "ids" won't have an exception (until it's wrtten BEYOND version 1.3.0)  */
+  foreach ($departments as $key_department => $value_department) {
+    // keyDepartment = "biology" ||| starting out by checking each name before diving into the department details
+    if (strpos($key_department, $searchfor) !== false) {
+      $exception = "exception_department";
+      $value_location = $value_department['location'];
+      break;
+    } else if (strpos(strtolower($value_department['location']), $searchfor) !== false) {
+      $exception = "exception_building";
+      $value_location = $value_department['location'];
+      break;
+    } else {
+      $exception = false;
+    }
+  } // Needle Filter
+
+    // separated | these loops were separated byt the exception = false
+    // alex! alex! alex!
+    $exception = false;
+
+    // BUILDINGS
+    foreach ($list_locations as $key_location => $value_building) {
+      if ($value_location == $key_location) {
+        $bldg = $value_building['bldg'];
+      }
+    }
+
+    // building address
+    foreach ($list_locations as $key_location => $value_building) {
+      if ($key_location == $value_department['location']) {
+        $exception_building_address = ucwords(strtolower($value_building['address']));
+      }
+    }
