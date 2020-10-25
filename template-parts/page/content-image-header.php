@@ -14,7 +14,13 @@
 <?php
 	// Chooses between Slider, Hero Image, or H2
 	homeChooseHeaderMedia();
+	// alex!
+		$noMedia = "";
+	// alex!
+
 ?>
+
+
 
 <article id="page-<?php the_ID(); ?>" <?php post_class("$noMedia"); ?>>
 	<?php
