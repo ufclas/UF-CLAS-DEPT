@@ -76,6 +76,16 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'textarea',
 	));
 
+	//Breadcrumbs
+	$wp_customize->add_setting( 'ufclas_breadcrumbs', array( 'default' => '' ));
+
+	$wp_customize->add_control( 'ufclas_breadcrumbs', array(
+		'label' => __('Show Breadcrumbs', 'ufclas-emily'),
+		'description' => __("Show breadcrumbs before the page title", 'ufclas-emily'),
+		'section' => 'theme_options_general',
+		'type' => 'checkbox',
+	));
+
 	// Slider
 	$wp_customize->add_section( 'theme_options_slider', array(
 		'title' => __('Feature Slider', 'ufclas-emily'),
