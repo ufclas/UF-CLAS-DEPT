@@ -2275,24 +2275,21 @@ figcaption{
       cursor: pointer;
    }
 
+   #crumbs .current {
+       font-family: "Gentona_Book", sans-serif !important;
+       font-size: 1.125rem;
+       padding: 0;
+       font-weight: normal;
+   }
 
+   #crumbs .fad.fa-angle-double-right {
+       font-size: 14px;
+   }
 
-
-/*-----------------------------------------LAPTOP/DESKTOP UF BRANDING----------------------------------------*/
-
-}
-
-
-/* ------------------BREAK POINTS FOR BRANDING & MENU - Mobile ------------------ */
-
-
-
-
-/* iPhone */
-
-
-
-
+   #crumbs .fad:before,
+   #crumbs .fad:after {
+       color: #004083;
+   }
 
 /* ALIGENMENTS */
 .alignleft {
