@@ -26,6 +26,14 @@ get_header(); ?>
 
 
 	<div id="primary" class="content-area">
+		
+		<?php
+			//Breadcrumbs
+			if (get_theme_mod('ufclas_breadcrumbs') ){
+				ufclas_get_breadcrumb();
+			 }
+		?>
+
 		<main id="main" class="site-main">
 			<?php
 			while ( have_posts() ) : the_post();

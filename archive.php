@@ -24,6 +24,14 @@ get_header(); ?>
 	<?php endif; ?>
 
 	<div id="primary" class="content-area">
+
+		<?php
+			//Breadcrumbs
+			if (get_theme_mod('ufclas_breadcrumbs') ){
+				ufclas_get_breadcrumb();
+			 }
+		?>
+
 		<main id="main" class="site-main" role="main">
 
 		<?php

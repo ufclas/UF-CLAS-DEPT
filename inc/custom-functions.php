@@ -332,7 +332,7 @@ function uf_clas_featured_events(){
   global $post;
 
   // Grab the 5 next "party" events (by tag)
-  $eventss = tribe_get_events( [
+  $events = tribe_get_events( [
      'eventDisplay'   => 'custom',
      'start_date'     => 'now',
      'posts_per_page' => 3,
@@ -340,12 +340,16 @@ function uf_clas_featured_events(){
   ] );
   ?>
 
+  <?php
+    if(!empty($events)){
+  ?>
+
   <h2 class='entry-title'>Featured Events</h2>
   <div class='featured-events-container'>
 
 <?php
   // Loop through the events, displaying the title and content for each
-  foreach ( $eventss as $event ) {
+  foreach ( $events as $event ) {
     echo '<div class="featured-event post-'. get_the_ID() .'">';
       echo "<div class='type-tribe_events'>";
 
@@ -356,20 +360,21 @@ function uf_clas_featured_events(){
       if(!empty($featuredImage)){
         echo tribe_event_featured_image( $event, 'square-crop' );
       }else{ ?>
-        <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='<?php echo get_stylesheet_directory_uri()."/assets/images/uf-clas.png"?>' alt='UF CLAS Logo'/></a>
+        <a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link($event)); ?>" title="<?php the_title_attribute($event) ?>" rel="bookmark"><img src='<?php echo get_stylesheet_directory_uri()."/assets/images/uf-clas.png"?>' alt='UF CLAS Logo'/></a>
         <?php
       }
 
       //Link to single event
        echo '<h3 class="tribe-events-list-event-title"><a href="'. tribe_get_event_link($event). '">' . $event->post_title . '</a></h3>';?>
        <div class="tribe-updated published time-details tribe-event-schedule-details">
-         <?php echo tribe_events_event_schedule_details(); ?>
+         <?php echo tribe_events_event_schedule_details($event); ?>
        </div><?php
        echo "</div></div>";
   } ?>
   </div>
 
 <?php
+}
 }
 
 /*====================================================================
@@ -541,4 +546,111 @@ function clasUnfilteredHtmlCapabilityToAdmins( $caps, $cap, $user_id ) {
  return $caps;
 }
 add_filter( 'map_meta_cap', 'clasUnfilteredHtmlCapabilityToAdmins', 1, 3 );
+
+/*====================================
+
+  Breadcrumbs
+
+========================================*/
+function ufclas_get_breadcrumb() {
+  echo "<style type='text/css'> .entry-header .wrap {padding-top: 0;}</style>";
+  
+  $delimiter = '&raquo;';
+  $name = 'Home'; //text for the 'Home' link
+  $currentBefore = '<span class="current">';
+  $currentAfter = '</span>';
+
+  if ( !is_home() && !is_front_page() || is_paged() ) {
+
+    echo '<div class="wrap" id="crumbs">';
+
+    global $post;
+    $home = get_bloginfo('url');
+    echo '<a href="' . $home . '">' . $name . '</a> ' . $delimiter . ' ';
+
+    if ( is_category() ) {
+      global $wp_query;
+      $cat_obj = $wp_query->get_queried_object();
+      $thisCat = $cat_obj->term_id;
+      $thisCat = get_category($thisCat);
+      $parentCat = get_category($thisCat->parent);
+      if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
+      echo $currentBefore . 'Archive by category &#39;';
+      single_cat_title();
+      echo '&#39;' . $currentAfter;
+
+    } elseif ( is_day() ) {
+      echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
+      echo '<a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a> ' . $delimiter . ' ';
+      echo $currentBefore . get_the_time('d') . $currentAfter;
+
+    } elseif ( is_month() ) {
+      echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
+      echo $currentBefore . get_the_time('F') . $currentAfter;
+
+    } elseif ( is_year() ) {
+      echo $currentBefore . get_the_time('Y') . $currentAfter;
+
+    } elseif ( is_single() && !is_attachment() ) {
+      $cat = get_the_category(); $cat = $cat[0];
+      echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+      echo $currentBefore;
+      the_title();
+      echo $currentAfter;
+
+    } elseif ( is_attachment() ) {
+      $parent = get_post($post->post_parent);
+      $cat = get_the_category($parent->ID); $cat = $cat[0];
+      echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+      echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a> ' . $delimiter . ' ';
+      echo $currentBefore;
+      the_title();
+      echo $currentAfter;
+
+    } elseif ( is_page() && !$post->post_parent ) {
+      echo $currentBefore;
+      the_title();
+      echo $currentAfter;
+
+    } elseif ( is_page() && $post->post_parent ) {
+      $parent_id  = $post->post_parent;
+      $breadcrumbs = array();
+      while ($parent_id) {
+        $page = get_page($parent_id);
+        $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+        $parent_id  = $page->post_parent;
+      }
+      $breadcrumbs = array_reverse($breadcrumbs);
+      foreach ($breadcrumbs as $crumb) echo $crumb . ' ' . $delimiter . ' ';
+      echo $currentBefore;
+      the_title();
+      echo $currentAfter;
+
+    } elseif ( is_search() ) {
+      echo $currentBefore . 'Search results for &#39;' . get_search_query() . '&#39;' . $currentAfter;
+
+    } elseif ( is_tag() ) {
+      echo $currentBefore . 'Posts tagged &#39;';
+      single_tag_title();
+      echo '&#39;' . $currentAfter;
+
+    } elseif ( is_author() ) {
+       global $author;
+      $userdata = get_userdata($author);
+      echo $currentBefore . 'Articles posted by ' . $userdata->display_name . $currentAfter;
+
+    } elseif ( is_404() ) {
+      echo $currentBefore . 'Error 404' . $currentAfter;
+    }
+
+    if ( get_query_var('paged') ) {
+      if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
+      echo __('Page') . ' ' . get_query_var('paged');
+      if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
+    }
+
+    echo '</div>';
+
+  }
+}
 ?>
