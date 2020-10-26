@@ -67,6 +67,9 @@ Add navigation menus to the Footer Column 1, Footer Column 2, and Footer Column 
 #### Department Address
 This can be changed by going to Appearance > Customize > CLAS DEPT Theme Options > General.
 
+#### Breadcrumbs
+Enable or disable breadcrumbs. This can be changed by going to Appearance > Customize > CLAS DEPT Theme Options > General.
+
 #### Social Links
 This can be changed by going to the Appearance > Customize > CLAS DEPT Theme Options > Social.
 
