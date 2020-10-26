@@ -14,6 +14,14 @@ get_header(); ?>
 
 <div class="wrap">
 	<div id="primary" class="content-area">
+
+		<?php
+			//Breadcrumbs
+			if (get_theme_mod('ufclas_breadcrumbs') ){
+				ufclas_get_breadcrumb();
+			 }
+		?>
+
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
