@@ -891,6 +891,25 @@ function ufclas_emily_body_class( $classes ){
 }
 add_filter( 'body_class', 'ufclas_emily_body_class' );
 
+// alex's functions
+
+function p($list) {
+	echo "<pre>";
+	print_r($list);
+	echo "</pre>";
+}
+
+// hold off on this until exceptions, check fixlist in the sortGroupJig
+function sanitize_searchEntry ($var) {
+	global $connection;
+	$var = trim($var);
+	// $var = preg_replace('/[^\da-z]/i', '', $var);
+	$var = strip_tags($var);
+	$var = mysqli_real_escape_string($connection, $var);
+	return $var;
+}
+
+
 /**
  * Moves theme options to Appearance > Customizer
  */
