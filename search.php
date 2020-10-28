@@ -1,9 +1,12 @@
-<?php // 201020: Capture queries, deny exceptions, [count instances]
+<?php // 201028: capture queries, DENY exceptions, count instances, improve empty
 
   get_header();
 
   $searchfor    = get_search_query(); // Get the search query for display in a headline
+  $searchfor = trim($searchfor);
+
   $empty_search = false;
+
   if ($searchfor === "" || empty($searchfor) || $searchfor == false) {
     $empty_search = true;
   }
@@ -47,7 +50,11 @@
                           $link      = array_pop($url_array);
                           $siteTitle = strtolower(get_bloginfo('name'));
                           $siteTitle = ucwords($siteTitle);
-                          echo "<h2>Search results for \"{$searchfor}\" on {$siteTitle}</h2>";
+                          if (!$empty_search) {
+                            echo "<h2>Search results for \"{$searchfor}\" on {$siteTitle}</h2>";
+                          } else {
+                            echo "<h2>Searching for space on " . ucwords($siteTitle) . "</h2>";
+                          }
                         }
                       }
                     }
@@ -57,7 +64,7 @@
                 if (!$empty_search) {
                   include("inc/search/processing_core.php");
                 } else {
-                  echo "Did you know your search was empty?";
+                  echo "Did you know your search was empty? Try again?!";
                   // echo "<br><br>Want a Sitemap?<br><br> // .<img src=\"https://campusmap.ufl.edu/library/photos/stars/B0267.jpg\">
                   // <hr>
                 }
@@ -76,7 +83,9 @@
 
 <?php
   // write to the database table "search_capturequeries";
-  include("inc/search/capture_write.php");
+  if (!$empty_search) {
+    include("inc/search/capture_write.php");
+  }
 ?>
 
 

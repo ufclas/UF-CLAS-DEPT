@@ -1,11 +1,13 @@
 <?php
-/*===========================================
+
+
+/* ===========================================
 *
 *
 * Slider function for large slider on home page
 *
 *
-*============================================*/
+* ============================================ */
 
 function homeChooseHeaderMedia(){
   global $wpdb;
@@ -18,8 +20,6 @@ function homeChooseHeaderMedia(){
    // alex! This was commented out!!!!!
    $key_sliderHome = false;
    // alex! This was commented out!!!!!
-
-
 
    // this part isn't necessary. It checks to see if the site is the root or subsite -- the UF installation uses all sub-sites
    if (get_current_blog_id() == 1) {
@@ -535,11 +535,11 @@ $classes = get_body_class();
  echo '</div><!-- .single-featured-image-header -->';
 }
 
-/*====================================
+/* ====================================
 
   Allows website administrators to use iframes, inputs and scripts.
 
-========================================*/
+======================================== */
 function clasUnfilteredHtmlCapabilityToAdmins( $caps, $cap, $user_id ) {
 
  if ( 'unfiltered_html' === $cap && user_can( $user_id, 'administrator' ) ) {
