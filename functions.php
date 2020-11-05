@@ -32,6 +32,10 @@ function ufclas_emily_theme_enqueue_styles() {
 	wp_enqueue_script( 'html5', get_template_directory_uri() . '/assets/js/html5.js', array() );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
+/* Enqueue Colorbox */
+	wp_enqueue_style( 'colorbox-css', get_stylesheet_directory_uri(). '/assets/colorbox/colorbox.css' );
+	wp_enqueue_script( 'colorbox', get_theme_file_uri( '/assets/colorbox/jquery.colorbox.js' ), array('jquery'), $theme_version, true );
+	wp_enqueue_script( 'colorbox-css-custom', get_theme_file_uri( '/assets/colorbox/custom.js' ), array('jquery'), $theme_version, true );
 
 	// Enqueue JAVASCRIPT
 	wp_enqueue_script( 'child-scripts', get_theme_file_uri( '/assets/js/script.min.js' ), array('jquery'), $theme_version, true );
