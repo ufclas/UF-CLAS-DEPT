@@ -5890,6 +5890,116 @@ img.cboxPhoto {
   }
 }
 
+/*=============================================
+
+  Gravity Forms Styling
+
+===============================================*/
+.gform_wrapper * {
+   font-family: 'Gentona_Book', sans-serif !important;
+	font-size: 1.125rem;
+}
+
+.gform_body label.gfield_label {
+    color: #004083;
+    font-size: 1.25rem;
+}
+
+.gform_wrapper h2.gsection_title {
+    color: #004083;
+    padding-bottom: 1rem !important;
+}
+
+.gform_wrapper .gfield_description,
+.gform_wrapper .gsection_description {
+    font-size: 1.125rem;
+}
+
+
+.gform_body  .gform_wrapper .gfield_description {
+    font-size: 1rem;
+}
+
+.gform_wrapper select {
+	height: auto;
+}
+
+.gform_wrapper input {
+    padding: 0 5px !important;
+		font-size: 1.25rem !important;
+}
+
+.ginput_container_fileupload input {
+    font-size: 1rem !important;
+}
+
+.gform_wrapper input[type=submit] {
+    padding: 10px 20px !important;
+    text-transform: uppercase;
+    background: #DD661E;
+}
+
+.gform_wrapper input[type=button]{
+	background: #00285e;
+	transition: .3s;
+}
+
+.gform_wrapper input[type=button]:hover {
+	background: #DD661E;
+	transition: .3s;
+}
+
+.gform_drop_instructions {
+    color: black;
+}
+
+.gfield_time_ampm.ginput_container.ginput_container_time {
+    font-size: 1rem;
+}
+
+.ginput_container.ginput_container_consent * {
+    display: inline;
+}
+
+.gform_wrapper.gf_browser_chrome select {
+    padding: 0;
+}
+
+.ui-datepicker-title {
+    background: #00285e;
+}
+
+.ui-datepicker-title select {
+    height: auto;
+}
+
+.ui-datepicker-calendar {
+    font-family: 'Gentona_Book', sans-serif;
+    font-size: 1rem;
+}
+
+.ui-datepicker th {
+    font-size: 1rem;
+}
+
+.ui-datepicker-calendar * {
+    background: white !important;
+}
+
+#ui-datepicker-div td.ui-datepicker-days-cell-over.ui-datepicker-today a,
+.ui-state-active {
+    background: #DD661E !important;
+    color: white !important;
+    text-shadow: none !important;
+}
+
+a.ui-state-default:hover {
+    background: #1570CF !important;
+    color: white;
+    text-shadow: none;
+    transition: .3s;
+}
+
 @media (min-width: 768px){
 
    .footer-uf-col-1{
