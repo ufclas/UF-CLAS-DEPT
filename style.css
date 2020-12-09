@@ -7156,7 +7156,9 @@ a.ui-state-default:hover {
 
 
              .header-clas .X-quickLinks:hover > div ul,
-             .header-clas .X-quickLinks:hover > div ul.open {
+             .header-clas .X-quickLinks:hover > div ul.open,
+             .header-clas .X-quickLinks a ~ div ul[aria-expanded='true'],
+             .header-clas .X-quickLinks a ~ div .menu[aria-expanded='true'] {
                display:block;
                right:0px;
                visibility:visible;
@@ -7338,7 +7340,8 @@ a.ui-state-default:hover {
               }
 
               .header-clas #top-menu > li:hover > .sub-menu,
-              .header-clas #top-menu > li > a:focus ~ .sub-menu {
+              .header-clas #top-menu > li > a:focus ~ .sub-menu,
+              .header-clas #top-menu > li.open[aria-expanded='true'] > .sub-menu {
                 display: block;
                 position: absolute;
                 opacity: 1;
