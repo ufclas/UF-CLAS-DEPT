@@ -7337,7 +7337,8 @@ a.ui-state-default:hover {
                 padding-bottom: 1rem;
               }
 
-              .header-clas #top-menu > li:hover > .sub-menu {
+              .header-clas #top-menu > li:hover > .sub-menu,
+              .header-clas #top-menu > li > a:focus ~ .sub-menu {
                 display: block;
                 position: absolute;
                 opacity: 1;
