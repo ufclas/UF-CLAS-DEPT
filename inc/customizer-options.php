@@ -279,5 +279,21 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'textarea',
 	));
 
+	// Add alert under header
+	$wp_customize->add_section( 'theme_options_analytics', array(
+		'title' => __('Google Analytics', 'ufclas-emily'),
+		'description' => __('', 'ufclas-emily'),
+		'panel' => 'ufclas_emily_theme_options',
+	));
+
+	$wp_customize->add_setting( 'google_analytics_code', array( 'default' => '' ));
+
+	$wp_customize->add_control( 'google_analytics_code', array(
+		'label' => __('Google Analytics', 'ufclas-emily'),
+		'description' => __("Enter the tracking code provided for Google Analytics <br /> (Example: UA-123456789-0)", 'ufclas-emily'),
+		'section' => 'theme_options_analytics',
+		'type' => 'text',
+	));
+
 }
 add_action('customize_register','ufclas_emily_customize_register');
