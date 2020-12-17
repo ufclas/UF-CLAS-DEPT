@@ -83,6 +83,10 @@ The theme adds a 'CLAS DEPT Theme Options' panel to the Customizer screen.
 
 Users with previous theme versions need to copy their settings to the Customizer. They will see the deprecated settings page under Appearance > Customize > CLAS DEPT Theme Settings, but these settings do not affect anything.
 
+### Google Analytics
+
+Users can type in the Tracking ID for Google Analytics in the customizer
+
 ### Custom Fields
 
 This theme can display the built-in WordPress custom fields and ACF Fields if they exist.
