@@ -3174,14 +3174,14 @@ a {
   text-decoration:none;
 }
 
-#page a[target="_blank"]:after {
+/* #page a[target="_blank"]:after {
     content: "\f08e";
     font-family: 'Font Awesome 5 Pro';
     font-weight: bold;
     margin-left: 4px;
     font-size: 10px;
     position: relative;
-}
+} */
 
 h1.main,p.demos {
 	-webkit-animation-delay: 18s;
@@ -7339,9 +7339,9 @@ a.ui-state-default:hover {
                 padding-bottom: 1rem;
               }
 
-              .header-clas #top-menu > li:hover > .sub-menu,
+              .header-clas #top-menu > li:hover > .sub-menu /*,
               .header-clas #top-menu > li > a:focus ~ .sub-menu,
-              .header-clas #top-menu > li.open[aria-expanded='true'] > .sub-menu {
+              .header-clas #top-menu > li.open[aria-expanded='true'] > .sub-menu*/ {
                 display: block;
                 position: absolute;
                 opacity: 1;
