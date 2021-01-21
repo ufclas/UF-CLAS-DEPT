@@ -3174,7 +3174,7 @@ a {
   text-decoration:none;
 }
 
-#page a[target="_blank"]:after {
+.external:after {
     content: "\f08e";
     font-family: 'Font Awesome 5 Pro';
     font-weight: bold;
@@ -7339,9 +7339,9 @@ a.ui-state-default:hover {
                 padding-bottom: 1rem;
               }
 
-              .header-clas #top-menu > li:hover > .sub-menu,
+              .header-clas #top-menu > li:hover > .sub-menu /*,
               .header-clas #top-menu > li > a:focus ~ .sub-menu,
-              .header-clas #top-menu > li.open[aria-expanded='true'] > .sub-menu {
+              .header-clas #top-menu > li.open[aria-expanded='true'] > .sub-menu*/ {
                 display: block;
                 position: absolute;
                 opacity: 1;
