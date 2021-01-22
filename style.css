@@ -1874,8 +1874,8 @@ h3.quote2 {
    clear: both;
 }
 h4 {
-   font-family: "Gentona_Book", Arial, sans-serif;
-   font-size: 1.25rem;
+   font-family: "Gentona_Bold", Arial, sans-serif;
+   font-size: 1.35rem;
    font-style: normal;
    line-height: 1.5rem;
    color: #585656;
@@ -1887,8 +1887,8 @@ h4 {
    clear: both;
 }
 h5 {
-   font-family: "Quadon_Book", Arial, sans-serif;
-   font-size: 1rem;
+   font-family: "Quadon_Regular", Arial, sans-serif;
+   font-size: 1.125rem;
    font-style: normal;
    line-height: 1.25rem;
    color: #A63F00;
