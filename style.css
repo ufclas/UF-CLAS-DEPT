@@ -3186,6 +3186,12 @@ a {
     position: relative;
 }
 
+#page a.hide-external:after {
+  content: '' !important;
+  display: none;
+}
+
+
 h1.main,p.demos {
 	-webkit-animation-delay: 18s;
 	-moz-animation-delay: 18s;
