@@ -3174,6 +3174,9 @@ a {
   text-decoration:none;
 }
 
+.footer-main-sub-col-1 a[target="_blank"]:after,
+.footer-main-sub-col-2 a[target="_blank"]:after,
+.footer-main-sub-col-3 a[target="_blank"]:after,
 .external:after {
     content: "\f08e";
     font-family: 'Font Awesome 5 Pro';
@@ -3181,7 +3184,6 @@ a {
     margin-left: 4px;
     font-size: 10px;
     position: relative;
-    color: #9ad2e1;
 }
 
 h1.main,p.demos {
