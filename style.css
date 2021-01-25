@@ -1874,8 +1874,8 @@ h3.quote2 {
    clear: both;
 }
 h4 {
-   font-family: "Gentona_Book", Arial, sans-serif;
-   font-size: 1.25rem;
+   font-family: "Gentona_Bold", Arial, sans-serif;
+   font-size: 1.35rem;
    font-style: normal;
    line-height: 1.5rem;
    color: #585656;
@@ -1887,8 +1887,8 @@ h4 {
    clear: both;
 }
 h5 {
-   font-family: "Quadon_Book", Arial, sans-serif;
-   font-size: 1rem;
+   font-family: "Quadon_Regular", Arial, sans-serif;
+   font-size: 1.125rem;
    font-style: normal;
    line-height: 1.25rem;
    color: #A63F00;
@@ -3174,6 +3174,9 @@ a {
   text-decoration:none;
 }
 
+.footer-main-sub-col-1 a[target="_blank"]:after,
+.footer-main-sub-col-2 a[target="_blank"]:after,
+.footer-main-sub-col-3 a[target="_blank"]:after,
 .external:after {
     content: "\f08e";
     font-family: 'Font Awesome 5 Pro';
@@ -3182,6 +3185,12 @@ a {
     font-size: 10px;
     position: relative;
 }
+
+#page a.hide-external:after {
+  content: '' !important;
+  display: none;
+}
+
 
 h1.main,p.demos {
 	-webkit-animation-delay: 18s;
