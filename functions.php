@@ -32,6 +32,11 @@ function ufclas_emily_theme_enqueue_styles() {
 	wp_enqueue_script( 'html5', get_template_directory_uri() . '/assets/js/html5.js', array() );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
+
+	//Add jQuery
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+
 /* Enqueue Colorbox */
 	wp_enqueue_style( 'colorbox-css', get_stylesheet_directory_uri(). '/assets/colorbox/colorbox.css' );
 	wp_enqueue_script( 'colorbox', get_theme_file_uri( '/assets/colorbox/jquery.colorbox.js' ), array('jquery'), $theme_version, true );
