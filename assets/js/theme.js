@@ -167,10 +167,3 @@ if (!Object.getOwnPropertyDescriptor(Element.prototype,'classList')){
         Object.defineProperty(Element.prototype,'classList',Object.getOwnPropertyDescriptor(HTMLElement.prototype,'classList'));
     }
 }
-
-//Adds hide-external class to links that have images embedded 
-$(document).ready(function() {
-	$("a[target='_blank']:has(img)").filter(function() {
-	 return !$.trim($(this).text()).length;
-	}).addClass("hide-external");
-});
