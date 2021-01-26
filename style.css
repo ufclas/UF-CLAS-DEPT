@@ -3175,7 +3175,6 @@ a {
   text-decoration:none;
 }
 
-<<<<<<< HEAD
 .footer-main-sub-col-1 a[target="_blank"]:hover:after,
 .footer-main-sub-col-2 a[target="_blank"]:hover:after,
 .footer-main-sub-col-3 a[target="_blank"]:hover:after,
@@ -3199,7 +3198,8 @@ a {
 #page a.hide-external:after {
   content: '' !important;
   display: none;
-=======
+}
+
 .footer-main-sub-col-1 a[target="_blank"]:after,
 .footer-main-sub-col-2 a[target="_blank"]:after,
 .footer-main-sub-col-3 a[target="_blank"]:after,
@@ -3211,7 +3211,6 @@ a {
     margin-left: 4px;
     font-size: 10px;
     position: relative;
->>>>>>> 8362d88a94e0a1e8bc2ccbb545f4acdbbfc6e50e
 }
 
 #page a.hide-external:after {
