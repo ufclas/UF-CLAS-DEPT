@@ -2252,6 +2252,7 @@ figcaption{
 #page a, #secondary a {
    color:#337ab7;
    text-decoration:none;
+   position: relative;
 }
 
 #page a:focus, #page a:hover, #secondary a:focus, #secondary a:hover {
@@ -3172,6 +3173,31 @@ input[type="submit"].secondary:focus {
 
 a {
   text-decoration:none;
+}
+
+.footer-main-sub-col-1 a[target="_blank"]:hover:after,
+.footer-main-sub-col-2 a[target="_blank"]:hover:after,
+.footer-main-sub-col-3 a[target="_blank"]:hover:after,
+.external:hover:after {
+  content: "Opens in new tab \f08e";
+  font-family: 'Font Awesome 5 Pro', "Gentona_Bold";
+  font-weight: 700;
+  margin-left: 4px;
+  font-size: 10px;
+  position: absolute;
+  text-transform: uppercase;
+  background: #002346;
+  color: white;
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+  right: 0;
+  top: -35px;
+}
+
+#page a.hide-external:after {
+  content: '' !important;
+  display: none;
 }
 
 .footer-main-sub-col-1 a[target="_blank"]:after,
