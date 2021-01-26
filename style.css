@@ -3204,7 +3204,7 @@ a {
 .footer-main-sub-col-2 a[target="_blank"]:after,
 .footer-main-sub-col-3 a[target="_blank"]:after,
 .external:after,
-#page a[target="_blank"]:after {
+#page article a[target="_blank"]:after {
     content: "\f08e";
     font-family: 'Font Awesome 5 Pro';
     font-weight: bold;
