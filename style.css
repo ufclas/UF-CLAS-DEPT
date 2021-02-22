@@ -2276,6 +2276,12 @@ button.search-submit{
   cursor: pointer;
 }
 
+#crumbs {
+    padding: 0;
+    position: relative;
+    z-index: 1 !important;
+}
+
 #crumbs .current {
    font-family: "Gentona_Book", sans-serif !important;
    font-size: 1.125rem;
