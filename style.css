@@ -1785,7 +1785,7 @@ h2 {
     display: block;
 }
 
-.date {
+.date:not(.archive) {
     font-family: "Surveyor Text A", "Surveyor Text B";
     padding-top: 1rem;
     padding-bottom: 1rem;
