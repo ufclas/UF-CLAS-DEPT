@@ -567,7 +567,7 @@ function ufclas_get_breadcrumb() {
 
   if ( !is_home() && !is_front_page() || is_paged() ) {
 
-    echo '<div class="wrap" id="crumbs">';
+    echo '<nav aria-label="Breadcrumb" class="wrap" id="crumbs">';
 
     global $post;
     $home = get_bloginfo('url');
@@ -654,7 +654,7 @@ function ufclas_get_breadcrumb() {
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
 
-    echo '</div>';
+    echo '</nav>';
 
   }
 }
