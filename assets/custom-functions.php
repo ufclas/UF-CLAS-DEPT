@@ -69,7 +69,7 @@ function homeChooseHeaderMedia(){
     // print an image if there is an image and there's no slider / slideshow or the home-slider doesn't exist
     } else if ($exist_image && (($error_noSlide || $error_noShow) || !$key_sliderHome)) {
        // HERO IMAGE
-       echo '<div class="home-hero-container"><div class="single-featured-image-header">';
+       echo '<div class="home-hero-container"><div class="single-featured-image-header" aria-label="Featured Image">';
          the_post_thumbnail( 'full' );
          $caption = get_the_post_thumbnail_caption();
          $photo_credit = get_post_meta( get_post_thumbnail_id(), 'photo_credit_txt', true );

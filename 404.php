@@ -22,7 +22,7 @@ get_header(); ?>
 			 }
 		?>
 
-		<main id="main" class="site-main">
+		<main id="main" class="site-main" aria-label="Main content">
 
 			<section class="error-404 not-found">
 				<header class="page-header">

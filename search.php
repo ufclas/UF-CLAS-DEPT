@@ -19,7 +19,7 @@
 
 ?>
 
-      <main id="main" class="site-main">
+      <main id="main" class="site-main" aria-label="Main content">
         <div id="primary" class="content-area">
           <div class="entry-content">
             <div class="wrap search-page">

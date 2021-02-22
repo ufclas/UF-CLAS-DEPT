@@ -475,7 +475,7 @@ function clasHeroImage(){
 
 $classes = get_body_class();
 
- echo '<div class="single-featured-image-header">';
+ echo '<main class="single-featured-image-header" aria-label="Featured Image">';
                 // If this is a magazine article
                 if ( is_page_template( 'single-magazine-article.php' ) ) {
           echo '<div class="wrap">';
@@ -532,7 +532,7 @@ $classes = get_body_class();
            echo '</div><!-- .wrap -->';
            echo '</div><!-- .textOverImage -->';
                 }
- echo '</div><!-- .single-featured-image-header -->';
+ echo '</main><!-- .single-featured-image-header -->';
 }
 
 /* ====================================

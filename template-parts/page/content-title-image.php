@@ -9,10 +9,10 @@
 <!-- Hero Image on top of the page-->
 <?php
 			// Checks to see if a featured image is selected. If it is, it will load the featured image and styling for header. If no featured image is selected only the title will show up with out the specific styling.
-			
+
 			if(has_post_thumbnail()){?>
 				<div class="hero-container">
-					<div class="single-featured-image-header">
+					<div class="single-featured-image-header" aria-label="Featured Image">
 						<?php the_post_thumbnail( 'full' ); ?>
 					</div><!-- .single-featured-image-header -->
 					<?php the_title( '<h2 class="entry-title interior-page">', '</h2>' ); ?>
