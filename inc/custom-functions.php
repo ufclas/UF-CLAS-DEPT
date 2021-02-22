@@ -560,7 +560,7 @@ add_filter( 'map_meta_cap', 'clasUnfilteredHtmlCapabilityToAdmins', 1, 3 );
 function ufclas_get_breadcrumb() {
   echo "<style type='text/css'> .entry-header .wrap {padding-top: 0;}</style>";
 
-  $delimiter = '<i class="fad fa-angle-double-right"></i>';
+  $delimiter = '<i class="fad fa-angle-double-right" aria-hidden="true"></i>';
   $name = 'Home'; //text for the 'Home' link
   $currentBefore = '<span class="current">';
   $currentAfter = '</span>';
