@@ -27,7 +27,7 @@ if ( $slider_query->have_posts() ):
 	$slider_speed = $slider_speed * 1000;
 	$slider_disable_link = get_theme_mod('featured_disable_link', 0);
 ?>
-<main class="carousel-row">
+<main class="carousel-row" aria-label="Featured Storie Carousel">
 	<div class="carousel-wrap">
 		<div id="featured-carousel" class="carousel slide" data-ride="carousel" data-interval="<?php echo $slider_speed; ?>" aria-labelledby="carousel-heading" aria-describedby="carousel-desc">
 			<h2 id="carousel-heading" class="sr-only"><?php _e('Featured Posts', 'ufclas-emily'); ?></h2>
@@ -132,7 +132,7 @@ endif;
 wp_reset_postdata();
 ?>
 <div id="primary" class="content-area">
-	<main id="main" class="site-main">
+	<main id="main" class="site-main" aria-label="Main Home Page Content">
 		<article id="page-<?php the_ID(); ?>">
 			<?php
 			if ( is_sticky() && is_home() ) :
