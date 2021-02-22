@@ -486,7 +486,7 @@
 				$loadingOverlay
 			);
 
-			$close = $('<i class="fad fa-times"></i>').attr({id:prefix+'Close'});
+			$close = $('<em class="fad fa-times"></em>').attr({id:prefix+'Close'});
 
 			$wrap.append( // The 3x3 Grid that makes up Colorbox
 				$tag(div).append(
