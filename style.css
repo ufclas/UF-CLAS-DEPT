@@ -1984,7 +1984,7 @@ blockquote, blockquote p {
 }
 
 .orangetxt-capitalize {
-    font-family: Gentona_Bold, Arial;
+    font-family: "Gentona_Bold", Arial;
     color: #bc581a;
     text-transform: uppercase;
 }
@@ -5537,6 +5537,82 @@ Events Slider shortcode
     padding: .5rem 0 0 1rem;
     color: #4c87b5;
 }
+
+/*============================================
+
+
+Event List Widget Styling
+
+
+*==============================================*/
+#page h4.tribe-event-title {
+	padding: 0;
+}
+
+#page h4.tribe-event-title a {
+	font-size: 1rem !important;
+}
+
+.tribe-events-list-widget .tribe-list-widget {
+  margin-left: 0; }
+  .tribe-events-list-widget .tribe-list-widget li {
+    position: relative;
+    margin-left: 55px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc; }
+
+.tribe-events-list-widget .tribe-event-title {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 0; }
+  .tribe-events-list-widget .tribe-event-title em {
+    text-transform: none;
+    font-size: 16px; }
+
+.tribe-events-list-widget .tribe-event-duration {
+  font-size: 16px;
+  line-height: 26px; }
+
+.tribe-events-list-widget .event-date {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 45px;
+  font-family: "Gentona_ExtraBold", "Georgia", serif;
+  text-align: center;
+  color: #DD661E; }
+
+.tribe-events-list-widget .event-month {
+  font-size: 20px;
+  font-weight: 400; }
+
+.tribe-events-list-widget .event-day {
+  font-size: 32px;
+  letter-spacing: -1px; }
+
+.tribe-events-list-widget .tribe-events-widget-link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 65px; }
+
+#tribe-events .tribe-events-button {
+  border: 3px solid #f37021;
+  color: #f37021;
+  font-family: "gentona", "Georgia", serif;
+  font-size: 16px;
+  padding: 15px;
+  background-color: transparent; }
+  #tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:active {
+    background-color: #f37021;
+    color: #fff; }
+
+.events-archive .tribe-events-event-meta {
+  margin: 15px 0;
+  font-size: 100%;
+  line-height: 30px;
+  font-weight: 500; }
+
 
 
 /*============================================
