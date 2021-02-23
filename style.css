@@ -5236,6 +5236,11 @@ Image block cards
   color: #fff;
 }
 
+#featured-carousel a.right,
+#featured-carousel a.left {
+    position: absolute;
+}
+
 .carousel {
   position: relative;
 }
