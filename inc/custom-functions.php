@@ -678,4 +678,23 @@ function ufclas_events_widget_title(){
    <?php
 }
 add_action( 'tribe_events_list_widget_before_the_event_title', 'ufclas_events_widget_title' );
+
+/* =====================================================
+*
+* Adds title to iframes
+*
+===================================================== */
+function ufclas_replace_iframe_title($text){
+
+
+    $replace = array(
+        // 'WORD TO REPLACE' => 'REPLACE WORD WITH THIS'
+        '<iframe ' => '<iframe title="'. get_the_title() . ' Media Content"',
+    );
+    $text = str_replace(array_keys($replace), $replace, $text);
+    return $text;
+}
+
+add_filter('the_content', 'ufclas_replace_iframe_title');
+add_filter('the_excerpt', 'ufclas_replace_iframe_title');
 ?>
