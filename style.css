@@ -3181,36 +3181,11 @@ a {
   text-decoration:none;
 }
 
-#page #main p:not(.slideshow_description) > a:not(.btn-blue),
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
+#page #main p:not(.slideshow_description) > a:not(.btn-blue, .btn) {
     border-bottom: 1px dashed !important;
 }
 
-
-.footer-main-sub-col-1 a[target="_blank"]:hover:after,
-.footer-main-sub-col-2 a[target="_blank"]:hover:after,
-.footer-main-sub-col-3 a[target="_blank"]:hover:after,
-.external:hover:after {
-  content: "Opens in new tab \f08e";
-  font-family: 'Font Awesome 5 Pro', "Gentona_Bold";
-  font-weight: 700;
-  margin-left: 4px;
-  font-size: 10px;
-  position: absolute;
-  text-transform: uppercase;
-  background: #002346;
-  color: white;
-  width: 100%;
-  padding: .5rem;
-  text-align: center;
-  right: 0;
-  top: -35px;
-}
-
+/*
 #page a.hide-external:after {
   content: '' !important;
   display: none;
@@ -3234,6 +3209,8 @@ section a[target="_blank"]:after  {
   content: '' !important;
   display: none;
 }
+
+*/
 
 
 h1.main,p.demos {
