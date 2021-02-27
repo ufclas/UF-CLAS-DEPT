@@ -14,7 +14,7 @@ get_header(); ?>
 	?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main" aria-label="Main content">
 
 			<?php
 			/* Start the Loop */

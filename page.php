@@ -26,7 +26,7 @@ get_header(); ?>
 
 
 	<div id="primary" class="content-area">
-		
+
 		<?php
 			//Breadcrumbs
 			if (get_theme_mod('ufclas_breadcrumbs') ){
@@ -34,7 +34,7 @@ get_header(); ?>
 			 }
 		?>
 
-		<main id="main" class="site-main">
+		<main id="main" class="site-main" aria-label="Main content">
 			<?php
 			while ( have_posts() ) : the_post();
 

@@ -478,15 +478,15 @@
 			$loadingOverlay = $([$tag(div, "LoadingOverlay")[0],$tag(div, "LoadingGraphic")[0]]);
 			$wrap = $tag(div, "Wrapper");
 			$content = $tag(div, "Content").append(
-				$prev = $('<i class="fad fa-chevron-double-left"></i>').attr({id:prefix+'Previous'}),
-				$next = $('<i class="fad fa-angle-double-right"></i>').attr({id:prefix+'Next'}),
+				$prev = $('<em class="fad fa-chevron-double-left"></em>').attr({id:prefix+'Previous'}),
+				$next = $('<em class="fad fa-angle-double-right"></em>').attr({id:prefix+'Next'}),
 				$current = $tag(div, "Current"),
 				$title = $tag(div, "Title"),
 				$slideshow = $('<button type="button"/>').attr({id:prefix+'Slideshow'}),
 				$loadingOverlay
 			);
 
-			$close = $('<i class="fad fa-times"></i>').attr({id:prefix+'Close'});
+			$close = $('<em class="fad fa-times"></em>').attr({id:prefix+'Close'});
 
 			$wrap.append( // The 3x3 Grid that makes up Colorbox
 				$tag(div).append(

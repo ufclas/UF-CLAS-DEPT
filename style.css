@@ -1785,7 +1785,7 @@ h2 {
     display: block;
 }
 
-.date {
+.date:not(.archive) {
     font-family: "Surveyor Text A", "Surveyor Text B";
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -1813,12 +1813,12 @@ time.entry-date.published {
 }
 
 #secondary h2 {
-   font-family: "Quadon_Bold", Arial, sans-serif;
+   font-family: "Gentona_Bold", Arial, sans-serif;
    font-weight: normal;
-   font-size: 1.2rem;
+   font-size: 1.5rem;
    font-style: normal;
    line-height: 1.2;
-   color: #666;
+   color: #004083;
    margin: 0px;
    padding: 0px;
    padding-top: 1rem;
@@ -1984,7 +1984,7 @@ blockquote, blockquote p {
 }
 
 .orangetxt-capitalize {
-    font-family: Gentona_Bold, Arial;
+    font-family: "Gentona_Bold", Arial;
     color: #bc581a;
     text-transform: uppercase;
 }
@@ -2274,6 +2274,12 @@ button.search-submit{
 #secondary button.search-submit{
   background-color: #00337A;
   cursor: pointer;
+}
+
+#crumbs {
+    padding: 0;
+    position: relative;
+    z-index: 1 !important;
 }
 
 #crumbs .current {
@@ -3175,26 +3181,11 @@ a {
   text-decoration:none;
 }
 
-.footer-main-sub-col-1 a[target="_blank"]:hover:after,
-.footer-main-sub-col-2 a[target="_blank"]:hover:after,
-.footer-main-sub-col-3 a[target="_blank"]:hover:after,
-.external:hover:after {
-  content: "Opens in new tab \f08e";
-  font-family: 'Font Awesome 5 Pro', "Gentona_Bold";
-  font-weight: 700;
-  margin-left: 4px;
-  font-size: 10px;
-  position: absolute;
-  text-transform: uppercase;
-  background: #002346;
-  color: white;
-  width: 100%;
-  padding: .5rem;
-  text-align: center;
-  right: 0;
-  top: -35px;
+#page #main p:not(.slideshow_description) > a:not(.btn-blue, .btn) {
+    border-bottom: 1px dashed !important;
 }
 
+/*
 #page a.hide-external:after {
   content: '' !important;
   display: none;
@@ -3218,6 +3209,8 @@ section a[target="_blank"]:after  {
   content: '' !important;
   display: none;
 }
+
+*/
 
 
 h1.main,p.demos {
@@ -4297,8 +4290,13 @@ h2.right-arrow  strong::before {
 }
 
 .bottom-links,  .bottom-links p ,  .bottom-links p a {
-  font-family: Gentona_Book;
+  font-family: "Gentona_Book", sans-serif;
   font-size: 0.875rem;
+}
+
+.footer-uf-col-1.bottom-links a {
+    color: white !important;
+    border-bottom: 1px dashed;
 }
 
 .footer-uf-col-2{
@@ -5230,6 +5228,11 @@ Image block cards
   color: #fff;
 }
 
+#featured-carousel a.right,
+#featured-carousel a.left {
+    position: absolute;
+}
+
 .carousel {
   position: relative;
 }
@@ -5537,6 +5540,82 @@ Events Slider shortcode
     padding: .5rem 0 0 1rem;
     color: #4c87b5;
 }
+
+/*============================================
+
+
+Event List Widget Styling
+
+
+*==============================================*/
+#page h4.tribe-event-title {
+	padding: 0;
+}
+
+#page h4.tribe-event-title a {
+	font-size: 1rem !important;
+}
+
+.tribe-events-list-widget .tribe-list-widget {
+  margin-left: 0; }
+  .tribe-events-list-widget .tribe-list-widget li {
+    position: relative;
+    margin-left: 55px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc; }
+
+.tribe-events-list-widget .tribe-event-title {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 0; }
+  .tribe-events-list-widget .tribe-event-title em {
+    text-transform: none;
+    font-size: 16px; }
+
+.tribe-events-list-widget .tribe-event-duration {
+  font-size: 16px;
+  line-height: 26px; }
+
+.tribe-events-list-widget .event-date {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 45px;
+  font-family: "Gentona_ExtraBold", "Georgia", serif;
+  text-align: center;
+  color: #DD661E; }
+
+.tribe-events-list-widget .event-month {
+  font-size: 20px;
+  font-weight: 400; }
+
+.tribe-events-list-widget .event-day {
+  font-size: 32px;
+  letter-spacing: -1px; }
+
+.tribe-events-list-widget .tribe-events-widget-link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 65px; }
+
+#tribe-events .tribe-events-button {
+  border: 3px solid #f37021;
+  color: #f37021;
+  font-family: "gentona", "Georgia", serif;
+  font-size: 16px;
+  padding: 15px;
+  background-color: transparent; }
+  #tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:active {
+    background-color: #f37021;
+    color: #fff; }
+
+.events-archive .tribe-events-event-meta {
+  margin: 15px 0;
+  font-size: 100%;
+  line-height: 30px;
+  font-weight: 500; }
+
 
 
 /*============================================
@@ -6849,7 +6928,7 @@ a.ui-state-default:hover {
 
          .header-clas .X-quickLinks div ul li a:focus,
          .header-clas .X-quickLinks div ul li a:hover {
-           background-color: #1570CF;
+           background-color: #002346;
            color: white;
          }
 

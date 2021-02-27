@@ -15,9 +15,9 @@ get_header(); ?>
 <div class="wrap">
 
 	<?php if ( have_posts() ) : ?>
-		<header class="page-header">
+		<header class="page-header" aria-label="Archive Title">
 			<?php
-				the_archive_title( '<h2 class="page-title">', '</h2>' );
+				the_archive_title( '<h2 class="entry-title">', '</h2>' );
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
 		</header><!-- .page-header -->
@@ -32,7 +32,7 @@ get_header(); ?>
 			 }
 		?>
 
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main">
 
 		<?php
 		if ( have_posts() ) :
@@ -53,6 +53,7 @@ get_header(); ?>
 
 			the_posts_pagination(
 				array(
+					'screen_reader_text' => '',
 					'prev_text'          => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
 					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
 					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',

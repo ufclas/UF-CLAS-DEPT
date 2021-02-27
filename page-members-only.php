@@ -22,7 +22,7 @@ get_header(); ?>
 			 }
 		?>
 
-		<main id="main" class="site-main">
+		<main id="main" class="site-main" aria-label="Main content">
 
 			<?php
 				if ( ufl_check_authorized_user( get_the_ID() ) ) : // check if logged in/valid shib user required

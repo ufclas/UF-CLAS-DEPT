@@ -475,7 +475,7 @@ function clasHeroImage(){
 
 $classes = get_body_class();
 
- echo '<div class="single-featured-image-header">';
+ echo '<main class="single-featured-image-header" aria-label="Featured Image">';
                 // If this is a magazine article
                 if ( is_page_template( 'single-magazine-article.php' ) ) {
           echo '<div class="wrap">';
@@ -532,7 +532,7 @@ $classes = get_body_class();
            echo '</div><!-- .wrap -->';
            echo '</div><!-- .textOverImage -->';
                 }
- echo '</div><!-- .single-featured-image-header -->';
+ echo '</main><!-- .single-featured-image-header -->';
 }
 
 /* ====================================
@@ -560,14 +560,14 @@ add_filter( 'map_meta_cap', 'clasUnfilteredHtmlCapabilityToAdmins', 1, 3 );
 function ufclas_get_breadcrumb() {
   echo "<style type='text/css'> .entry-header .wrap {padding-top: 0;}</style>";
 
-  $delimiter = '<i class="fad fa-angle-double-right"></i>';
+  $delimiter = '<em class="fad fa-angle-double-right" aria-hidden="true"></em>';
   $name = 'Home'; //text for the 'Home' link
   $currentBefore = '<span class="current">';
   $currentAfter = '</span>';
 
   if ( !is_home() && !is_front_page() || is_paged() ) {
 
-    echo '<div class="wrap" id="crumbs">';
+    echo '<nav aria-label="Breadcrumb" class="wrap" id="crumbs">';
 
     global $post;
     $home = get_bloginfo('url');
@@ -654,8 +654,47 @@ function ufclas_get_breadcrumb() {
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
 
-    echo '</div>';
+    echo '</nav>';
 
   }
 }
+
+/**
+* Event List Widget: Add the month and day before the title
+*/
+function ufclas_events_widget_title(){
+ global $post;
+
+ // Change format of the start date for styling as an icon
+ $tribe_post_month = tribe_get_start_date( $post, false, 'M' );
+ $tribe_post_day = tribe_get_start_date( $post, false, 'd' );
+ ?>
+
+   <div class="event-date">
+     <span class="event-month"><?php echo $tribe_post_month; ?></span>
+       <span class="event-day"><?php echo $tribe_post_day; ?></span>
+   </div>
+
+   <?php
+}
+add_action( 'tribe_events_list_widget_before_the_event_title', 'ufclas_events_widget_title' );
+
+/* =====================================================
+*
+* Adds title to iframes
+*
+===================================================== */
+function ufclas_replace_iframe_title($text){
+
+
+    $replace = array(
+        // 'WORD TO REPLACE' => 'REPLACE WORD WITH THIS'
+        '<iframe ' => '<iframe title="'. get_the_title() . ' Media Content"',
+    );
+    $text = str_replace(array_keys($replace), $replace, $text);
+    return $text;
+}
+
+add_filter('the_content', 'ufclas_replace_iframe_title');
+add_filter('the_excerpt', 'ufclas_replace_iframe_title');
 ?>

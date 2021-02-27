@@ -16,7 +16,7 @@ get_header(); ?>
 			 }
 		?>
 
-		<main id="main" class="site-main">
+		<main id="main" class="site-main" aria-label="Main content">
 
 			<?php
 			/* Start the Loop */
@@ -34,7 +34,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
 </div><!-- .wrap -->
 
 <?php get_footer();
