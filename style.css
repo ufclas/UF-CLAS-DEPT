@@ -1813,12 +1813,12 @@ time.entry-date.published {
 }
 
 #secondary h2 {
-   font-family: "Quadon_Bold", Arial, sans-serif;
+   font-family: "Gentona_Bold", Arial, sans-serif;
    font-weight: normal;
-   font-size: 1.2rem;
+   font-size: 1.5rem;
    font-style: normal;
    line-height: 1.2;
-   color: #666;
+   color: #004083;
    margin: 0px;
    padding: 0px;
    padding-top: 1rem;
@@ -4290,8 +4290,13 @@ h2.right-arrow  strong::before {
 }
 
 .bottom-links,  .bottom-links p ,  .bottom-links p a {
-  font-family: Gentona_Book;
+  font-family: "Gentona_Book", sans-serif;
   font-size: 0.875rem;
+}
+
+.footer-uf-col-1.bottom-links a {
+    color: white !important;
+    border-bottom: 1px dashed;
 }
 
 .footer-uf-col-2{
@@ -6923,7 +6928,7 @@ a.ui-state-default:hover {
 
          .header-clas .X-quickLinks div ul li a:focus,
          .header-clas .X-quickLinks div ul li a:hover {
-           background-color: #1570CF;
+           background-color: #002346;
            color: white;
          }
 
