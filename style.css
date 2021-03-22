@@ -1686,7 +1686,6 @@ html, body{
 /*  The single most important setting  */
  * {
     box-sizing: border-box;
-    line-height: min(150%) !important;
 }
 
 *:not(strong) {
