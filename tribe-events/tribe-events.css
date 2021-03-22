@@ -45,12 +45,12 @@ a.tribe-events-gmap {
 }
 
 .time-venue-info-container > span {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .tribe-events-list-separator-month {
     background: transparent;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-family: "Gentona";
     padding: 0;
     color: #00337A;
@@ -60,7 +60,7 @@ a.tribe-events-gmap {
 #page h3.tribe-events-list-event-title a {
     font-family: "Quadon_Bold" !important;
     color: #004083;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 26px;
 }
 
@@ -294,7 +294,7 @@ ul.tribe-events-sub-nav li {
 
 #tribe-events-content h2 {
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 1.625rem;
     text-align: center;
     font-family: "Gentona_Bold";
 }
