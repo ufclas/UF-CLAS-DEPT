@@ -345,7 +345,7 @@
   font-size:2.5vw;
   font-family: "Surveyor Display A", "Surveyor Display B";
   font-style: normal;
-  line-height: 1.1;
+  line-height: 150%;
   padding-left: .5rem;
   padding-right: .5rem;
 }
@@ -364,7 +364,7 @@
   letter-spacing: 1px;
   padding-top: auto;
   font-size: 1.2rem;
-  line-height: 140%;
+  line-height: 150%;
   color: rgba(0, 64, 131,1);
   padding: 0px;
   margin: .5rem 0;
@@ -496,7 +496,7 @@
  color: rgb(18, 18, 18);
  font-family: "Gentona_Bold" !important;
  font-size: 1.2rem;
- line-height: 1.2;
+ line-height: 150%;
  font-weight: 200;
  letter-spacing: 0.2px;
 }
@@ -584,7 +584,7 @@
  text-decoration: none;
  font-weight:normal;
  font-size:1.2rem; /* fallback */
- line-height:1;
+ line-height: 150%;
  padding:0 3.75rem;
  margin:0px;
  text-align:center;
@@ -729,7 +729,7 @@ svg.icon.icon-search {
  background-color: #4c87b5;
  width: 3.75rem;
  height: 3.75rem ;
- line-height: 3.75rem;
+ line-height: 150%;
  padding:0px;
  margin: 0px;
  overflow: hidden;
@@ -1251,7 +1251,7 @@ button.dropdown-toggle {
   letter-spacing: 1px;
   padding-top: auto;
   font-size: 1.3rem;
-  line-height: 140%;
+  line-height: 150%;
   color: rgba(0, 64, 131,1);
   margin-bottom: 0px;
   margin-top: 0px;
@@ -1268,7 +1268,7 @@ button.dropdown-toggle {
   color: #666666;
   font-family:Gentona_Book;
   font-size: 4em;
-  line-height: 0.1em;
+  line-height: 150%;
   margin-right: 0.1em;
   vertical-align: -0.4em;
 }
@@ -1395,7 +1395,7 @@ button.dropdown-toggle {
   font-family: Gentona_Medium;
   text-transform:uppercase;
   font-size:1.375rem;
-  line-height:1;
+  line-height: 150%;
   color:#ffffff;
   text-decoration:none;
   text-align:center;
@@ -1639,7 +1639,7 @@ img.alignright,  .alignright , .alignleft {
 .footer-main h2{
   color: #ffffff;
   font-size:1rem;
-  line-height: 1.2;
+  line-height: 150%;
   padding:0;
   margin-top: .5rem;
   margin-bottom: .5rem;
@@ -1703,7 +1703,7 @@ h1 {
    font-weight: normal;
    font-size: 2.25rem;
    font-style: normal;
-   line-height: 2.6875rem;
+   line-height: 150%;
    letter-spacing: 1px;
    color: #004083;
    margin: 0px;
@@ -1718,7 +1718,7 @@ h2.entry-title {
 	font-family: "Gentona_ExtraBold", Arial,sans-serif;
 	font-weight: normal;
 	font-size: 2.25rem;
-	line-height: 2.6875rem;
+	line-height: 150%;
 	letter-spacing: 1px;
 	color: #004083;
 }
@@ -1728,7 +1728,7 @@ h3.entry-title a {
 	font-family: "Gentona_ExtraBold", Arial,sans-serif;
 	font-weight: normal;
   font-size: 1.625rem;
-	line-height: 120%;
+	line-height: 150%;
 	letter-spacing: 1px;
 	color: #004083;
 }
@@ -1742,7 +1742,7 @@ h2 {
    font-weight: normal;
    font-size: 1.5rem;
    font-style: normal;
-   line-height: 1.75rem;
+   line-height: 150%;
    color: #414141;
    margin: 0px;
    padding: 0px;
@@ -1767,7 +1767,7 @@ h2 {
     padding-top: .25rem;
     padding-bottom: .25rem;
     font-size: 1.25rem;
-    line-height: 1.6rem;
+    line-height: 150%;
 
 
 }
@@ -1779,7 +1779,7 @@ h2 {
 .author, .byline {
     font-family: 'Gentona_BookItalic', Arial, sans-serif;
     font-size: 1.1rem;
-    line-height: 125%;
+    line-height: 150%;
     color: #000000;
     clear: both;
     display: block;
@@ -1806,7 +1806,7 @@ time.entry-date.published {
 .inline-img-left p {
     font-family: 'Gentona_BookItalic', Arial, sans-serif;
     font-size: .9rem;
-    line-height: 1rem;
+    line-height: 150%;
     color: #000;
     text-align: left;
     height: auto;
@@ -1817,7 +1817,7 @@ time.entry-date.published {
    font-weight: normal;
    font-size: 1.5rem;
    font-style: normal;
-   line-height: 1.2;
+   line-height: 150%;
    color: #004083;
    margin: 0px;
    padding: 0px;
@@ -1836,7 +1836,7 @@ h2 a:hover,h2 a:active  {
 h3 {
    font-family: Gentona_SemiBold;
    font-size: 1.5rem;
-   line-height: 1.8125rem;
+   line-height: 150%;
    color: #00337A;
    margin: 0px;
    padding: 0px;
@@ -1850,7 +1850,7 @@ h3.quote1 {
    font-weight: normal;
    font-style: normal;
    font-size: 1.375rem;
-   line-height: 1.625rem;
+   line-height: 150%;
    color: #DD661E;
    margin: 0px;
    padding: 0px;
@@ -1864,7 +1864,7 @@ h3.quote2 {
    font-weight: normal;
    font-style: normal;
    font-size: 1.5rem;
-   line-height: 1.8125rem;
+   line-height: 150%;
    color: #666666;
    margin: 0px;
    padding: 0px;
@@ -1877,7 +1877,7 @@ h4 {
    font-family: "Gentona_Bold", Arial, sans-serif;
    font-size: 1.35rem;
    font-style: normal;
-   line-height: 1.5rem;
+   line-height: 150%;
    color: #585656;
    margin: 0px;
    padding: 0px;
@@ -1890,7 +1890,7 @@ h5 {
    font-family: "Quadon_Regular", Arial, sans-serif;
    font-size: 1.125rem;
    font-style: normal;
-   line-height: 1.25rem;
+   line-height: 150%;
    color: #A63F00;
    margin: 0px;
    padding: 0px;
@@ -1904,7 +1904,7 @@ h6 {
    font-weight: 300;
    font-size: 0.875rem;
    font-style: normal;
-   line-height: 1.0625rem;
+   line-height: 150%;
    color: #414141;
    margin: 0px;
    padding: 0px;
@@ -1918,7 +1918,7 @@ p {
    font-family: "Surveyor Text A", "Surveyor Text B";
    font-size: 1.125rem;
    font-style: normal;
-   line-height: 1.5;
+   line-height: 150%;
    display:block;
    margin:0;
    padding-top:.5rem;
@@ -1936,7 +1936,7 @@ body, button, input, select, textarea {
 p.smallCopy, .smallCopy{
    font-family: "Surveyor Text A", "Surveyor Text B";
    font-size: 1rem;
-   line-height: 1.1875rem;
+   line-height: 150%;
    font-style: normal;
    font-weight: 300;
    color: #000000;
@@ -1949,7 +1949,7 @@ p.smallCopy, .smallCopy{
 p.largeCopy, .largeCopy{
    font-family: "Gentona_Book", Arial, sans-serif;
    font-size: 1.125rem;
-   line-height: 1.5rem;
+   line-height: 150%;
    font-style: normal;
    font-weight: 300;
    color: #4A4A4A;
@@ -1962,7 +1962,7 @@ p.largeCopy, .largeCopy{
 p.largeCopy2, .largeCopy2{
    font-family: "Gentona_Book", Arial, sans-serif;
    font-size: 1.25rem;
-   line-height: 1.5rem;
+   line-height: 150%;
    font-style: normal;
    font-weight: 300;
    color: #4A4A4A;
@@ -1977,7 +1977,7 @@ blockquote, blockquote p {
     letter-spacing: 1px;
     padding-top: auto;
     font-size: 1.5rem;
-    line-height: 140%;
+    line-height: 150%;
 	color: #A24C16;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -2000,7 +2000,7 @@ span.photo-credit::before {
     padding-left: 1.2rem;
     background-size: 1rem 1rem;
     display: inline;
-    line-height: 1.1rem;
+    line-height: 150%;
     height: 1.1rem;
     color: #000000;
     background-position: 0% 50%;
@@ -2042,7 +2042,7 @@ a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
 .entry-content li, .entry-content ol {
    font-family: "Surveyor Text A", "Surveyor Text B";
    font-size: 1.125rem;
-   line-height: 1.5rem;
+   line-height: 150%;
    font-style: normal;
    color: #000000;
    margin: 0;
@@ -2169,7 +2169,7 @@ figcaption{
    margin:0;
    font-family: 'Gentona_BookItalic', Arial, sans-serif;
    font-size: .8rem;
-   line-height: 1.2rem;
+   line-height: 150%;
    padding-top:.5rem;
    padding-bottom:.5rem;
    color: #000;
@@ -2195,7 +2195,7 @@ figcaption{
   padding:0;
   font-family: 'Gentona_BookItalic', Arial, sans-serif;
   font-size: .8rem;
-  line-height: 1.2rem;
+  line-height: 150%;
   padding-top:.3rem;
   padding-bottom:.3rem;
   color: #000;
@@ -2222,7 +2222,7 @@ figcaption{
    font-family: "Gentona_Medium";
    font-style: normal;
    font-size: 1.125rem;
-   line-height: 1.3125rem;
+   line-height: 150%;
    color: #00529B;
    margin: 0;
    padding-top: .3rem;
@@ -2429,7 +2429,7 @@ img.alignright {
    font-size:1.2rem;
    font-family:Gentona_Book;
    height:3rem;
-   line-height:3rem;
+   line-height: 150%;
 }
 
 .page-numbers svg{
@@ -2444,7 +2444,7 @@ a.page-numbers {
 
 span.current {
    font-size:1.4rem;
-   line-height:3rem;
+   line-height: 150%;
    font-weight:bold;
    padding-top:0px;
    margin-top:0px;
@@ -2837,7 +2837,7 @@ input[type="submit"] {
 	display: inline-block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1;
+	line-height: 150%;
 	padding: 1em 2em;
 	text-shadow: none;
 	-webkit-transition: background 0.2s;
@@ -3239,7 +3239,7 @@ h1.main,p.demos {
 .sp-container h2 {
 	position: absolute;
 	top: 50%;
-	line-height: 100px;
+	line-height: 150%;
 	height: 90px;
 	margin-top: -50px;
 	font-size: 90px;
@@ -3331,7 +3331,7 @@ h1.main,p.demos {
 	bottom: 100px;
 	margin-left: -50px;
 	text-align: center;
-	line-height: 100px;
+	line-height: 150%;
 	width: 100px;
 	height: 100px;
 	background: #fff;
@@ -3569,7 +3569,7 @@ h1.main,p.demos {
    font-size:1.875rem;
    color:#ffffff;
    text-decoration:none;
-   line-height:5rem;
+   line-height: 150%;
    text-align:center;
 }
 
@@ -3669,7 +3669,7 @@ h1.main,p.demos {
 /* Typography */
 
 .table-cell-1-num{
-  line-height:1;
+  line-height: 150%;
   font-family: "Surveyor Display A", "Surveyor Display B";
   font-style: normal;
   color:#084B81;
@@ -3677,38 +3677,37 @@ h1.main,p.demos {
   padding:0px;
 }
 .table-cell-2-num{
- line-height:1;
+ line-height: 150%;
   font-family:Quadon_Heavy;
-  line-height:1;
+  line-height: 150%;
   color:#ffffff;
   margin:0px;
   padding:0px;
 }
 .table-cell-3-num{
-  line-height:1;
+  line-height: 150%;
   font-family:Gentona_Thin;
-  line-height:1;
   color:#ffffff;
   margin:0px;
   padding:0px;
 }
 .table-cell-4-num{
-  line-height:1;
+  line-height: 150%;
   font-family:Quadon_Bold;
-  line-height:1;
+  line-height: 150%;
   color:#ffffff;
   margin:0px;
   padding:0px;
 }
 .table-cell-5-num{
-  line-height:1;
+  line-height: 150%;
   font-family:Gentona_Heavy;
   color:#ffffff;
   margin:0px;
   padding:0px;
 }
 .table-cell-6-num{
-  line-height:1;
+  line-height: 150%;
   font-family: "Surveyor Display A", "Surveyor Display B";
   font-style: italic;
   color:#084B81;
@@ -3717,17 +3716,17 @@ h1.main,p.demos {
 }
 
 .table-cell-1-txt{
-  line-height:1;
+  line-height: 150%;
   font-family:Gentona_Light;
-  line-height:1;
+  line-height: 150%;
   color:#084B81;
   margin:0px;
   padding:0px;  text-transform:uppercase;
 }
 .table-cell-2-txt{
-  line-height:1;
+  line-height: 150%;
   font-family:Gentona_ExtraBold;
-  line-height:1;
+  line-height: 150%;
   color:#ffffff;
   text-transform:uppercase;
   margin:0px;
@@ -3735,35 +3734,35 @@ h1.main,p.demos {
   text-transform:uppercase;
 }
 .table-cell-3-txt{
-  line-height:1;
+  line-height: 150%;
   font-family:Quadon_MediumItalic;
-  line-height:1;
+  line-height: 150%;
   color:#ffffff;
   margin:0px;
   padding:0px; text-transform:uppercase;
 }
 .table-cell-4-txt{
-  line-height:1;
+  line-height: 150%;
   font-family:Gentona_Light;
-  line-height:1;
+  line-height: 150%;
   color:#ffffff;
   margin:0px;
   padding:0px; text-transform:uppercase;
 
 }
 .table-cell-5-txt{
-  line-height:1;
+  line-height: 150%;
   font-family:Quadon_BoldItalic;
-  line-height:1;
+  line-height: 150%;
   color:#ffffff;
   margin:0px;
   padding:0px;  text-transform:uppercase;
 
 }
 .table-cell-6-txt{
-  line-height:1;
+  line-height: 150%;
   font-family:Gentona_Light;
-  line-height:1;
+  line-height: 150%;
   color:#084B81;
   margin:0px;
   padding:0px;  text-transform:uppercase;
@@ -3997,7 +3996,7 @@ h1.main,p.demos {
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
-    line-height: 1.42857143;
+    line-height: 150%;
     text-align: center;
     vertical-align: middle;
     -ms-touch-action: manipulation;
@@ -4040,7 +4039,7 @@ a.btn-orange:hover, a.btn-orange-large:hover {
   padding: 6px 12px;
   margin-bottom: 0;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 150%;
   text-align: center;
   vertical-align: middle;
   -ms-touch-action: manipulation;
@@ -4088,7 +4087,7 @@ a.btn-blue:hover, a.btn-blue-large:hover {
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
-    line-height: 1.42857143;
+    line-height: 150%;
     text-align: center;
     vertical-align: middle;
     -ms-touch-action: manipulation;
@@ -4127,7 +4126,7 @@ h2.quote-blue {
   font-weight: lighter;
   font-size: 34px;
   display: block;
-  line-height: 1em;
+  line-height: 150%;
   letter-spacing: -2px;
   margin: 0;
   box-decoration-break: clone;
@@ -4144,7 +4143,7 @@ h2.right-arrow  {
   font-weight: lighter;
   font-size: 34px;
   display: block;
-  line-height: 1em;
+  line-height: 150%;
   letter-spacing: -2px;
   margin: 0;
   box-decoration-break: clone;
@@ -4396,7 +4395,7 @@ body {
 .header-clas .strikeheader {
    font-size: 1.2rem;
    padding: 1rem 3.75rem 0;
-   line-height: 1.4;
+   line-height: 150%;
 }
 
 input {
@@ -4542,7 +4541,7 @@ h2.entry-title.home-hero-title {
   padding-left: 0 !important;
   font-family: "Gentona_Bold" !important;
   font-size: 2.5rem;
-  line-height: 1;
+  line-height: 150%;
 	max-width: 1040px;
   text-align: left !important;
 }
@@ -4712,7 +4711,7 @@ h2.entry-title.interior-page {
     display: inline-block;
     font-family: 'Glyphicons Halflings';
     font-style: normal;
-    line-height: 1;
+    line-height: 150%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: white;
@@ -5172,7 +5171,7 @@ Image block cards
 .single-article .widget-area #featured-carousel .half-image-feature .carousel-caption h2 {
   font-family: "Gentona_Book", "Georgia", serif;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 150%;
   text-transform: uppercase;
   margin-bottom: 0;
   letter-spacing: 2px;
@@ -5180,7 +5179,7 @@ Image block cards
 
 #featured-carousel .half-image-feature .carousel-caption p {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 150%;
 }
 
 #featured-carousel .full-image-feature .carousel-caption {
@@ -5208,7 +5207,7 @@ Image block cards
   text-transform: uppercase;
   font-family: "Gentona_Book", "Georgia", serif;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 150%;
   text-transform: uppercase;
   margin-bottom: 0;
   letter-spacing: 2px;
@@ -5216,7 +5215,7 @@ Image block cards
 
 #featured-carousel .full-image-feature .carousel-caption p {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 150%;
 }
 
 #featured-carousel .full-image-feature .carousel-caption .read-more {
@@ -5257,7 +5256,7 @@ Image block cards
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  line-height: 1;
+  line-height: 150%;
 }
 
 .carousel-inner > .active,
@@ -5346,7 +5345,7 @@ Image block cards
   width: 20px;
   height: 20px;
   font-family: serif;
-  line-height: 1;
+  line-height: 150%;
 }
 .carousel-control .icon-prev:before {
   content: '\2039';
@@ -5468,7 +5467,7 @@ Post slider shortcode
     margin-bottom: 35px;
     padding: 0 1rem;
     color: #fff!important;
-    line-height: 28px;
+    line-height: 150%;
     font-family: "Quadon_light" !important;
 }
 
@@ -5497,7 +5496,7 @@ Events Slider shortcode
 
 .events-carousel h3 {
     padding: 0;
-    line-height: 21px;
+    line-height: 150%;
     font-size: 1.325rem;
 }
 
@@ -5514,7 +5513,7 @@ Events Slider shortcode
 
 #page .events-carousel p.event-date {
     font-family: "Gentona_Book" !important;
-    line-height: 21px;
+    line-height: 150%;
     font-size: 1rem;
 }
 
@@ -5566,7 +5565,7 @@ Event List Widget Styling
 
 .tribe-events-list-widget .tribe-event-title {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 150%;
   letter-spacing: 1px;
   margin-bottom: 0; }
   .tribe-events-list-widget .tribe-event-title em {
@@ -5575,7 +5574,7 @@ Event List Widget Styling
 
 .tribe-events-list-widget .tribe-event-duration {
   font-size: 16px;
-  line-height: 26px; }
+  line-height: 150%;
 
 .tribe-events-list-widget .event-date {
   position: absolute;
@@ -5613,7 +5612,7 @@ Event List Widget Styling
 .events-archive .tribe-events-event-meta {
   margin: 15px 0;
   font-size: 100%;
-  line-height: 30px;
+  line-height: 150%;
   font-weight: 500; }
 
 
@@ -6283,7 +6282,7 @@ a.ui-state-default:hover {
   #featured-carousel .half-image-feature .carousel-caption p {
     display: block;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 150%;
   }
 
   #featured-carousel .half-image-feature .carousel-caption h3,
@@ -6297,7 +6296,7 @@ a.ui-state-default:hover {
   #featured-carousel .half-image-feature .carousel-caption .single-article .widget-area h2,
   .single-article .widget-area #featured-carousel .half-image-feature .carousel-caption h2 {
     font-size: 28px;
-    line-height: 32px;
+    line-height: 150%;
   }
 
 
@@ -6312,7 +6311,7 @@ a.ui-state-default:hover {
   #featured-carousel .full-image-feature .carousel-caption .single-article .widget-area h2,
   .single-article .widget-area #featured-carousel .full-image-feature .carousel-caption h2 {
     font-size: 28px;
-    line-height: 32px;
+    line-height: 150%;
   }
 
   #featured-carousel .slider-dark.half-image-feature .carousel-caption {
@@ -6432,7 +6431,7 @@ a.ui-state-default:hover {
 
   .header-alert p {
     text-transform: none;
-    line-height: 132%;
+    line-height: 150%;
   }
 }
 
@@ -6592,7 +6591,7 @@ a.ui-state-default:hover {
         font-family: 'Quadon_Medium',times,serif;
         font-size: 2.2rem;
         overflow-wrap: normal;
-        line-height: 1.3;
+        line-height: 150%;
         color: #fff;
         border-bottom: 2px solid #f1e98c;
      }
@@ -6622,7 +6621,7 @@ a.ui-state-default:hover {
 
      .slideCaption h1 {
         font-size:3rem;
-        line-height: 1.1 !important;
+        line-height: 150%;
      }
 
      .slideCaption h1, .slideCaption h2, .slideCaption h3,  .slideCaption h4, .slideCaption h5 {
@@ -6638,7 +6637,7 @@ a.ui-state-default:hover {
         background-color: rgba(0,0,0,.5);
         font-family: Quadon_Medium;
         font-size: 1.4rem;
-        line-height: 2.6;
+        line-height: 150%;
      }
 
      .highlight-caption{
@@ -6656,7 +6655,7 @@ a.ui-state-default:hover {
          font-family: "Surveyor Text A", "Surveyor Text B";
          font-size: 1.125rem;
          font-style: normal;
-         line-height: 1.5;
+         line-height: 150%;
          display:block;
          margin:0;
          padding: .5rem 0;
@@ -6851,7 +6850,7 @@ a.ui-state-default:hover {
            color:#fcfcfc !important;
            font-size:2rem;
            background-color:transparent;
-           line-height:1;
+           line-height: 150%;
            -webkit-appearance: none;
            margin: 0;
            width: 100%;
@@ -7095,7 +7094,7 @@ a.ui-state-default:hover {
            word-wrap: break-word;
            text-align:center;
            height:4.0625rem;
-           line-height:1.7;
+           line-height: 150%;
          }
 
          .X-menu nav > div > ul > li > a:hover,
@@ -7686,7 +7685,7 @@ a.ui-state-default:hover {
                   }
 
                  .footer-menu.open ul li a {
-                    line-height: 1.2 !important; border: 1px solid red;
+                    line-height: 150%;
                  }
 
               /*__________________END__________________*/
@@ -7776,7 +7775,7 @@ a.ui-state-default:hover {
                     width:3.835rem;
                  }
                  .footer-main a {
-                    line-height: 1.2 !important;
+                    line-height: 150%;
                  }
 
                  .footer-clas-address{
@@ -7831,7 +7830,7 @@ a.ui-state-default:hover {
                             font-weight: normal;
                             font-size: 3rem;
                             font-style: normal;
-                            line-height: 1.2;
+                            line-height: 150%;
                             letter-spacing: 1px;
                             color: #004083;
                             margin: 0px;
@@ -7848,7 +7847,7 @@ a.ui-state-default:hover {
                             font-weight: normal;
                             font-size: 2.1rem;
                             font-style: normal;
-                            line-height: 1.2;
+                            line-height: 150%;
                             color: #414141;
                             margin: 0px;
                             padding: 1rem 0;
@@ -7877,7 +7876,7 @@ a.ui-state-default:hover {
                               font-size: 1.125rem;
                               font-style: normal;
                               font-weight: 300;
-                              line-height: 1.25;
+                              line-height: 150%;
                            }
 
                            #featured-carousel .half-image-feature .carousel-caption {
