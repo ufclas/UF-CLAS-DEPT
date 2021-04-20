@@ -560,7 +560,7 @@ function eventsCalendarCarouselShortcode($atts){
 					'orderby' =>'meta_value',
 					'meta_key' => '_EventStartDate',
 					'order' => 'ASC',
-					'start_date'   => 'now'
+					'start_date'   => date( 'Y-m-d' )
 
 				);
 

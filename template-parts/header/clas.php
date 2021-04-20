@@ -64,7 +64,7 @@
 		</div>
 
 		<nav class="X-quickLinks" aria-label="Quick Links"><!--Quicklinks menu -->
-		  <a href="#" class="menu-title" aria-hidden="true">Quick Links</a>
+		  <a href="#" class="menu-title">Quick Links</a>
 			<?php wp_nav_menu( array(
 				'theme_location' => 'quicklinks',
 				'menu_id'        => 'quicklinks',

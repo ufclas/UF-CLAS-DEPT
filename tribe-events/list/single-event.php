@@ -59,13 +59,13 @@ $event = $post;
 			        <!-- Event Image -->
 							<a class="tribe-event-url" href="<?php echo esc_url(tribe_get_event_link()); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><?php echo get_the_post_thumbnail( null, 'square-crop' ); ?></a>
 
-							<p><a class="desktop-more" href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark" aria-label="<?php echo 'View ' . get_the_title(); ?> event"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a></p>
+							<p><a class="desktop-more" href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark" aria-label="<?php echo 'Find out more about  ' . get_the_title(); ?> event"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a></p>
 						</div>
 				<?php }else{?>
 					<div class="tribe-events-image">
 						<a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark"><img src='<?php echo get_stylesheet_directory_uri()."/assets/images/uf-clas.png"?>' alt='UF CLAS Logo'/></a>
 
-						<p><a class="desktop-more" href="<?php echo esc_url(tribe_get_event_link()); ?>" class="tribe-events-read-more" rel="bookmark" aria-label="<?php echo 'View ' . get_the_title(); ?> event"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a></p>
+						<p><a class="desktop-more" href="<?php echo esc_url(tribe_get_event_link()); ?>" class="tribe-events-read-more" rel="bookmark" aria-label="<?php echo 'Find out more about ' . get_the_title(); ?> event"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a></p>
 					</div>
 				<?php } ?>
 
