@@ -33,6 +33,7 @@
 .tribe-event-schedule-details > div {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tribe-event-date-start span {
@@ -1003,10 +1004,6 @@ Media Queries
   .tribe-event-date-start span.week {
     flex: 1 100%;
     margin-bottom: .5rem;
-  }
-
-  .tribe-event-date-start > span {
-    flex: 1 30%;
   }
 
   .tribe-event-date-start span {
