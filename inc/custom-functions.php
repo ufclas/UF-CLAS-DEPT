@@ -227,26 +227,26 @@ function ufclas_tribe_events_event_schedule_details( $event = null, $before = ''
       if ( $end_date_full_timestamp <= strtotime( tribe_beginning_of_day( $end_date_full ) ) ) {
         $end_date = tribe_format_date( $end_date_full_timestamp - DAY_IN_SECONDS, false, $format2ndday );
       } else {
-        $end_date = tribe_get_end_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' );
+        $end_date = tribe_get_end_date( $event, false, '<\s\p\a\n \c\l\a\s\s\=\"\w\e\e\k\">D</\s\p\a\n> <\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' );
       }
 
       $inner .= $end_date;
     } else {
       $inner .= tribe_get_start_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) . ( $time ? $datetime_separator . tribe_get_start_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) : '' );
-      $inner .= ( $html ? '</div>' : '' )  . '<span>to</span>';
+      $inner .= ( $html ? '</div>' : '' )  . '<span class="hide-mobile">to</span>';
       $inner .= $html ? '<div class="tribe-event-date-end">' : '';
       $inner .= tribe_get_end_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) . ( $time ? $datetime_separator . tribe_get_end_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) : '' );
     }
   } elseif ( tribe_event_is_all_day( $event ) ) { // all day event
-    $inner .= tribe_get_start_date( $event, true, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' );
+    $inner .= tribe_get_start_date( $event, true, '<\s\p\a\n \c\l\a\s\s\=\"\w\e\e\k\">D</\s\p\a\n> <\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' );
   } else { // single day event
     if ( tribe_get_start_date( $event, false, 'g:i A' ) === tribe_get_end_date( $event, false, 'g:i A' ) ) { // Same start/end time
-      $inner .= tribe_get_start_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) . ( $time ? $datetime_separator . tribe_get_start_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) : '' );
+      $inner .= tribe_get_start_date( $event, false, '<\s\p\a\n \c\l\a\s\s\=\"\w\e\e\k\">D</\s\p\a\n> <\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) . ( $time ? $datetime_separator . tribe_get_start_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) : '' );
     } else { // defined start/end time
-      $inner .= tribe_get_start_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) . ( $time ? $datetime_separator . tribe_get_start_date( $event, false, '<\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) : '' );
+      $inner .= tribe_get_start_date( $event, false, '<\s\p\a\n \c\l\a\s\s\=\"\w\e\e\k\">D</\s\p\a\n> <\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) . ( $time ? $datetime_separator . tribe_get_start_date( $event, false, '<\s\p\a\n \c\l\a\s\s\=\"\w\e\e\k\">D</\s\p\a\n> <\s\p\a\n>M</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) : '' );
       $inner .= ( $html ? '</div>' : '' ) . ( $show_end_time ? '<span>to</span>' : '' );
       $inner .= $html ? '<div class="tribe-event-time">' : '';
-      $inner .= ( $show_end_time ? tribe_get_end_date( $event, false, '<\s\p\a\n>m</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) : '' );
+      $inner .= ( $show_end_time ? tribe_get_end_date( $event, false, '<\s\p\a\n \c\l\a\s\s\=\"\w\e\e\k\">D</\s\p\a\n> <\s\p\a\n>m</\s\p\a\n> <\s\p\a\n>d</\s\p\a\n>' ) : '' );
     }
   }
 

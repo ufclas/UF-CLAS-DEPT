@@ -1715,7 +1715,7 @@ h1 {
 }
 
 h2.entry-title {
-	font-family: "Gentona_ExtraBold", Arial,sans-serif;
+	font-family: "Gentona_SemiBold", Arial,sans-serif;
 	font-weight: normal;
 	font-size: 2.25rem;
 	line-height: 150%;
@@ -5575,6 +5575,7 @@ Event List Widget Styling
 .tribe-events-list-widget .tribe-event-duration {
   font-size: 16px;
   line-height: 150%;
+}
 
 .tribe-events-list-widget .event-date {
   position: absolute;
@@ -7303,7 +7304,7 @@ a.ui-state-default:hover {
               }
 
               .header-clas .container_header_department h1 {
-                padding-left: 3rem !important;
+                padding-left: 25px !important;
               }
 
               .header-clas .X-menu,

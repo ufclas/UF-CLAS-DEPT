@@ -13,6 +13,10 @@
     color: #004083;
 }
 
+.tribe-event-schedule-details span.hide-mobile {
+    display: none;
+}
+
 .tribe-events-event-meta .author .tribe-event-schedule-details {
     font-family: "Gentona_ExtraBold" !important;
     font-size: 1.7rem;
@@ -28,6 +32,12 @@
 
 .tribe-event-schedule-details > div {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tribe-event-date-start span {
+    margin: 0 4px;
 }
 
 .tribe-events-list-separator-month+.type-tribe_events.tribe-events-first {
@@ -825,7 +835,7 @@ Media Queries
   }
 
   .tribe-event-date-start, .tribe-event-date-end {
-      margin: 1rem .4rem 0;
+      margin: 10px 0;
   }
 
   .tribe-events-loop .tribe-event-date-end:before {
@@ -858,8 +868,8 @@ Media Queries
   }
 
   #page .tribe-events-venue-details a img {
-      width: 165px;
-      height: 165px;
+      width: 210px;
+      height: 210px;
       object-fit: cover;
   }
 
@@ -926,7 +936,9 @@ Media Queries
     border-top: 0;
   }
 
-  .tribe-events-loop, .featured-events-container .tribe-event-schedule-details, .featured-events-container .tribe-events-venue-details {
+  .tribe-events-loop,
+  .featured-events-container .tribe-event-schedule-details,
+  .featured-events-container .tribe-events-venue-details {
     margin: 0 !important;
   }
 
@@ -988,6 +1000,31 @@ Media Queries
     line-height: 23px;
     font-size: 1rem;
   }
+
+  .tribe-event-date-start span.week {
+    flex: 1 100%;
+    margin-bottom: .5rem;
+  }
+
+  .tribe-event-date-start span {
+    margin: 0;
+  }
+
+  .tribe-events-list .tribe-events-venue-details {
+    display: flex;
+    flex: 1 75%;
+  }
+
+  .tribe-event-schedule-details span.hide-mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tribe-events-list-separator-month span {
+    padding: 0 7.5% 0 0;
+  }
+
 }
 
 @media (min-width: 1025px){
@@ -1033,11 +1070,6 @@ Media Queries
 
   #tribe-events input {
     margin-left: 1rem !important;
-  }
-
-  .tribe-events-list .tribe-events-venue-details {
-    display: flex;
-    flex: 1 75%;
   }
 
   .tribe-events-list .type-tribe_events {
@@ -1118,12 +1150,6 @@ Media Queries
     font-family: "Gentona_SemiBold" !important;
   }
 
-  #page .tribe-events-venue-details a img {
-      width: 210px;
-      height: 210px;
-      object-fit: cover;
-  }
-
   .tribe-event-date-start span,
   .tribe-event-date-end span {
       font-size: 2.375rem;
@@ -1145,10 +1171,6 @@ Media Queries
 
   .time-venue-info-container span {
     font-size: 1.25rem;
-  }
-
-  .tribe-events-list-separator-month span {
-    padding: 0 7.5% 0 0;
   }
 
   .tribe-events-title-bar .tribe-events-page-title {
