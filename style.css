@@ -1719,7 +1719,6 @@ h2.entry-title {
 	font-weight: normal;
 	font-size: 2.25rem;
 	line-height: 150%;
-	letter-spacing: 1px;
 	color: #004083;
 }
 
@@ -1813,7 +1812,7 @@ time.entry-date.published {
 }
 
 #secondary h2 {
-   font-family: "Gentona_Bold", Arial, sans-serif;
+   font-family: "Gentona_SemiBold", Arial, sans-serif;
    font-weight: normal;
    font-size: 1.5rem;
    font-style: normal;
@@ -6494,7 +6493,7 @@ a.ui-state-default:hover {
   .post-template-single-right-sidebar:not(.error404) #primary, .page-template-single-right-sidebar:not(.error404) #primary {
     position:relative;
     float: left;
-    width: 67%;
+    width: 66%;
     display: block;
     clear: none;
     padding-right: 3rem;
