@@ -574,7 +574,8 @@
  max-height:3.75rem;
  display:table;
  clear:both;
- background-color:rgba(0, 64, 131, 1);
+ /* background-color:rgba(0, 64, 131, 1); */
+ background-color: green;
  text-align:center;
 }
 
