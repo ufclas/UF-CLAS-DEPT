@@ -35,7 +35,7 @@
      echo '</p>';
   else :
 ?>
-      <p class="footer-clas-address">Set department address here. Test change.</p>
+      <p class="footer-clas-address">Set department address here.</p>
 
 <?php
 endif;
