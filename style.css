@@ -5158,7 +5158,6 @@ Image block cards
   text-shadow: none;
 }
 
-#featured-carousel .half-image-feature .carousel-caption h3,
 #featured-carousel .half-image-feature .carousel-caption .kicker,
 #featured-carousel .half-image-feature .carousel-caption .gform_wrapper .gform_heading .gform_description,
 .gform_wrapper .gform_heading #featured-carousel .half-image-feature .carousel-caption .gform_description,
@@ -5172,6 +5171,15 @@ Image block cards
   font-size: 20px;
   line-height: 150%;
   text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+#featured-carousel .half-image-feature .carousel-caption h3 {
+  font-family: "Gentona_Book", "Georgia", serif;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: none;
   margin-bottom: 0;
   letter-spacing: 2px;
 }
@@ -5430,6 +5438,18 @@ Image block cards
     border: 0;
 }
 
+#clas-home p.link-more {
+        margin-top: 3%;
+}
+
+#clas-home p.link-more a.more-link {
+    border: 2px solid white;
+    padding: 2%;
+    margin-top: 3%;
+    font-size: 1.075rem;
+    text-transform: uppercase;
+}
+
 /*=============================================
 Post slider shortcode
 ===============================================*/
@@ -5537,6 +5557,12 @@ Events Slider shortcode
 .image-tile-widget h3 {
     padding: .5rem 0 0 1rem;
     color: #4c87b5;
+}
+
+p.tribe-events-widget-link a:after {
+  content: "\f101";
+  font-family: fontAwesome;
+  padding: 1%;
 }
 
 /*============================================
@@ -7348,7 +7374,9 @@ a.ui-state-default:hover {
               }
 
               .header-clas .college-logo-desktop svg {
-                width: 20rem;
+                width: 30rem;
+                margin-top: 3.5%;
+                margin-left: -2.5%;
                 position: relative;
                 top: 0;
                 display: block;
