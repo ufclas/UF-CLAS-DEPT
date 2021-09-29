@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
-	
+
 	const sass = require('node-sass');
 	require('load-grunt-tasks')(grunt);
 
 	// Project configuration.
 	grunt.initConfig({
 	pkg: grunt.file.readJSON('package.json'),
-		
+
 		/**
 		 * Sass tasks
 		 */
@@ -19,11 +19,11 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'./assets/css/inline.min.css': './assets/css/inline.css',
-					'./style.min.css': './style.css'
+					'./assets/css/style.min.css': './style.css'
 				}
 			}
 		},
-		
+
 		/**
 		 * Concat files
 		 */
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 				dest: 'assets/js/script.min.js'
 			},
 		},
-		
+
 		/**
 		 * Minify JS
 		 */
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		
+
 		/**
 		 * Watch changes to files
 		 */
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 				tasks: ['uglify', 'concat']
 			}
 		}
-		
+
 	});
 
 	// Load tasks
