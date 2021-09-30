@@ -72,11 +72,6 @@ endif;
         </div>
       </div>
 
-			<div class="footer-bottom-col-2">
-				<h2 class="footer-col-2-connected">Stay Connected</h2>
-				<p class="footer-connect-alumni">Connect with 55,000+ Liberal Arts and Sciences Alumni!</p>
-			</div>
-
       <div class="footer-main-sub-col-2">
         <div class="footer-main-FooterCol1 footer-menu">
 	   <?php
@@ -98,6 +93,12 @@ endif;
 				'depth' => 1,
 	   		) ); ?>
         </div>
+
+				<div class="footer-bottom-col-2">
+					<h2 class="footer-col-2-connected">Stay Connected</h2>
+					<p class="footer-connect-alumni">Connect with 55,000+ Liberal Arts and Sciences Alumni!</p>
+				</div>
+
       </div>
 
       <div class="footer-main-sub-col-3">
