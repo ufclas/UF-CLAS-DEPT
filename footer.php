@@ -41,7 +41,7 @@
 endif;
 ?>
 			<a href="https://news.clas.ufl.edu/dean-dave-richardson/" target="_blank">
-      <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'journeys-begin', 'class' => 'icon-journeys-begin' ) ); ?>
+      <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'journeys-begin', 'class' => 'icon-journeys-begin' ) ); ?></a>
 
       </div><!-- .footer-main-col-1 -->
 
