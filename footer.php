@@ -51,7 +51,7 @@ endif;
    <div class="footer-main-sub-col">
 <!-- Navigate CLAS Footer Menu -->
 		 <div class="footer-main-nav">
-			 <div class="footer-main-FooterCol1 footer-menu">
+			 <div class="footer-main-FooterMainNav footer-menu">
 		<?php
 		 $menu_obj = ufclas_emily_get_menu_by_location("FooterMainNav");
 		 if (isset ($menu_obj->name)):
