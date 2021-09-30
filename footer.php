@@ -53,7 +53,7 @@ endif;
 		 <div class="footer-main-nav">
 			 <div class="footer-main-FooterCol1 footer-menu">
 		<?php
-		 $menu_obj = ufclas_emily_get_menu_by_location("FooterCol1");
+		 $menu_obj = ufclas_emily_get_menu_by_location("FooterMainNav");
 		 if (isset ($menu_obj->name)):
 			 ?>
 			 <h2><?php echo esc_html($menu_obj->name); ?>

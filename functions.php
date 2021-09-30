@@ -136,6 +136,11 @@ function ufclas_emily_X_theme_setup() {
 		'quicklinks'    => __( 'Quick Links', 'ufclas-emily' )
 	) );
 
+		// Register Menu
+	register_nav_menus( array(
+		'FooterMainNav'    => __( 'Footer Main Nav', 'ufclas-emily' )
+	) );
+
         // Register Menu
 	register_nav_menus( array(
 		'FooterCol1'    => __( 'Footer Column 1', 'ufclas-emily' )
