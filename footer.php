@@ -24,7 +24,7 @@
       <div class="uf">
          <a href="https://clas.ufl.edu" target="_blank">
             <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'clas-connected-footer', 'class' => 'icon-college-logo-stacked' ) ); ?>
-			<span class="SVGaltText">College of Liberal Arts and Sciences Homepage</span>
+			<!-- <span class="SVGaltText">College of Liberal Arts and Sciences Homepage</span> -->
          </a>
       </div>
 
