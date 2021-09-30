@@ -41,7 +41,7 @@
 endif;
 ?>
 			<a href="https://news.clas.ufl.edu/dean-dave-richardson/" target="_blank">
-      <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'journeys-begin', 'class' => 'icon-journeys-begin' ) ); ?></a>
+      <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'journeys-begin', 'class' => 'icon-journeys-begin' ) ); ?>
 
       </div><!-- .footer-main-col-1 -->
 
@@ -49,6 +49,31 @@ endif;
 
 
    <div class="footer-main-sub-col">
+<!-- Navigate CLAS Footer Menu -->
+		 <div class="footer-main-nav">
+			 <div class="footer-main-FooterCol1 footer-menu">
+		<?php
+		 $menu_obj = ufclas_emily_get_menu_by_location("FooterCol1");
+		 if (isset ($menu_obj->name)):
+			 ?>
+			 <h2><?php echo esc_html($menu_obj->name); ?>
+			 <button><span class="icon-svg icon-caret"><?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span></button>
+			 </h2>
+			 <?php
+		 endif;
+
+		 wp_nav_menu( array(
+			 'theme_location' => 'FooterCol1',
+			 'menu_id'        => 'FooterCol1',
+			 'menu_class'        => 'list-unstyled footer-list>',
+			 'fallback_cb' => 'ufclas_emily_primary_menu_fallback',
+			 'depth' => 1,
+		 ) );
+	 ?>
+			 </div>
+		 </div>
+		 <!-- End Navigate CLAS Footer Menu -->
+		 
       <div class="footer-main-sub-col-1">
         <div class="footer-main-FooterCol1 footer-menu">
 	   <?php
