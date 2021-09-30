@@ -63,8 +63,8 @@ endif;
 		 endif;
 
 		 wp_nav_menu( array(
-			 'theme_location' => 'FooterCol1',
-			 'menu_id'        => 'FooterCol1',
+			 'theme_location' => 'FooterMainNav',
+			 'menu_id'        => 'FooterMainNav',
 			 'menu_class'        => 'list-unstyled footer-list>',
 			 'fallback_cb' => 'ufclas_emily_primary_menu_fallback',
 			 'depth' => 1,
@@ -73,7 +73,7 @@ endif;
 			 </div>
 		 </div>
 		 <!-- End Navigate CLAS Footer Menu -->
-		 
+
       <div class="footer-main-sub-col-1">
         <div class="footer-main-FooterCol1 footer-menu">
 	   <?php
