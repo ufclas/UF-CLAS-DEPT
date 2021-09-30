@@ -81,6 +81,12 @@ endif;
 				<h2><?php echo esc_html($menu_obj->name); ?> <button><span class="icon-svg icon-caret">
 				<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span></button>
 				</h2>
+
+				<div class="footer-bottom-col-2">
+					<h2 class="footer-col-2-connected">Stay Connected</h2>
+					<p class="footer-connect-alumni">Connect with 55,000+ Liberal Arts and Sciences Alumni!</p>
+				</div>
+
 				<?php
 			endif;
 
@@ -92,11 +98,6 @@ endif;
 				'depth' => 1,
 	   		) ); ?>
         </div>
-
-				<h2 class="footer-col-2-connected">Stay Connected</h2>
-				<p class="footer-connect-alumni">Connect with 55,000+ Liberal Arts and Sciences Alumni!</p>
-
-
       </div>
 
       <div class="footer-main-sub-col-3">
