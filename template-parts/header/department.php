@@ -2,7 +2,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to main content', 'twentyseventeen' ); ?></a>
 
        <div class="uf"> <!-- UF Logo -->
-          <a href="http://www.ufl.edu" target="_blank">
+          <a href="https://ufl.edu" target="_blank">
 					 <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'uflogo', 'class' => 'icon-uflogo' ) ); ?>
 					 <span class="SVGaltText">University of Florida Homepage</span>
           </a>
@@ -10,7 +10,7 @@
 
 		   <div class="college"><!-- College of Liberal Arts logo -->
 				 <div class="strikeRight">
-	 				<a href="http://www.clas.ufl.edu" target="_blank">
+	 				<a href="https://clas.ufl.edu" target="_blank">
 	 						<span class="college-logo-desktop">
 	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'clas-connected' ) ); ?>
 	 							<span class="SVGaltText">College of Liberal Arts and Sciences</span>
