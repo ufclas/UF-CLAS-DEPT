@@ -134,7 +134,7 @@ endif;
 				 <span class="SVGaltText">University of Florida Homepage</span>
              </a>
          <div class="hashtag">
-            <span> #UFLibArtSci</span>
+            <span> #LASGATORS</span>
          </div>
         <div class="social">
             <ul class="social-nav">
