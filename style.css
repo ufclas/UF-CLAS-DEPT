@@ -675,6 +675,10 @@ svg.icon.icon-search {
  padding-left: 3.75rem; border:1px solid red;
 }
 
+.strikeheader:hover {
+  color: #f45a1d !important;
+  transition: .125s;
+}
 .strikeRight a{
  height: 3.75rem;/* fallback */
 }
