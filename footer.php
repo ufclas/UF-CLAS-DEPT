@@ -41,7 +41,7 @@
 endif;
 ?>
 			<a href="https://news.clas.ufl.edu/dean-dave-richardson/" target="_blank">
-      <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'journeys-begin', 'class' => 'icon-journeys-begin' ) ); ?>
+      <?php echo '' twentyseventeen_get_svg( array( 'icon_id' => 'journeys-begin', 'class' => 'icon-journeys-begin' ) ); ?></a>
 
       </div><!-- .footer-main-col-1 -->
 
@@ -118,12 +118,6 @@ endif;
 				'depth' => 1,
 	   		) ); ?>
         </div>
-
-				<div class="footer-bottom-col-2">
-					<h2 class="footer-col-2-connected">Stay Connected</h2>
-					<p class="footer-connect-alumni">Connect with 55,000+ Liberal Arts and Sciences Alumni!</p>
-				</div>
-
       </div>
 
       <div class="footer-main-sub-col-3">
@@ -148,6 +142,10 @@ endif;
       </div>
 
    </div>
+	 <div class="footer-bottom-col-2">
+		 <h2 class="footer-col-2-connected">Stay Connected</h2>
+		 <p class="footer-connect-alumni">Connect with 55,000+ Liberal Arts and Sciences Alumni!</p>
+	 </div>
 
 </div><!-- .footer-main-col-2 -->
 
