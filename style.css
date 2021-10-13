@@ -1680,7 +1680,7 @@ img.alignright,  .alignright , .alignleft {
   height: 8.18375rem;
   margin: 0 auto;
 }
-.icon-journeys-begin{
+.icon-journeys-begin {
   display: block;
   width: 15.25rem;
   height: 4.125rem;
@@ -1689,12 +1689,12 @@ img.alignright,  .alignright , .alignleft {
   fill: #ffffff;
 }
 
-.footer-main p{
+.footer-main p {
    font-family: Gentona_Book;
   font-size:  1rem;
 }
 
-.footer-main h2{
+.footer-main h2 {
   color: #ffffff;
   font-size:1rem;
   line-height: 120%;
@@ -1705,7 +1705,7 @@ img.alignright,  .alignright , .alignleft {
   text-transform: capitalize;
 }
 
-.list-unstyled  {
+.list-unstyled {
   text-transform: uppercase;
   font-family: "Gentona_Light";
   list-style: none;

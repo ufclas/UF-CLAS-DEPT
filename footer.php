@@ -144,7 +144,7 @@ endif;
    </div>
 	 <div class="footer-bottom-col-2">
 		 <h2 class="footer-col-2-connected">Stay Connected</h2>
-		 <p class="footer-connect-alumni"><a href="https://advancement.clas.ufl.edu/alumni/stay-connected">Connect with 55,000+ Liberal Arts and Sciences Alumni</a></p>
+		 <p class="footer-connect-alumni"><a href="https://advancement.clas.ufl.edu/alumni/stay-connected">Connect with 55,000+ Liberal Arts and Sciences Alumni!</a></p>
 	 </div>
 
 </div><!-- .footer-main-col-2 -->
