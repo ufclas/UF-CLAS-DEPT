@@ -1046,6 +1046,60 @@ button.dropdown-toggle {
    width: .6rem;
 }
 
+/* New Homepage Footer Styles */
+
+div.footer-main-col-2 {
+	width: 75%;
+	margin-left: 5%;
+}
+
+div.footer-main-nav ul li {
+	display: inline;
+}
+
+div.footer-main-nav ul li:after {
+	content: "|";
+	padding: 1%;
+}
+
+div.footer-main-nav ul li:last-child:after {
+  content: "";
+}
+
+.footer-main h2 {
+	color: #9bd0de;
+	text-transform: uppercase;
+}
+
+div.footer-main-sub-col-1 ul li, div.footer-main-sub-col-2 ul li, div.footer-main-sub-col-3 ul li {
+	padding: 0;
+}
+
+.footer-main-col-2 a {
+	text-transform: none;
+	font-size: 16px;
+}
+
+h2.footer-col-2-connected {
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 0.065rem;
+	color: #9bd0de;
+  margin-bottom: .5rem;
+}
+
+p.footer-connect-alumni {
+	font-size: 16px;
+	font-family: "Gentona_Book" !important;
+	padding: 0;
+}
+
+p.footer-connect-alumni a {
+  font-weight: normal;
+}
+
+/* end new homepage footer styles */
+
 .contact-webmaster{
    text-align: center;
 }
@@ -1643,7 +1697,7 @@ img.alignright,  .alignright , .alignleft {
 .footer-main h2{
   color: #ffffff;
   font-size:1rem;
-  line-height: 150%;
+  line-height: 120%;
   padding:0;
   margin-top: .5rem;
   margin-bottom: .5rem;
@@ -4221,8 +4275,7 @@ h2.right-arrow  strong::before {
 }
 
 .footer-main a, .footer-uf a {
-    color: #9ad2e1 !important;
-	font-weight: 700;
+    color: #ffffff !important;
 }
 
 /*__________________SOCIAL MEDIA ICONS__________________*/
@@ -7807,7 +7860,7 @@ a.ui-state-default:hover {
                     width:3.835rem;
                  }
                  .footer-main a {
-                    line-height: 150%;
+                    line-height: 120%;
                  }
 
                  .footer-clas-address{
