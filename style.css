@@ -1072,7 +1072,7 @@ div.footer-main-nav ul li:last-child:after {
 }
 
 .footer-main-nav a {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
 div.footer-main-sub-col-1 ul li, div.footer-main-sub-col-2 ul li, div.footer-main-sub-col-3 ul li {
