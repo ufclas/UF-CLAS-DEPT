@@ -7431,8 +7431,8 @@ a.ui-state-default:hover {
               }
 
               .header-clas .college-logo-desktop svg {
-                width: 30rem;
-                margin-top: 3.5%;
+                width: 25rem;
+                margin-top: 0;
                 position: relative;
                 top: 0;
                 display: block;
