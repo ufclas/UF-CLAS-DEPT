@@ -108,7 +108,7 @@ el.addEventListener('click', clickerFn);
 
 // Footer Menu
 function toggleFooterMenu(e) {
-	var mq = window.matchMedia( "(max-width: 900px)" );
+	var mq = window.matchMedia( "(max-width: 1024px)" );
 	if (mq.matches) {
 		this.classList.toggle('open');
 		if(this.getElementsByTagName('ul')[0].style.display == 'block'){

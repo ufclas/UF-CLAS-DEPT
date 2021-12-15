@@ -1048,22 +1048,27 @@ button.dropdown-toggle {
 
 /* New Homepage Footer Styles */
 
-div.footer-main-col-2 {
-	width: 75%;
-	margin-left: 5%;
-}
+@media (min-width: 1024px) {
+  div.footer-main-col-2 {
+  	width: 75%;
+  	margin-left: 5%;
+  }
 
-div.footer-main-nav ul li {
-	display: inline;
-}
+  div.footer-main-nav ul li {
+  	display: inline;
+  }
 
-div.footer-main-nav ul li:after {
-	content: "|";
-	padding: 1%;
-}
+  div.footer-main-nav ul li:after {
+  	content: "|";
+  	padding: 1%;
+  }
 
-div.footer-main-nav ul li:last-child:after {
-  content: "";
+  div.footer-main-nav ul li:last-child:after {
+    content: "";
+  }
+  .footer-main-nav a {
+      text-transform: uppercase !important;
+  }
 }
 
 .footer-main h2 {
@@ -1071,9 +1076,6 @@ div.footer-main-nav ul li:last-child:after {
 	text-transform: uppercase;
 }
 
-.footer-main-nav a {
-    text-transform: uppercase !important;
-}
 
 div.footer-main-sub-col-1 ul li, div.footer-main-sub-col-2 ul li, div.footer-main-sub-col-3 ul li {
 	padding: 0;
@@ -1550,26 +1552,20 @@ img.alignright,  .alignright , .alignleft {
   color: #ffffff;
   font-size: .9rem;
 }
-.footer-main-sub-col-1{
-   width: 100%;
-   display: block;
-   vertical-align: top;
-   padding: 1rem;
-}
-
-.footer-main-sub-col-2{
-   width: 100%;
-   display: block;
-   vertical-align: top;
-   padding: 1rem;
-}
-
+.footer-main-sub-col-1,
+.footer-main-sub-col-2,
 .footer-main-sub-col-3{
    width: 100%;
    display: block;
    vertical-align: top;
-   padding: 1rem;
+}
 
+.footer-main-sub-col-1,
+.footer-main-sub-col-2,
+.footer-main-sub-col-3,
+.footer-main-nav,
+.footer-bottom-col-2{
+   padding: 1rem;
 }
 
 .ufcol1{
@@ -7437,7 +7433,6 @@ a.ui-state-default:hover {
               .header-clas .college-logo-desktop svg {
                 width: 30rem;
                 margin-top: 3.5%;
-                margin-left: -2.5%;
                 position: relative;
                 top: 0;
                 display: block;
@@ -7745,7 +7740,14 @@ a.ui-state-default:hover {
                     padding-top: 0;
                     width: 30%;
                     display: inline-block;
-                    padding: 1rem 1rem 1rem 0;
+                  }
+
+                  .footer-main-sub-col-1,
+                  .footer-main-sub-col-2,
+                  .footer-main-sub-col-3,
+                  .footer-main-nav,
+                  .footer-bottom-col-2 {
+                    padding: 1rem 1rem 0 0;
                   }
 
                  .footer-main-col-1{
