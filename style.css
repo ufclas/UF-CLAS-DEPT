@@ -1757,9 +1757,9 @@ html, body{
 /* TYPOGRAPHY */
 
 h1 {
-   font-family: "Gentona_ExtraBold", Arial,sans-serif;
+   font-family: "Gentona_Bold", Arial,sans-serif;
    font-weight: normal;
-   font-size: 2.25rem;
+   font-size: 2.5rem;
    font-style: normal;
    line-height: 150%;
    letter-spacing: 1px;
@@ -1795,12 +1795,12 @@ h3.entry-title a {
 }
 
 h2 {
-   font-family: "Quadon_Bold", Arial, sans-serif;
+   font-family: "Gentona_SemiBold", Arial, sans-serif;
    font-weight: normal;
-   font-size: 1.5rem;
+   font-size: 2.25rem;
    font-style: normal;
    line-height: 150%;
-   color: #414141;
+   color: #004083;
    margin: 0px;
    padding: 0px;
    padding-top: 1rem;
