@@ -1891,16 +1891,17 @@ h2 a:hover,h2 a:active  {
    color:#A24C16;
 }
 h3 {
-   font-family: Gentona_SemiBold;
+  font-family: "Gentona_SemiBold", Arial, sans-serif;
    font-size: 1.5rem;
-   line-height: 150%;
+   line-height: 123%;
    color: #00337A;
    margin: 0px;
    padding: 0px;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding-top: .75rem;
+   padding-bottom: .25rem;
    display: block;
    clear: both;
+   text-transform: uppercase;
 }
 h3.quote1 {
    font-family: "Quadon_ExtraBoldItalic", Arial, sans-serif;
@@ -1931,28 +1932,29 @@ h3.quote2 {
    clear: both;
 }
 h4 {
-   font-family: "Gentona_Bold", Arial, sans-serif;
+   font-family: "Gentona_Book", Arial, sans-serif;
    font-size: 1.35rem;
    font-style: normal;
-   line-height: 150%;
+   line-height: 123%;
    color: #585656;
    margin: 0px;
    padding: 0px;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding-top: .75rem;
+   padding-bottom: .25rem;
    display: block;
    clear: both;
 }
 h5 {
-   font-family: "Quadon_Regular", Arial, sans-serif;
-   font-size: 1.125rem;
+  color: #337ab7;
+  font-family: "Gentona_Book", Arial, sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;
    font-style: normal;
-   line-height: 150%;
-   color: #A63F00;
+   line-height: 123%;
    margin: 0px;
    padding: 0px;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding-top: .75rem;
+   padding-bottom: .25rem;
    display: block;
    clear: both;
 }
