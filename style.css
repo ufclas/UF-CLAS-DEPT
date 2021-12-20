@@ -1763,13 +1763,14 @@ h1, .h1 {
    font-style: normal;
    line-height: 150%;
    letter-spacing: 1px;
-   color: #004083;
+   color: rgba(0,64,131,1);
    margin: 0px;
    padding: 0px;
    padding-top: 1rem;
    padding-bottom: 1rem;
    display: block;
    clear: both;
+    text-transform: uppercase;
 }
 
 h2.entry-title {
