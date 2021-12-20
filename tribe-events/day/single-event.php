@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-wp_enqueue_style( 'events-styling', '/wp-content/themes/UF-CLAS-DEPT/assets/css/events-styling.css');
+wp_enqueue_style( 'events-styling', '/wp-content/themes/People-Theme/assets/css/events-styling.css');
 
 // Setup an array of venue details for use later in the template
 $venue_details = tribe_get_venue_details();

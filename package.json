@@ -5,14 +5,14 @@
   "main": "index.php",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pmdigitalconsulting/UF-CLAS-DEPT.git"
+    "url": "git+https://github.com/pmdigitalconsulting/People-Theme.git"
   },
   "author": "priscillamc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pmdigitalconsulting/UF-CLAS-DEPT/issues"
+    "url": "https://github.com/pmdigitalconsulting/People-Theme/issues"
   },
-  "homepage": "https://github.com/pmdigitalconsulting/UF-CLAS-DEPT#readme",
+  "homepage": "https://github.com/pmdigitalconsulting/People-Theme#readme",
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-concat": "^1.0.1",
