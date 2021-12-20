@@ -1756,7 +1756,7 @@ html, body{
 
 /* TYPOGRAPHY */
 
-h1 {
+h1, .h1 {
    font-family: "Gentona_Bold", Arial,sans-serif;
    font-weight: normal;
    font-size: 2.5rem;
@@ -1794,7 +1794,7 @@ h3.entry-title a {
 	word-wrap: break-word;
 }
 
-h2 {
+h2, .h2 {
    font-family: "Gentona_SemiBold", Arial, sans-serif;
    font-weight: normal;
    font-size: 2.25rem;
@@ -1890,7 +1890,7 @@ h2 a {
 h2 a:hover,h2 a:active  {
    color:#A24C16;
 }
-h3 {
+h3, .h3 {
   font-family: "Gentona_SemiBold", Arial, sans-serif;
    font-size: 1.5rem;
    line-height: 123%;
@@ -1931,12 +1931,12 @@ h3.quote2 {
    display: block;
    clear: both;
 }
-h4 {
+h4, .h4 {
    font-family: "Gentona_Book", Arial, sans-serif;
    font-size: 1.35rem;
    font-style: normal;
    line-height: 123%;
-   color: #585656;
+   color: #004083;
    margin: 0px;
    padding: 0px;
    padding-top: .75rem;
@@ -1944,12 +1944,11 @@ h4 {
    display: block;
    clear: both;
 }
-h5 {
+h5, .h5 {
   color: #337ab7;
   font-family: "Gentona_Book", Arial, sans-serif;
   font-style: italic;
   font-size: 1.125rem;
-   font-style: normal;
    line-height: 123%;
    margin: 0px;
    padding: 0px;
@@ -1958,17 +1957,17 @@ h5 {
    display: block;
    clear: both;
 }
-h6 {
+h6, .h6 {
    font-family: "Gentona_Book", Arial, sans-serif;
    font-weight: 300;
-   font-size: 0.875rem;
+   font-size: 1rem;
    font-style: normal;
-   line-height: 150%;
-   color: #414141;
+   line-height: 123%;
+   color: #337ab7;
    margin: 0px;
    padding: 0px;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding-top: .75rem;
+   padding-bottom: .25rem;
    display: block;
    clear: both;
 }
@@ -2309,7 +2308,8 @@ figcaption{
 }
 
 #page a, #secondary a {
-   color:#337ab7;
+  color: #246faf;
+	font-family: "Gentona_Medium" !important;
    text-decoration:none;
    position: relative;
 }
@@ -3241,7 +3241,7 @@ a {
 }
 
 #page #main p:not(.slideshow_description) > a:not(.btn-blue, .btn) {
-    border-bottom: 1px dashed !important;
+    border-bottom: 1px solid #337ab76b !important;
 }
 
 /*
@@ -4353,7 +4353,7 @@ h2.right-arrow  strong::before {
 
 .footer-uf-col-1.bottom-links a {
     color: white !important;
-    border-bottom: 1px dashed;
+    border-bottom: 1px solid #337ab76b;
 }
 
 .footer-uf-col-2{
@@ -4404,7 +4404,7 @@ body {
 }
 
 #page p {
-    font-family: "Surveyor Text A","Surveyor Text B" !important;
+    font-family: 'Gentona_Book',sans-serif !important;
 }
 
 .bold {
@@ -4419,10 +4419,6 @@ body {
     margin-top: 7rem;
 }
 
-#page a,
-#secondary a {
-  font-family: "Gentona_Bold" !important;
-}
 
 .single-featured-image-header {
     max-width: 100%;
@@ -7918,9 +7914,9 @@ a.ui-state-default:hover {
                        }
 
                          h1 {
-                            font-family: "Gentona_ExtraBold", Arial,sans-serif;
+                            font-family: "Gentona_Bold", Arial,sans-serif;
                             font-weight: normal;
-                            font-size: 3rem;
+                            font-size: 2.5rem;
                             font-style: normal;
                             line-height: 150%;
                             letter-spacing: 1px;
@@ -7935,12 +7931,12 @@ a.ui-state-default:hover {
 
 
                          h2 {
-                            font-family: "Quadon_Bold", Arial, sans-serif;
+                            font-family: "Gentona_SemiBold", Arial, sans-serif;
                             font-weight: normal;
-                            font-size: 2.1rem;
+                            font-size: 2.25rem;
                             font-style: normal;
                             line-height: 150%;
-                            color: #414141;
+                            color: #004083;
                             margin: 0px;
                             padding: 1rem 0;
                             display: block;
