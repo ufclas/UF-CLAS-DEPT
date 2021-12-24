@@ -9,6 +9,7 @@
        </div>
 
 		   <div class="college"><!-- College of Liberal Arts logo -->
+				<h1 class="strikeheader"><a class="strikeheader" href="<?php echo get_site_url(); ?>"><span class="access-focus"><?php echo  get_bloginfo( 'name' ) ?></span></a></h1>
 				 <div class="strikeRight">
 	 				<a href="https://clas.ufl.edu" target="_blank">
 	 						<span class="college-logo-desktop">
@@ -30,9 +31,6 @@
 
    <div class="department">
 		<div class="container_header_department"><!-- Website title -->
-		 <span>
-					<h1 class="strikeheader"><a class="strikeheader" href="<?php echo get_site_url(); ?>"><span class="access-focus"><?php echo  get_bloginfo( 'name' ) ?></span></a></h1>
-			</span>
 
 		 <div class="X-menu"> <!-- Main Navigation -->
 			 <div class="mobileSearch"><?php get_search_form(); ?></div>

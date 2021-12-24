@@ -1,4 +1,4 @@
-<header id="header-clas-home" class="X-header header-clas" aria-label="Website Header">
+<header id="header" class="X-header header-clas" aria-label="Website Header">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to main content', 'twentyseventeen' ); ?></a>
 
        <div class="uf"> <!-- UF Logo -->

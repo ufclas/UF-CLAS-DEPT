@@ -463,7 +463,7 @@
 
 /* If admin bar is present... */
 .admin-bar .X-header {
-   margin-top:2.875rem;
+   top:2.875rem;
  }
 
 #wpadminbar {
@@ -527,7 +527,6 @@
 }
 
 .X-header {
- position: fixed;
  top: 0;
  width: 100%;
  height: 3.75rem;/* fallback */
@@ -570,8 +569,6 @@
 .X-header .college {
  width:100%;
  position:relative;
- height: 3.75rem;/* fallback */
- max-height:3.75rem;
  display:table;
  clear:both;
  background-color:rgba(0, 64, 131, 1);
@@ -599,7 +596,7 @@
  vertical-align:middle;
  padding-left:0rem;
  width:100%;
- height: 60px;
+ height: auto;
  padding: 0 .5rem;
  font-size: 1.125rem;
  letter-spacing: .5px;
@@ -662,7 +659,7 @@ svg.icon.icon-search {
  display: block;
  vertical-align: middle;
  width:100%;
- height: 3.75rem;/* fallback */
+ height: auto;/* fallback */
  vertical-align: middle;
  color:rgba(0, 64, 131, 1) !important;
  letter-spacing:1px;
@@ -4415,10 +4412,6 @@ body {
     font-family: "Gentona_SemiBold";
 }
 
-#page {
-    margin-top: 7rem;
-}
-
 
 .single-featured-image-header {
     max-width: 100%;
@@ -4432,9 +4425,7 @@ body {
 .X-header .department {
   background-color: #f7f4eb;
   height: auto;
-  max-height: 514px;
   width:100%;
-  top:3.9375rem;
   display:block;
   clear:both;
   border-bottom:1px solid #efede6;
@@ -4461,11 +4452,21 @@ aside {
     padding: 1rem;
 }
 
-.header-clas .strikeheader a {
+header {
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+header.entry-header {
+  position:relative;
+}
+
+.header-clas a {
   border: none;
 }
 
-.X-header.header-clas .college a {
+.X-header.header-clas .college .strikeRight a {
   display: flex;
   position: relative;
   justify-content: center;
@@ -6191,7 +6192,7 @@ a.ui-state-default:hover {
 
          /* If admin bar is present... */
          .admin-bar .X-header {
-           margin-top:2rem;
+           top:2rem;
          }
 
          /* Row One -- COLLEGE Name */
@@ -6210,11 +6211,8 @@ a.ui-state-default:hover {
 
        /* Row Two -- DEPARTMENT Name */
        .X-header .department {
-         height: 3.75rem;/* fallback */
-         max-height: 3.75rem;
-         top: 3.75rem; /* fallback */
          transition: all 0.2s ease-out;
-         position: absolute;
+         position: relative;
          background-color:#faf8f1;
        }
 
@@ -6855,7 +6853,6 @@ a.ui-state-default:hover {
 /*-------------  Start here   -------------------*/
          /* Row One -- COLLEGE Name */
          .X-header .college {
-           height: 4.0625rem;/* fallback */
            padding-left: 10.125rem;
            z-index:2;
          }
@@ -7048,7 +7045,7 @@ a.ui-state-default:hover {
            display: inline-block;
          }
 
-         .strikeRight > span::after {
+         .strikeRight > span:after {
            content: "";
            position: absolute;
            top: 50%;
@@ -7059,7 +7056,7 @@ a.ui-state-default:hover {
            margin-left: 1rem;
          }
 
-         .header-clas.X-header .department .strikeheader {
+         .header-clas.X-header .department {
            font-family: Gentona_Bold;
            font-weight:500;
            font-size: 2.5rem;
@@ -7292,10 +7289,7 @@ a.ui-state-default:hover {
          }
 
 
-             	/*===== Universal Styling ====*/
-              #page {
-                margin-top: 0;
-            	}
+
 
               /*===== Home Page Styling ====*/
               .page-template-page-image-header #page article {
@@ -7309,7 +7303,6 @@ a.ui-state-default:hover {
 
               /*===== Header Styling ====== */
               .X-header.header-clas {
-                position: static;
                 height: auto;
                 margin-top: 0 !important;
                 max-height: 100%;
@@ -7444,11 +7437,10 @@ a.ui-state-default:hover {
               }
 
               .X-header.header-clas .college {
-                 height: 4.1rem;
                  padding-left: 4.125rem;
               }
 
-              .X-header.header-clas .college a {
+              .X-header.header-clas .college .strikeRight a {
                 display: flex;
                 padding: 0;
                 align-items: center;
@@ -7458,7 +7450,6 @@ a.ui-state-default:hover {
               .X-header.header-clas .department {
                 height: auto;
                 width:100%;
-                top:3.9375rem;
                 display:block;
                 clear:both;
                 border-bottom:1px solid #efede6;
