@@ -18,9 +18,6 @@
 	 						<span class="college-logo-mobile">
 	 							<span>Liberal Arts and Sciences</span>
 	 					 </span>
-	 					 <span class="college-logo-tablet">
-	 							<span>College of Liberal Arts and Sciences</span>
-	 					 </span>
 	 				</a></h1>
 	 	   	</div>
 				<div class="menuBox">

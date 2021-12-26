@@ -529,7 +529,6 @@
 .X-header {
  top: 0;
  width: 100%;
- display: table;
  clear: both;
  z-index:9999;
  transition: all .2s ease-in-out;
@@ -543,8 +542,6 @@
 
 /* UF Logo -- floated above two rows  */
 .X-header .uf{
- width: 3.125rem;/* fallback */
- height: 3.125rem;/* fallback */
  position:relative;
  top:0px;
  left:0px;
@@ -552,11 +549,13 @@
  transition: all .2s ease-in-out;
  flex-basis: fit-content;
 }
-
+.X-header .uf > a {
+  display: flex;
+}
 /* UF Logo svg */
 .X-header .icon-uflogo{
- width: 3.125rem;
- height: 3.125rem;
+ width: 3.75rem;
+ height: 3.75rem;
  z-index: 10;
 }
 
@@ -579,15 +578,15 @@
   flex-direction: column;
   align-items: unset;
 }
-
+.X-header .college.subsite .strikeRight a {
+  padding:0.25rem 0;
+}
 .X-header .college a{
- font-family: Gentona_Medium;
+ font-family: Gentona_Bold;
  color:#ffffff;
  text-decoration: none;
  font-weight:normal;
  font-size:1.2rem; /* fallback */
- line-height: 150%;
- padding:0.25rem 0;
  margin:0px;
  text-align:center;
  text-transform:uppercase;
@@ -710,12 +709,10 @@ svg.icon.icon-search {
 .X-header .X-menu{
  display: block;
  overflow: visible;
- top:6.875rem;/* fallback */
  width: 100%;
  height: 100vh;
  visibility:none;
  overflow: visible;
- top:3.75rem;
  right:-4000px;
  position:absolute;
  background-color:#F7F4EB;
@@ -727,7 +724,6 @@ svg.icon.icon-search {
  position: absolute;
  display: block;
  right:0px;
- top:0px;
  background-color: #4c87b5;
  width: 3.75rem;
  height: 3.75rem ;
@@ -758,12 +754,11 @@ svg.icon.icon-search {
 
 .menuBox svg{
  vertical-align: middle;
- margin-bottom:.3rem;
 }
 
 .icon-menu{
- width:2rem;
- height:2rem;
+ width:1.5rem;
+ height:1.5rem;
  fill:rgba(255,255,255,1);
 }
 
@@ -2141,11 +2136,6 @@ img{
    margin: 0 auto;
 }
 
-svg {
-   max-width: 100%;
-   width: 40px;
-   height: 40px;
-}
 
 .home-featured-image{
   display:block;
@@ -4428,7 +4418,6 @@ body {
   width:100%;
   display:block;
   clear:both;
-  border-bottom:1px solid #efede6;
   text-align:center;
 }
 
@@ -4463,12 +4452,11 @@ header.entry-header {
 }
 
 .X-header.header-clas .college {
-  padding-left: .5rem;
+  padding-left: 1rem;
 }
 .X-header.header-clas .college .strikeRight a {
   display: flex;
   position: relative;
-  justify-content: center;
   align-items: center;
 }
 
@@ -4736,7 +4724,6 @@ h2.entry-title.interior-page {
   z-index:1000 !important;
   transition: all 0.5s ease;
   display:block;
-  top:3.75rem;
   text-align:center;
   margin:0 auto;
   border-top:rgb(0,32,65);
@@ -6194,12 +6181,22 @@ a.ui-state-default:hover {
            margin-top:2rem;
          }
 
+         .header-clas .college-logo-desktop svg {
+           width: 24rem;
+           margin-top: 0;
+           position: relative;
+           top: 0;
+           display: block;
+           height: 100%;
+           z-index: 2;
+         }
+
          /* Row One -- COLLEGE Name */
          .college-logo-mobile {
            display: none;
          }
 
-         .college-logo-tablet{
+         .college-logo-desktop{
            display: block;
          }
 
@@ -6217,6 +6214,22 @@ a.ui-state-default:hover {
 
          .X-quickLinks > a{
            color: #ffffff;
+         }
+
+         /* Tablet Header styles */
+
+         .X-header .college .strikeRight a { /* unit name */
+           font-size: 1.625rem;
+         }
+         .X-header .icon-uflogo, .menuBox { /* logo & menu icon size */
+           width: 3.75rem;
+           height: 3.75rem;
+         }
+         .X-header.header-clas .college.subsite .strikeRight a { /* negative margin to adjust for margin embedded in logo */
+           margin: -0.825rem 0;
+         }
+         .X-header.header-clas .college {
+             padding-left: 1rem;
          }
 
 /* START HERE */
@@ -6841,6 +6854,9 @@ a.ui-state-default:hover {
          .X-header .college {
            z-index:2;
          }
+         .X-header .college .strikeRight a { /* unit name */
+           font-size: 2.375rem;
+         }
 
          /* UF Logo svg */
          .X-header .icon-college-logo{
@@ -6854,6 +6870,11 @@ a.ui-state-default:hover {
            display: none;
          }
 
+         /* Desktop Header styles to override tablet media query */
+
+         .X-header.header-clas .college.subsite .strikeRight a { /* negative margin to adjust for margin embedded in logo */
+           margin: 0;
+         }
 
          /* SEARCH */
          .mobileSearch {
@@ -7385,9 +7406,6 @@ a.ui-state-default:hover {
                 flex: 1 0 100% !important;
               }
 
-              .header-clas .college-logo-desktop {
-                display: block;
-              }
 
               .X-header .college .college-logo-desktop {
                 height: 100%;
@@ -7395,12 +7413,6 @@ a.ui-state-default:hover {
 
               .header-clas .college-logo-desktop svg {
                 width: 32rem;
-                margin-top: 0;
-                position: relative;
-                top: 0;
-                display: block;
-                height: 100%;
-                z-index: 2;
               }
 
               .X-header .icon-uflogo {
@@ -7415,8 +7427,7 @@ a.ui-state-default:hover {
               .X-header.header-clas .college .strikeRight a {
                 display: flex;
                 padding: 0;
-                align-items: center;
-                justify-content: left;
+                margin: 0;
               }
 
               .X-header.header-clas .department {
@@ -7541,8 +7552,8 @@ a.ui-state-default:hover {
 
               /* Search Form */
               .header-clas .X-searchTrigger {
-                width: 4.8rem;
-                height: 60px;
+                width: 5rem;
+                height: 5rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
