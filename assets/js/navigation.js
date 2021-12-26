@@ -150,7 +150,7 @@
 })( jQuery );
 
 // get total height for <header>
-var headerEl = document.getElementByID("header");
+var headerEl = document.getElementById("header");
 var headerHeight = +headerEl.offsetHeight;
 
 // set margin-top to <page> depending on <header> height

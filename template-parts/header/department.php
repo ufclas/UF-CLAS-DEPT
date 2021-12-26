@@ -1,4 +1,4 @@
-<header class="X-header header-clas" aria-label="Website Header">
+<header id="header" class="X-header header-clas" aria-label="Website Header">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to main content', 'twentyseventeen' ); ?></a>
 
        <div class="uf"> <!-- UF Logo -->
@@ -8,7 +8,7 @@
           </a>
        </div>
 
-		   <div class="college"><!-- College of Liberal Arts logo -->
+		   <div class="college subsite"><!-- College of Liberal Arts logo -->
 				<h1 class="strikeheader"><a class="strikeheader" href="<?php echo get_site_url(); ?>"><span class="access-focus"><?php echo  get_bloginfo( 'name' ) ?></span></a></h1>
 				 <div class="strikeRight">
 	 				<a href="https://clas.ufl.edu" target="_blank">

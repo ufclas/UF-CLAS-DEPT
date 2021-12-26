@@ -463,7 +463,7 @@
 
 /* If admin bar is present... */
 .admin-bar .X-header {
-   top:2.875rem;
+   margin-top:2.875rem;
  }
 
 #wpadminbar {
@@ -529,8 +529,6 @@
 .X-header {
  top: 0;
  width: 100%;
- height: 3.75rem;/* fallback */
- max-height:3.75rem;
  display: table;
  clear: both;
  z-index:9999;
@@ -538,27 +536,27 @@
  overflow: visible;
  background-color:rgb(255,255,255);
  margin-top: 0;
+ display: flex;
+ flex-wrap: wrap;
+ background-color: #004083;
 }
 
 /* UF Logo -- floated above two rows  */
 .X-header .uf{
- width: 3.75rem;/* fallback */
- max-width:3.75rem;
- height: 3.75rem;/* fallback */
- max-height:3.75rem;
- position:absolute;
+ width: 3.125rem;/* fallback */
+ height: 3.125rem;/* fallback */
+ position:relative;
  top:0px;
  left:0px;
  z-index:10;
  transition: all .2s ease-in-out;
+ flex-basis: fit-content;
 }
 
 /* UF Logo svg */
 .X-header .icon-uflogo{
- width: 3.75rem;
- max-width:3.75rem;
- height: 3.75rem;
- max-height:3.75rem;
+ width: 3.125rem;
+ height: 3.125rem;
  z-index: 10;
 }
 
@@ -569,10 +567,17 @@
 .X-header .college {
  width:100%;
  position:relative;
- display:table;
+ display:flex;
  clear:both;
  background-color:rgba(0, 64, 131, 1);
  text-align:center;
+ flex: 1;
+ align-items: center;
+}
+
+.X-header .college.subsite {
+  flex-direction: column;
+  align-items: unset;
 }
 
 .X-header .college a{
@@ -582,7 +587,7 @@
  font-weight:normal;
  font-size:1.2rem; /* fallback */
  line-height: 150%;
- padding:0 3.75rem;
+ padding:0.25rem 0;
  margin:0px;
  text-align:center;
  text-transform:uppercase;
@@ -667,10 +672,6 @@ svg.icon.icon-search {
  text-align:center;
 }
 
-.strikeheader a {
- padding-right: 3.75rem;
- padding-left: 3.75rem; border:1px solid red;
-}
 
 .strikeheader:hover {
   color: #f45a1d !important;
@@ -1731,7 +1732,6 @@ html, body{
    margin:0px;
    padding:0px;
    width:100%;
-   height: 100%;
    font-family: "Surveyor Text A", "Surveyor Text B";
    font-style: normal;
    -webkit-font-smoothing: antialiased;
@@ -4435,12 +4435,12 @@ body {
 .header-clas .college h1,
 .header-clas .college .access-focus {
     color: white !important;
+    padding: 0;
 }
 
 .header-clas .strikeheader {
-   font-size: 1.2rem;
-   padding: 1rem 3.75rem 0;
-   line-height: 150%;
+   font-size: .938rem;
+   line-height: 1em !important;
 }
 
 input {
@@ -4462,10 +4462,9 @@ header.entry-header {
   position:relative;
 }
 
-.header-clas a {
-  border: none;
+.X-header.header-clas .college {
+  padding-left: .5rem;
 }
-
 .X-header.header-clas .college .strikeRight a {
   display: flex;
   position: relative;
@@ -6192,7 +6191,7 @@ a.ui-state-default:hover {
 
          /* If admin bar is present... */
          .admin-bar .X-header {
-           top:2rem;
+           margin-top:2rem;
          }
 
          /* Row One -- COLLEGE Name */
@@ -6744,8 +6743,6 @@ a.ui-state-default:hover {
 
 
        .X-header {
-         height: 7.8125rem;
-         display: block;
          padding:0px;
          margin:0 auto;
        }
@@ -6835,25 +6832,13 @@ a.ui-state-default:hover {
            background: black;
          }
 
-         /* UF Logo -- floated above two rows  */
-         .X-header .uf {
-           width: 8.125rem;
-           height: 8.125rem;
-           overflow:hidden;
-         }
 
-         /* UF Logo svg */
-         .X-header .icon-uflogo{
-           width: 8.125rem;
-           height: 8.125rem;
-           z-index: 10;
-         }
+
 
 
 /*-------------  Start here   -------------------*/
          /* Row One -- COLLEGE Name */
          .X-header .college {
-           padding-left: 10.125rem;
            z-index:2;
          }
 
@@ -6869,11 +6854,6 @@ a.ui-state-default:hover {
            display: none;
          }
 
-         .college-logo-desktop svg{
-           display:block;
-           width: 33.275rem;
-           height: 2.2rem;
-         }
 
          /* SEARCH */
          .mobileSearch {
@@ -7034,10 +7014,8 @@ a.ui-state-default:hover {
            height: auto;
            position: relative;
            margin: 0;
-           padding-left: 1rem;
            padding-right: 0rem;
            margin-right: 1rem;
-           max-width: 500px;
          }
 
          .strikeRight > span {
@@ -7302,11 +7280,6 @@ a.ui-state-default:hover {
               }
 
               /*===== Header Styling ====== */
-              .X-header.header-clas {
-                height: auto;
-                margin-top: 0 !important;
-                max-height: 100%;
-              }
 
               #top-menu li a[href="#"] {
                   pointer-events: none;
@@ -7372,7 +7345,6 @@ a.ui-state-default:hover {
                 display: flex !important;
                 margin: 0 auto;
                 flex-wrap: wrap;
-                padding: .75rem 1.5rem;
                 background: #f7f4eb;
               }
 
@@ -7422,7 +7394,7 @@ a.ui-state-default:hover {
               }
 
               .header-clas .college-logo-desktop svg {
-                width: 25rem;
+                width: 32rem;
                 margin-top: 0;
                 position: relative;
                 top: 0;
@@ -7431,13 +7403,13 @@ a.ui-state-default:hover {
                 z-index: 2;
               }
 
-              .X-header.header-clas .icon-uflogo {
-                  width: 4.063rem;
-                  height: 4.063rem;
+              .X-header .icon-uflogo {
+                  min-width: 5rem;
+                  min-height: 5rem;
               }
 
               .X-header.header-clas .college {
-                 padding-left: 4.125rem;
+                 padding-left: 1.2rem;
               }
 
               .X-header.header-clas .college .strikeRight a {
@@ -7448,7 +7420,7 @@ a.ui-state-default:hover {
               }
 
               .X-header.header-clas .department {
-                height: auto;
+                min-height: 4rem;
                 width:100%;
                 display:block;
                 clear:both;
@@ -7465,8 +7437,8 @@ a.ui-state-default:hover {
               }
 
               .X-header.header-clas .uf {
-                width: 4.063rem;
-                height: 4.063rem;
+                width: 5rem;
+                height: 5rem;
               }
 
               .header-clas .X-quickLinks #quicklinks a {
