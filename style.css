@@ -6218,7 +6218,7 @@ a.ui-state-default:hover {
 
          /* Tablet Header styles */
 
-         .X-header .college .strikeRight a { /* unit name */
+         .X-header .college .strikeheader a { /* unit name */
            font-size: 1.625rem;
          }
          .X-header .icon-uflogo, .menuBox { /* logo & menu icon size */
@@ -6872,8 +6872,11 @@ a.ui-state-default:hover {
 
          /* Desktop Header styles to override tablet media query */
 
+         .X-header .college .strikeheader a { /* unit name */
+           font-size: 2.375rem;
+         }
          .X-header.header-clas .college.subsite .strikeRight a { /* negative margin to adjust for margin embedded in logo */
-           margin: 0;
+           margin: -0.725rem ​0;
          }
 
          /* SEARCH */
