@@ -6236,6 +6236,7 @@ a.ui-state-default:hover {
          .X-header.header-clas .college.subsite .strikeRight a { /* negative margin to adjust for margin embedded in logo */
            margin: -0.825rem 0;
            padding: 0;
+           height: 1rem;
          }
          .strikeRight {
              display: flex;
@@ -6899,7 +6900,12 @@ a.ui-state-default:hover {
            font-size: 2.375rem;
          }
          .X-header.header-clas .college.subsite .strikeRight a { /* negative margin to adjust for margin embedded in logo */
-           margin: -0.725rem ​0;
+           margin: 0!important;
+           height:2rem;
+           width: 30rem;
+         }
+         .header-clas .college h1, .header-clas .college .access-focus {
+           padding:.125rem 0;
          }
          .header-clas .college.subsite .strikeRight a:before {
              height: 0.15rem;
@@ -7817,7 +7823,6 @@ a.ui-state-default:hover {
 
               /*__________________ICONS__________________*/
                  .icon-college-logo-stacked{
-                   width: 23rem;
                    margin: 0;
                  }
                  .icon-uflogo-go-greater{
