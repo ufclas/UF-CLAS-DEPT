@@ -60,10 +60,10 @@
 		//Looks at the current site. If the current site is the CLAS Home website it will display the clas.php header template. If the website is anything else, it will display the deparment.php template - Efren Vasquez
 		$blog_id = get_current_blog_id();
 
-		//These are the site IDs for the CLAS website. 222 = Test server, 232 = Production server.
+		//These are the site IDs for the CLAS website. 1 = Test server, 247 = Production server.
 		$clasID = array(247,1);
 
-		//232 is the ID for the CLAS Home Page - Efren Vasquez
+		//247 is the ID for the CLAS Home Page on the Production Server - Suzie Israel
 		if( in_array($blog_id, $clasID) ){
 			get_template_part('template-parts/header/clas');
 		}else {
