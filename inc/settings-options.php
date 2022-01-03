@@ -73,9 +73,9 @@ class MySettingsPage
         );
 
         add_settings_field(
-            'dept_address', // ID
-            'Department Address', // Title
-            array( $this, 'dept_address_callback' ), // Callback
+            'dept_name', // ID
+            'Department Name', // Title
+            array( $this, 'dept_name_callback' ), // Callback
             'my-setting-admin', // Page
             'setting_section_id' // Section
         );
@@ -155,6 +155,10 @@ class MySettingsPage
         if( isset( $input['dept_address'] ) )
             $new_input['dept_address'] =  $input['dept_address'] ;
 
+        $new_input = array();
+        if( isset( $input['dept_name'] ) )
+            $new_input['dept_name'] =  $input['dept_name'] ;
+
         if( isset( $input['title'] ) )
             $new_input['title'] = sanitize_text_field( $input['title'] );
 
@@ -198,6 +202,17 @@ class MySettingsPage
         printf(
             '<textarea id="dept_address" rows="10" cols="40" name="my_option_name[dept_address]"  placeholder="Enter department address here">%s</textarea>',
             isset( $this->options['dept_address'] ) ? esc_attr( $this->options['dept_address']) : ''
+        );
+    }
+
+    /**
+     * Get the settings option array and print one of its values
+     */
+    public function dept_name_callback()
+    {
+        printf(
+            '<textarea id="dept_name" rows="10" cols="40" name="my_option_name[dept_name]"  placeholder="Enter department name here">%s</textarea>',
+            isset( $this->options['dept_name'] ) ? esc_attr( $this->options['dept_name']) : ''
         );
     }
 

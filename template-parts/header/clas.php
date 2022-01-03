@@ -63,16 +63,6 @@
 			?>
 		</div>
 
-		<nav class="X-quickLinks" aria-label="Quick Links"><!--Quicklinks menu -->
-		  <a href="#" class="menu-title">Quick Links</a>
-			<?php wp_nav_menu( array(
-				'theme_location' => 'quicklinks',
-				'menu_id'        => 'quicklinks',
-		                'fallback_cb' => 'ufclas_emily_primary_menu_fallback',
-		                'depth' => 1,
-
-			) ); ?>
-  	</nav>
 
 	<div class="X-searchTrigger"> <!-- Search section -->
 	   <button>

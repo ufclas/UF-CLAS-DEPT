@@ -30,9 +30,25 @@
 
    <div class="department">
 		<div class="container_header_department"><!-- Website title -->
-		 <span>
-					<h1 class="strikeheader"><a class="strikeheader" href="<?php echo get_site_url(); ?>"><span class="access-focus"><?php echo  get_bloginfo( 'name' ) ?></span></a></h1>
-			</span>
+			<div class="name-dept">
+			 <span>
+						<h1 class="strikeheader"><a class="strikeheader" href="<?php echo get_site_url(); ?>"><span class="access-focus"><?php echo  get_bloginfo( 'name' ) ?></span></a></h1>
+				</span>
+
+				<!-- Department Name -->
+				<?php
+					if ( !empty(get_theme_mod('dept_name')) ):
+							echo '<p class="header-dept-name">';
+							echo wp_kses_post( get_theme_mod('dept_name') );
+							echo '</p>';
+					else :
+				?>
+							 <p class="header-dept-name">Department Name</p>
+
+				<?php
+				endif;
+				?>
+			</div>
 
 		 <div class="X-menu"> <!-- Main Navigation -->
 			 <div class="mobileSearch"><?php get_search_form(); ?></div>
@@ -55,6 +71,10 @@
 
 						</nav><!-- #site-navigation -->
 				 <?php endif; ?>
+
+
+				 <!-- End Department Name -->
+
 				 <div class="donation mobile">
 					 <?php
 						 if ( !empty(get_theme_mod('make_gift')) ){
@@ -74,16 +94,6 @@
 			?>
 		</div>
 
-		<nav class="X-quickLinks" aria-label="Quick Links"><!--Quicklinks menu -->
-		  <a href="#" class="menu-title">Quick Links</a>
-			<?php wp_nav_menu( array(
-				'theme_location' => 'quicklinks',
-				'menu_id'        => 'quicklinks',
-		                'fallback_cb' => 'ufclas_emily_primary_menu_fallback',
-		                'depth' => 1,
-
-			) ); ?>
-  	</nav>
 
 	<div class="X-searchTrigger"> <!-- Search section -->
 	   <button>

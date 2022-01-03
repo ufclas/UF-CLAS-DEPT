@@ -60,17 +60,17 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'priority' => '129',
 	));
 
-	// General
+	//Department Name
 	$wp_customize->add_section( 'theme_options_general', array(
 		'title' => __('General', 'ufclas-emily'),
 		'description' => __('', 'ufclas-emily'),
 		'panel' => 'ufclas_emily_theme_options',
 	));
 
-	$wp_customize->add_setting( 'dept_address', array( 'default' => '' ));
+	$wp_customize->add_setting( 'dept_name', array( 'default' => '' ));
 
-	$wp_customize->add_control( 'dept_address', array(
-		'label' => __('Department Address', 'ufclas-emily'),
+	$wp_customize->add_control( 'dept_name', array(
+		'label' => __('Department Name', 'ufclas-emily'),
 		'description' => __("", 'ufclas-emily'),
 		'section' => 'theme_options_general',
 		'type' => 'textarea',

@@ -269,6 +269,58 @@
     font-style: normal;
 }
 
+/* New People Styles */
+
+div.department div.container_header_department {
+  border-bottom: 7px solid #F45A1D;
+}
+
+p.header-dept-name {
+	text-align: left !important;
+	color: #F45A1D !important;
+  display: block;
+  margin-top: -10%;
+}
+
+p.header-dept-name a {
+  color: #F45A1D !important;
+  text-align: left !important;
+}
+
+p.header-dept-name a:hover {
+  color: #004083 !important;
+}
+
+.name-dept span {
+    display: block;
+}
+
+.X-header .department .strikeheader {
+    margin:  0 auto;
+    display: block !important;
+}
+
+p.header-dept-name {
+    margin: 0;
+}
+
+.X-header .department {
+    background-color: transparent !important;
+}
+
+.name-dept {
+    background-color: #f7f4eb;
+}
+
+.X-header .department .header-dept-name > a {
+    height: auto;
+    margin:  auto;
+    width: fit-content;
+    display: block;
+}
+
+/* End New People Styles */
+
 .post-template-single-featured-story  .single-featured-image-header .wrap,
 .page-template-single-featured-story  .single-featured-image-header .wrap {
   padding-top:0px;
@@ -527,7 +579,7 @@
 }
 
 .X-header {
- position: fixed;
+ position: static;
  top: 0;
  width: 100%;
  height: 3.75rem;/* fallback */
@@ -539,6 +591,7 @@
  overflow: visible;
  background-color:rgb(255,255,255);
  margin-top: 0;
+margin-bottom: 13%;
 }
 
 /* UF Logo -- floated above two rows  */
@@ -1049,6 +1102,11 @@ button.dropdown-toggle {
 /* New Homepage Footer Styles */
 
 @media (min-width: 1024px) {
+
+  p.header-dept-name a {
+    margin-left: 1.7rem !important;
+  }
+
   div.footer-main-col-2 {
   	width: 75%;
   	margin-left: 5%;
@@ -6049,6 +6107,15 @@ a.ui-state-default:hover {
     transition: .3s;
 }
 
+
+@media (max-width: 768px) {
+  p.header-dept-name a {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px){
 
    .footer-uf-col-1{
@@ -6211,7 +6278,7 @@ a.ui-state-default:hover {
 
        /* Row Two -- DEPARTMENT Name */
        .X-header .department {
-         height: 3.75rem;/* fallback */
+         height: auto;/* fallback */
          max-height: 3.75rem;
          top: 3.75rem; /* fallback */
          transition: all 0.2s ease-out;

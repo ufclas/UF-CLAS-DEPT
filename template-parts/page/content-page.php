@@ -13,12 +13,14 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-           <div class="wrap">
-		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-		<?php twentyseventeen_edit_link( get_the_ID() ); ?>
-           </div><!-- .wrap -->
-	</header><!-- .entry-header -->
+	<?php if( !is_front_page() ){ ?>
+		<header class="entry-header">
+	           <div class="wrap">
+			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+			<?php twentyseventeen_edit_link( get_the_ID() ); ?>
+	           </div><!-- .wrap -->
+		</header><!-- .entry-header -->
+	 <?php } ?>
 	<div class="entry-content">
            <div class="wrap">
 		<?php
