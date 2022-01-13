@@ -1724,7 +1724,7 @@ html, body{
    margin:0px;
    padding:0px;
    width:100%;
-   font-family: "Surveyor Text A", "Surveyor Text B";
+   font-family: 'Gentona_Book',sans-serif;
    font-style: normal;
    -webkit-font-smoothing: antialiased;
    -webkit-text-size-adjust: 100%;
@@ -2087,7 +2087,6 @@ a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
    }
 
 .entry-content li, .entry-content ol {
-   font-family: "Surveyor Text A", "Surveyor Text B";
    font-size: 1.125rem;
    line-height: 150%;
    font-style: normal;
@@ -3224,8 +3223,13 @@ a {
   text-decoration:none;
 }
 
-#page #main p:not(.slideshow_description) > a:not(.btn-blue, .btn) {
-    border-bottom: 1px solid #337ab76b !important;
+#page #main a {
+  border-bottom: 1px solid #337ab76b;
+}
+
+#page #main p.slideshow_description > a.btn-blue,
+#page #main p.slideshow_description > a.btn  {
+    border-bottom: none !important;
 }
 
 /*
