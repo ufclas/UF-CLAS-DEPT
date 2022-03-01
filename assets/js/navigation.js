@@ -7,61 +7,61 @@
 
 (function( $ ) {
 	var masthead, menuToggle, siteNavContain, siteNavigation;
-	
+
 	function openMainNavigationSubmenu(e) {
 		e.preventDefault();
-		
+
 		// Don't do anything if this is the mobile menu
 		if ( window.matchMedia('(max-width: 1024px)').matches ) {
 			return;
 		}
-		
+
 		var listItem = $(this);
 		listItem.addClass( 'open' );
 		listItem.attr( 'aria-expanded', 'true' );
-		
+
 		listItem.siblings().removeClass('open');
 		listItem.siblings().attr( 'aria-expanded', 'false' );
-		
+
 		// Remove the classes when tabbing out of the submenu, open when tabbing in
 		$( '.X-header' ).nextUntil('a, input, button').on( 'focusin.mainNavigation', closeMainNavigationSubmenu );
 		$( '.X-menu' ).prevUntil('a, input, button').on( 'focusin.mainNavigation', closeMainNavigationSubmenu );
 	}
-	
+
 	function closeMainNavigationSubmenu(e) {
 		e.preventDefault();
-		
+
 		$('.X-menu .menu-item-has-children').removeClass('open');
 		$('.X-menu .menu-item-has-children').attr( 'aria-expanded', 'false' );
-		
+
 		$(this).off('focusin.mainNavigation');
 	}
-	
+
 	function openQuickLinks(e) {
 		e.preventDefault();
-		
+
 		var _this = $(this);
 		var menu = $('#quicklinks');
 		menu.addClass( 'open' );
 		menu.attr( 'aria-expanded', 'true' );
-		
+
 		// Remove the classes when tabbing out of the submenu, open when tabbing in
 		$('.X-quickLinks').nextUntil('a, input, button').on( 'focusin.quicklinks', closeQuickLinks );
 		$('.X-quickLinks').prevUntil('a, input, button').on( 'focusin.quicklinks', closeQuickLinks );
 	}
-	
+
 	function closeQuickLinks(e) {
 		e.preventDefault();
-		
+
 		var menu = $('#quicklinks');
 		menu.removeClass('open');
 		menu.attr( 'aria-expanded', 'false' );
-		
+
 		$(this).off('focusin.quicklinks');
 	}
-	
+
 	function initMainNavigation( container ) {
-		
+
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
 			.append( twentyseventeenScreenReaderText.icon )
@@ -73,13 +73,13 @@
 		// Set the active submenu dropdown toggle button initial state.
 		var topMenuItems = container.find( '.menu > .menu-item-has-children' );
 		topMenuItems.attr( 'aria-expanded', 'false' );
-		
+
 		container.find( '#top-menu > .menu-item-has-children > a' ).click(openMainNavigationSubmenu);
 		container.find( '#top-menu > .menu-item-has-children' ).focusin(openMainNavigationSubmenu);
 	}
 
 	initMainNavigation( $( '.main-navigation' ) );
-	
+
 	$( '.X-quickLinks a.menu-title' ).click(openQuickLinks);
 	$( '.X-quickLinks' ).focusin(openQuickLinks);
 

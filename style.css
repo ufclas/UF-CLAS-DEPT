@@ -7429,13 +7429,17 @@ a.ui-state-default:hover {
               }
 
               .header-clas .college-logo-desktop svg {
-                width: 25rem;
+                width: 22rem;
                 margin-top: 0;
                 position: relative;
                 top: 0;
                 display: block;
                 height: 100%;
                 z-index: 2;
+              }
+
+              .header-clas .college-logo-desktop.clas-main svg {
+                width: 30rem;
               }
 
               .X-header.header-clas .icon-uflogo {
@@ -7445,7 +7449,12 @@ a.ui-state-default:hover {
 
               .X-header.header-clas .college {
                  height: 4.1rem;
-                 padding-left: 4.125rem;
+                 padding-left: 3.925rem;
+              }
+
+              .X-header.header-clas .college.clas-main {
+                 height: 5.09rem;
+                 padding-left: 6.29rem;
               }
 
               .X-header.header-clas .college a {

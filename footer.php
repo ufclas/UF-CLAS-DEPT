@@ -49,29 +49,19 @@ endif;
 
 
    <div class="footer-main-sub-col">
-<!-- Navigate CLAS Footer Menu -->
-		 <div class="footer-main-nav">
-			 <div class="footer-main-FooterMainNav footer-menu">
-		<?php
-		 $menu_obj = ufclas_emily_get_menu_by_location("FooterMainNav");
-		 if (isset ($menu_obj->name)):
-			 ?>
-			 <h2><?php echo esc_html($menu_obj->name); ?>
-			 <button><span class="icon-svg icon-caret"><?php echo twentyseventeen_get_svg( array( 'icon_id' => 'caret', 'class' => 'icon-caret-right' ) ); ?></span></button>
-			 </h2>
-			 <?php
-		 endif;
-
-		 wp_nav_menu( array(
-			 'theme_location' => 'FooterMainNav',
-			 'menu_id'        => 'FooterMainNav',
-			 'menu_class'        => 'list-unstyled footer-list>',
-			 'fallback_cb' => 'ufclas_emily_primary_menu_fallback',
-			 'depth' => 1,
-		 ) );
-	 ?>
-			 </div>
-		 </div>
+<!-- Navigate CLAS Footer Menu
+	<div class="footer-main-nav">
+			<div class="footer-main-FooterMainNav footer-menu">
+						<h2>Navigate Liberal Arts &amp; Sciences</h2>
+						<div class="menu-navigate-liberal-arts-sciences-container">
+							<ul id="FooterMainNav" class="list-unstyled footer-list>"><li id="menu-item-8769" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8769"><a href="#" title="Academics" target=""> <span>Academics</span></a></li>
+								<li id="menu-item-8770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8770"><a href="#" title="People" target=""> <span>People</span></a></li>
+								<li id="menu-item-8771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8771"><a href="#" title="Resources" target=""> <span>Resources</span></a></li>
+								<li id="menu-item-11902" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11902"><a href="#" title="About" target=""> <span>About</span></a></li>
+							</ul>
+						</div>
+			</div>
+	</div>-->
 		 <!-- End Navigate CLAS Footer Menu -->
 
       <div class="footer-main-sub-col-1">
