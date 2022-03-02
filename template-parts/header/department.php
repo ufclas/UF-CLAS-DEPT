@@ -78,7 +78,8 @@
 		  <a href="#" class="menu-title">Resources</a>
 			<div class="menu-quick-links-container">
 			  <ul id="quicklinks" class="menu">
-			    <li id="menu-item-submit" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-submit"><a href="https://commsupport.clas.ufl.edu/service-request/" title="Submit a Ticket" target=""> <span>Submit a Ticket</span></a></li>
+					<li id="menu-item-services" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-services"><a href="https://commsupport.clas.ufl.edu/services/" title="Support and Services" target=""> <span>Support and Services</span></a></li>
+					<li id="menu-item-submit" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-submit"><a href="https://commsupport.clas.ufl.edu/service-request/" title="Submit a Ticket" target=""> <span>Submit a Ticket</span></a></li>
 			    <li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="https://commsupport.clas.ufl.edu/" title="Contact Us" target=""> <span>Contact Us</span></a></li>
 			  </ul>
 			</div>
