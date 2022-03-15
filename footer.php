@@ -186,7 +186,7 @@ endif;
             </ul>
          </div>
 
-   <p class="contact-webmaster">If you have any website questions please contact <a href="https://mediaservices.clas.ufl.edu/" title="Visit Media Services">CLAS Communications Support</a></p>
+   <p class="contact-webmaster">If you have any website questions please contact <a href="https://commsupport.clas.ufl.edu/submit-ticket/">CLAS Communications Support</a></p>
 
           </div>
 

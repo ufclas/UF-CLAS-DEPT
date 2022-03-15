@@ -46,7 +46,7 @@ function twentyseventeen_get_svg( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
-		'icon'     => '', 
+		'icon'     => '',
 		'title'    => '',
 		'desc'     => '',
 		'fallback' => false,
@@ -90,20 +90,20 @@ function twentyseventeen_get_svg( $args = array() ) {
 	$id = '';
 	$class = '';
 	$role = '';
-	
+
 	// Set the icon ID for <use> tag, etc.
 	$icon_id = ( $args['icon'] )? 'icon-' . $args['icon'] : $args['icon_id'];
-	
+
 	// Set svg id
 	if ( $args['id'] ){
 		$id = ' id="' . esc_attr( $args['id'] ) . '"';
 	}
-	
+
 	// Set svg role
 	if ( $args['role'] ){
 		$role = ' role="' . esc_attr( $args['role'] ) . '"';
 	}
-	
+
 	// Set svg class
 	if ( $args['icon'] ){
 		$class = ' class="icon ' . esc_attr( $icon_id ) . '"';
@@ -111,11 +111,11 @@ function twentyseventeen_get_svg( $args = array() ) {
 	elseif ( $args['class'] ){
 		$class = ' class="' . esc_attr( $args['class'] ) . '"';
 	}
-	
+
 	// Begin SVG markup.
 	$svg = '<svg' . $id . $class . $aria_hidden . $aria_labelledby . $role . '>';
 
-	
+
 	// Display the title.
 	if ( $args['title'] ) {
 		$svg .= '<title id="title-' . $unique_id . '">' . esc_html( $args['title'] ) . '</title>';

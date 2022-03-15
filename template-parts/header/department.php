@@ -48,8 +48,8 @@
 
 						 <?php wp_nav_menu( array(
 							 'theme_location' => 'top',
-							 'menu_id'        => 'top-menu',
-										'walker'          => new ALPHA_Menu,
+							 'menu_id' => 'top-menu',
+							 'walker' => new ALPHA_Menu,
 							 'depth' => 3,
 						 ) ); ?>
 

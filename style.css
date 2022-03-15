@@ -1735,7 +1735,7 @@ html, body{
    padding:0px;
    width:100%;
    height: 100%;
-   font-family: "Surveyor Text A", "Surveyor Text B";
+   font-family: "Gentona_Book", sans-serif;
    font-style: normal;
    -webkit-font-smoothing: antialiased;
    -webkit-text-size-adjust: 100%;
@@ -1788,6 +1788,7 @@ h3.entry-title a {
 	line-height: 150%;
 	letter-spacing: 1px;
 	color: #004083;
+  text-transform: none;
 }
 
 .entry-title {
@@ -1807,6 +1808,7 @@ h2, .h2 {
    padding-bottom: 1rem;
    display: block;
    clear: both;
+   text-transform: none;
 }
 
 /* Magazine Article Sub-heading and byline */
@@ -1916,6 +1918,7 @@ h3.quote1 {
    padding-bottom: 1rem;
    display: block;
    clear: both;
+   text-transform: none;
 }
 h3.quote2 {
    font-family:  "Gentona_BoldItalic", Arial, sans-serif;
@@ -1930,6 +1933,7 @@ h3.quote2 {
    padding-bottom: 1rem;
    display: block;
    clear: both;
+   text-transform: none;
 }
 h4, .h4 {
    font-family: "Gentona_Book", Arial, sans-serif;
@@ -1943,6 +1947,7 @@ h4, .h4 {
    padding-bottom: .25rem;
    display: block;
    clear: both;
+   text-transform: none;
 }
 h5, .h5 {
   color: #337ab7;
@@ -1956,6 +1961,7 @@ h5, .h5 {
    padding-bottom: .25rem;
    display: block;
    clear: both;
+   text-transform: none;
 }
 h6, .h6 {
    font-family: "Gentona_Book", Arial, sans-serif;
@@ -1970,6 +1976,7 @@ h6, .h6 {
    padding-bottom: .25rem;
    display: block;
    clear: both;
+   text-transform: none;
 }
 
 p {
@@ -4607,6 +4614,7 @@ h2.entry-title.home-hero-title {
     max-width: 35%;
     position: relative;
     font-style: initial;
+    text-transform: none;
 }
 
 #page .home-hero-container p.slideshow_description{
@@ -4695,6 +4703,7 @@ h2.entry-title.interior-page {
 
 #page .container-other-sites-single h3 {
     padding: 0;
+    text-transform: none;
 }
 
 #page .search-page {
@@ -5092,11 +5101,13 @@ Image block cards
 .card-container .text-content p {
     color: white;
     flex: 1 100%;
+    text-transform: none;
 }
 
 .card-container .text-content h3 {
     font-family: "Quadon_Regular" !important;
     font-weight: 100;
+    text-transform: none;
 }
 
 #page .card-container .text-content p {
@@ -5237,6 +5248,7 @@ Image block cards
   text-transform: none;
   margin-bottom: 0;
   letter-spacing: 2px;
+  text-transform: none;
 }
 
 #featured-carousel .half-image-feature .carousel-caption p {
@@ -5572,6 +5584,7 @@ Events Slider shortcode
     padding: 0;
     line-height: 150%;
     font-size: 1.325rem;
+    text-transform: none;
 }
 
 .events-carousel .item > div {
@@ -5612,6 +5625,7 @@ Events Slider shortcode
 .image-tile-widget h3 {
     padding: .5rem 0 0 1rem;
     color: #4c87b5;
+    text-transform: none;
 }
 
 p.tribe-events-widget-link a:after {
@@ -6489,6 +6503,7 @@ a.ui-state-default:hover {
       display: flex;
       justify-content: center;
       align-items: center;
+      text-transform: none;
   }
 
   .image-tiles-container img {
@@ -7217,6 +7232,21 @@ a.ui-state-default:hover {
            -webkit-transform-origin: center center;
            transform-origin: center center;
            width: 0;
+         }
+         /* support for WPML Multilingual CMS plugin */
+
+         .X-menu nav > div > ul > li.wpml-ls-item a > span::after, .X-menu nav > div li.wpml-ls-item ul.sub-menu li.wpml-ls-item  span::after{
+           background: none;
+         }
+         .wpml-ls-display, .wpml-ls-bracket, ul.sub-menu .wpml-ls-native {
+           display: inline-block;
+         }
+         ul.sub-menu .wpml-ls-native {
+           padding-right: .3rem;
+         }
+         .wpml-ls-item > a {
+             position: relative;
+             top: 0.15rem;
          }
 
          .js .menu-toggle,

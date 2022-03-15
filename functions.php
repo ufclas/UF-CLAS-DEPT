@@ -325,10 +325,10 @@ add_action( 'after_setup_theme', 'ufclas_emily_prefix_setup', 11 );
  function ufclas_emily_hrt_span_to_nav_menu( $item_output, $item, $depth, $args ) {
     if ( isset( $item->classes ) && !empty( $item->classes ) ) {
        if ($depth == 0) {
-          $item_output = '<a href="'. $item->url .'" title="'. apply_filters( 'the_title', $item->title, $item->ID ) .'" target=' . apply_filters('target', $item->target, $item->ID) .'> <span>'. apply_filters( 'the_title', $item->title, $item->ID ) .'</span></a>';
+          $item_output = '<a href="'. $item->url .'" target=' . apply_filters('target', $item->target, $item->ID) .'> <span>'. apply_filters( 'the_title', $item->title, $item->ID ) .'</span></a>';
        }
        else {
-          $item_output = '<a href="'. $item->url .'" title="'. apply_filters( 'the_title', $item->title, $item->ID ) .'" target=' . apply_filters('target', $item->target, $item->ID) .'> '. apply_filters( 'the_title', $item->title, $item->ID ) .'</a>';
+          $item_output = '<a href="'. $item->url .'" target=' . apply_filters('target', $item->target, $item->ID) .'> '. apply_filters( 'the_title', $item->title, $item->ID ) .'</a>';
        }
     }
  	return $item_output;
