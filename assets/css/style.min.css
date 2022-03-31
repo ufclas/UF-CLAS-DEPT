@@ -7046,6 +7046,11 @@ img.cboxPhoto {
   padding: 0;
 }
 
+/*remove bullets*/
+body .entry-content .gform_wrapper form .gform_body ul > li:before {
+  content: "" !important;
+}
+
 .ui-datepicker-title {
   background: #00285e;
 }
