@@ -2105,7 +2105,6 @@ a:focus { outline: 2px solid #4c87b5; outline-offset: 0px; }
    }
 
 .entry-content li, .entry-content ol {
-   font-family: "Surveyor Text A", "Surveyor Text B";
    font-size: 1.125rem;
    line-height: 150%;
    font-style: normal;
@@ -6026,7 +6025,10 @@ img.cboxPhoto {
 .gform_wrapper.gf_browser_chrome select {
     padding: 0;
 }
-
+/*remove bullets*/
+body .entry-content .gform_wrapper form .gform_body ul > li:before {
+     content: "" !important;
+}
 .ui-datepicker-title {
     background: #00285e;
 }
