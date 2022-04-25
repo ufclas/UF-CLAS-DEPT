@@ -207,13 +207,13 @@
     font-weight: normal;
     font-style: normal;
 }
-/* Accessibility: font-weight below allows footer links to appear bold */
+/* Accessibility: font-weight below allows footer links to appear bold
 @font-face {
     font-family: 'Quadon_Medium';
     src: url('/fonts/quadon/Quadon_Bold.woff') format('woff');
-    font-weight: 700;
+    font-weight: normal;
     font-style: normal;
-}
+}*/
 @font-face {
     font-family: 'Quadon_BoldItalic';
     src: url('/fonts/quadon/Quadon_BoldItalic.woff') format('woff');
