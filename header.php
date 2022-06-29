@@ -18,7 +18,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="<?php echo get_the_title();?>" />
-	<meta property="og:image" content="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" />
+	<meta property="og:image" content="<?php echo get_the_post_thumbnail_url(get_the_ID(),'square-crop'); ?>" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="500" />
 	<meta property="og:image:height" content="400" />
@@ -61,7 +61,7 @@
 		$blog_id = get_current_blog_id();
 
 		//These are the site IDs for the CLAS website. 222 = Test server, 232 = Production server.
-		$clasID = array(247,1,2);
+		$clasID = array(1,2);
 
 		//232 is the ID for the CLAS Home Page - Efren Vasquez
 		if( in_array($blog_id, $clasID) ){
