@@ -38,7 +38,7 @@ function ufl_get_protocol() {
 function ufl_shibboleth_login_button() {
 	global $post;
 	$url_parts = parse_url( get_permalink($post->ID) );
-	echo '<p><a class="btn-blue" href="'.ufl_get_protocol().$_SERVER['SERVER_NAME'].'/Shibboleth.sso/Login?target='( ufl_get_protocol().$url_parts['host'].$url_parts['path'] ).'">Login with GatorLink</a></p>';
+	echo '<p><a class="btn-blue" href="'.ufl_get_protocol().$_SERVER['SERVER_NAME'].'/Shibboleth.sso/Login?target='.ufl_get_protocol().$url_parts['host'].$url_parts['path'] .'">Login with GatorLink</a></p>';
 }
 // Check if authed with Shib.
 function ufl_check_shibboleth_auth() {
