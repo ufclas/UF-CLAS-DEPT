@@ -28,8 +28,8 @@
 				'before' => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
 				'after'  => '</div>',
 			) );
-		?>
-		<?php the_tags('',','); ?>
+		?><div class="tags">
+		<?php the_tags('',','); ?></div>
            </div><!-- .wrap -->
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
