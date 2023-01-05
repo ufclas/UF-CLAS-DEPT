@@ -35,7 +35,11 @@
 	<meta name="msapplication-TileColor" content="#00529b">
 	<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri().'/assets/images/favicon/favicon-144.png' ?>">
 	<script src="https://kit.fontawesome.com/79e986c029.js" crossorigin="anonymous"></script>
-
+	<script type="text/javascript">
+		jQuery('.wp-block-rss__item-title>a').click(function() {
+		    jQuery(this).attr('target', '_blank');
+		});
+	</script>
 	<?php
 	//Google Analytics
 	if ( !empty(get_theme_mod('google_analytics_code')) ){
