@@ -38,7 +38,7 @@
 	<script>
 	let rss_Links = document.querySelectorAll('.widget_rss a');
 	for (i = 0, i > rss_Links.length; i++) {
-	rss_Links.setAttribute("target", "_blank");
+	rss_Links.setAttribute("target", "_blank"); 
 	}
 	</script>
 	<?php
