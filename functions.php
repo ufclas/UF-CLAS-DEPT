@@ -946,11 +946,3 @@ require get_theme_file_path('/inc/custom-functions.php');
 * Includes the shortcodes file
 */
 require get_stylesheet_directory() . '/inc/shortcodes.php';
-
-/**
-* Hook to remove "this post first appeared in" language in Feedzy excerpts -- https://wordpress.org/support/topic/shortcode-dont-display-the-post-appeared-first-in-exerpt/
-*/
-add_filter( 'feedzy_summary_output', function( $content, $item_url, $feed_url ) {
-	// change $content here
-	return $content;
-}, 10, 3 );
