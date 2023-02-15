@@ -34,10 +34,10 @@
            <div class="wrap">
 		<?php
 		/* translators: %s: Name of current post */
-		//the_content( sprintf(
-		//	__( 'Read More<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-		//	get_the_title()
-		//) );
+		the_content( sprintf(
+			__( 'Read More<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+			get_the_title()
+		) );
 
 		// Show paginated page links
 		wp_link_pages( array(

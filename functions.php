@@ -878,7 +878,7 @@ add_filter( 'get_the_archive_title', 'ufclas_emily_archive_title' );
 //		esc_url( get_permalink( get_the_ID() ) ),
 //		/* translators: %s: Name of current post */
 //		sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'ufclas-emily' ), get_the_title( get_the_ID() ) )
-//	);
+//	); 
 //
 //	return $excerpt . $link;
 //}
