@@ -875,8 +875,10 @@ add_filter( 'get_the_archive_title', 'ufclas_emily_archive_title' );
 function ufclas_emily_archive_excerpt( $excerpt ){
 	$link = sprintf(
 		'<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
-		esc_url( get_permalink( get_the_ID() ) )
-		);
+		esc_url( get_permalink( get_the_ID() ) ),
+		/* translators: %s: Name of current post */
+		sprintf( __( '<span class="excerpt-read-more">Read more<span class="screen-reader-text"> "%s"</span>', 'ufclas-emily' ), get_the_title( get_the_ID() ), '</span>' )
+	);
 
 	return $excerpt . $link;
 }
