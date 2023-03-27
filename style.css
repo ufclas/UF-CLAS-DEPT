@@ -579,20 +579,32 @@
 }
 
 .X-header .college a{
- font-family: Gentona_Medium;
+ font-family: "Surveyor Text A","Surveyor Text B",serif;
  color:#ffffff;
  text-decoration: none;
  font-weight:normal;
- font-size:1.2rem; /* fallback */
- line-height: 150%;
+ font-size:1.3rem; /* fallback */
+ line-height: 120%;
  padding:0 3.75rem;
  margin:0px;
- text-align:center;
- text-transform:uppercase;
+ text-align:left;
+ text-transform:none;
  display:table-cell;
  vertical-align:middle;
+ letter-spacing: 0;
 }
+.X-header .college a .college-logo-mobile > span > span {
+  white-space: nowrap;
+}
+.X-header .college a span.and {
+  font-style: italic;
+}
+@media (min-width: 768px) {
 
+  .X-header .college a{
+   font-size:2.2rem; /* fallback */
+  }
+}
 .X-header .department  a,
 .X-header .department .strikeheader {
  display:table-cell;
@@ -4474,8 +4486,9 @@ aside {
 .X-header.header-clas .college a {
   display: flex;
   position: relative;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  margin-left: .75rem;
 }
 
 /* Changes college logo to all white*/
@@ -7494,6 +7507,7 @@ a.ui-state-default:hover {
                 padding: 0;
                 align-items: center;
                 justify-content: left;
+                margin-left: 0;
               }
 
               .X-header.header-clas .department {
@@ -8053,6 +8067,3 @@ a.ui-state-default:hover {
 
 
                               }
-.test-suzie {
-  color: red;
-}
