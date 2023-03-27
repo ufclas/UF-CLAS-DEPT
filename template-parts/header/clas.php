@@ -15,11 +15,11 @@
 	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'clas-connected' ) ); ?>
 	 							<span class="SVGaltText">College of Liberal Arts and Sciences</span>
 	 						</span>
-	 						<span class="college-logo-mobile">
-	 							<span>Liberal Arts and Sciences</span>
+							<span class="college-logo-mobile">
+	 							<span>Liberal Arts <span><span class="and">and</span> Sciences</span></span>
 	 					 </span>
 	 					 <span class="college-logo-tablet">
-	 							<span>College of Liberal Arts and Sciences</span>
+	 							<span>Liberal Arts <span class="and">and</span> Sciences</span>
 	 					 </span>
 	 				</a></h1>
 	 	   	</div>
