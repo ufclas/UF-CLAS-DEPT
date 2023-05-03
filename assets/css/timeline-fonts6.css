@@ -5,7 +5,7 @@
 ================================================== */
 /* TYPEFACE
 ================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&display=swap');
+@import url('https://cloud.typography.com/6019574/7283992/css/fonts.css');
 
 /* COLOR SCHEME
 ================================================== */
@@ -47,7 +47,7 @@
 
   /* start slide HEADLINE styles */
   .tl-text h2.tl-headline {
-    font-family: 'Newsreader', serif !important;
+    font-family: 'Surveyor Display A', 'Surveyor Display B', serif !important;
     font-size: 46px !important;
     line-height: 46px !important;
   }
