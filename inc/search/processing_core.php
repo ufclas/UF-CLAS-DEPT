@@ -234,7 +234,8 @@ $other_sites_map            = array();
 
 // search only Explicity public sites
 $public_arguments = array(
- 'public' => 1
+ 'public' => 1,
+ 'number' => 300,
 );
 
 foreach ( get_sites($public_arguments) as $blog ):
