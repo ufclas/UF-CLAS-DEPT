@@ -300,3 +300,13 @@ foreach ( get_sites($public_arguments) as $blog ):
  if ($end_container_other_sites) {
    echo "</div><!-- end Other Sites Container -->";
  }
+ add_filter( 'wp_is_large_network', function( $state, $type, $count ) {
+
+     if ( 'users' === $type )
+         return $count > 30000;
+
+     if ( 'sites' === $count )
+         return $count > 20000;
+
+     return $state;
+ }, 10, 3 )
