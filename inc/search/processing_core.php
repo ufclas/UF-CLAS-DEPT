@@ -232,7 +232,7 @@ $unset_incrementer          = 0;
 $other_sites_byTitle        = array();
 $other_sites_map            = array();
 
-// search only Explicity public sites
+// search only Explicity public sites, increase the number of results from default of 100 to 300 https://developer.wordpress.org/reference/functions/get_sites/
 $public_arguments = array(
  'public' => 1,
  'number' => 300,
