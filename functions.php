@@ -101,7 +101,7 @@ function ufclas_emily_X_theme_setup() {
         add_image_size( 'portrait', 414, 9999, false );
         add_image_size( 'portrait-crop', 414, 532, true ); // Crop
         add_image_size( 'square-crop', 768, 768, true ); // Crop
-        add_image_size( 'thumbnail', 736, 9999, true );
+        add_image_size( 'thumbnail', 736, 736, true );
         add_image_size( 'thumbnail-crop', 736, 535, true ); // Crop
         add_image_size( 'page-wide', 768, 9999, false );
         add_image_size( 'page-wide', 768, 9999, false );
