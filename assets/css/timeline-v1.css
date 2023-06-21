@@ -277,6 +277,8 @@
   end - make next and back arrow text less grey and more white
   */
 
+  /* start - increase background opacity */
   .tl-slide .tl-slide-background {
     opacity: .3 !important;
   }
+  /* end - increase background opacity */
