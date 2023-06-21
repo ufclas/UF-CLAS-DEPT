@@ -249,7 +249,7 @@
 
   /*
   start - eliminate the need for adding underscores in the text field
-  */
+
   .tl-headline-date,
   .tl-slidenav-description {
     display: none !important;
@@ -276,3 +276,7 @@
   /*
   end - make next and back arrow text less grey and more white
   */
+
+  .tl-slide .tl-slide-background {
+    opacity: .3 !important;
+  }
