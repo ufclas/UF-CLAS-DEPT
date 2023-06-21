@@ -248,14 +248,13 @@
   }
 
   /*
-  start - eliminate the need for adding underscores in the text field
-
-  .tl-headline-date,
+  start - eliminate the underscores under the arrows
+  */
   .tl-slidenav-description {
     display: none !important;
   }
   /*
-  end - eliminate the need for adding underscores in the text field
+  end - eliminate the underscores under the arrows
   */
   /*
   start - center slide's media image
@@ -279,6 +278,6 @@
 
   /* start - increase background opacity */
   .tl-slide .tl-slide-background {
-    opacity: .3 !important;
+    opacity: .2 !important;
   }
   /* end - increase background opacity */
