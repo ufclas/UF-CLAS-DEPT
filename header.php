@@ -48,7 +48,7 @@
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
-		  gtag('config', '<?php echo $googleAnalytics ?>', {'cookie_domain': 'get_site_url()'});
+		  gtag('config', '<?php echo $googleAnalytics ?>', {'cookie_domain': '<?php echo get_site_url()?>'});
 		</script>
 	<?php } ?>
 
