@@ -36,6 +36,40 @@
 	<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri().'/assets/images/favicon/favicon-144.png' ?>">
 	<script src="https://kit.fontawesome.com/79e986c029.js" crossorigin="anonymous"></script>
 
+	<?php
+	//Google Analytics
+	if ( !empty(get_theme_mod('google_analytics_code')) ){
+		$googleAnalytics = get_theme_mod('google_analytics_code');
+
+		// Get the custom field value (we're using the wpalchemy class)
+		$link = get_site_url();
+
+		if (!empty($link)) {
+			// Begins with https
+			if (preg_match('/^https/', $link)) {
+				// Set the $url_prefix variable to `https://`
+				$url_prefix = 'https://';
+			} else {
+				// Use http
+				$url_prefix = 'http://';
+			}
+		}
+
+			// Get rid of the `http://` or `https://`
+			$link = str_replace(array('http://', 'https://'), '', $link);
+		?>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $googleAnalytics ?>"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', '<?php echo $googleAnalytics ?>', {'cookie_domain': '<?php echo $link ?>'});
+		</script>
+	<?php } ?>
+
 </head>
 
 <body <?php body_class(); ?>>
