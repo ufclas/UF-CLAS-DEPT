@@ -9108,5 +9108,126 @@ a.ui-state-default:hover {
     width: 185px !important;
   }
 }
+/*=============================================
+Livewhale calendar styles
+==============================================*/
+/*calendar page begin */
+.submit-event {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .submit-event a.btn-blue {
+    width: calc(100% - 2rem) !important;
+  }
+}
+.submit-event a.btn-blue {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  max-width: 1140px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.submit-event a.btn-blue em {
+  font-size: 2.25rem;
+  padding-right: 0.5rem;
+  transition: none !important;
+}
+
+.submit-event a.btn-blue:hover em,
+.submit-event a.btn-blue em:hover {
+  color: white !important;
+  transition: none !important;
+}
+
+/* calendar page ends */
+/* calendar on homepage with orange dates begins */
+#page .recent-news ul.events-homepage-orange .lw_events_title a {
+  font-size: 1rem !important;
+  line-height: 150% !important;
+}
+
+ul.events-homepage-orange span.lw_events_time.duration.time {
+  font-size: 1rem;
+  display: block;
+  padding-bottom: 1rem;
+}
+
+ul.events-homepage-orange li {
+  position: relative;
+  margin-left: 55px !important;
+  padding-left: 10px;
+  border-left: 1px solid #ccc;
+  padding-bottom: 0 !important;
+  margin: 0;
+}
+
+ul.events-homepage-orange .event-date {
+  line-height: 0.9;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 45px;
+  font-family: "Gentona_ExtraBold", "Georgia", serif;
+  text-align: center;
+  color: #DD661E;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+ul.events-homepage-orange h4.events {
+  font-family: "Quadon_Bold";
+  line-height: 28px;
+  font-size: 1.375rem;
+  text-align: center;
+  padding: 0.8rem 0;
+}
+
+ul.events-homepage-orange a.events {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 65px;
+}
+
+ul.events-homepage-orange a.events:after {
+  content: "\f101";
+  font-family: fontAwesome;
+  padding: 1%;
+}
+
+ul.events-homepage-orange .lw_events_time .cal_date {
+  display: inline !important;
+}
+
+ul.events-homepage-orange .lw_events_time .cal_date_month {
+  display: inline !important;
+}
+
+ul.events-homepage-orange .lw_events_time .cal_date_day {
+  display: inline !important;
+  padding-left: 0.3em;
+}
+
+a.events {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 65px;
+}
+
+a.events:after {
+  content: "\f101";
+  font-family: fontAwesome;
+  padding: 1%;
+}
+
+ul.events-homepage-orange .event-date .cal_date .cal_date_day {
+  font-size: 2rem;
+}
+
+/* calendar on homepage with orange dates ends */
 
 /*# sourceMappingURL=style.min.css.map */
