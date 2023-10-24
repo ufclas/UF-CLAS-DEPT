@@ -8189,3 +8189,8 @@ ul.events-homepage-orange .event-date .cal_date .cal_date_day {
     font-size: 2rem;
 }
 /* calendar on homepage with orange dates ends */
+/* override twitter bird with twitter x begin */
+.fa-twitter:before {
+    content: "\e61b" !important;
+}
+/* override twitter bird with twitter x end */
