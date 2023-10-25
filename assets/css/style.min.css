@@ -9235,5 +9235,9 @@ ul.events-homepage-orange .event-date .cal_date .cal_date_day {
 }
 
 /* override twitter bird with twitter x end */
+/* update font  awesome 5 to 6 */
+.orange-plus .collapseomatic:before {
+  font-family: "Font Awesome 6 Pro" !important;
+}
 
 /*# sourceMappingURL=style.min.css.map */
