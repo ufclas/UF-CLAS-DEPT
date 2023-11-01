@@ -8107,12 +8107,17 @@ Livewhale calendar styles
 /* calendar page ends */
 /* calendar on homepage with orange dates begins */
 
-#page .recent-news ul.events-homepage-orange .lw_events_title a {
+#primary ul.events-homepage-orange li:before {
+    content: '';
+}
+
+#page ul.events-homepage-orange .lw_events_title a {
     font-size: 1rem !important;
     line-height: 150% !important;
 }
-
-
+ul.events-homepage-orange {
+    padding: 0;
+}
 ul.events-homepage-orange span.lw_events_time.duration.time {
     font-size: 1rem;
     display: block;
@@ -8177,7 +8182,7 @@ ul.events-homepage-orange .lw_events_time .cal_date_day {
 a.events {
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-left: 65px;
+    white-space: nowrap;
 }
 
 a.events:after {
