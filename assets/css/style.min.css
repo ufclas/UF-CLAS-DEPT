@@ -9226,6 +9226,12 @@ a.events {
   white-space: nowrap;
 }
 
+p.eventslink {
+  margin-left: 55px;
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+}
+
 a.events:after {
   content: "\f101";
   font-family: fontAwesome;
@@ -9247,5 +9253,7 @@ ul.events-homepage-orange .event-date .cal_date .cal_date_day {
 .orange-plus .collapseomatic:before {
   font-family: "Font Awesome 6 Pro" !important;
 }
+
+/* update font  awesome 5 to 6 end*/
 
 /*# sourceMappingURL=style.min.css.map */
