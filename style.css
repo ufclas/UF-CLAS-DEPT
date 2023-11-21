@@ -8184,7 +8184,11 @@ a.events {
     letter-spacing: 1px;
     white-space: nowrap;
 }
-
+p.eventslink {
+    margin-left: 55px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+}
 a.events:after {
     content: "\f101";
     font-family: fontAwesome;
