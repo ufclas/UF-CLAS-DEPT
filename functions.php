@@ -946,3 +946,38 @@ require get_theme_file_path('/inc/custom-functions.php');
 * Includes the shortcodes file
 */
 require get_stylesheet_directory() . '/inc/shortcodes.php';
+
+
+/**
+* Includes the custom capitalized orange text style dropdown in the Visual editor
+*/
+function add_style_select_buttons( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+
+add_filter( 'mce_buttons_2', 'add_style_select_buttons' );
+ 
+//add custom styles to the WordPress editor
+function my_custom_styles( $init_array ) {  
+ 
+    $style_formats = array(  
+        array(  
+            'title' => 'Capitalized Orange Text',  
+            'block' => 'span',  
+            'classes' => 'orangetxt-capitalize',
+            'wrapper' => true,
+        )
+    );  
+    $init_array['style_formats'] = json_encode( $style_formats );  
+ 
+    return $init_array;  
+ 
+}
+
+add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
+ 
+function my_theme_add_editor_styles() {
+    add_editor_style( 'style.css' );
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
