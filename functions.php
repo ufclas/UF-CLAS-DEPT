@@ -950,7 +950,7 @@ require get_stylesheet_directory() . '/inc/shortcodes.php';
 
 /**
 * Includes the custom capitalized orange text style dropdown in the Visual editor
-
+*/
 function add_style_select_buttons( $buttons ) {
     array_unshift( $buttons, 'styleselect' );
     return $buttons;
@@ -977,7 +977,3 @@ function my_custom_styles( $init_array ) {
 
 add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
  
-function my_theme_add_editor_styles() {
-    add_editor_style( 'style.css' );
-}
-add_action( 'init', 'my_theme_add_editor_styles' );*/
