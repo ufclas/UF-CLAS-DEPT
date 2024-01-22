@@ -977,3 +977,7 @@ function my_custom_styles( $init_array ) {
 
 add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
  
+function my_theme_add_editor_styles() {
+    add_editor_style( 'assets/orange-capitalize.css' );
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
