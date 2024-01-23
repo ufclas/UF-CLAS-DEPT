@@ -8198,6 +8198,63 @@ ul.events-homepage-orange .event-date .cal_date .cal_date_day {
     font-size: 2rem;
 }
 /* calendar on homepage with orange dates ends */
+
+/* calendar on homepage with pictures/past events pages BEGINS */
+
+.homepage-events .cal_date_day {
+  display: inline;
+}
+
+.homepage-events .cal_date {
+  display: inline;
+}
+
+ul.homepage-events {
+  padding: 0;
+}
+
+.entry-content ul.homepage-events .lwcw li:before {
+  content: '' !important;
+}
+
+.homepage-events .lwcw {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul.homepage-events li {
+  display: grid;
+  grid-template-rows: minmax(20px, auto) minmax(20px, auto) minmax(0, 1fr);
+  gap: 0 2rem;
+  grid-template-areas:
+      "Thumbnail Date"
+      "Thumbnail Title"
+      "Thumbnail Summary";
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid #337ab76b !important;
+grid-template-columns: max-content;
+}
+ul.homepage-events .lw_item_thumb { grid-area: Thumbnail; }
+ul.homepage-events .lw_events_time { grid-area: Date; }
+ul.homepage-events .entry-title.summary { grid-area: Title; padding: 0; }
+ul.homepage-events li p { grid-area: Summary; font-size: .9em;}
+
+.homepage-events .lw_events_time {
+  color: #337ab7 !important;
+  font-family: "Gentona_Book", Arial, sans-serif !important;
+  font-style: italic;
+  font-size: 1.125rem !important;
+}
+@media  (max-width: 992px) {
+  ul.homepage-events li {
+      display: block !important;
+  }
+  
+  ul.homepage-events span.lw_events_time {
+      display: block !important;
+  }
+}
+/* calendar on homepage with pictures/past events pages ENDS */
+
 /* override twitter bird with twitter x begin */
 .fa-twitter:before {
     content: "\e61b" !important;
