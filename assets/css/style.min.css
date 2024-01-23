@@ -9243,6 +9243,16 @@ ul.events-homepage-orange .event-date .cal_date .cal_date_day {
 }
 
 /* calendar on homepage with orange dates ends */
+/* homepage calendar feed adjustment to remove lines begin */
+ul.events-homepage-orange.nolines li {
+  border-left: none;
+}
+
+p.eventslink.nolines {
+  border-left: none;
+}
+
+/* homepage calendar feed adjustment to remove lines end */
 /* calendar on homepage with pictures/past events pages BEGINS */
 .homepage-events .cal_date_day {
   display: inline;
