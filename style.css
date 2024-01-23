@@ -8221,11 +8221,15 @@ ul.homepage-events {
   padding: 0;
 }
 
-.entry-content ul.homepage-events .lwcw li:before {
+.entry-content ul.homepage-events .lwcw li:before,
+.entry-content ul.homepage-events li:before {
   content: '' !important;
 }
-
-.homepage-events .lwcw {
+ul.homepage-events .lw_item_thumb img {
+  max-width: 80px;
+}
+.homepage-events .lwcw,
+.homepage-events {
   display: flex;
   flex-wrap: wrap;
 }
