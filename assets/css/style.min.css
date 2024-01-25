@@ -9317,7 +9317,6 @@ ul.homepage-events li {
   grid-template-areas: "Thumbnail Date" "Thumbnail Title" "Thumbnail Summary";
   padding: 2rem 0 1rem;
   border-bottom: 1px solid #337ab76b !important;
-  grid-template-columns: max-content;
 }
 
 ul.homepage-events .lw_item_thumb {
