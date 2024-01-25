@@ -8201,9 +8201,8 @@ a.events {
     white-space: nowrap;
 }
 p.eventslink {
-    margin-left: 55px;
-    border-left: 1px solid #ccc;
-    padding-left: 10px;
+  margin-left: 0;
+  padding-left: 0;
 }
 a.events:after {
     content: "\f101";
