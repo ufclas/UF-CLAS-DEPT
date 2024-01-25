@@ -9242,6 +9242,14 @@ ul.events-homepage-orange .lw_events_time .cal_date_day {
   padding-left: 0.3em;
 }
 
+ul.homepage-events.thumb-right li {
+  grid-template-areas: "Date Thumbnail" "Title Thumbnail" "Summary Thumbnail";
+}
+
+ul.homepage-events.thumb-right .lw_item_thumb {
+  text-align: right;
+}
+
 a.events {
   text-transform: uppercase;
   letter-spacing: 1px;
