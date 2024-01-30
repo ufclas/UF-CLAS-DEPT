@@ -8229,6 +8229,26 @@ ul.events-homepage-orange.nolines li {
 p.eventslink.nolines {
   border-left: none;
 }
+.events-homepage-orange.past .lw_events_time.duration.time {
+  padding-bottom: 0.75rem;
+}
+.homepage-events.infinite-upcoming.thumb-right li {
+  display: flex;
+  flex-direction:column;
+  border-bottom: none !important;
+}
+
+ul.homepage-events.infinite-upcoming.thumb-right code {
+  font-size: .7rem;
+  max-width: 100%;
+  line-height: 1.2;
+  padding: .5rem;
+  border: 1px solid #dedede;
+  background: #f6f6f6;
+}
+.homepage-events.infinite-upcoming.thumb-right h5 {
+  color: black;
+}
 /* homepage calendar feed adjustment to remove lines end */
 
 /* calendar on homepage with pictures/past events pages BEGINS */
