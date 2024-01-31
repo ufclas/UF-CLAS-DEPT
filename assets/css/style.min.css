@@ -9166,6 +9166,8 @@ ul.events-homepage-orange.past h4.entry-title {
 
 ul.events-homepage-orange h4.entry-title {
   padding-top: 0;
+  margin-top: -0.25rem !important;
+  display: block;
 }
 
 ul.events-homepage-orange.past span.lw_events_time.duration.time {
