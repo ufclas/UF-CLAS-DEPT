@@ -981,3 +981,50 @@ function my_theme_add_editor_styles() {
     add_editor_style( 'assets/css/orange-capitalize.css' );
 }
 add_action( 'init', 'my_theme_add_editor_styles' );
+
+if(function_exists('acf_add_local_field_group')){
+	// add options to hide featured image and hide author
+	acf_add_local_field_group(array(
+		'key' => 'hide-fields',
+		'title' => 'Toggle These Items from Displaying on Posts:',
+		'fields' => array (
+			array (
+				'key' => 'featured-image',
+				'label' => 'Featured Image',
+				'name' => 'featured-image',
+				'type' => 'checkbox',
+				'choices' => array(
+					'hide-image'	=> 'Hide featured image from individual post'
+				),
+			),
+			array (
+				'key' => 'article-author',
+				'label' => 'Author',
+				'name' => 'article-author',
+				'type' => 'checkbox',
+				'choices' => array(
+					'show-author'	=> 'Show author on individual post'
+				),
+			),
+			array (
+				'key' => 'article-date',
+				'label' => 'Date',
+				'name' => 'article-date',
+				'type' => 'checkbox',
+				'choices' => array(
+					'show-date'	=> 'Show date on individual post'
+				),
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post'
+				),
+			),
+		),
+		'position' => 'side',
+	));
+}

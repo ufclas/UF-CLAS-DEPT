@@ -11,7 +11,15 @@ get_header(); ?>
 		/*
 		 * Uses the Featured Image as a hero image
 		 */
+
+
+		$hidden  = get_field('featured-image');
+
+		if( in_array('hide-image', $hidden) == false ) {
+
 		clasHeroImage();
+		}
+	
 	?>
 
 <div class="wrap">

@@ -15,7 +15,12 @@ get_header(); ?>
 	/*
 	 * Uses the Featured Image as a hero image
 	 */
-	clasHeroImage();
+	$hidden  = get_field('featured-image');
+
+		if( in_array('hide-image', $hidden) == false ) {
+
+		clasHeroImage();
+		}
 ?>
 
 	<div id="primary" class="content-area">
