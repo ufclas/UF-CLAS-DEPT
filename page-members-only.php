@@ -11,7 +11,7 @@ get_header(); ?>
 		 * Uses the Featured Image as a hero image
 		 */
 		clasHeroImage();
-	?>
+					?>
 
 	<div id="primary" class="content-area">
 		

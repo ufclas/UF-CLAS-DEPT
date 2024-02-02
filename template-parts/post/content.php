@@ -33,6 +33,29 @@
 	<div class="entry-content">
            <div class="wrap">
 		<?php
+
+        //Pulls in the Author's first and last name along with the publish date
+        $authorFirstName = get_the_author_meta('first_name');
+        $authorLastName  = get_the_author_meta('last_name');
+        $publishDate     = get_the_date();
+
+        //Displays author's first name and last name and the publish date
+
+        //Checks to see if author needs to hidden
+        $shownauthor = get_field('article-author');
+        $showndate = get_field('article-date');
+
+        $author = "By <span class='author-name'>$authorFirstName $authorLastName</span>";
+        $date   = "<span class='publish-date'>$publishDate</span>";
+
+        if( in_array('show-author', $shownauthor) !== false ) {
+            echo "<p class='byline-author'> $author </p>";
+        }
+		if( in_array('show-date', $showndate) !== false ) {
+            echo "<p class='byline-date'> $date </p>";
+        }
+		
+
 		/* translators: %s: Name of current post */
 		the_content( sprintf(
 			__( 'Read More<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
