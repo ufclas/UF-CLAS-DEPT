@@ -14,29 +14,29 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> aria-label="<?php the_title(); ?> Preview Content">
 
-	<header class="entry-header">
-			<?php
-				if ( is_front_page() && is_home() ) {
-					the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
-				} else {
-					the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-				}
-
-				// Show date or edit link
-				if ( 'post' === get_post_type()  ) {
-					$show_date = get_theme_mod('archive_date');
-
-					if ( $show_date ) {
-						echo '<div class="entry-meta"><p>';
-						twentyseventeen_posted_on();
-						echo '</p></div><!-- .entry-meta -->';
-					}
-				}
-			?>
-	</header><!-- .entry-header -->
 
 	<div class="entry-content">
    <div class="row">
+	<header class="entry-header col-sm-12">
+				<?php
+					if ( is_front_page() && is_home() ) {
+						the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
+					} else {
+						the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+					}
+
+					// Show date or edit link
+					if ( 'post' === get_post_type()  ) {
+						$show_date = get_theme_mod('archive_date');
+
+						if ( $show_date ) {
+							echo '<div class="entry-meta"><p>';
+							twentyseventeen_posted_on();
+							echo '</p></div><!-- .entry-meta -->';
+						}
+					}
+				?>
+		</header><!-- .entry-header -->
 		 <?php
 			 // Show featured image on archive pages
 			 $show_featured = get_theme_mod('archive_featured');
