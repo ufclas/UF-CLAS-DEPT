@@ -8141,7 +8141,20 @@ ul.events-homepage-orange span.lw_events_time.duration.time {
     display: block;
     padding-bottom: 1rem;
 }
-
+h3.events ~ .lwcw {
+  color: #337ab7;
+  font-family: "Gentona_Book", Arial, sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 123%;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  display: block;
+  clear: both;
+  text-transform: none;
+}
 ul.events-homepage-orange li {
     position: relative;
     margin-left: 55px !important;
