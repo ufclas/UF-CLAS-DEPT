@@ -8141,7 +8141,7 @@ ul.events-homepage-orange span.lw_events_time.duration.time {
     display: block;
     padding-bottom: 1rem;
 }
-h3.events ~ .lwcw {
+h3.events ~ .lwcw, ul.events .lwcw {
   color: #337ab7;
   font-family: "Gentona_Book", Arial, sans-serif;
   font-style: italic;
@@ -8335,3 +8335,122 @@ ul.homepage-events li p { grid-area: Summary; font-size: .9em;}
     font-family: "Font Awesome 6 Pro" !important;
 }
 /* update font  awesome 5 to 6 end*/
+
+/* Upcoming and Past Events unit start */
+
+ul.unit-events .lwcw {
+    color: #337ab7;
+    font-family: "Gentona_Book", Arial, sans-serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 123%;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
+    display: block;
+    clear: both;
+    text-transform: none;
+}
+
+ul.unit-events .cal_date_month {
+    display: inline;
+    padding-right: .2rem;
+}
+
+ul.unit-events .cal_date_day {
+    display: inline;
+}
+
+ul.unit-events .cal_date {
+    display: inline;
+}
+
+ul.unit-events {
+    padding: 0;
+}
+
+.entry-content ul.unit-events .lwcw li:before {
+    content: '' !important;
+}
+
+ul.unit-events h4.entry-title.summary {
+    display: inline;
+}
+
+ul.unit-events span.lw_events_time.duration.time {
+    display: block;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #c2c2c2;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul.unit-events .lwcw {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.unit-events li:last-child {
+    border-bottom: 1px solid #c9c9c9;
+}
+
+ul.unit-events li:first-child {
+    margin-top:1rem;
+}
+
+ul.unit-events li {
+    display: grid;
+    grid-template-rows: minmax(20px, auto) minmax(20px, auto) minmax(0, 1fr);
+    gap: 0 2rem;
+    grid-template-areas:
+        "Thumbnail Date"
+        "Thumbnail Title"
+        "Thumbnail Summary";
+    padding: 2rem 0 1rem;
+    border-top: 1px solid #c9c9c9;
+}
+
+ul.unit-events .lw_item_thumb { grid-area: Thumbnail; }
+
+ul.unit-events .lw_events_time { grid-area: Date; }
+
+ul.unit-events .entry-title.summary { grid-area: Title; }
+
+ul.unit-events  li span.summary { grid-area: Summary; }
+
+ul.unit-events-past h4.entry-title.summary {
+    display: inline-block;
+    padding: 0;
+}
+
+ul.unit-events-past span.lw_events_time.duration.time {
+    display: block;
+}
+
+ul.unit-events .lwcw,
+ul.unit-events-past .lwcw{
+    color: #337ab7;
+    font-family: "Gentona_Book", Arial, sans-serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 123%;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
+    display: block;
+    clear: both;
+    text-transform: none;
+}
+ul.unit-events-past .lwcw {
+    margin-left: -40px;
+}
+
+ul.unit-events-past li {
+    padding-left: 40px;
+}
+/* Upcoming and Past Events unit end */
