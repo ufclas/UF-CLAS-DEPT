@@ -8370,23 +8370,12 @@ ul.unit-events {
     padding: 0;
 }
 
-.entry-content ul.unit-events .lwcw li:before {
-    content: '' !important;
-}
-
 ul.unit-events h4.entry-title.summary {
     display: inline;
 }
 
 ul.unit-events span.lw_events_time.duration.time {
     display: block;
-}
-
-hr {
-    border: 0;
-    border-bottom: 1px solid #c2c2c2;
-    padding-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 ul.unit-events .lwcw {
@@ -8406,6 +8395,7 @@ ul.unit-events li {
     display: grid;
     grid-template-rows: minmax(20px, auto) minmax(20px, auto) minmax(0, 1fr);
     gap: 0 2rem;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas:
         "Thumbnail Date"
         "Thumbnail Title"
@@ -8432,7 +8422,8 @@ ul.unit-events-past span.lw_events_time.duration.time {
 }
 
 ul.unit-events .lwcw,
-ul.unit-events-past .lwcw{
+ul.unit-events-past .lwcw,
+h3 ~ .lwcw {
     color: #337ab7;
     font-family: "Gentona_Book", Arial, sans-serif;
     font-style: italic;
@@ -8452,5 +8443,8 @@ ul.unit-events-past .lwcw {
 
 ul.unit-events-past li {
     padding-left: 40px;
+}
+ul.unit-events li:before {
+    content: "" !important;
 }
 /* Upcoming and Past Events unit end */
