@@ -9160,6 +9160,10 @@ ul.events-homepage-orange.past.nolines li {
   padding-left: 0 !important;
 }
 
+h3.events ~ .lwcw ul.past {
+  margin-top: -0.75rem;
+}
+
 ul.events-homepage-orange.past li:first-child h4.entry-title {
   margin: 0 !important;
 }
