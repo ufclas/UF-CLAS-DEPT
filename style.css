@@ -8118,13 +8118,17 @@ ul.events-homepage-orange.past.nolines li {
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
+ul.events-homepage-orange.past li:first-child h4.entry-title {
+    margin: 0 !important;
+}
 ul.events-homepage-orange.past h4.entry-title {
-  padding-bottom: 0.5rem;
+    margin: 0.5rem 0 0 !important;
 }
 ul.events-homepage-orange h4.entry-title {
-  padding-top: 0;
-  margin-top: -0.25rem !important;
-  display: block;
+    padding-top: 0;
+    top: 0.25rem !important;
+    display: block;
+    position: relative;
 }
 ul.events-homepage-orange.past span.lw_events_time.duration.time {
   padding: 0;
@@ -8323,6 +8327,12 @@ ul.homepage-events li p { grid-area: Summary; font-size: .9em;}
       display: block !important;
   }
 }
+ul.homepage-events li p:first-of-type{
+    display: block;
+}
+ul.homepage-events li p{
+    display: none;
+}
 /* calendar on homepage with pictures/past events pages ENDS */
 
 /* override twitter bird with twitter x begin */
@@ -8338,7 +8348,7 @@ ul.homepage-events li p { grid-area: Summary; font-size: .9em;}
 
 /* Upcoming and Past Events unit start */
 
-ul.unit-events .lwcw {
+ul.unit-events .lwcw, .wrap .lwcw {
     color: #337ab7;
     font-family: "Gentona_Book", Arial, sans-serif;
     font-style: italic;
