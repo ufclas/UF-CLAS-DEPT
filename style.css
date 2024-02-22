@@ -8461,3 +8461,10 @@ ul.unit-events li:before {
     content: "" !important;
 }
 /* Upcoming and Past Events unit end */
+
+/* correct for iframe calendar width */
+iframe#custom-iframe {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: block;
+}
