@@ -9560,5 +9560,9 @@ iframe#custom-iframe {
     width: 100% !important;
   }
 }
+/* remove arrows from li tag for slideshow dots */
+li.slideshow_transparent:before {
+  content: "" !important;
+}
 
 /*# sourceMappingURL=style.min.css.map */
