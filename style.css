@@ -1951,7 +1951,7 @@ h4, .h4 {
    font-family: "Gentona_Book", Arial, sans-serif;
    font-size: 1.35rem;
    font-style: normal;
-   line-height: 123%;
+   line-height: 150%;
    color: #004083;
    margin: 0px;
    padding: 0px;
@@ -8467,4 +8467,15 @@ iframe#custom-iframe {
     max-width: 1170px;
     margin: 0 auto;
     display: block;
+}
+
+/* correct for left and right aligned images on mobile */
+.alignleft, .alignright {
+  margin-top: 0;
+  padding-bottom: .5rem;
+}
+@media (max-width: 768px) {
+  .alignleft, .alignleft img, .alignright, .alighright img {
+      width: 100% !important;
+  }
 }
