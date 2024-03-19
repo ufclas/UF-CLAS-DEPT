@@ -8484,3 +8484,83 @@ iframe#custom-iframe {
 li.slideshow_transparent:before {
   content: "" !important;
 }
+
+/* newsletter catlist */
+ @media (min-width: 482px){
+	.dept-newsletter ul#lcp_instance_0 li img {
+			width: 125px;
+			height: 125px;
+			object-fit: cover;
+		  max-width: unset;
+	}
+}
+
+.dept-newsletter p.feed-date:before {
+    content: "Published on ";
+}
+
+#page .dept-newsletter p.feed-date {
+    padding: 0 0 .8rem;
+    font-size: 1rem;
+}
+
+#page .dept-newsletter a {
+    font-size: 1.2rem !important;
+}
+
+.dept-newsletter li {
+    border-bottom: 1px solid black;
+    padding: 1rem 0;
+		clear: both;
+}
+
+.dept-newsletter li:last-child {
+    border: none;
+}
+
+.dept-newsletter ul li:before {
+    display: none;
+}
+
+.home .dept-newsletter h3 {
+    color: #002346;
+    font-family: "Gentona_ExtraBold";
+    font-size: 1.9rem;
+}
+
+.dept-newsletter ul.lcp_paginator {
+	text-align: center;
+}
+
+.dept-newsletter ul.lcp_paginator li {
+    border: none;
+    padding: .2rem .6rem;
+    margin-top: 1rem;
+}
+
+.dept-newsletter li.lcp_currentpage {
+    background: #00285e;
+    color: white !important;
+    font-family: "Quadon_Bold" !important;
+}
+
+.dept-newsletter ul#lcp_instance_0 {
+    padding: 0 3rem 0 0;
+}
+
+.dept-newsletter #lcp_instance_0 li {
+    display: flex;
+    flex-wrap: wrap;
+}
+	
+.dept-newsletter p.feed-date {
+  flex: 1 100%;
+}
+
+.dept-newsletter .feed-excerpt {
+    flex: 1 77%;
+}
+
+.dept-newsletter ul#lcp_instance_0 li a:empty {
+    display: none !important;
+} /* collapses thumbnail when there's no image */
