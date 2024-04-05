@@ -106,10 +106,7 @@
 
 <body 
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $googleTagManager ?>"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 
 <?php 
 
@@ -136,6 +133,10 @@ body_class($class);
 
 
 ?>>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $googleTagManager ?>"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 	<?php
 		//Looks at the current site. If the current site is the CLAS Home website it will display the clas.php header template. If the website is anything else, it will display the deparment.php template - Efren Vasquez
