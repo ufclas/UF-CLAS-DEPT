@@ -68,11 +68,50 @@
 
 		  gtag('config', '<?php echo $googleAnalytics ?>', {'cookie_domain': '<?php echo $link ?>'});
 		</script>
-	<?php } ?>
+	<?php } 
+	
+	//Google Tag Manager
+		if ( !empty(get_theme_mod('google_tag_manager_code')) ){
+			$googleTagManager = get_theme_mod('google_tag_manager_code');
+	
+			// Get the custom field value (we're using the wpalchemy class)
+			$link = get_site_url();
+	
+			if (!empty($link)) {
+				// Begins with https
+				if (preg_match('/^https/', $link)) {
+					// Set the $url_prefix variable to `https://`
+					$url_prefix = 'https://';
+				} else {
+					// Use http
+					$url_prefix = 'http://';
+				}
+			}
+	
+				// Get rid of the `http://` or `https://`
+				$link = str_replace(array('http://', 'https://'), '', $link);
+			?>
+	
+			<!-- Google Tag Manager -->
+			<script>
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','<?php echo $googleTagManager ?>');</script>
+		<?php } 
+		?>
 
 </head>
 
-<body <?php 
+<body 
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $googleTagManager ?>"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<?php 
 
 $this_category = get_category($cat);
 //If category is parent, list it
