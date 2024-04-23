@@ -17,6 +17,23 @@
 		</div><!-- #content -->
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
+
+<?php 
+
+		//Looks at the current site. If the current site is the signage site, it will not display the footer
+		$blog_id = get_current_blog_id();
+
+		//This id the site IDs for the blank website.
+		$blankID = array(217);
+
+		if( in_array($blog_id, $blankID) ){
+			?>  <footer></footer> <?php }
+		else {
+		
+
+
+
+?>
 <footer aria-label="Main Footer">
 <div class="footer-main">
    <div class="footer-main-wrap">
@@ -219,6 +236,8 @@ endif;
 <?php ufclas_emily_footer_bottom(); ?>
 </footer>
 
-<?php wp_footer(); ?>
+<?php }
+
+wp_footer(); ?>
 </body>
 </html>
