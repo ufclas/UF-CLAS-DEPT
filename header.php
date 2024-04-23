@@ -144,12 +144,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		//These are the site IDs for the CLAS Portal and CLAS main website.
 		$clasID = array(1,2);
+		$blankID = array(217);
 
 		if( in_array($blog_id, $clasID) ){
-			get_template_part('template-parts/header/clas');
-		}else {
+			get_template_part('template-parts/header/clas');}
+		else if ( in_array($blog_id, $blankID) ){
+			get_template_part('template-parts/header/blank');}
+		else {
 			get_template_part('template-parts/header/department');
 		}
+
+		//These are the site IDs for the CLAS Portal and CLAS main website.
+
 
 		//Displays the alert message if it's filled out in the backend
 		if ( !empty(get_theme_mod('header_alert')) ){
