@@ -9556,7 +9556,7 @@ iframe#custom-iframe {
 }
 
 @media (max-width: 768px) {
-  .alignleft, .alignleft img, .alignright, .alighright img {
+  .alignleft, .alignleft img, .alignright, .alignright img {
     width: 100% !important;
   }
 }
