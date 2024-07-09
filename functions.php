@@ -1014,6 +1014,15 @@ if(function_exists('acf_add_local_field_group')){
 				'choices' => array(
 					'show-date'	=> 'Show date on individual post'
 				),
+			),
+			array (
+				'key' => 'article-share',
+				'label' => 'Share',
+				'name' => 'article-share',
+				'type' => 'checkbox',
+				'choices' => array(
+					'show-sharing-icons' => 'Show sharing icons on individual post'
+				),
 			)
 		),
 		'location' => array (
