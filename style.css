@@ -1507,6 +1507,8 @@ img.alignright,  .alignright , .alignleft {
  justify-content: center;
  flex-direction: column;
  text-align: center;
+ clear: both;
+ padding-top: 2rem;
 }
 
 .post-sharing-icons .share-icons-button {
