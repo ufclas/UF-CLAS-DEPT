@@ -44,6 +44,7 @@
         //Checks to see if author needs to hidden
         $shownauthor = get_field('article-author');
         $showndate = get_field('article-date');
+		$showsharingicons = get_field('article-share');
 
         $author = "By <span class='author-name'>$authorFirstName $authorLastName</span>";
         $date   = "<span class='publish-date'>$publishDate</span>";
@@ -69,6 +70,26 @@
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
 		) );
+		
+		if (in_array('show-sharing-icons', $showsharingicons) !== false) {
+            $postUrl = get_permalink();
+			?>
+				<section class="post-sharing-icons">
+						<h3 class="post-sharing-icons-name">SHARE</h3>
+						<p>Share this content on these platforms.</p>
+						<div class="share-icons-button">
+							<!-- Facebook Link -->
+							<p><a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="Share on Facebook"><em class="fab fa-square-facebook"></em></a></p>
+		
+							<!-- Twitter Link -->
+							<p><a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo get_the_title(); ?>&via=<?php the_author_meta('twitter'); ?>" title="Share on Twitter"><em class="fab fa-twitter"></em></a></p>
+		
+							<!-- LinkedIn -->
+							<p><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $postUrl; ?>&title=<?php echo get_the_title(); ?>"><em class="fab fa-linkedin"></em></a></p>
+						</div>
+				</section>
+				<?php
+			}
 		?>
            </div><!-- .wrap -->
 	</div><!-- .entry-content -->
