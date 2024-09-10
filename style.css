@@ -8378,7 +8378,7 @@ ul.homepage-events li p{
 
 /* Upcoming and Past Events unit start */
 
-ul.unit-events .lwcw, .wrap .lwcw {
+ul.unit-events .lwcw {
    color: #337ab7;
    font-family: "Gentona_Book", Arial, sans-serif;
    font-style: italic;
@@ -8462,8 +8462,7 @@ ul.unit-events-past span.lw_events_time.duration.time {
 }
 
 ul.unit-events .lwcw,
-ul.unit-events-past .lwcw,
-h3 ~ .lwcw {
+ul.unit-events-past .lwcw {
    color: #337ab7;
    font-family: "Gentona_Book", Arial, sans-serif;
    font-style: italic;
