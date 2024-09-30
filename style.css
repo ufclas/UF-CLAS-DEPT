@@ -343,7 +343,7 @@
  color:#ffffff;
  vertical-align: middle;
  font-size:2.5vw;
- font-family: "Surveyor Display A", "Surveyor Display B";
+ font-family: "Gentona_Book", Arial, sans-serif;
  font-style: normal;
  line-height: 150%;
  padding-left: .5rem;
@@ -429,15 +429,6 @@
  transition: all 0.5s ease;
 }
 
-/* Row One -- COLLEGE Name */
-.college-logo-desktop,
-.college-logo-tablet {
- display:none;
-}
-
-.college-logo-mobile{
- display:block;
-}
 
 /* SEARCH BAR */
 /* Disable desktop search box */
@@ -563,9 +554,7 @@ max-height:3.75rem;
 z-index: 10;
 }
 
-.college-logo-mobile{
-display:block;
-}
+
 
 .X-header .college {
 width:100%;
@@ -579,7 +568,7 @@ text-align:center;
 }
 
 .X-header .college a{
-font-family: "Surveyor Text A","Surveyor Text B",serif;
+font-family: "Gentona_Book", Arial, sans-serif;
 color:#ffffff;
 text-decoration: none;
 font-weight:normal;
@@ -592,9 +581,6 @@ text-transform:none;
 display:table-cell;
 vertical-align:middle;
 letter-spacing: 0;
-}
-.X-header .college a .college-logo-mobile > span > span {
- white-space: nowrap;
 }
 .X-header .college a span.and {
  font-style: italic;
@@ -1884,7 +1870,7 @@ h2, .h2 {
 }
 
 .date:not(.archive) {
-   font-family: "Surveyor Text A", "Surveyor Text B";
+   font-family: "Gentona_Book", Arial, sans-serif;
    padding-top: 1rem;
    padding-bottom: 1rem;
    font-style: italic;
@@ -2019,7 +2005,7 @@ h6, .h6 {
 }
 
 p {
-  font-family: "Surveyor Text A", "Surveyor Text B";
+  font-family: "Gentona_Book", Arial, sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   line-height: 150%;
@@ -2038,7 +2024,7 @@ body, button, input, select, textarea {
 }
 
 p.smallCopy, .smallCopy{
-  font-family: "Surveyor Text A", "Surveyor Text B";
+  font-family: "Gentona_Book", Arial, sans-serif;
   font-size: 1rem;
   line-height: 150%;
   font-style: normal;
@@ -3774,7 +3760,7 @@ h1.main,p.demos {
 
 .table-cell-1-num{
  line-height: 150%;
- font-family: "Surveyor Display A", "Surveyor Display B";
+ font-family: "Gentona_Book", Arial, sans-serif;
  font-style: normal;
  color:#084B81;
  margin:0px;
@@ -3812,7 +3798,7 @@ line-height: 150%;
 }
 .table-cell-6-num{
  line-height: 150%;
- font-family: "Surveyor Display A", "Surveyor Display B";
+ font-family: "Gentona_Book", Arial, sans-serif;
  font-style: italic;
  color:#084B81;
  margin:0px;
@@ -4745,7 +4731,7 @@ h2.entry-title.interior-page {
 }
 
 #page .search-page {
-   font-family: "Surveyor Text A" !important;
+   font-family: "Gentona_Book", Arial, sans-serif;
 }
 
 .container-other-sites {
@@ -6249,14 +6235,7 @@ a.ui-state-default:hover {
           margin-top:2rem;
         }
 
-        /* Row One -- COLLEGE Name */
-        .college-logo-mobile {
-          display: none;
-        }
 
-        .college-logo-tablet{
-          display: block;
-        }
 
         /* Row Two -- DEPARTMENT Name */
         .X-search-form-container  .search-field{
@@ -6789,7 +6768,7 @@ a.ui-state-default:hover {
 
       p {
         color: #4A4A4A;
-        font-family: "Surveyor Text A", "Surveyor Text B";
+        font-family: "Gentona_Book", Arial, sans-serif;
         font-size: 1.125rem;
         font-style: normal;
         line-height: 150%;
@@ -6923,16 +6902,14 @@ a.ui-state-default:hover {
           z-index: 2;
         }
 
-        .college-logo-tablet,
-        .college-logo-mobile {
-          display: none;
-        }
+
 
         .college-logo-desktop svg{
           display:block;
           width: 33.275rem;
           height: 2.2rem;
         }
+
 
         /* SEARCH */
         .mobileSearch {
@@ -8590,3 +8567,18 @@ li.slideshow_transparent:before {
 .dept-newsletter ul#lcp_instance_0 li a:empty {
    display: none !important;
 } /* collapses thumbnail when there's no image */
+
+@media (max-width: 1024px) {
+ .college-logo-desktop svg {
+    width: auto !important;
+    padding-right: 1rem;
+    top: 3px !important;
+    display: block;
+  }
+
+  header#header-clas-home .college-logo-desktop svg {
+    top: 1px !important;
+ {
+
+  }
+}

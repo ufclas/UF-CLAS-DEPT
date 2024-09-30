@@ -539,7 +539,7 @@ p.date {
 
    .table-cell-1-num{
       line-height:1;
-      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-family: "Gentona_Book", Arial, sans-serif;
       font-style: oblique;
       font-weight: 800;
       color:#084B81;
@@ -576,7 +576,7 @@ p.date {
    }
    .table-cell-5-num{
       line-height:1;
-      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-family: "Gentona_Book", Arial, sans-serif;
 		 font-weight:bold;
       color:#ffffff;
       margin:0px;
