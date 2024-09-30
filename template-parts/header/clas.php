@@ -10,17 +10,11 @@
 
 		   <div class="college clas-main"><!-- College of Liberal Arts logo -->
 				 <div class="strikeRight">
-					 <h1><a href="<?php echo get_site_url(); ?>">
+					 <h1 class="adjust-mobile"><a href="<?php echo get_site_url(); ?>">
 	 						<span class="college-logo-desktop clas-main">
 	 							<?php echo twentyseventeen_get_svg( array( 'icon_id' => 'clas-connected' ) ); ?>
 	 							<span class="SVGaltText">College of Liberal Arts and Sciences</span>
 	 						</span>
-							<span class="college-logo-mobile">
-	 							<span>Liberal Arts <span><span class="and">and</span> Sciences</span></span>
-	 					 </span>
-	 					 <span class="college-logo-tablet">
-	 							<span>Liberal Arts <span class="and">and</span> Sciences</span>
-	 					 </span>
 	 				</a></h1>
 	 	   	</div>
 				<div class="menuBox">
