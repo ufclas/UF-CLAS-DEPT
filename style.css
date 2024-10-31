@@ -216,55 +216,55 @@
 }*/
 @font-face {
    font-family: 'Quadon_BoldItalic';
-   src: url('/fonts/Newsreader/static/Quadon_BoldItalic.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_ExtraBold';
-   src: url('/fonts/Newsreader/static/Quadon_ExtraBold.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_ExtraBoldItalic';
-   src: url('/fonts/Newsreader/static/Quadon_ExtraBoldItalic.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_UltraBold';
-   src: url('/fonts/Newsreader/static/Quadon_UltraBold.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_UltraBoldItalic';
-   src: url('/fonts/Newsreader/static/Quadon_UltraBoldItalic.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_Black';
-   src: url('/fonts/Newsreader/static/Quadon_Black.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_BlackItalic';
-   src: url('/fonts/Newsreader/static/Quadon_BlackItalic.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_Heavy';
-   src: url('/fonts/Newsreader/static/Quadon_Heavy.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_HeavyItalic';
-   src: url('/fonts/Newsreader/static/Quadon_HeavyItalic.woff') format('woff');
+   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
@@ -4412,7 +4412,6 @@ padding-bottom:1rem;
 }
 
 p {
- font-family: quadon_medium !important;
  font-size: 1em;
  color: #333;
  letter-spacing: .5px;
