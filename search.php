@@ -1,92 +1,75 @@
-<?php // 201028: capture queries, DENY exceptions, count instances, improve empty
+<?php
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package WordPress
+ * @subpackage Twenty_Seventeen
+ * @since Twenty Seventeen 1.0
+ * @version 1.0
+ */
 
-  get_header();
+get_header(); ?>
 
-  $searchfor    = get_search_query(); // Get the search query for display in a headline
-  $searchfor = trim($searchfor);
+<div class="wrap">
 
-  $empty_search = false;
+	<header class="page-header">
+		<?php if ( have_posts() ) : ?>
+			<h1 class="page-title">
+			<?php
+			/* translators: Search query. */
+			printf( __( 'Search Results for: %s', 'twentyseventeen' ), '<span>' . get_search_query() . '</span>' );
+			?>
+			</h1>
+		<?php else : ?>
+			<h1 class="page-title"><?php _e( 'Nothing Found', 'twentyseventeen' ); ?></h1>
+		<?php endif; ?>
+	</header><!-- .page-header -->
 
-  if ($searchfor === "" || empty($searchfor) || $searchfor == false) {
-    $empty_search = true;
-  }
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 
-  // list exceptions
-  //include("inc/search/list_exceptions.php");
-  $value_location     = "";
-  $exception_injected = false;
-  $exceptionInjection = "\$exceptionInjection";
+		<?php
+		if ( have_posts() ) :
+			// Start the Loop.
+			while ( have_posts() ) :
+				the_post();
 
-?>
+				/**
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'template-parts/post/content', 'excerpt' );
 
-      <main id="main" class="site-main" aria-label="Main content">
-        <div id="primary" class="content-area">
-          <div class="entry-content">
-            <div class="wrap search-page">
-              <?php
-                $key_searchTerm        = strtolower($searchfor);
-                $length_searchTerm     = strlen($key_searchTerm);
-                $key_searchTerm_marked = "<span class=\"bold\">".$key_searchTerm."</span>";
-                $key_bold_open         = "<span class=\"bold\">";
-                $key_bold_close        = "</span>";
-                $length_key_bold_open  = strlen($key_bold_open);
-                $pageID                = $_GET['pageID'];
+			endwhile; // End the loop.
 
-                get_search_form();
+			the_posts_pagination(
+				array(
+					/* translators: Hidden accessibility text. */
+					'prev_text'          => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
+					/* translators: Hidden accessibility text. */
+					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
+					/* translators: Hidden accessibility text. */
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
+				)
+			);
 
-                $args_test = array(
-                  'number' => 400
-                );
+		else :
+			?>
 
-                // Search results for [the searched term] on [this site]
-                // bloginfo() depreciated, using foreach to isolate the Site title to avoid using;
-                foreach (get_sites($args_test) as $indexNumber => $wp_site_obj) {
-                  foreach ($wp_site_obj as $key_description => $value_detail) {
-                    if ($key_description == "blog_id" && $value_detail == $pageID) {
-                      foreach ($wp_site_obj as $key_description => $value_detail) {
-                        if ($key_description == "path") {
-                          $url       = $value_detail;
-                          $url_array = explode("/", $url);
-                          $link      = array_pop($url_array);
-                          $siteTitle = strtolower(get_bloginfo('name'));
-                          $siteTitle = ucwords($siteTitle);
-                          if (!$empty_search) {
-                            echo "<h2>Search results for \"{$searchfor}\" on {$siteTitle}</h2>";
-                          } else {
-                            echo "<h2>Searching for space on " . ucwords($siteTitle) . "</h2>";
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'twentyseventeen' ); ?></p>
+			<?php
+				get_search_form();
 
-                if (!$empty_search) {
-                  include("inc/search/processing_core.php");
-                } else {
-                  echo "Did you know your search was empty? Try again?!";
-                  // echo "<br><br>Want a Sitemap?<br><br> // .<img src=\"https://campusmap.ufl.edu/library/photos/stars/B0267.jpg\">
-                  // <hr>
-                }
-              ?>
-            </div>
-            <!-- container Results List -->
-            <?php //include("inc/search/hold_exceptionContainer.php"); ?>
-          </div>
-        <!-- master search results container -->
-        </div>
-      <!-- id="primary" class="content-area" -->
-      </main>
-    </div>
-</div>
-<!-- entry content -->
+		endif;
+		?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	<?php get_sidebar(); ?>
+</div><!-- .wrap -->
 
 <?php
-  // write to the database table "search_capturequeries";
-  if (!$empty_search) {
-    include("inc/search/capture_write.php");
-  }
-?>
-
-
-<?php get_footer(); ?>
+get_footer();
