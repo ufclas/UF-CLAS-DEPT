@@ -8580,3 +8580,11 @@ li.slideshow_transparent:before {
     top: 1px !important;
   }
 }
+
+.search-results .entry-meta, .search-results p.link-more {
+  display: none;
+}
+
+.search-results article {
+  border-top: 1px solid #b0c5d9;
+}
