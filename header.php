@@ -103,35 +103,7 @@
 
 </head>
 
-<body 
-
-
-
-<?php 
-
-$this_category = get_category($cat);
-//If category is parent, list it
-if ($this_category->category_parent == 0) {
-	$this_category->category_parent = $cat;
-} else { // If category is not parent, list parent category
-	$parent_category = get_category($this_category->category_parent);
-	//get the parent category id
-	$ParentCatId = $parent_category->cat_ID;
-	}
-	$childcategories = array();
-	$catx = $ParentCatId;
-	$cats = get_categories('parent='.$catx);
-	foreach($cats as $cat) {
-		$childcategories[] = $cat->term_id; } ;
-	//if it is a child category, add a class with the parent category id
-	if( is_category( $childcategories ) ) {
-		$class = 'parent-category-'.$ParentCatId;
-	}
-
-body_class($class); 
-
-
-?>>
+<body <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $googleTagManager ?>"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
