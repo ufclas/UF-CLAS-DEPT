@@ -8771,3 +8771,36 @@ li.slideshow_transparent:before {
  * MetaSlider - BANNER STYLES END
  * 
  * =================================*/
+
+ /*Non-homepage Metslider Slider Styles*/
+
+.metaslider:not(.homepage-banner) {
+  margin: 0 auto;
+} 
+
+.metaslider:not(.homepage-banner) .flexslider .flex-direction-nav{
+position: absolute!important;
+display: flex;
+flex-direction: row;
+align-items: center;
+align-content: center;
+justify-content: space-between;
+top: 50%;
+z-index: 10;
+width: 100%;
+margin: -20px 0 0;
+cursor: pointer;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.3s ease-in-out;
+}
+.metaslider:not(.homepage-banner) .flexslider:hover .flex-direction-nav {
+opacity: 50%;
+pointer-events: auto; 
+}
+
+.metaslider:not(.homepage-banner) .flexslider .caption div {
+display: flex;
+justify-content: center;
+}
+/*Non-homepage Metslider Slider Styles end*/
