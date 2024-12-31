@@ -8588,3 +8588,186 @@ li.slideshow_transparent:before {
 .search-results article {
   border-top: 1px solid #b0c5d9;
 }
+
+/*=================================
+ * 
+ * MetaSlider - BANNER STYLES
+ * 
+ * ===============================*/
+
+
+
+/* Banner Styles*/
+.metaslider.homepage-banner .banner-container{
+	display: flex;
+	flex-direction: column;
+	margin:0 0 3rem 2rem;
+	z-index: 2;
+  position: relative;
+}
+
+/* Arrow Styles*/
+
+@media (min-width: 768px) {
+	.metaslider.homepage-banner .flex-direction-nav{
+		position: absolute!important;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
+		justify-content: space-between;
+		top: 50%;
+		z-index: 10;
+		width: 100%;
+		margin: -20px 0 0;
+		cursor: pointer;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease-in-out;
+	}
+	.metaslider.homepage-banner .flexslider:hover .flex-direction-nav {
+		opacity: 50%;
+		pointer-events: auto; 
+	}
+}
+@media (max-width: 768px) {
+		.metaslider.homepage-banner .flex-direction-nav{
+		position: absolute!important;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
+		justify-content: space-between;
+		top: 50%;
+		z-index: 10;
+		width: 100%;
+		margin: -20px 0 0;
+		cursor: pointer;
+		opacity: 50%;
+		pointer-events: auto;
+	}
+
+}
+
+/* Text Container Styles*/
+.metaslider.homepage-banner  .caption-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  opacity: 1!important;
+  margin: 0;
+  display: block;
+  width: 100%;
+  line-height: 1.4em;
+	background: transparent!important;
+}
+
+/* Background Gradient Styles*/
+.metaslider.homepage-banner .caption:after {
+  content: " ";
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.6));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  display: block;
+}
+
+/* Title Styles*/
+.metaslider.homepage-banner .banner-container .banner-title{
+	color: #fff;
+  font-family: "Gentona_Medium";
+	text-shadow: 1px 2px 2px black;	
+	font-size: 2.8rem;
+}
+
+/* Paragraph Styles*/
+.metaslider.homepage-banner .banner-container .banner-paragraph {
+	color: #fff;
+  font-family: "Quadon_Regular"!important;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* Button Styles*/
+.metaslider.homepage-banner .banner-container .banner-button {
+	display: block;
+	font-family: "Gentona_Bold" !important;
+	letter-spacing: 1px;
+  text-shadow: 1px 2px 2px black;
+	text-align: center;
+	margin: 15px 0;
+	padding: .5rem;
+  color: white !important;
+  border: white 2px solid;
+  max-width: 100%;
+  min-width: 180px;
+  width: fit-content;
+  border-radius: 1px;
+  transition: .2s;
+	cursor: pointer;
+}
+
+.metaslider.homepage-banner .banner-container .banner-button:hover {
+  background: #f45a1d;
+  border: 2px #f45a1d solid;
+}
+
+
+@media (max-width: 900px) {
+.metaslider.homepage-banner .banner-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  z-index: 2;
+  position: relative;
+  }
+.metaslider.homepage-banner .banner-container .banner-title {
+  padding: 16px 0 0;
+	}
+}
+
+@media (max-width: 784px) {
+.metaslider.homepage-banner .flexslider .slides img {
+	height: 350px!important;
+	object-fit: cover!important;
+	}	
+.metaslider.homepage-banner  .slides img {
+	width: 100%;
+  display: block;
+  height: 350px;
+  object-fit: cover;
+	}
+.metaslider.homepage-banner .banner-container .banner-title{
+  font-size: 2.3rem;
+ }
+.metaslider.homepage-banner .banner-container {
+  margin: 1rem 3rem;
+	}
+}
+
+@media (max-width: 430px) {
+.metaslider.homepage-banner .banner-container .banner-title {
+	font-size: 2.0rem;
+	line-height: 120%;
+	}
+.metaslider.homepage-banner .banner-container {
+  margin: 1rem;
+	}
+.metaslider.homepage-banner .banner-container .banner-paragraph {
+	font-size: 1rem;
+	}
+}
+
+
+/*==================================
+ * 
+ * MetaSlider - BANNER STYLES END
+ * 
+ * =================================*/
