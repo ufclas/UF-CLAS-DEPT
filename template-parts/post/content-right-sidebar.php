@@ -46,25 +46,25 @@
 	<div class="entry-content">  
 		<?php
 
-        //Pulls in the Author's first and last name along with the publish date
-        $authorFirstName = get_the_author_meta('first_name');
-        $authorLastName  = get_the_author_meta('last_name');
-        $publishDate     = get_the_date();
+		// Pulls in the Author's first and last name along with the publish date
+		$authorFirstName = get_the_author_meta('first_name');
+		$authorLastName  = get_the_author_meta('last_name');
+		$publishDate     = get_the_date();
 
-        //Displays author's first name and last name and the publish date
+		// Displays author's first name and last name and the publish date
 
-        //Checks to see if author needs to hidden
+		// Checks to see if author needs to be hidden
 		$shownauthor = get_field('article-author');
 		$showndate = get_field('article-date');
 		$showsharingicons = get_field('article-share');
-		
+
 		$author = "By <span class='author-name'>$authorFirstName $authorLastName</span>";
 		$date   = "<span class='publish-date'>$publishDate</span>";
-		
-		if (is_array($shownauthor) && in_array('show-author', $shownauthor) !== false) {
+
+		if ($shownauthor === 'show-author') {
 			echo "<p class='byline-author'> $author </p>";
 		}
-		if (is_array($showndate) && in_array('show-date', $showndate) !== false) {
+		if ($showndate === 'show-date') {
 			echo "<p class='byline-date'> $date </p>";
 		}		
 
