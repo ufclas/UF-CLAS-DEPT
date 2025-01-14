@@ -53,7 +53,7 @@
 
 		// Displays author's first name and last name and the publish date
 
-		// Checks to see if author needs to be hidden
+		//Checks to see if author needs to hidden
 		$shownauthor = get_field('article-author');
 		$showndate = get_field('article-date');
 		$showsharingicons = get_field('article-share');
@@ -61,10 +61,10 @@
 		$author = "By <span class='author-name'>$authorFirstName $authorLastName</span>";
 		$date   = "<span class='publish-date'>$publishDate</span>";
 
-		if ($shownauthor === 'show-author') {
+		if( in_array('show-author', $shownauthor) !== false ) {
 			echo "<p class='byline-author'> $author </p>";
 		}
-		if ($showndate === 'show-date') {
+		if( in_array('show-date', $showndate) !== false ) {
 			echo "<p class='byline-date'> $date </p>";
 		}		
 
