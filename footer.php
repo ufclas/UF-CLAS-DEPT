@@ -158,10 +158,6 @@ endif;
 
    <div class="footer-main-col-3">
           <div class="uf-campaign">
-             <a href="http://www.ufl.edu" target="_blank">
-				 <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'uflogo-go-greater', 'class' => 'icon-uflogo-go-greater' ) ); ?>
-				 <span class="SVGaltText">University of Florida Homepage</span>
-             </a>
          <div class="hashtag">
             <span> #LASGATORS</span>
          </div>
