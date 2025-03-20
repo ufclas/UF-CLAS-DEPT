@@ -57,16 +57,6 @@
 			?>
 		</div>
 
-		<nav class="X-quickLinks" aria-label="Quick Links"><!--Quicklinks menu -->
-		  <a href="#" class="menu-title">Resources</a>
-			<div class="menu-quick-links-container">
-			  <ul id="quicklinks" class="menu">
-					<li id="menu-item-facultystaff" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-facultystaff"><a href="https://clas.ufl.edu/clas-connected/faculty-staff-resources/" title="Faculty & Staff" target=""> <span>Faculty &amp; Staff</span></a></li>
-					<li id="menu-item-students" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-students"><a href="https://clas.ufl.edu/clas-connected/student-resources/" title="Current & Prospective Students" target=""> <span>Current &amp; Prospective Students</span></a></li>
-			    <li id="menu-item-alumni" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-alumni"><a href="https://advancement.clas.ufl.edu/alumni/stay-connected/" title="Alumni" target=""> <span>Alumni</span></a></li>
-			  </ul>
-			</div>
-  	</nav>
 
 	<div class="X-searchTrigger"> <!-- Search section -->
 	   <button>
