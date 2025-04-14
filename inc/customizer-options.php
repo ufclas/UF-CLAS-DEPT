@@ -248,7 +248,7 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'bluesky', array(
-		'label' => __('LinkedIn URL', 'ufclas-emily'),
+		'label' => __('Bluesky URL', 'ufclas-emily'),
 		'description' => __("", 'ufclas-emily'),
 		'section' => 'ufclas_emily_theme_options_social',
 		'type' => 'text',
