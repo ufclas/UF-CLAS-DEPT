@@ -203,6 +203,7 @@ function ufclas_emily_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'rss', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	$wp_customize->add_setting( 'email', array( 'default' => '', 'sanitize_callback' => 'sanitize_email' ));
 	$wp_customize->add_setting( 'linkedin', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'bluesky', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 
 	$wp_customize->add_control( 'fb', array(
 		'label' => __('Facebook URL', 'ufclas-emily'),
@@ -241,6 +242,12 @@ function ufclas_emily_customize_register( $wp_customize ) {
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'linkedin', array(
+		'label' => __('LinkedIn URL', 'ufclas-emily'),
+		'description' => __("", 'ufclas-emily'),
+		'section' => 'ufclas_emily_theme_options_social',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'bluesky', array(
 		'label' => __('LinkedIn URL', 'ufclas-emily'),
 		'description' => __("", 'ufclas-emily'),
 		'section' => 'ufclas_emily_theme_options_social',
