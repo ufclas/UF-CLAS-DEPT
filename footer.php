@@ -193,6 +193,10 @@ endif;
 		echo '<li><a href="' . esc_url( get_theme_mod('linkedin') ) . '" class=" icon-svg icon-social-media icon-linkedin" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-linkedin' )) . '<span class="SVGaltText"><abbr title="College of Liberal Arts and Sciences">CLAS</abbr> LinkedIn Profile</span></a></li>';
 	endif;
 
+	if ( !empty(get_theme_mod('bluesky')) ):
+		echo '<li><a href="' . esc_url( get_theme_mod('bluesky') ) . '" class=" icon-svg icon-social-media icon-bluesky" target="_blank">' . twentyseventeen_get_svg( array( 'icon_id' => 'icon-footer-bluesky' )) . '<span class="SVGaltText"><abbr title="College of Liberal Arts and Sciences">CLAS</abbr> Bluesky Profile</span></a></li>';
+	endif;
+
 	?>
 
             </ul>
