@@ -8595,7 +8595,11 @@ li.slideshow_transparent:before {
  * 
  * ===============================*/
 
-
+ .slider-max-width-container {
+	max-width: 1000px;
+  padding: 3rem 2rem;
+	margin: 0 auto;
+}
 
 /* Banner Styles*/
 .metaslider.homepage-banner .banner-container{
