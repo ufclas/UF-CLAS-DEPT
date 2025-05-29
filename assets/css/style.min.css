@@ -38,116 +38,109 @@
 }
 @font-face {
    font-family: 'Gentona_Thin';
-   src: url('/fonts/gentona/Gentona_Thin.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Thin.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_ThinItalic';
-   src: url('/fonts/gentona/Gentona_ThinItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_ThinItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_ExtraLight';
-   src: url('/fonts/gentona/Gentona_ExtraLight.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_ExtraLight.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_ExtraLightItalic';
-   src: url('/fonts/gentona/Gentona_ExtraLightItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_ExtraLightItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_Light';
-   src: url('/fonts/gentona/Gentona_Light.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Light.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_LightItalic';
-   src: url('/fonts/gentona/Gentona_LightItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_LightItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_Book';
-   src: url('/fonts/gentona/Gentona_Book.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Regular.ttf') format('truetype');
    font-weight: normal;
-   font-style: normal;
-}
-/* Accessibility: font-weight below allows footer links to appear bold */
-@font-face {
-   font-family: 'Gentona_Book';
-   src: url('/fonts/gentona/Gentona_Bold.woff') format('woff');
-   font-weight: 700;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_BookItalic';
-   src: url('/fonts/gentona/Gentona_BookItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Regular.ttf') format('truetype');
    font-weight: normal;
-   font-style: normal;
+   font-style: italic;
 }
 @font-face {
    font-family: 'Gentona_Medium';
-   src: url('/fonts/gentona/Gentona_Medium.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Medium.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_MediumItalic';
-   src: url('/fonts/gentona/Gentona_MediumItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_MediumItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_SemiBold';
-   src: url('/fonts/gentona/Gentona_SemiBold.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_SemiBold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_SemiBoldItalic';
-   src: url('/fonts/gentona/Gentona_SemiBoldItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_SemiBoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_Bold';
-   src: url('/fonts/gentona/Gentona_Bold.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Bold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_BoldItalic';
-   src: url('/fonts/gentona/Gentona_BoldItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_ExtraBold';
-   src: url('/fonts/gentona/Gentona_ExtraBold.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Bold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_ExtraBoldItalic';
-   src: url('/fonts/gentona/Gentona_ExtraBoldItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_Heavy';
-   src: url('/fonts/gentona/Gentona_Heavy.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Bold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Gentona_HeavyItalic';
-   src: url('/fonts/gentona/Gentona_HeavyItalic.woff') format('woff');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
@@ -155,55 +148,55 @@
 
 @font-face {
    font-family: 'Quadon_Thin';
-   src: url('/fonts/Newsreader/static/Newsreader_9pt-ExtraLight.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Thin.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_ThinItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_9pt-ExtraLightItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_ThinItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_Light';
-   src: url('/fonts/Newsreader/static/Newsreader_9pt-Light.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Light.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_LightItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_9pt-LightItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_LightItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_Regular';
-   src: url('/fonts/Newsreader/static/Newsreader_9pt-Regular.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Regular.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_RegularItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_9pt-RegularItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Regular.ttf') format('truetype');
    font-weight: normal;
-   font-style: normal;
+   font-style: italic;
 }
 @font-face {
    font-family: 'Quadon_Medium';
-   src: url('/fonts/Newsreader/static/Newsreader_9pt-Medium.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Medium.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_MediumItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_9pt-MediumItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_MediumItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_Bold';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-Bold.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Bold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
@@ -216,43 +209,43 @@
 }*/
 @font-face {
    font-family: 'Quadon_BoldItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-BoldItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_ExtraBold';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBold.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Bold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_ExtraBoldItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBoldItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_UltraBold';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBold.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Bold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_UltraBoldItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBoldItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_Black';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBold.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_Bold.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
 @font-face {
    font-family: 'Quadon_BlackItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBoldItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
@@ -264,7 +257,7 @@
 }
 @font-face {
    font-family: 'Quadon_HeavyItalic';
-   src: url('/fonts/Newsreader/static/Newsreader_14pt-ExtraBoldItalic.ttf') format('truetype');
+   src: url('/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
@@ -8787,6 +8780,7 @@ li.slideshow_transparent:before {
  * 
  * =================================*/
 
+
  /*Non-homepage Metslider Slider Styles*/
 
 .metaslider:not(.homepage-banner) {
@@ -8821,9 +8815,6 @@ justify-content: center;
 /*Non-homepage Metslider Slider Styles end*/
 
 @media (max-width: 1025px) {
-  #page .carousel-caption p {
-      font-size: .85rem !important;
-  }
     
     #featured-carousel .half-image-feature .carousel-caption {
           position: relative;
@@ -8856,7 +8847,10 @@ justify-content: center;
       }
   }
   @media (max-width: 768px) {
-      #featured-carousel .half-image-feature .carousel-caption {
+    #page .carousel-caption p {
+        font-size: .85rem !important;
+    }
+    #featured-carousel .half-image-feature .carousel-caption {
           position: relative;
       }
       
@@ -8889,16 +8883,7 @@ justify-content: center;
           padding-top: 1rem;
           height: 225px;
       }
-  
-  
-      span.series.learn-more {
-          margin: 1rem auto;
-      }
-      
-      span.excerpt, span.series {
-          display: none;
-      }
-      
+        
       .carousel-caption br {
           display: none;
       }
