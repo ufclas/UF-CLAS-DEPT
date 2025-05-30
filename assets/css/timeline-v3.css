@@ -13,110 +13,110 @@
 }
 @font-face {
   font-family: "Gentona_ThinItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_ThinItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-ThinItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_ExtraLight";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_ExtraLight.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-ExtraLight.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_ExtraLightItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_ExtraLightItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-ExtraLightItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_Light";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_Light.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_LightItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_LightItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-LightItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_Book";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_Book.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-Book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 /* Accessibility: font-weight below allows footer links to appear bold */
 @font-face {
   font-family: "Gentona_Book";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_Bold.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_BookItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_BookItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-BookItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_Medium";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_Medium.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_MediumItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_MediumItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-MediumItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_SemiBold";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_SemiBold.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-SemiBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_SemiBoldItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_SemiBoldItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-SemiBoldItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_Bold";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_Bold.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_BoldItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_BoldItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-BoldItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_ExtraBold";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_ExtraBold.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-ExtraBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_ExtraBoldItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_ExtraBoldItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-ExtraBoldItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_Heavy";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_Heavy.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-Heavy.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gentona_HeavyItalic";
-  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans_HeavyItalic.woff") format("woff");
+  src: url("https://news.clas.ufl.edu/fonts/IBMPlexSans/IBMPlexSans-HeavyItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
