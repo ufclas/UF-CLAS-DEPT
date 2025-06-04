@@ -57,7 +57,7 @@
 <?php
 endif;
 ?>
-      <?php echo twentyseventeen_get_svg( array( 'icon_id' => 'journeys-begin', 'class' => 'icon-journeys-begin' ) ); ?>
+      <center><img src="/wp-content/themes/UF-CLAS-DEPT/images/LAS_Tagline_2025_RGB_Reverse_355px.png" alt="Journeys Begin Here: Question - Discover - Connect" /></center>
 
       </div><!-- .footer-main-col-1 -->
 
@@ -216,7 +216,7 @@ endif;
    <div class="footer-uf-wrap">
    <div class="footer-uf-col-1 bottom-links">
       <p>
-      &#169; <?php echo current_time('Y'); ?> University of Florida  |  <a href ="//assistive.usablenet.com/tt/referrer"> Text-only </a>  | <a href="https://mediaservices.clas.ufl.edu/"> Website Feedback</a> |  <a href ="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement"> UF Privacy Policy </a>
+      &#169; <?php echo current_time('Y'); ?> University of Florida  | <a href="https://mediaservices.clas.ufl.edu/"> Website Feedback</a> |  <a href ="http://privacy.ufl.edu/privacy-policies-and-procedures/onlineinternet-privacy-statement"> UF Privacy Policy </a>
       </p>
 
    </div>
