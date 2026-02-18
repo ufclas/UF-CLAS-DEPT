@@ -1037,3 +1037,36 @@ if(function_exists('acf_add_local_field_group')){
 		'position' => 'side',
 	));
 }
+
+
+// Show updated content in dashboard widget
+function recently_updated_dashboard_widget() {
+    wp_add_dashboard_widget(
+        'recently_updated_widget',
+        'Recently Updated Content',
+        'recently_updated_widget_display'
+    );
+}
+
+function recently_updated_widget_display() {
+    $recent_updates = get_posts([
+        'post_type'      => ['post', 'page'],
+        'posts_per_page' => 10,
+        'orderby'        => 'modified',
+        'order'          => 'DESC',
+    ]);
+
+    if (empty($recent_updates)) {
+        echo '<p>No recent updates.</p>';
+        return;
+    }
+
+    echo '<ul>';
+    foreach ($recent_updates as $post) {
+        $modified = get_the_modified_date('M j, g:i a', $post);
+        echo '<li>' . esc_html($modified) . ' — <a href="' . get_edit_post_link($post->ID) . '">' . esc_html(get_the_title($post)) . '</a></li>';
+    }
+    echo '</ul>';
+}
+
+add_action('wp_dashboard_setup', 'recently_updated_dashboard_widget');
