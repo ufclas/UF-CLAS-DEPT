@@ -1051,7 +1051,7 @@ function recently_updated_dashboard_widget() {
 function recently_updated_widget_display() {
     $recent_updates = get_posts([
         'post_type'      => ['post', 'page'],
-        'posts_per_page' => 10,
+        'posts_per_page' => 100,
         'orderby'        => 'modified',
         'order'          => 'DESC',
     ]);
